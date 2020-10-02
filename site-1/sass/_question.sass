@@ -1,0 +1,134 @@
+.question
+	padding: 100px 0
+
+	text-align: center
+	font-family: "Montserrat-Light"
+	font-size: 1rem
+	color: #ffffff
+
+	background: #0b3554
+
+	&-title
+		margin-bottom: 30px
+
+		font-family: "Montserrat-Black"
+		font-size: 2rem
+
+.container-question
+	flex-direction: row
+	justify-content: center
+	align-items: flex-start
+
+	margin-top: 100px
+
+	.question-block
+		
+		max-width: 570px
+		width: 100%
+
+	.question-list
+		text-align: left
+		font-family: "Montserrat-Black"
+		font-size: 1rem
+
+		ol
+			margin: 0 30px
+
+		li
+			margin-bottom: 55px
+
+			a	
+				position: relative
+				z-index: 1
+				margin-left: 30px
+
+				color: #fff
+				text-decoration: underline
+
+			a:hover
+				color: #579eff
+				text-decoration: none
+
+				transition: 0.5s
+
+			a::after
+				content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, minima.'
+				position: absolute
+				z-index: 0
+				top: 35px
+				left: 0
+				
+				padding: 10px
+
+				width: 300px
+				height: auto
+
+				font-family: "Montserrat-Light"
+				font-size: 0.9rem
+				color: #111
+
+				border: 2px solid #111
+				background: #fff
+				transition: 0.7s
+				opacity: 0
+				
+
+			a::before
+				content: ''
+				position: absolute
+				z-index: 2
+				left: 15px
+				bottom: -20px
+				width: 0
+				height: 0
+				border-bottom: 20px solid #fff
+				border-left: 10px solid transparent
+				border-right: 10px solid transparent
+				transition: 0.7s
+				opacity: 0
+
+			a:hover:before
+				z-index: 3
+				opacity: 1
+
+			a:hover:after
+				z-index: 2
+				opacity: 1
+
+
+
+
+
+
+		.question-li__icon
+			list-style-image: url('../img/block-question/icon-reload.png')
+
+	.question-img
+		position: relative
+
+		img
+			display: block
+			width: 100%
+
+		&__text
+			position: absolute
+			left: 0
+			bottom: 0
+			
+			padding: 12px 29px 12px 19px
+
+			background-color: rgba(11, 53, 84,  0.7)
+
+			font-family: "Montserrat-Light"
+			text-align: left
+			font-size: 0.9rem
+
+
+
+
+
+
+
+
+
+

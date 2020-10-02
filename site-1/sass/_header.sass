@@ -1,0 +1,77 @@
+.header
+	background: $black
+
+	.container--header
+		flex-direction: row
+		justify-content: space-between
+		align-items: center
+		flex-wrap: wrap
+		min-height: 100px
+
+	&-logo
+		max-width: 190px
+		width: 100%
+
+		img
+			display: block
+			width: 100%
+
+	&-time
+		text-align: center
+		font-family: "Montserrat-ExtraBold"
+		font-size: 0.8rem
+		font-weight: 700
+		line-height: 24px
+		color: #ffffff
+
+		span
+			font-family: "Montserrat-Regular"
+
+
+	&-communication
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+
+
+		&__button
+			margin-left: 25px
+
+			width: 170px
+			height: 50px
+
+			background-color: $blue
+			border: none
+
+			font-family: "Montserrat-ExtraBold"
+			font-size: 0.8rem
+			color: #ffffff
+			text-transform: uppercase
+
+		&__button:hover
+			background-color: #12538C
+
+			transition: 0.3s
+
+			
+
+		&__number
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: column
+
+			margin-left: 185px
+
+			a
+				
+				color: #ffffff
+				font-family: "Montserrat-ExtraBold"
+				font-size: 1.2rem
+				font-weight: 400

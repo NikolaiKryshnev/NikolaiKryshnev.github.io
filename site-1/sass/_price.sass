@@ -1,0 +1,105 @@
+.container--fromOne
+	position: relative
+
+	justify-content: flex-end
+
+	padding-top: 100px
+
+.price
+	height: 520px
+	
+	&__img
+		position: absolute
+		top: 0
+		bottom: 0
+		left: -35%
+
+		max-width: 720px
+		width: 100%
+		height: auto
+
+		img
+			width: 100%
+			height: auto
+
+
+	.form--one
+		flex-direction: column
+		flex-wrap: wrap
+		justify-content: flex-end
+
+		width: 100%
+
+		
+		.form-inputs
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: row
+			justify-content: flex-end
+			flex-wrap: wrap
+
+			padding: 0 20px
+
+			.input:last-child
+				margin-left: 30px
+
+
+		&__block
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: flex-end
+			align-items: center
+			flex-wrap: wrap
+
+			padding: 0 20px
+			
+			text-align: right
+			font-family: "Montserrat-ExtraBold"
+			font-size: 0.9rem
+			color: #000000
+
+		&__button
+			height: 80px
+
+			background-color: $blue
+
+		&__text
+			position: relative
+
+			margin-right: 170px
+
+		&__text::after
+			content: ''
+
+			position: absolute
+			top: 0
+			right: -45%
+			bottom: 0
+			
+			margin: auto 0
+			
+			width: 30px
+			height: 30px
+
+			background: url('../img/block-form/icon-clock.png')
+
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
