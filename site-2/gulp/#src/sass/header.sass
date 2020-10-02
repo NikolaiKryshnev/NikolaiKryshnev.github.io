@@ -1,0 +1,175 @@
+// --------------------------------------------
+// Header styles
+// --------------------------------------------
+
+.header 
+	position: fixed
+	top: 0
+	z-index: 2
+
+	max-width: 100%
+	width: 100%
+	max-height: 585px
+
+	background: rgba(255,255,255,0)
+
+	transition: background 0.2s linear,
+	box-shadow 0.2s linear
+	
+	.container
+		justify-content: space-between
+
+	&-logo
+		display: flex
+		align-items: center
+		align-content: center
+		
+		max-width: 115px
+		width: 100%
+
+
+	&-menu
+		&__nav
+
+		&__ul
+			display: flex
+			justify-content: space-between
+			align-content: center
+			align-items: center
+			margin: 0
+			padding: 0
+
+			height: 80px
+
+			list-style-type: none
+
+			li
+				display: block
+
+				a
+					color: #fff
+					transition: color 0.2s linear
+
+					&:hover
+						color: #FF003F
+			
+			li + li
+				padding-left: 26px
+
+	.logo-img-top
+		display: block
+
+	.logo-img-bottom
+		display: none
+
+.header-burger
+	display: none
+.header.activeFix
+	background: rgba(255,255,255,1)
+	box-shadow: 0 8px 16px rgba(0,0,0,.1)
+		
+	.logo-img-top
+		display: none
+
+	.logo-img-bottom
+		display: block
+
+@media(min-width: 992px)
+	.header.activeFix
+		.header-menu__ul 
+			li 
+				a
+					color: #383838
+
+@media(max-width:991px)
+	.header-burger
+		position: relative
+		z-index: 2
+
+		display: flex
+		align-items: center
+
+		// &__text
+		// 	font-style: normal
+		// 	font-weight: 600
+		// 	font-size: 16px
+		// 	line-height: 22px
+		// 	color: #FFFFFF
+
+		// 	&.active
+		// 		display: none
+		
+		&__svg
+			cursor: pointer
+			-webkit-tap-highlight-color: transparent
+			transition: transform 400ms
+			-moz-user-select: none
+			-webkit-user-select: none
+			-ms-user-select: none
+			user-select: none
+			
+			.burger-line--top
+				stroke-dasharray: 40 139
+			.burger-line--bottom
+				stroke-dasharray: 40 180
+	.header-burger.active
+		.header-burger__svg
+			transform: rotate(45deg)
+
+			.burger-line--top
+				stroke-dashoffset: -98px
+
+			.burger-line--bottom
+				stroke-dashoffset: -138px
+
+			.burger-line
+				stroke: #fff
+
+	.burger-line
+		fill: none
+		transition: stroke-dasharray 400ms, stroke-dashoffset 400ms, stroke 400ms
+		stroke: #fff
+		stroke-width: 5.5
+		stroke-linecap: round
+
+	.header.activeFix
+		// .header-burger__text
+		// 	color: #01144e
+
+		.burger-line
+			stroke: #01144e
+
+	.header-menu
+		position: absolute
+		top: 0
+		right: -2000px
+
+		padding-top: 50px
+
+		min-width: 320px
+		max-width: 50%
+		width: 100%
+		height: 100vh
+
+		background: #05237D
+		box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25)
+		border-radius: 0px 0px 0px 20px
+		transition: right 400ms ease
+
+		&.active
+			right: 0
+
+		&__ul
+			flex-direction: column
+
+			li.active a
+				color: #FF003F
+
+
+			li+li
+				margin-top: 27px
+				
+				padding-left: 0
+
+	.header-logo
+		margin-left: 20px

@@ -1,0 +1,155 @@
+// --------------------------------------------
+// Section-riviews styles
+// --------------------------------------------
+
+
+.section-riviews
+	padding: 100px 0
+
+	.container
+		flex-direction: column
+
+	.section-title
+		margin-bottom: 75px
+
+	.slider-person
+		position: relative
+
+		max-width: 450px
+		width: 100%
+
+		margin: 0 auto 30px
+
+		.slick-center
+			margin: 0
+
+			.slider-person__img
+
+				width: 85px
+				height: 85px
+
+		svg
+			position: absolute
+			top: 50%
+			margin-top: -14px
+			right: -50px
+
+			fill: #5F6870
+			transition: fill .2s ease
+			cursor: pointer
+
+		svg:first-child
+			left: -50px
+			right: auto
+		
+		svg:hover
+			fill: #ff003f
+
+
+		.slick-list
+			max-width: 450px
+			width: 100%
+
+			margin: 0 auto
+			
+			.slick-track
+				display: flex
+				align-content: center
+				align-items: center
+
+		&__block
+			margin: 0 9px
+
+		&__img
+			width: 70px
+			height: 70px
+
+			img
+				border-radius: 50%
+
+	.slider-info
+		.slick-list
+			max-width: 800px
+			width: 100%
+
+			margin: 0 auto
+
+		&__profile
+
+			max-width: 800px
+			width: 100%
+
+			margin: 0 auto
+
+			font-size: 18px
+			line-height: 25px
+			text-align: center
+			color: #A2A2A2
+
+			b
+				font-size: 20px;
+				color: #33383D;
+
+		&__comment
+			padding-top: 90px
+
+			text-align: center
+			font-size: 18px
+			color: #5F6870
+
+			background: url("../img/icons/icons.svg#icon-reviews-quote") no-repeat top 
+			background-size: 36px
+			background-position-y: 25px
+
+
+	.slider-info__block
+		display: flex
+		flex-direction: column
+
+		max-width: 800px
+		width: 100%
+
+		margin: 0 auto
+
+@media(max-width:991px)
+	.section-riviews 
+		.slider-info
+			&__profile
+				font-size: 18px
+
+			&__comment
+				font-size: 14px
+
+@media(max-width: 560px)
+	.section-riviews
+		.slider-person
+			svg
+				right: -30px
+
+			svg:first-child
+				left: -30px
+
+@media(max-width: 526px)
+	.section-riviews 
+		.slider-person__block
+			margin: 0
+
+		.slider-person__img
+			margin: auto
+
+			width: 100px
+			height: 100px
+
+		.slick-dots
+			bottom: -40px
+			
+			li
+				width: 26px
+				height: 6px
+
+				background: #9B9B9B
+				border-radius: 20px
+				transition: background 0.2s linear
+			
+			li.slick-active
+				background: #FF003F

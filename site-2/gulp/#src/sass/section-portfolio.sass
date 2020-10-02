@@ -1,0 +1,140 @@
+// --------------------------------------------
+// Section-portfolio styles
+// --------------------------------------------
+
+.section-portfolio
+	padding: 100px 0
+
+	.container
+		flex-direction: column
+
+	.portfolio-tabs
+
+		&__caption
+			display: flex
+			justify-content: center
+
+			padding: 0
+			
+		&__content 
+			display: none
+
+			padding-top: 60px
+
+		&__content.active 
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+
+			.portfolio-tabs__img
+  				animation: opacity 2s ease normal;
+
+		&__img
+			position: relative
+
+			display: flex
+			justify-content: center
+			align-items: center
+			align-content: center
+			
+			margin-bottom: 20px
+			max-width: 355px
+			width: 100%
+			height: auto
+
+			cursor: pointer
+
+			&:after
+				content: "View project"
+				position: absolute
+				top: 0
+				left: 0
+				z-index: -1
+
+				display: flex
+				justify-content: center
+				align-items: center
+				align-content: center
+
+				padding-bottom: 35px
+
+				width: 100%
+				height: 100%
+
+				color: #ffffff
+				font-family: "OpenSans"
+				font-weight: 400
+
+				background-color: rgba(0, 0, 0, 0.7)
+				opacity: 0
+				transition: opacity 0.4s linear
+			
+			&:before
+				content: ""
+				position: absolute
+				top: 50%
+				left: 50%
+				z-index: -1
+
+				margin-top: 0
+				margin-left: -12px
+
+				width: 24px
+				height: 24px
+
+				background-image: url(../img/icons/icons.svg#icon-zoom)
+				opacity: 0
+				transition: opacity 0.4s linear		
+
+		&__img:hover
+			
+			&:after
+				z-index: 1
+				opacity: 1
+
+			&:before
+				z-index: 2
+				opacity: 1
+
+		.btn.active
+			background: #FF003F
+			color: #fff
+		
+		.btn:hover
+			background: #FF003F
+			color: #fff
+		
+		.btn + .btn
+			margin-left: 8px
+
+
+@-webkit-keyframes opacity
+	0%
+		opacity: 0
+
+	100%
+		opacity: 1
+			
+@media(max-width: 991px)
+	.section-portfolio
+		.portfolio-tabs
+			&__content.active
+				justify-content: space-around
+
+
+@media(max-width: 768px)
+	.section-portfolio 
+		.portfolio-tabs
+			&__caption
+				flex-wrap: wrap
+
+			.btn, .btn + .btn
+				margin: 10px 30px
+
+@media(max-width: 526px)
+	.section-portfolio
+		.portfolio-tabs__caption
+			flex-direction: column
+
+			.btn, .btn + .btn
+				margin: 10px auto
