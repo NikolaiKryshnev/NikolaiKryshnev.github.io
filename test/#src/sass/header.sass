@@ -1,0 +1,342 @@
+.header
+	position: relative
+	z-index: 1
+	
+	background: #fff
+
+	.container
+		justify-content: space-between
+
+	&-top
+		display: flex
+		justify-content: space-between
+
+		width: 100%
+
+	&-phone
+		display: flex
+		align-items: center
+
+		font-family: "CynthoMedium"
+		font-size: 1.25rem
+		line-height: 24px
+
+		a
+			color: $black
+	
+	&-sidebar
+		display: flex
+		flex-direction: row
+
+		&__icon
+			display: flex
+			justify-content: center
+			align-items: center
+
+			padding: 0 20px 
+
+			width: 62px
+			height: 62px
+
+			cursor: pointer
+
+			img
+				width: 19px
+			
+		&__icon:last-child
+			img
+				width: 23px
+
+	.pink--light
+		background: $pink-1
+
+	.pink--middle
+		background: $pink-2
+
+	.pink--dark
+		background: $pink-3
+
+	&-bottom
+		display: flex
+		justify-content: space-between
+
+		margin-top: -1px
+		padding: 8px 0 14px
+
+		border-top: 0.5px solid #DADADA
+
+		box-shadow: 5px 15px 10px  -10px rgba(244, 161, 123, 0.18)
+
+		&__logo
+			display: flex
+			justify-content: center
+			align-items: center
+
+			img
+				max-width: 184px
+				width: 100%
+				height: 46px
+
+		&__menu
+			display: flex
+			flex-direction: row
+
+			li	
+				position: relative
+				display: flex
+
+				padding: 0 40px 0 0
+
+				height: 100%
+
+				vertical-align: middle
+
+				a	
+					position: relative
+
+					display: flex
+					align-items: center
+					justify-content: center
+
+					font-family: "CynthoLight"
+					font-size: 0.9rem
+					line-height: 17px
+					text-transform: uppercase
+					color: $black
+
+					.icon-arrow
+						position: absolute
+						right: -20px
+						width: 12px
+						height: 6px
+						margin-left: 8px
+						transition: transform 0.3s ease
+
+
+				a.active
+					.icon-arrow
+						transform: rotate(90deg)
+				a.active + .header-bottom__submenu
+					visibility: visible
+					opacity: 1
+					transform: rotateX(0deg)
+
+
+			li:last-child
+				padding-right: 0
+
+		&__submenu
+			position: absolute
+			z-index: -1
+			top: 100%
+
+			margin: 14px 0 0 -45px
+			padding: 13px 15px 0
+
+			width: 175px
+
+			box-shadow: 0px 20px 20px rgba(244, 161, 123, 0.18)
+			background: #fff
+			border-radius: 5px
+			border-top-left-radius: 0
+			border-top-right-radius: 0
+			
+			visibility: hidden
+			opacity: 0
+			
+			transform: translateX(1in)
+			transition: transform 0.7s ease, opacity 1s ease
+
+
+			li
+				padding: 0
+
+				border-bottom: 0.5px solid #E3E3E3
+
+				a
+					text-align: center
+					width: 100%
+
+					padding: 12px 0 14px
+
+			li:last-child
+				border: 0
+					
+.header-burger
+	display: none
+
+@media ( max-width: 991px)
+	.header-top
+		margin-left: 15px
+		
+	.header-burger
+		position: relative
+		z-index: 2
+
+		display: flex
+		align-items: center
+		
+		&__svg
+			width: 80px
+
+			cursor: pointer
+			-webkit-tap-highlight-color: transparent
+			transition: transform 400ms ease
+			-moz-user-select: none
+			-webkit-user-select: none
+			-ms-user-select: none
+			user-select: none
+			
+			.burger-line--top
+				stroke-dasharray: 40 139
+
+			.burger-line--bottom
+				stroke-dasharray: 40 180
+
+	.header-burger.active
+		.header-burger__svg
+			transform: rotate(45deg)
+
+			.burger-line--top
+				stroke-dashoffset: -98px
+
+			.burger-line--bottom
+				stroke-dashoffset: -138px
+
+			.burger-line
+				stroke: #000
+
+	.burger-line
+		fill: none
+		transition: stroke-dasharray 400ms, stroke-dashoffset 400ms, stroke 400ms
+		stroke: #000
+		stroke-width: 5.5
+		stroke-linecap: round
+		
+
+	.header-bottom__menu li a .icon-arrow
+		position: relative
+		right: 0
+
+	.header-bottom
+		position: relative
+
+		&__menu
+			position: absolute
+			top: 100%
+			right: 0
+			z-index: -1
+
+			flex-direction: column
+
+			margin-top: 3px
+			padding: 16px 16px
+
+			max-width: 238px
+			width: 100%
+
+			background: #fff
+			border-radius: 5px
+			
+			visibility: hidden
+			opacity: 0
+			transition: transform 0.7s ease
+			transform: translateX(3in)
+
+			a
+				width: 100%
+				// border-bottom: 0.5px solid #DADADA
+			
+			li:last-child a
+				border: 0
+
+			>li
+				flex-direction: column
+				padding: 0
+
+				height: auto
+
+				text-align: center
+
+
+				a
+					padding: 18px 0px
+					border-bottom: 0.5px solid #DADADA
+
+				a.active + .header-bottom__submenu
+					z-index: 1
+					height: 100%
+					max-height: 100%
+
+			li + li
+				padding: 0
+
+		&__menu.active
+			z-index: 99
+			transform: translateX(0in)
+			opacity: 1
+			visibility: visible
+
+		.header-bottom__submenu
+			position: relative
+			z-index: -1
+
+			top: 0
+			margin: 0
+
+			padding:  0
+
+			width: 100%
+			height: 0
+			max-height: 0%
+
+			opacity: 1
+			visibility: visible
+			overflow: hidden
+
+			transform: translateX(0in)
+			transition: max-height 0.7s ease
+
+			li
+				border: 0
+
+				a
+					margin: auto
+
+					width: 150px
+
+					
+					color: #6B6B6B
+
+@media(max-width: 526px)
+	.header-bottom__menu
+		&>li
+			a
+				font-size: 1.2rem
+
+	.header-bottom 
+		.header-bottom__submenu 
+			li 
+				a
+					font-size: 0.8rem
+	.header-top
+		position: relative
+		z-index: 1
+
+	.header-phone a
+		font-size: 1rem	
+
+	.header-sidebar__icon
+		height: 45px
+		width: 45px
+
+	.header-bottom__logo
+		max-width: 160px
+		img
+			height: auto
+
+	.header-burger
+		margin-right: -15px
+
+		&__svg
+			width: 60px

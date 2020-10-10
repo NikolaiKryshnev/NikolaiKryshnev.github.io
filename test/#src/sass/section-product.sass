@@ -1,0 +1,266 @@
+.section-product
+	position: relative
+
+	padding-top: 100px
+	padding-bottom: 100px
+
+.product-nameSup
+	font-family: "CynthoLight"
+	font-size: 0.6rem
+	line-height: 12px
+	color: #5F5F5F
+
+	margin-bottom: 5px
+
+
+.section-product--gray
+	background: #FAFAFA
+
+.section-tabs
+	display: flex
+	flex-direction: column
+
+	.tab-menu
+		display: flex
+		justify-content: space-between
+
+		margin-bottom: 50px
+
+		line-height: 19px
+		color: #9E9E9E
+
+		&__item
+			cursor: pointer
+			transition: color .3s ease
+
+			&:hover
+				color: $black
+
+		&__item.active
+			color: $black
+
+	.tab-content
+		&__item
+			// display: none
+			position: absolute
+			left: 100%
+			opacity: 0
+
+			transition: opacity 0.5s ease
+
+		&__item.active
+			display: flex
+			position: relative
+			left: 0
+
+			display: flex
+			flex-direction: row
+
+			opacity: 1
+
+			
+		.slick-arrow
+			position: absolute
+			top: 50%
+
+			margin-top: -14px
+
+			width: 14px
+			height: 28px
+			cursor: pointer
+
+		.slick-arrow__left
+			left: -60px
+
+		.slick-arrow__right
+			right: -60px
+
+.product-block
+	margin: 0 15px 15px
+	padding-bottom: 15px
+
+	max-width: 270px
+	width: 100%
+
+	background: #FFFFFF
+	box-shadow: 0px 0px 20px rgba(167, 167, 167, 0.22)
+	border-radius: 5px
+
+	&__badges
+	
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 2
+
+		display: flex
+		flex-direction: column
+
+	&__badge
+		display: inline-block
+		padding: 4px 14px
+
+		border-radius: 5px
+
+		font-size: 0.7rem
+		color: $white
+	
+	.badge--news
+		background: #8AC9A3
+
+		width: 79px
+
+	.badge--hit
+		background: #8ABEC9
+
+		width: 53px
+
+	.badge--stock
+		background: #F16254
+
+		width: 71px
+	
+	&__img
+		position: relative
+		overflow: hidden
+		margin-bottom: 16px
+
+		img
+			transition: transform 4s ease
+		
+
+		img:hover
+			transform: scale(1.08)
+
+	&__info
+		padding: 0 17px
+
+		.product-name
+			margin-bottom: 17px
+
+			height: 35px
+			
+			font-size: .9rem
+			line-height: 17px
+			text-align: left
+
+		.product-info
+			display: flex
+			justify-content: space-between
+
+			margin-bottom: 19px
+
+		.product-buy
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+			height: 40px
+
+			&--info
+				justify-content: center
+
+				text-align: center
+				color: #DB7F55
+
+			&__number
+				display: flex
+				justify-content: space-between
+			
+				.number__input
+					width: 35px
+
+					border: none
+
+					text-align: center
+					font-size: 1.5rem
+					line-height: 29px
+
+				.number__button
+					border: none
+
+					background: none
+
+					color: $pink-3
+					text-align: center
+					font-size: 32px
+
+			&__button
+				display: flex
+				justify-content: flex-end
+				align-items: center
+
+.product-svgBg
+	position: absolute
+	bottom: -10px
+	width: 100%
+
+@media(max-width: 1175px)
+	.product-block
+		max-width: 230px
+
+@media(max-width: 768px)
+	.section-product
+		padding-top: 50px
+
+	.section-tabs .tab-menu
+		li
+			margin: 0 15px
+
+	.section-tabs .tab-menu
+		margin-left: -15px
+		margin-right: -15px
+
+		overflow-x: auto
+		-ms-overflow-style: none
+		overflow: -moz-scrollbars-none
+
+		&::-webkit-scrollbar
+			width: 0
+
+@media(max-width: 526px)
+	.section-product
+		padding-top: 30px
+		padding-bottom: 30px
+
+	.product-block
+		margin: 0 5px 5px
+
+	.product-block__info
+		padding: 0 8px
+	
+		.product-buy__number 
+			.number__input
+				width: 20px
+
+			.number__button
+				padding: 0
+
+				font-size: 27px
+
+		.product-buy__button
+			.btn
+				width: 62px
+				height: 25px
+				font-size: 0.8rem
+
+	.section-tabs .tab-menu li
+		min-width: 110px
+
+		text-align: center
+
+	.product-block 
+		.badge--news
+			background: #8AC9A3
+
+			width: 60px
+
+		.badge--hit
+			background: #8ABEC9
+
+			width: 49px
+
+		.badge--stock
+			background: #F16254
+
+			width: 59px

@@ -1,0 +1,177 @@
+@import mixin
+
+// --------------------------------------------
+// Color
+// --------------------------------------------
+$black: #000
+$pink-1: #FFCBB4
+$pink-2: #FAB798
+$pink-3: #F4A17B
+$white: #fff
+
+// --------------------------------------------
+// Common styles
+// --------------------------------------------
+*, *::before, *::after 
+  box-sizing: border-box
+
+*:focus 
+	outline: none
+
+html
+	font-size: 16px
+
+body
+	overflow-x: hidden
+
+	font-family: "CynthoRegular"
+	font-size: 16px
+	color: $black
+
+@media(max-width: 526px)
+	html
+		font-size: 10px
+
+@import "../../node_modules/normalize.sass/normalize.sass"
+
+body, 
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd 
+	margin: 0
+	font-size: 100%
+
+ul,
+ol,
+nav
+	list-style-type: none
+	padding: 0
+	margin: 0
+
+img
+	display: block
+	width: 100%
+
+a 
+	text-decoration: none
+
+a:not([class]) 
+  text-decoration-skip-ink: auto
+
+.wrraper
+	overflow-x: hidden
+
+.page
+	overflow-x: hidden
+
+.page.active
+	position: relative
+	overflow-y: hidden
+	filter: blur(4px)
+
+.container
+	margin: 0 auto
+	padding: 0 15px
+
+	max-width: 1170px
+	width: 100%
+
+.section-title
+	display: flex
+	flex-direction: column
+	justify-content: center
+
+	margin-bottom: 52px
+
+	text-align: center
+
+	h2
+		margin-bottom: 12px
+
+		font-size: 1.6rem
+		line-height: 31px
+		text-transform: uppercase
+
+	p
+		margin: auto
+
+		max-width: 373px
+		width: 100%
+
+		font-size: 0.9rem
+
+@media  ( max-width: 526px )
+	.section-title
+		margin-bottom: 25px
+		
+		h2
+			font-size: 2rem
+
+
+.btn
+	display: flex
+	justify-content: center
+	align-items: center
+
+	width: 184px
+	height: 51px
+
+	background: $pink-2
+	box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.25)
+	border: none
+	border-radius: 5px
+
+	text-transform: uppercase
+	color: $white
+	font-size: .9rem
+	transition: background .3s ease
+
+	&:hover
+		background: $pink-1
+
+.btn--little
+	width: 114px
+	height: 35px
+	&:hover
+		background: $pink-3
+
+
+@media   ( max-width: 526px )
+	.btn
+		max-width: 116px
+		height: 32px
+		font-size: 1.2rem
+.product-svgBg--top
+	position: absolute
+	top: -2px
+
+	width: 100%
+
+// import
+@import "../../node_modules/slick-carousel/slick/slick.css"
+@import "../../node_modules/slick-carousel/slick/slick-theme.css"
+@import "fonts"
+@import "header"
+@import "section-banInfo"
+@import "section-product"
+@import "section-about"
+@import "section-catalog"
+@import "section-reviews"
+@import "footer"
+
+
+
+
+
+	
+	
+
