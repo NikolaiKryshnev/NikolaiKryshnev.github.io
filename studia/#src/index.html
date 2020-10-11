@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/style.min.css" />
+	<title>Document</title>
+</head>
+
+<body>
+	<div class="page" id="barba-wrapper">
+		@@include('_header.html')
+		@@include('_section-content.html')
+	</div>
+
+	<script src="js/script.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+	<!-- unpkg -->
+	<script>
+		var scene = document.getElementById('scene');
+		var parallaxInstance = new Parallax(scene);
+	</script>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/0.0.2/barba.min.js"
+		integrity="sha512-j0ThLeHF8KI1DZjV/vAJ0CKkDAMAsZbFA1KarA2jIfzAmXn3di3krSq9LJrv/gBVsUnouKqS/agIoQpxj/3Hkg=="
+		crossorigin="anonymous"></script>
+	<script src="js/animation.js"></script>
+</body>
+
+</html>
