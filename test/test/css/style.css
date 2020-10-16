@@ -688,6 +688,10 @@ a:not([class]) {
   font-family: "CynthoMedium";
 }
 
+.header-bottom__menu .submenu-js > a {
+  padding-left: 20px;
+}
+
 .header-bottom__menu li:last-child {
   padding-right: 0;
 }
@@ -1543,6 +1547,7 @@ a:not([class]) {
     max-height: 100%;
     -webkit-box-shadow: none;
             box-shadow: none;
+    border-bottom: .5px solid #dadada;
   }
 
   .header-bottom__menu > li.active .header-bottom__submenu:after {
@@ -1589,6 +1594,7 @@ a:not([class]) {
   .header-bottom .header-bottom__submenu li a {
     margin: auto;
     width: 150px;
+    font-size: 0.8rem;
     color: #6B6B6B;
   }
 
@@ -1725,7 +1731,7 @@ a:not([class]) {
   }
 
   .btn {
-    max-width: 116px;
+    max-width: 123px;
     height: 32px;
     font-size: 1.2rem;
   }
@@ -1739,15 +1745,13 @@ a:not([class]) {
     max-width: 200px;
   }
 
-  .header-bottom__menu .submenu-js > a {
-    padding-left: 20px;
-  }
-
   .header-bottom__menu > li a {
+    padding: 14px 0 16px;
     font-size: 1.2rem;
   }
 
   .header-bottom .header-bottom__submenu li a {
+    padding: 8px 0 10px;
     max-width: 100px;
     font-size: 0.8rem;
   }
