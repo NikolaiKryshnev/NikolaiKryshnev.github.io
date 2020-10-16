@@ -9,7 +9,7 @@
 	.star
 		margin: 0 2px
 
-	&:hover .star path 
+	& .active.star path 
 		fill: #F4A17B !important
 
 	& .star path 
@@ -125,6 +125,7 @@
 	.slick-track
 		display: flex
 		justify-content: center
+		align-items: center
 
 	.reviews-arrow
 		position: absolute
@@ -145,6 +146,10 @@
 		background: #F4A17B
 		border-radius: 50%
 		cursor: pointer
+		transition: 0.7s
+
+		&:hover
+			background: #fab798
 
 		&__left
 			left: 15%

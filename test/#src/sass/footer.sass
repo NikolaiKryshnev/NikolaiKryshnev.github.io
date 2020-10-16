@@ -33,6 +33,13 @@
 		li
 			margin: 0 15px
 
+			a
+				transition: .3s
+				border-bottom: 1px solid rgba(255,255 ,255 ,0 )
+
+			a:hover
+				border-bottom: 1px solid rgba(255,255 ,255 ,1 )
+
 	&-social
 		width: 19px
 
@@ -53,6 +60,14 @@
 
 		&__right
 			text-align: right
+
+			a
+				transition: .3s
+				border-bottom: 1px solid rgba(255,255 ,255 ,0 )
+
+				&:hover
+					border-bottom: 1px solid rgba(255,255 ,255 ,1 )
+					
 
 @media (max-width: 768px)
 	.footer
@@ -81,8 +96,14 @@
 @media (max-width: 526px)
 	.footer
 		&-menu
+			margin-bottom: 16px
+			
 			li
+				margin-top: 0
 				font-size: 1rem
+
+			li+ li
+				margin-top: 10px
 
 		&-info
 			font-size: .8rem
@@ -92,6 +113,18 @@
 
 			&__right
 				max-width: 125px
+
+		&-logo
+			max-width: 50px
+
+			margin-bottom: 30px
+		
+		
 	.footer-info__left
 		p+p
 			padding-top: 5px
+
+	.footer-info__right
+		span
+			display: block
+			

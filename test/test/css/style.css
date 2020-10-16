@@ -483,14 +483,14 @@ a:not([class]) {
   line-height: 24px;
 }
 
-.header-phone a {
+.header-phone > a {
   color: #000;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
 }
 
-.header-phone a:hover {
+.header-phone > a:hover {
   color: #F4A17B;
 }
 
@@ -637,10 +637,6 @@ a:not([class]) {
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
-}
-
-.header-bottom__menu li a:hover {
-  color: #FAB798;
 }
 
 .header-bottom__menu li a .icon-arrow {
@@ -876,6 +872,16 @@ a:not([class]) {
   cursor: pointer;
 }
 
+.section-tabs .tab-content .slick-arrow path {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.section-tabs .tab-content .slick-arrow:hover path {
+  stroke: #FAB798;
+}
+
 .section-tabs .tab-content .slick-arrow__left {
   left: -60px;
 }
@@ -885,7 +891,7 @@ a:not([class]) {
 }
 
 .product-block {
-  margin: 0 15px 15px;
+  margin: 15px;
   padding-bottom: 15px;
   max-width: 270px;
   width: 100%;
@@ -1264,6 +1270,9 @@ a:not([class]) {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .reviews-slider .reviews-arrow {
@@ -1286,6 +1295,13 @@ a:not([class]) {
   background: #F4A17B;
   border-radius: 50%;
   cursor: pointer;
+  -webkit-transition: 0.7s;
+  -o-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.reviews-slider .reviews-arrow:hover {
+  background: #fab798;
 }
 
 .reviews-slider .reviews-arrow__left {
@@ -1767,6 +1783,7 @@ a:not([class]) {
   }
 
   .section-banInfo {
+    height: 328px;
     background: no-repeat 60%/cover url(../img/section-banInfo/1.jpg);
   }
 
@@ -1911,8 +1928,17 @@ a:not([class]) {
     font-size: 1rem;
   }
 
+  .footer-menu {
+    margin-bottom: 16px;
+  }
+
   .footer-menu li {
+    margin-top: 0;
     font-size: 1rem;
+  }
+
+  .footer-menu li + li {
+    margin-top: 10px;
   }
 
   .footer-info {
@@ -1927,8 +1953,17 @@ a:not([class]) {
     max-width: 125px;
   }
 
+  .footer-logo {
+    max-width: 50px;
+    margin-bottom: 30px;
+  }
+
   .footer-info__left p + p {
     padding-top: 5px;
+  }
+
+  .footer-info__right span {
+    display: block;
   }
 }
 

@@ -35,7 +35,7 @@ testWebP(function (support) {
 // Sub Menu Active
 //---------------------------------------------
 let width = $(window).width();
-let submenu = $('.submenu-js');
+let submenu = $('.header-menu-js li');
 if (width >= 992) {
 	submenu.hover(
 		function () {

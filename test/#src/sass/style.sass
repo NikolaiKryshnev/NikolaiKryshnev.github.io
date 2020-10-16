@@ -1,4 +1,5 @@
 @import mixin
+@import "fonts"
 
 // --------------------------------------------
 // Color
@@ -71,12 +72,29 @@ a:not([class])
 	overflow-x: hidden
 
 .page
+	position: relative
+	display: block
 	overflow-x: hidden
+
+.section-js.active
+	z-index: -1
+
+.page:after
+	position: absolute
+	z-index: 3
+	top: 0
+	left: 0
+
+	width: 100%
+	height: 100%
+	background: rgba(41, 41, 41, 0.45)
 
 .page.active
 	position: relative
 	overflow-y: hidden
 	filter: blur(4px)
+
+
 
 .container
 	margin: 0 auto
@@ -145,21 +163,23 @@ a:not([class])
 		background: $pink-3
 
 
-@media   ( max-width: 526px )
+@media ( max-width: 526px )
 	.btn
 		max-width: 116px
 		height: 32px
 		font-size: 1.2rem
+
 .product-svgBg--top
 	position: absolute
 	top: -2px
 
 	width: 100%
 
-// import
+// import library
 @import "../../node_modules/slick-carousel/slick/slick.css"
 @import "../../node_modules/slick-carousel/slick/slick-theme.css"
-@import "fonts"
+
+// import modals
 @import "header"
 @import "section-banInfo"
 @import "section-product"

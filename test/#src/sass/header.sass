@@ -1,8 +1,10 @@
 .header
 	position: relative
-	z-index: 1
+	z-index: 99
 	
 	background: #fff
+	box-shadow: 5px 15px 10px  -10px rgba(244, 161, 123, 0.18)
+
 
 	.container
 		justify-content: space-between
@@ -21,8 +23,12 @@
 		font-size: 1.25rem
 		line-height: 24px
 
-		a
+		>a
 			color: $black
+			transition: 0.3s
+
+		>a:hover
+			color: $pink-3
 	
 	&-sidebar
 		display: flex
@@ -33,13 +39,28 @@
 			justify-content: center
 			align-items: center
 
-			padding: 0 20px 
 
 			width: 62px
 			height: 62px
 
 			cursor: pointer
 
+			transition: 0.7s ease
+
+			a
+				display: flex
+				justify-content: center
+				align-items: center
+
+				padding: 0 20px 
+
+				width: 100%
+				height: 100%
+
+			&:hover
+				
+				opacity: 0.5
+	
 			img
 				width: 19px
 			
@@ -64,8 +85,7 @@
 		padding: 8px 0 14px
 
 		border-top: 0.5px solid #DADADA
-
-		box-shadow: 5px 15px 10px  -10px rgba(244, 161, 123, 0.18)
+		// box-shadow: 5px 15px 10px -10px rgba(244,161,123,.18)
 
 		&__logo
 			display: flex
@@ -77,12 +97,15 @@
 				width: 100%
 				height: 46px
 
+		nav
+			display: flex
+			
 		&__menu
 			display: flex
 			flex-direction: row
-
+				
 			li	
-				position: relative
+				position: relative				
 				display: flex
 
 				padding: 0 40px 0 0
@@ -90,6 +113,8 @@
 				height: 100%
 
 				vertical-align: middle
+
+				cursor: pointer
 
 				a	
 					position: relative
@@ -103,6 +128,11 @@
 					line-height: 17px
 					text-transform: uppercase
 					color: $black
+					transition: 0.4s
+
+					// &:hover
+					// 	color: $pink-2
+
 
 					.icon-arrow
 						position: absolute
@@ -113,13 +143,29 @@
 						transition: transform 0.3s ease
 
 
-				a.active
+				&.active
 					.icon-arrow
 						transform: rotate(90deg)
-				a.active + .header-bottom__submenu
-					visibility: visible
-					opacity: 1
-					transform: rotateX(0deg)
+
+					>a
+						color: $pink-2
+
+					li
+						z-index: -1
+
+					.header-bottom__submenu
+						z-index: -1
+						visibility: visible
+						opacity: 1
+						transform: rotateX(0deg)
+
+						a
+							transition: 0.7s
+
+						a:hover
+							color: $black
+							transition:  0.7s
+							font-family: "CynthoMedium"
 
 
 			li:last-child
@@ -145,7 +191,18 @@
 			opacity: 0
 			
 			transform: translateX(1in)
-			transition: transform 0.7s ease, opacity 1s ease
+			transition:  0.7s
+
+			&:after
+				content: ''
+				position: absolute
+				z-index: -2
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				
+				box-shadow: inset 0 10px 9px -5px rgba(244, 161, 123, 0.18)
 
 
 			li
@@ -229,7 +286,7 @@
 
 			flex-direction: column
 
-			margin-top: 3px
+			margin-top: 5px
 			padding: 16px 16px
 
 			max-width: 238px
@@ -263,10 +320,16 @@
 					padding: 18px 0px
 					border-bottom: 0.5px solid #DADADA
 
-				a.active + .header-bottom__submenu
+			>li.active
+				a + .header-bottom__submenu
 					z-index: 1
 					height: 100%
 					max-height: 100%
+					box-shadow: none
+
+				.header-bottom__submenu:after
+					display: none
+
 
 			li + li
 				padding: 0
@@ -309,7 +372,16 @@
 					color: #6B6B6B
 
 @media(max-width: 526px)
+	.header
+		box-shadow: none
+
 	.header-bottom__menu
+		max-width: 200px
+		
+
+		.submenu-js > a
+			padding-left: 20px
+
 		&>li
 			a
 				font-size: 1.2rem
@@ -318,13 +390,14 @@
 		.header-bottom__submenu 
 			li 
 				a
+					max-width: 100px
 					font-size: 0.8rem
 	.header-top
 		position: relative
 		z-index: 1
 
 	.header-phone a
-		font-size: 1rem	
+		font-size: 1rem
 
 	.header-sidebar__icon
 		height: 45px
@@ -340,3 +413,4 @@
 
 		&__svg
 			width: 60px
+			
