@@ -1,0 +1,337 @@
+//---------------------------------------------
+// page-basket
+//---------------------------------------------
+.page-basket
+	padding-bottom: 80px
+
+	.container
+		display: flex
+		align-items: flex-start
+	.section-recom
+		.section-recom__box
+			margin: auto
+
+.section-basket
+	padding-bottom: 80px
+
+	.section-title
+		margin-bottom: 27px
+		margin-left: 0
+
+		text-align: left
+		
+		.section-title__top
+			margin: 0
+
+	.basket-top
+		display: flex
+		justify-content: space-between
+		padding: 11px 66px 9px 59px
+
+		margin-bottom: 14px
+		
+		background: #F9F9F9
+		border-radius: 5px
+		text-align: center
+		font-size: 14px
+		line-height: 17px
+		text-transform: uppercase
+
+		color: #000000
+
+		&__phote
+			width: 99px
+
+		&__name
+			max-width: 230px
+			width: 100%
+
+			text-align: left
+
+		
+		&__price
+			max-width: 50px
+			width: 100%
+
+			text-align: center
+
+		&__col
+			max-width: 105px
+			width: 100%
+
+		&__sum
+			max-width: 60px
+			width: 100%
+
+			text-align: center
+
+	.basket-block
+		position: relative
+		display: flex
+		justify-content: space-between
+
+		padding: 11px 66px 9px 59px
+		margin-bottom: 11px
+
+		background: #F9F9F9
+
+		font-size: 1.1rem
+
+		&__close
+			position: absolute
+			z-index: 9
+			top: 10px
+			right: 11px
+
+			width: 12px
+			height: 12px
+
+			cursor: pointer
+
+			img
+				width: 100%
+				height: auto
+				display: block
+
+		&__img
+			max-width: 99px	
+			width: 100%
+			height: 99px
+
+			border: 1px solid #F0F0F0
+			box-sizing: border-box
+			border-radius: 5px
+
+			img
+				display: block
+
+				width: 100%
+				height: auto 
+
+		&__title
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			justify-content: center
+
+			max-width: 230px
+			width: 100%
+
+			font-size: 0.9rem
+
+			.basket-block__gram
+				margin-top: 5px
+
+				font-family: "CynthoLight"
+				font-size: 14px
+				line-height: 17px
+				color: #383838
+
+		&__price
+			display: flex
+			align-items: center
+			justify-content: center
+
+			max-width: 50px
+			width: 100%
+
+			text-align: center
+
+		&__col
+			display: flex
+			align-items: center
+			justify-content: center
+
+			max-width: 105px
+			width: 100%
+
+			.product-buy__number
+				margin: 0 auto
+
+			.number__input
+				background: none
+
+		&__sum
+			display: flex
+			align-items: center
+			justify-content: center
+
+			max-width: 60px
+			width: 100%
+
+			font-family: "CynthoSemiBold"
+			text-align: center
+			font-size: 18px
+			line-height: 22px
+			color: #383838
+
+	.basket-info
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		padding: 35px 78px 35px 88px
+		margin-bottom: 14px
+
+		background: #F9F9F9
+		border-radius: 5px
+
+		&__img
+			margin-right: 65px
+
+			max-width: 41px
+			height: 41px
+
+		&__text
+			color: $black
+			font-size: 0.9rem
+			line-height: 17px
+
+	.basket-footer
+		display: flex
+		justify-content: space-between
+
+		background: #F9F9F9
+		border-radius: 5px
+
+		padding: 40px 64px 
+
+		.basket-promo
+			font-family: "CynthoMedium"
+			font-size: 1.1rem
+			line-height: 22px
+			color: #383838
+			
+			&__input
+				display: flex
+				justify-content: space-between
+
+				margin-top: 23px
+
+				input
+					margin-right: 6px
+					padding: 17px 25px
+
+					height: 51px
+
+					background: #fff
+					border: 2px solid #F4A17B
+					box-sizing: border-box
+					box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.25)
+					border-radius: 5px
+
+					font-family: "CynthoLight"
+					font-size: 0.9rem
+					line-height: 17px
+					color: #383838
+
+			.btn
+				max-width: 166px
+
+	.basket-footer__button
+		font-family: "CynthoMedium"
+		font-size: 1.1rem
+		line-height: 22px
+		color: #383838
+
+		.btn
+			margin-top: 23px
+
+@media ( max-width: 720px )
+	.section-basket 
+		.basket-content
+			width: 100%
+			overflow-x: scroll
+
+			.basket-block, .basket-top
+				width: 800px
+
+		.basket-info
+			justify-content: space-around
+
+			padding: 35px 30px 35px 30px
+			
+			
+		.basket-info__text
+			max-width: 320px
+
+		.basket-info__img
+			margin: 0
+
+		.basket-footer
+			display: flex
+			flex-direction: column
+
+			padding: 0
+
+			background: none
+
+			.basket-promo
+				display: flex
+				flex-direction: column
+
+				padding-top: 23px
+				padding-bottom: 30px
+				margin-bottom: 14px
+
+				text-align: center
+				background: #f9f9f9
+
+				&__input
+					flex-direction: column
+					align-items: center
+
+					input
+						width: 152px
+
+						margin: 0
+						margin-bottom: 13px
+
+			.basket-footer__button
+				display: flex
+				flex-direction: column
+				align-items: center
+
+				padding-top: 23px
+				padding-bottom: 30px
+				margin-bottom: 0
+
+				text-align: center
+				background: #f9f9f9
+
+
+				.btn
+					margin-top: 10px
+	
+
+	@media ( max-width: 526px  )
+		.section-basket
+			.basket-info__text
+				max-width: 150px
+
+				font-size: 1rem
+				line-height: 12px
+
+			.basket-info__img
+				height: 32px
+				max-width: 32px
+
+			.basket-footer
+				.basket-promo
+					font-size: 1.6rem
+
+					&__input
+						input
+							height: 33px
+
+							font-size: 1rem
+
+					.btn
+						max-width: 110px
+
+						font-size: 1rem
+			
+				&__button
+					font-size: 1.6rem
+
+

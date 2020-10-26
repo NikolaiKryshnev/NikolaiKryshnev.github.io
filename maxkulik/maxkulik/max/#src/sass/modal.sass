@@ -1,0 +1,273 @@
+.modal-overlay 
+
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 5
+
+	width: 100%
+	height: 100%
+
+	background-color: rgba(0, 0, 0, .8)
+	opacity: 0
+	visibility: hidden
+	backface-visibility: hidden
+	transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1)
+
+	&.active 
+		opacity: 1
+		visibility: visible
+		
+.modal-page
+	position: absolute
+	top: 0
+	left: 0
+	display: flex
+	align-items: center
+	justify-content: center
+
+	width: 100%
+	height: 100%
+
+/** * Modal */
+.modal 
+	display: flex
+	align-items: center
+	justify-content: center
+
+	position: relative
+
+	margin: 0 auto
+	padding: 35px
+	
+	max-width: 500px
+	width: 100%
+	min-height: 535px
+
+	border-radius: 10px
+	background: $color-2
+	opacity: 0
+	overflow-y: auto
+	visibility: hidden
+	backface-visibility: hidden
+	transform: scale(1.2)
+	transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1)
+
+	&.active
+		z-index: 99
+
+	.modal-content
+		width: 100%
+		height: auto
+
+		&__title
+			margin-bottom: 28px
+
+			font-family: "MontserratBold"
+			font-size: 2.5rem
+			line-height: 49px
+			text-align: left
+			text-transform: uppercase
+			color: $color-3
+
+		&__input
+			position: relative
+			display: flex
+			flex-direction: column
+
+			margin-bottom: 20px	
+
+			width: 100%
+			height: auto
+
+
+			input
+				padding: 17px 21px
+				
+				width: 100%
+				height: auto
+				
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24)
+				border-radius: 50px
+
+				font-size: .8rem
+				line-height: 17px
+				color: #7B7B7B
+				border: 1px solid none
+				transition: border .3s ease
+
+				&.active
+					border: 1px solid $color-1
+
+
+			input.active + .modal-content__textsub
+				display: block
+		.modal-content__textsub
+				position: absolute
+				left: 0
+				top: 0
+				display: none
+				margin-top: -8px
+				margin-left: 15px
+				padding: 0 5px
+
+				background: $color-2
+				font-size: 0.8rem
+				line-height: 15px
+				color: #7B7B7B
+
+		.modal-content__select
+			position: relative
+			margin-bottom: 27px
+							
+			select
+
+				position: absolute
+				z-index: -1
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				margin: 0
+				padding: 0
+				opacity: 0
+
+			.jq-selectbox__dropdown
+				margin: 0
+				margin-top: -3px
+				
+				padding: 0 22px 20px
+
+				background: $color-2
+				box-shadow: none
+				border: none
+
+				ul
+					li
+						padding-left: 0
+						color: #7B7B7B
+						background: none
+
+					li:first-child
+						display: none
+
+			.jq-selectbox 
+				box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24)
+				border-radius: 10px
+
+			.jq-selectbox li:hover
+				color: #252525
+				background: none
+
+			.jq-selectbox__select
+				padding: 17px 22px 20px
+
+				height: auto
+
+				background: $color-2
+				box-shadow: none
+				border: none
+				border-radius: 10px
+
+				font-size: 0.8rem
+				line-height: 17px
+
+				color: #7B7B7B
+
+			.jq-selectbox__select-text
+				max-width: 300px
+
+			.jq-selectbox__trigger
+				top: 3px
+				border: none
+
+			.jq-selectbox__trigger-arrow
+
+				border-top: 8px solid #999
+				border-right: 8px solid transparent
+				border-left: 8px solid transparent
+
+			
+		.jq-selectbox__select
+			position: relative
+
+		.btn
+			color: $color-3
+
+	.close-modal 
+		position: absolute
+		top: 5px
+		right: 15px
+
+		cursor: pointer
+		opacity: 0
+		backface-visibility: hidden
+		transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1)
+		transition-delay: 0.3s
+
+		svg 
+			width: 1.75em
+			height: 1.75em
+
+	.modal-content 
+		color: $color-3
+		opacity: 0
+		backface-visibility: hidden
+		transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1)
+		transition-delay: 0.3s
+
+	&.active 
+		visibility: visible
+		opacity: 1
+		transform: scale(1)
+
+		.modal-content 
+			opacity: 1
+
+		.close-modal 
+			transform: translateY(10px)
+			opacity: 1
+
+.modal-content__input
+	.modal-warring__text
+		position: absolute
+		bottom: -19px
+
+		display: flex
+		
+		margin-top: 3px
+		padding-left: 21px
+
+		font-size: 0.8rem
+		line-height: 16px
+		color: #e0283e
+		text-align: center
+		opacity: 0	
+		transition: opacity .3s
+		font-family: "MontserratRegular"	
+
+		.form-warring
+			position: relative
+
+			margin: 0
+			margin-right: 4px
+
+			display: block
+			color: $color-2
+			font-family: "MontserratBold"	
+
+
+.modal-content__input.form__input-required
+	.modal-warring__text
+		opacity: 1
+
+.modal--Thanks
+	min-height: auto
+	
+	.modal-content__title
+		text-align: center
+		
+	.modal-content
+		text-align: center
+		font-size: 1.5rem
+		line-height: 1.4

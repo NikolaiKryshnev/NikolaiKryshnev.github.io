@@ -39,15 +39,15 @@ let submenu = $('.header-menu-js li');
 if (width >= 992) {
 	submenu.hover(
 		function () {
-			$(this).addClass('active');
+			$(this).addClass('hover');
 		},
 		function () {
-			$(this).removeClass('active');
+			$(this).removeClass('hover');
 		});
 } else {
 	submenu.click(function (e) {
 		e.preventDefault();
-		$(this).toggleClass('active');
+		$(this).toggleClass('hover');
 	})
 }
 
@@ -67,6 +67,26 @@ $(function () {
 	})
 })
 
+//---------------------------------------------
+// search Active
+//---------------------------------------------
+
+$(function () {
+	const searchBtn = $('.search-btn-js');
+	const searchInput = $('.header-search-js');
+	const searchClose = $('.search-close-js');
+
+	searchBtn.click(function () {
+		searchBtn.toggleClass('active');
+		searchInput.toggleClass('active');
+
+	})
+	searchClose.click(function () {
+		searchBtn.removeClass('active');
+		searchInput.removeClass('active');
+
+	})
+})
 //---------------------------------------------
 //  Slick slider
 //---------------------------------------------
@@ -124,6 +144,105 @@ $('.reviews-slider-js').slick({
 
 			}
 		},
+	]
+});
+
+$('.corus-js').slick({
+	dots: false,
+	slidesToShow: 1,
+	loop: true,
+	arrows: false,
+	prevArrow: '<div class="reviews-arrow reviews-arrow__left"><svg  class="  " width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 1L2 8L9 15" stroke="white" stroke-width="2"/></svg></div>',
+	nextArrow: '<div class="reviews-arrow reviews-arrow__right"><svg class=" " width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L8 8L1 15" stroke="white" stroke-width="2"/></svg></div>',
+	responsive: [
+		{
+			breakpoint: 527,
+			settings: {
+				prevArrow: '<div class="reviews-arrow reviews-arrow__left"><svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.90914 1.54544L1.45459 5.99999L5.90914 10.4545" stroke="white" stroke-width="2"/></svg></div>',
+				nextArrow: '<div class="reviews-arrow reviews-arrow__right"><svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.54545 1.54544L6 5.99999L1.54545 10.4545" stroke="white" stroke-width="2"/></svg>	</div>',
+
+			}
+		},
+	]
+});
+
+// Cart slider
+$('.slider-big-js').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	arrows: false,
+	fade: true,
+	asNavFor: '.slider-nav-js'
+});
+
+$('.slider-nav-js').slick({
+	slidesToShow: 3,
+	slidesToScroll: 3,
+	asNavFor: '.slider-big-js',
+	dots: false,
+});
+
+// recom slider
+
+$('.recom-js').slick({
+	dots: false,
+	infinite: true,
+	speed: 300,
+	slidesToShow: 3,
+	slidesToScroll: 3,
+	autoplay: true,
+	autoplaySpeed: 5000,
+	loop: true,
+	arrows: true,
+	prevArrow: '<svg class="slick-arrow slick-arrow__left" width="17" height="30" viewBox="0 0 17 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 1L2 15L16 29" stroke="#383838" stroke-width="2"/></svg>',
+	nextArrow: '<svg class="slick-arrow slick-arrow__right" width="17" height="30" viewBox="0 0 17 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L15 15L1 29" stroke="#383838" stroke-width="2"/></svg>',
+	responsive: [
+		{
+			breakpoint: 800,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2
+			}
+		},
+		{
+			breakpoint: 600,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2
+			}
+		}
+	]
+});
+
+// recom slider
+
+$('.personSlider-js').slick({
+	dots: false,
+	infinite: true,
+	speed: 300,
+	slidesToShow: 3,
+	slidesToScroll: 3,
+	autoplay: true,
+	autoplaySpeed: 5000,
+	loop: true,
+	arrows: true,
+	prevArrow: '<svg class="slick-arrow slick-arrow__left" width="17" height="30" viewBox="0 0 17 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 1L2 15L16 29" stroke="#383838" stroke-width="2"/></svg>',
+	nextArrow: '<svg class="slick-arrow slick-arrow__right" width="17" height="30" viewBox="0 0 17 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L15 15L1 29" stroke="#383838" stroke-width="2"/></svg>',
+	responsive: [
+		{
+			breakpoint: 800,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2
+			}
+		},
+		{
+			breakpoint: 600,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+		}
 	]
 });
 //---------------------------------------------
@@ -213,6 +332,37 @@ function catalogItemCounter(field) {
 }
 catalogItemCounter('.buy-input-js');
 
+
+
+document.addEventListener('DOMContentLoaded', function () {
+	let navs = document.querySelectorAll('.sidevar-block-js');
+	for( let i = 0; i < navs.length; i++ ){
+		 navs[i].addEventListener('click', selectMenu(i), false);
+	}
+ 
+	function selectMenu(iterator) {
+		 return function() {
+			  let parents = document.querySelectorAll('.sidevar-block-js');
+			  parents.forEach(function(item, iter) {
+				  
+ 
+					if(iterator == iter) {
+						 item.classList.toggle('active');
+					}
+			  });
+
+		 } 
+	}
+
+	 });
+$(document).ready(function() {
+ 
+	$('input[type="file"]').change(function(){
+		 var value = $("input[type='file']").val();
+		 $('.js-value').text(value);
+	});
+
+});
 
 
 

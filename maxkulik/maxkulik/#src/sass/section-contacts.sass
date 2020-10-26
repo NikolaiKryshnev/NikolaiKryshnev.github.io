@@ -1,0 +1,257 @@
+.section-contacts
+	padding-top: 100px
+	padding-bottom: 100px
+
+	background: $color-3
+
+	.contact-box
+		display: flex
+		justify-content: space-between
+
+.contacts-form
+	display: flex
+	flex-direction: column
+	justify-content: flex-start
+
+	width: 100%
+	height: auto
+	
+	.contacts-form__box
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+
+		margin-bottom: 20px
+
+		max-width: 845px
+		width: 100%
+		height: auto
+
+		.contacts-form__input
+			position: relative
+			
+			display: flex
+
+			max-width: 48%
+			width: 100%
+			height: auto
+
+			margin: 8px	
+
+			input
+				width: 100%
+
+				padding: 17px 30px
+				
+				background: #1A1A1A
+				border: none
+				border-radius: 50px
+
+				font-size: 0.8rem
+				line-height: 17px
+				color: #7B7B7B
+				border: 1px solid #1A1A1A
+				transition: border .3s ease
+
+
+				&:focus
+					border: 1px solid $color-1
+		
+			&:nth-child(3)
+				max-width: 100%
+
+		.contacts-form__textarea
+			display: flex
+
+			width: 100%
+
+			margin: 8px
+
+			textarea
+				width: 100%
+
+				padding: 17px 30px
+				
+				background: #1A1A1A
+				border: none
+				border-radius: 10px
+
+				font-size: 0.8rem
+				line-height: 17px
+				color: #7B7B7B
+
+				height: 175px
+				max-height: 175px
+				resize: none
+				border: 1px solid #1A1A1A
+				transition: border .3s ease
+
+
+			textarea:focus
+				border: 1px solid $color-1
+		
+	.btn
+		color: $color-3
+		
+		&:hover
+			color: $color-2
+
+.contacts-info
+	display: flex
+	flex-direction: column
+
+	&__box
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+
+		text-align: left
+		margin-bottom: 34px
+
+	&__box:last-child
+		
+		margin-bottom: 0
+	
+	&__img
+		margin-bottom: 9px
+
+		max-width: 18px
+		width: 100%
+		height: auto
+	
+	&__title
+		margin-bottom: 9px
+		
+		font-size: 1.2rem
+		line-height: 22px
+		color: $color-2
+		font-family: "MontserratBold"
+
+	&__text
+		line-height: 20px
+		letter-spacing: 0.0025em
+		color: #5F6870
+			
+@media ( max-width: 1100px )
+	.contacts-form
+		.contacts-form__box
+			.contacts-form__input
+				max-width: 47%
+
+@media  ( max-width: 991px )
+	.section-contacts
+		padding-top: 50px
+		padding-bottom: 50px
+
+	.contacts-form
+		.contacts-form__box
+			max-width: 100%
+		
+			.contacts-form__input
+				max-width: 48%
+	
+	.contacts-info
+		margin-top: 50px
+
+		flex-direction: row
+		justify-content: space-around
+
+		&__img
+			margin: 0 auto 10px
+
+		&__title
+			text-align: center
+
+		&__text
+			text-align: center
+			
+
+
+	.contact-box
+		flex-direction: column
+
+@media ( max-width: 837px  )
+	.contacts-form
+		.contacts-form__box
+			.contacts-form__input
+				max-width: 47%
+
+@media ( max-width: 635px  )
+	.contacts-info
+		flex-direction: column
+
+	.contacts-form
+		.contacts-form__box
+			.contacts-form__input
+				max-width: 100%
+
+@media ( max-width: 526px  )
+	.section-contacts
+		padding-top: 30px
+		padding-bottom: 30px
+
+
+//---------------------------------
+// VALIDATION FORM
+//---------------------------------
+.form-warring
+	position: absolute
+	right: 0
+	top: 50%
+
+	margin-top: -7px
+	margin-right: 21px
+
+	display: none
+	justify-content: center
+	align-items: center
+
+	width: 14px
+	height: 14px
+
+	border-radius: 50%
+	background: #E0283E
+
+	font-size: 0.7rem
+	cursor: pointer
+
+	&__text
+		position: absolute
+		z-index: 5
+		bottom: -70px
+
+		display: block
+		visibility: hidden 
+		padding: 16px
+		width: 160px
+		height: auto
+
+		background: #E0283E
+		border-radius: 4px
+		opacity: 0
+
+		text-align: center
+		line-height: 16px
+		transition:  1s  ease
+		text-align: center
+		font-family: "MontserratBold"
+
+	&:hover
+		.form-warring__text
+			display: block
+
+			opacity: 1
+			visibility: visible
+
+.form__input-required
+	.form-warring
+		display: flex
+
+@media ( max-width: 991px )
+	.form-warring__text
+		right: 0
+		
+	
+
+
+

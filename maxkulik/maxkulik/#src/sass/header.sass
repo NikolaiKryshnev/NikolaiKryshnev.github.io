@@ -1,0 +1,127 @@
+.header
+	position: absolute
+	z-index: 10
+	top: 0
+	left: 0
+
+	width: 100%
+
+	padding-top: 40px
+	padding-bottom: 40px
+	background-color: none
+
+	transition: 1s background-color 0.4s ease-out
+
+
+
+
+	&.is-active
+		background-color: $color-3
+
+
+	.container
+		display: flex
+		justify-content: space-between
+
+		margin: auto
+
+	.header-burger
+		position: relative
+		display: flex
+		align-items: center
+
+		.header-burger__bars
+			width: 28px
+			height: 20px
+
+		&__trigger
+			position: absolute
+			z-index: 10
+
+			display: block
+
+			padding: 8px 0
+
+			transition: 0.2s ease-in-out
+
+			.burger-bars
+				position: relative
+
+				&:before, 
+				&:after 
+					content: ''
+					display: block
+					position: absolute
+					top: 0
+					left: 0
+					will-change: transform
+
+
+				&:before 
+					transform: translateY(-8px)
+				
+				&:after 
+					transform: translateY(8px)
+				
+			&.is-active 
+				transform: rotate(-45deg)
+				
+				.burger-bars:before,
+				.burger-bars:after
+					transform: translateX(0) rotate(-90deg)
+					
+			.burger-bars, 
+			.burger-bars:before,
+			.burger-bars:after 
+				width: 28px
+				height: 4px
+				background-color: #fff
+				border-radius: 4px
+				-webkit-transition: 0.2s ease-in-out
+				transition: 0.2s ease-in-out
+		
+	.header-tel
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		max-width: 330px
+		width: 100%
+
+		font-weight: 600
+		font-size: 18px
+		line-height: 22px
+
+		
+
+		&__number
+			position: relative
+
+			&::before
+				content: ''
+				position: absolute
+				bottom: 0
+				left: -35px
+
+				width: 20px
+				height: 20px
+
+				background: no-repeat url("../img/icons/icons.svg#icon-phone_header")
+
+		&__number:hover
+			text-decoration: underline
+
+@media ( max-width: 526px )
+	.header
+		.header-tel
+			flex-direction: column
+
+			&__number
+				margin-bottom: 10px
+				
+			&__number, &__btn
+				margin-left: auto
+				margin-right: 0
+		
+
+	

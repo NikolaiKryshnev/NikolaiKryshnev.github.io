@@ -1,0 +1,72 @@
+
+.section-advantages
+	padding-top: 100px
+	padding-bottom: 100px
+
+	background: $color-4
+
+	.advantages-blocks
+		display: flex
+		justify-content: space-between
+
+		margin-top: 90px
+
+		.advantages-block
+			display: flex
+			flex-direction: column
+			justify-content: center
+
+			text-align: center
+
+			padding: 50px 15px
+
+			max-width: 270px
+			width: 100%
+
+			border: 1px solid #353535
+			box-sizing: border-box
+			border-radius: 20px
+
+			&__img
+				margin: 0 auto 30px
+				
+				max-width: 55px
+				width: 100%
+				height: auto
+
+				/** background: $color-1 **/
+
+@media ( max-width: 1140px )
+	.section-advantages
+		.advantages-blocks
+
+			.advantages-block
+				max-width: 24%
+
+@media ( max-width: 835px )
+	.section-advantages
+		padding-top: 50px
+		padding-bottom: 50px
+		
+		.advantages-blocks
+			flex-wrap: wrap
+
+			margin-top: 0px
+
+			.advantages-block
+				margin-bottom: 20px
+
+				max-width: 49%
+
+@media ( max-width: 526px )
+
+	.section-advantages
+		padding-top: 30px
+		padding-bottom: 30px
+
+		.advantages-blocks
+			margin-top: 0
+			
+			.advantages-block
+				max-width: 100%
+

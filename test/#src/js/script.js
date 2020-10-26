@@ -14,6 +14,9 @@
 @@include('tabs.js')
 // @@include('starts.js')
 @@include('number.js')
+@@include('sidebar.js')
+@@include('inputFile.js')
+
 
 
 

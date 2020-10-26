@@ -23,8 +23,6 @@ html
 	font-size: 16px
 
 body
-	overflow-x: hidden
-
 	font-family: "CynthoRegular"
 	font-size: 16px
 	color: $black
@@ -61,30 +59,52 @@ nav
 img
 	display: block
 	width: 100%
+	
+button,input,texterainput, textarea, button
+	outline: none
+	border: none
+	border: none
+	
 
 a 
+	cursor: pointer
+	transition: .3s ease
 	text-decoration: none
 
 a:not([class]) 
   text-decoration-skip-ink: auto
 
 .wrraper
-	overflow-x: hidden
+	overflow: hidden
 
 .page
 	position: relative
 	display: block
-	overflow-x: hidden
+	filter: blur(0px)
+	transition: 0.4s
 
+
+	&:after
+		content: ''
+		opacity: 0
+		z-index: -1
+		transition: z-index 0.1s
+		transition: 0.5s
+
+.content
+	width: 100%
+	
 .section-js.active
 	z-index: -1
 	
 
-.page:after
+.page.active:after
 	position: absolute
 	z-index: 3
 	top: 0
 	left: 0
+
+	opacity: 1
 
 	width: 100%
 	height: 100%
@@ -96,7 +116,6 @@ a:not([class])
 	filter: blur(4px)
 
 
-
 .container
 	margin: 0 auto
 	padding: 0 15px
@@ -104,35 +123,40 @@ a:not([class])
 	max-width: 1170px
 	width: 100%
 
+.content
+	display: flex
+	flex-direction: column
+
 .section-title
 	display: flex
 	flex-direction: column
 	justify-content: center
 
+	margin: auto
 	margin-bottom: 52px
 
 	text-align: center
 
-	h2
+	max-width: 373px
+	width: 100%
+
+	font-size: 0.9rem
+
+	&__top
+		
 		margin-bottom: 12px
 
 		font-size: 1.6rem
 		line-height: 31px
 		text-transform: uppercase
 
-	p
-		margin: auto
-
-		max-width: 373px
-		width: 100%
-
-		font-size: 0.9rem
+		
 
 @media  ( max-width: 526px )
 	.section-title
 		margin-bottom: 25px
 		
-		h2
+		&__top
 			font-size: 2rem
 
 
@@ -153,15 +177,25 @@ a:not([class])
 	color: $white
 	font-size: .9rem
 	transition: background .3s ease
+	cursor: pointer
 
 	&:hover
 		background: $pink-1
+
+.btn--bg
+	background: none
+	border: 2px solid #F4A17B
+	border-radius: 5px
+	font-family: "CynthoSemiBold"
+	color: $black
 
 .btn--little
 	width: 114px
 	height: 35px
 	&:hover
 		background: $pink-3
+	
+
 
 
 @media ( max-width: 526px )
@@ -182,12 +216,33 @@ a:not([class])
 
 // import modals
 @import "header"
+@import "breadcrumbs"
 @import "section-banInfo"
 @import "section-product"
 @import "section-about"
 @import "section-catalog"
+@import "section-cart"
 @import "section-reviews"
+@import "section-recom"
+@import "section-reviewsCart"
+@import "section-basket"
+@import "section-order"
+@import "section-shipPay"
+@import "section-partners"
+@import "section-contact"
+@import "section-text"
+@import "section-gallery"
+@import "section-personSlider"
+@import "404"
+
 @import "footer"
+
+// import task
+@import "radio"
+@import "checkbox"
+@import "pagination"
+@import "sidebar"
+
 
 
 

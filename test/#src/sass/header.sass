@@ -1,3 +1,6 @@
+//---------------------------------------------
+// header
+//---------------------------------------------
 .header
 	position: relative
 	z-index: 99
@@ -35,6 +38,7 @@
 		flex-direction: row
 
 		&__icon
+			position: relative
 			display: flex
 			justify-content: center
 			align-items: center
@@ -47,12 +51,33 @@
 
 			transition: 0.7s ease
 
+			a:after
+				content: ''
+
+				position: absolute
+				bottom: 0
+				left: 0
+				z-index: 0
+				background: $white
+				transition: 0.7s
+				height: 0%
+				width: 100%
+
+				
+			&.active
+				a:after
+					height: 90%
+					
+					svg
+						stroke: #F4A17B
+						fill: #F4A17B
+
 			a
 				display: flex
 				justify-content: center
 				align-items: center
 
-				padding: 0 20px 
+				padding: 0 
 
 				width: 100%
 				height: 100%
@@ -61,11 +86,14 @@
 				
 				opacity: 0.5
 	
-			img
+			svg
+				position: relative
+				z-index: 9
 				width: 19px
+				height: 100%
 			
 		&__icon:last-child
-			img
+			svg
 				width: 23px
 
 	.pink--light
@@ -143,7 +171,7 @@
 						transition: transform 0.3s ease
 
 
-				&.active
+				&.hover
 					.icon-arrow
 						transform: rotate(90deg)
 
@@ -224,6 +252,64 @@
 					
 .header-burger
 	display: none
+
+.header-search
+	display: flex
+	align-items: center
+	margin-right: 120px
+
+	transform: translateX(1in)
+	visibility: hidden
+	opacity: 0
+	transition: 0.7s
+
+	&.active
+			transform: translateX(0)
+			visibility: visible
+			opacity: 1
+
+
+	&__input
+		width: 250px
+		height: 25px
+
+		border: 1px solid $pink-3
+		border-radius: 5px
+
+		margin-right: 5px
+		padding: 0 15px 0
+
+		font-family: "CynthoLight"
+		font-size: 0.8rem
+		line-height: 17px
+		color: #7D7D7D
+
+	&__button
+		padding: 5px 20px
+
+		max-width: 86px
+		width: 100%
+		height: 25px
+
+		background: $pink-3
+		border-radius: 5px
+
+		font-size: 0.8rem
+		line-height: 14px
+		text-transform: uppercase
+
+		color: $white
+
+		transition: 0.7s
+
+		&:hover
+			opacity: 0.8
+	
+	&__close
+		display: none
+
+
+		
 
 @media ( max-width: 991px)
 	.header-top
@@ -323,7 +409,7 @@
 					padding: 18px 0px
 					border-bottom: 0.5px solid #DADADA
 
-			>li.active
+			>li.hover
 				a + .header-bottom__submenu
 					z-index: 1
 					height: 100%
@@ -374,11 +460,81 @@
 
 					font-size: 0.8rem
 					color: #6B6B6B
+	.header-sidebar__icon
+		a:after
+			display: none
+			
+	.header-search
+		position: absolute
+		z-index: 99
+		width: 100%
+		height: 62px
+		left: 0
+		right: 0
+		transform: translateX(0in)
+		transform: translateY(-10in)
+
+		&__input 
+			width: 100%
+			height: 100%
+
+			margin-right: 0
+			font-size: 1rem
+
+			border-radius: 0
+		
+		&__button
+			height: 100%
+			max-width: 120px
+
+			border-radius: 0
+
+		&__close
+			display: block
+			position: relative
+
+			padding: 15px
+			
+			width: 62px
+			height: 100%
+
+			background: $pink-2
+
+
+			
+			&::before
+				content: ''
+				position: absolute
+				left: 50%
+				top: 50%
+
+				margin-top: -2px
+				margin-left: -20px
+				
+				background: $white
+				width: 40px
+				height: 4px
+
+				border-radius: 15px
+				transform: rotate(45deg)
+
+			&::after
+				content: ''
+				position: absolute
+				left: 50%
+				top: 50%
+
+				margin-top: -2px
+				margin-left: -20px
+				
+				background: $white
+				width: 40px
+				height: 4px
+
+				border-radius: 15px
+				transform: rotate(135deg)
 
 @media(max-width: 526px)
-	.header
-		box-shadow: none
-
 	.header-bottom__menu
 		max-width: 200px
 
@@ -396,9 +552,10 @@
 					max-width: 100px
 
 					font-size: 0.8rem
+
 	.header-top
-		position: relative
-		z-index: 1
+		// position: relative
+		// z-index: 1
 
 	.header-phone a
 		font-size: 1rem
@@ -409,6 +566,7 @@
 
 	.header-bottom__logo
 		max-width: 160px
+		
 		img
 			height: auto
 
@@ -418,3 +576,12 @@
 		&__svg
 			width: 60px
 			
+	.header-search
+		height: 45px
+
+		&__button
+			max-width: 80px
+			font-size: 1.2rem
+
+	.header-search__close
+		display: block

@@ -1,0 +1,49 @@
+//---------------------------------------------
+// breadcrumbs
+//---------------------------------------------
+.breadcrumbs
+	margin-top: 25px
+	margin-bottom: 35px
+
+	font-size: 0.8rem
+	line-height: 17px
+	color: #7D7D7D
+
+	ul
+		display: flex
+
+		li
+			position: relative
+
+			a
+				color: #7D7D7D
+
+		li + li
+			padding-left: 15px
+
+			&::after
+				content: "-"
+				position: absolute
+				left: 0
+				top: 0
+
+				margin-left: 4px
+
+@media  ( max-width: 991px )
+	.breadcrumbs
+		ul
+			li
+				a
+					font-size: 0.9rem
+
+@media ( max-width: 526px )
+	.breadcrumbs
+		margin: 15px 0
+		ul
+			li
+				a
+					font-size: 1rem
+
+
+
+	

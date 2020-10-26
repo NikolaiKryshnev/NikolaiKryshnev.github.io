@@ -1,0 +1,404 @@
+//---------------------------------------------
+// section-reviews--cart
+//---------------------------------------------
+.section-reviews--cart
+	.section-title
+		display: flex
+		justify-content: space-between
+		align-items: center
+		flex-direction: row
+
+		max-width: 100%
+
+		.section-title__top
+			margin-bottom: 0
+
+			font-size: 1.5rem
+
+	button
+		// margin-left: 34px
+
+	.reviewsCart-block
+		display: flex
+
+		padding: 33px 72px 33px 30px
+		margin-bottom: 32px
+
+		background: #F9F9F9
+		border-radius: 5px
+
+		&:last-child
+			margin-bottom: 0
+
+		&__img
+			margin-right: 32px
+
+			max-width: 75px
+			width: 100%
+			height: 75px
+
+			border-radius: 50%
+			overflow: hidden
+
+		&__name
+			margin-bottom: 5px
+
+			font-family: "CynthoSemiBold"
+			font-size: 1rem
+			line-height: 17px
+
+		&__data
+			margin-bottom: 13px
+
+			font-size: 0.9rem
+			line-height: 12px
+
+		&__rating
+			margin-bottom: 25px
+
+		&__title
+			font-family: "CynthoSemiBold"
+			font-size: 0.9rem
+			line-height: 12px
+
+			margin-bottom: 5px
+
+.section-reviewsForm
+	padding-bottom: 120px
+
+	.btn
+		margin: 0 0 19px
+
+.reviewsForm
+	padding: 24px 42px 30px 
+
+	background: #F9F9F9
+	border-radius: 5px
+	display: flex
+	flex-wrap: wrap
+
+	&-title
+		padding: 10px
+		margin-bottom: 6px
+		
+		background: #F9F9F9
+		border-radius: 5px
+
+		text-align: center
+		font-family: "CynthoSemiBold"
+		font-size: 14px
+		line-height: 17px
+		text-transform: uppercase
+		color: #F4A17B
+
+		height: 37px
+
+	&-input
+		margin-right: 56px
+		margin-bottom: 16px
+
+		max-width: 311px
+		width: 100%
+
+		font-family: "CynthoMedium"
+		font-size: 1rem
+		line-height: 17px
+		color: #383838
+
+		input	
+			padding: 0 20px
+			margin-top: 10px
+
+			width: 100%
+			height: 29px
+
+			font-size: 0.8rem
+			line-height: 14px
+			color: #383838
+			border-radius: 5px
+	
+		span
+			color:#D2D2D2
+			
+	&-rating 
+		max-width: 311px
+		width: 100%
+
+		display: flex
+		flex-direction: column
+
+		font-family: "CynthoMedium"
+		font-size: 1rem
+		cursor: pointer
+
+		.starts
+			margin-top: 10px
+
+	&-textarea
+		display: flex
+		flex-direction: column
+
+		margin-bottom: 34px
+
+		width: 100%
+		height: auto
+
+		font-family: "CynthoMedium"
+		font-size: 1rem
+
+		textarea
+			margin-top: 10px
+			padding: 10px 20px
+
+			width: 784px
+			width: 100%
+			min-height: 98px
+			max-height: 200px
+
+			font-size: 12px
+			line-height: 14px
+			color: #383838
+			resize: vertical
+
+	&-inputFile
+		width: 100%
+
+		font-family: "CynthoMedium"
+		font-size: 1rem
+		line-height: 17px
+		color: #383838
+
+		&__box
+			position: relative
+
+		&__filupp
+			display: flex
+			align-items: center
+			
+		&__block
+			margin-top: 11px
+
+			cursor: pointer
+			
+			&:hover
+				opacity: 0.8
+
+			.filupp-file-name
+				max-width: 31px
+				width: 31px
+
+			img
+				max-width: 31px
+				width: 100%
+				height: 31px
+
+				cursor: pointer
+
+			input[type="file"] 
+				position: absolute
+
+				width: 1px
+				height: 1px
+
+				padding: 0
+				margin: -1px
+
+				overflow: hidden
+				clip: rect(0, 0, 0, 0)
+				border: 0
+				cursor: pointer
+
+			.filupp-file__text	
+				margin-left: 10px
+	.starts
+		display: flex
+
+		margin-top: 10px
+
+		cursor: pointer
+
+		.star
+			margin: 0 2px
+		
+		&:hover .star path 
+			fill: #F4A17B !important
+
+		.star path 
+			fill: #d2d2d2
+
+		.star:hover ~ .star path 
+			fill: #d2d2d2 !important
+
+		
+		&[data-stars] .star path 
+			fill: #F4A17B
+
+		&[data-stars="1"] .star:nth-child(1) ~ .star path 
+			fill: #d2d2d2
+
+		&[data-stars="2"] .star:nth-child(2) ~ .star path 
+			fill: #d2d2d2
+
+		&[data-stars="3"] .star:nth-child(3) ~ .star path 
+			fill: #d2d2d2
+
+		&[data-stars="4"] .star:nth-child(4) ~ .star path 
+			fill: #d2d2d2
+
+		&[data-stars="5"] .star:nth-child(5) ~ .star path 
+			fill: #d2d2d2
+
+	.btn
+		margin: 27px auto 0
+		width: 194px
+		height: 35px
+
+@media ( max-width: 991px )
+	.section-cart
+		margin-bottom: 68px
+
+		.cart-slider
+			margin-right: 33px
+
+		.cart-info__text
+			margin-bottom: 20px
+
+
+	.reviewsForm-input
+		margin-right: 2%
+
+			
+@media ( max-width: 600px )
+	.section-cart 
+		position: relative
+		flex-wrap: wrap
+
+		margin-bottom: 47px
+
+		.cart-info__top
+			position: absolute
+			top: 0
+
+		.cart-info__title
+			margin: 0
+
+			font-size: 1.6rem
+
+
+		.cart-info__weight
+			font-size: 1rem
+
+		.cart-slider
+			padding-top: 90px
+			margin: 0
+
+			max-width: 100%
+
+
+			.slider-big__img
+				max-width: 100%
+
+		.product-buy
+			margin-bottom: 20px
+
+		.cart-info__text
+			text-align: center
+			font-size: 1.2rem
+
+		.cart-info__category
+			font-size: 1.4rem
+			text-align: center
+		
+		.cart-info__composition
+			font-size: 1.4rem
+			text-align: center
+
+		.cart-info__cal
+			margin-bottom: 15px
+
+			font-size: 1.4rem
+			text-align: center
+
+		.cart-info__button
+			margin-bottom: 24px
+
+		.cart-info__buttons
+			display: flex
+			justify-content: center
+
+			.cart-info__btn
+				margin: 0 4px
+		
+		.cart-info__price
+			margin-bottom: 24px
+
+			font-size: 1.4rem
+			text-align: center
+
+		.cart-price
+			margin: 0 auto
+
+	.section-recom
+		.section-title__top
+			margin: 0
+
+			text-align: center
+
+@media ( max-width: 526px )
+	.section-recom
+		.section-recom__box
+			.product-block
+				max-width: 140px
+
+	.reviewsCart-block__info
+		margin-left: 16px
+
+		max-width: 200px	
+
+	.section-reviews--cart
+		.reviewsCart-block
+			padding: 22px 21px 15px 12px
+			margin-bottom: 13px
+
+			&__img
+				width: 42px
+				height: 42px
+
+				margin-right: 0
+
+			&__name
+				font-size: 1.4rem
+
+			&__data
+				font-size: 1rem
+
+			&__title
+				font-size: 1rem
+
+			&__text
+				font-size: 1rem
+
+		.reviewsCart-block__rating
+			margin-bottom: 17px
+
+	.section-reviewsForm
+		padding-bottom: 75px
+
+		.btn
+			max-width: 148px
+			height: 38px
+
+			margin-bottom: 24px
+			margin-left: 0
+
+		form
+			.btn
+				margin-bottom: 0
+
+				
+		.reviewsForm-rating
+			margin-bottom: 18px
+
+
+		
+

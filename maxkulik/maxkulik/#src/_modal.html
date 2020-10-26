@@ -1,0 +1,87 @@
+<div class="modal-overlay">
+	<div class="modal-page">
+		<div class="modal modalForm-js">
+			<a class="close-modal">
+				<svg viewBox="0 0 20 20">
+					<path fill="#000000"
+						d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z">
+					</path>
+				</svg>
+			</a>
+			<!-- close modal -->
+			<div class="modal-content">
+				<div class="modal-content__title">Стоимость</div>
+				<form class="modal-content__form form-js-validate" id="form-modal" action="./js/form.php" method="POST">
+					<div class="modal-content__input modal-input-js validate__input-js">
+						<input type="text" name="name" id="" placeholder="Имя*" data-validate data-placeholder-tmp="">
+						<div class="modal-content__textsub">Имя*</div>
+						<div class="modal-warring__text">
+							<div class="form-warring">!</div>
+							Заполнете поле имя
+						</div>
+					</div>
+					<div class="modal-content__input modal-input-js validate__input-js">
+						<input type="email" name="email" id="" placeholder="E-mail*" data-validate data-placeholder-tmp="">
+						<div class="modal-content__textsub">E-mail*</div>
+						<div class="modal-warring__text">
+							<div class="form-warring">!</div>
+							Неверно введен адрес почты
+						</div>
+
+					</div>
+					<div class="modal-content__input modal-input-js validate__input-js">
+						<input type="tel" name="phone" id="" placeholder="Телефон*" data-validate data-placeholder-tmp="">
+						<div class="modal-content__textsub">Телефон*</div>
+						<div class="modal-warring__text">
+							<div class="form-warring">!</div>
+							Заполнете поле телефон
+						</div>
+
+					</div>
+					<div class="modal-content__select">
+						<select name="order">
+							<!-- Обратите внимание на атрибуты HTML5 данных -->
+							<option>Выберите продукт</option>
+							<option value="Производство рекламных роликов, презентационных и имиджевых фильмов">Производство
+								рекламных роликов, презентационных и имиджевых фильмов</option>
+							<option value="Разработка брендбука и фирменного стиля компании">Разработка брендбука и фирменного
+								стиля компании</option>
+							<option value="Презентационные (анимированные) слайд-шоу">Презентационные (анимированные) слайд-шоу
+							</option>
+							<option value="Шейповая анимация">Шейповая анимация</option>
+							<option value="Другой вариант">Другой вариант</option>
+
+						</select>
+					</div>
+
+					<button class="btn button_submit button_wide" type="submit">Отправить</button>
+				</form>
+			</div>
+			<!-- content -->
+		</div>
+		<!-- modal -->
+	</div>
+
+	<div class="modal-page">
+		<div class="modal modal--Thanks modalThanks-js">
+			<a class="close-modal">
+				<svg viewBox="0 0 20 20">
+					<path fill="#000000"
+						d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z">
+					</path>
+				</svg>
+			</a>
+			<!-- close modal -->
+			<div class="modal-content">
+				<div class="modal-content__title">Мысли-кадры.</div>
+				<p>Запомни всё, о чём думаешь!</p>
+				<p>Я скоро свяжусь с тобой.</p>
+
+			</div>
+			<!-- content -->
+		</div>
+		<!-- modal -->
+	</div>
+
+</div>
+<!-- /.modal-overlay -->

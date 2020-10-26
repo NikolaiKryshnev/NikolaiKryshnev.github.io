@@ -1,0 +1,66 @@
+.section-quote
+	padding-top: 100px
+	padding-bottom: 100px
+
+	background: $color-1
+
+	.container
+		display: flex
+		justify-content: center
+		align-items: center
+
+	&__text
+		position: relative
+
+		max-width: 1000px
+		width: 100%
+
+		font-family: "MontserratMedium"
+		text-align: center
+		font-size: 2.2rem
+		color: $color-3
+		line-height: 45px
+
+		&:after
+
+			content: ''
+			position: absolute
+			top: -50%
+			left: -5%
+
+			margin-top: 32px
+
+			width: 64px
+			height: 64px
+			background: no-repeat url(../img/icons/icons.svg#icon-quote)
+
+
+@media  ( max-width: 991px  )
+	.section-quote
+		padding-top: 50px
+		padding-bottom: 50px
+
+		&__text
+			font-size: 1.8rem
+
+@media  ( max-width: 720px  )
+	.section-quote
+		&__text
+			font-size: 1.4rem
+			line-height: 1.4
+
+@media  ( max-width: 526px  )
+	.section-quote
+		&__text
+			font-size: 1rem
+			line-height: 1.4	
+
+			
+			&:after
+				left: -6px
+				
+				margin-top: 16px
+
+				width: 35px
+				height: 35px
+

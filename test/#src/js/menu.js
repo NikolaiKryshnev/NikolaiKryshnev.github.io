@@ -6,15 +6,15 @@ let submenu = $('.header-menu-js li');
 if (width >= 992) {
 	submenu.hover(
 		function () {
-			$(this).addClass('active');
+			$(this).addClass('hover');
 		},
 		function () {
-			$(this).removeClass('active');
+			$(this).removeClass('hover');
 		});
 } else {
 	submenu.click(function (e) {
 		e.preventDefault();
-		$(this).toggleClass('active');
+		$(this).toggleClass('hover');
 	})
 }
 
@@ -30,6 +30,27 @@ $(function () {
 		burgerMenu.toggleClass('active');
 		$('.page').toggleClass('active');
 		$('.section-js').toggleClass('active');
+
+	})
+})
+
+//---------------------------------------------
+// search Active
+//---------------------------------------------
+
+$(function () {
+	const searchBtn = $('.search-btn-js');
+	const searchInput = $('.header-search-js');
+	const searchClose = $('.search-close-js');
+
+	searchBtn.click(function () {
+		searchBtn.toggleClass('active');
+		searchInput.toggleClass('active');
+
+	})
+	searchClose.click(function () {
+		searchBtn.removeClass('active');
+		searchInput.removeClass('active');
 
 	})
 })

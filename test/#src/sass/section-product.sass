@@ -1,3 +1,6 @@
+//---------------------------------------------
+// section-product
+//---------------------------------------------
 .section-product
 	position: relative
 
@@ -145,6 +148,38 @@
 	&__info
 		padding: 0 17px
 
+		.product-box
+			display: flex
+			justify-content: space-between
+
+			&__right
+				display: flex
+				justify-content: flex-start
+				flex-direction: column
+
+			&__btn
+				width: 54px
+				height: 18px
+
+				margin-bottom: 3px
+
+				border: 1px solid #F4A17B
+				box-sizing: border-box
+				border-radius: 5px
+				background: none
+				border: 1px solid #F4A17B
+
+				font-size: 0.6rem
+
+				transition: 0.8s
+
+				&:hover
+					background: #F4A17B
+					color: #fff
+					
+
+
+
 		.product-name
 			margin-bottom: 17px
 
@@ -160,45 +195,45 @@
 
 			margin-bottom: 19px
 
-		.product-buy
-			display: flex
-			justify-content: space-between
-			align-items: center
+.product-buy
+	display: flex
+	justify-content: space-between
+	align-items: center
 
-			height: 40px
+	height: 40px
 
-			&--info
-				justify-content: center
+	&--info
+		justify-content: center
 
-				text-align: center
-				color: #DB7F55
+		text-align: center
+		color: #DB7F55
 
-			&__number
-				display: flex
-				justify-content: space-between
-			
-				.number__input
-					width: 35px
+	&__number
+		display: flex
+		justify-content: space-between
+	
+		.number__input
+			width: 35px
 
-					border: none
+			border: none
 
-					text-align: center
-					font-size: 1.5rem
-					line-height: 29px
+			text-align: center
+			font-size: 1.5rem
+			line-height: 29px
 
-				.number__button
-					border: none
+		.number__button
+			border: none
 
-					background: none
+			background: none
 
-					color: $pink-3
-					text-align: center
-					font-size: 32px
+			color: $pink-3
+			text-align: center
+			font-size: 32px
 
-			&__button
-				display: flex
-				justify-content: flex-end
-				align-items: center
+	&__button
+		display: flex
+		justify-content: flex-end
+		align-items: center
 
 .product-svgBg
 	position: absolute

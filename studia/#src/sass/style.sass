@@ -1,88 +1,65 @@
-@mixin font($font_name, $file_name, $weight, $style)
+@import "mixin"
+@import "fonts"
 
-	@font-face
-		font-family: $font_name
-		font-display: swap
-		src: url("./fonts/#{$file_name}.woff") format("woff"), url("./fonts/#{$file_name}.woff2") format("woff2")
-		font-weight: #{$weight}
-		font-style: #{$style}
-		
-@import "../../node_modules/normalize.sass/normalize.sass"
-// --------------------------------------------
-// Common styles
-// --------------------------------------------
 
-*, *::before, *::after 
-  box-sizing: border-box
+//---------------------------------------
+// Reset styles
+//---------------------------------------
+*,
+*::before,
+*::after
+	box-sizing: border-box
 
-*:focus 
-	outline: none
+ul[class],
+ol[class]	
+	padding: 0
+
+/* Убираем внешние отступы */
+body,
+h1, h2, h3, h4, p, 
+ul[class], ol[class], li,
+figure, figcaption, blockquote,
+dl, dd
+	margin: 0
 
 body
-	overflow-x: hidden
-	background: #000
-	font-family: PoppinsRegular
-	font-size: 16px
+  min-height: 100vh
+  scroll-behavior: smooth
+  text-rendering: optimizeSpeed
+  line-height: 1.5
 
-body, 
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd 
-	margin: 0
-	font-size: 100%
+ul[class], ol[class]
+	list-style: none
 
-ul,
-ol,
-nav
-	list-style-type: none
-	padding: 0
-	margin: 0
+a:not([class])
+	text-decoration-skip-ink: auto
 
-img
+img 
+	max-width: 100%
 	display: block
-	width: 100%
 
-a 
-	cursor: pointer
-	text-decoration: none
+article > * + *
+  margin-top: 1em
 
-a:not([class]) 
-  text-decoration-skip-ink: auto
+input,
+button,
+textarea,
+select
+  font: inherit
 
-	
-.page
-	position: relative
+@media (prefers-reduced-motion: reduce) 
+	* 
+		animation-duration: 0.01ms !important
+		animation-iteration-count: 1 !important
+		transition-duration: 0.01ms !important
+		scroll-behavior: auto !important
+  
 
-	width: 100%
-	height: 100vh
+//---------------------------------------
+// @Inport Libraries
+//---------------------------------------
+// @import "../../node_modules/normalize.sass/normalize.sass"
 
-	overflow-x: hidden
-
-.container
-	margin: 0 auto
-	padding: 0 15px
-
-	max-width: 1170px
-	width: 100%
-	height: auto
-
-@media(max-width: 1300px)
-	body
-		font-size: 12px
-
-
-@import "fonts"
-@import header
-@import section-content
-
-
+// @import "../../node_modules/slick-carousel/slick/slick.css"
+// @import "../../node_modules/slick-carousel/slick/slick-theme.css"
 
