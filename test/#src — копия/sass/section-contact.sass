@@ -1,0 +1,131 @@
+//---------------------------------------------
+// section-contact
+//---------------------------------------------
+
+.page-contact
+	.content
+		max-width: 870px
+		width: 100%
+
+		margin: 0 auto
+
+		.section-title
+			margin-left: 0
+			margin-bottom: 20px
+			text-align: left
+
+			&__top
+				margin: 0
+		
+.section-contact
+	display: flex
+	justify-content: space-between
+
+	width: 100%
+	height: auto
+
+	margin-bottom: 65px
+
+
+	.contact-left
+		font-family: "CynthoLight"
+		font-size: 0.9rem
+
+		max-width: 145px
+		width: 100%
+
+		line-height: 17px
+
+		&__box
+			display: flex
+			flex-direction: column
+			margin-bottom: 20px
+
+			a
+				line-height: 1.4
+				color: $black
+
+				&:hover
+					text-decoration: revert
+
+		&__title
+			font-family: "CynthoMedium"
+			margin-bottom: 15px
+
+			font-size: 1.3rem
+
+		svg
+			width: 24px
+			height: 24px
+	
+	.contact-map
+
+		max-width: 650px
+		width: 100%
+		height: auto
+
+		border-radius: 5px
+		border: 1px solid #DADADA
+
+		iframe
+			width: 100%
+			border: none
+
+
+@media ( max-width: 991px  )
+	.section-contact
+		margin-bottom: 65px
+
+		.contact-left
+			max-width: 30%
+
+			svg
+				display: block
+				margin: 0 auto
+
+		.contact-map
+			max-width: 70%
+			height: auto
+			
+		
+
+@media ( max-width: 526px  )
+	.section-contact
+		flex-wrap: wrap
+		
+		margin-bottom: 43px
+
+		.contact-left
+			display: flex
+			justify-content: center
+
+			margin-bottom: 26px
+			
+			max-width: 100%
+
+			text-align: left
+
+			svg
+				width: 16px
+				height: 16px
+
+			&__box
+				margin: 0 9px
+				font-size: 1rem
+				line-height: 1.2
+
+			&__title
+				margin-bottom: 5px
+
+				font-size: 1.4rem
+
+		.contact-map
+			height: 175px
+
+			>div
+				height: 100%
+
+
+		.contact-map
+			max-width: 100% 	
+			

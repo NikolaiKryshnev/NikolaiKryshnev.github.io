@@ -1,0 +1,141 @@
+.section-404
+	position: relative
+
+	display: flex
+	align-items: center
+	justify-content: center
+
+	height: 100vh
+	width: 100%
+
+	background: left/cover url(../img/404/404-bg.png) no-repeat
+
+	font-size: 1.9rem
+	line-height: 36px
+	text-transform: uppercase
+
+	.section-404__bg
+		position: absolute
+		left: 0
+		top: 0
+		z-index: -1
+
+		width: 100%
+		height: 100vh
+	
+	// .container	
+	// 	height: 100vh
+
+	// 	display: flex
+	// 	justify-content: flex-end
+	// 	align-items: center
+
+	.img-404
+		max-width: 400px
+		width: 100%
+		height: auto
+
+		margin-right: 50px
+		margin-left: 25%
+
+		img
+			width: 100%
+
+	.text-404
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			text-align-last: left
+
+			&__title
+				font-size: 144px
+				line-height: 173px
+				text-transform: uppercase
+
+			span
+				margin-top: 5px
+				margin-bottom: 30px
+
+				font-size: 1.2rem
+				line-height: 22px
+				color: #A3A3A3
+				text-transform: initial
+
+			.btn-404
+				position: relative
+
+				display: flex
+				align-items: center
+
+				width: 249px
+				height: 71px
+
+				padding: 0 30px
+
+				border: 3px solid #FFCBB4
+				border-radius: 5px
+
+				font-size: 1.2rem
+				line-height: 0
+				color: #383833
+				
+				&:hover
+					background: #FFCBB4
+
+				svg
+					position: absolute
+					right: 23px
+					top: 50%
+
+					margin-top: -14px
+
+					width: 30px
+					height: 25px
+
+@media ( max-width: 991px  )
+	.section-404
+		padding-left: 15px
+		padding-right: 15px
+
+		background: left/60% url(../img/404/404-bg_991.png) no-repeat
+		
+		.img-404
+			margin: 0
+
+@media ( max-width: 526px )
+	.section-404
+		background: left/100% url(../img/404/404-bg_991.png) no-repeat
+		background-position-y: 100%
+
+		.text-404
+			font-size: 1.5rem
+			line-height: 18px
+
+			.text-404__title
+				font-size: 72px
+				line-height: 86px
+
+			span
+				font-size: 1rem
+				line-height: 12px
+
+			.btn-404
+				padding: 0 17px
+
+				max-width: 127px
+				height: 45px
+
+				border: 3px solid #FFCBB4
+				font-size: 1rem
+
+				svg
+					height: 11px
+					width: 13px
+
+					margin-top: -6px
+					margin-right: -10px
+
+				
+	
+			
+	
