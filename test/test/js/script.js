@@ -1,24 +1,5 @@
 // Функция поддержки формата webp
-//---------------------------------------------
-//!Обязательная функция поддержки формата webp
-//---------------------------------------------
 
-function testWebP(callback) {
-	var webP = new Image();
-	webP.onload = webP.onerror = function () {
-		callback(webP.height == 2);
-	};
-	webP.src =
-		"data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-}
-
-testWebP(function (support) {
-	if (support == true) {
-		document.querySelector("body").classList.add("webp");
-	} else {
-		document.querySelector("body").classList.add("no-webp");
-	}
-});
 
 
 // npm i jquery
@@ -121,7 +102,8 @@ $('.tab-content__item').slick({
 			breakpoint: 600,
 			settings: {
 				slidesToShow: 2,
-				slidesToScroll: 2
+				slidesToScroll: 2,
+				arrows: false,
 			}
 		}
 	]
@@ -201,14 +183,16 @@ $('.recom-js').slick({
 			breakpoint: 800,
 			settings: {
 				slidesToShow: 2,
-				slidesToScroll: 2
+				slidesToScroll: 2,
+				
 			}
 		},
 		{
 			breakpoint: 600,
 			settings: {
 				slidesToShow: 2,
-				slidesToScroll: 2
+				slidesToScroll: 2,
+				arrows: false,
 			}
 		}
 	]
@@ -270,6 +254,7 @@ $('.js-tab-triggerMenu').click(function () {
 	$('.js-tab-contentMenu.active').removeClass('active'); // 3
 	contentMenu.addClass('active'); // 4
 });
+
 // //---------------------------------------------
 //  Stars 
 //---------------------------------------------
@@ -363,6 +348,58 @@ $(document).ready(function() {
 	});
 
 });
+//---------------------------------------------
+// Password
+//---------------------------------------------
+
+
+
+$('.password-control').click(function (e) {
+	e.preventDefault();
+	if ($(this).next().attr('type') == 'password'){
+		$(this).addClass('view');
+		$(this).next().attr('type', 'text');
+	} else {
+		$(this).removeClass('view');
+		$(this).next().attr('type', 'password');
+	}
+	return false;
+})
+//---------------------------------------------
+// Form Open
+//---------------------------------------------
+$(function () {
+	const btnOpen = $('.btnOpen-js');
+	const formOpen = $('.formOpen-js');
+	btnOpen.click(function () {
+		btnOpen.attr('disabled', "disabled");
+		formOpen.addClass('active');
+		$('.formTitle-js').addClass('active');
+
+
+	})
+})
+//---------------------------------------------
+// Radio
+//---------------------------------------------
+$(function () {
+	const radio = $('.radio input[name="dostavka"]');
+	radio.click(function () {
+		
+
+		if(+$(this).attr('value') == 1){
+			$('.btnOrder-js').attr('disabled', 'disabled')
+		}else{
+			$('.btnOrder-js').removeAttr('disabled', 'disabled')
+		}	
+
+		// if(radio.attr['value', '1'])
+		// console.log('yes')
+	})
+})
+
+
+
 
 
 

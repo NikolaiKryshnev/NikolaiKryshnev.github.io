@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('head.html')
+	<title>Каталог</title>
+</head>
+
+<body>
+	<div class="wrraper">
+		@@include('_header.html')
+		<div class="page pageSidbar">
+			<div class="container">
+				<div class="breadcrumbs">
+					<ul>
+						<li><a href="#">Главная</a></li>
+						<li><a href="#">Поиск</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="container container--Sidbar">
+				@@include('sidebarPers.html')
+				<div class="content content--Sidebar">
+					<section class="section-cab">
+						<div class="section-title section-title--cab">
+							<div class="section-title__top">
+								личный кабинет
+							</div>
+						</div>
+
+						<div class="address">
+							<div class="address-title">
+								Адрес
+							</div>
+
+							<div class="section-orderForm">
+								<div class="order-title">
+									Редактировать адрес
+								</div>
+								<form action="#">
+									<div class="orderForm">
+										<div class="orderForm-box">
+											<div class="orderForm-input">
+												Имя
+												<input type="text">
+											</div>
+
+											<div class="orderForm-input">
+												Телефон
+												<input type="text">
+											</div>
+										</div>
+										<div class="orderForm-box">
+											<div class="orderForm-adress">
+
+												<div class="orderForm-input">
+													Улица
+													<input type="text">
+												</div>
+												<div class="orderForm-input input-2">
+													Дом
+													<input type="text">
+												</div>
+											</div>
+
+											<div class="orderForm-input input-4">
+												Квартира/офис
+												<input type="text">
+											</div>
+
+											<div class="orderForm-input input-3">
+												Подъезд
+												<input type="text">
+											</div>
+
+											<div class="orderForm-input input-3">
+												Этаж
+												<input type="text">
+											</div>
+										</div>
+
+
+										<div class="orderForm-textarea">
+											Комментарий
+											<textarea name="" id=""></textarea>
+										</div>
+									<button class="btn" type="submit">СОХРАНИТЬ</button>
+
+									</div>
+									<!-- /.OrderForm -->
+
+								</form>
+
+							</div>
+							<!-- /OrderForm -->
+						</div>
+						<!-- /.address -->
+					</section>
+					<!-- /.section-cab -->
+				</div>
+			</div>
+			<!-- /.contaniner -->
+
+		</div>
+		<!-- /.page -->
+		@@include('_footer.html')
+	</div>
+	<!-- /.wrraper -->
+	<script src="js/script.min.js"></script>
+</body>
+
+</html>

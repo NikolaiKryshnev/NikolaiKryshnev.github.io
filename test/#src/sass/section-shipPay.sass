@@ -28,6 +28,8 @@
 	display: flex
 	justify-content: center
 
+	margin-bottom: 25px
+
 
 	&__left
 		display: flex
@@ -81,7 +83,7 @@
 
 .shipPay-map
 	width: 100%
-	max-height: 351px
+	height: 75%
 
 	overflow: hidden
 	border-radius: 5px
@@ -103,8 +105,8 @@
 	max-width: 270px
 
 	.search-zone
-		margin-bottom: 24px
-		padding: 23px 17px 36px 21px
+		margin-top: 0
+		padding: 25px 17px 31px 21px
 
 		font-family: "CynthoLight"
 		font-size: 0.9rem
@@ -112,6 +114,9 @@
 		color: #383838
 		background: #F9F9F9
 		border-radius: 5px
+	
+		&+ .search-zone
+			margin-top: 24px
 
 		&__title
 			display: flex
@@ -195,6 +200,7 @@
 
 		&__right
 			max-width: 100%
+			flex-wrap: nowrap
 
 			.search-zone
 				max-width: 270px
@@ -202,7 +208,42 @@
 				margin-left: 0
 
 			.search-zone + .search-zone
+				margin-top: 0
 				margin-left: 27px
+
+	.shipPay-map
+		height: 450px
+
+@media  ( max-width: 600px )
+	.shipPay-search
+
+		&__input
+			input
+				font-size: 1.2rem
+				
+		&__right
+			flex-wrap: wrap
+
+
+			.search-zone
+				padding: 11px 45px 18px
+
+				max-width: 100%
+
+				text-align: center
+				font-size: 1.4rem
+				margin-bottom: 11px
+
+				&__title
+					justify-content: center
+					align-items: center
+
+					font-family: "CynthoMedium"
+					font-size: 1.6rem
+
+
+			.search-zone + .search-zone
+				margin-left: 0
 
 @media  ( max-width: 526px )
 	.section-shipPay

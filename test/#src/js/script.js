@@ -12,10 +12,17 @@
 @@include('menu.js')
 @@include('slick-moduls.js')
 @@include('tabs.js')
+
 // @@include('starts.js')
 @@include('number.js')
 @@include('sidebar.js')
 @@include('inputFile.js')
+@@include('password.js')
+@@include('fromOpen.js')
+@@include('radioBtn.js')
+
+
+
 
 
 

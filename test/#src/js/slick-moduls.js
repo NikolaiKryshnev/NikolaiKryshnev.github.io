@@ -32,7 +32,8 @@ $('.tab-content__item').slick({
 			breakpoint: 600,
 			settings: {
 				slidesToShow: 2,
-				slidesToScroll: 2
+				slidesToScroll: 2,
+				arrows: false,
 			}
 		}
 	]
@@ -112,14 +113,16 @@ $('.recom-js').slick({
 			breakpoint: 800,
 			settings: {
 				slidesToShow: 2,
-				slidesToScroll: 2
+				slidesToScroll: 2,
+				
 			}
 		},
 		{
 			breakpoint: 600,
 			settings: {
 				slidesToShow: 2,
-				slidesToScroll: 2
+				slidesToScroll: 2,
+				arrows: false,
 			}
 		}
 	]

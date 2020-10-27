@@ -1,0 +1,494 @@
+.cab-text
+	font-size: 0.9rem
+	line-height: 17px
+	color: #383838
+
+	&__title
+		margin-bottom: 20px
+
+		font-family: "CynthoSemiBold"
+		line-height: 17px
+		color: #383838
+
+@media ( max-width: 526px )
+
+	.cab-text
+		font-size: 1.4rem
+		
+	.cab-text__title
+		font-size: 1.6rem
+
+		margin-bottom: 10px
+
+
+//---------Orders---------//
+
+.orders
+	&-title
+		font-size: 1.3rem
+
+		margin-bottom: 20px
+
+	&-from
+		display: flex
+		flex-wrap: wrap
+
+		margin-bottom: 40px
+
+		&__top
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+			padding: 0 40px
+
+			width: 100%
+			height: 50px
+
+			background: #F9F9F9
+			border-radius: 5px
+			margin-bottom: 6px
+		
+		&__date
+			font-size: 1.3rem
+			line-height: 24px
+
+			color: #D2754A
+
+		.btn
+			height: 35px
+			width: 175px
+
+
+		&__blocks
+			display: flex
+			flex-wrap: wrap
+
+			width: 100%
+			height: auto
+
+			padding: 29px 40px 0
+			margin-bottom: 5px
+
+			background: #F9F9F9
+			border-radius: 5px
+
+		&__box
+			display: flex
+			justify-content: space-between
+			
+			padding-left: 50px
+
+			width: 100%
+
+		&__title
+			display: flex
+			justify-content: space-between
+
+			padding-bottom: 20px
+
+			border-bottom: 1px solid #E7E7E7
+
+			width: 100%
+
+		&__name
+			max-width: 260px
+			width: 100%
+
+			text-align: left
+
+			span
+				display: block
+
+				font-size: 14px
+
+				line-height: 17px
+				padding-top: 5px
+				font-family: "CynthoLight"
+
+		&__price
+			max-width: 50px
+			width: 100%
+
+			text-align: center
+
+		&__col
+			max-width: 100px
+			width: 100%
+
+			text-align: center
+
+		&__sum
+			max-width: 60px
+			width: 100%
+
+			text-align: center
+
+
+		&__product
+			display: flex
+			justify-content: space-between
+
+			padding: 20px 0
+
+			border-bottom: 1px solid #E7E7E7
+
+			width: 100%
+			
+			&:last-child
+				border: none
+
+			.orders-from__price,
+			.orders-from__col,
+			.orders-from__sum
+				display: flex
+				align-items: center
+				justify-content: center
+
+				span
+					display: none
+
+		&__result
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+			width: 100%
+			height: 50px
+
+			padding: 0 40px
+
+			background: #F9F9F9
+			border-radius: 5px
+
+
+			font-family: "CynthoSemiBold"
+			font-size: 20px
+			line-height: 24px
+			color: #383838
+
+
+@media ( max-width: 526px  )
+	.orders-from 
+		.btn
+			height: 23px
+			width: 123px
+
+			font-size: 1rem
+
+		&__blocks
+			padding-top: 0
+
+		&__top
+			padding-left: 33px
+			padding-right: 5px
+
+			height: 35px
+
+		&__title
+			display: none
+
+		&__name
+			padding-right: 19px
+			border-right: 1px solid #EFEFEF
+
+		&__box
+			flex-wrap: wrap
+
+			padding-left: 30px
+
+		&__product
+			.orders-from__price,
+			.orders-from__col,
+			.orders-from__sum
+				max-width: 100%
+
+				span
+					display: block
+
+					margin-left: 0
+					margin-right: auto
+					padding-right: 10px
+
+					font-family: "CynthoSemiBold"
+
+		&__result
+			height: 21px
+
+			font-size: 1.4rem
+
+
+//---------AddressEdit---------//
+
+.address-block
+	max-width: 270px
+	width: 100%
+
+	padding: 16px 33px 25px
+
+	background: #F9F9F9
+	border-radius: 5px
+
+	font-size: 0.9rem
+	line-height: 17px
+
+	&__box
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+
+		border-bottom: 2px solid #E7E7E7
+		padding-bottom: 15px
+	
+	&__box + &__box
+		flex-direction: column
+		align-items: flex-start
+		justify-content: flex-start
+
+		padding-top: 17px
+
+
+	&__title
+		font-size: 1.3rem
+		line-height: 24px
+		color: #D2754A
+
+	svg
+		width: 25px
+		height: 25px
+
+@media ( max-width: 991px )
+	.address
+		&-title
+			display: none
+
+@media ( max-width: 526px )
+	.address-block
+		font-size: 1.4rem
+
+		&__title
+			font-size: 2rem
+
+//---------AddressEdit---------//
+.address-title
+	margin-bottom: 10px
+
+	font-size: 1.3rem
+
+.address
+	.btn
+		width: 135px
+		height: 35px
+
+		margin: 25px auto 0
+
+	.section-orderForm
+		.orderForm
+			.orderForm-input
+				max-width: 270px
+
+			.input-2
+				max-width: 47px
+
+			.input-4
+				max-width: 116px
+
+			.input-3
+				max-width: 95px
+
+//---------accountDetails---------//
+
+.section-detailsForm
+	form
+		width: 100%
+
+		padding: 25px 43px 43px
+
+		background: #F9F9F9
+		border-radius: 5px
+
+		.detailsForm
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+
+			width: 100%
+			height: auto
+			
+		.detailsForm-input
+			position: relative
+
+			display: flex
+			align-items: flex-start
+			flex-wrap: wrap
+
+			max-width: 350px
+			width: 100%
+
+			margin-bottom: 15px
+
+			font-family: "CynthoMedium"
+			font-size: 14px
+			line-height: 17px
+
+			color: #383838
+
+			&:last-child
+				margin-left: auto
+				margin-right: 0
+
+			input
+				display: flex
+				align-items: center
+
+				width: 100%
+				height: 29px
+
+				margin-top: 10px
+				padding-left: 20px
+
+			span
+				color: $pink-3
+
+			.password-control
+				position: absolute
+				right: 9px
+				bottom: 50%
+
+				margin-bottom: -25px
+
+@media ( max-width: 991px  )
+
+	.address-title
+		text-align: center
+		margin-bottom: 32px
+	
+@media ( max-width: 840px  )
+			
+	.section-detailsForm
+		form
+			.detailsForm
+				justify-content: center
+
+			.detailsForm-input
+				&:last-child
+					margin: auto
+	
+@media ( max-width: 526px  )
+
+	.address-title
+		margin-bottom: 24px
+
+		font-size: 1.4rem
+
+
+//---------Authorization---------//
+.authorization
+	display: flex
+	justify-content: space-between
+
+	&-block
+		max-width: 48%
+		width: 100%
+
+		&__title
+			text-align: center
+			font-size: 1rem
+			line-height: 17px
+			text-transform: uppercase
+			color: $pink-3
+
+			padding: 14px
+			margin-bottom: 7px
+
+			background: #F9F9F9
+			border-radius: 5px
+
+		form
+			display: flex
+			flex-direction: column
+			width: 100%
+			height: auto
+
+			padding: 25px 44px 38px
+			background: #F9F9F9
+
+		p
+			margin-top: 10px
+
+			font-size: 0.7rem
+			line-height: 12px
+			color: #686868
+
+	&-input
+		position: relative
+
+		display: flex
+		flex-wrap: wrap
+
+		margin-bottom: 20px
+
+		font-family: "CynthoMedium"
+		font-size: 0.9rem
+		line-height: 17px
+		color: #383838
+
+		input
+			margin-top: 10px
+			padding: 0 19px
+
+			width: 100%
+			height: 29px
+
+			background: #FFFFFF
+			border: 0.5px solid #E6E6E6
+			box-sizing: border-box
+			border-radius: 5px
+
+		span
+			color: #F4A17B
+
+		.password-control
+			position: absolute
+			right: 9px
+			bottom: 50%
+			margin-bottom: -24px
+
+
+	label
+		margin-bottom: 25px
+
+		span
+			color: #383838
+
+	.authorization-btn
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		width: 100%
+		height: auto
+
+		.btn
+			margin: 0
+		
+
+		a
+			line-height: 12px
+			color: #9C9C9C
+
+	.btn--new
+		width: 190px
+		margin-left: 0
+
+
+@media ( max-width: 776px  )
+	.authorization
+		flex-direction: column
+		align-items: center
+
+		&-block
+			max-width: 100%
+			margin-bottom: 25px
+
+	

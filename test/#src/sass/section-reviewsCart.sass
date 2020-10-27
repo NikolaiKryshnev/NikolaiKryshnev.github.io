@@ -2,6 +2,9 @@
 // section-reviews--cart
 //---------------------------------------------
 .section-reviews--cart
+	padding-top: 80px
+	padding-bottom: 80px
+
 	.section-title
 		display: flex
 		justify-content: space-between
@@ -66,8 +69,29 @@
 .section-reviewsForm
 	padding-bottom: 120px
 
+	.formOpen-js
+		display: none
+
+	.formOpen-js.active
+		display: block
+
 	.btn
 		margin: 0 0 19px
+	
+	.btn--open
+		font-family: "CynthoMedium"
+		margin-bottom: 20px
+		
+		border: 2px solid #F4A17B
+		border-radius: 5px
+
+		background: none
+
+		line-height: 17px
+		text-transform: uppercase
+		color: #383838
+
+	.btn--open.active
 
 .reviewsForm
 	padding: 24px 42px 30px 
@@ -78,6 +102,7 @@
 	flex-wrap: wrap
 
 	&-title
+		display: none
 		padding: 10px
 		margin-bottom: 6px
 		
@@ -92,6 +117,9 @@
 		color: #F4A17B
 
 		height: 37px
+		
+		&.active
+			display: block
 
 	&-input
 		margin-right: 56px
@@ -172,12 +200,13 @@
 			position: relative
 
 		&__filupp
-			display: flex
-			align-items: center
-			
-		&__block
 			margin-top: 11px
 
+			display: flex
+			align-items: center
+
+			
+		&__block
 			cursor: pointer
 			
 			&:hover
@@ -208,17 +237,19 @@
 				border: 0
 				cursor: pointer
 
-			.filupp-file__text	
-				margin-left: 10px
-	.starts
-		display: flex
+		.filupp-file__text	
+			margin-left: 10px
 
+	.starts
+		display: block
+
+		max-width: 90px
 		margin-top: 10px
 
 		cursor: pointer
 
 		.star
-			margin: 0 2px
+			// margin: 0 2px
 		
 		&:hover .star path 
 			fill: #F4A17B !important
@@ -286,7 +317,7 @@
 
 
 		.cart-info__weight
-			font-size: 1rem
+			font-size: 1.3rem
 
 		.cart-slider
 			padding-top: 90px
@@ -328,6 +359,10 @@
 
 			.cart-info__btn
 				margin: 0 4px
+
+				width: auto
+
+				font-size: 1.2rem
 		
 		.cart-info__price
 			margin-bottom: 24px
@@ -345,6 +380,8 @@
 			text-align: center
 
 @media ( max-width: 526px )
+	.section-cart
+
 	.section-recom
 		.section-recom__box
 			.product-block
@@ -364,7 +401,12 @@
 				width: 42px
 				height: 42px
 
-				margin-right: 0
+				margin-right: 20px
+
+			&__text
+				max-width: 70%
+
+				font-size: 1rem
 
 			&__name
 				font-size: 1.4rem
@@ -373,9 +415,6 @@
 				font-size: 1rem
 
 			&__title
-				font-size: 1rem
-
-			&__text
 				font-size: 1rem
 
 		.reviewsCart-block__rating
@@ -395,9 +434,14 @@
 			.btn
 				margin-bottom: 0
 
+		.form.active
+			display: block
 				
 		.reviewsForm-rating
 			margin-bottom: 18px
+
+	.reviewsForm-input, .reviewsForm-rating,.filupp-file-name
+		font-size: 1.4rem
 
 
 		

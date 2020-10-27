@@ -1,0 +1,288 @@
+@import mixin
+@import "fonts"
+
+// --------------------------------------------
+// Color
+// --------------------------------------------
+$black: #000
+$pink-1: #FFCBB4
+$pink-2: #FAB798
+$pink-3: #F4A17B
+$white: #fff
+
+// --------------------------------------------
+// Common styles
+// --------------------------------------------
+*, *::before, *::after 
+  box-sizing: border-box
+
+*:focus 
+	outline: none
+
+html
+	font-size: 16px
+
+body
+	font-family: "CynthoRegular"
+	font-size: 16px
+	color: $black
+
+@media(max-width: 526px)
+	html
+		font-size: 10px
+
+@import "../../node_modules/normalize.sass/normalize.sass"
+
+body, 
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd 
+	margin: 0
+	font-size: 100%
+
+ul,
+ol,
+nav
+	list-style-type: none
+	padding: 0
+	margin: 0
+
+img
+	display: block
+	width: 100%
+	
+button,input,texterainput, textarea, button
+	outline: none
+	border: none
+	border: none
+	
+
+a 
+	cursor: pointer
+	transition: .3s ease
+	text-decoration: none
+
+a:not([class]) 
+  text-decoration-skip-ink: auto
+
+.wrraper
+	overflow: hidden
+
+.page
+	position: relative
+	display: block
+	filter: blur(0px)
+	transition: 0.4s
+
+
+	&:after
+		content: ''
+		opacity: 0
+		z-index: -1
+		transition: z-index 0.1s
+		transition: 0.5s
+
+.content
+	width: 100%
+	
+	
+.section-js.active
+	z-index: -1
+	
+.page.active:after
+	position: absolute
+	z-index: -1
+	top: 0
+	left: 0
+
+	opacity: 1
+
+	width: 100%
+	height: 100%
+	background: rgba(41, 41, 41, 0)
+	transition: 0.5s
+
+
+.page.active:after
+	background: rgba(41, 41, 41, 0.45)
+
+.page.active
+	position: relative
+	overflow-y: hidden
+	filter: blur(4px)
+
+
+//-------- container --------//
+.container
+	margin: 0 auto
+	padding: 0 15px
+
+	max-width: 1170px
+	width: 100%
+.container--Sidbar
+	display: flex
+	padding-bottom: 80px
+
+	.section-title
+		margin-bottom: 24px
+
+		max-width: 100%
+		
+		text-align: left
+
+		&__top
+			margin-bottom: 0
+
+
+
+@media  ( max-width:  991px)
+	
+	.container--Sidbar
+		flex-wrap: wrap
+
+.content
+	display: flex
+	flex-direction: column
+	
+.content--Sidebar
+	padding-left: 35px
+
+.section-title
+	display: flex
+	flex-direction: column
+	justify-content: center
+
+	margin: auto
+	margin-bottom: 52px
+
+	text-align: center
+
+	max-width: 373px
+	width: 100%
+
+	font-size: 0.9rem
+
+	&__top
+		
+		margin-bottom: 12px
+
+		font-size: 1.6rem
+		line-height: 31px
+		text-transform: uppercase
+
+		
+
+@media  ( max-width: 526px )
+	.section-title
+		margin-bottom: 25px
+		
+		&__top
+			font-size: 2rem
+
+
+//-------- btn --------//
+.btn
+	display: flex
+	justify-content: center
+	align-items: center
+
+	width: 184px
+	height: 51px
+
+	background: $pink-2
+	box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.25)
+	border: none
+	border-radius: 5px
+
+	text-transform: uppercase
+	color: $white
+	font-size: .9rem
+	transition: background .3s ease
+	cursor: pointer
+
+	&:hover
+		background: $pink-1
+
+.btn--bg
+	background: none
+	border: 2px solid #F4A17B
+	border-radius: 5px
+	font-family: "CynthoSemiBold"
+	color: $black
+
+.btn--little
+	width: 114px
+	height: 35px
+	&:hover
+		background: $pink-3
+	
+
+
+
+@media ( max-width: 526px )
+	.btn
+		max-width: 123px
+		height: 32px
+		font-size: 1.2rem
+
+.product-svgBg--top
+	position: absolute
+	top: -2px
+
+	width: 100%
+
+// import library
+@import "../../node_modules/slick-carousel/slick/slick.css"
+@import "../../node_modules/slick-carousel/slick/slick-theme.css"
+
+// import modals
+@import "header"
+@import "breadcrumbs"
+@import "section-banInfo"
+@import "section-product"
+@import "section-about"
+@import "section-catalog"
+@import "section-cart"
+@import "section-reviews"
+@import "section-recom"
+@import "section-reviewsCart"
+@import "section-basket"
+@import "section-order"
+@import "section-shipPay"
+@import "section-partners"
+@import "section-contact"
+@import "section-text"
+@import "section-gallery"
+@import "section-personSlider"
+
+
+@import "personcab"
+@import "404"
+
+@import "footer"
+
+// import task
+@import "radio"
+@import "checkbox"
+@import "pagination"
+@import "sidebar"
+@import "sidebarPers"
+
+
+
+
+
+
+
+	
+	
+

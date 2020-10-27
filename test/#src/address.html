@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('head.html')
+	<title>Каталог</title>
+</head>
+
+<body>
+	<div class="wrraper">
+		@@include('_header.html')
+		<div class="page pageSidbar">
+			<div class="container">
+				<div class="breadcrumbs">
+					<ul>
+						<li><a href="#">Главная</a></li>
+						<li><a href="#">Поиск</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="container container--Sidbar">
+				@@include('sidebarPers.html')
+				<div class="content content--Sidebar">
+					<section class="section-cab">
+						<div class="section-title section-title--cab">
+							<div class="section-title__top">
+								личный кабинет
+							</div>
+						</div>
+
+						<div class="address">
+							<div class="address-block">
+								<div class="address-block__box">
+									<div class="address-block__title">Адрес</div>
+									<a href="#"><svg class="svg-icon-inst-dims">
+											<use xlink:href="img/icons/icons.svg#icon-pencil"></use>
+										</svg></a>
+								</div>
+								<div class="address-block__box">
+									<p>г. Минск,</p>
+									<p>ул. Якубовского, 24к1,</p>
+									<p>подъезд 2,</p>
+									<p>этаж 5,</p>
+									<p>кв. 53</p>
+								</div>
+								<div class="address-block__box">
+									<p>Маргарита, </p>
+									<p>8 (029) 252-45-78</p>
+								</div>
+							</div>
+							<!-- /.address-block -->
+						</div>
+						<!-- /.address -->
+					</section>
+					<!-- /.section-cab -->
+				</div>
+			</div>
+			<!-- /.contaniner -->
+
+		</div>
+		<!-- /.page -->
+		@@include('_footer.html')
+	</div>
+	<!-- /.wrraper -->
+	<script src="js/script.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('head.html')
+	<title>Каталог</title>
+</head>
+
+<body>
+	<div class="wrraper">
+		@@include('_header.html')
+		<div class="page pageSidbar">
+			<div class="container">
+				<div class="breadcrumbs">
+					<ul>
+						<li><a href="#">Главная</a></li>
+						<li><a href="#">Поиск</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="container container--Sidbar">
+				@@include('sidebarPers.html')
+				<div class="content content--Sidebar">
+					<section class="section-cab">
+						<div class="section-title section-title--cab">
+							<div class="section-title__top">
+								личный кабинет
+							</div>
+						</div>
+
+						<div class="cab-text">
+							<div class="cab-text__title">
+								Добро пожаловать, Алан!
+							</div>
+							В личном кабинете вы можете просматривать свои недавние заказы, управлять адресами доставки, а
+							также изменять свой пароль и данные учетной записи.
+
+						</div>
+					</section>
+					<!-- /.section-cab -->
+				</div>
+			</div>
+			<!-- /.contaniner -->
+
+		</div>
+		<!-- /.page -->
+		@@include('_footer.html')
+	</div>
+	<!-- /.wrraper -->
+	<script src="js/script.min.js"></script>
+</body>
+
+</html>
