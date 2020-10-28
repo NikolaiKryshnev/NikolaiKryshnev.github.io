@@ -413,13 +413,15 @@
 		max-width: 100%
 		
 	.order-sidebar
-		display: flex
-		justify-content: space-between
-		align-items: flex-start
-
 		margin-left: 0
 
 		max-width: 100%
+
+		aside
+			display: flex
+			justify-content: space-between
+			align-items: flex-start
+
 		&__container
 			width: 33.3%
 
@@ -516,7 +518,8 @@
 				display: inline
 
 	.order-sidebar
-		flex-wrap: wrap
+		aside
+			flex-wrap: wrap
 		
 
 @media ( max-width: 700px  )
@@ -590,8 +593,9 @@
 			font-size: 1.2rem
 
 	.order-sidebar
-		flex-direction: column
-		align-items: center
+		aside
+			flex-direction: column
+			align-items: center
 
 		.btn
 			max-width: 100%

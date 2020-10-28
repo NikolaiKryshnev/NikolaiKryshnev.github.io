@@ -326,11 +326,13 @@ img {
   width: 100%;
 }
 
+aside {
+  width: 100%;
+}
+
 button,
 input,
-texterainput,
-textarea,
-button {
+textarea {
   outline: none;
   border: none;
   border: none;
@@ -4808,6 +4810,11 @@ a:not([class]) {
   }
 
   .order-sidebar {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .order-sidebar aside {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4817,8 +4824,6 @@ a:not([class]) {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    margin-left: 0;
-    max-width: 100%;
   }
 
   .order-sidebar__container {
@@ -5247,6 +5252,37 @@ a:not([class]) {
   }
 }
 
+@media (max-width: 720px) and (max-width: 526px) {
+  .section-basket .basket-info__text {
+    max-width: 150px;
+    font-size: 1.2rem;
+    line-height: 12px;
+  }
+
+  .section-basket .basket-info__img {
+    height: 32px;
+    max-width: 32px;
+  }
+
+  .section-basket .basket-footer .basket-promo {
+    font-size: 1.6rem;
+  }
+
+  .section-basket .basket-footer .basket-promo__input input {
+    height: 33px;
+    font-size: 1rem;
+  }
+
+  .section-basket .basket-footer .basket-promo .btn {
+    max-width: 110px;
+    font-size: 1rem;
+  }
+
+  .section-basket .basket-footer__button {
+    font-size: 1.6rem;
+  }
+}
+
 @media (max-width: 720px) {
   .section-basket .basket-content {
     width: 100%;
@@ -5421,40 +5457,9 @@ a:not([class]) {
     display: inline;
   }
 
-  .order-sidebar {
+  .order-sidebar aside {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-  }
-}
-
-@media (max-width: 720px) and (max-width: 526px) {
-  .section-basket .basket-info__text {
-    max-width: 150px;
-    font-size: 1.2rem;
-    line-height: 12px;
-  }
-
-  .section-basket .basket-info__img {
-    height: 32px;
-    max-width: 32px;
-  }
-
-  .section-basket .basket-footer .basket-promo {
-    font-size: 1.6rem;
-  }
-
-  .section-basket .basket-footer .basket-promo__input input {
-    height: 33px;
-    font-size: 1rem;
-  }
-
-  .section-basket .basket-footer .basket-promo .btn {
-    max-width: 110px;
-    font-size: 1rem;
-  }
-
-  .section-basket .basket-footer__button {
-    font-size: 1.6rem;
   }
 }
 
@@ -5462,6 +5467,54 @@ a:not([class]) {
   .order-sidebar__container {
     max-width: 220px;
     width: 100%;
+  }
+}
+
+@media (max-width: 672px) {
+  .orders-from__blocks {
+    padding-top: 0;
+  }
+
+  .orders-from__top {
+    padding-left: 33px;
+    padding-right: 5px;
+    height: 35px;
+  }
+
+  .orders-from__title {
+    display: none;
+  }
+
+  .orders-from__name {
+    padding-right: 19px;
+    border-right: 1px solid #EFEFEF;
+  }
+
+  .orders-from__box {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-left: 30px;
+  }
+
+  .orders-from__product .orders-from__price,
+  .orders-from__product .orders-from__col,
+  .orders-from__product .orders-from__sum {
+    max-width: 100%;
+  }
+
+  .orders-from__product .orders-from__price span,
+  .orders-from__product .orders-from__col span,
+  .orders-from__product .orders-from__sum span {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    padding-right: 10px;
+    font-family: "CynthoSemiBold";
+  }
+
+  .orders-from__result {
+    height: 21px;
+    font-size: 1.4rem;
   }
 }
 
@@ -6011,7 +6064,7 @@ a:not([class]) {
     font-size: 1.2rem;
   }
 
-  .order-sidebar {
+  .order-sidebar aside {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -6288,52 +6341,6 @@ a:not([class]) {
     height: 23px;
     width: 123px;
     font-size: 1rem;
-  }
-
-  .orders-from__blocks {
-    padding-top: 0;
-  }
-
-  .orders-from__top {
-    padding-left: 33px;
-    padding-right: 5px;
-    height: 35px;
-  }
-
-  .orders-from__title {
-    display: none;
-  }
-
-  .orders-from__name {
-    padding-right: 19px;
-    border-right: 1px solid #EFEFEF;
-  }
-
-  .orders-from__box {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    padding-left: 30px;
-  }
-
-  .orders-from__product .orders-from__price,
-  .orders-from__product .orders-from__col,
-  .orders-from__product .orders-from__sum {
-    max-width: 100%;
-  }
-
-  .orders-from__product .orders-from__price span,
-  .orders-from__product .orders-from__col span,
-  .orders-from__product .orders-from__sum span {
-    display: block;
-    margin-left: 0;
-    margin-right: auto;
-    padding-right: 10px;
-    font-family: "CynthoSemiBold";
-  }
-
-  .orders-from__result {
-    height: 21px;
-    font-size: 1.4rem;
   }
 
   .address-block {
