@@ -23,8 +23,16 @@
 		height: auto
 
 		.slick-arrow
+			cursor: pointer
 			position: absolute
 			top: 50%
+
+			path
+				transition: 0.5s
+
+			&:hover
+				path
+					stroke: $pink-3
 
 		.slick-arrow__right
 			right: -40px

@@ -16,7 +16,9 @@
 // Sub Menu Active
 //---------------------------------------------
 let width = $(window).width();
-let submenu = $('.header-menu-js li');
+let submenu = $('.header-menu-js > li.submenu-js');
+let submenuA = $('.header-menu-js > li.submenu-js > a');
+
 if (width >= 992) {
 	submenu.hover(
 		function () {
@@ -26,9 +28,10 @@ if (width >= 992) {
 			$(this).removeClass('hover');
 		});
 } else {
-	submenu.click(function (e) {
+	submenuA.click(function (e) {
 		e.preventDefault();
-		$(this).toggleClass('hover');
+		$(this).toggleClass('active');
+		$(this).next().toggleClass('hover');
 	})
 }
 
@@ -353,17 +356,28 @@ $(document).ready(function() {
 //---------------------------------------------
 
 
-
 $('.password-control').click(function (e) {
 	e.preventDefault();
-	if ($(this).next().attr('type') == 'password'){
+	if ($(this).next().attr('type') == 'password') {
 		$(this).addClass('view');
 		$(this).next().attr('type', 'text');
+
+
 	} else {
 		$(this).removeClass('view');
 		$(this).next().attr('type', 'password');
+
+
 	}
 	return false;
+})
+
+
+$('.input-password').click(function (e) {
+
+	if ($('.input-password[value=""]').length) {
+		console.log('путсо')
+	}
 })
 //---------------------------------------------
 // Form Open

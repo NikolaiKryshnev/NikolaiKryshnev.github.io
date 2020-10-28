@@ -39,12 +39,12 @@
 		&__blocks
 			margin: 0 -5px 35px
 
-			justify-content: center
+			justify-content: flex-start
 
 			.product-block
 				margin: 10px 5px
 
-				max-width: 140px
+				max-width: 47%
 
 	.section-catalog__button.btn
 			max-width: 125px
@@ -59,6 +59,16 @@
 	.product-nameSup
 		font-size: .7rem
 	
+@media ( max-width: 340px )
+	.section-catalog
+		&__blocks
+			justify-content: flex-start
+	
+			.product-block
+
+				max-width: 45% 
+
+
 
 // -------------------------------
 // PAGE CATALOG

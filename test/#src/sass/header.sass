@@ -86,7 +86,6 @@
 				height: 100%
 
 			&:hover
-				
 				opacity: 0.5
 	
 			svg
@@ -172,6 +171,12 @@
 						height: 6px
 						margin-left: 8px
 						transition: transform 0.3s ease
+
+				a.active
+					color: $pink-3
+					
+					.icon-arrow
+						transform: rotate(90deg)
 
 
 				&.hover
@@ -414,8 +419,7 @@
 					padding: 18px 0px
 					border-bottom: 0.5px solid #DADADA
 
-			>li.hover
-				a + .header-bottom__submenu
+				.header-bottom__submenu.hover
 					z-index: 1
 					height: 100%
 					max-height: 100%
@@ -425,6 +429,29 @@
 				.header-bottom__submenu:after
 					display: none
 
+				.header-bottom__submenu.hover
+					.icon-arrow
+						transform: rotate(90deg)
+
+					>a
+						color: $pink-2
+
+					li
+						z-index: 99
+
+					.header-bottom__submenu
+						z-index: -1
+						visibility: visible
+						opacity: 1
+						transform: rotateX(0deg)
+
+						a
+							transition: 0.7s
+
+						a:hover
+							color: $black
+							transition:  0.7s
+							font-family: "CynthoMedium"
 
 			li + li
 				padding: 0

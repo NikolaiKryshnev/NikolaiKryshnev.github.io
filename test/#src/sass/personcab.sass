@@ -357,6 +357,16 @@
 
 				margin-bottom: -25px
 
+				path
+					fill: #D6D6D6
+
+				&:hover,
+				&.view
+					path
+						fill: #F4A17B
+
+				
+
 @media ( max-width: 991px  )
 
 	.address-title
@@ -412,6 +422,10 @@
 
 			padding: 25px 44px 38px
 			background: #F9F9F9
+		
+			.label-cbx
+				span
+					font-size: 0.9rem
 
 		p
 			margin-top: 10px
@@ -446,14 +460,21 @@
 			border-radius: 5px
 
 		span
-			color: #F4A17B
+			color: $pink-3
 
 		.password-control
 			position: absolute
 			right: 9px
 			bottom: 50%
 			margin-bottom: -24px
-
+			
+			path
+				fill: #D6D6D6
+					
+			&:hover,
+			&.view
+				path
+					fill: $pink-3
 
 	label
 		margin-bottom: 25px
@@ -474,8 +495,12 @@
 		
 
 		a
+			font-size: 0.9rem
 			line-height: 12px
 			color: #9C9C9C
+
+			&:hover
+				color: $pink-3
 
 	.btn--new
 		width: 190px
@@ -490,5 +515,40 @@
 		&-block
 			max-width: 100%
 			margin-bottom: 25px
+
+		.authorization-block
+			p
+				width: 100%
+				color: #9C9C9C
+
+@media  ( max-width: 526px )
+	
+	.authorization
+		&-input
+			font-size: 1.4rem
+
+		form
+			.label-cbx
+				span
+					font-size: 1.3rem
+
+		&-block__title
+			font-size: 1.4rem
+
+		.authorization-btn
+			.btn
+				width: 70px
+
+			a
+				font-size: 1.2rem
+
+		.authorization-block
+			p
+				font-size: 1.1rem
+
+		.btn--new
+			max-width: 150px
+			width: 100%
+		
 
 	

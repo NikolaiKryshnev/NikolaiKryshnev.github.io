@@ -47,27 +47,40 @@
 				line-height: 1.6
 
 	.sidevar-block-js
+		.icon-plus
+			display: none
+			
 		.toggle-js
+			align-items: center
+			justify-content: flex-start
 			position: relative
 
-			&::after, &::before
-				content: ''
-
-				position: absolute
-				right: 0
-				top: 50%
-
-				margin-top: -1px
-
-				height: 1px
+			.icon-plus
+				display: block
+				position: relative
 				width: 12px
+				height: 12px
 
-				background: #F4A17B
+				margin-left: 12px
 
-				transition: 0.4s
+				&::after, &::before
+					content: ''
 
-			&::before
-				transform: rotate(90deg)
+					position: absolute
+					right: 0
+					top: 50%
+
+					margin-top: -1px
+
+					height: 1px
+					width: 12px
+
+					background: #F4A17B
+
+					transition: 0.4s
+
+				&::before
+					transform: rotate(90deg)
 
 	.sidevar-block-js.active
 		.sidebar-menu__submenu
@@ -80,9 +93,8 @@
 				a
 					color: $black
 
-
 		.toggle-js
-			&::before
+			.icon-plus::before
 				transform: rotate(00deg)
 
 
@@ -147,8 +159,8 @@
 		
 		.sidevar-block-js 
 			.toggle-js
-				&::after, &::before
-					margin-right: 12px
+				justify-content: center
+
 
 @media ( max-width: 526px )
 	.sidebar
@@ -165,7 +177,7 @@
 
 		.sidevar-block-js 
 			.toggle-js
-				&::after, &::before
+				.icon-plus::after, .icon-plus::before
 					width: 8px
 					margin-right: 6px
 
