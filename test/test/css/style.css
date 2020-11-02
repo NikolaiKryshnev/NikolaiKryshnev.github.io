@@ -387,7 +387,7 @@ a:not([class]) {
 
 .page.active:after {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   top: 0;
   left: 0;
   opacity: 1;
@@ -507,7 +507,7 @@ a:not([class]) {
 }
 
 .btn:hover {
-  background: #FFCBB4;
+  background: #F1813D;
 }
 
 .btn--bg {
@@ -631,6 +631,7 @@ a:not([class]) {
 
 .header-sidebar__icon.active a:after {
   height: 90%;
+  border-bottom: 0.5px solid #DADADA;
 }
 
 .header-sidebar__icon.active svg path {
@@ -828,7 +829,7 @@ a:not([class]) {
   position: absolute;
   z-index: -1;
   top: 100%;
-  margin: 14px 0 0 -45px;
+  margin: 14px 0 0 -40px;
   padding: 13px 15px 0;
   width: 175px;
   -webkit-box-shadow: 0px 20px 20px rgba(244, 161, 123, 0.18);
@@ -1014,8 +1015,8 @@ a:not([class]) {
 
 .section-product {
   position: relative;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 150px;
 }
 
 .product-nameSup {
@@ -1028,6 +1029,7 @@ a:not([class]) {
 
 .section-product--gray {
   background: #FAFAFA;
+  padding-bottom: 60px;
 }
 
 .section-tabs {
@@ -1142,6 +1144,7 @@ a:not([class]) {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: center;
 }
 
 .product-block__badge {
@@ -1164,7 +1167,7 @@ a:not([class]) {
 
 .product-block .badge--stock {
   background: #F16254;
-  width: 71px;
+  width: 65px;
 }
 
 .product-block__img {
@@ -1323,8 +1326,8 @@ a:not([class]) {
 
 .section-about {
   position: relative;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 140px;
+  padding-bottom: 140px;
 }
 
 .section-about .container {
@@ -1365,7 +1368,7 @@ a:not([class]) {
 
 .section-catalog {
   position: relative;
-  padding-top: 100px;
+  padding-top: 90px;
   padding-bottom: 100px;
   background: #FAFAFA;
 }
@@ -1413,6 +1416,10 @@ a:not([class]) {
   max-width: 100%;
   color: #7D7D7D;
   text-align: left;
+}
+
+.page-catalog .section-title--catalog .section-title__top {
+  color: #383838;
 }
 
 .section-cart {
@@ -1580,7 +1587,7 @@ a:not([class]) {
 
 .section-reviews {
   position: relative;
-  padding-top: 100px;
+  padding-top: 150px;
   padding-bottom: 100px;
 }
 
@@ -4436,7 +4443,7 @@ a:not([class]) {
   }
 
   .header-top {
-    margin-left: 15px;
+    margin-left: 0;
   }
 
   .header-burger {
@@ -5761,7 +5768,7 @@ a:not([class]) {
 
   .section-product {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
   }
 
   .product-block {

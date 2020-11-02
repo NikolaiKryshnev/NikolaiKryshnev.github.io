@@ -1,0 +1,353 @@
+//============<HEADER>============
+
+.header
+	position: relative
+	z-index: 1
+	
+	display: flex
+	justify-content: center
+	align-items: center
+	
+	width: 100%
+	height: 100px
+
+	background: $dark
+	
+	.container
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		height: 100%
+
+	&-logo
+		display: flex
+		order: 1
+
+		max-width: 92px
+		width: 100%
+		height: auto
+
+	//----<header-nav>----//
+	&-nav
+		display: flex
+		order: 2
+
+		height: 100%
+
+		nav
+			height: 100%
+
+		@media ( max-width: 991px)
+			nav
+				display: flex
+				align-items: center
+
+		&__menu
+			display: flex
+
+			padding: 0
+			margin: 0
+
+			height: 100%
+			@media ( max-width: 991px )
+				position: absolute
+				top: 100%
+				right: -100%
+
+				flex-direction: column
+
+				margin-top: 8px
+				padding: 25px
+
+				max-width: 225px
+				width: 100%
+				height: auto
+
+
+				background: $dark
+				border-radius: 5px
+				transition: right 0.5s linear
+
+				&.active
+					right: 0
+
+			>li
+				position: relative
+				display: flex
+				@media ( max-width: 991px )
+					flex-direction: column
+
+				>a
+					display: flex
+					align-items: center
+
+					color: $white
+					padding: 0 12px
+					height: 100%
+					@media ( max-width: 991px )
+						position: relative
+
+						padding: 8px 0
+
+						width: 100%
+
+						justify-content: center
+						
+					&.active
+						@media ( max-width: 991px )
+							&:hover
+								&:after
+									width: 3px
+
+							&::after
+								width: 3px
+
+							&::after
+								height: 100%
+								width: 3px
+
+							.icon-arrow
+								transform: rotate(95deg)
+
+					&::after
+						content: ''
+						position: absolute
+						top: 0
+						left: 0
+
+						height: 7px
+						width: 0%
+
+						background: #FABF31
+
+						transition: width 0.2s linear
+						@media ( max-width: 991px )
+							height: 0%
+							width: 3px
+
+							transition: height 0.2s linear
+							
+					
+					.icon-arrow
+						position: absolute
+						top: 50%
+						right: 0
+
+						margin-top: -4px
+						
+						width: 8px
+						height: auto
+
+						transition: transform 0.1s linear		
+
+					&:hover
+						&::after
+							width: 100%
+							@media ( max-width: 991px )
+								width: 3px
+				
+						
+								
+		
+		&__menuSub
+			position: absolute
+			top: 250%
+			left: 50%
+
+			width: 175px
+			height: auto
+
+			margin-top: -1px
+			margin-left: -50px
+			padding: 23px 32px
+
+
+			transform: translateX(-25%)
+			background: #4A4949
+			border-radius: 5px
+			opacity: 0
+			visibility: hidden
+
+			transition: top 0.2s linear, opacity 0.9s linear, visibility 0.2s linear
+
+			@media ( max-width: 991px )
+				position: relative
+				z-index: 1
+				top: 0
+				left: 0
+				
+				margin: 0
+				padding: 0
+
+				height: 0px
+
+				opacity: 1
+				visibility: hidden
+
+				overflow-y: hidden
+				transform: translateX(0%)
+
+				transition: height 0.5s linear, visibility 0.5s linear, padding 0.5s linear
+
+			li
+				text-align: center
+
+				a
+					display: inline-block
+
+					width: 100%
+					
+					color: $white
+					line-height: 2.2
+					text-align: center
+
+
+			&.hover
+				@media ( max-width: 991px )
+					height: 250px
+					max-height: 100%
+					
+					padding: 15px
+
+					opacity: 1
+					visibility: visible
+
+
+		li.submenu-js.hover
+			.header-nav__menuSub
+				top: 100%
+
+				opacity: 1
+				visibility: visible
+			
+			.icon-arrow
+				transform: rotate(95deg)
+					
+
+	@media ( max-width: 991px)
+		&-nav
+			order: 4
+
+	//----</header-nav>----//
+
+	//----<header-tel>----//
+	&-tel
+		order: 3
+		display: flex
+
+		&__img
+			display: flex
+			align-items: center
+
+			max-width: 30px
+			width: 100%
+
+			margin-right: 9px
+
+			img
+				width: 100%
+
+		@media ( max-width: 526px)
+			&__img
+				display: none
+
+		&__links
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+
+			a
+				color: $white
+				font-family: "MontserratBold"
+				border-bottom: 1px solid $dark
+				transition: border-bottom 0.3s linear
+
+				&:hover
+					border-bottom: 1px solid $white
+					// margin-bottom: -1px
+	//----</header-tel>----//
+
+	.btn-tel
+		order: 4
+	@media ( max-width: 991px)
+		.btn-tel
+			order: 3
+
+	@media ( max-width: 526px)
+		.btn-tel
+			display: none
+//============</HEADER>============
+
+
+//============HAMBURGER>============
+
+.visuallyHidden 
+	position: absolute
+
+	margin: -1px
+	padding: 0; border: 0
+
+	height: 1px
+	width: 1px
+
+	overflow: hidden
+	clip: rect(0 0 0 0)
+
+	
+.burger 
+	display: none
+	position: relative
+
+	margin: 0 auto
+
+	width: 35px
+	height: 35px
+	@media ( max-width: 991px )
+		display: block
+		
+
+	
+
+	.burger-line 
+		position: absolute 
+
+		display: block
+
+		padding: 0
+
+		width: 35px
+		height: 4px
+
+		background-color: $white
+		transition: all 0.4s ease-in-out
+
+		&_1 
+			top: 0
+
+		&_2,
+		&_3 
+			top: 13.5px
+
+		&_3 
+			right: 0
+
+		&_4 
+			bottom: 5px
+	
+.burger.active
+	.burger-line_1
+		transform: translateX(40px)
+		background-color: transparent
+
+	.burger-line_2
+		transform: rotate(45deg)
+
+	.burger-line_3
+		transform: rotate(-45deg)
+
+	.burger-line_4
+		transform: translateX(-40px)
+		background-color: transparent
+
+//============/HAMBURGER>============

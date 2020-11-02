@@ -1,0 +1,134 @@
+//============<section-licenses>============
+
+.section-licenses
+
+	position: relative
+
+	background: url(../img/section-licenses/bg.png) 100%/cover no-repeat
+	color: $white
+
+	@media   ( min-width: 320px ) and ( max-width: 720px )
+		padding-bottom: 45%
+
+	&:after
+		content: ''
+		position: absolute
+		z-index: -1
+		top: 0
+		left: 0
+
+		width: 100%
+		height: 100%
+
+		background: #363536
+
+	.container
+		display: flex
+		justify-content: flex-end
+
+		@media ( max-width: 720px  )
+			flex-direction: column-reverse
+			
+
+	//----<licenses-img>----//
+	.licenses-img
+		position: absolute
+		z-index: 1
+		top: 15%
+		left: -2%
+		
+		width: 53%
+		@media ( max-width: 1130px )
+			width: 45%
+
+		@media ( max-width: 991px )
+			top: 10%
+			left: 0
+
+		@media ( max-width: 720px )
+			top: auto
+			left: 50%
+			bottom: -7%
+
+			width: 60%
+
+			transform: translateX(-50%)
+
+	//----</licenses-img>----//
+
+
+	//----<licenses-content>----//
+
+	.licenses-content
+		max-width: 545px
+		width: 100%
+		height: auto
+		@media ( max-width: 991px )
+			max-width: 100%
+
+			p
+				width: 50%
+
+				margin: 0 0 0 auto
+
+		@media ( max-width: 720px )
+			p
+				width: 100%
+			
+
+
+
+		&__link
+			margin-top: 20px
+			@media ( max-width: 991px )
+				max-width: 545px
+				width: 100%
+				height: auto
+
+				margin: 150px auto 0
+
+			@media ( max-width: 991px )
+				margin-top: 30px
+			
+
+			a
+				position: relative
+
+				display: inline-block
+
+				width: 100%
+				
+				padding-top: 12px
+				padding-bottom: 12px
+
+				color: $white
+
+				border-bottom: none
+				transition: color 0.7s linear
+				+ a
+					border-top: 1px solid rgba(255, 255, 255, 0.12)
+
+
+				&:hover
+					color: $yellow-2
+
+				&::after
+					content: ''
+					position: absolute
+					right: 0
+					top: 50%
+
+					margin-top: -7px
+
+					width: 15px
+					height: 15px
+
+					background: url(../img/icons/icons.svg#icon-dw_01) 100%/cover no-repeat
+
+
+	//----</licenses-content>----//
+
+//============</section-licenses>============
+
+
+
