@@ -589,6 +589,10 @@ html {
           order: 4;
 }
 
+.header .btn-tel__img {
+  display: none;
+}
+
 .visuallyHidden {
   position: absolute;
   margin: -1px;
@@ -3198,7 +3202,32 @@ html {
   }
 
   .header .btn-tel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .header .btn-tel span {
     display: none;
+  }
+
+  .header .btn-tel__img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 30px;
+    height: 30px;
   }
 
   .breadcrumbs ul {

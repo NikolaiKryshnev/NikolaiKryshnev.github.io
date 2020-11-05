@@ -271,13 +271,34 @@
 
 	.btn-tel
 		order: 4
+		&__img
+			display: none
+
+		@media ( max-width: 526px)
+			display: flex
+			justify-content: center
+			align-items: center
+			
+			position: fixed
+			right: 20px
+			bottom: 20px
+
+			width: 60px
+			height: 60px
+
+			span
+				display: none
+
+			&__img
+				display: flex
+				
+				width: 30px
+				height: 30px
+
 	@media ( max-width: 1100px)
 		.btn-tel
 			order: 3
 
-	@media ( max-width: 526px)
-		.btn-tel
-			display: none
 //============</HEADER>============
 
 
