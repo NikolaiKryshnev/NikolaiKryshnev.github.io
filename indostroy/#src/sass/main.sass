@@ -203,11 +203,15 @@ $yellow-1_3: linear-gradient(93.57deg, $yellow-1 13.84%, $yellow-3 122.84%)
 		float: right
 		font-size: 1rem
 		color: #303030
+		transition: color .3s linear
+
 		@media ( max-width: 991px )
 			margin-top: 12px
 
 			top: auto
-			
+
+		&:hover
+			color: $yellow-2	
 		
 		
 //============</section-title>============
@@ -299,3 +303,27 @@ $yellow-1_3: linear-gradient(93.57deg, $yellow-1 13.84%, $yellow-3 122.84%)
 		margin: 0 auto
 
 //============</BTN>============
+
+
+//============<slick-600>============
+
+.slick-600
+	.slick-arrow
+		position: absolute
+		bottom: -3px
+		z-index: 99
+
+		transform: translateY(100%)
+
+		width: 40px
+		height: 40px
+
+		margin-top: 10px
+
+		&__left
+			left: 15px
+
+		&__right
+			right: 15px
+				
+//============</slick-600>============

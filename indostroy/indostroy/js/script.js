@@ -148,7 +148,13 @@ $('.command-slider-js').slick({
 		}
 	]
 });
-
+if ($(window).width() <= 600) {
+$('.slick-600').slick({
+	prevArrow: '<svg class="slick-arrow slick-arrow__left" width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg"><circle r="29" transform="matrix(-1 0 0 1 29 29)" fill="url(#paint0_linear)"/><path d="M33 19L23 29L33 39" stroke="white" stroke-width="3"/><defs><linearGradient id="paint0_linear" x1="7.41639" y1="4.83333" x2="75.1249" y2="9.05645" gradientUnits="userSpaceOnUse"><stop offset="0.0119048" stop-color="#FAC336"/><stop offset="1" stop-color="#F6A103"/></linearGradient></defs></svg>',
+	nextArrow: '<svg class="slick-arrow slick-arrow__right"  width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="29" cy="29" r="29" fill="url(#paint0_linear)"/><path d="M25 19L35 29L25 39" stroke="white" stroke-width="3"/><defs><linearGradient id="paint0_linear" x1="7.41639" y1="4.83333" x2="75.1249" y2="9.05645" gradientUnits="userSpaceOnUse"><stop offset="0.0119048" stop-color="#FAC336"/><stop offset="1" stop-color="#F6A103"/></linearGradient></defs></svg>',
+	slidesToScroll: 1,
+ });
+}
 
 //</slickModul>---------------------------------------
 
@@ -221,7 +227,7 @@ function f_acc() {
 	$('.accordeon-js .acc-body-js').not($(this).next()).slideUp(1000).removeClass('active');
 	$(this).next().slideToggle(1000).toggleClass('active');
 
-	$('.accordeon-js .acc-link-js').not($(this)).removeClass('active');
+	$('.accordeon-js .acc-head-js').not($(this)).removeClass('active');
 	$(this).toggleClass('active');
 
 }
