@@ -38,7 +38,7 @@
 		nav
 			height: 100%
 
-		@media ( max-width: 1100px)
+		@media ( max-width: 1150px)
 			nav
 				display: flex
 				align-items: center
@@ -50,7 +50,7 @@
 			margin: 0
 
 			height: 100%
-			@media ( max-width: 1100px )
+			@media ( max-width: 1150px )
 				position: absolute
 				top: 100%
 				right: -100%
@@ -75,7 +75,10 @@
 			>li
 				position: relative
 				display: flex
-				@media ( max-width: 1100px )
+				marign-left: 5px
+				margin-right: 5px
+
+				@media ( max-width: 1150px )
 					flex-direction: column
 
 				>a
@@ -86,7 +89,7 @@
 					padding: 0 12px
 					height: 100%
 
-					@media ( max-width: 1100px )
+					@media ( max-width: 1150px )
 						position: relative
 
 						padding: 8px 0
@@ -96,7 +99,7 @@
 						justify-content: center
 						
 					&.active
-						@media ( max-width: 1100px )
+						@media ( max-width: 1150px )
 							&:hover
 								&:after
 									width: 3px
@@ -123,7 +126,7 @@
 						background: #FABF31
 
 						transition: width 0.2s linear
-						@media ( max-width: 1100px )
+						@media ( max-width: 1150px )
 							height: 0%
 							width: 3px
 
@@ -142,10 +145,13 @@
 
 						transition: transform 0.1s linear		
 
-					&:hover, &.active
+					&:hover
+						color: $yellow-1
+
+					&.active
 						&::after
 							width: 100%
-							@media ( max-width: 1100px )
+							@media ( max-width: 1150px )
 								width: 3px
 				
 						
@@ -172,7 +178,7 @@
 
 			transition: top 0.2s linear, opacity 0.9s linear, visibility 0.2s linear
 
-			@media ( max-width: 1100px )
+			@media ( max-width: 1150px )
 				position: relative
 				z-index: 1
 				top: 0
@@ -210,7 +216,7 @@
 
 
 			&.active
-				@media ( max-width: 1100px )
+				@media ( max-width: 1150px )
 					// height: 250px
 					// max-height: 100%
 					
@@ -231,7 +237,7 @@
 				transform: rotate(95deg)
 					
 
-	@media ( max-width: 1100px)
+	@media ( max-width: 1150px)
 		&-nav
 			order: 4
 
@@ -262,7 +268,9 @@
 			display: flex
 			flex-direction: column
 			align-items: flex-start
-
+			@media ( max-width: 526px )
+				margin-left: -10px
+				
 			a
 				color: $white
 				font-family: "MontserratBold"
@@ -300,7 +308,7 @@
 				width: 30px
 				height: 30px
 
-	@media ( max-width: 1100px)
+	@media ( max-width: 1150px)
 		.btn-tel
 			order: 3
 
@@ -330,7 +338,7 @@
 
 	width: 35px
 	height: 35px
-	@media ( max-width: 1100px )
+	@media ( max-width: 1150px )
 		display: block
 		
 

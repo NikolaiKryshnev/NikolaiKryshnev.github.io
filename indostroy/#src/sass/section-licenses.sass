@@ -25,6 +25,8 @@
 	.container
 		display: flex
 		justify-content: flex-end
+		@media ( min-width: 1500px )
+			position: relative
 
 		@media ( max-width: 720px  )
 			flex-direction: column-reverse
@@ -36,7 +38,7 @@
 		z-index: 1
 		top: 15%
 		left: -2%
-		
+		max-width: 800px
 		width: 53%
 		@media ( max-width: 1130px )
 			width: 45%

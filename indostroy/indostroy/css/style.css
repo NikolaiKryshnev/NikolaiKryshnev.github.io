@@ -225,13 +225,18 @@ html {
   height: 100vh;
 }
 
+.wrapper.active {
+  -webkit-filter: blur(2.5px);
+          filter: blur(2.5px);
+}
+
 ._section {
   padding-top: 75px;
   padding-bottom: 80px;
 }
 
 ._section--bt {
-  padding-top: 25px;
+  padding-top: 25px !important;
   padding-bottom: 100px;
 }
 
@@ -305,6 +310,7 @@ html {
   -webkit-box-shadow: 0px 4px 10px rgba(248, 173, 21, 0.33);
           box-shadow: 0px 4px 10px rgba(248, 173, 21, 0.33);
   border-radius: 70px;
+  font-family: "MontserratBold";
   color: #fff;
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.2s linear;
@@ -340,6 +346,7 @@ html {
   font-size: 0.9rem;
   text-decoration: none;
   cursor: pointer;
+  font-family: "MontserratMedium";
 }
 
 .btn-tel span,
@@ -468,6 +475,8 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  marign-left: 5px;
+  margin-right: 5px;
 }
 
 .header-nav__menu > li > a {
@@ -509,7 +518,10 @@ html {
   transition: transform 0.1s linear, -webkit-transform 0.1s linear;
 }
 
-.header-nav__menu > li > a:hover::after,
+.header-nav__menu > li > a:hover {
+  color: #FAC336;
+}
+
 .header-nav__menu > li > a.active::after {
   width: 100%;
 }
@@ -850,10 +862,14 @@ html {
 .section-bgSlider .slick-dots li {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
+  margin-left: 11px;
+  margin-right: 11px;
 }
 
 .section-bgSlider .slick-dots li.slick-active {
   background: #F8AE16;
+  -webkit-box-shadow: 0px 0px 10px rgba(250, 194, 52, 0.51);
+          box-shadow: 0px 0px 10px rgba(250, 194, 52, 0.51);
 }
 
 .bgSlider-block {
@@ -1023,9 +1039,9 @@ html {
   bottom: 0;
   height: 2px;
   width: 0%;
-  -webkit-transition: width 0.7s linear;
-  -o-transition: width 0.7s linear;
-  transition: width 0.7s linear;
+  -webkit-transition: width 0.5s linear;
+  -o-transition: width 0.5s linear;
+  transition: width 0.5s linear;
   background: -o-linear-gradient(356.43deg, #FAC336 13.84%, #F6A103 122.84%);
   background: linear-gradient(93.57deg, #FAC336 13.84%, #F6A103 122.84%);
 }
@@ -1117,6 +1133,7 @@ html {
   z-index: 1;
   top: 15%;
   left: -2%;
+  max-width: 800px;
   width: 53%;
 }
 
@@ -1510,23 +1527,16 @@ html {
   content: '';
   position: absolute;
   left: -10px;
-  top: 0;
-  height: 100%;
+  top: 0px;
+  height: 0%;
   width: 5px;
-  -webkit-transition: 1s height 0.3s linear;
-  -o-transition: 1s height 0.3s linear;
-  transition: 1s height 0.3s linear;
   background: -o-linear-gradient(356.43deg, #FAC336 13.84%, #F6A103 122.84%);
   background: linear-gradient(93.57deg, #FAC336 13.84%, #F6A103 122.84%);
   border-radius: 5px;
 }
 
 .sidebar-menu__sub.active span {
-  -webkit-transition: height 0.3s linear;
-  -o-transition: height 0.3s linear;
-  transition: height 0.3s linear;
-  background: -o-linear-gradient(356.43deg, #FAC336 13.84%, #F6A103 122.84%);
-  background: linear-gradient(93.57deg, #FAC336 13.84%, #F6A103 122.84%);
+  height: 100%;
 }
 
 .sidebar-menu__sub > li {
@@ -1595,6 +1605,7 @@ html {
 .pagination ul li:last-child,
 .pagination ul li:first-child {
   font-size: 1rem;
+  font-family: "MontserratBold";
 }
 
 .pagination ul li:last-child a,
@@ -1834,14 +1845,6 @@ html {
 .content-blocks__arrange .btn {
   border: none;
   max-width: 159px;
-}
-
-.content .content-text ol {
-  padding: 0;
-}
-
-.content .content-text ul {
-  padding: 0;
 }
 
 .content .content-text__title {
@@ -2122,20 +2125,8 @@ html {
 }
 
 .section-vacancies .vacancies-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding-left: 35px;
+  display: block;
+  padding-left: 8%;
   height: 100%;
   width: 30%;
 }
@@ -2184,6 +2175,7 @@ html {
   font-family: "MontserratMedium";
   font-size: 0.9rem;
   line-height: 18px;
+  margin-bottom: 5px;
 }
 
 .page-about .container {
@@ -2276,7 +2268,7 @@ html {
 
 .page-404 {
   height: 100vh;
-  background: 0% 30% url(../img/404/404.jpg) no-repeat;
+  background: 0% 0 url(../img/404/404.jpg) no-repeat;
 }
 
 .page-404 .content {
@@ -2331,6 +2323,19 @@ html {
   font-size: 1.1rem;
   line-height: 22px;
   color: #979797;
+}
+
+.page-404 .block-404 .btn-404 {
+  max-width: 190px;
+  height: 50px;
+}
+
+.page-404 .block-404 .btn-404 span {
+  height: 46px;
+}
+
+.page-404 .block-404 .btn-404:hover span {
+  color: #fff;
 }
 
 .modal-overlay {
@@ -2414,8 +2419,8 @@ html {
 .modal .close-modal {
   position: absolute;
   z-index: 9;
-  top: 27px;
-  right: 47px;
+  top: 10px;
+  right: 20px;
   cursor: pointer;
   opacity: 0;
   -webkit-backface-visibility: hidden;
@@ -2608,6 +2613,12 @@ html {
   height: 35px;
 }
 
+@media (min-width: 1500px) {
+  .section-licenses .container {
+    position: relative;
+  }
+}
+
 @media (max-width: 1390px) {
   .section-bgSlider .container--bgSlider {
     padding-left: 10%;
@@ -2640,13 +2651,7 @@ html {
   }
 }
 
-@media (max-width: 1130px) {
-  .section-licenses .licenses-img {
-    width: 45%;
-  }
-}
-
-@media (max-width: 1100px) {
+@media (max-width: 1150px) {
   .header-nav nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2723,7 +2728,6 @@ html {
     transition: height 0.2s linear;
   }
 
-  .header-nav__menu > li > a:hover::after,
   .header-nav__menu > li > a.active::after {
     width: 3px;
   }
@@ -2757,6 +2761,12 @@ html {
 
   .burger {
     display: block;
+  }
+}
+
+@media (max-width: 1130px) {
+  .section-licenses .licenses-img {
+    width: 45%;
   }
 }
 
@@ -3276,6 +3286,10 @@ html {
     display: none;
   }
 
+  .header-tel__links {
+    margin-left: -10px;
+  }
+
   .header .btn-tel {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3328,8 +3342,6 @@ html {
   .section-bgSlider .slick-dots li {
     width: 17px;
     height: 17px;
-    margin-left: 11px;
-    margin-right: 11px;
   }
 
   .bgSlider-block {
@@ -3469,7 +3481,7 @@ html {
   }
 
   .section-faq .faq-block {
-    padding: 18px 15px 30px;
+    padding: 18px 15px 18px;
   }
 
   .section-faq .faq-block__title {
@@ -3677,7 +3689,7 @@ html {
 
 .webp .section-about{ background: url(../img/section-about/bg.webp) 0 100%/cover no-repeat; }
 
-.webp .page-404{ background: 0% 30% url(../img/404/404.webp) no-repeat; }
+.webp .page-404{ background: 0% 0 url(../img/404/404.webp) no-repeat; }
 
 .webp .modal:after{ background: 100% 90% url(../img/modal/bg_01.webp) no-repeat; }
 
