@@ -4291,30 +4291,27 @@ a:not([class]) {
   line-height: 1.6;
 }
 
-.sidebar .sidevar-block-js .icon-plus {
+.icon-plus {
   display: none;
 }
 
-.sidebar .sidevar-block-js .toggle-js {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+.sidebar .toggle-js {
+	display: inline;
   position: relative;
 }
 
-.sidebar .sidevar-block-js .toggle-js .icon-plus {
-  display: block;
+.sidebar .icon-plus {
+	cursor: pointer;
+	padding-left: 10px;
+  display: inline;
   position: relative;
   width: 12px;
   height: 12px;
   margin-left: 12px;
 }
 
-.sidebar .sidevar-block-js .toggle-js .icon-plus::after,
-.sidebar .sidevar-block-js .toggle-js .icon-plus::before {
+.sidebar .icon-plus::after,
+.sidebar .icon-plus::before {
   content: '';
   position: absolute;
   right: 0;
@@ -4328,7 +4325,7 @@ a:not([class]) {
   transition: 0.4s;
 }
 
-.sidebar .sidevar-block-js .toggle-js .icon-plus::before {
+.sidebar .icon-plus::before {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
@@ -4342,7 +4339,7 @@ a:not([class]) {
   color: #000;
 }
 
-.sidebar .sidevar-block-js.active .toggle-js .icon-plus::before {
+.sidebar .sidevar-block-js.active .icon-plus::before {
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
@@ -6478,8 +6475,8 @@ a:not([class]) {
     font-size: 1.2rem;
   }
 
-  .sidebar .sidevar-block-js .toggle-js .icon-plus::after,
-  .sidebar .sidevar-block-js .toggle-js .icon-plus::before {
+  .sidebar .icon-plus::after,
+  .sidebar .icon-plus::before {
     width: 8px;
     margin-right: 6px;
   }

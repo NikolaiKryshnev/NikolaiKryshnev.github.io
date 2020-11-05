@@ -4,19 +4,23 @@ let width = $(window).width();
 let submenu = $('.header-menu-js > li.submenu-js');
 let submenuA = $('.header-menu-js > li.submenu-js > a');
 
-if (width >= 992) {
+if (width >= 1100) {
 	submenu.hover(
 		function () {
-			$(this).addClass('hover');
+			$(this).addClass('active');
 		},
 		function () {
-			$(this).removeClass('hover');
+			$(this).removeClass('active');
 		});
 } else {
 	submenuA.click(function (e) {
 		e.preventDefault();
+
+		$('.header-menu-js > li.submenu-js > ul').not($(this).next()).slideUp(500).removeClass('active');
+		$(this).next().slideToggle(500).toggleClass('active');
+
+		submenuA.not($(this)).removeClass('active');
 		$(this).toggleClass('active');
-		$(this).next().toggleClass('hover');
 	})
 }
 

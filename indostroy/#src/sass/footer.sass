@@ -1,0 +1,124 @@
+//============<footer>============
+.footer
+	padding-top: 45px
+	padding-bottom: 50px
+
+	background: $dark
+	color: $white
+	@media ( max-width: 991px )
+		font-size: 0.9rem
+	@media ( max-width: 526px )
+		padding-top: 35px
+		padding-bottom: 30px
+		
+		font-size: 1rem
+
+	
+	.container
+		display: flex
+		justify-content: center
+		flex-direction: column
+		align-items: center
+
+		a
+			color: $white
+			border-bottom: 1px solid #3f3e3f
+			transition: border-bottom .3s linear
+
+			&:hover
+				border-bottom: 1px solid $white
+	
+	//----<footer-logo>----//
+
+	&-logo
+		max-width: 92px
+		width: 100%
+		height: auto
+		margin-bottom: 30px
+		@media ( max-width: 991px )
+			max-width: 187px
+			margin-bottom: 59px
+
+		@media ( max-width: 991px )
+			max-width: 128px
+			margin-bottom: 39px
+
+	//----</footer-logo>----//
+
+
+	//----<footer-menu>----//
+
+	&-menu
+		width: 100%
+
+		padding-bottom: 40px
+
+		border-bottom: 1px solid rgba(255, 255, 255, 0.31)
+		@media ( max-width: 526px )
+			padding-bottom: 30px
+		
+		ul
+			display: flex
+			justify-content: center
+
+			padding: 0
+
+			list-style-type: none
+			@media ( max-width: 991px )
+				flex-direction: column
+				align-items: center
+
+
+			li
+				margin-left: 16px
+				margin-right: 16px
+				@media ( max-width: 991px )
+					margin-top: 0
+
+					+ li
+						margin-top: 27px
+						@media ( max-width: 991px )
+							margin-top: 20px
+
+	//----</footer-menu>----//
+
+
+	//----<footer-info>----//
+	&-info
+		display: flex
+		justify-content: space-between
+
+		padding-top: 27px
+
+		width: 100%
+		@media ( max-width: 991px )
+			flex-wrap: wrap
+			justify-content: center
+			text-align: center
+
+		@media ( max-width: 526px )
+			padding-top: 35px
+
+		
+			
+
+		&__left
+			max-width: 560px
+			width: 100%
+			@media ( max-width: 991px )
+				max-width: 100%
+
+				margin-bottom: 10px
+
+		&__right
+			text-align: right
+			@media ( max-width: 991px )
+				text-align: center
+
+				p:first-child
+					margin-bottom: 15px
+
+
+	//----</footer-info>----//
+
+//============</footer>============

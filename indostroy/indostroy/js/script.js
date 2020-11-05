@@ -52,19 +52,23 @@ let width = $(window).width();
 let submenu = $('.header-menu-js > li.submenu-js');
 let submenuA = $('.header-menu-js > li.submenu-js > a');
 
-if (width >= 992) {
+if (width >= 1100) {
 	submenu.hover(
 		function () {
-			$(this).addClass('hover');
+			$(this).addClass('active');
 		},
 		function () {
-			$(this).removeClass('hover');
+			$(this).removeClass('active');
 		});
 } else {
 	submenuA.click(function (e) {
 		e.preventDefault();
+
+		$('.header-menu-js > li.submenu-js > ul').not($(this).next()).slideUp(500).removeClass('active');
+		$(this).next().slideToggle(500).toggleClass('active');
+
+		submenuA.not($(this)).removeClass('active');
 		$(this).toggleClass('active');
-		$(this).next().toggleClass('hover');
 	})
 }
 
@@ -86,6 +90,8 @@ $(function () {
 //</Burger Active>---------------------------------------------------------------------------------------------------------------------
 
 
+//<slickModul>---------------------------------------
+
 $('.bgSlider-js').slick({
 	dots: true,
 	slidesToShow: 1,
@@ -100,48 +106,144 @@ $('.bgSlider-js').slick({
 			}
 		},
 	]
- });
+});
 
-// //<POPUP>---------------------------------------
+$('.command-slider-js').slick({
+	dots: false,
+	infinite: true,
+	speed: 300,
+	slidesToShow: 4,
+	slidesToScroll: 4,
+	autoplay: true,
+	autoplaySpeed: 5000,
+	loop: true,
+	arrows: true,
+	prevArrow: '<svg class="slick-arrow slick-arrow__left" width="17" height="30" viewBox="0 0 17 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 1L2 15L16 29" stroke="#383838" stroke-width="2"/></svg>',
+	nextArrow: '<svg class="slick-arrow slick-arrow__right" width="17" height="30" viewBox="0 0 17 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L15 15L1 29" stroke="#383838" stroke-width="2"/></svg>',
+	responsive: [
+		{
+			breakpoint: 1270,
+			settings: {
+				prevArrow: '<svg class="slick-arrow slick-arrow__left" width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg"><circle r="29" transform="matrix(-1 0 0 1 29 29)" fill="url(#paint0_linear)"/><path d="M33 19L23 29L33 39" stroke="white" stroke-width="3"/><defs><linearGradient id="paint0_linear" x1="7.41639" y1="4.83333" x2="75.1249" y2="9.05645" gradientUnits="userSpaceOnUse"><stop offset="0.0119048" stop-color="#FAC336"/><stop offset="1" stop-color="#F6A103"/></linearGradient></defs></svg>',
+				nextArrow: '<svg class="slick-arrow slick-arrow__right"  width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="29" cy="29" r="29" fill="url(#paint0_linear)"/><path d="M25 19L35 29L25 39" stroke="white" stroke-width="3"/><defs><linearGradient id="paint0_linear" x1="7.41639" y1="4.83333" x2="75.1249" y2="9.05645" gradientUnits="userSpaceOnUse"><stop offset="0.0119048" stop-color="#FAC336"/><stop offset="1" stop-color="#F6A103"/></linearGradient></defs></svg>',
+			}
+		},
+		{
+			breakpoint: 991,
+			settings: {
+				prevArrow: '<svg class="slick-arrow slick-arrow__left" width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg"><circle r="29" transform="matrix(-1 0 0 1 29 29)" fill="url(#paint0_linear)"/><path d="M33 19L23 29L33 39" stroke="white" stroke-width="3"/><defs><linearGradient id="paint0_linear" x1="7.41639" y1="4.83333" x2="75.1249" y2="9.05645" gradientUnits="userSpaceOnUse"><stop offset="0.0119048" stop-color="#FAC336"/><stop offset="1" stop-color="#F6A103"/></linearGradient></defs></svg>',
+				nextArrow: '<svg class="slick-arrow slick-arrow__right"  width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="29" cy="29" r="29" fill="url(#paint0_linear)"/><path d="M25 19L35 29L25 39" stroke="white" stroke-width="3"/><defs><linearGradient id="paint0_linear" x1="7.41639" y1="4.83333" x2="75.1249" y2="9.05645" gradientUnits="userSpaceOnUse"><stop offset="0.0119048" stop-color="#FAC336"/><stop offset="1" stop-color="#F6A103"/></linearGradient></defs></svg>',
+				slidesToShow: 3,
+				slidesToScroll: 1
+			}
+		},
+		{
+			breakpoint: 600,
+			settings: {
+				prevArrow: '<svg class="slick-arrow slick-arrow__left" width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg"><circle r="29" transform="matrix(-1 0 0 1 29 29)" fill="url(#paint0_linear)"/><path d="M33 19L23 29L33 39" stroke="white" stroke-width="3"/><defs><linearGradient id="paint0_linear" x1="7.41639" y1="4.83333" x2="75.1249" y2="9.05645" gradientUnits="userSpaceOnUse"><stop offset="0.0119048" stop-color="#FAC336"/><stop offset="1" stop-color="#F6A103"/></linearGradient></defs></svg>',
+				nextArrow: '<svg class="slick-arrow slick-arrow__right"  width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="29" cy="29" r="29" fill="url(#paint0_linear)"/><path d="M25 19L35 29L25 39" stroke="white" stroke-width="3"/><defs><linearGradient id="paint0_linear" x1="7.41639" y1="4.83333" x2="75.1249" y2="9.05645" gradientUnits="userSpaceOnUse"><stop offset="0.0119048" stop-color="#FAC336"/><stop offset="1" stop-color="#F6A103"/></linearGradient></defs></svg>',
+				slidesToShow: 1,
+				slidesToScroll: 1,
+			}
+		}
+	]
+});
 
-let modal = $('.modal-overlay, .modal');
 
-$('.popupBtn-js').click(function () {
-	modal.addClass('active');
-	$('.wrapper').addClass('active');
+//</slickModul>---------------------------------------
+
+
+//<POPUP>---------------------------------------
+
+let modal = $('.modal-overlay, .modal--tel');
+let modalform = $('.modal-overlay, .modal--form');
+let modalVacancies = $('.modal-overlay, .modal--vacancies');
+
+let btnVacan = $('.btn-vacancies-js');
+let btns = $('.popupBtn-js');
+let faqBtn = $('.faq-btn-js');
+
+function modals(modal, btn){
+	btn.click(function () {
+		modal.addClass('active');
+		$('.wrapper').addClass('active');
+		
+	});
 	
-});
-
-$('.close-js').click(function () {
-	modal.removeClass('active');
-});
+	$('.close-js').click(function () {
+		modal.removeClass('active');
+	});
+	
+	$(".modal-overlay").on('click', function (e) {
+		if (e.target == this) modal.removeClass('active');
+	});
+}
+modals(modal, btns);
+modals(modalform, faqBtn);
+modals(modalVacancies, btnVacan);
 
 //</POPUP>---------------------------------------
 
-// //<accordeon>---------------------------------------
+//<Sidebar width 991>---------------------------------------
+
+
+if (width >= 992) {
+
+} else {
+	$('.sidebar-js').appendTo($('.modal-overlay'));
+
+	$('.btnSidebar-js').click(function () {
+		$('.modal-overlay, .sidebar-js').addClass('active');
+		$('.wrapper').addClass('active');
+		
+	});
+	$('.sidebar-close').click(function () {
+		$('.modal-overlay, .sidebar-js').removeClass('active');
+	});
+
+}
+
+//</Sidebar width 991>---------------------------------------
+
+
+
+
+
+
+//<accordeon>---------------------------------------
+
+let acrd = $('.accordeon-js .acc-head-js');
 $(document).ready(function () {
-	$('.accordeon-js .accordeon-box .acc-head-js').on('click', f_acc);
+	acrd.on('click', f_acc);
 });
 
 function f_acc() {
-	$('.accordeon-js .accordeon-box .acc-body-js').not($(this).next()).slideUp(2000);
-	$(this).next().slideToggle(2000);
+	$('.accordeon-js .acc-body-js').not($(this).next()).slideUp(1000).removeClass('active');
+	$(this).next().slideToggle(1000).toggleClass('active');
+
+	$('.accordeon-js .acc-link-js').not($(this)).removeClass('active');
+	$(this).toggleClass('active');
+
 }
+
 //</accordeon>---------------------------------------
 
-// 
-//<TABS>---------------------------------------
-$('.js-tab-trigger').click(function() {
-   var id = $(this).attr('data-tab'),
-       content = $('.js-tab-content[data-tab="'+ id +'"]');
-   
-   $('.js-tab-trigger.active').removeClass('active'); 
-   $(this).addClass('active'); 
-   
-   $('.js-tab-content.active').removeClass('active'); 
-   content.addClass('active');
+let acr = $('.faq--js .faq-block__link');
+$(document).ready(function () {
+	acr.on('click', f_ac);
 });
-//</TABS>---------------------------------------
+
+
+function f_ac() {
+	$('.faq--js .faq-block__content').not($(this).next()).slideUp(500).removeClass('active');
+	$(this).next().slideToggle(500).toggleClass('active');
+
+	$('.faq--js .faq-block__link').not($(this)).removeClass('active');
+	$(this).toggleClass('active');
+
+}
+
+
 
 
 //</TASK>---------------------------------------------------------------------------------------------------------------------

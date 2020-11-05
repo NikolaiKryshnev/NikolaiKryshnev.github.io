@@ -1,25 +1,8 @@
 
+//============<POPUP>============
 
-.popupBtn-js 
-	background-color: #0d52e9
-	position: relative
-	color: #fff
-	border: none
-	padding: 1.25em 2em
-	font-size: 0.75em
-	letter-spacing: 1px
-	text-transform: uppercase
-	cursor: pointer
-	box-shadow: 0 10px 20px rgba(0, 0, 0, .1)
-	transition: background 0.25s cubic-bezier(0.55, 0, 0.1, 1)
+//----<modal-overlay>----//
 
-	&:hover 
-		background: #0c4ddb
-
-	&:focus 
-		outline: none
-
-//<POPUP>---------------------------------------
 .modal-overlay 
 	display: flex
 	align-items: center
@@ -39,19 +22,28 @@
 	&.active 
 		opacity: 1
 		visibility: visible
+//----</modal-overlay>----//
+
 
 .modal 
-	display: flex
+	display: none
 	align-items: center
-	justify-content: center
+	justify-content: flex-start
+
 	position: relative
+
 	margin: 0 auto
+	padding: 44px 45px 60px
+
+
 	background-color: #fff
-	width: 600px
-	max-width: 75rem
-	min-height: 20rem
-	padding: 1rem
-	border-radius: 3px
+
+	max-width: 640px
+	width: 100%
+
+
+	border-radius: 10px
+
 	opacity: 0
 	overflow-y: auto
 	visibility: hidden
@@ -59,26 +51,100 @@
 	backface-visibility: hidden
 	transform: scale(1.2)
 	transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1)
+	@media ( max-width: 720px )
+		margin-left: 15px
+		margin-right: 15px
+
+	@media ( max-width: 526px )
+		padding: 28px 20px 40px
+	
+		
+	&.active
+		display: flex
+		
+	&:after
+		content: ''
+
+		position: absolute
+		z-index: 1
+		top: 0
+		right: 0
+		width: 100%
+		height: 100%
+
+		background: 100% 90% url(../img/modal/bg_01.png) no-repeat
+		@media ( max-width: 526px )
+			display: none
+
+	//----<close-modal>----//
 
 	.close-modal 
 		position: absolute
+		z-index: 9
+		top: 27px
+		right: 47px
+
 		cursor: pointer
-		top: 5px
-		right: 15px
 		opacity: 0
 		backface-visibility: hidden
 		transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1)
 		transition-delay: 0.3s
+		@media ( max-width: 526px )
+			top: 20px
+			right: 20px
 
 		svg 
-			width: 1.75em
-			height: 1.75em
+			width: 20px
+			height: 20px
+
+			path
+				stroke: black
+				transition: stroke 0.2s linear
+
+		&:hover
+			svg 
+				path
+					stroke: $yellow-3
+
+	//----</close-modal>----//
+	
+	//----<modal-content >----//
 
 	.modal-content 
+		position: relative
+		z-index: 2	
+
 		opacity: 0
 		backface-visibility: hidden
 		transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1)
 		transition-delay: 0.3s
+
+		max-width: 490px
+		width: 100%
+
+		&__title
+			margin-bottom: 35px
+
+			@media ( max-width: 526px )
+				max-width: 93%
+
+				&.h3
+					font-size: 1.6rem
+
+
+		.btn
+			padding: 0 15px
+
+			border: none
+			@media ( max-width: 526px )
+				max-width: 153px
+
+			svg
+				height: 29px
+				width: 32px
+				margin-right: 15px
+				@media ( max-width: 526px )
+					margin-right: 9px
 
 	&.active 
 		visibility: visible
@@ -92,4 +158,128 @@
 			transform: translateY(10px)
 			opacity: 1
 
-//</POPUP>---------------------------------------
+	//----</modal-content>----//
+	.modal-form__inputs
+		display: flex
+		justify-content: flex-start
+
+		margin-bottom: 39px
+
+		font-family: "Gothic"
+		@media ( max-width: 526px )
+			flex-wrap: wrap
+
+
+		.modal-form__input
+			display: flex
+			flex-direction: column
+
+			margin-left: 0
+
+			max-width: 138px
+			width: 100%
+			@media ( max-width: 526px )
+				max-width: 100%
+
+			+ .modal-form__input
+				margin-left: 29px
+
+				max-width: 177px
+				@media ( max-width: 526px )
+					max-width: 100%
+
+					margin-top: 23px
+					margin-left: 0
+
+
+			input	
+				margin-top: 5px
+				padding: 0 13px
+
+				height: 32px
+
+
+				border-radius: 5px
+				border: none
+				background: #F4F4F4
+
+				font-family: "MontserratRegular"
+				font-size: 0.9rem
+				line-height: 17px
+				color: #5A5A5A
+
+	.modal-form__textarea
+		display: flex
+		flex-direction: column
+
+		margin-left: 0
+		margin-bottom: 25px
+
+		width: 100%
+
+		font-family: "Gothic"
+
+		textarea
+			margin-top: 5px
+			padding: 8px 13px
+
+			height: 80px
+
+			resize: none
+
+			border-radius: 5px
+			border: none
+			background: #F4F4F4
+
+			font-family: "MontserratRegular"
+			font-size: 0.9rem
+			line-height: 17px
+			color: #5A5A5A
+
+			border-radius: 5px
+			border: none
+			background: #F4F4F4
+		
+.modal--form
+	display: none
+
+	max-width: 725px
+	&:after
+		background: 95% 90% url(../img/modal/bg_02.png) no-repeat
+
+	.modal-content
+		max-width: 460px
+
+		.btn
+			@media ( max-width: 526px )
+				max-width: 153px
+				height: 43px
+				
+			svg
+				width: 35px
+				height: 35px
+				@media ( max-width: 526px )
+					height: 27px
+					width: 27px
+
+	.modal-form
+		max-width: 345px
+
+	.modal-form__inputs
+		margin-bottom: 20px
+
+
+.modal--vacancies
+	display: none
+	&:after
+		background: 95% 90% url(../img/modal/bg_03.png) no-repeat
+
+	.modal-content
+		.btn
+			svg
+				width: 35px
+				height: 35px
+				@media ( max-width: 526px )
+					height: 27px
+					width: 27px
+//============</POPUP>============

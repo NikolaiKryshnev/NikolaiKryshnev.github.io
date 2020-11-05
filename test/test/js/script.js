@@ -232,6 +232,7 @@ $('.personSlider-js').slick({
 		}
 	]
 });
+
 //---------------------------------------------
 // Tabs
 //---------------------------------------------
@@ -270,6 +271,7 @@ starEls.forEach(star => {
 		starEl.parentNode.setAttribute('data-stars', starEl.dataset.rating);
 	});
 })
+
 //---------------------------------------------
 // Input number
 //---------------------------------------------
@@ -323,7 +325,7 @@ catalogItemCounter('.buy-input-js');
 
 
 document.addEventListener('DOMContentLoaded', function () {
-	let navs = document.querySelectorAll('.sidevar-block-js');
+	let navs = document.querySelectorAll('.sidevar-block-js span');
 	for( let i = 0; i < navs.length; i++ ){
 		 navs[i].addEventListener('click', selectMenu(i), false);
 	}
@@ -343,6 +345,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	 });
+	 
 $(document).ready(function() {
  
 	$('input[type="file"]').change(function(){

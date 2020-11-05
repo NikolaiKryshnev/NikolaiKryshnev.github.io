@@ -23,9 +23,10 @@
 @@include('./task/menuJQ.js')
 @@include('./task/slickModul.js')
 
-// @@include('./task/popup.js')
-// @@include('../task/accordionJQ/accordion.js')
-// @@include('../task/tabs/tabs.js')
+@@include('./task/popup.js')
+@@include('./task/accordeon.js')
+
+
 
 //</TASK>---------------------------------------------------------------------------------------------------------------------
 

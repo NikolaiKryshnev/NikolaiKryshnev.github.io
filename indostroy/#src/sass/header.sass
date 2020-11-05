@@ -38,7 +38,7 @@
 		nav
 			height: 100%
 
-		@media ( max-width: 991px)
+		@media ( max-width: 1100px)
 			nav
 				display: flex
 				align-items: center
@@ -50,7 +50,7 @@
 			margin: 0
 
 			height: 100%
-			@media ( max-width: 991px )
+			@media ( max-width: 1100px )
 				position: absolute
 				top: 100%
 				right: -100%
@@ -75,7 +75,7 @@
 			>li
 				position: relative
 				display: flex
-				@media ( max-width: 991px )
+				@media ( max-width: 1100px )
 					flex-direction: column
 
 				>a
@@ -85,7 +85,7 @@
 					color: $white
 					padding: 0 12px
 					height: 100%
-					@media ( max-width: 991px )
+					@media ( max-width: 1100px )
 						position: relative
 
 						padding: 8px 0
@@ -95,7 +95,7 @@
 						justify-content: center
 						
 					&.active
-						@media ( max-width: 991px )
+						@media ( max-width: 1100px )
 							&:hover
 								&:after
 									width: 3px
@@ -122,7 +122,7 @@
 						background: #FABF31
 
 						transition: width 0.2s linear
-						@media ( max-width: 991px )
+						@media ( max-width: 1100px )
 							height: 0%
 							width: 3px
 
@@ -141,10 +141,10 @@
 
 						transition: transform 0.1s linear		
 
-					&:hover
+					&:hover, &.active
 						&::after
 							width: 100%
-							@media ( max-width: 991px )
+							@media ( max-width: 1100px )
 								width: 3px
 				
 						
@@ -171,24 +171,25 @@
 
 			transition: top 0.2s linear, opacity 0.9s linear, visibility 0.2s linear
 
-			@media ( max-width: 991px )
+			@media ( max-width: 1100px )
 				position: relative
 				z-index: 1
 				top: 0
 				left: 0
 				
 				margin: 0
-				padding: 0
+				padding: 15px
 
-				height: 0px
+				// height: 0px
 
 				opacity: 1
-				visibility: hidden
+				visibility: visible
+				display: none
 
-				overflow-y: hidden
+				// overflow-y: hidden
 				transform: translateX(0%)
 
-				transition: height 0.5s linear, visibility 0.5s linear, padding 0.5s linear
+				// transition: height 0.5s linear, visibility 0.5s linear, padding 0.5s linear
 
 			li
 				text-align: center
@@ -203,18 +204,18 @@
 					text-align: center
 
 
-			&.hover
-				@media ( max-width: 991px )
-					height: 250px
-					max-height: 100%
+			&.active
+				@media ( max-width: 1100px )
+					// height: 250px
+					// max-height: 100%
 					
-					padding: 15px
+					// padding: 15px
 
-					opacity: 1
-					visibility: visible
+					// opacity: 1
+					// visibility: visible
 
 
-		li.submenu-js.hover
+		li.submenu-js.active
 			.header-nav__menuSub
 				top: 100%
 
@@ -225,7 +226,7 @@
 				transform: rotate(95deg)
 					
 
-	@media ( max-width: 991px)
+	@media ( max-width: 1100px)
 		&-nav
 			order: 4
 
@@ -270,7 +271,7 @@
 
 	.btn-tel
 		order: 4
-	@media ( max-width: 991px)
+	@media ( max-width: 1100px)
 		.btn-tel
 			order: 3
 
@@ -303,7 +304,7 @@
 
 	width: 35px
 	height: 35px
-	@media ( max-width: 991px )
+	@media ( max-width: 1100px )
 		display: block
 		
 

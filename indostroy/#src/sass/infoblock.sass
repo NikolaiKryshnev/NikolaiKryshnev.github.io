@@ -1,0 +1,131 @@
+//============<info-block>============
+
+.info-block
+	display: flex
+
+	margin-bottom: 25px
+
+	background: #FFFFFF
+	box-shadow: 0px 0px 7px rgba(135, 135, 135, 0.25)
+	border-radius: 5px
+	@media ( max-width: 991px )
+		flex-wrap: wrap
+
+	&__img
+		max-width: 500px
+		width: 100%
+		height: auto
+
+		padding: 14% 0
+
+		position: relative
+
+		border-radius: 5px
+
+		overflow: hidden
+		@media ( max-width: 991px )
+			max-width: 100%
+			padding: 25% 0
+
+
+		a
+			position: absolute
+			display: block
+			top: 0
+			left: 0
+
+			width: 100%
+			height: 100%
+
+			img
+
+				position: relative
+				z-index: 2
+
+				width: 100%
+				height: 100%
+
+				transition: opacity .5s
+
+				opacity: 1
+				object-fit: cover
+
+	&__right
+		padding: 20px 55px 40px 40px
+		@media ( max-width: 991px )
+			padding-left: 32px
+		@media ( max-width: 526px )
+			padding: 12px 20px 39px
+
+	&__data
+		font-size: 0.9rem
+		color: #A5A5A5
+
+	&__title
+		@media ( max-width: 526px )
+			margin-bottom: 15px
+
+		a
+			color: #303030
+
+	&__text
+		max-width: 570px
+		width: 100%
+		height: auto
+
+		margin-bottom: 25px
+
+//============</info-block>============
+
+//============<Conent&info-block>============
+.content
+	.info-block
+		@media ( max-width: 991px )
+			margin-bottom: 30px
+			
+		&__title
+			margin-bottom: 10px
+
+			font-size: 1.1rem		
+			@media ( max-width: 526px )
+				margin-bottom: 5px
+				
+
+		&__img
+			max-width: 360px
+			@media ( max-width: 991px )
+				max-width: 100%
+				padding: 30% 0
+				
+		&__right
+			max-width: 100%
+			width: 100%
+
+		&__title
+			font-size: 1.5rem
+
+		&__text
+			line-height: 1.4
+
+		.btn
+			max-width: 159px
+			height: 45px
+			@media ( max-width: 991px )
+				max-width: 195px
+				height: 55px
+			@media ( max-width: 526px )
+				max-width: 170px
+				height: 46px
+
+
+
+		&__right
+			padding: 36px 29px 30px
+			@media ( max-width: 991px )
+				padding: 30px 32px 50px
+
+
+
+
+//============</Conent&info-block>============
+
