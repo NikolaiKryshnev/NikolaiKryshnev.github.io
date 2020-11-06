@@ -30,6 +30,7 @@
   "dependencies": {
     "del": "^5.1.0",
     "jquery": "^3.5.1",
+    "jquery-mask-plugin": "^1.14.16",
     "normalize.css": "^8.0.1",
     "normalize.sass": "^3.0.3-2",
     "slick-carousel": "^1.8.1"

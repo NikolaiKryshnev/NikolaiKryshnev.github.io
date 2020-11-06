@@ -14,6 +14,8 @@
 //============<SLICK-SLIDER>============
 // npm i slick-carousel
 @@include('../../node_modules/slick-carousel/slick/slick.min.js')
+@@include('../../node_modules/jquery-mask-plugin/src/jquery.mask.js')
+
 //============</SLICK-SLIDER>============
 
 //</LIBRARIES>---------------------------------------------------------------------------------------------------------------------
