@@ -469,7 +469,7 @@ html {
   -webkit-box-shadow: none;
           box-shadow: none;
   border: 3px solid #fec963;
-  color: linear-gradient(185.22deg, #FED976 -20.33%, #FEB54A 129.57%);
+  color: #FEC760;
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
@@ -1182,11 +1182,7 @@ html {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 4px;
-  background: -o-linear-gradient(264.78deg, #fed976 -20.33%, #feb54a 129.57%);
-  background: linear-gradient(185.22deg, #fed976 -20.33%, #feb54a 129.57%);
-  -webkit-background-clip: text;
-          background-clip: text;
-  color: transparent;
+  color: #FEC760;
 }
 
 .section-stock .stock-columns .stock-form {
