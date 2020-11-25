@@ -776,14 +776,6 @@ $('.slick-600').slick({
 
 //<POPUP>---------------------------------------
 
-let modal = $('.modal-overlay, .modal--tel');
-let modalform = $('.modal-overlay, .modal--form');
-let modalVacancies = $('.modal-overlay, .modal--vacancies');
-
-let btnVacan = $('.btn-vacancies-js');
-let btns = $('.popupBtn-js');
-let faqBtn = $('.faq-btn-js');
-
 function modals(modal, btn) {
 	btn.click(function () {
 		modal.addClass('active');
@@ -805,9 +797,9 @@ function modals(modal, btn) {
 
 	});
 }
-modals(modal, btns);
-modals(modalform, faqBtn);
-modals(modalVacancies, btnVacan);
+modals($('.modal-overlay, .modal--tel'), $('.popupBtn-js'));
+modals($('.modal-overlay, .modal--form'), $('.faq-btn-js'));
+modals($('.modal-overlay, .modal--vacancies'), $('.btn-vacancies-js'));
 
 //</POPUP>---------------------------------------
 
@@ -818,16 +810,7 @@ if (width >= 992) {
 
 } else {
 	$('.sidebar-js').appendTo($('.modal-overlay'));
-
-	$('.btnSidebar-js').click(function () {
-		$('.modal-overlay, .sidebar-js').addClass('active');
-		$('.wrapper').addClass('active');
-
-	});
-	$('.sidebar-close').click(function () {
-		$('.modal-overlay, .sidebar-js').removeClass('active');
-	});
-
+	modals($('.modal-overlay, .sidebar-js'), $('.btnSidebar-js'));
 }
 
 //</Sidebar width 991>---------------------------------------
@@ -839,9 +822,14 @@ if (width >= 992) {
 
 //<accordeon>---------------------------------------
 
-let acrd = $('.accordeon-js .acc-head-js');
+let acrd = $('.accordeon-js .sidebar-menu__title');
 $(document).ready(function () {
 	acrd.on('click', f_acc);
+});
+
+let acr = $('.accordeon-js .faq-block__link');
+$(document).ready(function () {
+	acr.on('click', f_acc);
 });
 
 function f_acc() {
@@ -855,20 +843,17 @@ function f_acc() {
 
 //</accordeon>---------------------------------------
 
-let acr = $('.faq--js .faq-block__link');
-$(document).ready(function () {
-	acr.on('click', f_ac);
-});
 
 
-function f_ac() {
-	$('.faq--js .faq-block__content').not($(this).next()).slideUp(500).removeClass('active');
-	$(this).next().slideToggle(500).toggleClass('active');
 
-	$('.faq--js .faq-block__link').not($(this)).removeClass('active');
-	$(this).toggleClass('active');
+// function f_ac() {
+// 	$('.faq--js .faq-block__content').not($(this).next()).slideUp(500).removeClass('active');
+// 	$(this).next().slideToggle(500).toggleClass('active');
 
-}
+// 	$('.faq--js .faq-block__link').not($(this)).removeClass('active');
+// 	$(this).toggleClass('active');
+
+// // }
 
 
 

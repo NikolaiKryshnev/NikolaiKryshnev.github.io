@@ -187,7 +187,7 @@ $('.recom-js').slick({
 			settings: {
 				slidesToShow: 2,
 				slidesToScroll: 2,
-				
+
 			}
 		},
 		{
@@ -233,6 +233,17 @@ $('.personSlider-js').slick({
 	]
 });
 
+
+if ($(window).width() <= 600) {
+	$('.reviewsPage-slider-js').slick({
+		dots: false,
+		slidesToShow: 1,
+		loop: true,
+		arrows: true,
+		prevArrow: '<div class="reviews-arrow reviews-arrow__left"><svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.90914 1.54544L1.45459 5.99999L5.90914 10.4545" stroke="white" stroke-width="2"/></svg></div>',
+		nextArrow: '<div class="reviews-arrow reviews-arrow__right"><svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.54545 1.54544L6 5.99999L1.54545 10.4545" stroke="white" stroke-width="2"/></svg>	</div>',
+	});
+}
 //---------------------------------------------
 // Tabs
 //---------------------------------------------
@@ -271,7 +282,6 @@ starEls.forEach(star => {
 		starEl.parentNode.setAttribute('data-stars', starEl.dataset.rating);
 	});
 })
-
 //---------------------------------------------
 // Input number
 //---------------------------------------------
@@ -325,7 +335,7 @@ catalogItemCounter('.buy-input-js');
 
 
 document.addEventListener('DOMContentLoaded', function () {
-	let navs = document.querySelectorAll('.sidevar-block-js span');
+	let navs = document.querySelectorAll('.sidevar-block-js');
 	for( let i = 0; i < navs.length; i++ ){
 		 navs[i].addEventListener('click', selectMenu(i), false);
 	}
@@ -345,7 +355,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	 });
-	 
 $(document).ready(function() {
  
 	$('input[type="file"]').change(function(){

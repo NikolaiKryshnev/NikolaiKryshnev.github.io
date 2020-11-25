@@ -1,0 +1,131 @@
+
+
+.popupBtn-js 
+	background-color: #0d52e9
+	position: relative
+	color: #fff
+	border: none
+	padding: 1.25em 2em
+	font-size: 0.75em
+	letter-spacing: 1px
+	text-transform: uppercase
+	cursor: pointer
+	box-shadow: 0 10px 20px rgba(0, 0, 0, .1)
+	transition: background 0.25s cubic-bezier(0.55, 0, 0.1, 1)
+
+	&:hover 
+		background: #0c4ddb
+
+	&:focus 
+		outline: none
+
+//<POPUP>---------------------------------------
+.modal-overlay 
+	display: flex
+	align-items: center
+	justify-content: center
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 999
+	background-color: rgba(0, 0, 0, 0.6)
+	opacity: 0
+	visibility: hidden
+	backface-visibility: hidden
+	transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1)
+
+	&.active 
+		opacity: 1
+		visibility: visible
+
+.modal 
+	display: none
+	align-items: center
+	justify-content: center
+	position: relative
+	margin: 0 auto
+	background-color: #fff
+	width: 690px
+	max-width: 75rem
+	min-height: 20rem
+	padding: 20px 25px
+	border-radius: 3px
+	opacity: 0
+	overflow-y: auto
+	visibility: hidden
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)
+	backface-visibility: hidden
+	transform: scale(1.2)
+	transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1)
+	@media ( max-width: $md3+px )
+		padding: 13px
+
+	.close-modal 
+		position: absolute
+		cursor: pointer
+		top: 20px
+		right: 35px
+		opacity: 0
+		backface-visibility: hidden
+		transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1)
+		transition-delay: 0.3s
+		@media ( max-width: $md3+px )
+			top: 10px
+			right: 20px
+
+		svg 
+			width: 35px
+			height: 35px
+			@media ( max-width: $md3+px )
+				width: 25px
+				height: 25px
+
+	.modal-content 
+		opacity: 0
+		backface-visibility: hidden
+		transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1)
+		transition-delay: 0.3s
+
+		&__title
+			@extend .h3
+			line-height: 1.2
+
+			margin-bottom: 30px
+			@media ( max-width: $md3+px )
+				padding-right: 30px
+
+	.modal-border
+		padding: 32px 62px 45px
+		width: 100%
+		height: auto
+		border-radius: 5px
+		border: 1px solid #feb54a
+		@media ( max-width: $md3+px )
+			padding: 20px
+			
+
+		.info-block
+			margin-bottom: 25px
+
+		.btn
+			max-width: 200px
+			height: 60px
+
+			margin-top: 40px
+
+	&.active 
+		display: flex
+		visibility: visible
+		opacity: 1
+		transform: scale(1)
+
+		.modal-content 
+			opacity: 1
+
+		.close-modal 
+			transform: translateY(10px)
+			opacity: 1
+
+//</POPUP>---------------------------------------

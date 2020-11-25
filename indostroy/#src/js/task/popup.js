@@ -1,13 +1,5 @@
 //<POPUP>---------------------------------------
 
-let modal = $('.modal-overlay, .modal--tel');
-let modalform = $('.modal-overlay, .modal--form');
-let modalVacancies = $('.modal-overlay, .modal--vacancies');
-
-let btnVacan = $('.btn-vacancies-js');
-let btns = $('.popupBtn-js');
-let faqBtn = $('.faq-btn-js');
-
 function modals(modal, btn) {
 	btn.click(function () {
 		modal.addClass('active');
@@ -29,9 +21,9 @@ function modals(modal, btn) {
 
 	});
 }
-modals(modal, btns);
-modals(modalform, faqBtn);
-modals(modalVacancies, btnVacan);
+modals($('.modal-overlay, .modal--tel'), $('.popupBtn-js'));
+modals($('.modal-overlay, .modal--form'), $('.faq-btn-js'));
+modals($('.modal-overlay, .modal--vacancies'), $('.btn-vacancies-js'));
 
 //</POPUP>---------------------------------------
 
@@ -42,16 +34,7 @@ if (width >= 992) {
 
 } else {
 	$('.sidebar-js').appendTo($('.modal-overlay'));
-
-	$('.btnSidebar-js').click(function () {
-		$('.modal-overlay, .sidebar-js').addClass('active');
-		$('.wrapper').addClass('active');
-
-	});
-	$('.sidebar-close').click(function () {
-		$('.modal-overlay, .sidebar-js').removeClass('active');
-	});
-
+	modals($('.modal-overlay, .sidebar-js'), $('.btnSidebar-js'));
 }
 
 //</Sidebar width 991>---------------------------------------

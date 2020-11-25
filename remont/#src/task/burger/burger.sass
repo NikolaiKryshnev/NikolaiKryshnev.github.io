@@ -1,0 +1,259 @@
+
+// ========== BURGER ONE ========== //
+
+.burger-1
+	position: relative
+
+	margin: 0 auto
+	margin-top: 30px
+
+	width: 30px
+	height: 30px
+
+
+	.burger-line
+		position: absolute
+
+		display: block
+
+		padding: 0
+
+		width: 30px
+		height: 4px
+
+		background-color: black
+		
+		border-radius: 4px
+		transition: all 0.4s ease-in-out
+
+	.burger-lineOne
+		top: 0
+
+	.burger-lineTwo
+		top: 13.5px
+
+	.burger-lineThree
+		top: 13.5px
+		right: 0
+
+	.burger-lineFour
+		bottom: 0
+
+	&.active
+
+		.burger-lineOne
+			transform: rotate(45deg)
+			transform-origin: 5%
+			width: 41px
+
+		.burger-lineTwo
+			transform: translateX(-40px)
+			background-color: transparent
+
+		.burger-lineThree
+			transform: translateX(40px)
+			background-color: transparent
+
+		.burger-lineFour
+			transform-origin: 5%
+			transform: rotate(-45deg)
+			width: 41px
+
+// ========== /BURGER ONE ========== //
+
+
+// ========== BURGER TWO========== //
+
+.burger-2
+	position: relative
+
+	margin: 0 auto
+	margin-top: 30px
+
+	width: 30px
+	height: 30px
+
+	.burger-line
+		position: absolute
+
+		display: block
+
+		padding: 0
+
+		width: 30px
+		height: 4px
+
+		background-color: black
+		
+		border-radius: 4px
+		transition: all 0.4s ease-in-out
+
+	.burger-lineOne
+		top: 0
+
+	.burger-lineTwo
+		top: 13.5px
+
+	.burger-lineThree
+		top: 13.5px
+		right: 0
+
+	.burger-lineFour
+		bottom: 0
+
+	&.active
+		.burger-lineOne
+			transform: translateX(40px)
+			background-color: transparent
+
+		.burger-lineTwo
+			transform: rotate(45deg)
+
+		.burger-lineThree
+			transform: rotate(-45deg)
+
+		.burger-lineFour
+			transform: translateX(-40px)
+			background-color: transparent
+
+// ========== /BURGER TWO ========== //
+
+
+// ========== BURGER THREE ========== //
+
+.burger-3
+	position: relative
+
+	margin: 0 auto
+	margin-top: 30px
+
+	width: 30px
+	height: 30px
+
+	.burger-line
+		position: absolute
+
+		display: block
+
+		padding: 0
+
+		width: 30px
+		height: 4px
+
+		background-color: black
+		
+		border-radius: 4px
+		transition: all 0.4s ease-in-out
+
+	.burger-lineOne
+		transform-origin: 5%
+		top: 0
+
+	.burger-lineTwo
+		top: 13.5px
+
+	.burger-lineThree
+		top: 13.5px
+		right: 0
+
+	.burger-lineFour
+		transform-origin: 5%
+		bottom: 0
+
+
+	&.active
+		.burger-lineOne
+			transform: rotate(45deg)
+			height: 3px
+			width: 42px
+
+		.burger-lineTwo
+			transform: rotate(45deg)
+			height: 3px
+			background-color: transparent
+
+		.burger-lineThree
+			transform: rotate(-45deg)
+			height: 3px
+			background-color: transparent
+
+		.burger-lineFour
+			transform: rotate(-45deg)
+			height: 3px
+			width: 42px
+
+// ========== /BURGER THREE ========== //
+
+
+// ========== BURGER FOUR ========== //
+
+.burger-4
+	position: relative
+
+	margin: 0 auto
+	margin-top: 30px
+
+	width: 30px
+	height: 30px
+
+	.burger-line
+		position: absolute
+
+		display: block
+
+		padding: 0
+
+		width: 30px
+		height: 4px
+
+		background-color: black
+		
+		border-radius: 4px
+		transition: all 0.4s ease-in-out, transform 0.4s ease-in-out 0.4s
+
+
+	.burger-lineOne
+		top: 0
+
+	.burger-lineTwo
+		top: 13.5px
+		width: 1px
+		transform: rotate(90deg)
+		left: 13.5px
+
+	.burger-lineThree
+		top: 13.5px
+		right: 0
+		width: 1px
+		left: 13.5px
+
+	.burger-lineFour
+		top: 13.5px
+		bottom: 0
+
+	.burger-lineFive
+		bottom: 0px
+
+	&.active
+		.burger-lineOne
+			top: 13.5px
+			background-color: transparent
+
+		.burger-lineTwo
+			left: 0px
+			width: 30px
+			transform: rotate(45deg)
+
+		.burger-lineThree
+			left: 0
+			width: 30px
+			transform: rotate(-45deg)
+
+		.burger-lineFour
+			background-color: transparent
+
+		.burger-lineFive
+			bottom: 13.5px
+			background-color: transparent
+
+// ========== /BURGER FOUR ========== //

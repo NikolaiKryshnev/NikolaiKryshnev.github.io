@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('head.html')
+	<title>Пустая корзина</title>
+</head>
+
+<body>
+	<div class="wrraper">
+		@@include('_header.html')
+		<div class="page page-basket">
+			<div class="container">
+				<div class="breadcrumbs">
+					<ul>
+						<li><a href="#">Главная</a></li>
+						<li><a href="#">Меню</a></li>
+						<li><a href="#">Вторник</a></li>
+						<li><a href="#">Маринованная красная капуста</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="container container--column">
+				<div class="content">
+					<section class="section-basket">
+						<div class="section-title">
+							<div class="section-title__top">
+								КОРЗИНА
+							</div>
+						</div>
+						<div class="basketEmpty">
+							<div class="basketEmpty-img">
+								<img src="./img/icons/icons.svg#icon-basket" alt="">
+							</div>
+							<div class="basketEmpty-title">Ваша корзина пуста.</div>
+							<div class="basketEmpty-text">Перейдите в «Меню» или «Магазин»,
+								чтобы сделать заказ.</div>
+							<div class="basketEmpty-btn">
+								<a class="btn" href="#">ПЕРЕЙТИ В МЕНЮ</a>
+								<a class="btn" href="#">ПЕРЕЙТИ В МАГАЗИН</a>
+							</div>
+						</div>
+					</section>
+					<!-- /.section-basket -->
+
+				</div>
+				<!-- /.content -->
+			</div>
+			<!-- /.contaniner -->
+		</div>
+		<!-- /.page -->
+
+		@@include('_footer.html')
+	</div>
+	<!-- /.wrraper -->
+	<script src="js/script.min.js"></script>
+</body>
+
+</html>
