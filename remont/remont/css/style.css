@@ -465,9 +465,10 @@ html {
   width: 192px;
   height: 50px;
   padding: 0;
+  font-family: MontserratBold;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: 3px solid rgba(254, 201, 99, 0.64);
+  border: 3px solid #fec963;
   color: linear-gradient(185.22deg, #FED976 -20.33%, #FEB54A 129.57%);
   -webkit-background-clip: text;
           background-clip: text;
@@ -654,6 +655,10 @@ html {
           order: 2;
   font-size: 0.88rem;
   margin-left: 38px;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  max-width: 190px;
 }
 
 .header-column__social {
@@ -718,24 +723,12 @@ html {
 .ban .btn--big::after {
   content: '';
   position: absolute;
-  right: -80px;
+  right: -100px;
   top: -100%;
   margin-top: 30px;
   width: 68px;
   height: 78px;
   background: url(../img/icons/icons.svg#icon-BtnArrow) 100%/cover no-repeat;
-}
-
-.ban .btn--big::before {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  right: -17px;
-  top: -11px;
-  width: 297px;
-  height: 98px;
-  border: 1px solid rgba(254, 217, 118, 0.1);
-  border-radius: 10px;
 }
 
 .section-advantagesTop {
@@ -761,7 +754,7 @@ html {
   width: 100%;
   margin-left: 15px;
   margin-right: 15px;
-  padding: 30px 50px 50px 35px;
+  padding: 30px 50px 30px 35px;
   -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
   border-radius: 5px;
@@ -825,6 +818,10 @@ html {
   overflow: hidden;
 }
 
+.section-works .works-slider .works-sliderBig__img img {
+  margin-left: 10px;
+}
+
 .section-works .works-sliderNav {
   height: 130px;
 }
@@ -850,7 +847,7 @@ html {
   content: '';
   position: absolute;
   left: 0;
-  top: 0;
+  top: 0px;
   margin-left: 5px;
   margin-right: 5px;
   width: 100%;
@@ -953,7 +950,7 @@ html {
   position: absolute;
   content: '';
   left: 0;
-  top: 0;
+  top: -5px;
   display: block;
   width: 20px;
   height: 21px;
@@ -1224,7 +1221,7 @@ html {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 30.33333%;
           flex: 1 1 30.33333%;
-  min-width: 350px;
+  min-width: 370px;
   width: 100%;
   height: 350px;
 }
@@ -1250,7 +1247,7 @@ html {
   position: relative;
   z-index: 1;
   line-height: 1.2;
-  padding: 38px 38px 0 54px;
+  padding: 25px 38px 0 54px;
   opacity: 0;
   background: #fff;
   -webkit-transition: opacity 0.5s linear;
@@ -1339,7 +1336,7 @@ html {
 }
 
 .services .services-form .btn {
-  max-width: 180px;
+  max-width: 200px;
 }
 
 .faq-block {
@@ -1374,6 +1371,10 @@ html {
 
 .faq-form__input + .faq-form__input {
   margin-bottom: 38px;
+}
+
+.faq-form .btn {
+  max-width: 200px;
 }
 
 .review .review-title {
@@ -1491,7 +1492,7 @@ html {
 }
 
 .review-slider__block {
-  margin: 10px;
+  margin: 20px;
   padding: 30px 50px;
   background: #fff;
   -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
@@ -2610,7 +2611,7 @@ html {
     margin-top: 0;
   }
 
-  .ban .btn--big::before {
+  .ban .btn--big::after {
     display: none;
   }
 
