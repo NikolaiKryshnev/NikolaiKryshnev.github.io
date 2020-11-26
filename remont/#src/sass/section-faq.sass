@@ -21,7 +21,7 @@
 		height: 100%
 		padding: 54px 75px 60px
 		@media ( max-width: $md3+px )
-			padding: 20px 30px
+			padding: 20px 30px 30px
 			
 		&__title
 			@extend .h3
@@ -34,6 +34,8 @@
 
 		&__input + .faq-form__input
 			margin-bottom: 38px
+			@media ( max-width: $md3+px )
+				margin-bottom: 30px
 
 		.btn
 			max-width: 200px

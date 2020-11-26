@@ -10,7 +10,6 @@
 	height: 850px
 
 	background: url(../img/section-ban/01.jpg) 100%/cover no-repeat
-
 	@media ( max-width: 991px  )
 		&::after
 			content: ''
@@ -67,6 +66,9 @@
 			height: 78px
 
 			background: url(../img/icons/icons.svg#icon-BtnArrow) 100%/cover no-repeat
+			animation: animateArrow 1.4s linear infinite
+
+
 			@media ( max-width: $md3 +px )
 				margin-top: 0
 
@@ -75,7 +77,21 @@
 	
 
 	//--------- / ban-info ---------//
+@keyframes animateArrow
+	0%
+		transform: rotate(0deg)
+		right: -100px
+		top: -100%
 
+	50%
+		transform: rotate(20deg)
+		right: -90px
+		top: -80%
+
+
+
+
+		
 
 
 //</SECTION-BAN>---------------------------------------

@@ -79,8 +79,8 @@ $black: #000
 
 		background: linear-gradient(185.22deg, #FED976 -20.33%, #FEB54A 129.57%)
 		border-radius: 5px
-		@media ( max-width: $md1 +px )
-			width: 90%
+		// @media ( max-width: $md1 +px )
+		// 	width: 90%
 
 
 .section-title
@@ -95,10 +95,14 @@ $black: #000
 	@extend .h2
 
 	background: $white
+
+	@media ( max-width: $md1 +px )
+		padding-right: 28px
+
 	@media ( max-width: $md3 +px )
 		padding-right: 30px
 		line-height: 1
-		padding-bottom: 2px
+		padding-bottom: 3px
 
 //--------- /TITLE ---------//
 
