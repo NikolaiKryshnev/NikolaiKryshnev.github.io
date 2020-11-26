@@ -1216,9 +1216,9 @@ html {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
-  bottom: -21px;
+  bottom: -0px;
   font-size: 0.88rem;
-  color: #fec963;
+  color: #000;
 }
 
 .section-stock .stock-columns .stock-timer .timer-dot {
