@@ -2730,11 +2730,18 @@ html {
 }
 
 .services-list__item .services-list__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   line-height: 30px;
   padding: 0 0 0 32px;
   color: #000;
   margin: 15px 0;
   pointer-events: none;
+  line-height: 1.2;
 }
 
 .services-list__item .services-list__prace {
