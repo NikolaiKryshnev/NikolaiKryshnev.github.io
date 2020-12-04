@@ -2714,9 +2714,9 @@ html {
   -webkit-box-shadow: 0px 0px 7px rgba(135, 135, 135, 0.25);
           box-shadow: 0px 0px 7px rgba(135, 135, 135, 0.25);
   border-radius: 5px;
-  -webkit-transition: width 1s linear;
-  -o-transition: width 1s linear;
-  transition: width 1s linear;
+  -webkit-transition: width 0.6s linear;
+  -o-transition: width 0.6s linear;
+  transition: width 0.6s linear;
 }
 
 .services-list__item .services-list__block span {
@@ -2734,7 +2734,6 @@ html {
   padding: 0 0 0 32px;
   color: #000;
   margin: 15px 0;
-  line-height: 1.2;
   pointer-events: none;
 }
 
@@ -2780,9 +2779,9 @@ html {
   max-width: 192px;
   text-align: center;
   width: 100%;
-  -webkit-transition: right 1s linear;
-  -o-transition: right 1s linear;
-  transition: right 1s linear;
+  -webkit-transition: right 0.6s linear;
+  -o-transition: right 0.6s linear;
+  transition: right 0.6s linear;
 }
 
 .services-list__item:hover .services-list__block {
@@ -2791,6 +2790,10 @@ html {
 
 .services-list__item:hover .services-list__btn {
   right: 0;
+}
+
+.services-list__item:hover .services-list__name {
+  color: #fabf31;
 }
 
 .services-list__item:hover .services-list__prace {
