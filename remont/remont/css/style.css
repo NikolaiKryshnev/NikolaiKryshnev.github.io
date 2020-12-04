@@ -717,7 +717,7 @@ html {
 .ban .btn--big {
   position: relative;
   z-index: 2;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 .ban .btn--big::after {
