@@ -1,0 +1,84 @@
+.advantages
+	position: relative
+	min-height: 350px
+
+	.container
+		height: 100%
+
+	&-column
+		@include flexbox()
+		align-items: center
+		
+		padding-top: 100px
+		padding-bottom: 100px
+
+		&__title
+			text-align: left
+
+			span
+				-webkit-text-stroke: 1px $pink
+				-webkit-text-fill-color: transparent
+				text-fill-color: transparent
+				text-stroke: 1px $pink
+
+	.advantages-column--title
+		overflow: hidden
+		position: relative
+
+		max-width: 70%
+		width: 100% 
+			  
+	.advantages-column--link
+		position: relative
+		justify-content: flex-end
+		max-width: 30%
+		width: 100%
+
+	.advantages-blocks
+
+		display: flex
+		flex-direction: column
+		justify-content: space-around
+
+		height: 100%
+		
+		padding: 0
+		margin: 0
+
+		font-size: 1rem
+		list-style-type: none
+
+		li
+			display: flex
+
+			span
+				max-width: 205px
+				width: 100%
+				margin-left: 25px
+
+			b
+				font-family: MontserratBold
+
+		&__img
+			max-width: 60px
+			width: 60px
+
+	.advantages-text
+		position: absolute
+		right: 0
+		top: -200%
+
+		height: 1000px
+		
+		writing-mode: vertical-rl
+
+		font-size: 0.8rem
+		font-family: MontserratBold
+
+		animation: 15s animationTextHeight infinite linear
+		animation-delay: 2s
+
+		// transform: rotate(270deg)
+		
+
+

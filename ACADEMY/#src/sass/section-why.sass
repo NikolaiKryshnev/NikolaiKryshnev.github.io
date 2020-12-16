@@ -1,0 +1,80 @@
+.section-why
+	padding-top: 100px
+	padding-bottom: 100px
+
+	.container
+		position: relative
+		height: 100%
+
+.why
+	&-block
+		@include flexbox()
+		align-items: flex-start
+		flex-direction: column
+		justify-content: center
+
+		// margin-top: 160px
+
+		max-width: 700px
+		width: 100%
+		color: $white
+
+		&__title
+			margin-bottom: 40px
+		
+			-webkit-text-stroke: 1px $white
+			-webkit-text-fill-color: transparent
+			text-fill-color: transparent
+			text-stroke: 1px $white
+
+		&__svg
+			margin-left: 50px
+			margin-right: 50px
+
+		&___info
+			font-size: 1rem
+
+			b
+				font-family: MontserratBold
+
+	&-title
+		position: absolute
+		right: 0
+		top: 0
+
+		max-width: 750px
+		width: 100%
+
+
+
+		li:first-child
+			color: $white
+			-webkit-text-fill-color: $white
+			text-fill-color: $white
+
+		li
+			-webkit-text-stroke: 1px $white
+			-webkit-text-fill-color: transparent
+			text-fill-color: transparent
+			text-stroke: 1px $white
+
+			text-align: right
+
+			line-height: 1.2
+
+		li:nth-child(2)
+			margin-top: -70px
+			opacity: 0.4
+
+		li:nth-child(3)
+			margin-top: -10px
+			opacity: 0.3
+
+		li:nth-child(4)
+			margin-top: 10px
+			opacity: 0.2
+
+		li:nth-child(5)
+			margin-top: 40px
+			opacity: 0.15
+

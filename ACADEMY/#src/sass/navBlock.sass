@@ -1,0 +1,59 @@
+.nav-blocks
+	position: fixed
+	left: 0
+	top: 50%
+	
+	@include translateY(-50%)
+
+	width: 75px
+	height: auto
+
+	ul
+		list-style-type: none
+		padding: 0
+
+		li
+			position: relative
+
+			padding-bottom: 11px
+			padding-top: 11px
+			padding-left: 17px
+			transition: padding-left 0.3s linear
+
+		a
+			color: rgba($white, 0.33)
+			transition: color 0.3s linear
+
+
+			text-decoration: none
+
+			&::after
+				content: ''
+
+				position: absolute
+
+				width: 36px
+				height: 1px
+				background: $white
+
+				left: -100%
+				top: 50%
+
+				transition: left 0.3s linear
+				@include translateY(-50%)
+
+		li
+			cursor: pointer
+			line-height: 1
+
+			&.active, &:hover
+				padding-left: 46px
+				
+				a
+					color: rgba($white, 1)
+
+					&::after
+						width: 36px
+						height: 1px
+						left: 0%
+				

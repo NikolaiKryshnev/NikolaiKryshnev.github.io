@@ -1,0 +1,168 @@
+.section-offer
+	position: relative
+	padding-top: 70px
+	padding-bottom: 100px
+	overflow: hidden
+
+	&--white
+
+		
+	.offer-box
+		max-width: 50%
+		width: 100%
+		position: relative
+
+		&__title
+			-webkit-text-stroke: 1px $white
+			-webkit-text-fill-color: transparent
+			text-fill-color: transparent
+			text-stroke: 1px $white
+
+			margin-bottom: 30px
+
+		
+		&--list
+			position: relative
+			z-index: 4
+			padding: 60px 40px 60px 90px
+			margin-right: 28px
+
+			background: url(../img/section-offer/box-bg_black.png) 100%/100% 100% no-repeat
+		
+		&__img
+			position: absolute
+			left: 0
+			top: 0
+
+			margin-top: -60px
+			margin-left: -60px
+
+			max-width: 200px
+			width: 100%
+			opacity: 0.5
+
+		&--img
+			position: relative
+
+			width: 100%
+
+			padding: 30% 0
+
+			overflow: hidden
+
+			.offer-img__row
+				position: absolute
+				
+				display: block
+				top: 0
+				left: 0
+
+				width: 100%
+				height: 100%
+
+				img
+					position: relative
+					z-index: 2
+
+					width: 100%
+					height: 100%
+
+					vertical-align: bottom
+					object-fit: cover
+					opacity: 1
+					object-fit: cover
+
+	.offer-list
+		color: $white
+		font-size: 1rem
+
+		margin-bottom: 44px
+
+		&__ul
+			padding-inline-start: 20px
+
+		li
+			position: relative
+			font-family: MontserratRegular
+			line-height: 1.2
+
+			&:before
+				content: ''
+				left: 0
+
+				@include verticalcenter()
+
+				height: 2px
+				width: 8px
+
+				margin-left: -18px
+
+				background: $blue
+
+
+				font-size: 2.2rem
+	
+		&__title
+			font-size: 1.25rem
+
+			margin-bottom: 10px
+
+		&:last-child
+			margin-bottom: 0
+
+	.offer-text
+		position: absolute
+		z-index: 3
+		left: -160%
+
+		margin-top: 30px
+
+		width: 200%
+
+		font-size: 4.5rem
+		font-family: MontserratBold
+
+		-webkit-text-stroke: 1px #000
+		-webkit-text-fill-color: transparent
+		text-fill-color: transparent
+		text-stroke: 1px #000
+
+		animation: 14s animationTextWidthLeft infinite linear
+		animation-delay: 2s
+
+
+._section--black
+	.section-title
+		margin-left: auto
+		margin-right: 0
+		color: $white
+		
+	.offer-list
+		color: #000
+
+	.offer-box
+		&--list
+			background: url(../img/section-offer/box-bg_white.png) 100%/100% 100%
+			
+			margin-left: 28px
+			margin-right: 0
+			padding: 60px 40px 60px 80px
+
+		&__img
+			left: auto
+			right: 0
+			margin-right: -60px
+			margin-left: auto
+
+		&__title
+			-webkit-text-stroke: 1px #000
+			text-stroke: 1px #000
+
+	.offer-text
+		left: auto
+		right: -170%
+		-webkit-text-stroke: 1px $white
+		text-stroke: 1px $white
+		animation: 14s animationTextWidthRight infinite linear
+
+

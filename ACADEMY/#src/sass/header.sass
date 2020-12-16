@@ -1,0 +1,82 @@
+.header
+	position: relative
+	z-index: 2
+	height: 83px
+
+	.container	
+		justify-content: space-between
+		align-items: center
+
+	&-logo
+		a
+			font-size: 1rem
+			font-family: MontserratBold
+			color: $white
+
+			span
+				color: $pink
+				font-size: 22px
+
+	&-right
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		&__btn
+			padding-right: 73px
+			
+			border: none
+			background: none
+			font-size: 1rem
+			font-family: MontserratBold
+			color: $white
+			@include transitColor(0.3s)
+
+			&:hover
+				color: $pink
+
+
+	// ----burger---- //
+
+	.burger-svg
+		cursor: pointer
+		transition: transform 400ms
+		user-select: none
+
+	.hamRotate.active 
+		@include rotate(45deg)
+
+	.hamRotate180.active 
+		@include rotate(180deg)
+
+	.burger-line 
+		fill: none
+		transition: stroke-dasharray 400ms, stroke-dashoffset 400ms
+		stroke: $white
+		stroke-width: 4
+		// stroke-linecap: round
+
+	.burger
+		.line-top 
+			stroke-dasharray: 40 160
+
+		.line-middle 
+			stroke-dasharray: 40 142
+			transform-origin: 50%
+			transition: transform 400ms
+
+		.line-bottom 
+			stroke-dasharray: 40 85
+			transform-origin: 50%
+			transition: transform 400ms, stroke-dashoffset 400ms
+
+		&.active
+			.line-top 
+				stroke-dashoffset: -64px
+
+			.line-middle 
+				//stroke-dashoffset: -20px
+				transform: rotate(90deg)
+
+			.line-bottom 
+				stroke-dashoffset: -64px

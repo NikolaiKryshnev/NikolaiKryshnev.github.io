@@ -1,0 +1,78 @@
+.footer
+	padding-top: 70px
+	padding-bottom: 20px
+
+	color: $white
+
+	.container
+		justify-content: space-between
+
+	&-column
+		&__title
+			margin-bottom: 20px
+
+		&__map
+			color: $white
+			font-size: 1.5rem
+			text-decoration: none
+
+		&__info
+			display: flex
+			
+			margin-top: 125px
+
+		&__contact
+			display: flex
+			flex-direction: column
+			font-size: 1.13rem
+
+
+		&__nav
+			font-size: 1.13rem
+
+			ul
+				display: flex
+				flex-direction: column
+
+				margin: 0
+
+				list-style-type: none
+		
+		&:last-child
+			text-align: right
+
+	&-btn
+		font-size: 1.5rem
+		@include transitColor(0.3s)
+		
+		&:hover
+			color: $pink
+
+	&-social
+		margin-top: 125px
+
+		font-size: 1.13rem
+
+		a
+			margin-left: 0
+
+			& + a
+				margin-left: 43px
+
+
+	a
+		color: $white
+		@include transitColor(0.3s)
+
+		&:hover
+			color: $pink
+
+	&-bottom
+		margin-top: 65px
+		
+		width: 100%
+
+		font-size: 1.13rem
+		text-align: left
+
+
