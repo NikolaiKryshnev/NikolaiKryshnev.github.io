@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html')
+		<main class="content">
+			@@include('_section-banner.html')
+			@@include('_section-advantages.html')
+			@@include('_section-why.html')
+			@@include('_section-offer.html')
+			@@include('_section-work.html')
+			@@include('_section-slider.html')
+			@@include('_section-command.html')
+		</main>
+		<!-- /.content -->
+		@@include('_footer.html')
+		<div class="nav-blocks nav-blocks-js">
+			<ul>
+				<li data-Menuposition="1"><a href="#01">01</a></li>
+				<li data-Menuposition="2"><a href="#02" >02</a></li>
+				<li data-Menuposition="3"><a href="#03" >03</a></li>
+				<li data-Menuposition="4"><a href="#04" >04</a></li>
+				<li data-Menuposition="5"><a href="#05">05</a></li>
+				<li data-Menuposition="6"><a href="#06">06</a></li>
+				<li data-Menuposition="7"><a href="#07">07</a></li>
+				<li data-Menuposition="8"><a href="#08">08</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /.wrapper -->
+ 	@@include('_popup.html',{}) 
+	@@include('_js.html',{})
+</body>
+
+</html>

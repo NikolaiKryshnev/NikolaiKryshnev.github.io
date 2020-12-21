@@ -1,0 +1,163 @@
+.section-command
+	position: relative
+	overflow: hidden
+	padding-top: 70px
+	padding-bottom: 100px
+
+	min-height: auto
+	height: auto
+	@media ( max-width:$md1+px )
+		padding: 50px 0
+	
+	@media ( max-width:$md3+px )
+		padding: 30px 0
+	&::after
+		content: 'TEAM   TEAM   TEAM   TEAM   TEAM   TEAM   TEAM   TEAM   '
+		position: absolute
+		top: 0
+		left: 0
+		width: 10000px
+
+		font-size: 120px
+
+		line-height: 141px
+		-webkit-text-stroke: 1px #000
+		-webkit-text-fill-color: transparent
+		text-fill-color: transparent
+		text-stroke: 1px #000
+		opacity: 0.2
+
+	&::before
+		content: 'TEAM   TEAM   TEAM   TEAM   TEAM   TEAM   TEAM   TEAM   '
+		position: absolute
+		top: 0
+		left: 0
+
+		margin-top: 120px
+		width: 10000px
+
+		line-height: 141px
+
+		font-size: 120px
+		-webkit-text-stroke: 1px #000
+		-webkit-text-fill-color: transparent
+		text-fill-color: transparent
+		text-stroke: 1px #000
+		opacity: 0.2
+
+
+	.section-title
+		margin-bottom: 40px
+
+	.container-blocks
+		justify-content: space-between
+		@media ( max-width: 600px )
+			flex-wrap: wrap
+
+	.command-column
+		max-width: 500px
+		width: 100%
+		@media ( max-width: 600px )
+			margin-bottom: 60px
+			margin-left: 0
+
+		&:last-child
+			margin-left: 45px
+			@media ( max-width: 600px )
+				margin-bottom: 0
+				margin-left: 0
+
+		&__box
+			position: relative
+			
+			padding: 246px 0
+			margin-bottom: 28px
+
+			max-width: 385px
+			width: 100%
+			
+			overflow: hidden
+
+			@media ( max-width:$md1+px )
+				margin-bottom: 10px
+
+			@media ( max-width: 600px )
+				padding: 144px 0
+				
+
+		&__img
+			position: absolute
+			display: block
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+
+			img
+				position: relative
+				z-index: 2
+
+				width: 100%
+				height: 100%
+
+				vertical-align: bottom
+				-o-object-fit: cover
+				object-fit: cover
+				opacity: 1
+				object-fit: cover
+
+		&__info
+			color: #000
+			font-size: 1rem
+			@media ( max-width:$md2+px )
+				font-size: 0.9rem
+
+			@media ( max-width:$md3+px )
+				font-size: 1rem
+
+
+		&__prof
+			font-family: MontserratBold
+			margin-bottom: 20px
+			@media ( max-width:$md2+px )
+				margin-bottom: 5px
+
+		&__title
+			font-size: 3rem
+			font-family: MontserratBold
+			text-transform: uppercase
+
+			margin-bottom: 5px
+
+			@media ( max-width:$md1+px )
+				font-size: 2.25rem
+				margin-bottom: 0
+			@media  ( min-width: 772px ) and ( max-width:  828px)
+				font-size: 2rem
+				
+			@media ( max-width:$md2+px )
+				font-size: 1.6rem
+
+		&__text
+			margin-bottom: 30px
+
+		&__social
+			display: flex
+
+		&__icon
+			display: flex
+			align-items: flex-end
+			padding: 0 26px 0 0
+			
+			path
+				fill: $blue
+				transition: fill 0.3s linear
+
+
+			&:hover
+				path
+					fill: $pink
+
+
+		&__icon + &__icon
+			padding: 0

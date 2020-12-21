@@ -1,0 +1,296 @@
+.section-offer
+	position: relative
+	padding-top: 70px
+	padding-bottom: 100px
+	overflow: hidden
+		
+	.container
+	@media ( max-width:$md1+px )
+		padding: 50px 0
+
+		.section-title
+			margin: 0 0 45px auto
+
+	@media ( max-width:$md3+px )
+		padding: 30px 0
+
+	&--white
+		
+	.offer-box
+		max-width: 50%
+		width: 100%
+		position: relative
+		@media ( max-width:$md1+px )
+			max-width: 80%
+		@media ( max-width:$md2+px )
+			max-width: 95%
+		@media ( max-width:$md3+px )
+			max-width: 100%
+
+		&__title
+			-webkit-text-stroke: 1px $white
+			-webkit-text-fill-color: transparent
+			text-fill-color: transparent
+			text-stroke: 1px $white
+
+			margin-bottom: 30px
+			@media ( max-width:$md1+px )
+				padding-left: 2rem
+			@media ( max-width:$md3+px )
+				padding-left: 1.5rem
+
+		
+		&--list
+			position: relative
+			z-index: 4
+			padding: 60px 40px 60px 90px
+			margin-right: 28px
+
+			background: url(../img/section-offer/box-bg_black.png) 100%/100% 100% no-repeat
+			@media ( max-width:$md1+px )
+				margin: 0 0 0 auto
+				padding: 20px 20px 30px 30px
+
+		
+		&__img
+			position: absolute
+			left: 0
+			top: 0
+
+			margin-top: -60px
+			margin-left: -60px
+
+			max-width: 200px
+			width: 100%
+			opacity: 0.5
+			@media ( max-width:$md3+px )
+				max-width: 100px
+				margin-top: -30px
+				margin-left: -30px
+
+		&--img
+			position: relative
+
+			width: 100%
+
+			padding: 30% 0
+
+			overflow: hidden
+			@media ( max-width:$md1+px )
+				display: none
+
+			.offer-img__row
+				position: absolute
+				
+				display: block
+				top: 0
+				left: 0
+
+				width: 100%
+				height: 100%
+
+				img
+					position: relative
+					z-index: 2
+
+					width: 100%
+					height: 100%
+
+					vertical-align: bottom
+					object-fit: cover
+					opacity: 1
+					object-fit: cover
+
+	.offer-list
+		color: $white
+		font-size: 1rem
+
+		margin-bottom: 44px
+		@media ( max-width:$md1+px )
+			padding-left: 2rem
+
+		@media ( max-width:$md3+px )
+			padding-left: 1.5rem
+
+		&__ul
+			padding-inline-start: 20px
+
+		li
+			position: relative
+			font-family: MontserratRegular
+			line-height: 1.2
+
+			&:before
+				content: ''
+				left: 0
+
+				@include verticalcenter()
+
+				height: 2px
+				width: 8px
+
+				margin-left: -18px
+
+				background: $blue
+
+
+				font-size: 2.2rem
+	
+		&__title
+			font-size: 1.25rem
+
+			margin-bottom: 10px
+			@media ( max-width:$md3+px )
+				font-size: 1rem
+
+		&:last-child
+			margin-bottom: 0
+
+
+	@media ( max-width:$md3+px )
+		.carouselTicker-wrapper
+			display: none
+			
+
+._section--black
+	.section-title
+		margin-left: auto
+		margin-right: 0
+		color: $white
+
+		@media ( max-width:$md1+px )
+			margin: 0 auto 45px 0
+		
+	.offer-list
+		color: #000
+
+	.offer-box
+		&--list
+			background: url(../img/section-offer/box-bg_white.png) 100%/100% 100%
+			
+			margin-left: 28px
+			margin-right: 0
+			padding: 60px 40px 60px 80px
+			@media ( max-width:$md1+px )
+				margin: 0 auto 0 0
+				padding: 20px 30px 30px 20px
+
+		&__img
+			left: auto
+			right: 0
+			margin-right: -60px
+			margin-left: auto
+			@media ( max-width:$md3+px )
+				margin-right: -30px
+				
+
+		&__title
+			-webkit-text-stroke: 1px #000
+			text-stroke: 1px #000
+.carouselTicker-wrapper
+	position: absolute
+	z-index: 3
+	left: 0
+
+.portfolioBanner, .tickerTextBlock
+	overflow: hidden
+
+.carouselTicker-updateOrDie
+   margin-bottom: 30px
+
+.carouselTicker__list-cssAnimate
+   display: flex
+   justify-content: flex-start
+
+.carouselTicker__list
+   will-change: left
+   -webkit-transform: translateZ(0)
+   transform: translateZ(0)
+   will-change: clip-path
+
+.carouselTicker-updateOrDie-left .carouselTicker__list_content-wrapper
+	animation-name: marquee-left
+	animation-duration: 5.83401s
+	animation-iteration-count: infinite
+	animation-timing-function: linear
+	will-change: transform
+	white-space: nowrap
+
+.carouselTicker-updateOrDie-right .carouselTicker__list_content-wrapper
+	animation-name: marquee-right
+	animation-duration: 5.83401s
+	animation-iteration-count: infinite
+	animation-timing-function: linear
+	will-change: transform
+	white-space: nowrap
+
+.carouselTicker-updateOrDie .carouselTicker__list_content
+   line-height: calc(72px + 23 * (100vw - 1440px) / 480)
+
+.carouselTicker-updateOrDie .carouselTicker__list_content
+   font-size: calc(72px + 23 * (100vw - 1440px) / 480)
+
+.carouselTicker-updateOrDie .carouselTicker__list_content
+	background-repeat: no-repeat
+	background-size: contain
+	background-position: 50%
+	margin: 0 55px
+	letter-spacing: .04em
+	text-transform: uppercase
+
+	margin-top: 30px
+
+	width: 200%
+
+	font-size: 4.5rem
+	font-family: MontserratBold
+
+	-webkit-text-stroke: 1px $white
+	-webkit-text-fill-color: transparent
+	text-fill-color: transparent
+	text-stroke: 1px $white
+
+	padding-top: 12px
+
+.carouselTicker__list_content, .carouselTicker__list_content svg
+	display: flex
+	align-items: center
+
+._section--white
+	.carouselTicker-updateOrDie .carouselTicker__list_content
+		-webkit-text-stroke: 1px #000
+		text-stroke: 1px #000
+
+.advantages-text
+	.carouselTicker-updateOrDie .carouselTicker__list_content
+		color: #000
+		font-size: 14px
+		margin: 0
+		-webkit-text-fill-color: initial
+		width: 10px
+
+    	-webkit-text-stroke: 0px #000
+		font-family: MontserratMedium
+		@media ( max-width:$md1+px )
+			width: 100%
+			height: 25px
+		@media ( max-width: 680px )
+			height: auto
+			width: 25px
+			
+	@media ( max-width:$md3+px )
+		.carouselTicker-updateOrDie
+			margin-bottom: 0
+
+
+@media ( max-width: 680px)
+	.advantages-text
+		.carouselTicker-wrapper
+			height: 100vh
+			width: 25px
+			right: 10px
+		
+
+
+
+	
