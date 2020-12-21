@@ -1,15 +1,32 @@
 .footer
 	padding-top: 70px
 	padding-bottom: 20px
+	background: $black
 
 	color: $white
+	@media ( max-width:$md1+px )
+		padding-top: 50px
+
+	@media ( max-width:$md3+px )
+		padding-top: 30px
 
 	.container
 		justify-content: space-between
+		@media ( max-width:$md3+px )
+			flex-direction: column
+			align-items: flex-start
 
 	&-column
+		@media ( max-width:$md3+px )
+			margin-bottom: 30px
+
 		&__title
 			margin-bottom: 20px
+			@media ( max-width:$md1+px )
+				font-size: 1.9rem
+
+			@media ( max-width:$md3+px )
+				font-size: 1.7rem
 
 		&__map
 			color: $white
@@ -20,15 +37,31 @@
 			display: flex
 			
 			margin-top: 125px
+			@media ( max-width:$md1+px )
+				flex-direction: column
+				align-items: flex-end
+
+				margin-top: 70px
+
+			@media ( max-width:$md3+px )
+				align-items: flex-start
+				margin-top: 0
 
 		&__contact
 			display: flex
 			flex-direction: column
 			font-size: 1.13rem
+			@media ( max-width:$md1+px )
+				margin-bottom: 20px
 
+			@media ( max-width:$md3+px )
+				margin-bottom: 0
 
 		&__nav
 			font-size: 1.13rem
+
+			@media ( max-width:$md3+px )
+				display: none
 
 			ul
 				display: flex
@@ -40,10 +73,16 @@
 		
 		&:last-child
 			text-align: right
+		
+			@media ( max-width:$md3+px )
+				text-align: left
 
 	&-btn
 		font-size: 1.5rem
 		@include transitColor(0.3s)
+		@media ( max-width:$md3+px )
+			font-size: 1rem
+			text-decoration: underline;
 		
 		&:hover
 			color: $pink
@@ -52,13 +91,20 @@
 		margin-top: 125px
 
 		font-size: 1.13rem
+		@media ( max-width:$md1+px )
+			display: flex
+			flex-direction: column
+
+		@media ( max-width:$md3+px )
+			margin-top: 35px
 
 		a
 			margin-left: 0
 
 			& + a
 				margin-left: 43px
-
+				@media ( max-width:$md1+px )
+					margin-left: 0
 
 	a
 		color: $white
@@ -74,5 +120,14 @@
 
 		font-size: 1.13rem
 		text-align: left
+		@media ( max-width:$md1+px )
+			margin-top: 20px
+			text-align: center
+		
+		@media ( max-width:$md3+px )
+			text-align: center
+			margin-top: 0
 
+		a
+			font-family: MontserratBold
 

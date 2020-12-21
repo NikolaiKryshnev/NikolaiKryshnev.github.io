@@ -1,19 +1,41 @@
 .advantages
 	position: relative
 	min-height: 350px
+	background-image: url(../img/section-bg/02.png)
+	background-repeat: no-repeat
+	background-size: cover
+	@media ( max-width:$md1+px )
+		padding-top: 50px
+		padding-bottom: 50px
+
+	@media ( max-width:680px )
+		overflow: hidden
+
+	@media ( max-width:$md3+px )
+		padding-top: 30px
+		padding-bottom: 30px
 
 	.container
 		height: 100%
+		@media ( max-width:$md1+px )
+			flex-wrap: wrap
 
 	&-column
 		@include flexbox()
 		align-items: center
 		
-		padding-top: 100px
-		padding-bottom: 100px
+		padding: 100px 0
+		@media ( max-width:$md1+px )
+			padding: 0
 
 		&__title
 			text-align: left
+			@media ( max-width:$md1+px )
+				padding-bottom: 80px
+
+			@media ( max-width:$md3+px )
+				padding-bottom: 0
+
 
 			span
 				-webkit-text-stroke: 1px $pink
@@ -27,12 +49,24 @@
 
 		max-width: 70%
 		width: 100% 
-			  
+		@media ( max-width:$md1+px )
+			max-width: 100%
+
+		@media ( max-width:680px )
+			position: revert
+
 	.advantages-column--link
 		position: relative
 		justify-content: flex-end
 		max-width: 30%
 		width: 100%
+		@media ( max-width:$md1+px )
+			max-width: 100%
+			margin-top: 60px
+
+		@media ( max-width:680px )
+			margin-top: 40px
+			
 
 	.advantages-blocks
 
@@ -47,14 +81,34 @@
 
 		font-size: 1rem
 		list-style-type: none
+		@media ( max-width:$md1+px )
+			max-width: 100%
+			width: 100%
+			flex-direction: row
+			justify-content: space-between
+		@media ( max-width:680px )
+			flex-direction: column
+			justify-content: flex-start
 
 		li
 			display: flex
+			@media ( max-width:$md1+px )
+				flex-direction: column
+
+			@media ( max-width:680px )
+				margin-bottom: 40px
+
+				&:last-child
+					margin-bottom: 0
 
 			span
 				max-width: 205px
 				width: 100%
 				margin-left: 25px
+				@media ( max-width:$md1+px )
+					margin-left: 0
+					margin-top: 12px
+
 
 			b
 				font-family: MontserratBold
@@ -62,23 +116,55 @@
 		&__img
 			max-width: 60px
 			width: 60px
+			@media ( max-width:$md1+px )
+				max-width: 90px
+				width: 90px
+			@media ( max-width:$md3+px )
+				max-width: 60px
+				width: 60px
 
 	.advantages-text
-		position: absolute
-		right: 0
-		top: -200%
-
-		height: 1000px
+		width: 25px
+		height: 100vh
+		position: relative
 		
 		writing-mode: vertical-rl
+		@media ( max-width:$md1+px )
+			position: absolute
+			bottom: 0
 
-		font-size: 0.8rem
-		font-family: MontserratBold
+			writing-mode: horizontal-tb
+			width: 100vw
+			height: 25px
 
-		animation: 15s animationTextHeight infinite linear
-		animation-delay: 2s
+		@media ( max-width:680px )
+			writing-mode: vertical-rl
+			position: absolute
+			right: 0
+			top: 0
+			width: 25px
+			height: 100vh
+		// 	
 
-		// transform: rotate(270deg)
-		
+ 
+
+.carouselTicker-updateOrDie-top .carouselTicker__list_content-wrapper
+	animation-name: marquee-top
+	animation-duration: 5.83401s
+	animation-iteration-count: infinite
+	animation-timing-function: linear
+	will-change: transform
+	white-space: nowrap
+	@media ( max-width:$md1+px )
+		animation-name: marquee-left
+
+	@media ( max-width:680px )
+		animation-name: marquee-top
+
+@media ( max-width:$md1+px )
+	.advantages-text .carouselTicker-wrapper
+		bottom: 0
+		width: 100%
+		height: 25px
 
 

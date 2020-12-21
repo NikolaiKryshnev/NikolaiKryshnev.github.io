@@ -1,56 +1,97 @@
+//Настройки по выводу слайдов в зависимости от разрешения экрана
+let scrollCount = null;
+let scroll = null;
 
-'use strict';
+let slider = $('.slider-js');
+if ($(window).width() > 526) {
+	slider.slick({
+		dots: false,
+		infinite: false,
+		arrows: true,
+		prevArrow: '<div class="slider-control slider-control__left "><img src="./img/icons/icons.svg#btn-arrow_top" alt=""></div>',
+		nextArrow: '<div class="slider-control slider-control__right slider-control__show "><img src="./img/icons/icons.svg#btn-arrow_bottom" alt=""></div>',
+		speed: 300,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		vertical: true,
+		dots: false,
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: false,
+					arrows: true,
+					prevArrow: '<div class="slider-control slider-control__left "><img src="./img/icons/icons.svg#btn-arrow_top" alt=""></div>',
+					nextArrow: '<div class="slider-control slider-control__right slider-control__show "><img src="./img/icons/icons.svg#btn-arrow_bottom" alt=""></div>',
+
+				}
+			},
+			{
+				breakpoint: 600,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: true,
+					prevArrow: '<div class="slider-control slider-control__left "><img src="./img/icons/icons.svg#btn-arrow_top" alt=""></div>',
+					nextArrow: '<div class="slider-control slider-control__right slider-control__show "><img src="./img/icons/icons.svg#btn-arrow_bottom" alt=""></div>',
+
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
+	});
+
+}
+
+// slider.on('wheel', (function (e) {
+// 	e.preventDefault();
+
+// 	clearTimeout(scroll);
+// 	scroll = setTimeout(function () { scrollCount = 0; }, 200);
+// 	if (scrollCount) return 0;
+// 	scrollCount = 1;
+
+// 	if (e.originalEvent.deltaY < 0) {
+// 		$(this).slick('slickNext');
+// 	} else {
+// 		$(this).slick('slickPrev');
+// 	}
+// }));
+
+slider.on('afterChange', function (event, slick, currentSlide, nextSlide) {
+
+	currentSlide + 1;
+	if (currentSlide <= 8) {
+		let number_slider_nav_index = (currentSlide + 1)
+
+		$('.slider-numbers__active-js').text('0' + number_slider_nav_index);
+	} else {
+		$('.slider-numbers__active-js').text(currentSlide + 1);
+	}
+});
+function numberSum() {
+	let numberSumSlider = $('[data-slick-index]').length;
+	if (numberSumSlider <= 9) {
+		$('.slider-numbers__total').text('0' + numberSumSlider);
+	} else {
+		$('.slider-numbers__total').text(numberSumSlider);
+
+	}
+}
+numberSum()
 
 
 
 
 
-// // Получаем нужный элемент
-// function scrollPosition(element) {
 
-// 	var Visible = function (target) {
-// 		// Все позиции элемента
-// 		var targetPosition = {
-// 			top: window.pageYOffset + target.getBoundingClientRect().top,
-// 			left: window.pageXOffset + target.getBoundingClientRect().left,
-// 			right: window.pageXOffset + target.getBoundingClientRect().right,
-// 			bottom: window.pageYOffset + target.getBoundingClientRect().bottom
-// 		},
-// 			// Получаем позиции окна
-// 			windowPosition = {
-// 				top: window.pageYOffset,
-// 				left: window.pageXOffset,
-// 				right: window.pageXOffset + document.documentElement.clientWidth,
-// 				bottom: window.pageYOffset + document.documentElement.clientHeight
-// 			};
 
-// 		if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
-// 			targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
-// 			targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
-// 			targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
-// 			// Если элемент полностью видно, то запускаем следующий код
-// 			console.clear();
-// 			console.log('Вы видите элемент :)');
-// 		} else {
-// 			// Если элемент не видно, то запускаем этот код
-// 			console.clear();
-// 		};
-// 	};
-
-// 	// Запускаем функцию при прокрутке страницы
-// 	window.addEventListener('scroll', function () {
-// 		Visible(element);
-// 	});
-
-// 	// А также запустим функцию сразу. А то вдруг, элемент изначально видно
-// 	Visible(element);
-// }
-
-// let position = document.querySelectorAll('[data-position]');
-// console.log(position);
-
-// position.forEach((el) => {
-// 	console.log(el.getAttribute('data-position'))
-// scrollPosition(el.getAttribute('data-position'));
-	
-// })

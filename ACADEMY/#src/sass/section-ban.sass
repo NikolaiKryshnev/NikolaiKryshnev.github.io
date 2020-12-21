@@ -3,20 +3,36 @@
 	padding-top: 83px
 	margin-top: -83px
 	min-height: auto
+	background-image: url('../img/section-bg/01.png')
+	@media ( max-width:$md3+px )
+		padding-bottom: 90px
 
 	.container
 		height: 100%
+		position: initial
+		@media ( max-width:$md1+px )
+			flex-direction: column
+	.ban-column
+		@media ( max-width:$md1+px )
+			max-width: 100%
 
 	.ban-info
 		position: relative
-
+		z-index: 10
 		@include flexbox()
 		flex-direction: column
 		justify-content: center
 
 		max-width: 50%
+		@media ( max-width:$md1+px )
+			margin-top: 85px
+
+		@media ( max-width:$md3+px )	
+			margin-top: 70px		
 
 		&__title
+			opacity: 1
+			transition: 1s opacity linear
 			margin-top: -100px
 			margin-bottom: 20px
 
@@ -24,6 +40,9 @@
 			-webkit-text-fill-color: transparent
 			text-fill-color: transparent
 			text-stroke: 1px $white
+			@media ( max-width:$md1+px )
+				margin-top: 0
+				max-width: 550px
 
 					
 		&__sub
@@ -34,13 +53,15 @@
 			color: $white
 			font-size: 1rem
 			line-height: 1.6
+			@media ( max-width:$md3+px )
+				margin-bottom: 22px
 		
 
 		&:after, &::before
 			content: ''
 
 			position: absolute
-			z-index: 2
+			z-index: 10
 			bottom: 20%
 			right: 0
 
@@ -51,6 +72,8 @@
 
 			background: $blue
 			@include translateX(100%)
+			@media ( max-width:$md1+px )
+				display: none
 
 
 		&::before
@@ -59,28 +82,127 @@
 			width: 102px
 			transform: translate(100%, -100%)
 
-	// .ban-img
-	// 	padding-top:  80px
+	.ban-img
+		padding-top:  80px
 
-	// 	max-width: 50%
-	// 	overflow: hidden
-	// 	width: 100%
-	// 	height: 100%
+		max-width: 50%
+		overflow: hidden
+		width: 100%
+		height: 100%
 
-	// 	position: absolute
-	// 	right: 0
-	// 	bottom: 0
+		position: absolute
+		right: 0
+		bottom: 0
+		@media ( max-width:$md1+px )
+			position: relative
+			overflow: inherit
 
-	// 	img
-	// 		width: 100%
+		@media ( max-width:$md1+px )
+			max-width: 60%
+
+			padding-top: 0
+			margin: -50px 0 0 auto  
+			
+
+		@media ( max-width:$md3+px )
+			padding-top: 40px
+			margin-top: 0
+
+			max-width: 90%
+
+		&__row
+			opacity: 1
+			transition: 1s opacity linear
+			position: relative
+			padding: 50% 0
+			
+
+			width: 100%
+			overflow: hidden
+			@media ( max-width:$md1+px )
+				overflow: inherit
+				padding: 15.8rem 0
+
+				max-width: 667px
+
+				margin-right: -15px
+				margin-left: auto
+
+				&:after, &::before
+					content: ''
+
+					position: absolute
+					z-index: 10
+					bottom: 20%
+					left: 0
+
+					margin-left: -40px
+					
+					width: 115px
+					height: 22px
+
+					background: $blue
+					@include translateX(0%)
+
+				&::before
+					margin-bottom: 8px
+
+					width: 65px
+					transform: translate(0%, -100%)
+
+			@media ( max-width:$md1+px )
+    			padding: 8.5rem 0
+
+		&__box
+			position: absolute
+			display: block
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+
+			img
+				position: relative
+				z-index: 2
+				width: 100%
+				height: 100%
+				vertical-align: bottom
+				-o-object-fit: cover
+				object-fit: cover
+				opacity: 1
+				object-fit: cover
+				@media ( max-width:$md1+px )
+					margin-right: -15px
+
+	.headerText
+		position: absolute
+		z-index: 5
+		right: 0
+		top: 0
+		width: 160px
+		height: 160px
+		margin-top: -30px
+		margin-right: -80px
+		transform: rotate(0deg)
+		animation: 10s animationTextHeader infinite linear
+    	animation-delay: 2s
+		transition: margin 1s linear
+		@media ( max-width:$md1+px )
+			display: none
 
 	.ban-img
-		position: relative;
-		z-index: 2;
-		width: 100%;
-		height: 100%;
-		vertical-align: bottom;
-		-o-object-fit: cover;
-		object-fit: cover;
-		opacity: 1;
-		object-fit: cover;
+		.headerText
+			display: none
+			@media ( max-width:$md1+px )
+				display: block
+				width: 110px
+				height: 110px
+				right: 30%
+				margin-top: -60px
+
+			@media ( max-width:$md3+px )
+				margin-top: 50px
+				margin-left: -20px
+				left: 0
+				right: auto
+

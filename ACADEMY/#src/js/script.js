@@ -13,7 +13,7 @@
 
 //============<SLICK-SLIDER>============
 // npm i slick-carousel
-// @@include('../../node_modules/slick-carousel/slick/slick.min.js')
+@@include('../../node_modules/slick-carousel/slick/slick.min.js')
 //============</SLICK-SLIDER>============
 
 //</LIBRARIES>---------------------------------------
@@ -21,8 +21,13 @@
 
 //<TASK>---------------------------------------
 @@include('slider.js')
+@@include('menu.js')
 
-// @@include('./task/popup.js')
+@@include('popup.js')
+@@include('footer.js')
+@@include('bg.js')
+
+
 // @@include('../task/accordionJQ/accordion.js')
 // @@include('../task/tabs/tabs.js')
 
