@@ -1,0 +1,66 @@
+.section-advantages
+	background: #F7F7F7
+	padding-bottom: 0
+	@media ( max-width:$md3+px )
+		padding-bottom: 20px
+	.advantages
+		&-row
+			display: flex
+			flex-wrap: wrap
+			margin: 80px -15px 0
+			
+		&-column
+			position: relative
+
+			display: flex
+			max-width: 33.333333%
+
+			padding: 0 15px
+			margin-bottom: 120px
+			@media ( max-width:$md1+px )
+				max-width: 49.33333%
+				margin-bottom: 80px
+
+			@media ( max-width:$md3+px )
+				max-width: 100%
+
+			&__number
+				position: absolute
+				top: 0
+				
+				transform: translateY(-48%)
+
+				font-family: CenturyBold
+				color: #FFFFFF
+				font-size: 96px
+				line-height: 1
+				
+			&__row
+				padding: 0 0 0 50px
+
+			&__title
+				font-family: CenturyBold
+				font-size: 1.25rem
+				position: relative
+				padding-bottom: 15px
+				margin-bottom: 10px
+				@media ( max-width:$md3+px )
+					max-width: 280px
+
+				&::after
+					position: absolute
+					bottom: 0
+					left: 0
+					display: flex
+					align-items: center
+
+					height: 17px
+					content: url('data:image/svg+xml; base64, PHN2ZyB3aWR0aD0iNTgiIGhlaWdodD0iMiIgdmlld0JveD0iMCAwIDU4IDIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxsaW5lIHkxPSIxIiB4Mj0iMzguNjY2NyIgeTI9IjEiIHN0cm9rZT0iIzAxQjI1OSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxsaW5lIHgxPSI0OC4wMjE1IiB5MT0iMSIgeDI9IjU4IiB5Mj0iMSIgc3Ryb2tlPSIjMDFCMjU5IiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+Cg==');
+		
+			&.hide
+				display: none
+
+	.btn
+		display: none
+		@media ( max-width:$md3+px )
+			display: block

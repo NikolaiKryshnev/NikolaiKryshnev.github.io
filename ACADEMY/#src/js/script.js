@@ -26,6 +26,8 @@
 @@include('popup.js')
 @@include('footer.js')
 @@include('bg.js')
+@@include('scroll.js')
+
 
 
 // @@include('../task/accordionJQ/accordion.js')

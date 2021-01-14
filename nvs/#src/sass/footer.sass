@@ -1,0 +1,245 @@
+.footer
+	margin-top: 150px
+
+	background: #1A1A1A
+
+	.container
+		display: flex
+		flex-wrap: wrap
+		@media ( max-width:$md2+px )
+			padding: 0
+
+	&-form
+		margin-top: -80px
+
+		max-width: 100%
+		width: 100%
+
+		background: $green
+		@media ( max-width:$md2+px )
+			margin: -80px 15px 0
+		@media screen and ( max-width: 660px )
+			margin-top: -150px
+
+	.form
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		padding: 50px 60px 50px 30px
+
+		background: 0 100% url(../img/footer/01.png) no-repeat
+		@media ( max-width:$md1+px )
+			flex-wrap: wrap
+
+		@media screen and ( max-width: 660px )
+			padding: 30px 27px 50px
+			background:  url(../img/footer/01.png) 100%/cover no-repeat
+
+		&-title
+			font-size: 1.5rem
+			line-height: 1.4
+			color: $white
+
+			max-width: 270px
+			width: 100%
+			margin: 0
+			@media ( max-width:$md1+px )
+				margin: -50px 0 0 0
+
+			@media screen and ( max-width: 660px )
+				margin-top: 0
+
+		input
+			font-size: 1rem
+			color: $white
+			background: none
+
+			border-bottom: 1px solid $white
+			box-shadow: none
+
+			padding: 0 20px
+			padding-left: 33px
+
+			max-width: 230px
+			width: 100%
+			@media ( max-width:$md1+px )
+				max-width: 100%
+
+		input::placeholder
+			color: $white
+
+		&-input--name>div::before
+			margin-top: 0
+			margin-bottom: 10px
+			content: url('data:image/svg+xml; base64, PHN2ZyB2aWV3Qm94PSIwIDAgMTkgMTkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik05LjUwMDYxIDkuNTI0NDFDNC40OTM1OCA5LjUyNDQxIDAuNDE5OTIyIDEzLjU5ODEgMC40MTk5MjIgMTguNjA1MUMwLjQxOTkyMiAxOC44MjMgMC41OTY4MTEgMTguOTk5OSAwLjgxNDc0NyAxOC45OTk5SDE4LjE4NjVDMTguNDA0NSAxOC45OTk5IDE4LjU4MTMgMTguODIzIDE4LjU4MTMgMTguNjA1MUMxOC41ODEzIDEzLjU5ODEgMTQuNTA3NiA5LjUyNDQxIDkuNTAwNjEgOS41MjQ0MVoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik05LjQ5OTE4IDguNjg1ODZDMTEuODk3NyA4LjY4NTg2IDEzLjg0MjEgNi43NDE0NyAxMy44NDIxIDQuMzQyOTNDMTMuODQyMSAxLjk0NDQgMTEuODk3NyAwIDkuNDk5MTggMEM3LjEwMDY1IDAgNS4xNTYyNSAxLjk0NDQgNS4xNTYyNSA0LjM0MjkzQzUuMTU2MjUgNi43NDE0NyA3LjEwMDY1IDguNjg1ODYgOS40OTkxOCA4LjY4NTg2WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==')
+
+		&-input--phone>div::before
+			content: url('data:image/svg+xml; base64, PHN2ZyAgdmlld0JveD0iMCAwIDIwIDIwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBjbGlwLXBhdGg9InVybCgjY2xpcDApIj4KPHBhdGggZD0iTTE5LjQ1NjEgMTQuNjc4TDE2LjY2NTEgMTEuODg2OUMxNS42NjgzIDEwLjg5MDEgMTMuOTczNyAxMS4yODg5IDEzLjU3NSAxMi41ODQ3QzEzLjI3NTkgMTMuNDgxOSAxMi4yNzkxIDEzLjk4MDMgMTEuMzgyIDEzLjc4MDlDOS4zODgzOSAxMy4yODI1IDYuNjk3MDEgMTAuNjkwOCA2LjE5ODYgOC41OTc0NkM1Ljg5OTU2IDcuNzAwMyA2LjQ5NzY1IDYuNzAzNDkgNy4zOTQ3NyA2LjQwNDQ4QzguNjkwNjIgNi4wMDU3NiA5LjA4OTM0IDQuMzExMTkgOC4wOTI1NCAzLjMxNDM4TDUuMzAxNDggMC41MjMzMjRDNC41MDQwMyAtMC4xNzQ0NDEgMy4zMDc4NiAtMC4xNzQ0NDEgMi42MTAxIDAuNTIzMzI0TDAuNzE2MTY2IDIuNDE3MjZDLTEuMTc3NzcgNC40MTA4NyAwLjkxNTUyOCA5LjY5Mzk1IDUuNjAwNTIgMTQuMzc4OUMxMC4yODU1IDE5LjA2MzkgMTUuNTY4NiAyMS4yNTY5IDE3LjU2MjIgMTkuMjYzM0wxOS40NTYxIDE3LjM2OTRDMjAuMTUzOSAxNi41NzE5IDIwLjE1MzkgMTUuMzc1NyAxOS40NTYxIDE0LjY3OFoiIGZpbGw9IndoaXRlIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDAiPgo8cmVjdCB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==')
+		&-inputs
+			max-width: 50%
+			width: 100%
+			display: flex
+			justify-content: space-between
+			@media ( max-width:$md1+px )
+				flex-direction: column
+
+			@media screen and ( max-width: 660px )
+				max-width: 100%
+				
+		&-input
+			margin: 0 0 0px 0
+
+			&>div::before
+				margin-left: 0
+				left: -10px
+	.btn
+		margin: 0 0 -20px 10px
+		background: $white
+		border-color: $white
+		color: #000
+		@include transitColor(0.3s)
+		&:hover
+			color: $green
+		@media ( max-width:$md1+px )
+			margin-left: 0
+			margin-top: -20px
+
+		@media screen and ( max-width: 660px )
+			margin-top: 40px
+
+	&-column
+		&__left
+			padding: 35px 40px 45px 60px
+
+			max-width: 35%
+			width: 100%
+
+			text-align: left
+
+			background: #232323
+			@media ( max-width:$md1+px )
+				max-width: 40%
+				margin-left: -15px
+				padding: 35px 30px 35px 15px
+
+			@media ( max-width:$md2+px )
+				max-width: 100%
+				margin-left: 0
+
+		&__right
+			padding: 50px 0 50px 90px
+			color: #838383
+			text-align: right
+			max-width: 65%
+			width: 100%
+			
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			@media ( max-width:$md1+px )
+				max-width: 60%
+
+			@media ( max-width:$md2+px )
+				max-width: 100%
+				text-align: left
+				padding: 30px 15px
+
+		&__title
+			display: block
+			margin: 0 0 10px 0 
+			font-size: 0.88rem
+			color: $white
+
+		&__contact
+			position: relative
+
+			display: flex
+			flex-direction: column
+			margin-bottom: 10px
+			padding-left: 35px
+			&::after
+				@include pseudoEl(block, absolute, '')
+				left: 0
+				top: 5px
+				width: 16px
+				height: 16px
+				background: url(../img/icons/icons.svg#icon-tel) 100%/cover no-repeat
+
+			a
+				color: #838383
+				text-decoration: none
+				transition: color 0.3s linear
+				&:hover
+					color: $green
+		
+		&__map, &__mail, &__clock
+			position: relative
+			display: block
+			padding: 0 0 10px 35px
+			color: #838383
+			text-decoration: none
+			transition: color 0.3s linear
+			&:hover
+				color: $green
+			&::after
+				@include pseudoEl(block, absolute, '')
+				left: 0
+				top: 5px
+				width: 16px
+				height: 16px
+
+		&__map::after
+			background: url(../img/icons/icons.svg#icon-map) 100%/cover no-repeat
+
+		&__mail::after
+			background: url(../img/icons/icons.svg#icon-mail) 100%/cover no-repeat
+
+		&__clock::after
+			background: url(../img/icons/icons.svg#icon-clock) 100%/cover no-repeat
+
+		&__clock
+			&:hover
+				color: #838383
+
+			&::after
+				@include pseudoEl(block, absolute, '')
+				left: 0
+				top: 5px
+				width: 16px
+				height: 16px
+
+
+
+		&__clock
+			display: flex
+			flex-direction: column
+
+	.footer-logo
+		text-align: left
+		display: block
+
+		padding: 0
+
+		margin: 0 0 15px 0 
+		@media ( max-width: 1100px )
+			padding: 0
+
+	&-dev
+		color: #838383
+		a
+			color: #fff
+			font-family: CenturyBold
+			text-decoration: none
+			@include transitColor(0.3s)
+			&:hover
+				color: $green
+
+		@media ( max-width:$md2+px )
+			padding-top: 20px
+
+
+
+		
+
+		

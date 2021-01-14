@@ -1,0 +1,62 @@
+.section-itinerary
+	position: relative
+	margin-top: 50px
+	padding-top: 0
+
+	background: url(../img/section-itinerary/bg_01.png) 100%/cover no-repeat
+
+	.itinerary
+		&-blocks
+			// height: 860px
+			width: 100%
+
+		&-block
+			position: absolute
+			z-index: 2
+			max-width: 280px
+			width: 100%
+			height: auto
+			// padding-top: 20px
+			@media screen and ( max-width: 1200px )
+				font-size: 0.88rem
+				max-width: 220px
+			@media ( max-width:$md1+px )
+				max-width: 80%
+				padding-left: 3rem
+				padding-top: 0
+				
+
+			&__title
+				color: #01B259
+				font-family: CenturyBold
+				marign: 0 0 5px 0 
+
+		&-line
+			// position: absolute
+			top: 0
+			right: 0
+
+			// margin: 133px 0 0 0
+			
+			@media ( max-width:$md1+px )
+				display: none
+
+			&.tablet
+				display: none
+				@media ( max-width:$md1+px )
+					display: block
+
+			
+	.itinerary-seo__text
+		margin-top: 250px
+		@media ( max-width:$md1+px )
+			margin: 50px 0 0 0
+
+		span
+			font-family: CenturyBold
+		
+
+		
+
+
+

@@ -1,0 +1,25 @@
+.main-lottery
+	.section-form
+		position: relative
+
+		background: none
+		&::after
+			@include pseudoEl(block, absolute, '')
+			background: #f7f7f7
+			top: 0
+			left: 0
+			width: 100%
+			height: 50%
+			z-index: -1
+
+		.form
+			background-image: url(../img/section-form/02.png)
+
+	.section-faq, .section-reviews, .section-infotext
+		background: none
+		&::after
+			display: none
+			
+	.section-reviews
+		.reviews-row__arrow, .reviews-row__number span
+			background: #fff

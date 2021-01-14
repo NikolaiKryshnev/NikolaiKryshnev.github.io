@@ -1,0 +1,189 @@
+.section-reviews
+	background: #f7f7f7
+
+.reviews-row
+	display: flex
+
+	&__column
+		display: flex
+		flex-direction: column
+		margin-top: 20px
+
+		max-width: 390px
+		width: 100%	
+		height: auto
+
+		margin-right: 20px
+		@media ( max-width:$md1+px )
+			display: none
+
+		.btn
+			margin-top: 30px
+
+	.reviews-slider
+		max-width: 740px
+		width: 100%
+		@media ( max-width:$md1+px )
+			max-width: 100%
+
+		&__block
+			background: #fff
+			padding: 37px 50px 50px 50px
+			margin: 20px
+
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15)
+			@media ( max-width:$md3+px )
+				margin: 20px 0
+				box-shadow: none
+				padding: 22px 19px 33px 26px
+
+		&__top
+			display: flex
+			align-items: center
+
+			margin-bottom: 25px
+
+			.btn
+				margin: 0 0 0 auto
+				@media ( max-width:$md2+px )
+					display: none
+
+		&__img
+			display: flex
+			align-items: center
+			justify-content: center
+
+			margin: 0 28px 0 0
+
+			border-radius: 50%
+			overflow: hidden
+
+		&-info
+			display: flex
+			flex-direction: column
+
+		&__data
+			font-size: 0.88rem
+			color: #9E9E9E
+			@media ( max-width:$md3+px )
+				font-size: 1rem
+
+		&__name, &__title
+			font-family: CenturyBold
+			font-size: 1.15rem
+
+		&__title
+			padding: 0 0 5px 0 
+			@media ( max-width:$md3+px )
+				font-size: 1rem
+
+		&__text
+			margin-bottom: 10px
+
+		&__dataVis
+			font-family: CenturyBold
+			margin-bottom: 27px
+
+			span
+				font-family: CenturyRegular
+				padding: 0 0 0 10px
+		
+		&__btn
+			display: none
+			@media ( max-width:$md1+px )
+				display: block
+				margin-top: 40px
+
+			@media ( max-width:$md3+px )
+				margin-top: 30px
+
+	.reviews-blockImg
+		overflow-x: scroll
+
+		&__box
+			display: flex
+			@media ( max-width: 700px )
+				width: 500px
+
+		&__img
+			max-width: 210px
+			width: 100%
+			height: auto
+			margin-left: 0
+			@include img_03(5rem)
+			@media ( max-width:$md1+px )
+				max-width: 33.33333%
+
+			& + .reviews-blockImg__img
+				margin-left: 6px
+
+		&__boxImg
+			@include img_02()
+
+			img
+				@include img_01()
+
+
+	&__number
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+		margin-top: 30px
+
+		color: #797979
+		font-size: 1.5rem
+		@media ( max-width:$md3+px )
+			margin: 0px 0 0 0
+
+		span
+			position: relative
+			z-index: 1
+
+			background: #f7f7f7
+
+			padding-left: 22px
+			padding-right: 20px
+			@media ( max-width:$md1+px )
+				padding: 0 20px 0 22px
+
+		&::after
+			@include pseudoEl(block, absolute, '')
+			height: 1px
+			width: calc( 100% - 20px )
+			right: 0
+			background: rgba(131, 131, 131, 0.37)
+
+	&__arrow
+		position: relative
+		z-index: 1
+		display: flex
+		background: #f7f7f7
+
+		padding-right: 30px
+		margin-left: 20px
+
+	.slick-arrow
+		display: flex
+		align-items: center
+		justify-content: center
+		
+		width: 45px
+		height: 45px
+
+		background: $green
+		border-radius: 50%
+		cursor: pointer
+		@include transitBgColor(0.3s)
+
+		&:hover
+			background: #00984C
+
+		&__right
+			margin-left: 17px
+			@include rotate(180deg)
+
+		svg
+			height: 17px
+			width: 9px

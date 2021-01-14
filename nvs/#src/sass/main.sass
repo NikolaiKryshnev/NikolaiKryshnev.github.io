@@ -1,0 +1,136 @@
+//--------- COLOR ---------//
+
+$white: #fff
+$grayDark: #232323
+$green: #01B259
+
+//--------- /COLOR ---------//
+
+html,
+body
+	font-size: 16px
+	color: #000
+	font-family: CenturyRegular
+	@media ( max-width:$md3+px )
+		font-size: 14px
+
+.wrapper
+	overflow: hidden
+
+.main
+	position: relative
+	transition: filter 0.3s linear
+
+	&:after
+		transition: background 0.3s linear
+
+	&.active
+		// filter: blur(2px)
+		&:after
+			@include pseudoEl(block, absolute, '')
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			width: 100%
+			height: 100%
+			z-index: 20
+			background: rgba(0, 0, 0, 0.52)
+
+._section
+	padding: 50px 0
+
+.container
+	max-width: 1170px
+	width: 100%
+
+	padding: 0 15px
+	margin: 0 auto
+	
+	
+//--------- TITLE ---------//
+.section-title
+	position: relative
+	padding-bottom: 25px
+	margin-bottom: 50px
+
+	font-family: CenturyBold
+	
+	&::after
+		position: absolute
+		bottom: 0
+		left: 0
+		height: 40px
+		content: url('data:image/svg+xml; base64, PHN2ZyB3aWR0aD0iOTMiIGhlaWdodD0iMiIgdmlld0JveD0iMCAwIDkzIDIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxsaW5lIHkxPSIxIiB4Mj0iNjIiIHkyPSIxIiBzdHJva2U9IiMwMUIyNTkiIHN0cm9rZS13aWR0aD0iMiIvPgo8bGluZSB4MT0iNzciIHkxPSIxIiB4Mj0iOTMiIHkyPSIxIiBzdHJva2U9IiMwMUIyNTkiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K');
+	
+	@media ( max-width:$md3+px )
+		line-height: 1.2
+.h1
+	font-size: 2rem
+
+.h2
+	font-size: 2.25rem
+
+.h3
+	font-size: 1.5rem
+
+.h4
+	font-size: 1.4rem
+
+.h5
+	font-size: 1.2rem
+
+//--------- /TITLE ---------//
+
+//--------- BTN ---------//
+
+.btn
+	display: block
+
+	padding: 0 26px
+	height: 60px
+
+	text-decoration: none
+	text-transform: uppercase
+	font-family: CenturyBold
+	text-align: center
+	color: $white
+	line-height: 56px
+	font-size: 1rem
+
+	border: 2px solid $green
+	border-radius: 50px
+	background: $green
+	transition: background 0.3s linear,  border-color 0.3s linear 
+	&:hover
+		background: #00984C
+		border-color: #00984C
+	@media ( max-width:$md3+px )
+		height: 50px
+		line-height: 46px
+
+.btn--max
+	max-width: 210px
+	width: 100%
+	@media ( max-width:$md3+px )
+		max-width: 170px
+
+.btn--min
+	max-width: 170px
+	width: 100%
+
+.btn--gray
+	border-color: rgba(255, 255, 255, 0.31)
+	background: rgba(255, 255, 255, 0.24)
+	color: $white
+	line-height: 60px
+	border: none
+	@include transitBgColor(0.3s)
+
+	&:hover
+		background: $green
+
+//--------- /BTN ---------//
+
+	
+

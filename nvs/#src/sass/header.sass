@@ -1,0 +1,431 @@
+.header
+	position: relative
+	&:after
+		@include pseudoEl(block, absolute, '')
+		left: 0
+		top: 0
+		z-index: -1
+		
+		height: 76px
+		width: 50%
+
+		background-color: $grayDark
+		@media ( max-width:$md3+px )
+			width: 100%
+			height: 51px
+
+	.container
+		@include flexbox()
+		@media ( max-width:$md3+px )
+			flex-wrap: wrap
+
+	&-menu
+		position: relative
+
+		display: flex
+		order: 1
+
+		padding: 26px 65px 26px 80px
+
+		background: $white
+		@media ( max-width: 1200px )
+			padding: 26px 30px
+
+		@media ( max-width: 1100px )
+			position: initial
+
+			order: 2
+			align-items: center
+			
+			padding: 0 0 0 30px
+		
+		@media ( max-width:$md3+px )
+			justify-content: flex-end
+
+			width: 40%
+
+			padding: 0 0 0 22px
+
+		&:after
+			@include pseudoEl(block, absolute, '')
+			right: 0
+			top: 50%
+			transform: translateY(-50%)
+
+			width: 1px
+			height: 37px
+			background-color: #DEDEDE
+			@media ( max-width: 1100px )
+				display: none
+				
+
+		&__nav
+			@media ( max-width: 1100px  )
+				// display: none
+				position: absolute
+				z-index: 21
+				right: 0
+				top: 100%
+
+				padding: 0 14px
+
+				background: #fff
+				box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12)
+				@include translateX(100%)
+				transition: transform 0.5s linear
+
+				width: 250px
+				@media ( max-width:$md3+px )
+					width: 220px
+
+				&.active
+					display: block
+					@include translateX(0%)
+
+
+		&__list
+			display: flex
+
+			font-size: 1rem
+			@media screen and ( max-width: 1100px )
+				flex-direction: column
+				height: auto
+
+				text-align: center
+				
+			li
+				padding: 0 20px 0 0
+
+				@media screen and ( max-width: 1100px )
+					padding: 20px 0
+					border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+
+				&:last-child
+					padding: 0 33px 0 0
+					border: none
+
+					@media screen and ( max-width: 1100px )
+						padding: 20px 0
+
+			a
+				color: #000000
+				text-decoration: none
+				font-weight: 400
+				@include transitColor(0.3s)
+			
+				&:hover, &.active
+					color: $green
+
+	&-search__block
+		svg
+			cursor: pointer
+			width: 19px
+			height: 19px
+
+	&-contact
+		position: relative
+
+		@include flexbox()
+		order: 2
+
+		width: 100%
+
+		margin: 0 0 0 26px
+		// margin: 10px 0 0 0
+		@media ( max-width: 1100px )
+			order: 1
+			background: $white
+			margin: 0
+			padding: 0 0 0 11px
+			justify-content: flex-end
+			align-items: center
+		
+		@media ( max-width:$md3+px )
+			width: 50%
+			height: 50px
+		
+		@media ( max-width:$md3+px )
+			width: 60%
+			
+		&__row
+			position: absolute
+			top: 0
+			left: 0
+
+			width: 100%
+
+			margin: 9px 0 0 0
+			padding: 16px 25px 0 25px
+
+			background: #FFFFFF
+			@media ( max-width: 1200px  )
+				max-width: 240px
+			@media ( max-width:$md3+px )
+				padding: 12px 25px 0 0
+				margin: 0
+				// top: 50%
+				// transform: translateY(-50%)
+
+			&.active
+				padding: 16px 25px 20px 25px
+				width: 240px
+				z-index: 99
+
+				background: #FFFFFF
+				box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12)
+				.header-contact
+					&__info, &__social
+						display: block
+
+					&--border
+						padding: 0 0 15px 0 
+						margin-bottom: 16px
+
+						border-bottom: 1px solid #D8D8D8
+
+					&__phone
+						a
+							display: inline
+							@media screen and ( max-width: 1100px  )
+								pointer-events: auto
+
+							&:first-child
+								&::after
+									@include rotate(180deg)
+									margin-top: -5px
+
+		&__phone
+			@include flexbox()
+			flex-direction: column
+
+			a
+				display: none
+
+				text-decoration: none
+				font-size: 1.13rem
+				color: #000
+				@include transitColor(0.3s)
+				@media ( max-width:$md3+px )
+					font-size: 1rem
+
+				&:hover
+					color: $green
+
+				span
+					font-family: CenturyBold
+
+				&:first-child
+					position: relative
+					display: inline
+					@media screen and ( max-width: 1100px  )
+						pointer-events: none
+
+						
+					&::after
+						content: ''
+
+						@include verticalcenter()
+						width: 12px 
+						height: 12px
+						margin-left: 5px
+						background: url(../img/icons/icons.svg#icon-arrow) 100%/cover no-repeat
+						// transition: transform 0.3s linear
+
+		&__info
+			display: none
+			font-size: 0.88rem
+
+			a
+				text-decoration: none
+				color: #000
+				@include transitColor(0.3s)
+
+				&:hover
+					color: $green
+
+			&>div
+				margin-bottom: 15px
+
+			&>div + div
+				margin-bottom: 0
+
+		&__address, &__clock
+			position: relative
+
+			padding-left: 30px
+
+			&::after
+				@include pseudoEl(block, absolute, '')
+				left: 0
+				top: 0
+				width: 16px
+				height: 16px
+
+		&__address
+			&::after
+				background: url(../img/icons/icons.svg#icon-map) 100%/cover no-repeat
+
+		&__clock 
+			display: flex
+			flex-direction: column
+			&::after
+				background: url(../img/icons/icons.svg#icon-clock) 100%/cover no-repeat
+
+		&__social
+			display: none
+			
+			a
+				margin-left: 0
+
+				path
+					transition: fill 0.3s linear
+
+				& + a
+					margin-left: 23px
+
+				&:hover
+					path
+						fill: #232323
+
+
+		.btn
+			position: fixed
+			z-index: 98
+			top: auto
+			left: auto
+			right: 15px
+			bottom: 15px
+			line-height: 49px
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4)
+			height: 53px
+			@media screen and ( max-width: 1100px )
+				position: relative
+
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+
+				background: none
+				color: $green
+				box-shadow: none
+
+
+
+			@media ( max-width:$md2+px )
+				position: fixed
+				top: auto
+				left: auto
+				right: 15px
+				bottom: 15px
+
+				height: 59px
+				background: $green
+				color: $white
+				box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4)
+
+				
+				font-size: 0.88rem
+
+			@media ( max-width:$md3+px )
+				line-height: 46px
+				height: 50px
+
+.burger
+	display: none
+	position: relative
+
+	margin: 0 0 0 30px
+
+	width: 30px
+	height: 22px
+	@media screen and ( max-width: 1100px )
+		display: block
+		
+	@media ( max-width:$md3+px )
+		margin: 0 0 0 44px
+
+	.burger-line
+		position: absolute
+
+		display: block
+
+		padding: 0
+
+		width: 30px
+		height: 2px
+
+		background-color: black
+		
+		// border-radius: 4px
+		transition: all 0.4s ease-in-out, transform 0.4s ease-in-out 0.4s
+
+
+	.burger-lineOne
+		top: 0
+
+	.burger-lineTwo
+		top: 9.5px
+		width: 1px
+		transform: rotate(90deg)
+		left: 13.5px
+
+	.burger-lineThree
+		top: 9.5px
+		right: 0
+		width: 1px
+		left: 13.5px
+
+	.burger-lineFour
+		top: 9.5px
+		bottom: 0
+
+	.burger-lineFive
+		bottom: 0px
+
+	&.active
+		.burger-lineOne
+			top: 13.5px
+			background-color: transparent
+
+		.burger-lineTwo
+			left: 0px
+			width: 30px
+			transform: rotate(45deg)
+
+		.burger-lineThree
+			left: 0
+			width: 30px
+			transform: rotate(-45deg)
+
+		.burger-lineFour
+			background-color: transparent
+
+		.burger-lineFive
+			bottom: 13.5px
+			background-color: transparent
+
+.logo
+	padding: 26px 58px 26px 0
+
+	text-align: right
+
+	background-color: $grayDark
+	color: $white
+	text-decoration: none
+	
+	@media screen and ( max-width: 1100px)
+		padding: 26px 48px 26px 0
+
+	@media ( max-width:$md3+px )
+		width: 100%
+		text-align: left
+		padding: 13px 15px 17px
+	a
+		text-decoration: none
+		font-size: 1rem
+		font-family: CenturyBold
+		color: $white
+
+	span
+		color: $green
