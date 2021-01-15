@@ -1,0 +1,110 @@
+.table
+	display: flex
+	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1)
+	@media ( max-width:$md1+px )
+		flex-direction: column
+		box-shadow: none
+
+	&-title
+		background: #232323
+		text-align: center
+		line-height: 77px
+		font-size: 1.5rem
+		color: #fff
+
+	&-column
+		max-width: 50%
+		width: 100%
+		background: #FFFFFF
+
+		@media ( max-width:$md1+px )
+			max-width: 100%
+			margin-bottom: 20px
+			box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1)
+
+		&:last-child
+			border-left: 1px solid $green
+			@media ( max-width:$md1+px )
+				border: none
+		&__info
+			padding: 26px 60px 40px
+			@media ( max-width:$md1+px )
+				padding: 26px 60px 40px
+
+			ul
+				list-style-type: none
+				padding-left: 40px
+
+				li
+					position: relative
+					padding-bottom: 20px
+					// & + li
+					// 	padding-bottom: 0
+
+					&:before
+						@include pseudoEl(block, absolute, url('data:image/svg+xml; base64, PHN2ZyAgdmlld0JveD0iMCAwIDIxIDE1IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMiA0Ljk2Mjk2TDkuMDIxNzQgMTJMMTkgMiIgc3Ryb2tlPSIjMDFCMjU5IiBzdHJva2Utd2lkdGg9IjMiLz4KPC9zdmc+Cg=='))
+						left: -40px
+						z-index: 5
+						width: 24px
+						height: auto 
+
+			ol
+				position: relative
+				list-style-type: none
+				padding-left: 40px
+
+				&:before
+					@include pseudoEl(block, absolute, '')
+					background: url(../img/icons/icons.svg#icon-money) 100%/cover no-repeat
+					width: 27px
+					height: 27px
+					left: 0
+					z-index: 5
+
+				li:nth-child(2)
+					padding-top: 10px
+
+
+			a
+				color: $green
+				text-decoration: none
+
+				&:hover
+					text-decoration: underline
+
+.main-batchServices
+	.section-table
+		padding-bottom: 50px
+	
+	.section-form, .section-batch
+		position: relative
+		background: #fff
+		.container
+			position: relative
+			z-index: 2
+		&::after
+			@include pseudoEl(block, absolute, '')
+			z-index: 1
+			top: 0
+			left: 0
+			width: 100%
+			height: 50%
+			background: #f7f7f7
+
+	.section-faq
+		padding-bottom: 50px
+		background: #fff
+
+	.section-batch
+		background: #f7f7f7
+
+		padding-top: 50px
+		.batch-row
+			margin-bottom: 0
+			@include translateY(0)
+
+		&::after
+			background: #fff
+
+
+			

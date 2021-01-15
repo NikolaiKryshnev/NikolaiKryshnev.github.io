@@ -1,0 +1,157 @@
+.main-form
+	.form
+		.table
+			flex-wrap: wrap
+			margin-bottom: 65px
+
+			&--submit
+				.btn
+					max-width: max-content
+					margin-bottom: 23px
+
+				a
+					color: $green
+					text-decoration: none
+					&:hover
+						text-decoration: underline
+
+			
+
+			.table-row
+				margin-bottom: 70px
+				@media ( max-width:$md3+px )
+					margin-bottom: 44px
+
+			&-title
+				text-align: left
+				padding: 0 85px
+				max-width: 100%
+				width: 100%
+				@media ( max-width:$md2+px )
+					line-height: 1.2
+					padding: 20px 
+				@media ( max-width:$md3+px )
+					line-height: 22px
+
+			&-column
+				padding: 40px 85px 50px
+				max-width: 100%
+				border: none
+				@media ( max-width:$md2+px )
+					padding: 40px
+
+				@media ( max-width:$md3+px )
+					padding: 20px
+
+				&__img
+					width: 100%
+					height: auto
+
+				&__buttons
+					display: flex
+					flex-wrap: wrap
+					margin-top: 35px
+
+					.btn
+						margin-top: 0
+						max-width: max-content
+
+						&--border
+							background: none
+							color: $green
+							transition: background 0.3s linear, color 0.3s linear
+
+							&:hover
+								background: $green
+								color: $white
+
+			&-row
+				max-width: 100%
+				width: 100%
+
+				display: flex
+				flex-direction: row
+				flex-wrap: wrap
+				margin: 0 -25px
+				@media ( max-width:$md1+px )
+					margin: 0
+				
+		.form-input
+			max-width: 49.3333%
+			width: 100%
+			padding: 0 33px
+			@media ( max-width:$md1+px )
+				max-width: 100%
+				padding: 0
+				input
+					max-width: 100%
+
+		input, select
+			box-shadow: none
+			font-family: CenturyRegular
+			font-size: 1rem
+			height: 45px
+			line-height: 45px
+			border: none
+			border-radius: 0
+			border-bottom: 1px solid $green
+			padding: 0 20px
+			color: #838383
+
+		input[type="date"], select
+			position: relative
+			&:after
+				content: ''
+				display: block
+				width: 24px
+				height: 22px
+				background-color: #fff
+				margin: 0 20px 0 0
+				@include verticalcenter()
+				right: 0
+		input[type="date"]
+			&::-webkit-calendar-picker-indicator
+				opacity: 0
+				z-index: 2	
+				cursor: pointer
+
+			&:after
+				cursor: pointer
+				content: ''
+				// content: url('data:image/svg+xml; base64, PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMCkiPgo8cGF0aCBkPSJNMC43MDMxODIgMTkuNzM0M0g0LjIxODhWMjEuODQzN0M0LjIxODggMjIuMjMyIDQuNTMzNjEgMjIuNTQ2OCA0LjkyMTkyIDIyLjU0NjhIMjMuMjk2OUMyMy42ODUyIDIyLjU0NjggMjQgMjIuMjMyIDI0IDIxLjg0MzdWMy41NjI1QzI0IDMuMTc0MTggMjMuNjg1MiAyLjg1OTM3IDIzLjI5NjkgMi44NTkzN0gxOS43ODEzVjIuMTU2MjVDMTkuNzgxMyAxLjc2Nzk0IDE5LjQ2NjUgMS40NTMxMiAxOS4wNzgxIDEuNDUzMTJDMTguNjg5OCAxLjQ1MzEyIDE4LjM3NSAxLjc2Nzk0IDE4LjM3NSAyLjE1NjI1VjIuODU5MzdIMTQuODEyNVYyLjE1NjI1QzE0LjgxMjUgMS43Njc5NCAxNC40OTc3IDEuNDUzMTIgMTQuMTA5NCAxLjQ1MzEyQzEzLjcyMTEgMS40NTMxMiAxMy40MDYzIDEuNzY3OTQgMTMuNDA2MyAyLjE1NjI1VjIuODU5MzdIOS44OTA2NlYyLjE1NjI1QzkuODkwNjYgMS43Njc5NCA5LjU3NTg1IDEuNDUzMTIgOS4xODc1NCAxLjQ1MzEyQzguNzk5MjMgMS40NTMxMiA4LjQ4NDQyIDEuNzY3OTQgOC40ODQ0MiAyLjE1NjI1VjIuODU5MzdINC45MjE5MkM0LjUzMzYxIDIuODU5MzcgNC4yMTg4IDMuMTc0MTggNC4yMTg4IDMuNTYyNVY3Ljc4MTI0QzQuMjE4OCAxMi45NjMzIDIuMDY1MTMgMTYuOTQ5OCAwLjI1MzA0MiAxOC40OTExQzAuMDI1NjA1NSAxOC42ODA2IC0wLjA1ODcyMjUgMTguOTkyMiAwLjA0MjAxMTcgMTkuMjcwNkMwLjE0Mjg0IDE5LjU0ODkgMC40MDcxMiAxOS43MzQzIDAuNzAzMTgyIDE5LjczNDNaTTIyLjU5MzggMjEuMTQwNkg1LjYyNTA1VjE5LjczNDNIMTkuMDc4MUMxOS4yNDI2IDE5LjczNDMgMTkuNDAxOSAxOS42NzY3IDE5LjUyODMgMTkuNTcxNEMyMC4zNzM1IDE4Ljg2NzMgMjEuNjgyOCAxNy4xOTEyIDIyLjU5MzggMTUuMDQ0NFYyMS4xNDA2Wk01LjYyNTA1IDQuMjY1NjJIOC40ODQ0MlY0Ljk2ODc0QzguNDg0NDIgNS4zNTcwNSA4Ljc5OTIzIDUuNjcxODcgOS4xODc1NCA1LjY3MTg3QzkuNTc1ODUgNS42NzE4NyA5Ljg5MDY2IDUuMzU3MDUgOS44OTA2NiA0Ljk2ODc0VjQuMjY1NjJIMTMuNDA2M1Y0Ljk2ODc0QzEzLjQwNjMgNS4zNTcwNSAxMy43MjExIDUuNjcxODcgMTQuMTA5NCA1LjY3MTg3QzE0LjQ5NzcgNS42NzE4NyAxNC44MTI1IDUuMzU3MDUgMTQuODEyNSA0Ljk2ODc0VjQuMjY1NjJIMTguMzc1VjQuOTY4NzRDMTguMzc1IDUuMzU3MDUgMTguNjg5OCA1LjY3MTg3IDE5LjA3ODEgNS42NzE4N0MxOS40NjY1IDUuNjcxODcgMTkuNzgxMyA1LjM1NzA1IDE5Ljc4MTMgNC45Njg3NFY0LjI2NTYySDIyLjU5MzhWNy4wNzgxMUg1LjYyNTA1VjQuMjY1NjJaTTUuNjEzIDguNDgzODlIMjIuNTgxM0MyMi40MjI5IDEyLjk0NDMgMjAuNzEwOSAxNi40NTM3IDE4LjgwMjQgMTguMzI4MUgyLjMwMjUxQzQuNDY0OTkgMTUuNTcyNyA1LjQ5Njk4IDExLjk4NTEgNS42MTMgOC40ODM4OVoiIGZpbGw9IiMwMUIyNTkiLz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMCI+CjxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K')
+
+				background: url(../img/icons/icons.svg#icon-calendar) 100%/cover no-repeat $white
+
+		select
+			background: url(../img/icons/icons.svg#icon-arrow) no-repeat right
+			-webkit-appearance: none
+			background-size: 20px
+			background-position-x: 100%
+
+		textarea
+			margin-top: 16px
+			box-shadow: none
+			font-family: CenturyRegular
+			height: 90px
+			resize: none
+			font-size: 1rem
+			border: 1px solid $green
+			padding: 10px 16px
+			color: #838383
+
+		.button--phone
+			cursor: pointer
+			margin-right: 25px
+			@media ( max-width:$md3+px )
+				height: 50px
+				margin-bottom: 25px
+
+			input[type="file"]
+				opacity: 0
+				width: 1px
+				height: 1px
+				border: none
+		
+		.btnAdd--js
+			max-width: max-content
+			margin: 0 0 65px auto

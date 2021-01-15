@@ -20,6 +20,16 @@ body
 .main
 	position: relative
 	transition: filter 0.3s linear
+	padding-bottom: 150px
+
+	&--dark 
+		background: #f7f7f7
+		.breadcrumbs
+			color: #747474
+			ul li:after
+				color: #747474
+			a
+				color: #747474
 
 	&:after
 		transition: background 0.3s linear
@@ -61,10 +71,40 @@ body
 		bottom: 0
 		left: 0
 		height: 40px
-		content: url('data:image/svg+xml; base64, PHN2ZyB3aWR0aD0iOTMiIGhlaWdodD0iMiIgdmlld0JveD0iMCAwIDkzIDIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxsaW5lIHkxPSIxIiB4Mj0iNjIiIHkyPSIxIiBzdHJva2U9IiMwMUIyNTkiIHN0cm9rZS13aWR0aD0iMiIvPgo8bGluZSB4MT0iNzciIHkxPSIxIiB4Mj0iOTMiIHkyPSIxIiBzdHJva2U9IiMwMUIyNTkiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K');
+		content: url('data:image/svg+xml; base64, PHN2ZyB3aWR0aD0iOTMiIGhlaWdodD0iMiIgdmlld0JveD0iMCAwIDkzIDIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxsaW5lIHkxPSIxIiB4Mj0iNjIiIHkyPSIxIiBzdHJva2U9IiMwMUIyNTkiIHN0cm9rZS13aWR0aD0iMiIvPgo8bGluZSB4MT0iNzciIHkxPSIxIiB4Mj0iOTMiIHkyPSIxIiBzdHJva2U9IiMwMUIyNTkiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K')
 	
 	@media ( max-width:$md3+px )
 		line-height: 1.2
+
+	&--two
+		position: relative
+		padding-top: 58px
+		display: flex
+		justify-content: flex-start
+		@media ( max-width: 1100px )
+			margin: 0 0 110px 0 
+
+		@media ( max-width:$md1+px )
+			flex-wrap: wrap
+			
+		&::after
+			display: none
+
+		span
+			text-transform: uppercase
+			color: $green
+
+		.btn
+			max-width: max-content
+			margin: 0 0 0 auto
+			float: right
+			right: 0
+			@media ( max-width: 1100px )
+				position: absolute
+				bottom: -60px
+				left: 0
+				right: auto
+
 .h1
 	font-size: 2rem
 
@@ -80,6 +120,9 @@ body
 .h5
 	font-size: 1.2rem
 
+b
+	font-family: CenturyBold
+	
 //--------- /TITLE ---------//
 
 //--------- BTN ---------//

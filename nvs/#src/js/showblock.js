@@ -27,7 +27,6 @@ if ($(window).width() <= 526) {
 
 let posEl,
 	block = $('.itinerary-block');
-
 function positonDot(elem, number) {
 	let elements = elem;
 	for (let i = 0; i < elements.length; i++) {

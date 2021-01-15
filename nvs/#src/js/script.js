@@ -24,8 +24,7 @@
 @@include('./slider.js')
 @@include('./showblock.js')
 @@include('./faq.js')
-
-
+@@include('./form.js')
 @@include('./task/popup.js')
 
 //</TASK>---------------------------------------------------------------------------------------------------------------------

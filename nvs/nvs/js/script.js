@@ -164,7 +164,6 @@ if ($(window).width() <= 526) {
 
 let posEl,
 	block = $('.itinerary-block');
-
 function positonDot(elem, number) {
 	let elements = elem;
 	for (let i = 0; i < elements.length; i++) {
@@ -207,8 +206,30 @@ function f_acc() {
 	$(this).toggleClass('active');
 
 }
+let family = $('.select-js')
+
+// function selectNum() {
+// 	for (let index = 0; index < family.length; index++) {
+// 		const el = family[index];
+// 		console.log($(el).val())
+// 	}
+// }
+// selectNum()
 
 
+family.change(function() {
+	if($(this).val() === 'Женат / Замужем') {
+		$('.family-supr--js').html(`
+		
+
+		`)
+		
+	}else(
+		console.log($(this).val())
+	)
+	
+	
+  });
 //<POPUP>---------------------------------------
 
 let modal = $('.modal-overlay, .modal');
@@ -234,4 +255,5 @@ $(".modal-overlay").on('click', function (e) {
 
 
 //</TASK>---------------------------------------------------------------------------------------------------------------------
+
 })(jQuery);
