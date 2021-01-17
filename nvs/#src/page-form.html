@@ -54,10 +54,15 @@
 									</div>
 									<div class="form-input ">
 										Полное оконченное образование
-										<select name="" id="" placeholder="Образование на данный момент">
-											<option value="">Полное оконченное образование</option>
-											<option value="">Полное оконченное образование</option>
-											<option value="">Полное оконченное образование</option>
+										<select name="obrazovan" id="obrazovan">
+											<option disabled="disabled" selected="selected" value="Не заполнено">Образование на
+												данный момент</option>
+											<option value="Высшее">Высшее</option>
+											<option value="Среднее">Среднее</option>
+											<option value="Средне-специальное после 8/9 кл.">Средне-специальное после 8/9 кл.
+											</option>
+											<option value="Средне-специальное после 10/11 кл.">Средне-специальное после 10/11 кл.
+											</option>
 										</select>
 									</div>
 									<div class="form-input ">
@@ -95,10 +100,45 @@
 
 									<div class="form-input ">
 										Страна выдачи паспорта
-										<select name="" id="" placeholder="Образование на данный момент">
-											<option value="">Belarus</option>
-											<option value="">RU</option>
-											<option value="">USA</option>
+										<select name="ms_pasport_strana" id="ms_pasport_strana">
+											<option value="Belarus">Belarus</option>
+											<option value="Russia">Russia</option>
+											<option value="Ukraine">Ukraine</option>
+											<option value="Uzbekistan">Uzbekistan</option>
+											<option value="Turkmenistan">Turkmenistan</option>
+											<option value="Tajikistan">Tajikistan</option>
+											<option value="Poland">Poland</option>
+											<option value="Moldova">Moldova</option>
+											<option value="Estonia">Estonia</option>
+											<option value="Egypt">Egypt</option>
+											<option value="Israel">Israel</option>
+											<option value="Armenia">Armenia</option>
+											<option value="Azerbaijan">Azerbaijan</option>
+											<option value="Kazakhstan">Kazakhstan</option>
+											<option value="Kyrgyzstan">Kyrgyzstan</option>
+											<option value="Belgium">Belgium</option>
+											<option value="Czech Republic">Czech Republic</option>
+											<option value="Denmark">Denmark</option>
+											<option value="Finland">Finland</option>
+											<option value="France">France</option>
+											<option value="Georgia">Georgia</option>
+											<option value="Germany">Germany</option>
+											<option value="Greece">Greece</option>
+											<option value="Hungary">Hungary</option>
+											<option value="Italy">Italy</option>
+											<option value="Latvia">Latvia</option>
+											<option value="Lithuania">Lithuania</option>
+											<option value="Luxembourg">Luxembourg</option>
+											<option value="Norway">Norway</option>
+											<option value="Portugal">Portugal</option>
+											<option value="Romania">Romania</option>
+											<option value="Slovakia">Slovakia</option>
+											<option value="Slovenia">Slovenia</option>
+											<option value="Spain">Spain</option>
+											<option value="Sweden">Sweden</option>
+											<option value="Switzerland">Switzerland</option>
+											<option value="Turkey">Turkey</option>
+											<option value="United Kingdom">United Kingdom</option>
 										</select>
 									</div>
 
@@ -141,13 +181,14 @@
 								<div class="table-row">
 									<div class="form-input">
 										Семейное положение
-										<select class="select-js" id="" name="">
-											<option disabled="disabled" selected="selected" value="none">Ваше семейное положение</option>
+										<select class="select-supr--js" id="" name="">
+											<option disabled="disabled" selected="selected" value="none">Ваше семейное положение
+											</option>
 											<option value="Холост / Не замужем">Холост / Не замужем</option>
 											<option id="sel-supr-yes" value="Женат / Замужем">Женат / Замужем</option>
 											<option value="Разведен / Разведена">Разведен / Разведена</option>
 											<option value="Вдовец / Вдова">Вдовец / Вдова</option>
-									  </select>
+										</select>
 									</div>
 								</div>
 								<!-- /.table-row -->
@@ -156,76 +197,7 @@
 						</div>
 						<!-- /.table -->
 
-						<div class="table tabel--family family-supr--js"  >
-							<span class="table-close"></span>
-							<div class="table-title">
-								Данные жены/мужа
-							</div>
-							<div class="table-column">
-								<div class="table-row">
-
-									<div class="form-input ">
-										First name (латинскими буквами)
-										<input type="text">
-									</div>
-									<div class="form-input ">
-										Last name (латинскими буквами)
-										<input type="text">
-									</div>
-									<div class="form-input ">
-										Страна рождения
-										<input type="text">
-									</div>
-									<div class="form-input ">
-										Место рождения
-										<input type="text">
-									</div>
-									<div class="form-input ">
-										Дата рождения
-										<input type="date" name="" id="">
-									</div>
-									<div class="form-input ">
-										Полное оконченное образование
-										<select name="" id="" placeholder="Образование на данный момент">
-											<option value="">Полное оконченное образование</option>
-											<option value="">Полное оконченное образование</option>
-											<option value="">Полное оконченное образование</option>
-										</select>
-									</div>
-									<div class="form-input ">
-										Серия и номер паспорта
-										<input type="text">
-									</div>
-
-									<div class="form-input ">
-										Страна выдачи паспорта
-										<select name="" id="" placeholder="Образование на данный момент">
-											<option value="">Belarus</option>
-											<option value="">RU</option>
-											<option value="">USA</option>
-										</select>
-									</div>
-
-									<div class="form-input ">
-										Паспорт действителен до
-										<input type="date" name="" id="">
-									</div>
-								</div>
-								<!-- /.table-row -->
-								<div class="form-column__img ">
-									<img src="./img/page-form/01.jpg" alt="">
-								</div>
-								<div class="table-column__buttons">
-									<label class="button--phone">
-										<span class="btn btn--max ">Добавить фото</span>
-										<input type="file">
-									</label>
-									<a class="btn btn--border" href="#">Требования к фото</a>
-								</div>
-
-							</div>
-							<!-- /.table-column -->
-
+						<div class="family-supr--js">
 						</div>
 						<!-- /.table -->
 
@@ -237,9 +209,9 @@
 								<div class="table-row">
 									<div class="form-input ">
 										Есть ли дети до 21 года?
-										<select name="" id="" >
-											<option value="">ДА</option>
-											<option value="">Нет</option>
+										<select class="selectChild--js" name="" id="">
+											<option value="НЕТ">Нет</option>
+											<option value="ДА">Да</option>
 										</select>
 									</div>
 								</div>
@@ -249,59 +221,20 @@
 						</div>
 						<!-- /.table -->
 
-						<div class="table tabel--family">
-							<span class="table-close"></span>
-							<div class="table-title">
-								Данные ребенка
-							</div>
-							<div class="table-column">
-								<div class="table-row">
-									<div class="form-input ">
-										First name (латинскими буквами)
-										<input type="text">
-									</div>
-									<div class="form-input ">
-										Last name (латинскими буквами)
-										<input type="text">
-									</div>
-									<div class="form-input ">
-										Страна рождения
-										<input type="text">
-									</div>
-									<div class="form-input ">
-										Место рождения
-										<input type="text">
-									</div>
-									<div class="form-input ">
-										Дата рождения
-										<input type="date" name="" id="">
-									</div>
-								</div>
-								<!-- /.table-row -->
-								<div class="form-column__img ">
-									<img src="./img/page-form/01.jpg" alt="">
-								</div>
-								<div class="table-column__buttons">
-									<label class="button--phone">
-										<span class="btn btn--max ">Добавить фото</span>
-										<input type="file">
-									</label>
-									<a class="btn btn--border" href="#">Требования к фото</a>
-								</div>
-							</div>
-							<!-- /.table-column -->
+						<div class="child--js" data-sectinochild="0">
+							
 						</div>
-						<!-- /.table -->
 
-						<button class="btn btn-max btnAdd--js">Добавить ребенка</button>
+						<span class="btn btn-max btnAdd--js">Добавить ребенка</span>
 
 						<div class="table table--submit">
 							<div class="table-title">
 								Отправка анкеты
 							</div>
 							<div class="table-column">
-									<button class="btn btn-max" type="submit">Отправить анкету</button>
-									<p>Нажимая на кнопку “Отправить анкету”, вы соглашаетесь с <a href="#">условиями участия</a> в лотерее Грин кард.</p>
+								<button class="btn btn-max" type="submit">Отправить анкету</button>
+								<p>Нажимая на кнопку “Отправить анкету”, вы соглашаетесь с <a href="#">условиями участия</a> в
+									лотерее Грин кард.</p>
 							</div>
 							<!-- /.table-column -->
 						</div>

@@ -1,8 +1,22 @@
 .main-form
 	.form
 		.table
+			position: relative
 			flex-wrap: wrap
 			margin-bottom: 65px
+
+			&-close
+				display: flex
+				align-items: center
+				justify-content: center
+				cursor: pointer
+				position: absolute
+				right: 0
+				top: 0
+				width: 77px
+				height: 77px
+				background: $green
+					
 
 			&--submit
 				.btn
@@ -153,5 +167,6 @@
 				border: none
 		
 		.btnAdd--js
+			display: none
 			max-width: max-content
 			margin: 0 0 65px auto

@@ -465,6 +465,7 @@ b {
   color: #fff;
   line-height: 56px;
   font-size: 1rem;
+  cursor: pointer;
   border: 2px solid #01B259;
   border-radius: 50px;
   background: #01B259;
@@ -2772,9 +2773,29 @@ b {
 }
 
 .main-form .form .table {
+  position: relative;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-bottom: 65px;
+}
+
+.main-form .form .table-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 77px;
+  height: 77px;
+  background: #01B259;
 }
 
 .main-form .form .table--submit .btn {
@@ -2946,6 +2967,7 @@ b {
 }
 
 .main-form .form .btnAdd--js {
+  display: none;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
