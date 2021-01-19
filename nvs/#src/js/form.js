@@ -4,7 +4,6 @@ let familySupr = $('.select-supr--js'),
 	sectionChild = $('.child--js'),
 	btnChild = $('.btnAdd--js');
 
-
 function sectionChildBox(num) {
 	let tableChild = (`
 			<div class="table table--child" data-child="1">
@@ -45,9 +44,9 @@ function sectionChildBox(num) {
 						<img src="./img/page-form/01.jpg" alt="">
 					</div>
 					<div class="table-column__buttons">
-						<label class="button--phone">
+						<label class="button--phone" for="input-fileChild-${num}">
 							<span class="btn btn--max ">Добавить фото</span>
-							<input type="file">
+							<input class="input-file--js" type="file" id="input-fileChild-${num}" name="input-fileChild-${num}">
 						</label>
 						<a class="btn btn--border" href="#">Требования к фото</a>
 					</div>
@@ -82,6 +81,28 @@ function claseTable() {
 	});
 }
 
+// input file preview
+function previewFile() {
+	$('.input-file--js').each(function () {
+		$(this).change(function () {
+			const type = this.files.item(0).type.replace(/\/.+/, '');
+			if (type === 'image') {
+				let reader = new FileReader();
+				let thisBLock = $(this)
+				reader.onload = function (e) {
+					thisBLock.parent().find('img').remove();
+					thisBLock.parent().append(
+						$('<img src=\"' + e.target.result + '\" style="width: 100px;margin-top: 15px;"/>')
+					);
+				}
+				reader.readAsDataURL(this.files.item(0));
+			}
+			$(this).parent().find('span').text('Файл: ' + this.files.item(0).name);
+		});
+	});
+
+};
+previewFile();
 
 
 // Block show family
@@ -89,23 +110,18 @@ function selectShowBlock(select, blockhtml, check, html) {
 	select.change(function () {
 		let parentClass = $(this).attr("class");
 		if ($(this).val() === check) {
-
-			console.log(parentClass);
-
 			blockhtml.append(html);
-
 			if ($(".table--child").length > 0 && parentClass == 'selectChild--js') {
 				btnChild.css({ 'display': 'block' });
 				sectionChild.attr('data-sectinochild', 1);
 			}
 			claseTable();
-
+			previewFile();
 		} else {
 			if ($(".table--child").length >= 1 && parentClass == 'selectChild--js') {
 				btnChild.css({ 'display': 'none' });
 				sectionChild.attr('data-sectinochild', 0);
 			}
-
 			blockhtml.html('');
 
 		}
@@ -215,9 +231,9 @@ selectShowBlock(familySupr, sectionSupr, 'Женат / Замужем',
 					<img src="./img/page-form/01.jpg" alt="">
 				</div>
 				<div class="table-column__buttons">
-					<label class="button--phone">
+					<label class="button--phone" for="input-fileSupr-2">
 						<span class="btn btn--max ">Добавить фото</span>
-						<input type="file">
+						<input class="input-file--js" id="input-fileSupr-2" name="nput-fileSupr-2" type="file">
 					</label>
 					<a class="btn btn--border" href="#">Требования к фото</a>
 				</div>
@@ -234,12 +250,13 @@ function addChild() {
 	let numSectionChild = sectionChild.attr('data-sectinochild'),
 		lastChild = $('.table--child');
 	sectionChild.attr('data-sectinochild', parseInt(numSectionChild) + 1);
-
+	previewFile()
 	if (lastChild.length == 0) {
 		sectionChild.append(sectionChildBox(1))
 	} else {
 		let lastDataChild = $('.table--child').last().attr('data-child');
-		sectionChild.append(sectionChildBox(parseInt(sectionChild.find($('.table--child').last()).attr('data-child')) + 1))
+		sectionChild.append(sectionChildBox(parseInt(
+			sectionChild.find($('.table--child').last()).attr('data-child')) + 1))
 		sectionChild.find($('.table--child').last()).attr('data-child', parseInt(lastDataChild) + 1);
 	}
 }
@@ -247,5 +264,9 @@ function addChild() {
 btnChild.click(function () {
 	addChild();
 	claseTable();
+	previewFile();
 })
+
+
+
 

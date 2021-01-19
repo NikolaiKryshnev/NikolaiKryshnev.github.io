@@ -1,0 +1,62 @@
+.main-stat
+	padding-top: 60px
+
+	.stat-block
+		display: flex
+		flex-direction: column
+		margin-bottom: 25px
+		box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15)
+		@media ( max-width:$md1+px )
+			margin-bottom: 20px
+
+		&__top
+			display: flex
+			justify-content: flex-start
+
+		&__icon
+			display: flex
+			align-content: center
+			align-items: center
+			justify-content: center
+
+			width: 105px
+			background: $green
+			svg
+				max-width: 37px
+				height: 37px
+
+		&__title
+			padding: 16px 30px 20px
+
+			width: 100%
+			background: #232323
+
+			color: $white
+			font-size: 1.5rem
+			font-family: CenturyBold
+
+		&__text
+			padding: 20px 30px 20px
+			
+			background: #FFFFFF
+			p
+				padding-bottom: 20px
+
+			.stat-block__years
+				margin-left: -100px
+
+				li
+
+					margin: 0 0 20px 100px
+
+		&__years
+			display: flex
+			flex-wrap: wrap
+
+
+			a
+				text-decoration: none
+				color: $green
+				&:hover
+					text-decoration: underline
+

@@ -4,7 +4,7 @@
 
 if ($(window).width() <= 526) {
 	$(".advantages-column").each(function (i, elem) {
-		console.log(i)
+		// console.log(i)
 		if (i <= 2) {
 			console.log('advantages-column - 2, yes - 3')
 		} else {

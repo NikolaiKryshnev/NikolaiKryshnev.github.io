@@ -21,6 +21,7 @@ body
 	position: relative
 	transition: filter 0.3s linear
 	padding-bottom: 150px
+	z-index: 1
 
 	&--dark 
 		background: #f7f7f7
@@ -32,18 +33,20 @@ body
 				color: #747474
 
 	&:after
-		transition: background 0.3s linear
+		@include pseudoEl(block, absolute, '')
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+			
+		width: 100%
+		height: 100%
+		z-index: -1
+
+		transition: background 0.3s linear, z-index 0.3s linear
 
 	&.active
-		// filter: blur(2px)
 		&:after
-			@include pseudoEl(block, absolute, '')
-			top: 0
-			left: 0
-			right: 0
-			bottom: 0
-			width: 100%
-			height: 100%
 			z-index: 20
 			background: rgba(0, 0, 0, 0.52)
 

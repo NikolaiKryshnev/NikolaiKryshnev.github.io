@@ -1,7 +1,12 @@
 .header
 	position: relative
-	z-index: 21
+	z-index: 22
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12)
+	background: #fff
+	// transition: box-shadow 0.5s linear
+	// &.active
+	// 	box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.12)
+
 	&:after
 		@include pseudoEl(block, absolute, '')
 		left: 0
@@ -432,3 +437,62 @@
 
 	span
 		color: $green
+
+
+.header-search
+	position: absolute
+	top: 0
+	width: 100%
+	background: #FFF
+	box-shadow: 0 12px 20px -20px rgba(0, 0, 0, 0.12)
+	z-index: 20
+	transition: top 0.5s linear
+
+	&.active
+		z-index: 20
+
+	.container
+		border-top: 1px solid #E9E9E9
+		display: flex
+		justify-content: space-between
+
+	&__input, &__btn
+		font-size: 1rem
+		border: none
+		outline: none
+		padding: 12px 0
+
+	&__input
+		width: 100%
+		color: #828282
+		padding-right: 20px
+		
+
+	&__btn
+		background: $white
+		text-transform: uppercase
+		color: $green
+		font-family: CenturyBold
+		@include transitColor(0.3s)
+		&:hover
+			color: #00984C
+
+.header-search__content
+	.header-search__ul
+		width: 100%
+
+		li
+			padding: 15px 0
+			border-bottom: 1px solid #E0E0E0
+
+			a	
+				color: #000
+				text-decoration: none
+
+				&:hover
+					color: $green
+
+	.header-search__NO
+		text-align: center
+		padding: 20px 0 
+		width: 100%

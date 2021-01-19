@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Контакты"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html')
+		<main class="main main-contact">
+			@@include('_breadcrumbs.html')
+			@@include('_title.html',{
+			"title":"Контакты"
+			})
+			<section class="section-contact contact _section">
+				<div class="container">
+					<div class="contact-info">
+						<div class=" contact-info__block contact-info__block--adress">
+							<div class="contact-info__title">Адрес</div>
+							<div class="contact-info__right">Ул. Орловская 40а, офис 15, Минск, 220053,
+								Беларусь</div>
+						</div>
+						<div class="contact-info__block contact-info__block--phone">
+							<div class="contact-info__title">Телефоны</div>
+							<div class="contact-info__right">
+								<ul>
+									<li><a href="tel:+375172392373">+375 (17) 239-23-73</a></li>
+									<li><a href="tel:+375296110000">+375 (29) 611-00-00</a></li>
+									<li><a href="tel:+375297767676">+375 (29) 776-76-76</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="contact-info__block contact-info__block--mail">
+							<div class="contact-info__title">E-mail</div>
+							<div class="contact-info__right">
+								<a href="mailto:mail@nvs.by">mail@nvs.by</a>
+							</div>
+						</div>
+						<div class="contact-info__block contact-info__block--time">
+							<div class="contact-info__title">Время работы</div>
+							<div class="contact-info__right">
+								<span>Пн. - Пт.:</span>
+								<span class="contact-clock__time">09.00 - 18.00</span>
+							</div>
+						</div>
+					</div>
+					<div class="contact-map">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d6628.5752025316615!2d151.219!3d-33.830693!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sby!4v1610965414308!5m2!1sru!2sby"
+							width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+							tabindex="0"></iframe>
+					</div>
+				</div>
+				<!-- /.container -->
+			</section>
+			<!-- /.section-contact -->
+			<section class="section-infotext infotext _section">
+				<div class="container">
+					<div class="infotext-block">
+						<p>Мир наполнен разнообразными местами, которые обязательно нужно увидеть хотя бы однажды. Открытие
+							новых стран позволяет испытать новые впечатления и иначе взглянуть на свою жизнь. Увиденное может
+							стать толчком к кардинальным переменам и привести к смене места жительства. Например, переезду в
+							Соединенные Штаты Америки.</p>
+						<p>США по праву считается <b>страной больших возможностей</b>, позволяющей испытать другой уровень
+							комфорта и иной уклад жизни. Основанием для отъезда может стать выигрыш в лотерее Green Card.
+							Традиционно считается, что переезд в Штаты – невероятно сложная процедура, требующая сбора большого
+							количества документов (список документов для визы в США) и наличия веских оснований. Отчасти это
+							правда: для получения Грин Кард (американского вида на жительство) действительно требуется объемный
+							пакет документов, что может отнять какое-то время.</p>
+					</div>
+				</div>
+				<!-- /.container -->
+			</section>
+			<!-- /.section-infotext -->
+		</main>
+		<!-- /.page -->
+		@@include('_footer.html')
+	</div>
+	<!-- /.wrapper -->
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

@@ -2,7 +2,7 @@
 // FAQ - accardeon
 // ----------------------------------------------
 
-let acr = $('.accordeon-js .faq-block__link');
+let acr = $('.accordeon-js .acc-head-js');
 $(document).ready(function () {
 	acr.on('click', f_acc);
 });
