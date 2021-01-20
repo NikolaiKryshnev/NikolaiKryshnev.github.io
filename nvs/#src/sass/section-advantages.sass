@@ -1,8 +1,8 @@
 .section-advantages
 	background: #F7F7F7
-	padding-bottom: 0
+	// padding-bottom: 0
 	@media ( max-width:$md3+px )
-		padding-bottom: 20px
+		// padding-bottom: 20px
 	.advantages
 		&-row
 			display: flex
@@ -23,6 +23,8 @@
 
 			@media ( max-width:$md3+px )
 				max-width: 100%
+			&:last-child
+				margin-bottom: 0
 
 			&__number
 				position: absolute
@@ -64,3 +66,4 @@
 		display: none
 		@media ( max-width:$md3+px )
 			display: block
+			margin-top: -40px

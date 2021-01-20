@@ -22,9 +22,12 @@ body
 	transition: filter 0.3s linear
 	padding-bottom: 150px
 	z-index: 1
+	@media ( max-width:$md3+px )
+		padding-bottom: 200px
 
 	&--dark 
 		background: #f7f7f7
+
 		.breadcrumbs
 			color: #747474
 			ul li:after
@@ -52,6 +55,13 @@ body
 
 ._section
 	padding: 50px 0
+	@media ( max-width:$md3+px )
+		padding: 25px 0
+
+	@media ( max-width:$md2+px )
+		// background: #ffff
+		&::after
+			display: none
 
 .container
 	max-width: 1170px
@@ -68,14 +78,18 @@ body
 	margin-bottom: 50px
 
 	font-family: CenturyBold
-	
+	@media ( max-width:$md3+px )
+		margin: 0 0 30px 0 
+
 	&::after
 		position: absolute
 		bottom: 0
 		left: 0
 		height: 40px
 		content: url('data:image/svg+xml; base64, PHN2ZyB3aWR0aD0iOTMiIGhlaWdodD0iMiIgdmlld0JveD0iMCAwIDkzIDIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxsaW5lIHkxPSIxIiB4Mj0iNjIiIHkyPSIxIiBzdHJva2U9IiMwMUIyNTkiIHN0cm9rZS13aWR0aD0iMiIvPgo8bGluZSB4MT0iNzciIHkxPSIxIiB4Mj0iOTMiIHkyPSIxIiBzdHJva2U9IiMwMUIyNTkiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K')
-	
+		@media ( max-width:$md3+px )
+			height: 30px
+
 	@media ( max-width:$md3+px )
 		line-height: 1.2
 
@@ -113,6 +127,8 @@ body
 
 .h2
 	font-size: 2.25rem
+	@media ( max-width:$md3+px )
+		font-size: 1.7rem
 
 .h3
 	font-size: 1.5rem

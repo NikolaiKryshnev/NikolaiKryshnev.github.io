@@ -1,5 +1,7 @@
 .main-stat
 	padding-top: 60px
+	@media ( max-width:$md3+px )
+		padding-top: 40px
 
 	.stat-block
 		display: flex
@@ -44,10 +46,14 @@
 
 			.stat-block__years
 				margin-left: -100px
+				@media ( max-width:$md3+px )
+					margin-left: -40px
 
 				li
 
 					margin: 0 0 20px 100px
+					@media ( max-width:$md3+px )
+						margin-left: 35px
 
 		&__years
 			display: flex

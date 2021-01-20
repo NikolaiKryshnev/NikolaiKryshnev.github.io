@@ -14,6 +14,10 @@
 
 		.form
 			background-image: url(../img/section-form/02.png)
+			background-repeat: no-repeat
+			background-position-x: 100%
+			@media ( max-width:$md2+px )
+				background-image: none
 
 	.section-faq, .section-reviews, .section-infotext
 		background: none
@@ -23,3 +27,7 @@
 	.section-reviews
 		.reviews-row__arrow, .reviews-row__number span
 			background: #fff
+
+	.container-breadcrumbs
+		.breadcrumbs ul li a, .breadcrumbs ul li::after
+			color: $white

@@ -4,7 +4,11 @@
 	position: relative
 	z-index: 10
 	background: #f7f7f7
+	@media screen and ( max-width: 1200px )
+		padding-bottom: 15px
+
 	@media ( max-width:$md2+px )
+		padding-bottom: 50px
 		// margin-top: -4rem
 		
 .batch
@@ -14,7 +18,7 @@
 		display: flex
 		@media screen and ( max-width: 1200px )
 			overflow-x: scroll
-			
+			padding-bottom: 35px
 			&::-webkit-scrollbar
 				width: 0
 
@@ -22,13 +26,13 @@
 			margin-left: 0
 			margin-right: 0
 			flex-wrap: wrap
-    		overflow-x: initial
+			overflow-x: initial
+			padding-bottom: 0
 
 		@media ( max-width:$md3+px )
+			padding-bottom: 0
 			transform: translateY(-50px)
 			margin: 0 0 -50px 0 
-
-
 
 	&-column
 		padding: 0 15px
@@ -41,6 +45,8 @@
 		@media ( max-width:$md2+px )
 			margin: 0 0 15px 0 
 			padding: 0
+			&:last-child
+				margin-bottom: 0
 
 		&__row
 			display: flex
@@ -114,6 +120,7 @@
 		&__arrow
 			display: flex
 			align-items: flex-end
+			align-items: center
 
 			max-width: 38px
 			width: 100%

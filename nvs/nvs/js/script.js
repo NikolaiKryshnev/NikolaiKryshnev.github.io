@@ -123,6 +123,7 @@ if ($(window).width() >= 726) {
 $('.reviews-slider--js').slick({
 	dots: false,
 	slidesToShow: 1,
+	swipe: false,
 	arrows: true,
 	prevArrow: '<div class="slick-arrow slick-arrow__left slick-arrow--js"><svg width="24" height="42" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 2L3 21L22 40" stroke="#F7F7F7" stroke-width="7"/></svg></div>',
 	nextArrow: '<div class="slick-arrow slick-arrow__right slick-arrow--js"><svg width="24" height="42" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 2L3 21L22 40" stroke="#F7F7F7" stroke-width="7"/></svg></div>',

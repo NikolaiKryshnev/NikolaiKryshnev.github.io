@@ -24,6 +24,7 @@
 					flex-direction: column
 					flex-wrap: nowrap
 					height: 100%
+					width: 100%
 
 				&__top
 					@media ( max-width:$md1+px )
@@ -93,6 +94,8 @@
 						background: $green
 
 						z-index: 20
+						padding-top: 0
+						padding-bottom: 0
 
 						img
 							display: none
@@ -101,6 +104,7 @@
 							display: block
 							font-size: 1rem
 							margin: 0 auto
+							font-family: CenturyBold
 					
 					span
 						display: none
@@ -148,12 +152,23 @@
 		.reviews-row__number span
 			background: #fff
 
+	.breadcrumbs ul li a, .breadcrumbs ul li::after
+		color: $white
+
 .main-visa--usa
 	.section-form
 		.form
 			background-image: url(../img/section-form/03.png)
+			background-position-x: 100%
+			background-repeat: no-repeat
+			@media ( max-width:$md2+px )
+				background-image: none
 
 .main-visa--canada
 	.section-form
 		.form
 			background-image: url(../img/section-form/04.png)
+			background-position-x: 100%
+			background-repeat: no-repeat
+			@media ( max-width:$md2+px )
+				background-image: none	

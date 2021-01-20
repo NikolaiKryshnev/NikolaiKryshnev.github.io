@@ -4,6 +4,13 @@
 			position: relative
 			flex-wrap: wrap
 			margin-bottom: 65px
+			@media ( max-width:$md1+px )
+				margin-bottom: 40px
+			@media ( max-width:$md3+px )
+				margin-bottom: 30px
+
+			&:last-child
+				margin-bottom: 0
 
 			&-close
 				display: flex
@@ -17,7 +24,6 @@
 				height: 77px
 				background: $green
 					
-
 			&--submit
 				.btn
 					max-width: max-content
@@ -111,6 +117,9 @@
 			border-bottom: 1px solid $green
 			padding: 0 20px
 			color: #838383
+			@media ( max-width:$md3+px )
+				height: 30px
+				line-height: 30px
 
 		input[type="date"], select
 			position: relative
@@ -170,3 +179,8 @@
 			display: none
 			max-width: max-content
 			margin: 0 0 65px auto
+
+
+	.section-title
+		@media ( max-width:$md3+px )
+			margin: 0 0 90px 0 
