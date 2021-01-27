@@ -2,21 +2,28 @@
 
 let modal = $('.modal-overlay, .modal');
 
-$('.popupBtn-js').click(function () {
-	modal.addClass('active');
-	$('.wrapper').addClass('active');
+
+function showModla(modal, btn) {
+	btn.click(function () {
+		modal.addClass('active');
+		$('.wrapper').addClass('active');
+		
+	});
 	
-});
-
-$('.close-js').click(function () {
-	modal.removeClass('active');
-});
-
-$(".modal-overlay").on('click', function (e) {
-	if (e.target == this) {
+	$('.close-js').click(function () {
 		modal.removeClass('active');
-		$('.wrapper').removeClass('active');
-	}
-});
+	});
+	
+	$(".modal-overlay").on('click', function (e) {
+		if (e.target == this) {
+			modal.removeClass('active');
+			$('.wrapper').removeClass('active');
+		}
+	});
+}
+
+showModla($('.modal-overlay, .modal--feedback'), $('.popupBtn-js'));
+showModla($('.modal-overlay, .modal--reviews'), $('.reviews-slider__block .btn'));
+
 
 //</POPUP>---------------------------------------

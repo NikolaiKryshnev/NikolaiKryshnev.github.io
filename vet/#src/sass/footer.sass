@@ -1,0 +1,107 @@
+.footer
+	padding: 35px 0 20px
+
+	background: #086293
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.09)
+
+	color: $white
+	a
+		transition: border-color 0.3s linear
+		border-bottom: 1px solid rgba($white , 0)
+
+		&:hover
+			border-color: $white
+
+	&-top
+		display: flex
+		align-items: center
+		justify-content: space-between
+		flex-wrap: wrap
+
+		padding-bottom: 50px
+		border-bottom: 1px solid #fff
+		@media ( max-width:$md1+px )
+			align-items: flex-start
+
+		@media ( max-width:$md3+px )
+			padding-bottom: 35px
+
+	&-logo
+		max-width: 190px
+		width: 100%
+		height: auto
+		@media ( max-width:$md3+px )
+			margin-bottom: 30px
+
+	&-menu
+		width: calc(100% - 190px)
+		@media ( max-width:$md3+px )
+			width: 100%
+
+		&__ul
+			display: flex
+			justify-content: flex-end
+			@media ( max-width:$md1+px )
+				flex-direction: column
+
+			li
+				margin-left: 0
+				margin-bottom: 20px
+
+				text-align: right
+				@media ( max-width:$md1+px )
+					&:last-child
+						margin-bottom: 0
+
+				@media ( max-width:$md3+px )
+					text-align: left
+					margin-bottom: 13px
+
+				& + li
+					margin-left: 25px
+					@media ( max-width:$md1+px )
+						margin-left: 0
+						margin-bottom: 25px
+					@media ( max-width:$md1+px )
+						margin-bottom: 13px
+
+	&-phone
+		margin: 20px 0 0 auto
+		font-family: OpenSans-Bold
+		@media ( max-width:$md1+px )
+			margin: -25px auto 0 0
+
+		@media ( max-width:$md3+px )
+			margin: 10px 0 0 0 
+
+
+	&-bottom
+		padding-top: 50px
+
+		display: flex
+		justify-content: space-between
+		@media ( max-width:$md3+px )
+			padding-top: 35px
+			flex-wrap: wrap
+
+		&__box
+			text-align: left
+			@media ( max-width:$md1+px )
+				max-width: 40%
+			@media ( max-width:$md3+px )
+				max-width: 100%
+
+			&:last-child
+				text-align: right
+				@media ( max-width:$md3+px )
+					text-align: left
+					margin-top: 15px
+
+
+	&-dev
+		margin-top: 15px
+		text-align: right
+		@media ( max-width:$md3+px )
+			text-align: left
+		a
+			font-family: OpenSans-Bold

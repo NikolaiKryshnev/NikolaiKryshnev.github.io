@@ -1,0 +1,86 @@
+.section-ban
+
+.ban
+	.ban-slider
+		&__row
+			@include flexbox()
+
+			align-items: center
+			justify-content: flex-start
+
+			color: $white
+			height: 95vh
+			background-repeat: no-repeat
+			background-size: cover
+
+			overflow: hidden
+			@media screen and ( min-width: 1200px )
+				min-height: 650px
+
+			@media ( max-width:$md2+px )
+				min-height: 500px
+				
+
+		&__block
+			position: relative
+
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+
+			width: 100%
+			height: auto
+
+			margin: 50px 0 
+			padding: 50px 0 
+
+			background: linear-gradient(91.26deg, #086293 7.06%, #086293 25.07%, rgba(8, 98, 147, 0) 79.1%, rgba(3, 3, 3, 0) 79.1%)
+			@media ( max-width:$md2+px )
+				background: linear-gradient(91.26deg, #086293 7.06%, #086293 49.46%, rgba(8, 98, 147, 0) 79.1%, rgba(3, 3, 3, 0) 79.1%);
+			&::before
+				@include pseudoEl(block, absolute, '')
+				left: 0
+				top: 0
+
+				width: 100%
+				@include translateX(-100%)
+				height: 100%
+				background: #086293
+				
+			.btn
+				@media ( max-width:$md3+px )
+					margin-top: 23px
+
+		&__text
+			max-width: 470px
+			width: 100%
+			height: auto
+
+			margin-bottom: 35px
+			font-size: 1rem
+
+
+	.slick-dotted.slick-slider
+		margin: 0
+		
+.slick-dots 
+	bottom: 3rem
+	@media ( max-width:$md2+px )
+	bottom: 1.5rem
+
+	li 
+		button
+			background: $white
+			width: 18px
+			height: 18px
+			border-radius: 50%
+			@include transitBgColor(0.3s)
+			&::before,&::after
+				display: none
+				
+		&.slick-active
+			button
+				background: $orange
+
+
+

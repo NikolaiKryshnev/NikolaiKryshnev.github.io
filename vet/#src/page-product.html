@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Продукт"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html')
+		<main class="main">
+			@@include('_breadcrumbs.html')
+			<section class="section-product product   _section">
+				<div class="container">
+					<div class="product-block">
+						<div class="product-block__img">
+							<div class="product-block__imgBox">
+								<img src="./img/section-product/01.jpg" alt="">
+							</div>
+						</div>
+
+						<div class="product-block__info">
+							<div class="product-block__title h2">
+								MagNA Pure Compact Nucleic Acid Isolation Kit I
+							</div>
+
+							<div class="product-block__text">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+								labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+								laboris nisi ut aliquip ex ea commodo consequat.
+							</div>
+
+							<div class="product-block__number">
+								Номер продукта:<span class="product-number">1244235533</span>
+							</div>
+
+							<button class="btn">
+								Свяжитесь с нами
+							</button>
+						</div>
+						<!-- /.product-block__info -->
+					</div>
+					<!-- /.product-block -->
+
+					<div class="tabs">
+						<ul class="tab-header">
+							<li class="tab-header__item js-tab-trigger active" data-tab="1">Общая информация</li>
+							<li class="tab-header__item js-tab-trigger" data-tab="2">Применение</li>
+							<li class="tab-header__item js-tab-trigger" data-tab="3">Инструкции</li>
+						</ul>
+						<!-- /.tab-header -->
+						
+						<div class="tab-content">
+							<div class="tab-content__item js-tab-content active" data-tab="1">
+								1Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</div>
+							<div class="tab-content__item js-tab-content" data-tab="2">
+								2Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. olor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</div>
+							<div class="tab-content__item js-tab-content" data-tab="3">
+								3Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing e aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</div>
+						</div>
+						<!-- /.tab-content -->
+					</div>
+					<!-- /.tabs -->
+				</div>
+				<!-- /.container -->
+			</section>
+			<!-- /.section-product -->
+		</main>
+		<!-- /.main -->
+		@@include('_footer.html')
+	</div>
+	<!-- /.wrapper -->
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+
+</body>
+
+</html>

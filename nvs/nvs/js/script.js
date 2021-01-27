@@ -175,34 +175,43 @@ if ($(window).width() <= 526) {
 // ----------------------------------------------
 //  ITINERARY - position element section-itinerary
 // ----------------------------------------------
+// if(document.querySelectorAll('.dot-js')){
+// let blockText = document.querySelectorAll('.itinerary-block'),
+// 	dot = document.querySelector('.desktop').querySelectorAll('.dot-js');
 
-let posEl,
-	block = $('.itinerary-block');
-function positonDot(elem, number) {
-	let elements = elem;
-	for (let i = 0; i < elements.length; i++) {
-		let el = elements[i];
-		posEl = $(el).offset()
-			$(block[i]).offset({ top: posEl.top + number, left: posEl.left })
-	}
-}
+// function posElem(element) {
+// 	let parentPos = document.querySelector('.itinerary-blocks').getBoundingClientRect(),
+// 		childrenPos = element,
+// 		relativePos = {};
 
-function mapBlockPosition() {
-	if ($(window).width() > 992) {
-		positonDot($('.itinerary-line.desktop .dot-js'), +25)
-	} else {
-		positonDot($('.itinerary-line.tablet .dot-js'), -15)
-	}
-}
+// 	for (let i = 0; i < childrenPos.length; i++) {
+// 		let el = childrenPos[i],
+// 			posEl = el.getBoundingClientRect()
 
-$(window).resize(mapBlockPosition);
+// 		relativePos.top = posEl.top - parentPos.top,
 
-$(document).ready(function () {
-	mapBlockPosition()
-});
+// 			relativePos.right = posEl.right - parentPos.right,
+// 			relativePos.bottom = posEl.bottom - parentPos.bottom,
+// 			relativePos.left = posEl.left - parentPos.left;
 
+// 		blockText[i].setAttribute("style", `left:${relativePos.left}px; top: ${relativePos.top}px;`);
+// 	}
+// };
 
+// function mapBlockPosition() {
+// 	if ($(window).width() > 992) {
+// 		posElem(document.querySelector('.desktop').querySelectorAll('.dot-js'))
 
+// 	} else {
+// 		posElem(document.querySelector('.tablet').querySelectorAll('.dot-js'))
+// 	}
+// }
+
+// $(window).resize(mapBlockPosition);
+// $(document).ready(function () {
+// 	mapBlockPosition()
+// });
+// }
 // ----------------------------------------------
 // FAQ - accardeon
 // ----------------------------------------------
@@ -495,24 +504,30 @@ btnChild.click(function () {
 
 //<POPUP>---------------------------------------
 
-let modal = $('.modal-overlay, .modal');
 
-$('.popupBtn-js').click(function () {
-	modal.addClass('active');
-	$('.wrapper').addClass('active');
+
+function showModla(modal, btn) {
+	btn.click(function () {
+		modal.addClass('active');
+		$('.wrapper').addClass('active');
+		
+	});
 	
-});
-
-$('.close-js').click(function () {
-	modal.removeClass('active');
-});
-
-$(".modal-overlay").on('click', function (e) {
-	if (e.target == this) {
+	$('.close-js').click(function () {
 		modal.removeClass('active');
-		$('.wrapper').removeClass('active');
-	}
-});
+	});
+	
+	$(".modal-overlay").on('click', function (e) {
+		if (e.target == this) {
+			modal.removeClass('active');
+			$('.wrapper').removeClass('active');
+		}
+	});
+}
+
+showModla($('.modal-overlay, .modal--feedback'), $('.popupBtn-js'));
+showModla($('.modal-overlay, .modal--reviews'), $('.reviews-slider__block .btn'));
+
 
 //</POPUP>---------------------------------------
 

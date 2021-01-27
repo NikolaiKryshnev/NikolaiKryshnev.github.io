@@ -1,8 +1,7 @@
 .section-services
 	position: relative
-	// padding-top: 0 
+
 	@media ( max-width:$md3+px )
-		// padding-top: 50px
 
 	&:after
 		@include pseudoEl(block, absolute, '')
@@ -26,7 +25,6 @@
 		margin: 0 -15px
 		@media ( max-width:$md1+px )
 			flex-wrap: wrap
-
 	&-column
 		max-width: 33.33333%
 		padding: 0 15px
@@ -61,6 +59,7 @@
 				@include img_01()
 
 		&__title
+			height: 55px
 			text-decoration: none
 			font-family: CenturyBold
 			color: #000
@@ -108,6 +107,14 @@
 			
 				margin-top: 0
 				padding: 0 0 0 22px
+
+				a
+					text-decoration: none
+					color: #000
+					@include transitColor(0.3s)
+					&:hover
+						color: $green
+
 				@media ( max-width:$md1+px )
 					margin: 10px 0 0 0
 					float: left
@@ -122,7 +129,7 @@
 					@include verticalcenter()
 					width: 11px
 					height: 19px
-					content: url('data:image/svg+xml; base64, PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTkiIHZpZXdCb3g9IjAgMCAxMiAxOSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIgMkw5IDkuNUwyIDE3IiBzdHJva2U9IiMwMUIyNTkiIHN0cm9rZS13aWR0aD0iMyIvPgo8L3N2Zz4K')
+					content: url("data:image/svg+xml,%3Csvg viewBox='0 0 12 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2L9 9.5L2 17' stroke='%2301B259' stroke-width='3'/%3E%3C/svg%3E")
 					left: 0
 					bottom: 0	
 					@media ( max-width:$md1+px )

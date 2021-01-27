@@ -31,8 +31,8 @@
 
 		@media ( max-width:$md3+px )
 			padding-bottom: 0
-			transform: translateY(-50px)
-			margin: 0 0 -50px 0 
+			transform: translateY(-100px)
+			margin: 0 0 -100px 0 
 
 	&-column
 		padding: 0 15px
@@ -61,6 +61,7 @@
 				box-shadow: none
 
 		&__top
+			position: relative
 			display: flex	
 			align-items: center
 			justify-content: center
@@ -139,10 +140,11 @@
 				background: #01B259
 
 			.batch-column__arrow
-				transform: translateX(10px)
-
-			svg
-				filter: brightness(0) invert(1)
+				transform: translateX(5px)
+				
+			.batch-column__img
+				img
+					filter: brightness(0) invert(1)
 
 	.batch-box
 		&__block

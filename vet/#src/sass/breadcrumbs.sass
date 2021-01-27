@@ -1,0 +1,38 @@
+	
+ul.breadcrumbs
+	display: flex
+	
+	padding: 20px 0
+
+	list-style-type: none
+
+	font-size: 0.8rem
+	@media ( max-width: 526px )
+		font-size: 0.9rem
+		
+		padding: 10px 0
+
+	li
+		position: relative
+		padding-left: 15px
+
+		&::after
+			content: "-"
+			position: absolute
+			left: 0
+			top: 0
+
+			color: #A8A8A8
+
+			margin-left: 6px
+
+		&:first-child
+			padding-left: 0
+			
+			&:after
+				display: none
+
+		a
+			text-decoration: none
+			color: #A8A8A8
+

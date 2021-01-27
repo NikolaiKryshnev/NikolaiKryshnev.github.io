@@ -1,12 +1,26 @@
 .main-services
+	.breadcrumbs ul li a, .breadcrumbs ul li span
+		color: #ffffff
+		
 	.section-services
 		background: #f7f7f7
 		&::after
 			display: none
 
+		.services-column__list
+			a
+				text-decoration: none
+				color: #000000
+				@include transitColor(0.3s)
+				&:hover
+					color: $green
+
 	.services-row
-		margin: 0 -15px -192px
-		transform: translateY(-192px)
+		margin: 0 -15px -242px
+		transform: translateY(-242px)
+		@media ( max-width:$md3+px )
+			margin: 0 -15px -100px
+			transform: translateY(-100px)
 
 	.section-itinerary
 		padding-top: 50px
@@ -39,6 +53,8 @@
 		.reviews-row__arrow, .reviews-row__number span
 			background: #fff
 
+	.breadcrumbs ul li a, .breadcrumbs ul li::after
+		color: $white
 
 .main-news
 	.pagination

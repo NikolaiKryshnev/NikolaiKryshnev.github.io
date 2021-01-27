@@ -27,6 +27,7 @@
 			&--submit
 				.btn
 					max-width: max-content
+					margin-top: 0
 					margin-bottom: 23px
 
 				a
@@ -38,7 +39,7 @@
 			
 
 			.table-row
-				margin-bottom: 70px
+				margin-bottom: 0
 				@media ( max-width:$md3+px )
 					margin-bottom: 44px
 
@@ -54,7 +55,7 @@
 					line-height: 22px
 
 			&-column
-				padding: 40px 85px 50px
+				padding: 40px 85px 40px
 				max-width: 100%
 				border: none
 				@media ( max-width:$md2+px )
@@ -133,6 +134,7 @@
 				@include verticalcenter()
 				right: 0
 		input[type="date"]
+			background: #fff
 			&::-webkit-calendar-picker-indicator
 				opacity: 0
 				z-index: 2	
@@ -149,7 +151,8 @@
 			background: url(../img/icons/icons.svg#icon-arrow) no-repeat right
 			-webkit-appearance: none
 			background-size: 20px
-			background-position-x: 100%
+			font-size: 1rem
+			background-position-x: calc( 100% - 20px )
 
 		textarea
 			margin-top: 16px
@@ -178,8 +181,7 @@
 		.btnAdd--js
 			display: none
 			max-width: max-content
-			margin: 0 0 65px auto
-
+			margin: 20px 0 65px auto
 
 	.section-title
 		@media ( max-width:$md3+px )

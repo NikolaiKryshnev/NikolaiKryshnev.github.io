@@ -1,0 +1,87 @@
+.main-error
+	padding: 0
+	padding-bottom: 0
+	@media ( max-width:$md3+px )
+		padding-bottom: 0
+
+.section-error
+	background: bottom right url(../img/section-error/02.png) no-repeat
+	@media ( max-width:$md1+px )
+		padding-top: 30px
+		background: 0 0 url(../img/section-error/02.png) no-repeat
+
+	@media ( max-width:$md2+px )
+		background: 10% 100% url(../img/section-error/02.png) no-repeat
+		height: 100vh
+		display: flex
+		align-items: center
+
+
+
+	// padding-top: 70px
+
+	.container
+
+	.error-block
+		// padding-top: 100px
+		// min-height: 800px
+		// padding-bottom: 50px
+
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: flex-end
+		// background: top center url(../img/section-error/01.png) no-repeat
+
+		&__text
+			max-width: 350px
+			width: 100%
+			margin-bottom: 10px
+			margin-top: 40px
+
+			font-family: CenturyBold
+			font-size: 18px
+			line-height: 22px
+			text-align: center
+			color: #000000
+		
+			@media ( max-width:$md3+px )
+				margin-top: 20px
+				
+		&__span
+
+			font-size: 16p
+			line-height: 20px
+			text-align: center
+
+			color: #A29F9F
+			margin-bottom: 30px
+
+		.input-block
+			position: relative
+			max-width: 365px
+			width: 100%
+
+		input
+			width: 100%
+			padding: 0 20px  0 40px
+			border: 1px solid #01B259
+			box-sizing: border-box
+			border-radius: 30px
+			width: 100%
+			height: 40px
+			line-height: 40px
+
+		.search-btn
+			@include verticalcenter()
+			right: 20px
+			border: none
+			background: none
+
+		.search-btn__icon
+			width: 16px
+			height: 16px
+			
+		.btn
+			margin-top: 30px
+			margin-bottom: 50px

@@ -1,0 +1,426 @@
+.header
+	background: $white
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.12)
+
+	.container
+		position: relative
+		@include flexbox()
+		flex-wrap: wrap
+
+	&-top
+		@include flexbox()
+		justify-content: space-between
+		align-items: center
+
+
+		padding: 5px 0 15px
+
+		border-bottom: 1px solid $orange
+
+		width: 100%
+		@media ( max-width:$md1+px )
+			border: none
+			
+		@media ( max-width:$md2+px )
+			border-bottom: 1px solid $orange
+
+		.logo
+			max-width: 115px
+			width: 100%
+			height: auto
+			@media ( min-width:$md3+px )
+				@media ( max-width:$md1+px ) 
+					max-width: 145px
+		
+		&__right
+			@include flexbox()
+			justify-content: space-between
+			align-items: center
+			@media ( max-width:$md1+px )
+				max-width: 100%
+				width: 100%
+				height: auto
+				justify-content: flex-end
+
+		&__phone
+			position: relative
+			font-size: 1.125rem
+			font-family: OpenSans-Bold
+			padding: 0 0 0 33px
+			@include transitColor(0.3s)
+			@media ( max-width:$md1+px )
+				margin: 0 75px 0 20px
+			@media ( max-width:$md2+px )
+				margin-left: 0
+
+			&:hover
+				color: $orange
+
+			&::before
+				@include pseudoEl(block, absolute, '')
+				left: 0
+				top: 50%
+				
+				background: url(../img/icons/icons.svg#icon-phone)
+				width: 23px 
+				height: 23px
+
+				transform: translateY(-50%)
+
+		&__lan[class]
+			display: flex
+			font-size: 1rem
+			@media ( max-width:$md1+px )
+				margin-right: 76px
+
+			@media ( max-width:$md2+px )
+				margin: 0 0px 0 0
+
+			@media ( max-width:$md3+px )
+				margin-right: 0
+
+			li
+				margin-right: 15px
+				 
+				& + li
+					margin: 0
+
+			a
+				font-family: OpenSans-SemiBold
+				@include transitColor(0.3s)
+
+				&:hover, &.active
+					color: $orange
+
+
+	&-bot
+		width: 100%
+		display: flex
+		justify-content: space-between
+		@media ( max-width:$md2+px )
+			padding: 15px 0
+
+
+
+
+	&-search__btn 
+		margin: 0 70px 0 80px 
+		@media ( max-width:$md1+px )
+			margin: 0 77px 0 0
+		@media ( max-width:$md3+px )
+			margin-right: 45px
+
+		svg
+			width: 20px
+			height: 20px
+
+	&-menu
+		// padding: 20px 0
+		width: 100%
+		@media ( max-width:$md1+px )
+			display: none
+			position: absolute
+			z-index: 999
+			background: $white
+			right: 0
+			top: 0
+			// display: none
+			min-width: 320px
+			max-width: 30%
+			margin: 0 15px 0 0
+
+			&.active
+				display: block
+
+		&__ul
+			@include flexbox()
+			justify-content: space-between
+			@media ( max-width:$md1+px )
+				display: flex
+				flex-direction: column
+			
+				&::after
+					@include pseudoEl(block, absolute, '')
+					width: 100%
+					top: 0
+					height: 100%
+					box-shadow: inset 0 0 15px rgba(0,0,0,.12)
+
+			li 
+				cursor: pointer
+				position: relative
+				padding: 16px
+				@media ( max-width:$md1+px )
+					z-index: 2
+					text-align: right
+					border-bottom: 1px solid #EDEDED
+					margin: 0 15px
+					padding: 0
+
+				&:first-child
+					padding-left: 0
+					@media ( max-width:$md1+px )
+						padding-left: 0
+
+				&:last-child
+					padding-right: 0
+					@media ( max-width:$md1+px )
+						border-bottom: none
+						padding-right: 0
+
+				a
+					display: block
+					padding: 12px 0
+					text-transform: uppercase
+					font-size: 1.125rem
+
+					@include transitColor(0.3s)
+
+	.ul-Submenu
+		&__block
+			margin: 0
+			display: none
+			// top: calc( 100% + 20px )
+			top: 100%
+			box-shadow: inset 0 0 0 -15px rgba(0, 0, 0, 0.12)
+			padding: 0
+			z-index: 99
+			background: $white
+			@include horizcenter()
+			width: max-content
+			max-width: 320px
+			@media ( max-width:$md1+px )
+				border-top: 1px solid #ededed
+				background: #FAFAFA
+				padding: 0
+				position: relative
+				@include translateX(0)
+				left: 0
+				
+				width: 100%
+			
+			&::after
+				@include pseudoEl(block, absolute, '')
+				width: 100%
+				top: 0
+				height: 100%
+				box-shadow: inset 0 0 15px rgba(0,0,0,.12)
+				@media ( max-width:$md1+px )
+					display: none
+
+			li
+				position: relative
+				z-index: 99
+				padding: 12px 12px
+				margin: 0 18px
+
+				border-bottom: 1px solid #EDEDED
+				text-align: center
+				@media ( max-width:$md1+px )
+					text-align: right
+					padding: 0
+					margin: 0
+					a
+						display: block
+						padding: 12px 0
+
+					&:last-child
+						padding-bottom: 0
+
+
+				
+				&:last-child
+					border: 0
+
+				a
+					position: relative
+
+					.header-arrow
+						right: 0
+						@media ( max-width:$md1+px )
+							right: -25px
+			@media screen and ( max-width: 1024px)
+				.ul-Submenu > a
+					// pointer-events: none
+
+				.ul-Submenu > a svg
+					// pointer-events: auto
+
+		&.hover
+			&>.ul-Submenu__block, li.hover > .ul-Submenu__block
+				display: block
+				
+			>a, li.hover > a
+				color: $orange
+
+			&>.header-arrow, li.hover .header-arrow
+				top: 50%
+
+				transform: rotate(90deg) translateX(-50%)
+				@media ( max-width:$md1+px )
+					top: calc(25% - 51px)
+
+
+			@media ( max-width:$md1+px )
+				li.hover .header-arrow
+					top: 50%
+
+			
+	.ul-Submenu__block--right
+		top: -10px
+		left: calc( 100% + 18px )
+		z-index: 100
+		transform: translateX(0)
+
+	&-arrow
+		cursor: pointer
+		@include verticalcenter()
+		right: 0
+		width: 12px
+		height: 12px
+		transition: transform 0.3s linear
+		@media ( max-width:$md1+px )
+			width: 20px
+			height: 20px
+
+			right: auto
+			left: 0
+			top: calc(50%)
+			transform: translateY(-50%)
+
+	&-search
+		position: absolute
+		top: -100%
+		left: 0
+		right: 0
+		bottom: 0
+
+		margin: 0 15px
+
+		height: 63px
+		border-bottom: 1px solid #086293
+		transition: top 0.3s linear
+
+		background: $white
+
+		&.active
+			z-index: 99
+			top: 0
+			display: block
+
+		form
+			height: 100%
+			width: 100%
+
+			display: flex
+			align-items: center
+
+			input
+				line-height: 62px
+				font-size: 1rem
+				padding: 0 0 0 20px
+				width: 100%
+
+		.header-search__result
+			box-shadow: 0 0 15px rgba(0,0,0,.12)
+			padding: 4px 25px 
+			font-size: 1rem
+			background: #fff
+
+			li
+				border-bottom: 1px solid #E0E0E0
+				&:last-child
+					border: 0
+
+				a
+					display: block
+					width: 100%
+					padding: 8px 0
+					@include transitColor(0.3s)
+					
+				a:hover
+					color: $orange
+
+
+	.search-btn
+		margin-right: 20px
+		svg
+			width: 20px
+			height: 20px
+
+	.search-close
+		position: relative
+
+		width: 20px
+		height: 20px
+
+		&::after, &::before
+			@include pseudoEl(block, absolute, '')
+			transform: translateX(-50%)
+			left: 50%
+			top: 0
+			display: flex
+
+			width: 1px
+			height: 20px
+			background: $orange
+
+		&::after
+			transform: translateX(-50%) rotate(45deg)
+
+		&::before
+			transform: translateX(-50%) rotate(-45deg)
+
+.burger
+	display: none
+	position: relative
+
+	width: 25px
+	height: 20px
+	@media ( max-width:$md1+px )
+		display: block
+
+	.burger-line
+		position: absolute
+
+		display: block
+
+		padding: 0
+
+		width: 25px
+		height: 2px
+
+		background-color: black
+		
+		border-radius: 4px
+		transition: all 0.4s ease-in-out
+
+	.burger-lineOne
+		top: 0
+
+	.burger-lineTwo
+		top: 50%
+		margin: -1px 0 0 0
+
+	.burger-lineThree
+		top: 50%
+		margin: -1px 0 0 0
+		right: 0
+
+	.burger-lineFour
+		bottom: 0
+
+	&.active
+		.burger-lineOne
+			transform: translateX(40px)
+			background-color: transparent
+
+		.burger-lineTwo
+			transform: rotate(45deg)
+
+		.burger-lineThree
+			transform: rotate(-45deg)
+
+		.burger-lineFour
+			transform: translateX(-40px)
+			background-color: transparent

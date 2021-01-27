@@ -1,5 +1,4 @@
 .section-itinerary
-	position: relative
 	margin-top: 50px
 	padding-top: 0
 
@@ -7,16 +6,26 @@
 
 	.itinerary
 		&-blocks
+			position: relative
+
 			// height: 860px
 			width: 100%
 
 		&-block
+			margin-top: 15px
 			position: absolute
 			z-index: 2
 			max-width: 280px
 			width: 100%
 			height: auto
 			// padding-top: 20px
+			&:nth-child(3)
+				margin-left: -205px
+				text-align: right
+				@media ( max-width:$md1+px )
+					margin-left: 0
+					text-align: left
+				
 			@media screen and ( max-width: 1200px )
 				font-size: 0.88rem
 				max-width: 220px
@@ -24,6 +33,7 @@
 				max-width: 80%
 				padding-left: 3rem
 				padding-top: 0
+				margin-top: -5px
 				
 
 			&__title
