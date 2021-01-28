@@ -1,4 +1,4 @@
-function showBlockClick(btn, block, main, closeBtn) {
+function showBlockClick(btn, block, main) {
 	btn.click(function () {
 		btn.toggleClass('active');
 		block.toggleClass('active');
@@ -15,16 +15,16 @@ function showBlockClick(btn, block, main, closeBtn) {
 
 	});
 
-	if ($('button').is('closeBtn')) {
+	// if (closeBtn.hasClass('closeBtn')) {
 
-		closeBtn.click(function () {
+		$('.search-close--js').click(function () {
 			btn.removeClass('active');
 			block.removeClass('active');
 			main.removeClass('active');
 			$('.search-input--js').val('');
 
 		});
-	}
+	// }
 
 	main.on('click', function (e) {
 		if (e.target == this) {
@@ -38,4 +38,4 @@ function showBlockClick(btn, block, main, closeBtn) {
 }
 showBlockClick($('.burger--js'), $('.header-menu--js'), $('.main'))
 
-showBlockClick($('.search-btn--js'), $('.header-search--js'), $('.main'), $('.search-close--js'))
+showBlockClick($('.search-btn--js'), $('.header-search--js'), $('.main'))

@@ -87,8 +87,8 @@ $('.ban-slider--js').slick({
 	dots: true,
 	slidesToShow: 1,
 	arrows: false,
-	// autoplay: true,
-	// autoplaySpeed: 3000,
+	autoplay: true,
+	autoplaySpeed: 3000,
 });
 
 // $('.slider-three').slick({
@@ -194,7 +194,7 @@ function f_acc() {
 	}
 
 }
-		function showBlockClick(btn, block, main, closeBtn) {
+		function showBlockClick(btn, block, main) {
 	btn.click(function () {
 		btn.toggleClass('active');
 		block.toggleClass('active');
@@ -211,16 +211,16 @@ function f_acc() {
 
 	});
 
-	if ($('button').is('closeBtn')) {
+	// if (closeBtn.hasClass('closeBtn')) {
 
-		closeBtn.click(function () {
+		$('.search-close--js').click(function () {
 			btn.removeClass('active');
 			block.removeClass('active');
 			main.removeClass('active');
 			$('.search-input--js').val('');
 
 		});
-	}
+	// }
 
 	main.on('click', function (e) {
 		if (e.target == this) {
@@ -234,8 +234,9 @@ function f_acc() {
 }
 showBlockClick($('.burger--js'), $('.header-menu--js'), $('.main'))
 
-showBlockClick($('.search-btn--js'), $('.header-search--js'), $('.main'), $('.search-close--js'))
+showBlockClick($('.search-btn--js'), $('.header-search--js'), $('.main'))
 
+		
 
 
 		//<POPUP>---------------------------------------

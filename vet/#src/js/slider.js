@@ -5,8 +5,8 @@ $('.ban-slider--js').slick({
 	dots: true,
 	slidesToShow: 1,
 	arrows: false,
-	// autoplay: true,
-	// autoplaySpeed: 3000,
+	autoplay: true,
+	autoplaySpeed: 3000,
 });
 
 // $('.slider-three').slick({
