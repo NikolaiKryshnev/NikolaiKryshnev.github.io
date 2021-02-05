@@ -1,0 +1,188 @@
+.section-services
+	position: relative
+	.container
+		position: relative !important
+		z-index: 2
+		
+.services
+	&-row
+		display: flex
+		flex-wrap: wrap
+
+		margin: 0 -15px
+
+	&-col
+		padding: 0 15px
+
+		max-width: 33.33333%
+		width: 100%
+		@media ( max-width:$md1+px )
+			max-width: 50%
+			
+			padding-bottom: 15px
+
+		@media ( max-width:$md2+px )
+			max-width: 100%
+			&:last-child
+				padding-bottom: 0
+
+	&-block
+		display: flex
+		flex-direction: column
+
+		height: 100%
+
+		padding-top: 35px
+
+		background: #FFFFFF
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12)
+		@media ( max-width:$md3+px )
+			margin: 30px 0 0 0
+
+		&__title
+			text-align: center
+			margin-bottom: 30px
+			@media ( max-width:$md3+px )
+				margin-bottom: 20px
+
+		&__text
+			height: 100%
+			padding: 0 20px 35px 50px
+			@media ( max-width:$md2+px )
+				padding: 0 35px 35px 35px 
+
+		&__list
+			li
+				position: relative
+				margin: 0 0 20px 0 
+				padding: 0 0 0 21px
+				@media ( max-width:$md3+px )
+					margin-bottom: 12px
+
+				&:last-child
+					margin: 0
+
+				&::after
+					@include pseudoEl(block, absolute, '')
+					background: url("data:image/svg+xml,%3Csvg viewBox='0 0 7 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='7' height='7' fill='%23F94244'/%3E%3C/svg%3E ") 100% 100% no-repeat
+
+					left: 0
+					top: 8px
+					// @include translateY(-50%)
+
+					height: 7px
+					width: 7px	
+
+
+		.btn
+			max-width: 100%
+			height: 90px
+			line-height: 90px
+			pointer-events: auto
+
+	.bgSvg--3
+		left: 0 !important
+		right: auto !important
+		bottom: 0 !important
+		@media ( max-width:$md1+px )
+			width: 500px
+			left: auto !important
+			right: 10% !important
+			bottom: 10% !important
+
+		@media ( max-width:$md2+px )
+			bottom: -10% !important
+			left: auto !important
+			right: -15% !important
+			width: 250px
+			height: 250px
+
+	&-box
+		position: relative
+
+		display: flex
+
+		width: 100%
+
+		background: #FFFFFF
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.13)
+
+		margin-bottom: 22px
+
+		&:first-child::after, &:last-child::before
+			@include pseudoEl(block, absolute, '')
+			top: 0
+			right: 0
+
+			margin: -13px -13px 0 0
+
+			width: 324px
+			height: 130px
+			
+			background: $red
+		
+		&:last-child::before
+			top: auto
+			bottom: 0
+			right: auto
+			left: 0
+
+			margin: 0 0 -13px -13px
+
+		&__img
+			position: relative
+			z-index: 2
+
+			max-width: 440px
+			width: 100%
+			height: auto
+
+			@include img_03(8.4rem)
+
+		&__imgBox
+			@include img_02()
+
+			img
+				@include img_01()
+		
+		&__info
+			position: relative
+			z-index: 2
+
+			display: flex
+			flex-direction: column
+
+			padding-bottom: 40px
+			background: $white
+
+			width: 100%
+
+		&__title
+			background: rgba(245, 245, 245, 0.78)
+			padding: 30px 40px 30px 40px
+			.title-number
+				padding-right: 22px
+				color: $red
+
+		&__text
+			margin: 23px 40px 0 40px
+			height: 80px
+			line-height: 1.2
+			overflow: hidden
+
+			b
+				color: $red
+
+		.btn-stroke__red
+			margin: auto 0 0 40px
+			max-width: max-content
+
+
+.main-study
+	._section
+		position: relative
+		z-index: 99
+		background: $white
+	.container
+		display: flex
+		flex-wrap: wrap

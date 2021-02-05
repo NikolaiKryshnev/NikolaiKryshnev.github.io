@@ -1,0 +1,104 @@
+.section-info
+	position: relative
+	@media ( max-width:$md2+px )
+		padding-bottom: 190px
+	
+	@media ( max-width:$md3+px )
+		padding: 0 0 250px 0 
+
+	.container
+		@media screen and ( min-width: 991px )
+			position: relative
+
+.info
+	&-box
+		max-width: 940px
+		width: 100%
+
+		@include img_03(17.4rem)
+		overflow: inherit
+
+		margin-right: 20%
+		@media ( max-width:$md1+px )
+			// margin-bottom: 20%
+
+		@media ( max-width:$md2+px )
+			margin-right: 0
+			// margin-bottom: 35%
+			padding: 10rem 0
+
+		&__img
+			@include img_02()
+			img
+				@include img_01()
+
+		&::after
+			@include pseudoEl(block, absolute, '')
+			left: 0
+			bottom: 0
+
+			margin-left: -20px
+			margin-bottom: -20px
+
+			width: 432px
+			height: 40%
+			background: $red
+
+	&-block
+		position: absolute
+		right: 0
+		bottom: 0
+		z-index: 2
+
+		padding: 44px 60px 32px
+
+		max-width: 567px
+		width: 100%
+		height: auto
+
+		background: #FFFFFF
+		@media ( max-width:$md1+px )
+			// margin: 0 0 -20% 0 
+		@media ( max-width:$md2+px )
+			max-width: calc( 100% - 40px ) 
+		@media ( max-width:$md3+px )
+			padding: 20px
+
+		&__title
+			text-transform: uppercase
+			font-size: 1.25rem
+			font-family: Montserrat-ExtraBold
+			line-height: 1.2
+
+			margin: 0 0 12px 0 
+
+		&__text
+			color: #818181
+
+			margin: 0 0 28px 0 
+
+.btn-stroke__red
+	position: relative
+
+	color: $red 
+	font-family: Montserrat-Bold
+	text-decoration: none
+	background: none
+
+	@include transitColor(0.3s)
+	padding: 0 50px 0 0
+	svg
+		width: 40px
+		height: 18px
+		@include pseudoEl(block, absolute, '')
+		top: 50%
+		@include translateY(-50%)
+		right: 0
+		path
+			transition: stroke 0.3s linear
+
+	&:hover
+		color: $black
+		svg
+			path
+				stroke: $black
