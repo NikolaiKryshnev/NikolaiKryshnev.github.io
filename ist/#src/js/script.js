@@ -22,6 +22,8 @@
 		//<TASK>---------------------------------------
 
 		@@include('header.js')
+		@@include('burger.js')
+
 		@@include('slider.js')
 
 		@@include('popup.js')

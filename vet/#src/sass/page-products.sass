@@ -84,6 +84,9 @@
 	@media ( max-width:$md2+px )
 		max-width: 100%
 
+	@media ( max-width:$md3+px )
+		padding-top: 20px
+
 	&-title
 		color: #086293
 		font-family: OpenSans-Bold
@@ -119,6 +122,14 @@
 		&__imgBox
 			background-color: #086293
 			@include img_02()
+			display: flex
+			align-items: center
+			justify-content: center
+
+			.default_svg
+				max-width: 125px
+				height: auto
+
 		
 			img
 				@include img_01()

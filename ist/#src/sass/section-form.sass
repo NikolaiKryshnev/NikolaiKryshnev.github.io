@@ -1,27 +1,27 @@
 .section-form
-	.section-form__box
-		position: relative
+.section-form__box
+	position: relative
 
-		display: flex
+	display: flex
 
-		width: 100%
+	width: 100%
 
-		background: #FFFFFF
-		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.09)
+	background: #FFFFFF
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.09)
 
-		&::after
-			@include pseudoEl(block, absolute, '')
-			width: 324px
-			height: 416px
-			right: 0
-			top: 0
-			background: $red
+	&::after
+		@include pseudoEl(block, absolute, '')
+		width: 324px
+		height: 416px
+		right: 0
+		top: 0
+		background: $red
 
-			margin-top: -21px
-			margin-right: -21px
-			@media ( max-width:$md1+px )
-				margin-top: -10px
-				margin-right: -15px
+		margin-top: -21px
+		margin-right: -21px
+		@media ( max-width:$md1+px )
+			margin-top: -10px
+			margin-right: -15px
 			
 
 .form
@@ -56,6 +56,8 @@
 			height: 100%
 
 			background: $red
+			@media ( max-width:$md3+px )
+				width: 8px
 
 	&-col
 		padding: 0 60px 0 55px
@@ -69,6 +71,32 @@
 	&-input
 		margin-bottom: 32px
 
+		&__title
+			position: relative
+			display: flex
+			align-items: center
+			.plus
+				cursor: pointer
+				position: relative
+				width: 12px
+				height: 12px
+				
+				margin-left: 12px
+				&::after, &::before
+					@include pseudoEl(block, absolute, '')
+					// @include verticalcenter()
+					top: 50%
+					width: 12px
+					height: 2px
+					margin-top: -1px
+
+					background: $red
+
+				&::before
+					transform: rotate(90deg)
+
+
+				
 	input, textarea
 		font-size: 1rem
 		color: #616161
@@ -98,6 +126,7 @@
 
 	&-img
 		flex: 1 1 50%
+		background-color: $red
 		@media ( max-width:$md1+px )
 			display: none
 
@@ -116,6 +145,14 @@
 			font-size: 96px
 			color: $white
 			font-family: Montserrat-ExtraBold
-			
+
+	&-text
+		.red
+			font-family: Montserrat-ExtraBold
+			color: $red
+
+
+	
+
 
 		

@@ -6,8 +6,6 @@
 	margin-bottom: 100px
 
 	background: $gray
-	@media ( max-width:$md1+px )
-		margin: 0 0 0px 0 
 
 	.container
 		position: relative
@@ -77,14 +75,6 @@
 				margin-bottom: 22px
 				@media ( max-width:$md3+px )
 					margin-bottom: 10px
-				&::after
-					@include pseudoEl(block, absolute, '')
-
-					width: 60px
-					height: 15px
-					left: 0
-					top: 0
-					background: url("../img/icons/icons.svg#icon-title") no-repeat
 
 			&__text
 				max-width: 400px
@@ -167,5 +157,18 @@
 			height: 210px
 			left: 20% !important
 		
-
+.main--parallax
+	.section-ban
+	@media ( max-width:$md1+px )
+		margin: 0 0 0px 0 
 		
+	.ban-info__title
+		&::after
+			@include pseudoEl(block, absolute, '')
+			left: -80px
+			top: 13px
+
+			width: 57px
+			height: 30px
+
+			background: url(../img/icons/icons.svg#icon-title) no-repeat

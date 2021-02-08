@@ -59,3 +59,63 @@
 						color: $red
 						@include transitColor(0.3s)
 
+.main-contact
+
+	.section-title
+		margin-bottom: -18px
+
+	.section-contact
+		margin-top: -80px
+		padding-top: 140px
+		background: url(../img/section-contact/bg-02.jpg) 100%/cover no-repeat
+		@media ( max-width:$md1+px )
+			padding-top: 110px
+
+	.contact
+		&-info
+			background: none !important
+			@media ( max-width:$md2+px )
+				padding: 35px 0 0 0
+				
+			@media ( max-width:$md1+px )
+				margin-bottom: 30px
+			ul
+					padding: 0
+
+	.section-form__box, .contact-info
+		flex: 1 1 50%
+		@media ( max-width:$md1+px )
+			flex: 1 1 100%
+
+	.section-form__box
+		&::after
+			margin-top: 0
+			top: auto
+			bottom: 0
+			margin-bottom: -21px
+			@media ( max-width:$md3+px )
+				margin-bottom: -15px
+
+		.form-col
+			padding: 30px 30px 0
+
+	.contact-map
+		position: relative
+		margin-top: 130px
+		height: 370px
+		@media ( max-width:$md1+px )
+			margin: 80px -15px 0
+
+		&:before
+			@include pseudoEl(block, absolute, '')
+			left: 0
+			top: 0
+
+			margin-left: -15px
+			margin-top: -15px
+
+			width: 238px
+			height: 119px
+			background: #F94244
+			@media ( max-width:$md1+px )
+				display: none

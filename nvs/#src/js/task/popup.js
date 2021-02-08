@@ -27,3 +27,25 @@ showModla($('.modal-overlay, .modal--reviews'), $('.reviews-slider__block .btn')
 
 
 //</POPUP>---------------------------------------
+$(document).ready(function() {
+	if (document.cookie.match(/CoronaClose=true/) === null) {
+
+		 $("#coronavirus-alert").removeClass("closed");
+
+		 $( ".corona-close" ).click(function() {
+			  var now = new Date();
+			  var time = now.getTime();
+			  time += 3600 * 1000 * 24;
+			  now.setTime(time);
+			  document.cookie =
+					'CoronaClose=' + 'true' +
+					'; expires=' + now.toUTCString() +
+					'; path=/';
+			  $("#coronavirus-alert").addClass("closed");
+		 });
+
+	} else {
+		 $("#coronavirus-alert").addClass("closed");
+	}
+
+});

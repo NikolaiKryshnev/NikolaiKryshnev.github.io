@@ -9,7 +9,7 @@
 			justify-content: flex-start
 
 			color: $white
-			height: 95vh
+			height: 70vh
 			background-repeat: no-repeat
 			background-size: cover
 
@@ -36,7 +36,9 @@
 
 			background: linear-gradient(91.26deg, #086293 7.06%, #086293 25.07%, rgba(8, 98, 147, 0) 79.1%, rgba(3, 3, 3, 0) 79.1%)
 			@media ( max-width:$md2+px )
-				background: linear-gradient(91.26deg, #086293 7.06%, #086293 49.46%, rgba(8, 98, 147, 0) 79.1%, rgba(3, 3, 3, 0) 79.1%);
+				background: linear-gradient(91.26deg, #086293 7.06%, #086293 49.46%, rgba(8, 98, 147, 0) 79.1%, rgba(3, 3, 3, 0) 79.1%)
+			@media ( max-width:$md3+px )
+				background: linear-gradient(91.26deg, #086293 25.29%, rgba(8, 98, 147, 0.36) 79.1%)
 			&::before
 				@include pseudoEl(block, absolute, '')
 				left: 0
@@ -68,11 +70,14 @@
 	@media ( max-width:$md2+px )
 	bottom: 1.5rem
 
-	li 
+	li
+		margin-left: 8px
+		margin-right: 8px
+
 		button
 			background: $white
-			width: 18px
-			height: 18px
+			width: 15px
+			height: 15px
 			border-radius: 50%
 			@include transitBgColor(0.3s)
 			&::before,&::after

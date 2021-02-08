@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Контакты"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html')
+		<main class="main main-contact main--parallax">
+			<section class="section-contact contact   _section">
+				@@include('_section-title.html',{
+				"title":"КОНТАКТЫ"
+				})
+				<div class="container">
+					<div class="contact-info">
+						<ul>
+							<li>
+								<svg>
+									<use xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="./img/icons/icons.svg#icon-phone"></use>
+								</svg>
+								<a href="tel:+48884838880">+48 884 838 880</a></li>
+							<li>
+								<svg>
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./img/icons/icons.svg#icon-map">
+									</use>
+								</svg>
+								<a
+									href="https://yandex.by/maps/120/poland/house/ZkgYdgVjTUAFQFtofX15dnxkZA==/?ll=27.561481%2C53.902496&z=12">Ul.
+									Ksawerów 3 Warszawa
+									02-656 Poland</a></li>
+							<li>
+								<svg>
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./img/icons/icons.svg#icon-mail">
+									</use>
+								</svg>
+								<a href="mailto:info@ist-travel.waw.pl">info@ist-travel.waw.pl</a></li>
+							<li>
+								<svg>
+									<use xmlns:xlink="http://www.w3.org/1999/xlink"
+										xlink:href="./img/icons/icons.svg#icon-instRed"></use>
+								</svg>
+								<a href="#">@instname</a></li>
+						</ul>
+					</div>
+
+					<div class="section-form__box">
+						<form class="form form-contact" action="#">
+							<div class="form-title h4">ОСТАВЬТЕ НАМ СВОИ ДАННЫЕ,
+								И МЫ МГНОВЕННО СОРИЕНТИРУЕМ ВАС ПО ЛЮБОМУ ВОПРОСУ!</div>
+
+							<div class="form-col">
+								<div class="form-input">
+									Е-mail
+									<input type="text" name="" id="">
+								</div>
+
+								<div class="form-textarea">
+									Вопрос
+									<textarea name="" id=""></textarea>
+								</div>
+								<button class="btn">ОТПРАВИТЬ</button>
+							</div>
+						</form>
+					</div>
+
+					<div class="contact-map">
+						<div style="position:relative;overflow:hidden; height: 100%;"><a
+								href="https://yandex.by/maps/157/minsk/?utm_medium=mapframe&utm_source=maps"
+								style="color:#eee;font-size:12px;position:absolute;top:0px;">Минск</a><a
+								href="https://yandex.by/maps/157/minsk/?ll=27.585951%2C53.940933&utm_medium=mapframe&utm_source=maps&z=13"
+								style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс.Карты — поиск мест и
+								адресов,
+								городской транспорт</a><iframe class="contact-map__block"
+								src="https://yandex.by/map-widget/v1/-/CBR1J2hasC" scroll="false" frameborder="0" allowfullscreen="false"
+								style="position:relative;"></iframe></div>
+					</div>
+				</div>
+				<!-- /.contact-container -->
+			</section>
+			<!-- /.section-contact -->
+
+		</main>
+		<!-- /.main -->
+		@@include('_footer.html')
+		<div class="scrollTop">
+			<svg class="scrollTop__icon" width="25" height="31" viewBox="0 0 25 31" fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M1.34277 13.2102C5.27016 9.34999 10.4174 4.29073 12.5001 2.24362M12.5001 2.24362L23.6575 13.2102M12.5001 2.24362L12.5001 30.7568"
+					stroke="#F94244" stroke-width="3" />
+			</svg>
+		</div>
+	</div>
+	<!-- /.wrapper -->
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+
+</body>
+
+</html>

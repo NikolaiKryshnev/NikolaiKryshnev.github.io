@@ -100,9 +100,6 @@
 		@media ( max-width:$md2+px )
 			padding: 15px 0
 
-
-
-
 	&-search__btn 
 		margin: 0 70px 0 80px 
 		@media ( max-width:$md1+px )
@@ -149,7 +146,8 @@
 					left: 0
 					top: 0
 					height: 100%
-					box-shadow: inset 0 0 15px rgba(0,0,0,.12)
+					box-shadow: inset 0 7px 15px -7px rgba(0,0,0,.12)
+					// box-shadow: inset 0 0 15px rgba(0,0,0,.12)
 
 			li 
 				cursor: pointer
@@ -162,18 +160,21 @@
 					// margin: 0 15px
 					padding: 0
 
-				
-
 				&:first-child
-					padding-left: 0
+					a
+						padding-left: 0
+						margin-left: 0
 					@media ( max-width:$md1+px )
 						padding-left: 0
 
 				&:last-child
-					padding-right: 0
-					@media ( max-width:$md1+px )
-						border-bottom: none
+					a
 						padding-right: 0
+						margin-right: 0
+					@media ( max-width:$md1+px )
+						margin-right: 15px
+						border-bottom: none
+						padding-right: 12px
 
 				a
 					position: relative
@@ -189,10 +190,6 @@
 						padding: 12px 16px
 						border-bottom: 1px solid #EDEDED
 
-					
-						
-						
-
 					@include transitColor(0.3s)
 	.hover > a
 		color: $orange 
@@ -203,12 +200,15 @@
 			display: none
 			// top: calc( 100% + 20px )
 			top: 100%
-			box-shadow: inset 0 0 0 -15px rgba(0, 0, 0, 0.12)
+			// box-shadow: inset 0 0 0 -15px rgba(0, 0, 0, 0.12)
+			// box-shadow: inset 0 7px 9px -7px rgba(0,0,0,.12)
+
 			z-index: 99
 			background: $white
 			@include horizcenter()
 			width: max-content
 			max-width: 320px
+			min-width: 200px
 			padding: 0
 			@media ( max-width:$md1+px )
 				// border-top: 1px solid #ededed
@@ -229,7 +229,10 @@
 				top: 0
 				height: 100%
 				left: 0
-				box-shadow: inset 0 0 15px rgba(0,0,0,.12)
+				// box-shadow: inset 0 0 15px rgba(0,0,0,.12)
+				box-shadow: inset 0 7px 15px -7px rgba(0,0,0,.12)
+				
+
 				@media ( max-width:$md1+px )
 					display: none
 
@@ -240,6 +243,9 @@
 				// margin: 0 8px
 
 				text-align: center
+				a
+					padding: 12px 
+					text-transform: inherit
 				@media ( max-width:$md1+px )
 					text-align: right
 					padding: 0

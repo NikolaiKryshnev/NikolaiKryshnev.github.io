@@ -1,5 +1,8 @@
+
 .section-product
 	padding-top: 0
+	@media ( max-width:$md3+px )
+		padding-top: 0
 
 .product
 	.container
@@ -43,6 +46,7 @@
 				position: absolute
 				top: 0
 				left: 0
+				line-height: 1.4
 
 		&__text
 			margin-bottom: 5px
@@ -147,3 +151,11 @@
 
 			&.active 
 				display: block
+
+.section-search
+	.products-block
+		max-width: 25%
+		@media ( max-width:$md1+px )
+			max-width: 50%
+		@media ( max-width:$md3+px )
+			max-width: 100%
