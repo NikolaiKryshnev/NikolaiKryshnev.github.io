@@ -4,6 +4,8 @@ $(function () {
 			btn.addClass('active');
 			block.addClass('active');
 			main.addClass('active');
+			$('.wrapper').addClass('active');
+
 		})
 		main.on('click', function (e) {
 			if (e.target == this) {
@@ -11,6 +13,8 @@ $(function () {
 				btn.removeClass('active');
 				block.removeClass('active');
 				main.removeClass('active');
+				$('.wrapper').removeClass('active');
+
 			}
 
 
@@ -21,6 +25,8 @@ $(function () {
 				btn.removeClass('active');
 				block.removeClass('active');
 				main.removeClass('active');
+				$('.wrapper').removeClass('active');
+
 		})
 	}
 	showBlockClick($('.burger-js'), $('.header-menu--js'), $('.main'))

@@ -20,14 +20,14 @@ $slickElement.slick({
 	slidesToScroll: 1,
 	// autoplay: true,
 	prevArrow: '<div class="slick-arrow slick-arrow__left"><svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.8462 2C8.73231 5.168 4.65128 9.32 3 11M3 11L11.8462 20M3 11H26" stroke="#26242D" stroke-width="3"/></svg></div>',
-	nextArrow: '<div class="slick-arrow slick-arrow__right"><svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.1538 2C17.2677 5.168 21.3487 9.32 23 11M23 11L14.1538 20M23 11H0" stroke="#26242D" stroke-width="3"/></svg></div>',
+	nextArrow: '<div class="slick-arrow slick-arrow__right"><svg width="28" height="21" viewBox="0 0 28 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.467285 10.4997H22.9958H25.4988M16.3204 1.32129L25.4988 10.4997M25.4988 10.4997L16.3204 19.678" stroke="#26242D" stroke-width="3"/></svg></div>',
 	responsive: [
 		{
 			breakpoint: 992,
 			settings: {
 				arrows: true,
 				prevArrow: '<div class="slick-arrow slick-arrow__left"><svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.8462 2C8.73231 5.168 4.65128 9.32 3 11M3 11L11.8462 20M3 11H26" stroke="#26242D" stroke-width="3"/></svg></div>',
-				nextArrow: '<div class="slick-arrow slick-arrow__right"><svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.1538 2C17.2677 5.168 21.3487 9.32 23 11M23 11L14.1538 20M23 11H0" stroke="#26242D" stroke-width="3"/></svg></div>',
+				nextArrow: '<div class="slick-arrow slick-arrow__right"><svg width="28" height="21" viewBox="0 0 28 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.467285 10.4997H22.9958H25.4988M16.3204 1.32129L25.4988 10.4997M25.4988 10.4997L16.3204 19.678" stroke="#26242D" stroke-width="3"/></svg></div>',
 			}
 		},
 	],
