@@ -25,4 +25,17 @@ function showModla(modal, btn) {
 			$('.infoExtra--show').show()
 		}
 	});
+
+	$('.calcRepeat--js').on('click', function (e) {
+		$('body').removeClass('active');
+		$('.wrapper').removeClass('active');
+		$('.main').removeClass('active');
+		modal.removeClass('active');
+		$('.content-infoExtra').hide();
+		$('.infoExtra--show').show();
+		$('#carPrice').val('')
+		$('#carPrice').val('')
+		$('#carType').prop('selectedIndex',0);
+		$('#carYear').prop('selectedIndex',0);
+	});
 }
