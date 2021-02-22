@@ -367,6 +367,10 @@
   border-color: #939393;
 }
 
+.calc-btn:disabled:hover {
+  color: #fff;
+}
+
 .calc-info {
   background: #F8F8F8;
   border-radius: 5px;
