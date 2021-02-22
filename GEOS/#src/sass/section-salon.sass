@@ -1,0 +1,145 @@
+.salon
+	position: relative
+	&::after, &::before
+		@include pseudoEl(block, absolute, '')
+		width: 70%
+		height: 42.4% 
+		background: #F8F8F8
+		z-index: -1
+
+	&::before
+		top: 75px
+		left: 0
+
+	&::after
+		bottom: 0
+		right: 0
+		
+	&-column
+		display: flex
+		flex-wrap: wrap
+
+		@extend .col-6
+		font-size: 1rem
+
+		&__row
+			background: #fff
+
+
+		&__address		
+			position: relative
+			padding: 27px 0 20px 0 
+			margin: 0 30px 0 30px
+
+			&::after
+				@include pseudoEl(block, absolute, '')
+				left: 0
+				bottom: 0
+				
+				background: #000
+
+	&-info
+		margin: 0 30px 30px 30px
+
+		justify-content: space-between
+
+		font-size: 1rem
+		&__metro, &__mail, &__tel, &__clock, &__mat
+			padding-left: 50px
+
+			&::after
+				@include pseudoEl(block, absolute, '')
+
+				top: 50%
+				@include translateY(-50%)
+
+				left: 0
+
+		&__metro,&__mail,&__tel, &__clock
+			position: relative
+			@extend .col-6
+
+			margin-bottom: 30px
+
+		&__tel, &__clock
+			display: flex
+			flex-direction: column
+			&::after
+				top: 0
+				@include translateY(0)
+
+		&__mat
+			position: relative
+			@extend .col-12
+
+		&__metro::after
+			width: 30px
+			height: 24px
+
+			background: url(../img/icons/icons.svg#icon-metro) 100%/cover no-repeat
+
+		&__mail::after
+			width: 23px
+			height: 14px
+
+			background: url(../img/icons/icons.svg#icon-mail) 100%/cover no-repeat
+
+		&__tel::after
+			width: 20px
+			height: 21px
+
+			background: url(../img/icons/icons.svg#icon-phone) 100%/cover no-repeat
+
+		&__clock::after
+			width: 24px
+			height: 24px
+
+			background: url(../img/icons/icons.svg#icon-clock) 100%/cover no-repeat
+
+		&__mat::after
+			width: 23px 
+			height: 22px
+
+			background: url(../img/icons/icons.svg#icon-block) 100%/cover no-repeat
+			
+			top: 0
+			@include translateY(0)
+
+		a
+			color: $black
+			text-decoration: none
+			font-size: 1rem
+			@include transitColor(0.3s)
+
+			&:hover
+				color: #ff9d76
+
+
+	&-column
+		&__img
+			@include img_03(10.32rem)
+			background-color: $blue
+
+			.btn--arrow
+				position: absolute
+				z-index: 2
+				
+				bottom: 0
+				right: 0
+
+				font-size: 1rem
+				color: $white
+				margin: 0 28px 20px 0 
+
+				&::after
+					@include white()
+
+		&__boxImg
+			@include img_02()
+
+
+			img
+				@include img_01()
+
+		
+				

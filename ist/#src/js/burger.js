@@ -1,6 +1,7 @@
 $(function () {
 	function showBlockClick(btn, block, main) {
-		btn.click(function () {
+		btn.click(function (e) {
+			e.preventDefault();
 			btn.addClass('active');
 			block.addClass('active');
 			main.addClass('active');

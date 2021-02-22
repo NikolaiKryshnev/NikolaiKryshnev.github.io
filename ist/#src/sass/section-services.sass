@@ -51,6 +51,8 @@
 			@media ( max-width:$md2+px )
 				padding: 0 35px 35px 35px 
 
+			
+
 		&__list
 			li
 				position: relative
@@ -132,7 +134,7 @@
 			margin: 0 0 -13px -13px
 
 		&__img
-			background-color: $red
+			// background-color: $red
 			position: relative
 			z-index: 2
 
@@ -168,6 +170,8 @@
 		&__title
 			background: rgba(245, 245, 245, 0.78)
 			padding: 30px 40px 30px 40px
+			@media ( max-width:$md2+px )
+				padding: 20px
 			.title-number
 				padding-right: 22px
 				color: $red
@@ -177,13 +181,19 @@
 			height: 80px
 			line-height: 1.2
 			overflow: hidden
+			@media ( max-width:$md1+px )
+				height: auto
 
+			@media ( max-width:$md2+px )
+				margin: 20px
 			b
 				color: $red
 
 		.btn-stroke__red
 			margin: auto 0 0 40px
 			max-width: max-content
+			@media ( max-width:$md2+px )
+				margin: auto 0 0 20px
 
 
 .main--parallax

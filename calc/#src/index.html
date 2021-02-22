@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Главная"
+})
+
+<body>
+	<div class="tm-page">
+		<div class="uk-section-default uk-section">
+			<div class="uk-container">
+				<div class="calc"  id="caclCasco">
+					<div class="calc-block">
+						<div class="calc-block__title">Онлайн калькулятор</div>
+						<div class="calc-select">
+							Тип автомобиля
+							<select name="carType required" id="carType" required>
+								<option value="легковой автомобиль">Легковой автомобиль</option>
+								<option value="грузопассажирские автомобили на базе легковых автомобилей">Грузопассажирские автомобили на базе легковых автомобилей</option>
+								<option value="грузовые автомобили с технически допустимой общей массой не более 3,5 тонн">Грузовые автомобили с технически допустимой общей массой не более 3,5 тонн</option>
+								<option value="мультивены">мультивены</option>
+								<option value="минивены">минивены</option>
+								<option value="микроавтобусы с числом мест для сидения до 9 включительно">микроавтобусы с числом мест для сидения до 9 включительно</option>
+								<option value="электромобили">электромобили</option>
+								<option value="гибридные автомобили">гибридные автомобили</option>
+							</select>
+						</div>
+
+						<div class="calc-input">
+							Стоимость авто, $
+							<input class="required" type="text" name="car" id="carPrice" value="" required>
+						</div>
+
+						<div class="calc-select">
+							Год выпуска
+							<select class="required" name="carYear" id="carYear" required>
+								<option value="2021">2021</option>
+							</select>
+						</div>
+
+						<button class="calc-btn" id="resultCalc" type="button">Рассчитать</button>
+					</div>
+
+					<div class="calc-info">
+						<div class="calc-info__title">Включено в расчет онлайн каско калькулятора по умолчанию: </div>
+						<ul class="calc-info__ul">
+							<li>Договор страхования заключается сроком на 1 год;</li>
+							<li>Территория действия договора страхования – Республика Беларусь и все страны мира (за
+								исключением территорий, где ведутся военные действия);</li>
+							<li>Страховой взнос по договору страхования может быть уплачен единовременно, в два срока,
+								ежеквартально;</li>
+							<li>Мультидрайв. Неограниченное количество водителей застрахованного авто;</li>
+							<li>Без установления франшизы;</li>
+							<li>Договор страхования заключается на условиях возмещения ущерба без учета процента износа узлов и
+								деталей, подлежащих замене в результате страхового случая.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.wrapper -->
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+
+</body>
+
+</html>

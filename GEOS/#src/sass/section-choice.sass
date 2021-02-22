@@ -1,0 +1,236 @@
+.choice
+	&-row
+		display: grid
+
+		width: 100%
+		margin: 0 auto
+		padding: 0 15px
+
+		grid-template-columns: repeat(3, 1fr)
+		grid-template-rows: repeat(2, 290px)
+		grid-gap: 30px
+		@media ( max-width:$md1+px )
+			grid-template-columns: repeat(2, 1fr)
+			grid-template-rows: repeat(3, 290px)
+			grid-gap: 15px
+
+		@media ( max-width:$md3+px )
+			display: flex
+			flex-wrap: wrap
+
+	&-box
+		position: relative
+		@media ( max-width:$md3+px )
+			margin-bottom: 20px
+
+		&:last-child
+			grid-column: 3
+			grid-row: 1 / span 2
+			margin-bottom: 0
+			@media ( max-width:$md1+px )
+				grid-column-start: 1
+				grid-column-end: 3
+				grid-row-start: 4
+				grid-row-end: 3
+				margin-bottom: 0
+
+			.choice-box__info
+				align-items: center
+			
+			.choice-box__block
+				height: 100%
+				padding: 12rem 0 
+				@media ( max-width:$md3+px )
+					padding: 6rem 0 
+					height: auto
+
+		&__block
+			@include img_03(9.07rem)
+			@media ( max-width:$md3+px )
+				padding: 6rem 0 
+				
+		&__img
+			@include img_02()
+
+			img
+				@include img_01()
+
+		&__info
+			opacity: 0
+			visibility: hidden
+
+			transition: opacity 0.3s linear, visibility 0.3s linear
+
+			display: flex
+
+			position: absolute
+			z-index: 2
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+
+			padding: 25px 35px 70px 35px
+ 
+			width: 100%
+			height: 100%
+
+			background: rgba(0, 0, 0, 0.5)
+
+			color: $white
+			@media ( max-width:$md3+px )
+				position: initial
+				opacity: 1
+				visibility: visible
+				background: #fff
+				padding: 15px 25px 60px
+				height: auto
+
+			a
+				color: $white
+				text-decoration: none
+				@media ( max-width:$md3+px )
+					color: $black
+
+		&__title
+			text-transform: uppercase
+			text-decoration: none
+			@include transitColor(0.3s)
+
+			display: block
+
+			padding-bottom: 10px
+			width: calc(100% - 55px)
+			@media ( max-width:$md3+px )
+				width: 100%
+
+			&:hover
+				color: #FF9D76
+
+		&__text
+			font-size: 1rem
+			line-height: 1.4
+			font-family: Montserrat-Regular
+
+			overflow: hidden
+			max-height: 155px
+			@media ( max-width:$md3+px )
+				color: $black
+				max-height: 100%
+				margin-bottom: 30px
+
+		&__disc
+			position: absolute
+			z-index: 3
+			top: 0
+			right: 0
+
+			display: flex
+			justify-content: center
+			align-items: center
+			
+			width: 90px
+			height: 55px
+
+			color: $white
+
+			font-family: Montserrat-Bold
+			background: rgba(255, 255, 255, 0.27)
+			// backdrop-filter: blur(4px)
+			@media ( max-width:$md3+px )
+				background: rgba(0, 0, 0, 0.27)
+
+		&__bot
+			position: absolute
+			left: 0
+			bottom: 0
+			right: 0
+			
+			margin: 0 35px 25px 35px
+
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+			font-size: 1rem
+			@media ( max-width:$md3+px )
+				margin-left: 0px
+				position: inherit
+
+				b
+					color: $blue
+
+		&__link
+			width: 30px
+			height: 20px
+			@media ( max-width:$md3+px )
+				position: absolute
+				left: 0	
+				bottom: 0
+				display: flex
+				justify-content: center
+				align-items: center
+
+				padding: 0 10px
+
+				border: 2px  $blue solid
+				background: $blue
+				
+				
+				vertical-align: middle
+				cursor: pointer
+				text-align: center
+				line-height: 56px
+				color: $white
+				font-size: 1rem
+				text-transform: uppercase
+				text-decoration: none
+				font-family: Montserrat-Bold
+
+				width: 100%
+				height: 60px
+
+			svg
+				width: 30px
+				height: 20px
+				transition: margin-left 0.3s linear
+
+				@include white()
+				@media ( max-width:$md3+px )
+					display: none
+
+				&:hover
+					margin-left: 5px
+
+		&:hover
+			
+			.choice-box__info
+				opacity: 1
+				visibility: visible
+
+		&__price
+			display: flex
+			align-items: center
+			@media ( max-width:$md3+px )
+				color: $black
+			&::before
+				@include pseudoEl(block, relative, '')
+				margin-right: 10px
+				background: url(../img/icons/icons.svg#icon-price)	center/cover no-repeat			
+				width: 29px
+				height: 29px
+				@include white()
+				@media ( max-width:$md3+px )
+					filter: brightness(1) invert(0)
+
+
+	.link-text
+		display: none
+		@media ( max-width:$md3+px )
+			display: block
+			color: $white
+			font-family: Montserrat-Bold
+			text-transform: uppercase
+
+
+			

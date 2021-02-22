@@ -126,7 +126,16 @@ $(document).ready(function () {
 
 
 
+function resizeHeight() {
+	if ($(window).width() < 991) {
+		let infoBlockHeight = $('.info-block').height();
+		$('.section-info').css("padding-bottom", `${infoBlockHeight}px`)
+	}
+}
 
 
-
+$(document).ready(function () {
+	resizeHeight()
+});
+$(window).resize(resizeHeight);
 

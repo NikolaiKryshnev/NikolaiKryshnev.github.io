@@ -1,13 +1,13 @@
 .section-info
 	position: relative
-	@media ( max-width:$md2+px )
-		padding-bottom: 190px
+	@media ( max-width:$md1+px )
+		padding-bottom: 220px
 	
 	@media ( max-width:$md3+px )
 		padding: 0 0 250px 0 
 
 	.container
-		@media screen and ( min-width: 991px )
+		@media ( max-width:$md1+px )
 			position: relative
 
 .info
@@ -59,6 +59,10 @@
 		background: #FFFFFF
 		@media ( max-width:$md1+px )
 			// margin: 0 0 -20% 0 
+			top: 100%
+			bottom: auto
+			margin-top: -25%
+
 		@media ( max-width:$md2+px )
 			max-width: calc( 100% - 40px ) 
 		@media ( max-width:$md3+px )

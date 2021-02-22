@@ -1,0 +1,84 @@
+.tabs
+	width: 100%
+
+	.tab-header 
+		display: flex
+		align-items: flex-end
+		justify-content: flex-start
+
+		height: 53px
+
+		margin: 0
+		padding-left: 0
+
+		list-style: none
+		@media ( max-width:$md2+px )
+			flex-wrap: wrap
+			height: auto
+
+		&__item 
+			display: flex
+			align-items: center
+			justify-content: center
+
+			max-width: 165px
+			width: 100%
+
+			padding: 5px 20px
+
+			min-height: 53px
+
+			border: 1px solid #007bff
+			border-bottom: none
+
+			color: #007bff
+			line-height: 21px
+			cursor: pointer
+
+			height: 100%
+			@media ( max-width:$md2+px )
+				padding: 5px 0 0 0
+				max-width: 100%
+				flex-direction: column
+
+				line-height: 59px
+				&:last-child
+					border-bottom: 1px solid #007bff
+
+			& + li
+				border-left: none
+				
+				@media ( max-width:$md2+px )
+					border-left: 1px solid #007bff
+					
+			&.active 
+				height: calc( 100% + 5px )
+				position: relative
+
+				background-color: #007bff
+				color: $white
+				@media ( max-width:$md2+px )
+					height: 100%
+
+	.tab-content 
+		margin: 0
+		padding: 0
+
+		list-style: none
+
+		&__item 
+			display: none
+
+			margin-top: -1px
+			padding: 30px 0
+			line-height: 1.4
+
+			border-top: 1px solid #007bff
+			@media ( max-width:$md2+px )
+				padding: 25px 15px
+
+				background: $white
+				color: $black
+
+			&.active 
+				display: block

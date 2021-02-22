@@ -1,0 +1,20 @@
+
+.section-title
+	position: relative
+
+	padding-left: 35px
+	margin-bottom: 45px
+	text-transform: uppercase
+	line-height: 1.2
+
+	&::after
+		@include pseudoEl(block, absolute, '')
+		left: 0
+		top: 0
+
+		width: 7px
+		height: 100%
+
+		background: $orange
+
+		

@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @import url(../../node_modules/slick-carousel/slick/slick.css);
 
 @import url(../../node_modules/slick-carousel/slick/slick-theme.css);
@@ -493,8 +495,8 @@ body.active {
   height: 61px;
   border-radius: 50%;
   background: #fff;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
@@ -758,6 +760,12 @@ b {
   margin-left: 20px;
 }
 
+.section-ban .ban-slider .slider-nav__arrow .slick-arrow__right svg {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .section-ban .ban-info {
   position: relative;
   z-index: 2;
@@ -957,7 +965,6 @@ b {
 }
 
 .services-box__img {
-  background-color: #F94244;
   position: relative;
   z-index: 2;
   max-width: 440px;
@@ -1340,15 +1347,7 @@ b {
   width: 100%;
 }
 
-.invisible {
-  position: absolute;
-  z-index: -1;
-  width: 0;
-  height: 0;
-  opacity: 0;
-}
-
-.label-cbx {
+.box-checkbox label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1364,19 +1363,27 @@ b {
   cursor: pointer;
 }
 
-.label-cbx input:checked + .checkbox {
+.box-checkbox label input {
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.box-checkbox label input:checked + .checkbox {
   border-color: #fff;
 }
 
-.label-cbx input:checked + .checkbox svg rect {
+.box-checkbox label input:checked + .checkbox svg rect {
   fill: #fff;
 }
 
-.label-cbx input:checked + .checkbox svg path {
+.box-checkbox label input:checked + .checkbox svg path {
   fill: #F94244;
 }
 
-.label-cbx .checkbox {
+.box-checkbox label .checkbox {
   position: relative;
   float: left;
   margin-right: 11px;
@@ -1384,11 +1391,11 @@ b {
   height: 19px;
 }
 
-.label-cbx .checkbox svg path {
+.box-checkbox label .checkbox svg path {
   fill: none;
 }
 
-.label-cbx > span {
+.box-checkbox label > span {
   pointer-events: none;
   font-family: Montserrat-Medium;
   vertical-align: middle;
@@ -1397,7 +1404,7 @@ b {
   transition: 0.3s color linear;
 }
 
-.label-cbx:hover > span {
+.box-checkbox label:hover > span {
   color: #F94244;
 }
 
@@ -1442,6 +1449,87 @@ b {
           transform: translateY(-50%);
 }
 
+.custom_error {
+  position: relative;
+}
+
+.wpcf7-not-valid-tip {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  background: #F94244;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  font-family: Montserrat-Medium;
+}
+
+.wpcf7-not-valid-tip::after {
+  content: "Поле обязательно для заполнения.";
+  display: block;
+  position: absolute;
+  top: -100%;
+  right: 0;
+  width: 160px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-top: -35px;
+  padding: 10px;
+  color: #26242d;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  font-size: 14px;
+  font-family: Montserrat-Medium;
+  text-align: center;
+  line-height: 1.2;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s linear, visibility 0.3s linear;
+  -o-transition: opacity 0.3s linear, visibility 0.3s linear;
+  transition: opacity 0.3s linear, visibility 0.3s linear;
+}
+
+.wpcf7-not-valid-tip::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  z-index: 20;
+  border: 10px solid transparent;
+  border-top: 10px solid #fff;
+  width: 10px;
+  height: 10px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s linear, visibility 0.3s linear;
+  -o-transition: opacity 0.3s linear, visibility 0.3s linear;
+  transition: opacity 0.3s linear, visibility 0.3s linear;
+}
+
+.wpcf7-not-valid-tip:hover::before,
+.wpcf7-not-valid-tip:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
 .section-advantages {
   position: relative;
 }
@@ -1471,7 +1559,6 @@ b {
 }
 
 .section-advantages .advantages-column__img {
-  background-color: #F94244;
   position: relative;
   padding: 4.5rem 0;
   width: 100%;
@@ -1684,6 +1771,12 @@ b {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50%;
           flex: 1 1 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contact-info ul {
@@ -1702,6 +1795,10 @@ b {
           align-items: center;
   margin-bottom: 55px;
   padding: 0 0 0 60px;
+}
+
+.contact-info ul li:last-child {
+  margin: 0 0 0px 0;
 }
 
 .contact-info ul li svg {
@@ -1791,6 +1888,13 @@ b {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+}
+
+.error-box__img {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .error-box__title {
@@ -2029,6 +2133,16 @@ b {
   height: 1.75em;
 }
 
+.modal .close-modal svg path {
+  -webkit-transition: stroke 0.3s linear;
+  -o-transition: stroke 0.3s linear;
+  transition: stroke 0.3s linear;
+}
+
+.modal .close-modal:hover path {
+  stroke: #26242D;
+}
+
 .modal .modal-content {
   opacity: 0;
   -webkit-backface-visibility: hidden;
@@ -2042,7 +2156,7 @@ b {
 }
 
 .modal .modal-content .form {
-  padding-top: 20px;
+  padding-top: 40px;
   min-height: 26rem;
   max-height: 600px;
   overflow-y: auto;
@@ -2142,10 +2256,25 @@ b {
   color: #F94244;
 }
 
-@media screen and (min-width: 991px) {
-  .section-info .container {
-    position: relative;
-  }
+.modal--thanks {
+  min-height: 10rem;
+  font-size: 24px;
+  text-align: center;
+  background: url(../img/section-form/02.jpg) 100%/cover no-repeat;
+  font-family: Montserrat-ExtraBold;
+}
+
+.modal--thanks .red {
+  color: #F94244;
+}
+
+.modal--thanks .close-modal {
+  width: 1em;
+  height: 1em;
+}
+
+.modal--thanks .close-modal svg path {
+  stroke: #F94244;
 }
 
 @media screen and (max-width: 1300px) {
@@ -2312,6 +2441,10 @@ b {
     bottom: 10% !important;
   }
 
+  .services-box__text {
+    height: auto;
+  }
+
   .section-form__box::after {
     margin-top: -10px;
     margin-right: -15px;
@@ -2335,6 +2468,20 @@ b {
 
   .section-advantages .advantages-column__info {
     padding: 0 15px;
+  }
+
+  .section-info {
+    padding-bottom: 220px;
+  }
+
+  .section-info .container {
+    position: relative;
+  }
+
+  .info-block {
+    top: 100%;
+    bottom: auto;
+    margin-top: -25%;
   }
 
   .contact-info ul {
@@ -2373,6 +2520,22 @@ b {
   }
 }
 
+@media (max-width: 991px) and (max-width: 991px) {
+  .header-menu {
+    -webkit-transition: right 0.7s linear;
+    -o-transition: right 0.7s linear;
+    transition: right 0.7s linear;
+  }
+}
+
+@media (max-width: 991px) and (max-width: 526px) {
+  .header-menu {
+    -webkit-transition: right 0.5s linear;
+    -o-transition: right 0.5s linear;
+    transition: right 0.5s linear;
+  }
+}
+
 @media (max-width: 726px) {
   .services-col {
     max-width: 100%;
@@ -2403,6 +2566,27 @@ b {
     max-width: 100%;
   }
 
+  .services-box__title {
+    padding: 20px;
+  }
+
+  .services-box__text {
+    margin: 20px;
+  }
+
+  .services-box .btn-stroke__red {
+    margin: auto 0 0 20px;
+  }
+
+  .form-title {
+    padding-left: 20px;
+    max-width: 100%;
+  }
+
+  .form-col {
+    padding: 0 30px 0 20px;
+  }
+
   .section-advantages .advantages-column {
     max-width: 100%;
   }
@@ -2415,10 +2599,6 @@ b {
     top: 0 !important;
     right: 0 !important;
     left: auto !important;
-  }
-
-  .section-info {
-    padding-bottom: 190px;
   }
 
   .info-box {
@@ -2483,6 +2663,10 @@ b {
   .burger {
     width: 31px;
     height: 31px;
+  }
+
+  .section-title::before {
+    width: 40px;
   }
 
   .section-ban .ban-info__title {
@@ -2573,6 +2757,10 @@ b {
 
   .error-box .btn {
     line-height: 44px;
+  }
+
+  .modal--thanks {
+    font-size: 18px;
   }
 }
 
