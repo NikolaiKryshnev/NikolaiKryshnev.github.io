@@ -362,6 +362,11 @@
   background: none;
 }
 
+.calc-btn:disabled {
+  background: #939393;
+  border-color: #939393;
+}
+
 .calc-info {
   background: #F8F8F8;
   border-radius: 5px;
