@@ -38,7 +38,6 @@ function appendProcent(priceCasca, resultPriceCasca, YearsResult, htmlCoeff, num
 		} else {
 			$('.carYears').html(' ' + YearsResult + ' года');
 		}
-		console.log('Стандарт' + ' ' + '-' + ' ' + numberCoeffOne);
 		htmlCoeff.html(' ' + numberCoeffOne + ' %');
 		resultPriceCasca.html(' ' + (Math.trunc( (priceCasca / 100 * numberCoeffOne) * 100 ) / 100) + '$')
 
@@ -49,7 +48,6 @@ function appendProcent(priceCasca, resultPriceCasca, YearsResult, htmlCoeff, num
 		} else {
 			$('.carYears').html(' ' + YearsResult + ' лет');
 		}
-		console.log('Стандарт' + ' ' + '-' + ' ' + numberCoeffTwo);
 		htmlCoeff.html(' ' + numberCoeffTwo + ' %');
 		resultPriceCasca.html(' ' + (Math.trunc( (priceCasca / 100 * numberCoeffTwo) * 100 ) / 100) + '$')
 		
@@ -57,7 +55,6 @@ function appendProcent(priceCasca, resultPriceCasca, YearsResult, htmlCoeff, num
 	} else if (5 < YearsResult && YearsResult <= 7) {
 		$('.carYears').html(' ' + YearsResult + ' лет');
 
-		console.log('Стандарт' + ' ' + '-' + ' ' + numberCoeffThree);
 		htmlCoeff.html(' ' + numberCoeffThree + ' %');
 		resultPriceCasca.html(' ' + (Math.trunc( (priceCasca / 100 * numberCoeffThree) * 100 ) / 100) + '$')
 

@@ -77,8 +77,6 @@
 			width: 20px
 			height: 20px
 
-
-
 	.modal-content 
 		overflow-y: auto
 		overflow-x: hidden
@@ -93,6 +91,8 @@
 		backface-visibility: hidden
 		transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1)
 		transition-delay: 0.3s
+		@media ( max-width:$md3+px )
+			max-height: 80vh
 		&::-webkit-scrollbar-track
 			background-color: #EBEBEB
 
@@ -108,7 +108,9 @@
 			flex: 0 0 50%
 			max-width: 50%
 			border-bottom: 1px solid #DEDEDE	
-
+			@media ( max-width:$md2+px )
+				flex: 1 1 100%
+				max-width: 100%
 		
 				
 			&:first-child
@@ -130,6 +132,8 @@
 			color: #3C58A8
 			font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
 			font-weight: 700
+			@media ( max-width:$md2+px )
+				padding: 20px
 
 
 	.content-info
@@ -137,6 +141,8 @@
 
 		padding: 25px 83px
 		border-top: 1px solid #DEDEDE
+		@media ( max-width:$md2+px )
+			padding: 20px
 
 		&__title
 			font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
@@ -188,6 +194,8 @@
 		margin: 0 27px 0 0
 		padding: 0 29px
 		transition: background 0.3s linear, color 0.3s linear
+		@media ( max-width:$md3+px )
+			margin: 0 0 10px 0 
 
 		&:hover
 			color: #3C58A8
@@ -199,10 +207,17 @@
 
 		margin-top: 25px
 		padding: 0 83px 
+		@media ( max-width:$md2+px )
+			padding: 0 20px
+		@media ( max-width:$md3+px )
+			flex-direction: column
+			align-items: flex-start
 
 	.content-infoExtra
 		padding: 30px 83px 0 83px
 		border-top: 1px solid #DEDEDE
 
 		display: none
+		@media ( max-width:$md2+px )
+			padding: 20px
 //</POPUP>---------------------------------------

@@ -33,8 +33,7 @@ function showModla(modal, btn) {
 		modal.removeClass('active');
 		$('.content-infoExtra').hide();
 		$('.infoExtra--show').show();
-		$('#carPrice').val('')
-		$('#carPrice').val('')
+		$('#carPrice').val('').focus();
 		$('#carType').prop('selectedIndex',0);
 		$('#carYear').prop('selectedIndex',0);
 	});
