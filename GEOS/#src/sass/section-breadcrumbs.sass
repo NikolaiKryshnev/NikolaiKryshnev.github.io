@@ -1,6 +1,10 @@
-.container-breadcrumbs
+
 	
 .breadcrumbs
+	padding-top: 16px
+	padding-bottom: 16px
+	@extend .col-12
+
 	ul
 		display: flex
 		
@@ -8,11 +12,10 @@
 
 		list-style-type: none
 
-		font-size: 1rem
+		margin: 0
+		font-size: 0.88rem
 		@media ( max-width: 526px )
 			font-size: 1rem
-			
-			padding: 16px 0
 
 		li
 			position: relative
@@ -24,7 +27,7 @@
 				left: 0
 				top: 0
 
-				color: #007bff
+				color: #9B9B9B
 
 				margin-left: 6px
 
@@ -36,10 +39,10 @@
 
 			a
 				text-decoration: none
-				color: #007bff
+				color: #9B9B9B
 
 			span
-				color: #007bff
+				color: #9B9B9B
 
 .content-breadcrumbs
 	margin-bottom: 15px
@@ -50,7 +53,7 @@
 		padding: 0
 		
 		list-style-type: none
-		font-size: 1.2rem
+		font-size: 0.88rem
 		@media ( max-width: 526px )
 			flex-direction: column
 			align-items: flex-start

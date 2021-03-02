@@ -1,0 +1,217 @@
+.partfolio
+	.section-title
+		margin-bottom: 0
+
+	&-info
+		order: 1
+		position: relative
+		z-index: 3
+	
+		display: flex
+		flex-direction: column
+		justify-content: center
+
+		@extend .col-6
+
+		padding: 73px 120px 180px 15px
+		@media ( max-width:$md1+px )
+			padding: 40px 15px 180px 15px
+
+		@media ( max-width:$md2+px )
+			padding: 0 15px 15px 15px
+			margin-top: 30px
+
+			flex: 1 1 100%
+			max-width: 100%
+
+		&::after
+			margin-right: -60px
+			@include pseudoEl(block, absolute, '')
+			border: 30px solid rgba(#fff ,0 )
+			border-left: 30px solid #f4f4f4
+
+			z-index: 2
+
+			@include verticalcenter()
+			right: 0
+			@media ( max-width:$md2+px )
+				margin-right: 0
+				top: auto
+				bottom: 0
+				right: auto
+				@include translateY(0)
+				@include horizcenter()
+				margin-bottom: -60px
+				transform: translateX(-50%) rotate(90deg)
+
+		&__title
+			display: flex
+			align-items: center
+			justify-content: flex-start
+			
+			font-family: Montserrat-Regular
+			@extend .h2
+
+			margin-bottom: 5px
+			@media ( max-width:$md2+px )
+				padding: 15px 0 0 0
+
+				position: relative
+				&::after
+					@include pseudoEl(block, absolute, '')
+					left: 0
+					top: 0
+					width: 54px
+					height: 2px
+					background: #000000
+
+			a
+				text-decoration: none
+				@include transitColor(0.3s)
+				color: $black
+				&:hover
+					color: #ff9d76
+
+		&__list
+			font-size: 1rem
+
+			li
+				margin-bottom: 10px
+
+		.partfolio-btn
+			font-size: 1rem
+			color: #ff9d76
+			font-family: Montserrat-Bold
+
+			margin-bottom: 12px
+			max-width: max-content
+			@include transitColor(0.3s)
+			&:hover
+				color: $blue
+
+		&__galleryBtn
+			margin-left: 20px
+			
+			svg, .galleryShow-js, .playVideo-js
+				width: 20px
+				height: 20px
+
+			svg
+				fill: #ff9d76
+
+	@media ( max-width:$md1+px )
+	.btn
+		position: relative
+		
+		display: block
+
+		font-family: Montserrat-Bold
+		font-size: 1rem
+		line-height: 1.2
+		height: auto
+		color: $blue
+		text-decoration: none
+		width: max-content
+		background: none
+		border: none
+		text-transform: initial
+
+		padding-right: 28px
+		border-bottom: 1px solid rgba($blue, 0 )
+		transition: border-color 0.3s linear
+		cursor: pointer
+		padding-left: 0
+
+		&::after
+			@include pseudoEl(block, absolute, '')
+			top: 50%
+			@include translateY(-50%)
+
+			width: 18px
+			height: 14px
+			right: 0
+			left: auto
+
+			background: url(../img/icons/icons.svg#icon-arrowBtn) 100%/cover no-repeat
+
+			transition: right 0.3s linear
+
+		&:hover
+			&::after
+				right: -5px
+
+	&-line
+		position: relative
+
+		.row
+			@media ( max-width:$md2+px )
+				flex-direction: column
+
+		&__right
+			order: 2
+			position: absolute
+			right: 0
+			top: 0
+
+			flex: 0 0 50%
+			max-width: 50%
+			width: 100%
+
+			height: 100%
+			@media ( max-width:$md2+px )
+				position: relative
+				flex: 1 1 100%
+				max-width: 100%
+			
+
+		&__img
+			@include img_03(22.85%)
+			flex: 0 0 50%
+			height: 100%
+			
+
+		&__imgBox
+			@include img_02()
+			img
+				@include img_01()
+
+		&:nth-child(odd)
+			.row
+				flex-direction: row-reverse
+				@media ( max-width:$md2+px )
+					flex-direction: column
+
+				.partfolio-line__right
+					right: auto
+					left: 0
+
+				.partfolio-info
+					padding-left: 100px
+					@media ( max-width:$md1+px )
+						padding-left: 15px
+				.partfolio-info::after
+					left: 0
+					margin-right: 0
+					right: auto
+					@include rotate(180deg)
+					margin-left: -60px
+
+					@media ( max-width:$md2+px )
+						margin-right: 0
+						top: auto
+						bottom: 0
+						right: auto
+						@include translateY(0)
+						@include horizcenter()
+						margin-bottom: -60px
+						transform: translateX(-50%) rotate(90deg)
+						margin-left: 0
+
+	.hidden
+		// opacity: 0
+		// visibility: hidden
+		// width: 0
+		// height: 0
+		// padding: 0
+		// margin: 0
+		// line-height: 0

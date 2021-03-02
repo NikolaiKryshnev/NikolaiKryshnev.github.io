@@ -10,10 +10,21 @@
 	&::before
 		top: 75px
 		left: 0
+		@media screen and ( max-width: 1080px  )
+			display: none
+			
 
 	&::after
 		bottom: 0
 		right: 0
+		@media screen and ( max-width: 1080px )
+			width: 50%
+			height: calc( 100% - 105px )
+			left: 0
+			right: auto
+		@media ( max-width:$md2+px )
+			width: 100%
+			height: 100%
 		
 	&-column
 		display: flex
@@ -21,10 +32,28 @@
 
 		@extend .col-6
 		font-size: 1rem
+		@media screen and ( max-width: 1080px )
+			flex: 1 1 100%
+			max-width: 100%
+
+			margin-bottom: 20px
 
 		&__row
 			background: #fff
+			@media screen and ( max-width: 1080px )
+				flex: 0 0 50%
+				max-width: 50%
+			
+			@media ( max-width:$md2+px )
+				flex: 0 0 100%
+				max-width: 100%
+				order: 2
 
+				position: relative
+
+				padding-bottom: 58px
+
+			
 
 		&__address		
 			position: relative
@@ -60,6 +89,10 @@
 			@extend .col-6
 
 			margin-bottom: 30px
+			@media screen and ( max-width: 1080px )
+				flex: 1 1 100%
+				max-width: 100%
+				margin-bottom: 15px
 
 		&__tel, &__clock
 			display: flex
@@ -119,27 +152,61 @@
 		&__img
 			@include img_03(10.32rem)
 			background-color: $blue
-
-			.btn--arrow
-				position: absolute
-				z-index: 2
-				
-				bottom: 0
-				right: 0
-
-				font-size: 1rem
-				color: $white
-				margin: 0 28px 20px 0 
-
-				&::after
-					@include white()
+			@media screen and ( max-width: 1080px )
+				flex: 0 0 50%
+				max-width: 50%
+			
+			@media ( max-width:$md2+px )
+				flex: 0 0 100%
+				max-width: 100%
+				order: 1
+			@media ( max-width:$md3+px )
+				padding: 7.32rem 0
 
 		&__boxImg
 			@include img_02()
 
-
 			img
 				@include img_01()
+
+	.btn--arrow
+		position: absolute
+		z-index: 2
+		
+		bottom: 0
+		right: 0
+
+		font-size: 1rem
+		color: $white
+
+		margin: 0 28px 20px 0
+		
+		@media screen and ( max-width: 1080px )
+			right: auto
+			@include horizcenter()
+
+		@media ( max-width:$md2+px )
+			background: $blue
+			bottom: 0
+
+			width: 100%
+			height: 58px
+
+			line-height: 58px
+			text-align: center
+
+			padding: 0
+			margin: 0
+
+			&::after
+				display: none
+			
+
+		&::after
+			@include white()
+
+	.slick-initialized .slick-slide
+		display: flex !important
 
 		
 				

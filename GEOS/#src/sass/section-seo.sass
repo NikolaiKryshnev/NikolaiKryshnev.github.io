@@ -1,0 +1,21 @@
+.seoText
+	position: relative
+	padding-top: 0
+	
+	&:after
+		@include pseudoEl(block, absolute, '')
+		right: 0
+		bottom: 0
+		width: 40%
+		height: 90%;
+		background: #f8f8f8
+		z-index: -1
+
+	&-title
+		margin-bottom: 20px
+
+	&-block
+		font-size: 1rem
+
+		p
+			padding-bottom: 20px

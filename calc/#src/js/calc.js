@@ -32,32 +32,36 @@ $(document).ready(function () {
 
 		modalCarPrice.html(resultPriceCar + '$');
 
-		if (13000 > resultPriceCar) {
+		if (13000 >= resultPriceCar) {
 			appendProcent(resultPriceCar, resultPriceStandart, yearsCarResult, modalCoeffStandart, 3.50, 4.80, 5.30);
 			$('#cascoOptima').hide();
-		} else if (13001 > resultPriceCar <= 15000) {
+			$('#cascoStandart').attr('style', 'flex: 1 1 100%; max-width: 100%');
+		} else if (13001 <= resultPriceCar && resultPriceCar <= 15000) {
 			appendProcent(resultPriceCar, resultPriceStandart, yearsCarResult, modalCoeffStandart, 3.40, 4.72, 5.15);
-			$('#cascoOptima').show();
-			appendProcent(resultPriceCar, resultPriceOptima, yearsCarResult, modalCoeffOptima, 3.40, 4.70, 5.20);
-
-		} else if (15001 > resultPriceCar <= 20000) {
+			$('#cascoOptima').hide();
+			$('#cascoStandart').attr('style', 'flex: 1 1 100%; max-width: 100%');
+		} else if (15001 <= resultPriceCar && resultPriceCar <= 20000) {
 			appendProcent(resultPriceCar, resultPriceStandart, yearsCarResult, modalCoeffStandart, 3.25, 4.51, 4.92);
 			$('#cascoOptima').show();
-			appendProcent(yearsCarResult, resultPriceOptima, modalCoeffOptima, 3.40, 4.70, 5.20);
-
-		} else if (20001 > resultPriceCar <= 30000) {
-			appendProcent(resultPriceCar, resultPriceStandart, yearsCarResult, modalCoeffStandart, 3.05, 4.24, 4.62);
-			$('#cascoOptima').show();
+			$('#cascoStandart').removeAttr('style')
 			appendProcent(resultPriceCar, resultPriceOptima, yearsCarResult, modalCoeffOptima, 3.40, 4.70, 5.20);
 
-		} else if (30001 > resultPriceCar <= 40000) {
+		} else if (20001 <= resultPriceCar && resultPriceCar <= 30000) {
+			appendProcent(resultPriceCar, resultPriceStandart, yearsCarResult, modalCoeffStandart, 3.05, 4.24, 4.62);
+			$('#cascoOptima').show();
+			$('#cascoStandart').removeAttr('style')
+			appendProcent(resultPriceCar, resultPriceOptima, yearsCarResult, modalCoeffOptima, 3.40, 4.70, 5.20);
+
+		} else if (30001 <= resultPriceCar && resultPriceCar <= 40000) {
 			appendProcent(resultPriceCar, resultPriceStandart, yearsCarResult, modalCoeffStandart, 2.90, 4.03, 4.39);
 			$('#cascoOptima').show();
+			$('#cascoStandart').removeAttr('style')
 			appendProcent(resultPriceCar, resultPriceOptima, yearsCarResult, modalCoeffOptima, 3.40, 4.70, 5.20);
 
 		} else if (40000 < resultPriceCar) {
 			appendProcent(resultPriceCar, resultPriceStandart, yearsCarResult, modalCoeffStandart, 2.70, 3.75, 4.09);
 			$('#cascoOptima').show();
+			$('#cascoStandart').removeAttr('style')
 			appendProcent(resultPriceCar, resultPriceOptima, yearsCarResult, modalCoeffOptima, 3.40, 4.70, 5.20);
 		}
 	});

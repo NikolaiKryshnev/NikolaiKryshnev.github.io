@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html')
+		<main class="main main-salon main--gray">
+			@@include('_breadcrumbs.html')
+			<section class="section-salon salon _section">
+				@@include('_section-title.html',{
+				"title":"Салоны",
+				"subtext":" "})
+				<div class="container">
+					<div class="row">
+						<div class="salon-box">
+							<div class="salon-column">
+								<div class="salon-column__row">
+									<div class="salon-column__address h5">г. Минск, ул. Стариновская, д. 2</div>
+									<div class="salon-column__info salon-info row">
+										<div class="salon-info__metro">Уручье</div>
+										<div class="salon-info__mail"><a href="mailto:hello@mediashark.by">hello@mediashark.by</a>
+										</div>
+										<div class="salon-info__tel">
+											<a href="tel:+375333333333">+ 375 (33) 333-33-33</a>
+											<a href="tel:+375333333333">+ 375 (33) 333-33-33</a>
+										</div>
+										<div class="salon-info__clock">
+											<div><b>пн-пт:</b> 10:00 - 20:00</div>
+											<div><b>сб, вс:</b> 10:00 - 17:00</div>
+										</div>
+										<div class="salon-info__mat">
+											<b>Материалы в наличии:</b> Арли, Натали, Маринара, Руна, Капри, Калипсо, Эри, Симона,
+											Дамиана
+										</div>
+									</div>
+									<button class="btn--arrow">ЗАПИСАТЬСЯ В САЛОН</button>
+								</div>
+								<!-- /.salon-column__row -->
+
+								<div class="salon-column__img">
+									<div class="salon-column__boxImg">
+										<img src="./img/section-salon/01.jpg" alt="">
+									</div>
+									<a class="btn--arrow" href="#">ПОДРОБНЕЕ</a>
+								</div>
+							</div>
+							<!-- /.salon-column -->
+
+							<div class="salon-column">
+								<div class="salon-column__img">
+									<div class="salon-column__boxImg">
+										<img src="./img/section-salon/02.jpg" alt="">
+									</div>
+									<a class="btn--arrow" href="#">ПОДРОБНЕЕ</a>
+								</div>
+								<div class="salon-column__row">
+									<div class="salon-column__address h5">г. Минск, ул. Стариновская, д. 2</div>
+									<div class="salon-column__info salon-info row">
+										<div class="salon-info__metro">Уручье</div>
+										<div class="salon-info__mail"><a href="mailto:hello@mediashark.by">hello@mediashark.by</a>
+										</div>
+										<div class="salon-info__tel">
+											<a href="tel:+375333333333">+ 375 (33) 333-33-33</a>
+											<a href="tel:+375333333333">+ 375 (33) 333-33-33</a>
+										</div>
+										<div class="salon-info__clock">
+											<div><b>пн-пт:</b> 10:00 - 20:00</div>
+											<div><b>сб, вс:</b> 10:00 - 17:00</div>
+										</div>
+										<div class="salon-info__mat">
+											<b>Материалы в наличии:</b> Арли, Натали, Маринара, Руна, Капри, Калипсо, Эри, Симона,
+											Дамиана
+										</div>
+									</div>
+									<button class="btn--arrow">ЗАПИСАТЬСЯ В САЛОН</button>
+								</div>
+								<!-- /.salon-column__row -->
+							</div>
+							<!-- /.salon-column -->
+
+							<div class="salon-text">
+								<p>Если Вы хотите купить кухню из дерева, пластика или акрила, рекомендуем обратить свое
+									внимание на продукцию фабрики GeosIdeal. Фабричные кухни выполнены в современном дизайне, а
+									качество позволяет пользоваться продукцией долгие годы.</p>
+								<p>
+									Кухни от производителя из массива дерева, акрила или пластика обеспечат максимальный комфорт
+									в эксплуатации, а их внешний вид будет ежедневно поднимать Ваше настроение.
+								</p>
+								<p>Фабрика реализует продукцию в фирменных салонах «Идеал Кухни» в Витебске, Минске, Бресте. В
+									каждом салоне Вам бесплатно создадут дизайн-проект, рассчитают стоимость кухни, помогут с
+									выбором фурнитуры, мойки, встроенной техники и сопутствующих аксессуаров.</p>
+							</div>
+						</div>
+
+						<div class="salon-map">
+							<div class="salon-map__box"><a
+									href="https://yandex.by/maps/157/minsk/?utm_medium=mapframe&utm_source=maps"
+									style="color:#eee;font-size:12px;position:absolute;top:0px;">Минск</a><a
+									href="https://yandex.by/maps/157/minsk/?ll=27.561481%2C53.902496&utm_medium=mapframe&utm_source=maps&z=12"
+									style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс.Карты — поиск мест и
+									адресов, городской транспорт</a><iframe src="https://yandex.by/map-widget/v1/-/CBRwfTX5XB"
+									allowfullscreen="true" style="position:relative; border:none;"></iframe></div>
+						</div>
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.container -->
+			</section>
+			<!-- /.section-salon -->
+		</main>
+		<!-- /.main -->
+		@@include('_footer.html')
+
+	</div>
+	<!-- /.wrapper -->
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+
+</body>
+
+</html>

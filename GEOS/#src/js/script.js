@@ -26,15 +26,18 @@
 
 	(function ($) {
 		//<TASK>---------------------------------------
-
+		@@include('function.js')
 		@@include('header.js')
 		@@include('title.js')
 
 		@@include('scrollTop.js')
 		@@include('popup.js')
-		@@include('slider.js')
 		@@include('fancybox.js')
 		@@include('wordLastTag.js')
+		@@include('append.js')
+		@@include('slider.js')
+		@@include('iframe.js')
+
 
 		//</TASK>---------------------------------------
 	})(jQuery);

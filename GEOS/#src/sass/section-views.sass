@@ -1,0 +1,120 @@
+.views
+	&-tabs
+		margin: 0
+		
+		.tab-header
+			margin-bottom: 60px
+			@media ( max-width:$md2+px )
+				border: 1px solid #003A66
+				margin-bottom: 44px
+
+			&__item
+				display: block
+				max-width: 100%
+				width: 100%
+
+				padding: 0
+				@media ( max-width:$md2+px )
+					border-bottom: 1px solid #003A66
+					&:last-child
+						border-bottom: 0
+
+				&::before
+					@media ( max-width:$md2+px )
+						display: none
+		.tab-content__item
+			flex-wrap: wrap
+			padding-top: 0
+
+	&-line
+		width: 100%
+		margin-bottom: 50px
+		&:last-child
+			margin-bottom: 0
+		@media ( max-width:$md3+px )
+			margin-bottom: 20px
+
+		&__title
+			position: relative
+
+			display: flex
+			align-items: center
+
+			padding-left: 15px
+
+			font-size: 1rem
+			font-family: Montserrat-Bold
+			text-transform: uppercase
+
+			margin-bottom: 26px
+			margin-left: 15px
+			@extend .col-12
+			@media ( max-width:$md3+px )
+				margin-bottom: 17px
+
+			&::before
+				@include pseudoEl(block, absolute, '')
+				left: 0
+				@include verticalcenter()
+
+				width: 7px
+				height: 7px
+				background: $orange
+
+	&-row
+		display: flex
+
+		width: 100%
+		
+	&-col
+		@extend .col-2
+		@media ( max-width:$md2+px )
+			flex: 0 0 25%
+			max-width: 25%
+		@media ( max-width:$md3+px )
+			flex: 0 0 50%
+			max-width: 50%
+		a
+			display: flex
+			flex-direction: column
+
+			color: #898989
+			text-decoration: none
+			@include transitColor(0.3s)
+			&:hover
+				color: $blue
+
+	
+		&__imgBox
+			@include img_03(45%)
+			margin-bottom: 5px
+
+		&__img
+			@include img_02()
+
+			img
+				@include img_01()
+
+		&__title
+			font-size: 1rem
+			font-family: Montserrat-Bold
+
+		&__info
+			font-size: 0.88rem
+			@media ( max-width:$md3+px )
+				font-size: 1rem
+
+.block-arrows
+	position: relative
+
+	display: flex
+
+	margin-left: 30px
+
+	.slick-arrow
+		position: relative
+		top: auto
+		@include translateY(0)
+
+	.slick-arrow__right
+		margin-left: 30px

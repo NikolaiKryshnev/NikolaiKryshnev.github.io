@@ -4,9 +4,13 @@ function valNumber(inputNumber) {
 		if (this.value.match(/[^0-9]/g)) {
 			this.value = this.value.replace(/[^0-9]/g, '');
 		}
+		inputNumber.keyup(function () {
+			let inputThis = $(this);
+			if (inputThis.val().length > 6)
+				inputThis.val(inputThis.val().substr(0, 6));
+		});
 	});
 }
-
 
 // add options years Car
 function addBlockFor(parentBlock, number, numberAll) {
@@ -39,7 +43,7 @@ function appendProcent(priceCasca, resultPriceCasca, YearsResult, htmlCoeff, num
 			$('.carYears').html(' ' + YearsResult + ' года');
 		}
 		htmlCoeff.html(' ' + numberCoeffOne + ' %');
-		resultPriceCasca.html(' ' + (Math.trunc( (priceCasca / 100 * numberCoeffOne) * 100 ) / 100) + '$')
+		resultPriceCasca.html(' ' + (Math.trunc((priceCasca / 100 * numberCoeffOne) * 100) / 100) + '$')
 
 
 	} else if (3 < YearsResult && YearsResult <= 5) {
@@ -49,14 +53,14 @@ function appendProcent(priceCasca, resultPriceCasca, YearsResult, htmlCoeff, num
 			$('.carYears').html(' ' + YearsResult + ' лет');
 		}
 		htmlCoeff.html(' ' + numberCoeffTwo + ' %');
-		resultPriceCasca.html(' ' + (Math.trunc( (priceCasca / 100 * numberCoeffTwo) * 100 ) / 100) + '$')
-		
+		resultPriceCasca.html(' ' + (Math.trunc((priceCasca / 100 * numberCoeffTwo) * 100) / 100) + '$')
+
 
 	} else if (5 < YearsResult && YearsResult <= 7) {
 		$('.carYears').html(' ' + YearsResult + ' лет');
 
 		htmlCoeff.html(' ' + numberCoeffThree + ' %');
-		resultPriceCasca.html(' ' + (Math.trunc( (priceCasca / 100 * numberCoeffThree) * 100 ) / 100) + '$')
+		resultPriceCasca.html(' ' + (Math.trunc((priceCasca / 100 * numberCoeffThree) * 100) / 100) + '$')
 
 	}
 }

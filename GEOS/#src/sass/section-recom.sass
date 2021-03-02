@@ -1,0 +1,53 @@
+.recom
+	.section-title
+		@media ( max-width:$md3+px )
+			position: relative
+			flex-direction: column
+			align-items: flex-start
+
+			.block-arrows
+				position: absolute
+				bottom: -25px
+				left: 0
+				margin-left: 0
+				
+
+	&-slider
+		display: flex
+		flex-wrap: wrap
+		width: 100%
+
+	.slick-track
+		// display: flex
+
+
+	.product-col
+		@extend .col-3
+		margin-bottom: 0
+		@media ( max-width:$md1+px )
+			max-width: 50%
+			flex: 0 0 50%
+
+		&.slick-slide
+			flex: auto
+			max-width: auto
+
+
+		.product-cart__title
+			margin: 15px 20px
+
+		.product-cart__info
+			padding: 15px 0
+			margin: 0 20px
+
+		.product-cart__price
+			margin: 0 20px
+
+		.product-cart__bot
+			height: 63px
+
+	.slick-track
+   display: flex !important
+
+	.slick-slide
+		height: inherit !important
