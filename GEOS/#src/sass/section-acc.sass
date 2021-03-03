@@ -4,6 +4,7 @@
 
 	.content-blocks
 		margin-bottom: 40px
+		@extend .col-12
 
 	.acc-block
 		margin-bottom: 20px
@@ -29,8 +30,8 @@
 			max-width: 80%
 			width: 100%
 
-			font-size: 1.25rem
-			font-family: CenturyBold
+			@extend .h5
+			font-family: Montserrat-Bold
 			@media ( max-width:$md1+px )
 				padding: 10px 0
 
@@ -38,7 +39,7 @@
 		&__icon
 			position: relative
 
-			margin: 0 25px 0 0
+			margin: 0 50px 0 0
 
 			cursor: pointer
 			@media ( max-width:$md3+px )
@@ -70,7 +71,7 @@
 			padding: 25px 0
 
 			font-size: 1rem
-			border-top: 2px solid #007bff
+			border-top: 2px solid #ff9d76
 			@media ( max-width:$md1+px )
 				margin: 0
 
@@ -79,9 +80,9 @@
 
 				padding-top: 20px
 
-				color: #007bff
+				color: #ff9d76
 				text-transform: uppercase
-				font-family: CenturyBold
+				font-family: Montserrat-Bold
 
 				&:hover
 					text-decoration: none

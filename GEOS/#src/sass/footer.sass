@@ -70,6 +70,10 @@
 .icon-mail::after
 	background: url(../img/icons/icons.svg#icon-mail) center/cover no-repeat
 
-.icon-phone::after
-	background: url(../img/icons/icons.svg#icon-phone) center/cover no-repeat
+.icon-phone
+	display: flex
+	flex-direction: column
+	
+	&::after
+		background: url(../img/icons/icons.svg#icon-phone) center/cover no-repeat
 				

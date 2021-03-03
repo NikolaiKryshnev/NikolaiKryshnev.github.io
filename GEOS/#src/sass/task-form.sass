@@ -6,7 +6,7 @@ input
 	&>div
 		position: relative
 
-.input-name, .input-password
+.input-name, .input-password, .input-phone
 	&>div
 		&:after
 			@include pseudoEl(block, absolute, '')
@@ -20,9 +20,14 @@ input
 .input-name
 	&>div
 		&:after
-			background: url("data:image/svg+xml,%3Csvg viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6552 12.7539C12.6282 11.0256 12.0898 9.45401 11.1324 8.31618C10.1807 7.18529 8.8908 6.5625 7.50002 6.5625C6.10924 6.5625 4.81935 7.18529 3.86759 8.31618C2.91116 9.45281 2.37307 11.0222 2.34494 12.7484C2.88576 13.0193 5.12375 14.0625 7.50002 14.0625C10.0696 14.0625 12.1537 13.0254 12.6552 12.7539Z' fill='%23FFCA10'/%3E%3Cpath d='M7.5 6.09375C8.92386 6.09375 10.0781 4.93948 10.0781 3.51562C10.0781 2.09177 8.92386 0.9375 7.5 0.9375C6.07614 0.9375 4.92188 2.09177 4.92188 3.51562C4.92188 4.93948 6.07614 6.09375 7.5 6.09375Z' fill='%23FFCA10'/%3E%3C/svg%3E") 100%/cover no-repeat
+			background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M7.54739 8.22144C3.59446 8.22144 0.378418 11.4375 0.378418 15.3904C0.378418 15.5625 0.518067 15.7021 0.690122 15.7021H14.4047C14.5767 15.7021 14.7164 15.5625 14.7164 15.3904C14.7164 11.4375 11.5003 8.22144 7.54739 8.22144Z' fill='url(%23paint0_linear)'/%3E%3Cpath d='M7.54728 7.55941C9.44086 7.55941 10.9759 6.02436 10.9759 4.13078C10.9759 2.2372 9.44086 0.702148 7.54728 0.702148C5.6537 0.702148 4.11865 2.2372 4.11865 4.13078C4.11865 6.02436 5.6537 7.55941 7.54728 7.55941Z' fill='url(%23paint1_linear)'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='7.5474' y1='8.22144' x2='7.5474' y2='15.7021' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23F5A484'/%3E%3Cstop offset='1' stop-color='%23D06330'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='7.54728' y1='0.702148' x2='7.54728' y2='7.55941' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23F5A484'/%3E%3Cstop offset='1' stop-color='%23D06330'/%3E%3C/linearGradient%3E%3CclipPath id='clip0'%3E%3Crect width='15' height='15' fill='white' transform='translate(0.0473633 0.702148)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") 100%/cover no-repeat
 
 .input-password
 	&>div
 		&:after
 			background: url("data:image/svg+xml,%3Csvg viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.5 0C6.28117 0 4.48242 1.79875 4.48242 4.01758C4.48242 6.23641 4.48242 6.97266 4.48242 6.97266H6.47461C6.47461 6.97266 6.47461 5.13616 6.47461 4.01758C6.47461 2.899 7.38142 1.99219 8.5 1.99219C9.61858 1.99219 10.5254 2.899 10.5254 4.01758C10.5254 5.13616 10.5254 6.97266 10.5254 6.97266H12.5176C12.5176 6.97266 12.5176 6.23641 12.5176 4.01758C12.5176 1.79875 10.7188 0 8.5 0Z' fill='%23DEDEDE'/%3E%3Cpath d='M2.49023 7.96875V17H14.5098V7.96875H2.49023ZM8.99805 12.5994V14.2275H8.00195V12.5994C7.70452 12.4269 7.50391 12.1052 7.50391 11.7373C7.50391 11.1881 7.95075 10.7412 8.5 10.7412C9.04925 10.7412 9.49609 11.1881 9.49609 11.7373C9.49609 12.1052 9.29548 12.4269 8.99805 12.5994Z' fill='%23DEDEDE'/%3E%3C/svg%3E") 100%/cover no-repeat
+
+.input-phone
+	&>div
+		&:after
+			background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.7796 11.7106L12.6863 9.61734C11.9387 8.86974 10.6678 9.16881 10.3687 10.1407C10.1445 10.8135 9.39685 11.1873 8.724 11.0378C7.22879 10.664 5.21026 8.72021 4.83645 7.15024C4.61217 6.47737 5.06073 5.72976 5.73358 5.50551C6.70547 5.20647 7.00451 3.93554 6.2569 3.18794L4.16361 1.09464C3.56552 0.571318 2.6684 0.571318 2.14507 1.09464L0.724625 2.51509C-0.695825 4.0103 0.874146 7.97261 4.38789 11.4864C7.90164 15.0001 11.8639 16.6449 13.3592 15.1496L14.7796 13.7292C15.303 13.1311 15.303 12.234 14.7796 11.7106Z' fill='url(%23paint0_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='7.68787' y1='0.702148' x2='7.68787' y2='15.7022' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23F5A484'/%3E%3Cstop offset='1' stop-color='%23D06330'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E") 100%/cover no-repeat

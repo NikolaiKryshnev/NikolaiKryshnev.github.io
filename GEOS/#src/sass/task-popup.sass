@@ -41,16 +41,16 @@
 		visibility: visible
 
 .modal 
-	display: flex
+	display: none
 	align-items: center
 	justify-content: center
 	position: relative
 	margin: 0 auto
 	background-color: #fff
-	width: 600px
+	width: 740px
 	max-width: 75rem
 	min-height: 20rem
-	padding: 1rem
+	// padding: 1rem
 	border-radius: 3px
 	opacity: 0
 	overflow-y: auto
@@ -59,37 +59,100 @@
 	backface-visibility: hidden
 	transform: scale(1.2)
 	transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1)
-
+	background-image: url(../img/section-popup/01.png)
+	background-repeat: no-repeat
+	background-position-x: calc( 100% - 40px )
+	background-position-y: center
 	.close-modal 
+		display: flex
 		position: absolute
+		z-index: 2
 		cursor: pointer
 		top: 5px
-		right: 15px
+		right: 5px
+
+		width: 15px
+		height: 15px
+		
 		opacity: 0
 		backface-visibility: hidden
 		transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1)
 		transition-delay: 0.3s
 
 		svg 
-			width: 1.75em
-			height: 1.75em
+			width: 15px
+			height: 15px
 
-	.modal-content 
+	&-content 
+		width: 100%
+
+		margin-top: 80px
+		padding: 25px 40px 40px 40px 
 		opacity: 0
 		backface-visibility: hidden
 		transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1)
 		transition-delay: 0.3s
+		@media ( max-width:$md2+px )
+			padding: 25px
+		&__sub
+			max-width: 370px
+			margin-bottom: 10px
+
+	&-title
+		position: absolute
+		top: 0
+		left: 0
+
+		width: 100%
+
+		background: #F8F8F8
+		padding: 28px 50px
+		font-family: Montserrat-Bold
+		
 
 	&.active 
 		visibility: visible
 		opacity: 1
 		transform: scale(1)
+		display: flex
+
 
 		.modal-content 
 			opacity: 1
 
 		.close-modal 
-			transform: translateY(10px)
+			// transform: translateY(10px)
 			opacity: 1
 
+
+	.form-input
+		font-family: Montserrat-Bold
+		margin-bottom: 30px
+
+		input
+			font-family: Montserrat-Regular
+			padding: 0 30px
+			border-bottom: 1px solid #26242D
+			line-height: 40px
+
+
+.modal-thanks
+	background-image: none
+	background-color: $blue
+	color: $white
+	@extend .h3
+
+	max-width: 580px
+	min-height: 225px
+
+	.close-modal
+		path
+			stroke: $white
+
+	.modal-content
+		max-width: 350px
+		width: 100%
+		padding: 0
+		text-align: center
+		margin: 0
 //</POPUP>---------------------------------------

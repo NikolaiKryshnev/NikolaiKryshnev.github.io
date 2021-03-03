@@ -37,7 +37,7 @@
 		@@include('append.js')
 		@@include('slider.js')
 		@@include('iframe.js')
-
+		@@include('acc.js')
 
 		//</TASK>---------------------------------------
 	})(jQuery);

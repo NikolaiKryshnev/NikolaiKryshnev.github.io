@@ -1,48 +1,47 @@
 
 	
-.breadcrumbs
+ul.breadcrumbs
 	padding-top: 16px
 	padding-bottom: 16px
 	@extend .col-12
 
-	ul
-		display: flex
-		
-		padding: 0
+	display: flex
+	flex-wrap: wrap
+	
+	list-style-type: none
 
-		list-style-type: none
+	margin: 0
+	font-size: 0.88rem
+	@media ( max-width: 526px )
+		font-size: 1rem
 
-		margin: 0
-		font-size: 0.88rem
-		@media ( max-width: 526px )
-			font-size: 1rem
+.breadcrumbs
+	li
+		position: relative
+		padding-left: 15px
 
-		li
-			position: relative
-			padding-left: 15px
+		&::after
+			content: "-"
+			position: absolute
+			left: 0
+			top: 0
 
-			&::after
-				content: "-"
-				position: absolute
-				left: 0
-				top: 0
+			color: #9B9B9B
 
-				color: #9B9B9B
+			margin-left: 6px
 
-				margin-left: 6px
+		&:first-child
+			padding-left: 0
+			
+			&:after
+				display: none
 
-			&:first-child
-				padding-left: 0
-				
-				&:after
-					display: none
+		a
+			text-decoration: none
+			color: #9B9B9B
 
-			a
-				text-decoration: none
-				color: #9B9B9B
-
-			span
-				color: #9B9B9B
+		span
+			color: #9B9B9B
 
 .content-breadcrumbs
 	margin-bottom: 15px

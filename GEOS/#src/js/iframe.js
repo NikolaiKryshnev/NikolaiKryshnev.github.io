@@ -4,18 +4,34 @@
 $(document).ready(function () {
 	let iframeVideo = $('iframe');
 
-	function adaptivVideo(videoEl) {
-		for (let i = 0; i < videoEl.length; i++) {
-			const video = videoEl[i];
+	function adaptivIframe(iframeBlock) {
+		for (let i = 0; i < iframeBlock.length; i++) {
+			const video = iframeBlock[i];
 			$(video).css({ 'position': 'absolute', 'width': '100%', 'height': '100%', 'top': '0', 'left': '0' });
-			$(video).wrapAll('<div class="adaptive-video js-videoWrapper" style=" position: relative; width: 100%; padding: 20% 0; margin: 0 15px;">');
+			if ($(iframeBlock).attr('src').indexOf('youtube') !== -1) {
+				$(video).wrapAll('<div class="adaptive-video js-videoWrapper" style=" position: relative; width: 100%; padding: 20% 0; margin: 0 15px; height: 100%;">');
+			} else if ($(iframeBlock).attr('src').indexOf('yandex') !== -1) {
+				$(iframeBlock).parent().addClass('adaptive-video js-videoWrapper').css({ 'position': 'initial', 'width': '100%', 'height': '100%', 'padding': '20% 0'})
+			}
 		}
 	}
 
-	adaptivVideo(iframeVideo);
-	let imgHref = $('.banCart-imgBg--js').attr('href');
+	function videoPlay(wrapper) {
+		let iframe = wrapper.find('iframe');
+		let src = iframe.data('src');
+		iframe.attr('src', src);
+		$('.videoPoster').css({ 'opacity': '0', 'visibility': 'hidden', });
 
-	$('.js-videoWrapper').append(`
+	}
+
+	if (iframeVideo.parents().hasClass('maps') == true) {
+		console.log("iframe - map,  no video ");
+		adaptivIframe(iframeVideo)
+	} else {
+		adaptivIframe(iframeVideo);
+		let imgHref = $('.banCart-imgBg--js').attr('href');
+
+		$('.js-videoWrapper').append(`
 	<button class="videoPoster js-videoPoster" style="background-image: url(${imgHref}) ">
 	<svg width="20%" height="20%" viewBox="0 0 94 89" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M62.4039 42.7907L43.0927 29.5077C42.384 29.0216 41.4432 28.9484 40.6665 29.3261C39.8835 29.701 39.3945 30.4623 39.3945 31.2852V57.8425C39.3945 58.6741 39.8835 59.4326 40.6665 59.8074C40.9976 59.9655 41.3597 60.0446 41.7249 60.0446C42.2015 60.0446 42.6842 59.9011 43.0927 59.617L62.4039 46.3457C63.0136 45.9211 63.3695 45.2652 63.3695 44.5682C63.3726 43.8596 63.0074 43.2065 62.4039 42.7907Z" fill="url(#paint0_linear)"/>
@@ -32,28 +48,18 @@ $(document).ready(function () {
 		</defs>
 	</svg>
 	</button>`)
-	let attrVideo = iframeVideo.attr('src');
-	iframeVideo.attr('data-src', attrVideo + '?rel=0&showinfo=0&autoplay=1&loop=0&egm=0&border=0&fs=0&modestbranding=1&showinfo=0&cc_load_policy=0&iv_load_policy=3&showinfo=0&controls=2');
-	iframeVideo.attr('src', '');
+		let attrVideo = iframeVideo.attr('src');
+		iframeVideo.attr('data-src', attrVideo + '?rel=0&showinfo=0&autoplay=1&loop=0&egm=0&border=0&fs=0&modestbranding=1&showinfo=0&cc_load_policy=0&iv_load_policy=3&showinfo=0&controls=2');
+		iframeVideo.attr('src', '');
 
+		$(document).on('click', '.js-videoPoster', function (e) {
+			e.preventDefault();
+			let poster = $(this);
+			let wrapper = poster.closest('.js-videoWrapper');
+			videoPlay(wrapper);
 
-	// function styleIframe() {
-	// 	// iframeVideo.attr('src')
-	// }
-	$(document).on('click', '.js-videoPoster', function (e) {
-		e.preventDefault();
-		let poster = $(this);
-		let wrapper = poster.closest('.js-videoWrapper');
-		videoPlay(wrapper);
-		
-	});
-
-	function videoPlay(wrapper) {
-		let iframe = wrapper.find('iframe');
-		let src = iframe.data('src');
-		iframe.attr('src', src);
-		$('.videoPoster').css({'opacity': '0', 'visibility': 'hidden', });
-
+		});
 	}
+
 
 });
