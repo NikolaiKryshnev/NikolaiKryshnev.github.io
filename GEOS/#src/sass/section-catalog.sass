@@ -107,6 +107,8 @@
 			@include img_01()
 
 	&-cart
+		overflow: hidden
+		
 		display: flex
 		flex-direction: column
 
@@ -213,7 +215,8 @@
 			display: none
 			// opacity: 0
 			// transition: opacity 0.3s linear
-
+			bottom: -100%
+			transition: bottom 1s linear
 
 			@media ( max-width:$md1+px )
 				position: absolute
@@ -238,6 +241,7 @@
 	.product-cart__btn
 		display: flex
 		opacity: 1
+		bottom: 0
 
 	.product-cart__price
 		display: none

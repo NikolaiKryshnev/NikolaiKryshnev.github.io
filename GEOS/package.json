@@ -28,7 +28,6 @@
     "gulp-webpcss": "^1.1.1"
   },
   "dependencies": {
-    "@fancyapps/fancybox": "^3.5.7",
     "del": "^5.1.0",
     "jquery": "^3.5.1",
     "normalize.sass": "^3.0.3-2",

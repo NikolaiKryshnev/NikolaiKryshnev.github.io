@@ -35,6 +35,17 @@
 			&__img
 				@extend .col-5
 				order: 1
+				&::after
+					@include pseudoEl(block, absolute, '')
+					top: 0
+					left: 0
+					right: 0
+					bottom: 0
+
+					width: 100%
+					height: 100%
+					background: linear-gradient(358.08deg, #000000 -1.79%, rgba(196, 196, 196, 0) 31.36%, rgba(0, 0, 0, 0) 31.36%)
+					z-index: 2
 				@media ( max-width:$md2+px )
 					max-width: 100%
 					flex: 1 1 100%
@@ -43,13 +54,14 @@
 				@extend .col-7
 				order: 2
 
-				padding: 25px 30px 25px 20px
+				padding: 25px
 				@media ( max-width:$md2+px )
 					max-width: 100%
 					flex: 1 1 100%
 
 				.btn--arrow
 					position: relative
+					z-index: 3
 					color: $blue
 					padding-left: 50px
 					margin-top: 20px
@@ -65,6 +77,7 @@
 						filter: brightness(1) invert(0)
 
 			.btn--arrow
+				z-index: 3
 				right: 0
 				@include translateX(0)
 				// position: relative
@@ -87,6 +100,9 @@
 					@include translateX(0)
 					padding-right: 30px
 					background: none
+					height: auto
+					line-height: 1
+					margin-top: 20px
 
 				&::after
 					display: block
@@ -111,6 +127,8 @@
 			max-width: 100%
 			flex: 1 1 100%
 			padding: 25% 0
+		@media ( max-width:$md3+px )
+			padding: 20% 0
 
 		&__box
 			width: 100%
@@ -129,7 +147,6 @@
 				height: 100%
 				border: none
 
-
 	.salonCart
 		.salon-column__row
 			order: 1
@@ -143,6 +160,7 @@
 				order: 1
 
 		.btn--arrow
+			z-index: 3
 			left: 0
 			right: auto
 			@media ( max-width:$md2+px )

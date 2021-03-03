@@ -1,4 +1,13 @@
 .choice
+	@media ( max-width:$md1+px )
+		position: relative
+		&::after
+			@include pseudoEl(block, absolute, '')
+			width: 100%
+			height: calc( 100% - 120px )
+			@include verticalcenter()
+			background: #f8f8f8
+			z-index: -1
 	&-row
 		display: grid
 
@@ -239,3 +248,7 @@
 
 	.section-title
 		margin-bottom: 20px
+
+
+.description
+	// padding-top: 0

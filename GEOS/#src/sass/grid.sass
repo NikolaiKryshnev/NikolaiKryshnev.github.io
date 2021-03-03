@@ -1,14 +1,26 @@
 	
 .wrapper
 	overflow: hidden
+	display: grid
+	grid-template-areas: "header" "main" "footer"
+	grid-template-rows: auto 1fr auto
+	min-height: 100vh
 
 .main
+	overflow: hidden
+	padding-bottom: 30px
 	&--gray
 		background: #F4F4F4
 
 		._section
 			&::before, &::after
 				display: none
+
+	&--pd
+		.description, .partfolio, .samples
+			padding-top: 0
+			@media ( max-width:$md2+px )
+				padding-top: 0
 
 	&-cartPrduct
 		position: relative
@@ -41,7 +53,7 @@
 			background: rgba($black,0.56 )
 			visibility: visible
 ._section
-	padding: 40px 0
+	padding: 60px 0
 	@media ( max-width:$md2+px )
 		padding: 30px 0
 

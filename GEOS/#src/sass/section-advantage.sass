@@ -1,6 +1,8 @@
 .advantage
 	position: relative
-	// margin-bottom: -80px
+	margin-bottom: -80px
+	@media ( max-width:$md3+px )
+		margin-bottom: 0
 	
 	&:after
 		@include pseudoEl(block, absolute, '')
@@ -33,6 +35,9 @@
 			max-width: 100%
 			align-items: center
 			text-align: center
+			&:last-child
+				margin-bottom: 0
+				
 		&__img
 			display: flex
 			align-items: flex-end
