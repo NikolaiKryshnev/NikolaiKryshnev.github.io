@@ -270,10 +270,41 @@
 </div><!-- overlay -->
 	<script src="./js/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 <script>
 	$(function () {
 		$(".phone").mask("+375(99) 999-99-99");
 	});
+</script>
+
+
+<script>
+	$(document).ready(function () {
+		let grid = new Isotope('.grid', {
+			itemSelector: '.grid-item',
+			layoutMode: 'fitRows'
+		});
+
+		let filterBtn = document.querySelectorAll('.filters-button .filter-btn');
+
+		for (let i = 0; i < filterBtn.length; i++) {
+			filterBtn[i].onclick = function (click) {
+				filterBtn[i].classList.remove('active')
+
+				// click.preventDefault();
+				let filterData = event.target.getAttribute('data-filter');
+				for (let i = 0; i < filterBtn.length; i++) {
+					filterBtn[i].classList.remove('active');
+				}
+				event.target.classList.add('active');
+
+				grid.arrange({
+					filter: filterData
+				});
+			};
+		}
+	});
+
 </script>
 
 </body>
