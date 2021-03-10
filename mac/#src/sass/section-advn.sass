@@ -1,0 +1,46 @@
+.section-advn
+	position: relative
+
+.advn
+	.row
+		justify-content: space-between
+		@media ( max-width:$md2+px )
+			justify-content: flex-start
+
+	.advn-column
+		@extend .col-2
+		@media ( max-width:$md1+px )
+			flex: 0 0 25%
+			max-width: 25%
+
+			margin-bottom: 50px
+
+		@media ( max-width:$md2+px )
+			flex: 0 0 33.333333%
+			max-width: 33.333333%
+
+		@media ( max-width:$md3+px )
+			flex: 1 1 100%
+			max-width: 100%
+			text-align: center
+
+		&__icon
+			height: 81px
+			width: 80px
+
+			margin-bottom: 10px
+			@media ( max-width:$md1+px )
+				margin: 0 auto
+
+		&__title
+			font-family: Futura-Bold
+			padding-bottom: 10px
+		
+
+	
+.section-advn .parallax
+	position: absolute
+	right: auto  !important
+	bottom: 0  !important
+	left: 0  !important
+	top: auto  !important

@@ -1,0 +1,387 @@
+.header
+	border-bottom: 1px solid #C9C9C9
+	position: relative
+	z-index: 2
+	@media screen and ( max-width: 1125px )
+
+		background: $white
+		.row
+			align-items: center
+	@media ( max-width:$md1+px )
+		padding: 15px 0
+
+	
+		
+			
+//---- .logo ----//
+.logo
+	@extend .col-2
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	@media screen and ( max-width: 1275px )
+		flex: 0 0 8.333333%
+		max-width: 8.333333%
+		padding: 0 0 0 15px
+	@media screen and ( max-width: 1125px )
+		padding: 0 15px
+		flex: 0 0 16.666667%
+		max-width: 16.666667%
+
+	@media ( max-width:600px )
+		flex: 0 0 50%
+		max-width: 50%
+		
+
+	&-link
+		display: block
+		max-width: 93px
+		width: 100%
+		height: auto
+
+//---- .header-menu ----//	
+.header-menu
+	@extend .col-8
+	@media ( max-width: 1125px )
+		position: absolute
+		right: 0
+		top: 100%
+		z-index: 999
+
+		display: block
+
+		margin: 15px 15px 0 0
+
+		margin-right: -100%
+
+		min-width: 320px
+		max-width: 30%
+
+		background: $green
+
+		text-align: right
+		border-radius: 15px
+		transition: margin-right 0.5s linear
+
+		&.active
+			margin-right: 15px
+
+
+//---- .header-menu.active ----//	
+.header-menu.active
+	@media ( max-width: 1125px )
+			display: block
+
+
+// ---- .header-menu__ul ----//
+.header-menu__ul
+	@include flexbox()
+
+	width: 100%
+
+	@media screen and ( max-width: 1275px  )
+		display: flex
+		justify-content: center
+		
+	@media ( max-width: 1125px )
+		display: flex
+		flex-direction: column
+	
+		// &::after
+		// 	@include pseudoEl(block, absolute, '')
+		// 	left: 0
+		// 	top: 0
+
+		// 	width: 100%
+		// 	height: 100%
+			
+		// 	box-shadow: inset 0 7px 15px -7px rgba(0,0,0,.12)
+
+
+// ---- .header-menu__ul li ----//
+.header-menu__ul 
+	li
+		position: relative
+
+		a
+			display: block
+			text-align: center
+
+			padding: 35px 22px 30px
+
+			text-decoration: none
+			font-size: 1.125rem
+			color: $black
+			@media screen and ( max-width: 1275px )
+				padding: 35px 15px 30px
+			@media screen and ( max-width: 1125px )
+				padding: 15px 20px 
+				color: $white
+				width: 100%
+				text-align: right
+				max-width: 100%
+
+				border-bottom: 1px solid $white									
+				
+			&::after
+				@include pseudoEl(block, absolute, '')
+				@include horizcenter()
+				margin-bottom: -2px
+
+				bottom: 0
+				width: 0
+				height: 4px
+
+				background: $green
+				transition: width 0.3s linear
+				@media screen and ( max-width: 1125px  )
+					display: none
+					
+		&:last-child
+			a
+				border: none
+
+		&.hover, &.current-menu-item
+			a
+				position: relative
+				&::after
+					@include pseudoEl(block, absolute, '')
+					@include horizcenter()
+					margin-bottom: -2px
+
+					bottom: 0
+					width: 32px
+					height: 4px
+
+					background: $green
+					@media screen and ( max-width: 1125px  )
+						display: none
+
+// ---- .header-contact ----//
+.header-contact
+	@extend .col-2
+	margin: 13px 0 0 0
+	padding: 0
+	@media screen and ( max-width:  1275px )
+		flex: 0 0 25%
+		max-width: 25%
+		height: 58px
+
+	@media screen and ( max-width: 1125px )
+		margin-top: 0
+		margin-left: auto
+	@media ( max-width:$md1+px )
+		flex: 0 0 33.3333%
+		max-width: 33.3333%
+
+	@media ( max-width:$md2+px )
+		flex: 0 0 41.666667%
+		max-width: 41.666667%
+
+	@media screen and ( max-width: 600px )
+		display: none
+		
+	
+	a
+		text-decoration: none
+		color: $black
+		font-size: 1.125rem
+		@media screen and ( max-width: 1125px )
+			pointer-events: none
+
+// ---- .header-contact__row ----//
+.header-contact__row
+	text-align: center
+
+	padding: 22px 26px 22px
+	margin: 0 -30px 0 -15px
+	@media screen and ( max-width:  1275px )
+		margin: 0
+
+	@media screen and ( max-width: 1125px )
+		padding: 15px 26px
+		
+	
+	// ---- .header-contact__phone ----//
+	.header-contact__phone
+		display: flex
+		align-items: flex-start
+		
+		flex-direction: column
+
+		padding-left: 30px
+
+		a
+			display: none
+
+			&:first-child
+				position: relative
+
+				display: inline
+
+				&:before
+					@include pseudoEl(block, absolute, url("data:image/svg+xml,%3Csvg viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.5102 13.2102L14.9983 10.6982C14.1012 9.80111 12.576 10.16 12.2172 11.3262C11.948 12.1337 11.0509 12.5822 10.2435 12.4028C8.44926 11.9542 6.02701 9.62168 5.57845 7.73772C5.30931 6.93027 5.84759 6.03314 6.655 5.76404C7.82127 5.40519 8.18012 3.88007 7.28299 2.98295L4.77104 0.470991C4.05334 -0.156997 2.97679 -0.156997 2.3488 0.470991L0.644257 2.17553C-1.06028 3.96978 0.823682 8.72455 5.04018 12.941C9.25667 17.1575 14.0114 19.1313 15.8057 17.337L17.5102 15.6324C18.1383 14.9147 18.1383 13.8382 17.5102 13.2102Z' fill='%237F9681'/%3E%3C/svg%3E"))
+					@include verticalcenter()
+
+					width: 18px
+					height: 18px
+
+					margin-left: -30px
+					left: 0
+
+				&::after
+					@include pseudoEl(block, absolute, url("data:image/svg+xml,%3Csvg  fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5.5 5.5L10 1' stroke='%237F9681' stroke-width='2'/%3E%3C/svg%3E"))
+					@include verticalcenter()
+
+					width: 8px
+					height: 8px
+
+					right: 0
+					margin-right: -15px
+
+	// ---- .header-contact__info ----//
+	.header-contact__info
+		display: none
+		padding-left: 30px
+
+		font-size: 1rem
+		text-align: left
+
+		a
+			font-size: 1rem
+			text-align: left
+			line-height: 1
+
+
+	// ---- .header-contact__address, .header-contact__mail ----//
+	.header-contact__address, .header-contact__mail
+		margin-top: 16px
+
+		position: relative
+		a
+			line-height: 1
+			&:before
+				display: block
+				position: absolute
+				top: 5px
+				left: 0
+
+				width: 18px
+				height: 16px
+
+				margin-left: -30px
+
+	.header-contact__address a:before
+		content: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.41258 0C2.87658 0 0 2.87658 0 6.41213C0 11.5027 5.72453 16.6166 5.96834 16.8322C6.09584 16.9441 6.25421 17 6.41258 17C6.57721 17 6.74184 16.9396 6.87024 16.8193C7.11316 16.592 12.8252 11.1967 12.8252 6.41258C12.8252 2.87703 9.94768 0 6.41258 0ZM6.41258 9.46989C4.72376 9.46989 3.35526 8.1005 3.35526 6.41303C3.35526 4.72555 4.72376 3.35616 6.41258 3.35616C8.1005 3.35616 9.469 4.72511 9.469 6.41303C9.469 8.10095 8.1005 9.46989 6.41258 9.46989Z' fill='white'/%3E%3C/svg%3E")
+	
+	.header-contact__mail a:before
+		content: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.4642 2.14282H0.535645L7.49994 7.87925L14.543 2.15889C14.5172 2.15136 14.4908 2.14599 14.4642 2.14282Z' fill='white'/%3E%3Cpath d='M7.83802 8.98732C7.64064 9.14895 7.35666 9.14895 7.15928 8.98732L0 3.08911V12.3216C0 12.6175 0.239847 12.8573 0.535724 12.8573H14.4643C14.7602 12.8573 15 12.6175 15 12.3216V3.1684L7.83802 8.98732Z' fill='white'/%3E%3C/svg%3E%0A")
+
+
+// ---- .header-contact.hover ----//
+.header-contact.hover
+
+	// ---- .header-contact__row.hover ----//
+	.header-contact__row
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 99
+
+		background: $green
+		border-radius: 15px
+		
+		color: $white
+
+		a
+			color: $white
+			pointer-events: auto
+
+		// ---- .header-contact__phone ----//
+		.header-contact__phone
+			padding-bottom: 16px
+			border-bottom: 1px solid $white
+
+			a				
+				display: inline
+
+				&:first-child
+					@include white()
+
+		// ---- .header-contact__info ----//
+		.header-contact__info
+			display: block
+
+.burger
+	display: none
+	position: relative
+
+	margin-right: 15px
+
+	width: 30px
+	height: 30px
+	@media screen and ( max-width:  1125px )
+		display: block
+
+	@media screen and ( max-width: 600px )
+		margin-left: auto
+		
+
+	.burger-line
+		position: absolute
+
+		display: block
+
+		padding: 0
+
+		width: 30px
+		height: 2px
+
+		background-color: #7F9681
+		
+		transition: all 0.4s ease-in-out, transform 0.4s ease-in-out 0.4s
+
+
+	.burger-lineOne
+		top: 0
+
+	.burger-lineTwo
+		top: 13.5px
+		width: 1px
+		transform: rotate(90deg)
+		left: 13.5px
+
+	.burger-lineThree
+		top: 13.5px
+		right: 0
+		width: 1px
+		left: 13.5px
+
+	.burger-lineFour
+		top: 13.5px
+		bottom: 0
+
+	.burger-lineFive
+		bottom: 0px
+
+	&.active
+		.burger-lineOne
+			top: 13.5px
+			background-color: transparent
+
+		.burger-lineTwo
+			left: 0px
+			width: 30px
+			transform: rotate(45deg)
+
+		.burger-lineThree
+			left: 0
+			width: 30px
+			transform: rotate(-45deg)
+
+		.burger-lineFour
+			background-color: transparent
+
+		.burger-lineFive
+			bottom: 13.5px
+			background-color: transparent

@@ -1,0 +1,25 @@
+
+.section-title
+	position: relative
+	margin-bottom: 50px
+	@extend .col-12
+	@media ( max-width:$md1+px )
+		margin-bottom: 40px
+
+	@media ( max-width:$md3+px )
+		margin-bottom: 30px
+		font-size: 32px
+
+	.section-title__sub
+		position: absolute
+		z-index: -1
+		bottom: 0
+
+		font-size: 130px
+		color: #F8F8F8
+		line-height: 1
+
+		width: max-content
+		margin-left: -120px
+		@media ( max-width:$md1+px )
+			display: none

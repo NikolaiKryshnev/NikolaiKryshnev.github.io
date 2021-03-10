@@ -1,0 +1,89 @@
+.section-map
+	position: relative
+
+.maps
+	position: relative
+	width: 100%
+	@media ( max-width:$md1+px )
+		display: flex
+		flex-direction: column-reverse
+
+	.container
+		height: 100%
+
+.map-block
+	padding: 50px 57px
+	background: url(../img/block-bg.png) center/cover no-repeat #7F9681
+	color: $white
+	@extend .col-4
+	border-radius: 15px
+
+	margin-left: auto
+	margin-right: 0
+	@media ( max-width:$md1+px )
+		padding: 30px 40px
+		margin-left: 15px
+		margin-right: 15px
+		max-width: 100%
+		flex: 1 1 100%
+		display: flex
+		justify-content: space-between
+
+	@media ( max-width:$md3+px )
+		flex-wrap: wrap
+		padding: 30px
+
+
+	.map-link
+		position: relative
+		margin: 0 0 40px 0 
+		padding-left: 30px
+		font-family: Futura-Medium
+		@media ( max-width:$md1+px )
+			flex: 0 0 50%
+			max-width: 50%
+
+		@media ( max-width:$md3+px )
+			flex: 1 1 100%
+			max-width: 100%
+		&:last-child
+			margin-bottom: 0
+
+		&:before
+			display: block
+			position: absolute
+			top: 5px
+			left: 0
+
+			width: 18px
+			height: 16px
+
+		&.map::before	
+			content: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.41258 0C2.87658 0 0 2.87658 0 6.41213C0 11.5027 5.72453 16.6166 5.96834 16.8322C6.09584 16.9441 6.25421 17 6.41258 17C6.57721 17 6.74184 16.9396 6.87024 16.8193C7.11316 16.592 12.8252 11.1967 12.8252 6.41258C12.8252 2.87703 9.94768 0 6.41258 0ZM6.41258 9.46989C4.72376 9.46989 3.35526 8.1005 3.35526 6.41303C3.35526 4.72555 4.72376 3.35616 6.41258 3.35616C8.1005 3.35616 9.469 4.72511 9.469 6.41303C9.469 8.10095 8.1005 9.46989 6.41258 9.46989Z' fill='white'/%3E%3C/svg%3E")
+
+		&.clock::before
+			content: ''	
+			background: url(../img/clock.svg) center/cover no-repeat
+	
+.map-box
+	width: 100%
+	position: absolute
+	left: 0
+	top: 0
+	height: 100%
+
+	padding: 20px 0
+	@media ( max-width:$md1+px )
+		position: relative
+		margin-top: -100px
+		padding: 25% 0
+		@media ( max-width:$md3+px )
+			padding: 35% 0
+		iframe
+			position: absolute !important
+			top: 0
+			left: 0
+
+	iframe
+		width: 100%
+		height: 100%

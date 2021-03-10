@@ -1,0 +1,126 @@
+.view
+	position: relative
+	&-column
+		position: relative
+		@extend .col-3
+		@media ( max-width:$md1+px )
+			flex: 0 0 50%
+			max-width: 50%
+			margin-bottom: 40px
+
+		@media ( max-width:$md2+px )
+			flex: 1 1 100%
+			max-width: 100%
+
+	&-box
+		display: flex
+		flex-direction: column
+		padding: 29px 60px 29px 29px 
+		// height: 100%
+
+		text-decoration: none
+		@extend .h3
+		color: $white
+
+		border-radius: 15px
+		background: url(../img/block-bg.png) center/cover no-repeat $green
+		@media ( max-width:$md1+px )
+			max-width: 100%
+			width: 100%
+		@media (min-width: $md2+px) and ( max-width:$md1+px )
+			flex-direction: row
+			justify-content: space-between
+
+		@media ( max-width:$md2+px )
+			justify-content: space-between
+
+
+	&-top
+		padding-top: 155px
+
+	&-img
+		position: absolute
+		left: -15px
+		top: -15px
+
+	
+	&-text
+		line-height: 1.2
+		font-family: Futura-Medium
+		margin-bottom: 0
+		transition: margin-top 0.3s linear
+		background-color: transparent
+		height: 78px
+		overflow: hidden
+
+	&-bot
+		margin-top: -32px
+		
+		position: relative
+		z-index: -1
+		visibility: hidden
+
+		padding-top: 10px
+		border-top: 1px solid $white
+		opacity: 0
+
+		transition: visibility 0.3s linear, z-index 0.3s linear, margin-top 0.3s linear, opacity 0.3s linear
+		@media ( max-width:$md1+px )
+			z-index: 1
+			visibility: visible
+			opacity: 1
+		@media (min-width: $md2+px) and ( max-width:$md1+px ) 
+			display: flex
+			align-items: center
+			border-left: 1px solid $white
+			margin-left: 20px
+			padding-left: 20px
+
+		@media ( max-width:$md2+px )
+			margin-top: 20px
+	&-btn
+		display: block
+		margin-left: 0
+		margin-right: 0
+		max-width: max-content
+		font-family: Futura-Medium
+
+		position: relative
+		padding: 0 20px 0 0
+		line-height: 1
+		@media (min-width: $md2+px) and ( max-width:$md1+px ) 
+			span
+				display: none
+
+		&:before
+			@include pseudoEl(block, absolute, url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.820312 7.03025H15.29M15.29 7.03025L9.26101 1.00122M15.29 7.03025L9.26101 13.0593' stroke='white' stroke-width='2'/%3E%3C/svg%3E"))
+			right: 0
+			top: 50%
+			@include translateY(-50%)
+			width: 15px
+			height: 15px	
+
+	&-box:hover
+		.view-bot
+			margin-top: 0
+			visibility: visible
+			z-index: 1
+			opacity: 1
+
+		.view-text
+			margin-bottom: 10px
+
+
+.view .parallax-1
+	position: absolute
+	bottom: 0 !important
+	left: 0  !important
+	top: auto  !important
+	right: auto  !important
+
+.view .parallax-2
+	position: absolute
+	right: 0 !important
+	top: 0  !important
+	bottom: auto  !important
+	left: auto  !important

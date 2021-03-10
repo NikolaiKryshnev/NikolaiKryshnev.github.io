@@ -1,0 +1,88 @@
+.section-form
+	position: relative
+	.section-title
+		margin-bottom: 0
+		line-height: 1.2
+
+	.form-sub
+		@extend .col-12
+		font-size: 1.375rem
+	
+	.form-col
+		margin-top: 55px
+
+		@extend .col-12
+
+
+.form
+	display: flex
+	justify-content: space-between
+	align-items: flex-end	
+
+	background: $white
+	border: 1px dashed #DCDCDC
+	border-radius: 15px
+	width: 100%
+
+	padding: 45px 70px 50px
+	@media ( max-width:$md2+px )
+		flex-wrap: wrap
+		padding: 25px 35px
+
+	input
+		width: 100%
+		border-bottom: 1px solid $green
+		padding-left: 32px
+		font-family: Futura-Light
+
+	.form-input
+		font-family: Futura-Medium
+		color: $black
+
+		max-width: 335px
+		width: 100%
+		margin-right: 30px
+		@media ( max-width:$md2+px )
+			max-width: 100%
+			margin-right: 0
+			margin-bottom: 30px
+
+		&>div
+			position: relative
+
+	.input-name, .input-phone
+		&>div
+			&:after
+				@include pseudoEl(block, absolute, '')
+				top: 50%
+				@include translateY(-50%)
+
+
+				width: 15px
+				height: 15px
+
+.input-name
+	&>div
+		&:after
+			background: url("data:image/svg+xml,%3Csvg viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6552 12.7539C12.6282 11.0256 12.0898 9.45401 11.1324 8.31618C10.1807 7.18529 8.8908 6.5625 7.50002 6.5625C6.10924 6.5625 4.81935 7.18529 3.86759 8.31618C2.91116 9.45281 2.37307 11.0222 2.34494 12.7484C2.88576 13.0193 5.12375 14.0625 7.50002 14.0625C10.0696 14.0625 12.1537 13.0254 12.6552 12.7539Z' fill='%237F9681'/%3E%3Cpath d='M7.5 6.09375C8.92386 6.09375 10.0781 4.93948 10.0781 3.51562C10.0781 2.09177 8.92386 0.9375 7.5 0.9375C6.07614 0.9375 4.92188 2.09177 4.92188 3.51562C4.92188 4.93948 6.07614 6.09375 7.5 6.09375Z' fill='%237F9681'/%3E%3C/svg%3E") 100%/cover no-repeat
+
+.input-phone
+	&>div
+		&:after
+			background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.7796 11.7106L12.6863 9.61734C11.9387 8.86974 10.6678 9.16881 10.3687 10.1407C10.1445 10.8135 9.39685 11.1873 8.724 11.0378C7.22879 10.664 5.21026 8.72021 4.83645 7.15024C4.61217 6.47737 5.06073 5.72976 5.73358 5.50551C6.70547 5.20647 7.00451 3.93554 6.2569 3.18794L4.16361 1.09464C3.56552 0.571318 2.6684 0.571318 2.14507 1.09464L0.724625 2.51509C-0.695825 4.0103 0.874146 7.97261 4.38789 11.4864C7.90164 15.0001 11.8639 16.6449 13.3592 15.1496L14.7796 13.7292C15.303 13.1311 15.303 12.234 14.7796 11.7106Z' fill='%237F9681'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='7.68787' y1='0.702148' x2='7.68787' y2='15.7022' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23F5A484'/%3E%3Cstop offset='1' stop-color='%23D06330'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E") 100%/cover no-repeat
+
+.section-form
+
+	.parallax-2
+		position: absolute
+		right: 0 !important
+		left: auto !important
+		top: 0 !important
+		bottom: auto !important
+
+	.parallax-1
+		bottom: 0 !important
+		left: 0 !important
+		top: auto !important
+		right: auto !important
+		position: absolute
