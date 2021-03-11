@@ -111,11 +111,14 @@
 
 		&:before
 			@include pseudoEl(block, absolute, url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.820312 7.03025H15.29M15.29 7.03025L9.26101 1.00122M15.29 7.03025L9.26101 13.0593' stroke='white' stroke-width='2'/%3E%3C/svg%3E"))
-			right: 0
+			right: -5px
 			top: 50%
 			@include translateY(-50%)
 			width: 15px
-			height: 15px	
+			height: 13px
+			@media (min-width: $md2+px) and ( max-width:$md1+px )
+				right: -15px 
+	
 
 	&-box:hover
 		.view-bot

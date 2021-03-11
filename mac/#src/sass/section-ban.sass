@@ -41,12 +41,17 @@
 			font-size: 36px
 
 	&__text
+		margin-top: 20px
 		font-family: Futura-Medium
 		font-size: 1.125rem
 		max-width: 480px
+		@media ( max-width:$md3+px )
+			margin-top: 10px
 
 	.btn
 		margin-top: 30px
+		@media ( max-width:$md3+px )
+			margin-top: 15px
 
 .ban-right
 	@extend .col-5
