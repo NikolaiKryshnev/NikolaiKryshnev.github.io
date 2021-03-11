@@ -11,6 +11,8 @@
 		@media ( max-width:$md2+px )
 			flex: 1 1 100%
 			max-width: 100%
+			&:last-child
+				margin-bottom: 0
 
 	&-box
 		display: flex
@@ -37,11 +39,21 @@
 
 	&-top
 		padding-top: 155px
+		position: inherit
+		z-index: 2
+		background: url(../img/block-bg.png) center/cover no-repeat #7F9681
+		@media ( max-width:$md2+px )
+			padding-top: 0
 
 	&-img
 		position: absolute
 		left: -15px
 		top: -15px
+		@media ( max-width:$md2+px )
+			position: relative
+			margin-left: -25px
+			margin-top: -25px
+			
 
 	
 	&-text
@@ -52,6 +64,8 @@
 		background-color: transparent
 		height: 78px
 		overflow: hidden
+		@media ( max-width:$md3+px )
+			height: auto
 
 	&-bot
 		margin-top: -32px
@@ -66,10 +80,13 @@
 
 		transition: visibility 0.3s linear, z-index 0.3s linear, margin-top 0.3s linear, opacity 0.3s linear
 		@media ( max-width:$md1+px )
+			
 			z-index: 1
 			visibility: visible
 			opacity: 1
 		@media (min-width: $md2+px) and ( max-width:$md1+px ) 
+			border-top: none
+			margin-top: 0
 			display: flex
 			align-items: center
 			border-left: 1px solid $white
@@ -124,3 +141,5 @@
 	top: 0  !important
 	bottom: auto  !important
 	left: auto  !important
+	@media ( max-width:$md2+px )
+		display: none

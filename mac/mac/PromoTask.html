@@ -41,9 +41,9 @@
 				<ul class="header-menu__ul ul">
 					<li class="current-menu-item"><a href="#section-ban">Главная</a></li>
 					<li><a href="#section-advn">Преимущества</a></li>
-					<li><a href="#section-view">Вывоз макулатуры</a></li>
-					<li><a href="#section-training">Пункт приема</a></li>
-					<li><a href="#section-schema">Задать вопрос</a></li>
+					<li><a href="#section-export">Вывоз макулатуры</a></li>
+					<li><a href="#section-map">Пункт приема</a></li>
+					<li><a href="#section-form">Задать вопрос</a></li>
 				</ul>
 			</nav>
 			<!-- /.header-menu -->
@@ -513,11 +513,11 @@
 					</svg>
 				</div>
 				<ul class="footer-nav">
-					<li><a href="#">Главная</a></li>
-					<li><a href="#">Оплата</a></li>
-					<li><a href="#">Преимущества</a></li>
-					<li><a href="#">Пункты приема</a></li>
-					<li><a href="#">Контакты</a></li>
+					<li><a href="#section-ban">Главная</a></li>
+					<li><a href="#section-advn">Преимущества</a></li>
+					<li><a href="#section-export">Вывоз макулатуры</a></li>
+					<li><a href="#section-map">Пункт приема</a></li>
+					<li><a href="#section-form">Задать вопрос</a></li>
 				</ul>
 			</div>
 			<!-- /.footer-top -->
@@ -580,7 +580,7 @@
 				<div class="form-input input-phone">
 					Номер телефона
 					<div>
-						<input class="phone" type="text">
+						<input class="phone" name="your-phone" type="text">
 					</div>
 				</div>
 				<button class="btn" type="submit">Отправить</button>
@@ -617,7 +617,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 <script>
 	$(function () {
-		$("input.phone").mask("+375(99) 999-99-99");
+		$("[name='your-phone']").mask("+375(99) 999-99-99");
 	});
 </script>
 <script>
