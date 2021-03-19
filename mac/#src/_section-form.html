@@ -9,18 +9,18 @@
 				Оставьте нам свои контактные данные, и мы мгновенно вам перезвоним!
 			</div>
 			<div class="form-col">
-				<form class="form" action="#">
+				<form class="form" action="mail.php" method="POST">
 					<div class="form-input input-name">
 						Имя
 						<div>
-							<input type="text" name="" id="">
+							<input type="text" name="your-name" id="" required>
 						</div>
 					</div>
 
 					<div class="form-input input-phone">
 						Номер телефона
 						<div>
-							<input class="phone" name="your-phone" type="text">
+							<input class="phone" name="your-phone" type="text" required>
 						</div>
 					</div>
 					<button class="btn" type="submit">Отправить</button>

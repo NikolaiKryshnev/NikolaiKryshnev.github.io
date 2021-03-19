@@ -1,0 +1,105 @@
+.section-faq
+	@media ( max-width:$md3+px )
+		padding-bottom: 0
+
+	.content-blocks
+		width: 100%
+		@extend .col-12
+
+	.acc-block
+		margin-bottom: 20px
+
+		background: #FFFFFF
+		box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15)
+		@media ( max-width: 526px )
+			padding:  18px 25px
+
+		&__link
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+			padding-bottom: 0
+
+			cursor: pointer
+			transition: padding-bottom 0.5s linear
+
+		&__title
+			position: relative
+			padding: 25px 50px
+
+			max-width: 80%
+			width: 100%
+
+			font-size: 1.25rem
+			font-family: CenturyBold
+			
+
+			&::after
+				transition: opacity 0.3s linear
+				opacity: 0
+				@include pseudoEl(block, absolute, '')
+				height: 1px
+				width: 50%
+				background: $black
+				bottom: 0
+
+			@media ( max-width:$md1+px )
+				// padding: 10px 0 10px 0
+
+				
+		&__icon
+			position: relative
+
+			margin: 0 50px 0 0
+
+			cursor: pointer
+			path
+				stroke: #000000
+			@media ( max-width:$md3+px )
+				margin: 0
+
+			svg
+				width: 20px
+				height: 20px
+
+				transition: transform 0.5s linear
+
+
+		&__link.active
+			// padding-bottom: 25px
+			// @media ( max-width:$md3+px )
+			// 	padding-bottom: 0
+
+			.acc-block__title
+				&::after
+					opacity: 1
+
+			.acc-block__icon
+				background: none
+				svg
+					@include rotate(180deg)
+					
+		&__content
+			display: none
+
+			margin: 0 50px
+			padding: 25px 0
+
+			font-size: 1rem
+			@media ( max-width:$md1+px )
+				margin: 0
+
+			@media ( max-width:$md3+px )
+				padding-bottom: 20px
+			a
+				display: block
+
+				padding-top: 20px
+
+				color: #007bff
+				text-transform: uppercase
+				font-family: CenturyBold
+
+				&:hover
+					text-decoration: none

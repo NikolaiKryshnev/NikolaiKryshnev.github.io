@@ -28,13 +28,8 @@
 		@@include('popup.js')
 		@@include('showblock.js')
 		@@include('scrollTop.js')
-
+		@@include('ajax.js')
 		
-	
-
-
-
-
 		//</TASK>---------------------------------------
 	})(jQuery);
 

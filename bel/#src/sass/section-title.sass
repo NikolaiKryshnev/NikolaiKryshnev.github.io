@@ -1,0 +1,17 @@
+
+.section-title
+	position: relative
+	@extend .col-12
+
+	color: $black
+	font-weight: 700
+	@include f500()
+	font-size: $fz40
+	margin-bottom: 25px
+	&::before
+		@include pseudoEl(block, absolute, '')
+		width: 30px
+		height: 5px
+		background: $yellow
+		@include verticalcenter()
+		margin-left: -50px

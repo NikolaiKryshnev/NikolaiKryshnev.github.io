@@ -1,0 +1,37 @@
+.why
+	position: relative
+	&::after
+		@include pseudoEl(block, absolute, '')
+		width: 100%
+		background: #000
+	&-info
+		@extend .col-6
+		@media ( max-width:$md1+px )
+			flex: 1 1 100%
+			max-width: 100%
+		&__text
+			
+			p
+				margin-bottom: 15px
+				&:last-child
+					margin-bot
+		.btn
+			margin-top: 30px	
+
+			tom: 0
+
+
+	&-img
+		margin-top: -100px
+		@extend .col-6
+		@include img_03(23%)
+		@media ( max-width:$md1+px )
+			display: none
+
+	&-imgbox
+		@include img_02()
+
+		img
+			@include img_01()
+
+	

@@ -1,0 +1,61 @@
+.serv
+	&-column
+		@extend .col-3
+
+		&__box
+			box-shadow: 0px 0px 30px rgba(169, 166, 158, 0.21)
+			border-radius: 5px
+
+		&__top
+			position: relative
+
+		&__imgBox
+			@include img_03(30%)
+
+		&__img
+			@include img_02()
+
+			img
+				@include img_01()
+
+		.btn--yellow
+			position: absolute
+			z-index: 2
+
+			bottom: 0
+			right: 0
+			width: 62px
+			height: 42px
+
+		&__info
+			padding: 25px 30px
+			font-size: $fz14
+			@include f300()
+
+			ul,ol
+				margin-bottom: 0
+				margin-left: 15px
+				padding: 0
+
+				li
+					margin-bottom: 10px
+					&:last-child
+						margin-bottom: 0
+
+			a
+				margin-top: 10px
+				display: block
+				max-width: max-content
+
+				color: $black
+				font-size: $fz14
+				text-decoration: none
+				border-bottom: 1px solid $yellow
+				transition: border-color 0.3s linear 
+				&:hover
+					border-color: $blue
+
+		&__title
+			font-size: $fz14
+			text-transform: uppercase
+			@include f400()

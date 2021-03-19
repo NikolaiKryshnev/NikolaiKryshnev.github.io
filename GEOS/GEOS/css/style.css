@@ -525,6 +525,7 @@ th {
 ul.breadcrumbs,
 .salon-info__mat,
 .tabs,
+.boxNo,
 .banCart-slider .banCart-box,
 .views-line__title,
 .section-image .image-box,
@@ -668,6 +669,7 @@ ul.breadcrumbs,
 ul.breadcrumbs,
 .salon-info__mat,
 .tabs,
+.boxNo,
 .banCart-slider .banCart-box,
 .views-line__title,
 .section-image .image-box,
@@ -2927,6 +2929,40 @@ ul.breadcrumbs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.boxNo {
+  margin-top: 50px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.boxNo-svg {
+  max-width: 210px;
+  width: 100%;
+  height: auto;
+}
+
+.boxNo-text {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.boxNo .btn--arrow {
+  margin-top: 20px;
 }
 
 .banCart {

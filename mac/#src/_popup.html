@@ -12,18 +12,18 @@
 
 		<div class="modal-content">
 			<div class="modal-content__text">Оставьте нам свои данные, и мы перезвоним!</div>
-			<form class="form" action="#">
+			<form class="form" action="mail.php" method="POST">
 				<div class="form-input input-name">
 					Имя
 					<div>
-						<input type="text" name="" id="">
+						<input type="text" name="your-name" id="" required>
 					</div>
 				</div>
 
 				<div class="form-input input-phone">
 					Номер телефона
 					<div>
-						<input class="phone" name="your-phone" type="text">
+						<input class="phone" name="your-phone" type="text" required>
 					</div>
 				</div>
 				<button class="btn" type="submit">Отправить</button>

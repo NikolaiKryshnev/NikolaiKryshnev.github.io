@@ -1,0 +1,35 @@
+.product
+	&-column
+		@extend .col-3
+		transition: box-shadow 0.3s linear 
+		padding-top: 15px
+		padding-bottom: 15px
+
+		&__img
+			@include img_03(35%)
+		
+		&__boxImg
+			@include img_02()
+
+			img
+				@include img_01()
+
+		&__info
+		
+		&__title
+			text-decoration: none
+			@include f700()
+			font-size: $fz20
+			color: $black
+			@include transitColor(0.3s)
+			&:hover
+				color: $green
+
+		&__text
+			margin-bottom: 10px
+
+		.btn--arrow
+			filter: brightness(0)
+
+		&:hover
+			box-shadow: 4px 4px 30px rgba(174, 174, 174, 0.25)

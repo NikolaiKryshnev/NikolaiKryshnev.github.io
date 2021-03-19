@@ -76,14 +76,28 @@ function testWebP(callback) {
 }
 $(window).resize(function () {
 	hoverMenuLink($('.header-menu__ul li .header-arrow'), $('.header-menu__ul li'));
-	hoverMenuLink($('.header-contact--js'), $('.header-contact--js'));
-
+	if ($(window).width() > 600) {
+		hoverMenuLink($('.header-contact--js'), $('.header-contact--js'));
+	}
 });
 
 $(document).ready(function () {
 	hoverMenuLink($('.header-menu__ul li .header-arrow'), $('.header-menu__ul li'));
-	hoverMenuLink($('.header-contact--js'), $('.header-contact--js'));
+	if ($(window).width() > 600) {
+		hoverMenuLink($('.header-contact--js'), $('.header-contact--js'));
+	} else {
+		$(".mb-phone--js").on('click', function (e) {
+			$(".header-contact--js").toggleClass('hover');
+			$(".main").toggleClass('active');
+		});
+		$(".main").on('click', function (e) {
+			if (e.target == this) {
+				$(".header-contact--js").removeClass('hover');
+				$(".main").removeClass('active');
 
+			}
+		});
+	}
 });
 		//!Обернуть последние слово в span
 $('.endBlock--js a').html(function(_, existing) {
@@ -202,13 +216,25 @@ $(document).ready(function () {
 	});
 });
 
-
-		
+		// $(document).ready(function () {
+// 	let $form = $(".form");
+// 	for (let i = 0; i < $form.length; i++) {
+// 		const form = $form[i];
+// 		form.submit(function () {
+// 			$.ajax({
+// 				type: "POST",
+// 				url: "../mail.php",
+// 				data: $(this).serialize()
+// 			}).done(function () {
+// 				$('.modal-overlay, .modal--thanks').addClass('active');
+// 				form.trigger('reset');
+// 			});
+// 			return false;
+// 		});
+// 	}
 	
-
-
-
-
+// });
+		
 		//</TASK>---------------------------------------
 	})(jQuery);
 

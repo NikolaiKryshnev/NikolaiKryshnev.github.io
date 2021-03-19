@@ -1,0 +1,109 @@
+
+html,
+body
+	font-size: 16px
+	color: $black
+	@include f300()
+
+	@media ( max-width:$md3+px )
+		font-size: 14px
+
+body.active
+	overflow: hidden
+
+//--------- TITLE ---------//
+
+.h1
+	font-size: 2rem
+	
+
+.h2
+	font-size: 1.8rem
+	
+
+.h3
+	font-size: 1.6rem
+	
+
+.h4
+	font-size: 1.4rem
+	
+
+.h5
+	font-size: 1.2rem
+	
+
+//--------- COLOR ---------//
+
+$white: #fff
+$black: #000
+$green: green
+$pink: pink
+$orange: orange
+
+//--------- BTN ---------//
+
+.btn
+	display: block
+
+	padding: 10px 20px
+
+	border-radius: 4px
+	
+	vertical-align: middle
+	cursor: pointer
+	text-align: center
+	line-height: 1.5
+
+
+	&--bot
+		position: fixed
+		bottom: 15px
+		right: 15px
+		box-shadow: 0 0 20px rgba(0,0,0,.4)
+
+	&--yellow
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		
+		width: 85px
+		height: 58px
+		background: $yellow
+		@include transitBgColor(0.3s)
+		&::after
+			@include pseudoEl(block, absolute, '')
+			background: url("data:image/svg+xml,%3Csvg width='23' height='16' viewBox='0 0 23 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.6072 8.70711C22.9977 8.31658 22.9977 7.68342 22.6072 7.29289L16.2433 0.928932C15.8527 0.538408 15.2196 0.538408 14.829 0.928932C14.4385 1.31946 14.4385 1.95262 14.829 2.34315L20.4859 8L14.829 13.6569C14.4385 14.0474 14.4385 14.6805 14.829 15.0711C15.2196 15.4616 15.8527 15.4616 16.2433 15.0711L22.6072 8.70711ZM0.499512 9H21.9001V7H0.499512V9Z' fill='white'/%3E%3C/svg%3E") 100%/cover no-repeat
+			top: 50%
+			left: 50%
+			transform: translateX(-50%) translateY(-50%)
+			height: 50%
+			width: 50%
+
+		&:hover
+			background: $blue
+
+
+.scrollTop
+	position: fixed
+	right: 15px
+	bottom: 15px
+	
+	display: flex
+	justify-content: center
+	align-items: center
+
+	width: 50px
+	height: 50px
+
+	background: $white
+	box-shadow: 0 0 20px rgba(0,0,0,.4)
+
+	cursor: pointer
+	
+	&__icon
+		width: 50px
+		height: 50px
+
+

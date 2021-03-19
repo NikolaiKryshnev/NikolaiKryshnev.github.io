@@ -179,7 +179,10 @@
 		max-width: 41.666667%
 
 	@media screen and ( max-width: 600px )
-		// display: none
+		display: none
+		position: absolute
+		top: 100%
+		right: 0
 		
 	a
 		text-decoration: none
@@ -193,7 +196,7 @@
 	text-align: center
 
 	padding: 22px 26px 22px
-	margin: 0 -30px 0 -15px
+	margin: 0 -30px 0 -16px
 
 	// overflow-x: hidden
 	@media screen and ( max-width:  1275px )
@@ -240,6 +243,9 @@
 
 					right: 0
 					margin-right: -15px
+					@media screen and ( max-width:  600px)
+						display: none
+						
 
 	// ---- .header-contact__info ----//
 	.header-contact__info
@@ -282,7 +288,10 @@
 
 // ---- .header-contact.hover ----//
 .header-contact.hover
-
+	@media screen and ( max-width: 600px )
+		display: block
+		max-width: 270px
+		
 	// ---- .header-contact__row.hover ----//
 	.header-contact__row
 		position: absolute
@@ -326,7 +335,7 @@
 		display: block
 
 	@media screen and ( max-width: 600px )
-		margin-left: auto
+		margin-left: 20px
 		
 
 	.burger-line
@@ -387,3 +396,36 @@
 		.burger-lineFive
 			bottom: 13.5px
 			background-color: transparent
+
+
+
+.mb-phone
+	position: relative
+	width: 35px	
+	height: 20px
+	display: none
+	@media screen and ( max-width: 600px )
+		display: block
+		margin-right: 0
+		margin-left: auto
+		
+	&:before
+		@include pseudoEl(block, absolute, url("data:image/svg+xml,%3Csvg viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.5102 13.2102L14.9983 10.6982C14.1012 9.80111 12.576 10.16 12.2172 11.3262C11.948 12.1337 11.0509 12.5822 10.2435 12.4028C8.44926 11.9542 6.02701 9.62168 5.57845 7.73772C5.30931 6.93027 5.84759 6.03314 6.655 5.76404C7.82127 5.40519 8.18012 3.88007 7.28299 2.98295L4.77104 0.470991C4.05334 -0.156997 2.97679 -0.156997 2.3488 0.470991L0.644257 2.17553C-1.06028 3.96978 0.823682 8.72455 5.04018 12.941C9.25667 17.1575 14.0114 19.1313 15.8057 17.337L17.5102 15.6324C18.1383 14.9147 18.1383 13.8382 17.5102 13.2102Z' fill='%237F9681'/%3E%3C/svg%3E"))
+		@include verticalcenter()
+
+		width: 18px
+		height: 18px
+
+		// margin-left: -30px
+		left: 0
+
+	&::after
+		@include pseudoEl(block, absolute, url("data:image/svg+xml,%3Csvg  fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5.5 5.5L10 1' stroke='%237F9681' stroke-width='2'/%3E%3C/svg%3E"))
+		@include verticalcenter()
+
+		width: 12px
+		height: 8px
+		overflow: hidden
+
+		right: 0
+		// margin-right: -15px
