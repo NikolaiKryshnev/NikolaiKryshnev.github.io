@@ -2,8 +2,8 @@
 	&-column
 		transition: box-shadow 0.3s linear, height 0.3s linear
 
-		padding-top: 20px
-		padding-bottom: 20px
+		padding-top: 15px
+		padding-bottom: 15px
 		margin: 20px 0
 		@extend .col-3
 
@@ -48,7 +48,7 @@
 				filter: brightness(0%)
 
 		&:hover
-			box-shadow: 4px 4px 30px rgba(174, 174, 174, 0.25)
+			box-shadow: 4px 4px 15px rgba(174, 174, 174, 0.25)
 
 			// .doctors-column__btn
 			// 	display: flex
@@ -86,4 +86,16 @@
 		margin:  0 10px
 
 .doctors-column.slick-slide
-	margin: 20px 10px
+	margin: 20px 15px
+
+.ourDoctor
+	.doctors-column
+		flex: 0 0 33.333333%
+		max-width: 33.333333%
+
+		@media ( max-width:$md3+px )
+			flex: 1 1 100%
+			max-width: 100%
+
+.persDoctor
+	padding-top: 0

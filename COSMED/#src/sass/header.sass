@@ -6,6 +6,9 @@
 
 	.container
 		
+	&-border
+		border-bottom: 1px solid #D7D7D7
+		padding-bottom: 25px
 //---- .logo ----//
 .logo
 	display: flex
@@ -35,7 +38,7 @@
 
 		display: block
 
-		margin: 20px 0 0 0 
+		// margin: 20px 0 0 0 
 		padding: 0
 		background: $white
 
@@ -125,81 +128,83 @@
 .ul-submenu
 	// margin-right: 20px
 
-// ---- .ul-submenu__block ----//
-.ul-submenu__block
-	position: absolute
-	z-index: 99
-	top: 100%
-	left: 0
+	// ---- .ul-submenu__block ----//
+	.ul-submenu__block
+		position: absolute
+		z-index: 99
+		top: 100%
+		left: 0
 
-	padding: 5px 0
+		padding: 5px 0 
 
-	display: block
+		display: block
 
-	min-width: 220px
-	border: 1px solid #D7D7D7
+		min-width: 220px
+		border: 1px solid #D7D7D7
 
-	background: #fff
+		background: #fff
 
-	opacity: 0
-	visibility: hidden
-	transition: opacity 0.3s linear, visibility 0.3s linear
+		opacity: 0
+		visibility: hidden
+		transition: opacity 0.3s linear, visibility 0.3s linear
 
-	@media screen and ( max-width: 1200px )
-		position: relative
-		top: auto
-		border: none
-		opacity: 1
-		visibility: visible
-		display: none
-		
-	
-
-	li
-		padding: 10px 0
-		border-bottom: 1px solid #E3E4DF
 		@media screen and ( max-width: 1200px )
-			border-bottom: 0
-			padding: 0
-			
-		&:last-child
-			border: none
-		a
-			text-align: left
 			position: relative
-			padding-bottom: 0
-			transition: padding-left 0.3s linear
+			top: auto
+			border: none
+			opacity: 1
+			visibility: visible
+			display: none
+			
+		
+
+		li
+			padding: 10px 0
+			border-bottom: 1px solid #E3E4DF
 			@media screen and ( max-width: 1200px )
-				text-align: right
-				padding: 10px 35px 10px 0
-				border-bottom: 1px solid #E3E4DF
-
-			&::before
-				@include pseudoEl(block, absolute, '')
-				left: 10px
-				@include verticalcenter()
+				border-bottom: 0
+				padding: 0
 				
-				width: 0
-				height: 1px
-				background: $black
-				transition: width 0.3s linear
+			&:last-child
+				border: none
 
-
-		&.hover
 			a
-				padding-left: 30px
+				text-align: left
+				position: relative
+				padding-bottom: 0
+				padding-left: 15px
+				transition: padding-left 0.3s linear
+				@media screen and ( max-width: 1200px )
+					text-align: right
+					padding: 10px 35px 10px 0
+					border-bottom: 1px solid #E3E4DF
 
 				&::before
-					width: 15px
-				
+					@include pseudoEl(block, absolute, '')
+					left: 10px
+					@include verticalcenter()
+					
+					width: 0
+					height: 1px
+					background: $black
+					transition: width 0.3s linear
 
-	li + li
-		margin-left: 0
+
+			&.hover
+				a
+					padding-left: 30px
+
+					&::before
+						width: 15px
+					
+
+		li + li
+			margin-left: 0
 
 // ---- .header-arrow ----//
 .header-arrow
 	position: absolute
-	right: 0
+	right: -5px
 	top: calc( 50% - 1.5px )
 	@include translateY(-50%)
 	width: 8px
@@ -209,7 +214,6 @@
 	@media screen and ( max-width: 1200px )
 		top: 50%
 		right: 10px
-		
 
 .ul-submenu.hover
 	// ---- .ul-submenu.hover .header-arrow ----//
@@ -249,7 +253,7 @@
 		justify-content: flex-end
 	
 	.icon:before
-		top: 0
+		@include verticalcenter()
 	a
 		text-decoration: none
 		color: $black
@@ -262,7 +266,7 @@
 	margin: 0 -15px 0
 	position: absolute
 
-	padding: 20px 15px
+	padding: 20px 30px 20px 15px
 	text-align: center
 	width: 100%
 	border: 1px solid rgba(255,255 ,255 , 0 )

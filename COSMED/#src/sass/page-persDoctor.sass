@@ -1,11 +1,14 @@
 .pesrDoctor
-	&-img
-		@extend .col-4
-		@include img_03(25%)  
+	&-col
+		@extend .col-4 
 		@media ( max-width:$md2+px )
 			flex: 0 0 100%
 			max-width: 100%
+	&-img
+		@include img_03(61.3%) 
+		@media ( max-width:$md2+px )
 			padding: 65% 0
+
 		&__box
 			@include img_02()
 			img

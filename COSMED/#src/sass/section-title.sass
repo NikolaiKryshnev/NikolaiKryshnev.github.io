@@ -20,15 +20,18 @@
 	margin-right: 0
 	margin-left: auto
 
-	color: $green
+	color: #86A184
 	@include f500()
 	font-size: $fz16
 	text-decoration: none
-	padding-right: 20px
+	padding-right: 30px
+	text-transform: initial
+
 	@media screen and ( min-width: 1024px )
+		transition: filter 0.3s linear
 		&:hover
-			&::after
-				right: -10px
+			filter: brightness(0)
+
 
 
 	@media ( max-width:$md3+px )
@@ -40,10 +43,10 @@
 		right: 0
 		transition: right 0.3s linear
 		@include verticalcenter()
-
+	
 		width: 17px
 		height: 10px
 		
-		background: url("data:image/svg+xml,%3Csvg width='27' height='16' viewBox='0 0 27 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M26.6658 8.51887C27.0563 8.12835 27.0563 7.49519 26.6658 7.10466L20.3018 0.7407C19.9113 0.350175 19.2781 0.350175 18.8876 0.7407C18.4971 1.13122 18.4971 1.76439 18.8876 2.15491L24.5444 7.81177L18.8876 13.4686C18.4971 13.8591 18.4971 14.4923 18.8876 14.8828C19.2781 15.2734 19.9113 15.2734 20.3018 14.8828L26.6658 8.51887ZM0.710999 8.81177H25.9586V6.81177H0.710999V8.81177Z' fill='black'/%3E%3C/svg%3E%0A") 100%/cover no-repeat
+		background: url("data:image/svg+xml,%3Csvg width='19' height='9' viewBox='0 0 19 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.3122 4.97978C18.5075 4.78451 18.5075 4.46793 18.3122 4.27267L15.1302 1.09069C14.935 0.895426 14.6184 0.895426 14.4231 1.09069C14.2279 1.28595 14.2279 1.60253 14.4231 1.79779L17.2516 4.62622L14.4231 7.45465C14.2279 7.64991 14.2279 7.96649 14.4231 8.16176C14.6184 8.35702 14.935 8.35702 15.1302 8.16176L18.3122 4.97978ZM0.710449 5.12622L17.9587 5.12622L17.9587 4.12622L0.710449 4.12622L0.710449 5.12622Z' fill='%2386A184'/%3E%3C/svg%3E%0A") 100%/cover no-repeat
 	
 	

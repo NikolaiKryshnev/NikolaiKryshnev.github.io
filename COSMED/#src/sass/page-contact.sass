@@ -3,6 +3,10 @@
 		@extend .col-3
 		color: $black
 		@media ( max-width:$md1+px )
+			flex: 0 0 41.666667%
+			max-width: 41.666667%
+
+		@media ( max-width:$md2+px )
 			flex: 1 1 100%
 			max-width: 100%
 
@@ -27,7 +31,6 @@
 				width: 100%
 				border-color: $black
 
-	
 	.icon
 		padding-left: 30px
 		filter: brightness(0)
@@ -40,6 +43,10 @@
 	&-map
 		@extend .col-9
 		@media ( max-width:$md1+px )
+			flex: 0 0 58.333333%
+    		max-width: 58.333333%
+
+		@media ( max-width:$md2+px )
 			flex: 1 1 100%
 			max-width: 100%
 
@@ -48,6 +55,8 @@
 			position: relative
 			overflow: hidden
 			padding: 20% 0
+			@media ( max-width:$md1+px )
+				padding: 40% 0
 
 			&>ymaps
 				top: 0

@@ -9,6 +9,9 @@
 	
 	min-height: 800px
 	height: 80vh
+	margin-bottom: 20px
+	@media ( max-width:$md3+px )
+		margin-bottom: 0
 
 	@media screen and ( max-width: 920px )
 		min-height: auto
@@ -50,11 +53,14 @@
 		&__img
 			position: relative
 			
-			margin-left: auto
+			margin-left: 12rem
 			margin-right: 0
 
 			max-width: 550px
 			width: 100%
+			@media screen and ( max-width: 1240px )
+				margin-left: auto
+				
 			@media ( max-width:$md1+px )
 				margin-right: -4rem
 

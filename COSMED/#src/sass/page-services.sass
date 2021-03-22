@@ -46,7 +46,7 @@
 			right: 0
 			margin-left: 15px
 			top: 0
-			width: calc( 100% - 15px )
+			width: calc( 100% - 100px )
 			height: calc( 100% + 74px )
 			background: #E3E4DF
 			@media ( max-width:$md2+px )
@@ -142,6 +142,15 @@
 			left: 15px
 	ul
 		padding-left: 1rem
+		list-style-type: none
+		li
+			position: relative
+			&::before
+				left: -1rem
+				width: 5px
+				height: 5px
+				top: 8px
+				@include pseudoEl(block, absolute, url("data:image/svg+xml,%3Csvg  fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.814453' y='1.31445' width='4.5313' height='4.5313' stroke='black'/%3E%3C/svg%3E%0A"))
 
 	img
 		max-width: 470px
