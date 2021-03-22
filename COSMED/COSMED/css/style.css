@@ -1399,7 +1399,12 @@ body.active {
   margin: 0 10px;
 }
 
+.doctors-column.slick-slide {
+  margin: 20px 10px;
+}
+
 .product-column {
+  margin: 20px 0;
   -webkit-transition: -webkit-box-shadow 0.3s linear;
   transition: -webkit-box-shadow 0.3s linear;
   -o-transition: box-shadow 0.3s linear;
@@ -1476,6 +1481,10 @@ body.active {
 .productInfo-text h4 {
   font-family: PlayfairDisplay-Bold;
   font-size: 1.875rem;
+}
+
+.product-column.slick-slide {
+  margin: 20px 10px;
 }
 
 .section-faq .content-blocks {
