@@ -24,6 +24,8 @@
 		@@include('header.js')
 		@@include('slider.js')
 		@@include('acc.js')
+		@@include('popup.js')
+
 
 		//</TASK>---------------------------------------
 	})(jQuery);

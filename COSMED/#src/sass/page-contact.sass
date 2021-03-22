@@ -1,0 +1,58 @@
+.contact
+	&-info
+		@extend .col-3
+		color: $black
+		@media ( max-width:$md1+px )
+			flex: 1 1 100%
+			max-width: 100%
+
+		li
+			padding-bottom: 24px
+			margin-top: 24px
+			border-bottom: 1px solid $black
+			&:first-child
+				margin-top: 0
+		a
+			position: relative
+			contac-info
+			text-decoration: none
+			&::after
+				@include pseudoEl(block, absolute, '')
+				width: 0px
+				height: 1px
+				background: $black
+				transition: width 0.3s linear
+
+			&:hover:after
+				width: 100%
+				border-color: $black
+
+	
+	.icon
+		padding-left: 30px
+		filter: brightness(0)
+				
+		&--phone
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+
+	&-map
+		@extend .col-9
+		@media ( max-width:$md1+px )
+			flex: 1 1 100%
+			max-width: 100%
+
+		.map-adaprive
+			border: 2px solid #000000
+			position: relative
+			overflow: hidden
+			padding: 20% 0
+
+			&>ymaps
+				top: 0
+				right: 0
+				left: 0
+				bottom: 0
+				position: absolute
+				height: 100% !important

@@ -25,15 +25,21 @@
 
 			&.active
 				a
-					color: #007bff
+					color: $black
+					border: 1px solid rgba($black , 1)
 					
 			a
 				@include transitColor(0.3s)
 				text-decoration: none
 				color: #303030
+				border: 1px solid rgba($black , 0)
+				transition: border 0.3s linear
+				padding: 5px 10px
 
 				&:hover
-					color: #007bff
+					color: $black
+					border: 1px solid rgba($black , 1)
+
 					
 
 //============</pagination>============

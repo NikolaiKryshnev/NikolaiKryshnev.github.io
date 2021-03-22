@@ -1,0 +1,31 @@
+.pesrDoctor
+	&-img
+		@extend .col-4
+		@include img_03(25%)  
+		@media ( max-width:$md2+px )
+			flex: 0 0 100%
+			max-width: 100%
+			padding: 65% 0
+		&__box
+			@include img_02()
+			img
+				@include img_01()
+
+
+
+	&-info
+		@extend .col-8  
+		@media ( max-width:$md2+px )
+			flex: 0 0 100%
+			max-width: 100%
+
+		&__name
+			font-size: $fz30
+			margin-bottom: 5px
+			@include f700()
+			
+		&__prof
+			color: #A6A6A6
+
+	.btn
+		margin-top: 40px

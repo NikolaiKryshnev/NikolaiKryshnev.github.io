@@ -33,3 +33,21 @@
 
 		&:hover
 			box-shadow: 4px 4px 30px rgba(174, 174, 174, 0.25)
+
+
+
+.productInfo-text
+	@extend .col-12
+	img
+		float: left
+		margin-right: 30px
+		margin-bottom: 30px
+		max-width: 370px
+		width: 100%
+		@media ( max-width:$md2+px )
+			max-width: 100%
+			margin-right: 0
+
+	.h4, h4
+		@include f700()
+		font-size: $fz30
