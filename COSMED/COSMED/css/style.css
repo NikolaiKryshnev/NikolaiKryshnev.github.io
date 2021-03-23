@@ -455,7 +455,8 @@ th {
 .productInfo-text,
 .section-faq .content-blocks,
 .seo-block,
-.serviceInfo-text {
+.serviceInfo-text,
+.error-block {
   position: relative;
   width: 100%;
   min-height: 1px;
@@ -580,7 +581,8 @@ th {
 .productInfo-text,
 .section-faq .content-blocks,
 .seo-block,
-.serviceInfo-text {
+.serviceInfo-text,
+.error-block {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
@@ -1135,6 +1137,11 @@ body.active {
 .ban-info__title {
   font-size: 2.75rem;
   font-family: PlayfairDisplay-Bold;
+  max-width: 90%;
+}
+
+.ban-info__text {
+  max-width: 90%;
 }
 
 .ban-bg {
@@ -1148,7 +1155,6 @@ body.active {
   height: 100%;
   right: 0;
   bottom: 0;
-  background: #E3E4DF;
   z-index: -1;
 }
 
@@ -1158,6 +1164,21 @@ body.active {
   margin-right: 0;
   max-width: 550px;
   width: 100%;
+}
+
+.ban-bg__img:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -85px;
+  left: -150px;
+  right: 0;
+  bottom: 0;
+  background: #e3e4df;
+  width: calc( 100% + 150px);
+  height: calc( 100% + 85px);
+  position: absolute;
+  z-index: -1;
 }
 
 .services-column {
@@ -1296,6 +1317,14 @@ body.active {
 
 .services-column.slick-slide {
   margin: 20px 15px;
+}
+
+.serviceInfo ul {
+  margin: 10px 0 0;
+}
+
+.serviceInfo ul li {
+  margin-bottom: 10px;
 }
 
 .doctors-column {
@@ -1477,7 +1506,13 @@ body.active {
      object-fit: cover;
 }
 
+.product-column__info {
+  margin-top: 10px;
+}
+
 .product-column__title {
+  display: block;
+  margin-bottom: 10px;
   text-decoration: none;
   font-family: PlayfairDisplay-Bold;
   font-size: 1.25rem;
@@ -1501,8 +1536,8 @@ body.active {
 }
 
 .product-column:hover {
-  -webkit-box-shadow: 4px 4px 30px rgba(174, 174, 174, 0.25);
-          box-shadow: 4px 4px 30px rgba(174, 174, 174, 0.25);
+  -webkit-box-shadow: 4px 4px 20px rgba(174, 174, 174, 0.25);
+          box-shadow: 4px 4px 20px rgba(174, 174, 174, 0.25);
 }
 
 .productInfo-text img {
@@ -1517,10 +1552,11 @@ body.active {
 .productInfo-text h4 {
   font-family: PlayfairDisplay-Bold;
   font-size: 1.875rem;
+  margin-bottom: 10px;
 }
 
 .product-column.slick-slide {
-  margin: 20px 10px;
+  margin: 20px 15px;
 }
 
 .section-faq .content-blocks {
@@ -1530,8 +1566,8 @@ body.active {
 .section-faq .acc-block {
   margin-bottom: 20px;
   background: #FFFFFF;
-  -webkit-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 5px 5px 40px rgba(165, 165, 165, 0.15);
+          box-shadow: 5px 5px 40px rgba(165, 165, 165, 0.15);
 }
 
 .section-faq .acc-block__link {
@@ -1617,14 +1653,30 @@ body.active {
 
 .why {
   position: relative;
+  margin-bottom: 50px;
+  padding-bottom: 0;
 }
 
-.why::after {
+.why .container:last-child {
+  position: relative;
+}
+
+.why .container:last-child::after,
+.why .container:last-child::before {
   content: "";
   display: block;
   position: absolute;
   width: 100%;
-  background: #000;
+  background: #FAFAFA;
+  height: 90%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.why .container:last-child::before {
+  left: -100%;
 }
 
 .why-info__text p {
@@ -1699,6 +1751,7 @@ body.active {
 
 .pesrDoctor-info__prof {
   color: #A6A6A6;
+  margin-bottom: 5px;
 }
 
 .pesrDoctor .btn {
@@ -2531,25 +2584,6 @@ body.active {
   }
 }
 
-@media (min-width: 726px) {
-  .servicesNum-col .btn--arrow {
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: opacity 0.3s linear, visibility 0.3s linear;
-    -o-transition: opacity 0.3s linear, visibility 0.3s linear;
-    transition: opacity 0.3s linear, visibility 0.3s linear;
-  }
-
-  .servicesNum-col__box:hover .btn--arrow {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .servicesNum-col__box:hover .servicesNum-col__text:after {
-    width: 100%;
-  }
-}
-
 @media (min-width: 991px) {
   .services-column:hover .services-column__title::after {
     opacity: 1;
@@ -2576,6 +2610,25 @@ body.active {
   .title-link:hover {
     -webkit-filter: brightness(0);
             filter: brightness(0);
+  }
+}
+
+@media (min-width: 1024px) {
+  .servicesNum-col .btn--arrow {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.3s linear, visibility 0.3s linear;
+    -o-transition: opacity 0.3s linear, visibility 0.3s linear;
+    transition: opacity 0.3s linear, visibility 0.3s linear;
+  }
+
+  .servicesNum-col__box:hover .btn--arrow {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .servicesNum-col__box:hover .servicesNum-col__text:after {
+    width: 100%;
   }
 }
 
@@ -2810,11 +2863,16 @@ body.active {
   }
 
   .section-title {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
 
   .ban-info__title {
     font-size: 2.1429rem;
+    max-width: 100%;
+  }
+
+  .ban-info__text {
+    max-width: 100%;
   }
 
   .ban-bg__img {
@@ -2857,6 +2915,11 @@ body.active {
 
   .section-faq .acc-block__content {
     margin: 0;
+  }
+
+  .why .container:last-child::after,
+  .why .container:last-child::before {
+    display: none;
   }
 
   .why-info {
@@ -3119,6 +3182,7 @@ body.active {
   }
 
   .ourDoctor .doctors-column {
+    margin-top: 0;
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
@@ -3160,9 +3224,18 @@ body.active {
     margin-bottom: 20px;
   }
 
+  .error-title {
+    font-size: 134px;
+  }
+
+  .error-title__subtitle {
+    font-size: 28px;
+  }
+
   .breadcrumbs ul {
     font-size: 1rem;
-    padding: 16px 0;
+    padding: 0;
+    margin: 10px 0;
   }
 
   .content-breadcrumbs ul {

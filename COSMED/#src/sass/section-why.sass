@@ -1,9 +1,24 @@
 .why
 	position: relative
-	&::after
-		@include pseudoEl(block, absolute, '')
-		width: 100%
-		background: #000
+	margin-bottom: 50px
+	padding-bottom: 0
+	.container:last-child
+		position: relative
+		&::after, &::before
+			@include pseudoEl(block, absolute, '')
+			width: 100%
+			background: #FAFAFA
+			height: 90%
+			bottom: 0
+			left: 0
+			right: 0
+			z-index: -1
+			@media ( max-width:$md1+px )
+				display: none
+
+		&::before
+			left: -100%
+
 	&-info
 		@extend .col-6
 		@media ( max-width:$md1+px )
