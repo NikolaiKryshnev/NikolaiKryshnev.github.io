@@ -1,0 +1,35 @@
+.main-about
+	
+
+	p
+		padding-bottom: 15px
+
+	.about-img
+		@include img_03(28.3%)
+		margin-bottom: 20px
+	.about-boxImg
+		@include img_02()
+		img
+			@include img_01()
+
+	.about-text
+		@extend .col-12
+		ul,ol
+			margin: 0
+			padding: 0
+			list-style-type: none
+
+			li
+				margin-bottom: 10px
+				position: relative
+				padding: 0 0 0 20px
+				&::before
+					margin-left: -20px
+					content: ''
+					position: absolute
+					top: 8px
+					width: 6px
+					background: $blue
+					height: 6px
+
+

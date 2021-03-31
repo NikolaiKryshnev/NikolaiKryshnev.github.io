@@ -1,0 +1,81 @@
+.feedback
+	.section-form
+		padding: 0px 0 0 0
+
+	.title
+		@include f500()
+		font-size: $fz30
+
+	.title-h3
+		@include f500()
+		font-size: $fz20
+
+
+.main-feedback
+	.section-form
+		padding-top: 50px
+		padding-bottom: 50px 
+
+		.input
+			@media ( max-width:$md3+px )
+				max-width: 100%
+				flex: 1 1 100%
+
+		.form .btn
+			margin: 20px auto 0 10px
+
+
+
+	.feedback
+		padding-top: 0
+	.feedbackArtic
+		padding-top: 0
+		
+	.feedbackArtic-block
+		@extend .col-12
+
+		li
+			display: flex
+			flex-direction: column
+
+			margin-bottom: 35px
+
+			a
+				text-decoration: none
+				max-width: max-content
+				border-bottom: 1px solid $black
+				color: $black
+				font-size: $fz30
+				@include f500()
+				line-height: 1
+				@include transitColor(0.3s)
+				margin-bottom: 15px
+				@media ( max-width:$md1+px )
+					font-size: 1.4rem
+
+				@media ( max-width:$md2+px )
+					font-size: 1.2rem
+
+				@media ( max-width:$md3+px )
+					font-size: $mfz20
+
+				&:hover
+					color: $blue
+
+	.title
+		line-height: 1.2
+		margin-bottom: 20px
+		@media ( max-width:$md3+px )
+			font-size: $mfz20
+
+	.title-h3
+		line-height: 1.2
+		margin-bottom: 20px
+		display: block
+		width: 100%
+
+	ul
+		margin: 0 0 20px 0 
+
+		ul li:before
+			display: none

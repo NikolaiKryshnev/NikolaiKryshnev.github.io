@@ -1,0 +1,35 @@
+.info, .feedback
+	padding-top: 0
+	p
+		margin-bottom: 15px
+		
+	ul
+		padding: 0
+
+
+	ul
+		list-style-type: none
+
+		li
+			position: relative
+			padding: 0 0 0 20px
+
+			&::before
+				@include pseudoEl(block, absolute, '')
+				top: 10px
+				left: 0
+
+				width: 5px
+				height: 5px
+				background: $blue
+
+	ol
+		padding-left: 15px
+		li
+			color: $blue
+			@include f700()
+
+			span
+				@include f300()
+				color: $black
+

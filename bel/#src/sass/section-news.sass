@@ -1,0 +1,101 @@
+.news-col
+	@extend .col-3
+	@media ( max-width:$md1+px )
+		max-width: 50%
+		flex: 0 0 50%
+		margin-bottom: 20px
+	
+	@media ( max-width:$md3+px )
+		max-width: 100%
+		flex: 0 0 100%
+
+.news-box
+	background: $white
+	box-shadow: 0px 0px 30px rgba(169, 166, 158, 0.21)
+	border-radius: 5px
+
+	&__img
+		display: block
+		@include img_03(30%)
+
+	&__imgRow
+		@include img_02()
+
+		img
+			@include img_01()
+
+	&__info
+		padding: 16px 26px 30px
+
+	&__data
+		font-size: $fz14
+		@include f500()
+		color: $yellow
+
+	&__title
+		@include f400()
+		line-height: 1.2
+		text-transform: uppercase
+		margin-bottom: 10px
+		color: $black
+		text-decoration: none
+		transition: 0.3s linear
+
+		&:hover
+			color: $yellow
+
+	&__text
+		font-size: $fz14
+
+	.btn
+		margin-top: 20px
+
+.main--news
+	.news-col
+		margin: 0 0 20px 0 
+
+.main-new
+	.section-new
+		padding-top: 0
+	.new-block
+		@extend .col-12
+
+	b,strong
+		@include f500()
+
+	p
+		padding-bottom: 15px
+
+	ol, ul
+		margin: 0
+		padding: 0
+		list-style-position: inside
+		li
+			margin-bottom: 10px
+
+	.new-data
+		color: #A0A0A0
+		margin-bottom: 15px
+
+	.new-img
+		@include img_03(14.2%)
+		margin-bottom: 30px
+		
+	.new-imgbox
+		@include img_02()
+
+		img
+			@include img_01()
+
+.main--news
+	.news
+		padding-top: 0
+
+
+.main-new
+	@media ( max-width:$md3+px )
+		.form-title
+			margin-bottom: 0
+		.form .input
+				max-width: 100%
+				flex: 0 0 100%

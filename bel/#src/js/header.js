@@ -29,3 +29,26 @@ $(window).resize(function () {
 $(document).ready(function () {
 	hoverMenuLink()
 });
+
+
+function showBlockClick(btn, block) {
+	btn.click(function () {
+		btn.toggleClass('active');
+		block.toggleClass('active');
+		// main.toggleClass('active');
+		
+	})
+	// main.on('click', function (e) {
+	// 	if (e.target == this) {
+		
+	// 		btn.removeClass('active');
+	// 		block.removeClass('active');
+	// 		// main.removeClass('active');
+	// 	}
+
+
+	// });
+}
+
+
+showBlockClick($('.burger--js'), $('.header-menu--js'))

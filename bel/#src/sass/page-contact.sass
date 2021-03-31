@@ -1,0 +1,75 @@
+.section-contact
+	padding: 0
+	.container
+		padding: 0 0 50px 0 
+
+	.container:last-child
+		padding-bottom: 0
+
+.info-col
+	@extend .col-4
+
+	.info-box
+		border-bottom-left-radius: 5px
+		border-bottom-right-radius: 5px
+
+		overflow: hidden
+		background: #FFFFFF
+		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.07)
+		border-radius: 5px
+
+		&__img
+			border-radius: 5px
+			@include img_03(23%)
+
+		&__imgRow
+			@include img_02()
+
+			img
+				@include img_01()
+
+
+	.info-text
+		@include f700()
+		padding: 20px 30px
+
+
+		.btn--arrow
+			margin-top: 25px
+
+
+.contact-title
+	font-size: $fz30
+	@include f500()
+	margin-bottom: 22px
+
+
+.block-col
+	@extend .col-4
+	margin-bottom: 20px
+
+	.block-box
+		height: 100%
+		padding: 25px 40px
+		background: #FFFFFF
+		box-shadow: 0px 0px 30px rgba(169, 166, 158, 0.21)
+		border-radius: 5px
+
+	.block-ul
+		li
+			margin-bottom: 10px
+
+			a
+				color: $black
+				@include transitColor(0.3s)
+				text-decoration: none
+
+				&:hover
+					color: $blue
+
+	&__title
+		margin-bottom: 15px
+		@include f500()
+		font-size: $fz20
+
+

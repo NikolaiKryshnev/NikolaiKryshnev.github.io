@@ -734,14 +734,35 @@ body.active {
   position: absolute;
   z-index: -1;
   top: 0;
-  right: -50px;
+  right: 0;
   bottom: 0;
   left: 0;
-  border-right: 50px solid transparent;
-  border-bottom: 80px solid #000;
+  border-top: 32px solid #000;
+  border-bottom: 32px solid #000;
+  border-right: 32px solid transparent;
   -webkit-transform: translateX(-100%);
       -ms-transform: translateX(-100%);
           transform: translateX(-100%);
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.btnAn-1::after {
+  z-index: -1;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-top: 32px solid #000;
+  border-bottom: 32px solid #000;
+  border-left: 32px solid transparent;
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
   -webkit-transition: 0.5s ease-in-out;
   -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
@@ -752,9 +773,15 @@ body.active {
 }
 
 .btnAn-1:hover::before {
-  -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-          transform: translateX(0);
+  -webkit-transform: translateX(-30%);
+      -ms-transform: translateX(-30%);
+          transform: translateX(-30%);
+}
+
+.btnAn-1:hover::after {
+  -webkit-transform: translateX(30%);
+      -ms-transform: translateX(30%);
+          transform: translateX(30%);
 }
 
 .icon {
@@ -849,10 +876,11 @@ body.active {
 }
 
 .header-menu__ul > li + li {
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
 .header-menu__ul > li a {
+  font-family: PlayfairDisplay-Regular;
   display: block;
   text-align: center;
   padding: 0 10px 5px;
@@ -1130,7 +1158,6 @@ body.active {
           align-items: center;
   padding-top: 70px;
   min-height: 800px;
-  height: 80vh;
   margin-bottom: 20px;
 }
 
@@ -1166,17 +1193,21 @@ body.active {
   width: 100%;
 }
 
+.ban-bg__img img {
+  max-width: 95%;
+}
+
 .ban-bg__img:after {
   content: "";
   display: block;
   position: absolute;
-  top: -85px;
+  top: -10rem;
   left: -150px;
   right: 0;
   bottom: 0;
   background: #e3e4df;
   width: calc( 100% + 150px);
-  height: calc( 100% + 85px);
+  height: calc( 100% + rem);
   position: absolute;
   z-index: -1;
 }
@@ -1327,6 +1358,10 @@ body.active {
   margin-bottom: 10px;
 }
 
+.doctors .section-title {
+  margin-bottom: 20px;
+}
+
 .doctors-column {
   -webkit-transition: height 0.3s linear, -webkit-box-shadow 0.3s linear;
   transition: height 0.3s linear, -webkit-box-shadow 0.3s linear;
@@ -1426,6 +1461,7 @@ body.active {
 
 .slick-arrow:hover svg path {
   stroke: #86A184;
+  fill: #86A184;
 }
 
 .slick-arrow__left {
@@ -1462,6 +1498,14 @@ body.active {
       -ms-flex: 0 0 33.333333%;
           flex: 0 0 33.333333%;
   max-width: 33.333333%;
+}
+
+.ourDoctor .section-title {
+  margin-bottom: 20px;
+}
+
+.ourDoctor .doctors-column {
+  margin-top: 0;
 }
 
 .persDoctor {
@@ -1716,6 +1760,14 @@ body.active {
      object-fit: cover;
 }
 
+.sliderSercvices .blocks-arrow {
+  margin-left: 0;
+}
+
+.sliderSercvices .slick-arrow__left {
+  margin-left: 0;
+}
+
 .pesrDoctor-img {
   position: relative;
   padding: 61.3% 0;
@@ -1756,6 +1808,10 @@ body.active {
 
 .pesrDoctor .btn {
   margin-top: 40px;
+}
+
+.service {
+  padding-top: 0;
 }
 
 .service .service-info {
@@ -1805,7 +1861,7 @@ body.active {
 }
 
 .service-col::after {
-  margin-top: -74px;
+  margin-top: -55px;
   content: "";
   display: block;
   position: absolute;
@@ -1842,6 +1898,7 @@ body.active {
 .servicesNum-col__title {
   font-family: CynthoNext-Medium;
   margin-bottom: 10px;
+  max-width: 75%;
 }
 
 .servicesNum-col__text {
@@ -1937,6 +1994,10 @@ body.active {
 
 .contact-info li:first-child {
   margin-top: 0;
+}
+
+.contact-info li:last-child {
+  border: none;
 }
 
 .contact-info a {
@@ -2134,6 +2195,25 @@ body.active {
 .footer-contact a {
   color: #fff;
   text-decoration: none;
+  position: relative;
+}
+
+.footer-contact a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  width: 0;
+  left: 0;
+  -webkit-transition: width 0.3s linear;
+  -o-transition: width 0.3s linear;
+  transition: width 0.3s linear;
+  background: #fff;
+}
+
+.footer-contact a:hover::after {
+  width: 100%;
 }
 
 .footer-contact .icon {
@@ -2419,6 +2499,7 @@ body.active {
 }
 
 .modal .modal-content__title {
+  line-height: 1;
   font-size: 1.25rem;
   font-family: PlayfairDisplay-Bold;
   margin-bottom: 20px;
@@ -2534,6 +2615,7 @@ body.active {
 
 .modal .modal-content__form input,
 .modal .modal-content__form select {
+  margin-top: 5px;
   width: 100%;
   border-bottom: 1px solid #000000;
   font-size: 1rem;
@@ -2545,6 +2627,7 @@ body.active {
 }
 
 .modal .modal-content__form textarea {
+  margin-top: 5px;
   padding: 5px;
   min-height: 90px;
   font-size: 1rem;
@@ -2578,6 +2661,14 @@ body.active {
   font-size: 0.875rem;
 }
 
+form p:empty {
+  display: none;
+}
+
+.wpcf7-date {
+  padding-right: 0 !important;
+}
+
 @media screen and (min-width: 526px) {
   .mbPhone {
     display: none;
@@ -2591,6 +2682,10 @@ body.active {
 
   .services-column:hover .services-column__title::before {
     width: 100%;
+  }
+
+  .service .service-info__text {
+    max-width: 85%;
   }
 }
 
@@ -2613,7 +2708,7 @@ body.active {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .servicesNum-col .btn--arrow {
     opacity: 0;
     visibility: hidden;
@@ -2661,6 +2756,12 @@ body.active {
 @media screen and (max-width: 1275px) {
   .header-contact__row {
     margin: 0;
+  }
+}
+
+@media (max-width: 1275px) {
+  .header-contact__row a:first-child:after {
+    display: none;
   }
 }
 
@@ -2831,6 +2932,16 @@ body.active {
     height: 2px;
     width: 35px;
   }
+
+  .ban-bg {
+    margin-right: -15px;
+    margin-top: -15px;
+  }
+
+  .ban-bg__img:after {
+    margin-right: -15px;
+    margin-top: -15px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -2851,8 +2962,32 @@ body.active {
   }
 }
 
+@media (max-width: 1025px) {
+  .servicesNum-col__text::after {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .services-column__title::after {
+    margin-top: 0;
+    opacity: 1;
+    top: 0;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+    margin-left: 15px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .footer .footer-nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .ban-bg__img {
     display: none;
   }
 }
@@ -2873,6 +3008,10 @@ body.active {
 
   .ban-info__text {
     max-width: 100%;
+  }
+
+  .ban-bg {
+    background: #E3E4DF;
   }
 
   .ban-bg__img {
@@ -2902,17 +3041,6 @@ body.active {
     width: 100%;
   }
 
-  .services-column__title::after {
-    margin-top: 0;
-    opacity: 1;
-    top: 0;
-    -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-            transform: translateY(0);
-    position: relative;
-    margin-left: 15px;
-  }
-
   .section-faq .acc-block__content {
     margin: 0;
   }
@@ -2931,6 +3059,10 @@ body.active {
 
   .why-img {
     display: none;
+  }
+
+  .servicesNum-col__title {
+    max-width: 100%;
   }
 
   .products .product-column {
@@ -2970,10 +3102,6 @@ body.active {
     padding-bottom: 100px;
     padding-top: 170px;
   }
-
-  .ban-bg__img {
-    display: none;
-  }
 }
 
 @media (max-width: 726px) {
@@ -3011,10 +3139,6 @@ body.active {
     max-width: 100%;
   }
 
-  .service {
-    padding-top: 0;
-  }
-
   .service .service-info {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
@@ -3049,10 +3173,6 @@ body.active {
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
     max-width: 50%;
-  }
-
-  .servicesNum-col__text::after {
-    width: 100%;
   }
 
   .serviceInfo img {
@@ -3193,12 +3313,16 @@ body.active {
     padding-bottom: 0;
   }
 
+  .section-faq .title-link {
+    margin-left: 15px;
+  }
+
   .section-faq .acc-block {
-    padding: 18px 25px;
+    padding: 20px 20px 10px;
   }
 
   .section-faq .acc-block__title {
-    padding: 25px 0;
+    padding: 0 0 10px;
   }
 
   .section-faq .acc-block__icon {
@@ -3206,7 +3330,7 @@ body.active {
   }
 
   .section-faq .acc-block__content {
-    padding-bottom: 20px;
+    padding: 15px 0;
   }
 
   .servicesNum-col {

@@ -7,18 +7,29 @@
 	
 .main
 	overflow: hidden
+	@media screen and ( max-width: 1124px)
+		padding-top: 60px
+	@media ( max-width:$md1+px )
+		padding-top: 40px		
+		
 	&.active
 		@include bgBlack(0.5, 10)
 
+.main-secTop
+	.object, .gallery
+		padding-top: 30px
+	
 ._section
 	padding: 45px 0
+	@media ( max-width:$md3+px )
+		padding: 25px 0
 
 .container 
 	max-width: 1200px
 	min-width: 320px
 	width: 100%
-	padding-right: 15px
-	padding-left: 15px
+	padding-right: 10px
+	padding-left: 10px
 	margin-right: auto
 	margin-left: auto
 	@media ( max-width:$md1+px )
@@ -32,23 +43,23 @@
 
 .container-fluid 
 	width: 100%
-	padding-right: 15px
-	padding-left: 15px
+	padding-right: 10px
+	padding-left: 10px
 	margin-right: auto
 	margin-left: auto
 
 .row
 	display: flex
 	flex-wrap: wrap
-	margin-right: -15px
-	margin-left: -15px
+	margin-right: -10px
+	margin-left: -10px
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12
 	position: relative
 	width: 100%
 	min-height: 1px
-	padding-right: 15px
-	padding-left: 15px
+	padding-right: 10px
+	padding-left: 10px
 
 
 .col 
@@ -107,5 +118,5 @@
 	max-width: 91.666667%
 
 .col-12 
-	flex: 0 0 100%
+	flex: 1 1 100%
 	max-width: 100%

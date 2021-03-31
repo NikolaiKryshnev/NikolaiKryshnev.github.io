@@ -1,7 +1,8 @@
 .ban
 	padding-top: 0
-	@media ( max-width:$md1+px )
+	@media ( max-width:$md3+px )
 		padding-top: 0
+
 	&-slider
 		&.slick-dotted.slick-slider
 			margin-bottom: 0
@@ -13,6 +14,8 @@
 
 			max-height: 700px
 			padding: 50px 0  300px 0
+			@media ( max-width:$md3+px )
+				padding-bottom: 100px
 
 			.container
 				position: relative
@@ -34,14 +37,21 @@
 			margin-right: 0
 
 			text-align: right
+			@media screen and ( max-width: 1300px )
+				margin-right: 75px
+				
 
 		&__number
 			@include f500()
 			font-size: $fz48
+			@media ( max-width:$md3+px )
+				font-size: 2rem
 
 		&__title
 			@include f300()
 			font-size: $fz48
+			@media ( max-width:$md3+px )
+				font-size: 2rem
 
 		.btn--yellow
 			margin: 20px 0 0 auto
@@ -58,6 +68,7 @@
 		height: 100%
 		width: 17px
 		margin-right: 2rem
+		@media ( max-width:$md3+px )
 
 		li
 			border: 1px solid rgba(0, 0, 0, 0.4)

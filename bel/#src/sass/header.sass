@@ -1,39 +1,107 @@
 .header
 	background: $blue
-
-	.container
+	@media screen and ( max-width: 1124px )
+		position: relative
 		
 //---- .logo ----//
 .logo
 	@extend .col-3
+	@media screen and ( max-width: 1124px )
+		max-width: 250px
+		width: 100%
+
+		padding-top: 10px
+		padding-bottom: 10px
+		margin-left: 0
+		margin-right: auto
+	@media screen and ( max-width: 726px )
+		max-width: 150px
+		flex: 1 1 auto
+
+	@media ( max-width:$md3+px )
+		max-width: 100%
+		flex: 1 1 100%
+		margin: 0 0 10px 0 
+		background: $white
+
+	&-link
+		@media ( max-width:$md3+px )
+			margin: 0 auto
+			display: block
+			max-width: 200px
 
 .header-top
 	padding: 13px 0
+	@media screen and ( max-width: 1124px )
+		position: relative
+
+	@media ( max-width:$md3+px )
+		background: $blue
+		padding-top: 0
+
 	.row
 		justify-content: space-between
+		@media screen and ( max-width: 1124px )
+			align-items: center
+			
 
 	&__name
 		@extend .col-4
 		font-size: $fz24
 		@include f700()
 		text-align: center
+		@media screen and ( max-width: 1124px )
+			position: absolute
+			// bottom: 0
+			top: 100%
+			left: 0
+			z-index: 20
+
+			max-width: 100%
+			width: 100%
+			line-height: 60px
+			text-align: left
+
+			background: $blue
+			color: $white 
+
+		@media ( max-width:$md1+px )
+			padding: 10px
+			font-size: $fz16
+			text-align: center
+			line-height: 1.2rem
+			
 
 	&__right
 		@extend .col-3
 		display: flex
 		align-items: center	
 		justify-content: flex-end	
+		@media screen and ( max-width: 1124px )
+			margin-left: auto
+			margin-right: 15px
+
+		@media ( max-width:$md1+px )
+			max-width: 220px
+			width: 100%
+			flex: 1 1 auto
+			margin-left: 0
+			margin-right: auto
 
 		.btn-svg
 			margin-right: 40px
-			
-			svg
+			@media ( max-width:$md1+px )
+				margin-right: 20%
+
+			path
 				width: 100%
 				height: 100%
 				fill: #F7B802
+				transition: 0.3s linear fill
+
 			&:hover
 				cursor: pointer
-				svg
+				path
 					fill: $blue
 
 		.btn-search
@@ -49,24 +117,30 @@
 		.select-lang
 			font-size: $fz14
 			@include f700()
+			@media ( max-width:$md3+px )
+				color: $white
 
 //---- .header-menu ----//	
 .header-menu
 	@extend .col-12
-	@media ( max-width:$md1+px )
+	@media ( max-width: 1124px )
+		border-top: 4px solid $yellow
+		display: none
 		position: absolute
 		right: 0
-		top: 0
+		top: 100%
 		z-index: 999
 
-		display: block
+		// display: block
 
 		margin: 0 15px 0 0
 
 		min-width: 320px
 		max-width: 30%
 
-		background: #f9f9f9
+		background: $blue
+		&.active
+			display: block
 	@media ( max-width:$md3+px )
 		margin-right: 0
 
@@ -79,7 +153,7 @@
 
 	width: 100%
 
-	@media ( max-width:$md1+px )
+	@media ( max-width: 1124px)
 		display: flex
 		flex-direction: column
 	
@@ -92,6 +166,7 @@
 			height: 100%
 			
 			box-shadow: inset 0 7px 15px -7px rgba(0,0,0,.12)
+			display: none
 
 
 // ---- .header-menu__ul li ----//
@@ -102,9 +177,14 @@
 		position: relative
 		&:last-child
 			margin-right: -20px
+			@media screen and ( max-width: 1124px )
+				margin-right: 0
+				
 
 		&:first-child
 			margin-left: -20px
+			@media screen and ( max-width: 1124px )
+				margin-left: 0
 
 		a
 			display: block
@@ -117,14 +197,52 @@
 			color: $white
 			@include f700()
 			@include transitColor(0.3s)
+			@media screen and ( max-width: 1124px )
+				text-align: right
+				padding: 10px 15px
+				position: relative
+				border-bottom: 1px solid $white
+				
 
+		&::after
+			@include pseudoEl(block, absolute, '')
+			left: 0
+			top: 0
+
+			width: 0
+			height: 5px
+
+			background: $yellow
+
+			transition: width 0.3s linear 
+			@media screen and ( max-width: 1124px )
+				display: none
+			
 		&.hover
-			&>a
-				color: $yellow
+			&::after
+				width: 100%
+
+		&.current-menu-item::after
+			@include pseudoEl(block, absolute, '')
+			left: 0
+			top: 0
+
+			width: 100%
+			height: 5px
+
+			background: $yellow
+			@media screen and ( max-width: 1124px )
+				display: none
+				
+
 // ---- .ul-submenu----//
 
 .ul-submenu
+	position: relative
 	margin-right: 20px
+	@media screen and ( max-width: 1124px )
+		margin-right: 0
+		
 
 // ---- .ul-submenu__block ----//
 ul.ul-submenu__block
@@ -146,6 +264,15 @@ ul.ul-submenu__block
 	opacity: 0
 	visibility: hidden
 	transition: opacity 0.3s linear, visibility 0.3s linear
+	@media screen and ( max-width: 1124px )
+		position: relative
+		top: 0
+		opacity: 1
+		visibility: visible
+		max-width: 100%
+		width: 100%
+		display: none
+		
 
 	&::after
 		@include pseudoEl(block, absolute, '')
@@ -153,6 +280,9 @@ ul.ul-submenu__block
 		width: 100%
 		height: 3px
 		background: none
+		@media screen and ( max-width: 1124px )
+			display: none
+			
 
 	li
 
@@ -168,15 +298,26 @@ ul.ul-submenu__block
 			text-align: left
 			border-bottom: 1px solid $white
 			@include transitColor(0.3s)
+			@media screen and ( max-width: 1124px )
+				text-align: right
+				justify-content: flex-end
+				margin: 0
+				padding: 15px
+				
 
 			.header-arrow
 				position: relative
 				@include translateY(0)
 				margin-left: 15px
+				@media screen and ( max-width: 1124px )
+					@include verticalcenter()
 
 		&:last-child
 			a
 				border-bottom: none
+				@media screen and ( max-width: 1124px )
+					border-bottom: 1px solid $white
+					
 
 	li.hover
 		&>a
@@ -184,6 +325,9 @@ ul.ul-submenu__block
 
 		.header-arrow
 			@include rotate(90deg)
+			@media screen and ( max-width: 1124px )
+				transform: rotate(90deg) translateX(-50%)
+				
 
 // ---- .header-arrow ----//
 .header-arrow
@@ -197,8 +341,30 @@ ul.ul-submenu__block
 	transition: transform 0.3s linear
 
 
+.ul-submenu
+	ul.ul-submenu__block--right
+		top: 0
+		left: 100%
+
+		margin-left: 3px
+		margin-top: 0
+		@media screen and ( max-width: 1124px )
+			margin-left: 0
+			left: 0
+			position: relative
+			
+
+		&::after
+			left: -3px
+			width: 3px
+			height: 100%
+			@media screen and ( max-width: 1124px )
+				display: none
+				
+
 .ul-submenu.hover
 	position: relative
+
 	// ---- .ul-submenu.hover .header-arrow ----//
 	&>a .header-arrow
 		transform: rotate(90deg) translateX(-50%)
@@ -208,6 +374,8 @@ ul.ul-submenu__block
 	&>.ul-submenu__block
 		opacity: 1
 		visibility: visible
+		@media screen and ( max-width: 1124px )
+			display: block
 
 		// ---- .ul-submenu__block .ul-submenu ----//
 		.ul-submenu
@@ -215,26 +383,20 @@ ul.ul-submenu__block
 	
 	// ---- .ul-submenu.hover .ul-submenu__block--right ----//
 	&>.ul-submenu__block--right
-		top: 0
-		left: 100%
-		margin-left: 3px
-		margin-top: 0
 
-		&::after
-			left: -3px
-			width: 3px
-			height: 100%
 
 .burger
 	display: none
 	position: relative
 
+	margin: 0 15px 0 0
+
 	width: 25px
-	height: 20px
-	@media ( max-width:$md1+px )
+	height: 25px	
+	@media ( max-width: 1124px )
 		display: block
 
-	&-line
+	.burger-line
 		position: absolute
 
 		display: block
@@ -246,37 +408,57 @@ ul.ul-submenu__block
 
 		background-color: black
 		
-		border-radius: 4px
-		transition: all 0.4s ease-in-out
+		transition: all 0.4s ease-in-out, transform 0.4s ease-in-out 0.4s
+		@media ( max-width:$md3+px )
+			background: $white
 
-	&-lineOne
+
+	.burger-lineOne
 		top: 0
 
-	&-lineTwo
+	.burger-lineTwo
 		top: 50%
-		margin: -1px 0 0 0
+		margin-top: -1px
+		width: 1px
+		transform: rotate(90deg)
+		left: 50%
+		margin-left: -1px
 
-	&-lineThree
+	.burger-lineThree
 		top: 50%
-		margin: -1px 0 0 0
+		margin-top: -1px
 		right: 0
+		width: 1px
+		left: 50%
+		margin-left: -1px
 
-	&-lineFour
+	.burger-lineFour
+		top: 50%
+		margin-top: -1px
 		bottom: 0
 
+	.burger-lineFive
+		bottom: 0px
+
 	&.active
-		&-lineOne
-			transform: translateX(40px)
+		.burger-lineOne
+			top: 50%
+    		margin-top: -1px
 			background-color: transparent
 
-		&-lineTwo
+		.burger-lineTwo
+			left: 0px
+			width: 25px
 			transform: rotate(45deg)
 
-		&-lineThree
+		.burger-lineThree
+			left: 0
+			width: 25px
 			transform: rotate(-45deg)
 
-		&-lineFour
-			transform: translateX(-40px)
+		.burger-lineFour
 			background-color: transparent
 
-	
+		.burger-lineFive
+			bottom: 13.5px
+			background-color: transparent

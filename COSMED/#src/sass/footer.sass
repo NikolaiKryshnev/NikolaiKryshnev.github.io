@@ -94,6 +94,19 @@
 		a
 			color: $white
 			text-decoration: none
+			position: relative
+			&::after
+				@include pseudoEl(block, absolute, '')
+				bottom: 0
+				height: 1px
+				width: 0
+				left: 0
+				transition: width 0.3s linear
+			
+				background: $white
+			&:hover
+				&::after
+					width: 100%
 
 		.icon
 			padding-left: 30px

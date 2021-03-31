@@ -1,6 +1,6 @@
 .service
-	@media ( max-width:$md2+px )
-		padding-top: 0
+	padding-top: 0
+
 	.service-info
 		display: flex
 		align-items: center
@@ -28,7 +28,9 @@
 				left: 0
 			
 		&__text
-
+			@media ( min-width:$md1+px )
+				max-width: 85%
+			
 	&-col
 		position: relative
 		display: flex
@@ -41,7 +43,7 @@
 			order: 1 
 
 		&::after
-			margin-top: -74px
+			margin-top: -55px
 			@include pseudoEl(block, absolute, '')
 			right: 0
 			margin-left: 15px
@@ -93,6 +95,9 @@
 		&__title
 			@include f500()
 			margin-bottom: 10px
+			max-width: 75%
+			@media ( max-width:$md1+px )
+				max-width: 100%
 
 		&__text
 			padding-bottom: 25px
@@ -105,20 +110,20 @@
 				bottom: 0
 				background: $black
 				transition: width 0.3s linear
-				@media ( max-width:$md2+px )
+				@media ( max-width: 1025px )
 					width: 100%
 
 		.btn--arrow
 			filter: brightness(0)
 
-			@media ( min-width: 1024px )
+			@media ( min-width: 1025px )
 				opacity: 0
 				visibility: hidden
 				transition: opacity 0.3s linear, visibility 0.3s linear
 			
 
 		&__box:hover
-			@media ( min-width: 1024px )
+			@media ( min-width: 1025px )
 				.btn--arrow
 					opacity: 1
 					visibility: visible

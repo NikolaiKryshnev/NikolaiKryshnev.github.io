@@ -80,12 +80,13 @@
 			padding: 0
 
 		& + li
-			margin-left: 20px
+			margin-left: 40px
 			@media screen and ( max-width: 1200px )
 				margin-left: 0
 				
 
 		a
+			font-family: PlayfairDisplay-Regular
 			display: block
 			text-align: center
 
@@ -301,7 +302,8 @@
 			width: 10px
 			height: 6px
 			background: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.468384 1.27466L3.94683 4.75302L7.42519 1.27466' stroke='black'/%3E%3C/svg%3E%0A") 100%/cover no-repeat
-
+			@media ( max-width: 1275px )
+				display: none
 
 	@media screen and ( max-width:  1275px )
 		margin: 0

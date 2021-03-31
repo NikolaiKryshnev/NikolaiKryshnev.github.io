@@ -1,0 +1,49 @@
+.filial
+	.btn--arrow
+		margin-top: 30px
+
+	&-col
+		@extend .col-3
+		@media ( max-width:$md1+px )
+			max-width: 50%
+			flex: 0 0 50%
+			margin-bottom: 20px
+
+		@media ( max-width:$md3+px )
+			max-width: 100%
+			flex: 1 1 100%
+
+	&-box
+		padding: 25px 30px 
+		height: 100%
+		box-shadow: 0px 0px 30px rgba(169, 166, 158, 0.21)
+		&__title
+			position: relative
+			font-size: $fz18
+			@include f500()
+			color: $blue
+			margin-bottom: 10px
+			padding-left: 20px
+			&::before
+				@include pseudoEl(block, absolute, '')
+				width: 5px
+				height: 5px
+				background: $blue
+				left: 0
+				top: 12px
+
+				
+
+
+		&__text
+			font-size: $fz14
+
+		.btn--arrow
+			margin-top: 15px
+
+	
+
+	
+
+
+	

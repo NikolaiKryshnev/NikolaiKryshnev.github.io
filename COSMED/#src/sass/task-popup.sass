@@ -63,6 +63,7 @@
 		transition-delay: 0.3s
 
 		&__title
+			line-height: 1
 			font-size: $fz20
 			@include f700()
 			margin-bottom: 20px
@@ -133,6 +134,7 @@
 					align-items: center
 
 		input, select
+			margin-top: 5px
 			width: 100%
 
 			border-bottom: 1px solid #000000
@@ -143,6 +145,7 @@
 		input
 			padding: 0 5px
 		textarea
+			margin-top: 5px
 			padding: 5px
 			min-height: 90px
 			font-size: $fz16
@@ -171,5 +174,12 @@
 		.subText
 			margin-top: 10px
 			font-size: $fz14
+
+form p:empty
+	display: none
+  
+
+.wpcf7-date
+	padding-right: 0 !important
 
 //</POPUP>---------------------------------------
