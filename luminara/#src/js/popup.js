@@ -1,5 +1,6 @@
 function showModla(modal, btn) {
 	btn.click(function () {
+		$('.modal').removeClass('active');
 		$('body').addClass('active');
 		$('.wrapper').addClass('active');
 		$('.main').addClass('active');
@@ -11,6 +12,7 @@ function showModla(modal, btn) {
 		$('.wrapper').removeClass('active');
 		$('.main').removeClass('active');
 		modal.removeClass('active');
+		
 	});
 
 	$(".modal-overlay").on('click', function (e) {
