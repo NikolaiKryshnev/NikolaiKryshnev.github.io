@@ -1,0 +1,109 @@
+.form
+	.form-title
+		@include f700()
+		padding: 0 80px 40px
+		margin-bottom: 40px
+
+		border-bottom: 1px solid #4D4D4D
+
+		font-size: $fz30
+		@media ( max-width:$md1+px )
+			padding: 0 30px 30px
+			font-size: $fz20
+		
+	&-content
+		padding: 0 80px
+		@media ( max-width:$md1+px )
+			padding: 0 30px
+
+	&__line
+		display: flex
+		flex-direction: column
+		margin-bottom: 35px
+		@media ( max-width:$md3+px )
+			margin-bottom: 25px
+
+		&:last-child
+			margin-bottom: 0
+
+		input
+			height: 40px
+			border-bottom: 2px solid $red
+			padding: 0 10px
+
+
+		textarea 
+			margin-top: 5px
+			min-height: 125px
+			resize: none
+			border: 2px solid #F45959
+			padding: 0 10px
+
+
+		sup
+			color: $red
+
+	.btn
+		margin-top: 45px
+
+
+input[type="date"]::-webkit-calendar-picker-indicator
+	color: rgba(0, 0, 0, 0)
+	opacity: 0
+	z-index: 2
+	position: relative
+	cursor: pointer
+
+input[type="date"]
+	position: relative
+
+input[type="date"]::after
+	cursor: pointer
+
+	right: 10px
+	content: ''
+	z-index: -1
+	display: block
+	background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M0.585067 15.2737H15.8983C16.0356 15.2737 16.1683 15.2257 16.2736 15.1381C16.4207 15.0149 19.7758 12.1287 19.9804 5.89832H3.53434C3.33054 11.5538 0.240637 14.212 0.208527 14.2386C0.020276 14.3976 -0.0489849 14.6575 0.0357064 14.8886C0.119812 15.1192 0.339001 15.2737 0.585067 15.2737Z' fill='%23F45959'/%3E%3Cpath d='M19.4138 2.3825H16.484V1.79654C16.484 1.4684 16.2262 1.21057 15.898 1.21057C15.5699 1.21057 15.312 1.4684 15.312 1.79654V2.3825H12.3432V1.79654C12.3432 1.4684 12.0853 1.21057 11.7572 1.21057C11.4291 1.21057 11.1712 1.4684 11.1712 1.79654V2.3825H8.24142V1.79654C8.24142 1.4684 7.9836 1.21057 7.65546 1.21057C7.32732 1.21057 7.06949 1.4684 7.06949 1.79654V2.3825H4.13967C3.81153 2.3825 3.55371 2.64032 3.55371 2.96846V4.72635H19.9998V2.96846C19.9998 2.64032 19.7419 2.3825 19.4138 2.3825Z' fill='%23F45959'/%3E%3Cpath d='M17.0269 16.0365C16.7087 16.3014 16.3093 16.4456 15.899 16.4456H3.55469V18.2035C3.55469 18.5274 3.81677 18.7895 4.14065 18.7895H19.4148C19.7387 18.7895 20.0007 18.5274 20.0007 18.2035V11.635C18.871 14.4067 17.2945 15.8124 17.0269 16.0365Z' fill='%23F45959'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='20' height='20' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A")
+	background-repeat: no-repeat
+	// background-size: 10%
+	width: 20px
+	height: 20px
+	position: absolute
+
+.input-file
+	input
+		width: 0 
+		height: 0
+		visibility: hidden
+		opacity: 0
+		border: 0
+		padding: 0
+		margin: 0
+
+.btn-file
+	display: flex
+	justify-content: center
+	align-items: center
+	border-radius: 50%
+	background: $red
+	width: 35px
+	height: 35px
+	cursor: pointer
+	margin-top: 5px
+
+	svg
+		width: 12px
+		height: 12px
+
+.form__label, .input-file
+	@include f700()
+
+.input-file
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	.js-value
+		margin-left: 10px
+.input-file__title
+	width: 100%

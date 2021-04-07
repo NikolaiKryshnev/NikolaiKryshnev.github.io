@@ -1,0 +1,62 @@
+.section-gallery
+	.gallery-col
+		@extend .col-3
+
+	.gallery-box
+		@include f700()
+
+		&__blockImg
+			@include img_03(40%)
+		&__img
+			@include img_02()
+			img
+				@include img_01()
+
+		&__data
+			margin: 10px 0 0 0
+			color: #7C7C7C
+			font-size: $fz14
+
+		&__text
+			margin: 5px 0 0 0
+			font-size: $fz18
+
+.gallery-fancybox
+	display: flex
+	justify-content: flex-end
+
+	position: absolute
+	z-index: 10
+	right: 15px
+	bottom: 15px
+
+	width: 100%
+	// height: 45px
+
+	.gallery-icon
+		width: 30px
+		height: 30px
+		background: $red
+		border-radius: 50%
+		margin-left: 15px
+
+		display: flex
+		align-items: center
+		justify-content: center
+
+
+		&:hover
+			animation-name: scroll-btn
+			animation-duration: 2.5s
+			animation-timing-function: ease
+			animation-iteration-count: infinite
+
+		svg
+			width: 12px
+			height: 12px
+
+
+	.fancybox--video
+		svg
+			width: 7px
+			height: 7px

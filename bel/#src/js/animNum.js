@@ -42,11 +42,12 @@ $(function () {
 
 			}
 		}
+		$(window).scroll(function () {
+			scrollTracking();
+		});
+	
+		scrollTracking();
 	}
 
-	$(window).scroll(function () {
-		scrollTracking();
-	});
-
-	scrollTracking();
+	
 })

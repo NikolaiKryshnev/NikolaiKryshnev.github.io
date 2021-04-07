@@ -12,6 +12,13 @@
 	a
 		text-decoration: none
 		color: $white
+		border-bottom: 1px solid rgba($white,0 )
+		transition: border-color 0.3s linear
+		
+		&:hover
+			border-bottom: 1px solid rgba($white,1 )
+
+			
 
 	&-top
 		// @extend .col-12
@@ -74,13 +81,14 @@
 	top: 3px
 	background-repeat: no-repeat
 	background-size: 17px
-	background-position: 0 5px
+	background-position: 0 3px
 	
 	// width: 15px
 	// height: 15px
 	// padding: 0.5rem 0.5rem
 
 	&-map
+		background-size: 15px
 		background-image: url("data:image/svg+xml,%3Csvg width='10' height='14'  fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.69731 0.614746C2.10714 0.614746 0 2.72188 0 5.31173C0 9.04067 4.1933 12.7867 4.3719 12.9446C4.46529 13.0265 4.5813 13.0675 4.69731 13.0675C4.8179 13.0675 4.9385 13.0233 5.03255 12.9351C5.21049 12.7686 9.39462 8.81652 9.39462 5.31206C9.39462 2.72221 7.28683 0.614746 4.69731 0.614746ZM4.69731 7.55159C3.46023 7.55159 2.45778 6.54848 2.45778 5.31238C2.45778 4.07628 3.46023 3.07318 4.69731 3.07318C5.93374 3.07318 6.93618 4.07596 6.93618 5.31238C6.93618 6.54881 5.93374 7.55159 4.69731 7.55159Z' fill='%23F7B802'/%3E%3C/svg%3E%0A")
 	
 	&-phone

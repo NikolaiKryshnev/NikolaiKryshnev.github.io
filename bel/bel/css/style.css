@@ -736,14 +736,15 @@ body.active {
   width: 50px;
   height: 50px;
   background: #fff;
-  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  -webkit-box-shadow: 4px 4px 40px rgba(177, 164, 164, 0.25);
+          box-shadow: 4px 4px 40px rgba(177, 164, 164, 0.25);
   cursor: pointer;
 }
 
 .scrollTop__icon {
-  width: 50px;
-  height: 50px;
+  width: 25px;
+  height: 25px;
 }
 
 .header {
@@ -922,6 +923,14 @@ ul.ul-submenu__block::after {
   background: none;
 }
 
+ul.ul-submenu__block li {
+  position: relative;
+}
+
+ul.ul-submenu__block li.hover::before {
+  width: 10px;
+}
+
 ul.ul-submenu__block li a {
   position: relative;
   display: -webkit-box;
@@ -934,9 +943,9 @@ ul.ul-submenu__block li a {
   margin: 0 26px;
   text-align: left;
   border-bottom: 1px solid #fff;
-  -webkit-transition: 0.3s color linear;
-  -o-transition: 0.3s color linear;
-  transition: 0.3s color linear;
+  -webkit-transition: color 0.3s linear, padding-left 0.3s linear;
+  -o-transition: color 0.3s linear, padding-left 0.3s linear;
+  transition: color 0.3s linear, padding-left 0.3s linear;
 }
 
 ul.ul-submenu__block li a .header-arrow {
@@ -952,13 +961,13 @@ ul.ul-submenu__block li:last-child a {
 }
 
 ul.ul-submenu__block li.hover > a {
-  color: #F7B802;
+  padding-left: 20px;
 }
 
 ul.ul-submenu__block li.hover .header-arrow {
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .header-arrow {
@@ -996,9 +1005,9 @@ ul.ul-submenu__block li.hover .header-arrow {
 }
 
 .ul-submenu.hover > a .header-arrow {
-  -webkit-transform: rotate(90deg) translateX(-50%);
-      -ms-transform: rotate(90deg) translateX(-50%);
-          transform: rotate(90deg) translateX(-50%);
+  -webkit-transform: rotate(180deg) translateY(50%);
+      -ms-transform: rotate(180deg) translateY(50%);
+          transform: rotate(180deg) translateY(50%);
 }
 
 .ul-submenu.hover > .ul-submenu__block {
@@ -1105,7 +1114,6 @@ ul.ul-submenu__block li.hover .header-arrow {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  text-transform: uppercase;
   color: #000;
   font-weight: 700;
   font-family: Roboto-Medium;
@@ -1229,6 +1237,18 @@ ul.ul-submenu__block li.hover .header-arrow {
   border-color: #F7B802;
 }
 
+.ban-slider__video {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: 80vh;
+}
+
 .serv-column__box {
   border-radius: 5px;
 }
@@ -1330,7 +1350,8 @@ ul.ul-submenu__block li.hover .header-arrow {
 }
 
 .advan {
-  padding: 70px 0;
+  margin: 40px 0;
+  padding: 115px 0;
   position: relative;
   background-attachment: fixed;
   background-position: center;
@@ -1580,6 +1601,7 @@ ul.ul-submenu__block li.hover .header-arrow {
 }
 
 .object-box__rowImg {
+  display: block;
   position: relative;
   padding: 50% 0;
   width: 100%;
@@ -1755,6 +1777,14 @@ table tbody tr td:first-child {
 .footer a {
   text-decoration: none;
   color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+  -webkit-transition: border-color 0.3s linear;
+  -o-transition: border-color 0.3s linear;
+  transition: border-color 0.3s linear;
+}
+
+.footer a:hover {
+  border-bottom: 1px solid white;
 }
 
 .footer-top {
@@ -1813,10 +1843,11 @@ table tbody tr td:first-child {
   top: 3px;
   background-repeat: no-repeat;
   background-size: 17px;
-  background-position: 0 5px;
+  background-position: 0 3px;
 }
 
 .icon-map {
+  background-size: 15px;
   background-image: url("data:image/svg+xml,%3Csvg width='10' height='14'  fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.69731 0.614746C2.10714 0.614746 0 2.72188 0 5.31173C0 9.04067 4.1933 12.7867 4.3719 12.9446C4.46529 13.0265 4.5813 13.0675 4.69731 13.0675C4.8179 13.0675 4.9385 13.0233 5.03255 12.9351C5.21049 12.7686 9.39462 8.81652 9.39462 5.31206C9.39462 2.72221 7.28683 0.614746 4.69731 0.614746ZM4.69731 7.55159C3.46023 7.55159 2.45778 6.54848 2.45778 5.31238C2.45778 4.07628 3.46023 3.07318 4.69731 3.07318C5.93374 3.07318 6.93618 4.07596 6.93618 5.31238C6.93618 6.54881 5.93374 7.55159 4.69731 7.55159Z' fill='%23F7B802'/%3E%3C/svg%3E%0A");
 }
 
@@ -2085,7 +2116,7 @@ table tbody tr td:first-child {
 }
 
 .main-feedback .section-form {
-  padding-top: 50px;
+  padding-top: 20px;
   padding-bottom: 50px;
 }
 
@@ -2230,7 +2261,11 @@ table tbody tr td:first-child {
 }
 
 .section-contact .container {
-  padding: 0 0 50px 0;
+  padding: 0 10px 50px 10px;
+}
+
+.section-contact .container:first-child {
+  padding: 0;
 }
 
 .section-contact .container:last-child {
@@ -2285,6 +2320,12 @@ table tbody tr td:first-child {
 }
 
 .contact-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-size: 1.875rem;
   font-family: Roboto-Medium;
   margin-bottom: 22px;
@@ -2323,6 +2364,10 @@ table tbody tr td:first-child {
   margin-bottom: 15px;
   font-family: Roboto-Medium;
   font-size: 1.25rem;
+}
+
+.contactinfo-props {
+  padding: 0 10px;
 }
 
 .breadcrumbs {
@@ -2757,6 +2802,10 @@ table tbody tr td:first-child {
           align-items: center;
 }
 
+#form-2 {
+  display: none;
+}
+
 .box-arrows {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2827,6 +2876,23 @@ table tbody tr td:first-child {
 
   .box-arrows .slick-arrow:hover svg path {
     fill: #F7B802;
+  }
+}
+
+@media screen and (min-width: 1124px) {
+  ul.ul-submenu__block li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 1px;
+    top: 50%;
+    left: 26px;
+    margin-top: 0.5px;
+    background: #fff;
+    -webkit-transition: width 0.3s linear;
+    -o-transition: width 0.3s linear;
+    transition: width 0.3s linear;
   }
 }
 
@@ -2901,6 +2967,10 @@ table tbody tr td:first-child {
     border-bottom: 1px solid #fff;
   }
 
+  .header-menu__ul > li:last-child a {
+    border-bottom: 0;
+  }
+
   .header-menu__ul > li::after {
     display: none;
   }
@@ -2966,6 +3036,10 @@ table tbody tr td:first-child {
 
   .ul-submenu.hover > .ul-submenu__block {
     display: block;
+  }
+
+  .serv-column__info {
+    padding: 15px;
   }
 
   .advan-col {

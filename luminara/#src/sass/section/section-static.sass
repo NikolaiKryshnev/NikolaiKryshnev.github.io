@@ -1,0 +1,38 @@
+.static
+	.row
+		justify-content: space-between
+
+	&-col
+		text-align: center
+		color: $white
+		font-size: $fz18
+		padding: 0 15px
+		@include f700()
+		@media screen and ( max-width: 650px )
+			max-width: 100%
+			width: 100%
+			padding-bottom: 45px
+			margin-bottom: 45px
+			position: relative
+			&:last-child
+				padding-bottom: 0
+				margin-bottom: 0
+				&::after
+					display: none
+
+			&::after
+				@include pseudoEl(block, absolute, '')
+				@include horizcenter()
+				bottom: 0
+				width: 70px
+				height: 1px
+				background: #494949
+			
+		&__num
+			@include f400()
+			color: $red
+			font-size: 90px
+			@media ( max-width:$md1+px )
+				font-size: 50px
+
+	

@@ -1,5 +1,5 @@
 function hoverMenuLink() {
-	if ($(window).width() <= 1024) {
+	if ($(window).width() <= 1124) {
 		$('.header-menu__ul li .header-arrow').click(
 			function (e) {
 				if ($(this).parent().hasClass("ul-Submenu")) {

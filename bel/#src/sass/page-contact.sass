@@ -1,7 +1,10 @@
 .section-contact
 	padding: 0
 	.container
-		padding: 0 0 50px 0 
+		padding: 0 10px 50px 10px
+
+		&:first-child
+			padding: 0
 
 	.container:last-child
 		padding-bottom: 0
@@ -39,6 +42,8 @@
 
 
 .contact-title
+	display: flex
+	justify-content: space-between
 	font-size: $fz30
 	@include f500()
 	margin-bottom: 22px
@@ -73,3 +78,5 @@
 		font-size: $fz20
 
 
+.contactinfo-props
+	padding: 0 10px

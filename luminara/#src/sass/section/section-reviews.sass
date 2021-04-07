@@ -1,0 +1,74 @@
+.reviews
+	&-col
+		@extend .col-6
+
+	&-box
+		position: relative
+
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+
+		padding: 20px 30px 20px 80px
+
+		background: #212121
+		border-left: 3px solid $red
+		font-size: $fz14
+
+		&__name
+			font-size: $fz20
+			@include f700()
+
+		._icon
+			margin: 0 0 5px 0 
+
+			&--map
+				background-size: 11px
+				background-position: 3px center 
+
+		&__fire
+
+		&__com
+			margin-top: 15px
+			max-height: 63px
+			overflow: hidden
+		
+		&__gallery
+			margin-top: 40px
+
+			.gallery-fancybox
+				position: relative
+
+	
+	a
+		color: $red
+		@include transitColor(0.3s)
+		&:hover
+			color: $white
+
+	.reviews-data
+		font-size: $fz12
+		@include f700()
+		letter-spacing: 0.215em
+		text-transform: uppercase
+		display: flex
+		align-items: center
+
+		position: absolute
+		left: 0
+		// @include verticalcenter(
+		transform: rotate(-90deg)
+		// transform-origin: top left
+		margin-top: 70px
+		margin-left: -30px
+
+
+		&__line
+			background: $red
+			width: 43px
+			height: 1px
+			margin-left: 10px
+			top: 0
+
+	.btn
+		margin: 50px auto 0

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html')
+		<main class="main main-sidebar">
+			@@include('./section/_section-ban.html')
+			<div class="p-1"></div>
+			@@include('./section/_section-serv.html')
+			<div class="p-1"></div>
+
+			@@include('./section/_section-advan.html')
+			<div class="p-1"></div>
+
+			@@include('./section/_section-static.html')
+			<div class="p-1"></div>
+
+			@@include('./section/_section-gallery.html')
+			<div class="p-1"></div>
+
+			@@include('./section/_section-reviews.html')
+			<div class="p-1"></div>
+
+			@@include('./section/_section-parallax.html')
+			<div class="p-1"></div>
+
+			@@include('./section/_section-contact.html')
+			<div class="p-1"></div>
+
+		</main>
+		<!-- /.main -->
+		@@include('_footer.html')
+		<div class="scrollTop">
+			<svg class="scrollTop__icon" style="transform: rotate(180deg);" viewBox="0 0 10 6" fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+				<path d="M1 1L5 5L9 1" stroke="#fff"></path>
+			</svg></div>
+	</div>
+	<!-- /.wrapper -->
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+
+</body>
+
+</html>

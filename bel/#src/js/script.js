@@ -38,9 +38,11 @@
 
 			@@include('header.js')
 			@@include('animNum.js')
-
+			@@include('posFixed.js')
 			@@include('slider.js')
 			@@include('inputfile.js')
+			@@include('scrollTop.js')
+			@@include('form.js')
 
 			//</TASK>---------------------------------------
 		});

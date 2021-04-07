@@ -16,7 +16,7 @@ $('.slider-ban--js').slick({
 });
 
 function slider(sliderBlock, num) {
-	$(sliderBlock).parents('._section').find('.section-title').append(`<div class="box-arrows"></div>`);
+	$(sliderBlock).parents('._section').find('.title').append(`<div class="box-arrows"></div>`);
 	let boxArrow = $(sliderBlock).parents('._section').find('.box-arrows');
 
 	$(sliderBlock).slick({

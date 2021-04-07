@@ -73,7 +73,7 @@ tpl:'<div class="fancybox-share"><h1>{{SHARE}}</h1><p><a class="fancybox-share__
 			//<TASK>---------------------------------------
 
 			function hoverMenuLink() {
-	if ($(window).width() <= 1024) {
+	if ($(window).width() <= 1124) {
 		$('.header-menu__ul li .header-arrow').click(
 			function (e) {
 				if ($(this).parent().hasClass("ul-Submenu")) {
@@ -170,14 +170,39 @@ $(function () {
 
 			}
 		}
+		$(window).scroll(function () {
+			scrollTracking();
+		});
+	
+		scrollTracking();
 	}
 
-	$(window).scroll(function () {
-		scrollTracking();
-	});
-
-	scrollTracking();
+	
 })
+			
+function posElFixed(posElFixed, heightEl, marginEl) {
+	if ($(window).scrollTop() >= heightEl.outerHeight()) {
+		posElFixed.css({
+			"position": "fixed",
+			"width": "100%",
+			"top": "0",
+			"z-index": "99"
+		});
+		marginEl.css( "margin-top", `${posElFixed.outerHeight()}px` )
+	}
+	else {
+		posElFixed.css({ "position": "relative" });
+		marginEl.css( "margin-top", `0px` )
+
+	}
+}
+
+$(window).scroll(function () {
+	posElFixed($('.header'), $('.pos-js'), $('.main'))
+});
+posElFixed($('.header'), $('.pos-js'), $('.main'))
+
+
 
 			//!SLIDER
 //---------------------------------------------------------------------------------------------------------------------------------------
@@ -197,7 +222,7 @@ $('.slider-ban--js').slick({
 });
 
 function slider(sliderBlock, num) {
-	$(sliderBlock).parents('._section').find('.section-title').append(`<div class="box-arrows"></div>`);
+	$(sliderBlock).parents('._section').find('.title').append(`<div class="box-arrows"></div>`);
 	let boxArrow = $(sliderBlock).parents('._section').find('.box-arrows');
 
 	$(sliderBlock).slick({
@@ -269,6 +294,37 @@ $(".fancybox").fancybox({
 		media: {}
 	}
 })
+			//!smooth scroll top
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+let headerHeight = $('.header-menu--js').height();
+
+$(function () {
+		$('.scrollTop').click(function () {
+			$("html, body").animate({
+				scrollTop: 0
+			}, 1000);
+		})
+})
+$(window).scroll(function () {
+	if ($(this).scrollTop() > headerHeight) {
+		$('.scrollTop').fadeIn();
+	}
+	else {
+		$('.scrollTop').fadeOut();
+	}
+});
+			$(".switch-check input[type=\"checkbox\"]").on("click", function () {
+	if ($(this).is(":checked")) {
+		console.log("Физ. лицо");
+		$("#form-1").hide();
+		$("#form-2").show();
+	} else {
+		console.log("Юр. лицо");
+		$("#form-2").hide();
+		$("#form-1").show();
+	}
+});
 
 			//</TASK>---------------------------------------
 		});
