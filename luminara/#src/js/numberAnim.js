@@ -17,8 +17,6 @@ $(function () {
 
 			if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
 				elFlase = true;
-				// elFlase = false;
-
 				for (let i = 0; i < anBlock.length; i++) {
 					const el = anBlock[i];
 					let numberAn = $(el).attr('data-num');
@@ -38,17 +36,13 @@ $(function () {
 						}
 					);
 				}
-
 			}
 		}
 		$(window).scroll(function () {
 			scrollTracking();
 		});
-	
 		scrollTracking();
 	}
-
-	
 })
 
 

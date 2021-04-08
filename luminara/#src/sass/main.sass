@@ -45,6 +45,7 @@ $orange: orange
 //--------- BTN ---------//
 .scrollTop
 	position: fixed
+	z-index: 10
 	right: 15px
 	bottom: 15px
 	
@@ -116,17 +117,20 @@ $orange: orange
 		max-width: 540px
 
 //-------------------------------------------------------------------------//
+._section .container
+	position: relative
+	z-index: 2
 
-.advan, .static, .contact
+.advan, .static, .contact, .reviews
 	position: relative
 
 .bg-svg
 	position: absolute
 
 .bg-svg_1
-	top: 0
-	left: 25%
-	max-width: 360px
+	top: -25%
+	left: 12%
+	max-width: 45%
 	height: 600px
 
 .bg-svg_2
@@ -147,13 +151,11 @@ $orange: orange
 	width: 350px
 	height: 350px
 
-
 .bg-svg_5
 	bottom: -150%
 	right: 0
 	width: 500px
 	height: 500px
-
 
 .bg-svg_6
 	max-width: 600px
@@ -161,8 +163,26 @@ $orange: orange
 	right: 0
 	bottom: 0
 
+.bg-svg_7
+	max-width: 66%
+	left: 0
+	top: -181%
+
+
 .contact .bg-svg_5
 	bottom: 0
 .contact .container 
 	position: relative
 	z-index: 10
+
+.reviews .bg-svg_7
+	left: -25%
+	top: auto
+	bottom: -55%
+
+
+.bg-svg_8
+	max-width: 600px
+	left: 0
+	bottom: 0
+

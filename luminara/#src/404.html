@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"title"
+})
+
+<body>
+	<div class="wrapper">
+		
+		<main class="main main-error">
+			<div class="p-1"></div>
+
+			<div class="error">
+				<div class="error__title">
+					404
+				</div>
+				<div class="error__sub">OOOPS!</div>
+				<div class="error__text">
+					Похоже, вы хотели запустить фейерверк над городом, но слуайно попали в космос.
+				</div>
+				<a class="btn form__btn" href="#">
+					<span class="circle" aria-hidden="true">
+						<span class="icon arrow"></span>
+					</span>
+					<span class="btn-text">На главную</span>
+				</a>
+			</div>
+			<div class="p-1"></div>
+
+		</main>
+		<!-- /.main -->
+	</div>
+	<!-- /.wrapper -->
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

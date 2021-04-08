@@ -1,5 +1,6 @@
 function showModla(modal, btn) {
-	btn.click(function () {
+	btn.click(function (e) {
+		e.preventDefault();
 		$('.modal').removeClass('active');
 		$('body').addClass('active');
 		$('.wrapper').addClass('active');
@@ -7,12 +8,12 @@ function showModla(modal, btn) {
 		modal.addClass('active');
 	});
 
-	$('.close-js').click(function () {
+	$('.close-js').click(function (e) {
+		e.preventDefault();
 		$('body').removeClass('active');
 		$('.wrapper').removeClass('active');
 		$('.main').removeClass('active');
 		modal.removeClass('active');
-		
 	});
 
 	$(".modal-overlay").on('click', function (e) {
