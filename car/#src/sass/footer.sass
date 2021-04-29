@@ -1,0 +1,95 @@
+.footer
+	position: relative
+	&::after
+		@include pseudoEl(block, absolute, '')
+		left: 0
+		right: 0
+		bottom: 0
+		top: 0
+		background: rgba(0, 0, 0, 0.63)
+
+	.container
+		position: relative
+		z-index: 2
+
+
+	a
+		color: $white
+		text-decoration: none
+
+		border-bottom: 1px solid rgba($white, 0)
+		transition: border-color 0.3s linear
+
+		&:hover
+			border-color: rgba($white, 1)
+
+	&-top
+		@extend .col-12
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		padding-top: 20px
+		padding-bottom: 20px
+
+		border-bottom: 1px solid rgba(255, 255, 255, 0.32)
+		@media ( max-width:$md1+px )
+			max-width: 25%
+			flex: 0 0 25%
+			border-bottom: 0
+
+	&-menu
+		display: none			
+		@media ( min-width:$md1+px )
+			display: flex
+			justify-content: flex-end
+
+			width: 100%
+
+			li + li
+					margin-left: 4.5%
+
+			
+	&-bot
+		@extend .col-12
+		@media ( min-width:$md1+px )
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+		padding-top: 40px
+		padding-bottom: 40px
+
+		width: 100%
+		@media ( max-width:$md1+px )
+			padding-top: 20px
+			padding-bottom: 20px
+			
+			flex: 0 0 75%
+			max-width: 75%
+
+			.dev	
+				float: right
+
+		@media ( max-width:$md3+px )
+			padding-left: 0
+
+			.dev	
+				font-size: $fz13
+
+		&__text
+			font-size: $fz14
+			max-width: 470px
+			width: 100%
+
+			color: $white
+			@media ( max-width:$md1+px )
+				text-align: right
+
+				margin: 0 0 20px auto
+
+			@media ( max-width:$md3+px )
+				margin: 0 0 10px auto
+		
+			
+			

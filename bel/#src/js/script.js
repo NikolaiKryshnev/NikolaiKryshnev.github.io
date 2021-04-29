@@ -37,6 +37,7 @@
 			//<TASK>---------------------------------------
 
 			@@include('header.js')
+			@@include('popup.js')
 			@@include('animNum.js')
 			@@include('posFixed.js')
 			@@include('slider.js')

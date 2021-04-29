@@ -1,24 +1,5 @@
 
 
-.popupBtn-js 
-	background-color: #0d52e9
-	position: relative
-	color: #fff
-	border: none
-	padding: 1.25em 2em
-	font-size: 0.75em
-	letter-spacing: 1px
-	text-transform: uppercase
-	cursor: pointer
-	box-shadow: 0 10px 20px rgba(0, 0, 0, .1)
-	transition: background 0.25s cubic-bezier(0.55, 0, 0.1, 1)
-
-	&:hover 
-		background: #0c4ddb
-
-	&:focus 
-		outline: none
-
 //<POPUP>---------------------------------------
 .modal-overlay 
 	display: flex
@@ -49,7 +30,6 @@
 	background-color: #fff
 	width: 600px
 	max-width: 75rem
-	min-height: 20rem
 	padding: 1rem
 	border-radius: 3px
 	opacity: 0
@@ -75,6 +55,7 @@
 			height: 1.75em
 
 	.modal-content 
+		width: 100%
 		opacity: 0
 		backface-visibility: hidden
 		transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1)
@@ -92,4 +73,51 @@
 			transform: translateY(10px)
 			opacity: 1
 
+.modal-content
+	form
+		height: 100
+		width: 100%
+		display: flex
+		align-items: center
+
+	input
+		line-height: 62px
+		font-size: $fz18
+		padding: 0 20px
+		width: 100%
+
+.search-btn
+	width: 30px
+	height: 30px
+	margin: 0 15px 0 0
+	svg
+		width: 30px
+		height: 30px
+
+.search-close
+	position: relative
+	width: 30px
+	height: 30px
+
+
+.search-close::after, .search-close::before
+	content: ""
+	display: block
+	position: absolute
+	-webkit-transform: translateX(-50%)
+	-ms-transform: translateX(-50%)
+	transform: translateX(-50%)
+	left: 50%
+	top: 0
+	display: flex
+	width: 2px
+	height: 30px
+	background: #323663
+
+
+.search-close::after
+	transform: translateX(-50%) rotate(45deg)
+
+.search-close::before
+	transform: translateX(-50%) rotate(-45deg)
 //</POPUP>---------------------------------------

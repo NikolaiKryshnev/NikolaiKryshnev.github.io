@@ -1,0 +1,77 @@
+.faq
+	.accordeon
+		@extend .col-12
+		width: 100%
+
+		.acc-block
+			// margin-bottom: 20px
+			padding: 30px 0
+
+			background: #FFFFFF
+			border-bottom: 0.5px solid #A4ABB5
+			@media ( max-width:$md3+px )
+				padding: 20px 0
+
+			&__link
+				display: flex
+				justify-content: space-between
+				align-items: center
+
+				padding-right: 10%
+				padding-bottom: 0
+				font-size: $fz20
+
+				@include f500()
+
+				cursor: pointer
+				transition: padding-bottom 0.5s linear
+
+				position: relative
+				@include transitColor(0.3s)
+				&:hover
+					color: $blue
+
+				&::after
+					position: absolute
+					content: ''
+					right: 0
+					top: 50%
+					@include translateY(-50%)
+					width: 15px
+					height: 15px
+					background-image: url(../img/icons/icons.svg#icon-arrow)
+					background-size: 12px
+					background-position: 100% center
+					background-repeat: no-repeat
+					transition: transform 0.3s linear
+
+				&.active
+					color: $blue
+					&::after
+						transform: translateY(-50%) rotate(180deg)
+
+						
+				
+
+			&__title
+				padding: 25px 50px
+
+				max-width: 80%
+				width: 100%
+
+				font-size: 1.25rem
+				font-family: CenturyBold
+
+			&__content
+				display: none
+				margin-top: 20px
+
+				a
+					display: block
+
+					padding-top: 20px
+					text-transform: uppercase
+					font-family: CenturyBold
+
+					&:hover
+						text-decoration: none

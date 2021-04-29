@@ -4,13 +4,15 @@ function showModla(modal, btn) {
 		$('.wrapper').addClass('active');
 		$('.main').addClass('active');
 		modal.addClass('active');
+		return false
 	});
 
-	$('.close-js').click(function () {
+	$('.search-close--js').click(function () {
 		$('body').removeClass('active');
 		$('.wrapper').removeClass('active');
 		$('.main').removeClass('active');
 		modal.removeClass('active');
+		$('.search-input--js').val("")
 	});
 
 	$(".modal-overlay").on('click', function (e) {
@@ -19,6 +21,7 @@ function showModla(modal, btn) {
 			$('.wrapper').removeClass('active');
 			$('.main').removeClass('active');
 			modal.removeClass('active');
+			$('.search-input--js').val("")
 		}
 	});
 }

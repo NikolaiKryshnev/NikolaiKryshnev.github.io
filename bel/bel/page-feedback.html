@@ -41,7 +41,7 @@
 				ОАО «Дорожно-Строительный Трест №1, г. Витебск»
 			</div>
 			<div class="header-top__right">
-				<span class="btn-svg btn-search">
+				<span class="btn-svg btn-search popupBtn-js">
 					<svg width="26" height="26" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
 						<g clip-path="url(#clip0)">
 							<path
@@ -473,19 +473,17 @@
 </div>
 	</div>
 	<!-- /.wrapper -->
-	<div class="modal-overlay">
-	<div class="modal">
-		<a class="close-modal close-js">
-			<svg viewBox="0 0 20 20">
-				<path fill="#000000"
-					d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z">
-				</path>
-			</svg>
-		</a><!-- close modal -->
-
+	<div class="modal-overlay active">
+	<div class="modal active">
 		<div class="modal-content">
-			
-			<h3>Some content here</h3>
+			<form role="" method="" action="" id="theme_search">
+				<input class="search-input--js" type="text" placeholder="Введите запрос:" id="theme_search_input" value="" name="">
+				<button class="search-btn " id="">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" id="icon-search"><path d="M19.756 18.577l-5.688-5.687a7.878 7.878 0 001.765-4.973C15.833 3.552 12.281 0 7.917 0 3.552 0 0 3.552 0 7.917c0 4.364 3.552 7.916 7.917 7.916a7.878 7.878 0 004.973-1.765l5.687 5.688a.831.831 0 001.179 0 .832.832 0 000-1.179zm-11.84-4.41a6.256 6.256 0 01-6.25-6.25 6.256 6.256 0 016.25-6.25 6.256 6.256 0 016.25 6.25 6.256 6.256 0 01-6.25 6.25z" fill="#323663"></path></svg>
+				</button>
+		  
+				<span class="search-close search-close--js" id=""></span>
+		  </form>
 			
 		</div><!-- content -->
 

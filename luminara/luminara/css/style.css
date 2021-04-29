@@ -576,26 +576,6 @@ body.active {
   overflow: hidden;
 }
 
-.h1 {
-  font-size: 2rem;
-}
-
-.h2 {
-  font-size: 1.8rem;
-}
-
-.h3 {
-  font-size: 1.6rem;
-}
-
-.h4 {
-  font-size: 1.4rem;
-}
-
-.h5 {
-  font-size: 1.2rem;
-}
-
 .scrollTop {
   position: fixed;
   z-index: 10;
@@ -1042,6 +1022,10 @@ body.active {
   display: none;
 }
 
+.advan {
+  margin-bottom: -100px;
+}
+
 .advan .row {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -1060,14 +1044,14 @@ body.active {
 }
 
 .advan .advan-box__title {
-  line-height: 1;
+  line-height: 1.2;
   font-family: CenturyGothic-Bold;
   font-size: 1.125rem;
   margin-bottom: 10px;
 }
 
 .advan .advan-box__text {
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .static .row {
@@ -1330,7 +1314,7 @@ body.active {
 .contact-info ._icon {
   margin-bottom: 35px;
   display: block;
-  background-position: 3px 0;
+  background-position: 3px 5px;
   background-size: 15px;
 }
 
@@ -1364,6 +1348,8 @@ body.active {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0px 0 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .main-error .error {
@@ -1988,7 +1974,7 @@ body.active {
 }
 
 .box-arrows .slick-arrow:hover svg path {
-  fill: #F45959;
+  fill: #fff;
 }
 
 .btn {
@@ -2050,6 +2036,10 @@ body.active {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+.btn-min {
+  width: 11rem;
 }
 
 .btn .btn-text {
@@ -2427,7 +2417,24 @@ input[type="date"]::after {
   font-size: 0.875rem;
   position: absolute;
   top: 100%;
-  color: red;
+  font-size: 14px;
+  right: 0;
+  margin: -25px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  top: 100%;
+  color: #fff;
+  width: 18px;
+  height: 18px;
+  background: red;
 }
 
 .modal-overlay {
@@ -2538,7 +2545,7 @@ input[type="date"]::after {
 }
 
 .modal .modal-content {
-  padding: 30px 70px 40px;
+  padding: 30px 70px 30px;
   opacity: 0;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -2838,7 +2845,7 @@ input[type="date"]::after {
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
-    left: -8rem;
+    left: -10rem;
     font-family: CenturyGothic-Bold;
     font-size: 0.75rem;
     color: #fff;
@@ -2991,6 +2998,10 @@ input[type="date"]::after {
     max-width: 33.333333%;
   }
 
+  .advan {
+    margin-bottom: 0;
+  }
+
   .advan-col {
     margin: 0 0 50px 0;
     max-width: 50%;
@@ -3137,10 +3148,6 @@ input[type="date"]::after {
     max-width: 540px;
   }
 
-  .p-1 {
-    height: 45px;
-  }
-
   html,
   body {
     font-size: 14px;
@@ -3174,6 +3181,10 @@ input[type="date"]::after {
   .advan-col {
     max-width: 330px;
     margin: 0 auto 40px;
+  }
+
+  .advan-col:last-child {
+    margin-bottom: 0;
   }
 
   .advan .advan-box__icon svg {

@@ -11,3 +11,5 @@ $(function () {
 	});
 
 })
+
+new WOW().init();
