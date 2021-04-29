@@ -332,7 +332,7 @@ ul.products-form__list
 			margin-left: 12px
 	
 //-------------------------------------------------------------------------//
-.form-search
+.form-search, .brand-search
 	position: relative
 	max-width: 220px
 	width: 100%
@@ -696,11 +696,15 @@ ul.products-form__list
 .menu-sub--abc
 	display: flex
 	flex-wrap: wrap
-.brand-abc
+.brand-top
 	width: 100%
+	display: flex
+	border-bottom: 1px solid #7c7c7c
 	padding-bottom: 15px
 	margin-bottom: 15px
-	border-bottom: 1px solid #7c7c7c
+
+.brand-abc
+	width: 100%
 
 	&>a
 		color: $black
@@ -760,9 +764,11 @@ ul.products-form__list
 
 
 	.abs-title
+		color: $black
 		@include f500()
 
-
-
 			
-
+.brand-abc_content
+	pointer-events: initial !important
+	width: 100%
+	position: relative

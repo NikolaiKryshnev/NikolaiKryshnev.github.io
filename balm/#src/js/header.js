@@ -108,8 +108,8 @@ function wordOne(params) {
 		let className = $(this).attr('data-work');
 
 		if ($(this).parent().hasClass(`brandABC-${className}`) !== true) {
-			$(`.abc-sorting a[data-work="${className}"`).wrapAll(`<div class="brand-box brandABC-${className}"></div>`);
-			$(`.brandABC-${className}`).prepend(`<div class="abs-title" id="abc-${className.toLowerCase()}">${className}</div>`);
+			$(`.abc-sorting a[data-work="${className}"`).wrapAll(`<div class="brand-box brandABC-${className}" id="abc-${className.toLowerCase()}"></div>`);
+			$(`.brandABC-${className}`).prepend(`<div class="abs-title">${className}</div>`);
 		}
 	});
 	scrollAnimation()
@@ -121,18 +121,23 @@ function wordOne(params) {
 function scrollAnimation() {
 
 	$(".brand-abc a").each(function () {
-		if ($($(this).attr('href')).hasClass('abs-title') !== true) {
+		if ($($(this).attr('href')).hasClass('brand-box') !== true) {
 			$(this).addClass('disabled')
 		}
 	});
 
-	$(".brand-abc").on("click", "a", function (event) {
-		event.preventDefault();
+	$(".brand-abc").on("click", "a", function (e) {
+		e.preventDefault();
+		$(".brand-abc a").removeAttr("style")
+		if($(this).hasClass('disabled') !== true){$(this).css({'color':'#cca75d'});}
 
 		let id = $(this).attr('href');
-		if ($($(this).attr('href')).hasClass('abs-title') == true) {
+		if ($(id).hasClass('brand-box') == true) {
 			let Eltop = $(id).position();
-			console.log(Eltop.top);
+
+			$('.abs-title').removeAttr("style")
+			$(id).children('.abs-title').css({'color':'#cca75d'});
+
 			$('.brand-abc_box').animate({ scrollTop: Eltop.top }, 500);
 		}
 		return
