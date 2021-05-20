@@ -1,0 +1,95 @@
+.banSlider
+	position: relative
+	&-boxImg
+		display: block
+		@include img_03(16rem)
+		@media ( max-width:$md1+px )
+			padding: 9rem 0
+
+		@media ( max-width:$md3+px )
+	
+	&-img
+		@include img_02()
+
+		img
+			@include img_01()
+
+	&:hover
+		.slick-arrow
+			opacity: 1
+			&__left
+				left: 1rem
+
+			&__right
+				right: 1rem
+
+	&.slick-dotted.slick-slider
+		margin-bottom: 0
+		
+	.slick-dots
+		position: absolute
+		bottom: 0
+		display: flex
+		justify-content: flex-end
+
+		margin-top: -20px
+		bottom: 10px
+
+		li
+			width: 9px
+			height: 9px
+			background: #7C7C7C
+			border-radius: 50%
+
+			&.slick-active
+				background: $gold
+	
+	@media ( min-width:$md1+px )
+		.slick-arrow
+			opacity: 0
+			&__left
+				left: -50px
+
+			&__right
+
+				right: -50px
+
+	@media ( max-width:$md1+px )
+		.slick-arrow
+			opacity: 1
+			&__left
+				left: 1rem
+
+			&__right
+
+				right: 1rem
+				
+.slick-arrow
+	@include verticalcenter()
+	z-index: 3
+	display: flex
+	align-items: center
+	justify-content: center
+
+	width: 47px
+	height: 47px
+
+	border: 0.5px solid #7C7C7C
+	border-radius: 50%
+	cursor: pointer
+	transition: all 0.3s linear
+	@media ( max-width:$md3+px )
+		width: 22px
+		height: 22px
+
+		svg
+			width: 12px
+			
+
+
+
+
+
+
+	
+	

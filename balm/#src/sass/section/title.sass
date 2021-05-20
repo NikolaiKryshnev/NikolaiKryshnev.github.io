@@ -1,0 +1,32 @@
+
+.section-title
+	position: relative
+	font-size: $fz24
+	@include f400()
+
+	width: 100%
+	padding: 0 15px
+	margin-bottom: 40px
+	text-align: center
+
+	span
+		padding: 0 20px
+		background: $white
+		@media ( max-width:$md3+px )
+			padding: 0
+
+	@media ( min-width:$md3+px )
+		&:after
+			@include pseudoEl(block, absolute, '')
+			z-index: -1
+			left: 50%
+			top: 50%
+			transform: translateX(-50%) translateY(-50%)
+
+			width: calc( 100% - 30px )
+			height: 0.5px
+
+			background: #7C7C7C
+
+
+		

@@ -1,0 +1,437 @@
+.category
+	&-description
+		width: 100%
+		margin-bottom: 60px
+
+		&__colImg
+			@extend .col-5
+			@media ( max-width:$md2+px )
+				flex: 0 0 100%
+				max-width: 100%
+				margin-bottom: 15px
+
+		&__boxImg
+			@include img_03(7.3rem)
+			@media ( max-width:$md1+px )
+				padding: 8.9rem 0
+
+			@media ( max-width:$md2+px )
+				padding: 20% 0
+
+		&__img
+			@include img_02()
+			img
+				@include img_01()
+
+		&__info
+			@extend .col-7
+			@media ( max-width:$md2+px )
+				flex: 0 0 100%
+				max-width: 100%
+		
+		&__title
+			font-size: $fz24
+			color: #505050
+			margin-bottom: 10px
+
+		&__text
+			color: #4D4D4D
+			line-height: 21px
+
+//-------------------------------------------------------------------------//
+.catalog-sidebar
+	@extend .col-12
+	.sidebar
+		&-title
+			display: flex
+			justify-content: space-between
+
+			font-size: 12px
+			color: #7C7C7C
+
+	&__box
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		padding: 18px 0
+		border-top: 0.5px solid #7C7C7C
+		border-bottom: 0.5px solid #7C7C7C
+
+		color: #4D4D4D
+
+//-------------------------------------------------------------------------//
+.filter-form, .sort-form
+	display: flex
+
+	&__item
+		position: relative
+		padding: 0 40px 0 0
+		margin-right: 27px
+		border-right: 0.5px solid #7C7C7C
+		@media ( max-width:$md3+px )
+			font-size: 12px
+
+		&:last-child
+			margin-right: 0
+			border-right: 0
+			padding-right: 0
+
+	&__title
+		position: relative
+
+		padding-right: 16px
+
+		text-transform: uppercase
+		color: #4D4D4D
+		transition: color 0.3s linear
+		&:hover, &.active
+			color: $gold
+			cursor: pointer
+			&::before
+				transform: translateY(-50%) rotate(180deg)
+		
+		&::before
+			@include pseudoEl(block, absolute, '')
+			right: 0
+			top: 50%
+			@include translateY(-50%)
+
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center
+			background-image: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.13867 1L4.80237 4.66357L8.46594 1' stroke='%234C4C4C'/%3E%3C/svg%3E")
+
+			width: 7px
+			height: 4px
+
+			transition: transform 0.3s linear
+
+.filter-form
+	@media ( max-width:$md2+px )
+		display: none
+		position: absolute
+		margin-top: -1px
+		top: 100%
+
+		z-index: 5
+
+		// display: flex
+		flex-direction: column
+		background: $white
+		padding: 20px 25px
+		border: .5px solid #7c7c7c
+
+		&__item
+			padding: 0
+			margin: 0
+			border-right: 0
+
+			border-bottom:  0.5px solid #7C7C7C
+			padding-bottom: 12px
+			margin-bottom: 12px
+			@include transitColor(0.3s)
+
+			&:last-child
+				padding: 0 0 0px 0 
+				border-bottom: 0
+				margin-bottom: 0
+	@media ( max-width:$md3+px )
+		max-width: 320px
+		width: 100%
+		left: 0
+		
+ol.filter-form__content, ol.sort-form__content
+	display: none
+	margin-top: 18px
+	padding: 20px 25px
+	min-width: 210px
+	
+	position: absolute
+	z-index: 4
+	top: 100%
+	left: 0
+
+	border: 0.5px solid #7C7C7C
+
+	// pointer-events: none
+	background: $white
+	@media ( max-width:$md2+px )
+		top: 0
+		left: 100%
+		margin: 0px 0 0 25px
+
+	@media ( max-width:$md3+px )
+		top: 0
+		left: 0
+		position: relative
+		margin: 0
+		border: 0
+		padding: 15px 0 0 10px
+	li
+		border-bottom:  0.5px solid #7C7C7C
+		padding-bottom: 12px
+		margin-bottom: 12px
+		@include transitColor(0.3s)
+		&:hover
+			color: $gold
+
+		&:last-child
+			padding: 0 0 0px 0 
+			border-bottom: 0
+			margin-bottom: 0
+			
+
+
+	&:hover
+		// pointer-events: auto
+
+
+
+
+//-------------------------------------------------------------------------//
+
+.invisible
+	position: absolute
+	z-index: -1
+	width: 0
+	height: 0
+	opacity: 0
+
+.label-cbx
+	display: flex
+	align-items: center
+	
+	// width: 100%
+	// height: 100%
+
+	user-select: none
+	cursor: pointer
+	margin-bottom: 0
+
+	input:checked
+		& + .checkbox
+			border-color: #fff
+
+			svg
+
+				path
+					stroke: black
+
+	.checkbox
+		position: relative
+		float: left
+
+		margin-right: 15px
+
+		width: 20px
+		height: 20px
+
+		svg
+			path
+				fill: none
+				stroke: none
+
+	> span
+		pointer-events: none
+		vertical-align: middle
+
+///-------------------------------------------------------------------------//
+
+.select 
+	position: relative
+	// .select__item
+	&__item 
+		position: relative
+	
+	// .select__title
+	&__title 
+	
+	// .select__value
+	&__value
+		text-align: right
+
+		padding-right: 16px
+
+		text-transform: uppercase
+		color: #4D4D4D
+		transition: color 0.3s linear
+		&:hover, &.active
+			color: $gold
+			cursor: pointer
+			&::before
+				transform: translateY(-50%) rotate(180deg)
+		
+		&::before
+			@include pseudoEl(block, absolute, '')
+			right: 10px
+			top: 50%
+			@include translateY(-50%)
+
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center
+			background-image: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.13867 1L4.80237 4.66357L8.46594 1' stroke='%234C4C4C'/%3E%3C/svg%3E")
+
+			width: 7px
+			height: 4px
+
+			transition: transform 0.3s linear
+		
+	
+	&__input 
+		width: 100%
+		background-color: transparent
+		height: 100%
+	
+	// .select__options
+	&__options
+		display: none 
+
+		opacity: 0
+
+		margin-top: 18px
+		padding: 20px 25px
+		min-width: 210px
+
+		position: absolute
+		z-index: 4
+		top: 100%
+		right: 0
+
+		border: 0.5px solid #7C7C7C
+		// pointer-events: none
+		background: $white
+		
+	
+	// .select__option
+	&__option
+		border-bottom:  0.5px solid #7C7C7C
+		padding-bottom: 12px
+		margin-bottom: 12px
+		@include transitColor(0.3s)
+		cursor: pointer
+		&:hover
+			color: $gold
+
+		&:last-child
+			padding: 0 0 0px 0 
+			border-bottom: 0
+			margin-bottom: 0
+			
+		
+	
+	&._active 
+		z-index: 5
+		.select__value 
+			color: $gold
+			cursor: pointer
+			&::before
+				transform: translateY(-50%) rotate(180deg)
+			
+		
+		.select__options 
+			display: block
+	
+//-------------------------------------------------------------------------//
+
+.catalog-products
+	margin-top: 10px
+
+	.product-col
+		border-bottom: 0.5px solid #7C7C7C
+		padding-bottom: 35px
+		margin-bottom: 20px
+		@media ( max-width:$md1+px )
+			max-width: 33.333333%
+			flex: 0 0 33.333333%
+
+		@media ( max-width:$md2+px )
+			max-width: 50%
+			flex: 0 0 50%
+
+	.btn-basket
+		display: block
+
+		background: $green
+		color: $white
+		font-size: 14px
+		line-height: 36px
+		text-transform: uppercase
+		padding: 0 20px
+		margin: 23px auto 0
+		@include transitBgColor(0.3s)
+		@media ( max-width:$md1+px )
+			display: none
+
+		&:hover
+			background: #595959
+
+
+.btn-showMore
+	display: block
+	position: relative
+
+	margin: 20px auto 0
+	max-width: 135px
+
+	font-size: $fz18
+	color: $gold
+	text-align: center
+	text-decoration: none
+	
+
+	&::after
+		@include pseudoEl(block, absolute, '')
+		width: 100%
+		height: 1px
+		background: $gold
+		bottom: 0
+		transition: opacity 0.3s linear
+
+	&:hover
+		&::after
+			opacity: 0
+
+
+//-------------------------------------------------------------------------//
+@media ( max-width:$md2+px )
+	.sidebar-filter
+		max-width: 145px
+		width: 100%
+
+.sidebar-filter__title--mb
+	@media ( max-width:$md2+px )
+		max-width: 145px
+		width: 100%
+		position: relative
+
+		padding-right: 16px
+
+		text-transform: uppercase
+		color: #4D4D4D
+		transition: color 0.3s linear
+		&:hover, &.active
+			color: $gold
+			cursor: pointer
+			&::before
+				transform: translateY(-50%) rotate(180deg)
+		
+		&::before
+			@include pseudoEl(block, absolute, '')
+			right: 0
+			top: 50%
+			@include translateY(-50%)
+
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center
+			background-image: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.13867 1L4.80237 4.66357L8.46594 1' stroke='%234C4C4C'/%3E%3C/svg%3E")
+
+			width: 7px
+			height: 4px
+
+			transition: transform 0.3s linear
+		
+	@media ( min-width:$md2+px )
+		display: none

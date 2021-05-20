@@ -1,0 +1,21 @@
+.popularCateg
+	&-col
+		@extend .col-6
+		margin-bottom: 30px
+		@media ( max-width:$md3+px )
+			flex: 1 1 100%
+			max-width: 100%
+			margin-bottom: 15px
+			&:last-child
+				margin-bottom: 0
+
+
+	&-boxImg
+		display: block
+		@include img_03(28%)
+
+	&-img
+		@include img_02()
+
+		img
+			@include img_01()

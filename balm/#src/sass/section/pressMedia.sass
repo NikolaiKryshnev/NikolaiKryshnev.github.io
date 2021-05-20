@@ -1,0 +1,21 @@
+.pressMedia
+	&-col
+		@extend .col-3
+
+	&-box
+
+	&-boxImg
+		@include img_03(11.6rem)
+
+	&-img
+		@include img_02()
+		img
+			@include img_01()
+
+	&-date
+		text-transform: uppercase
+		font-size: $fz18
+		@include f400()
+		text-align: center
+		padding: 15px 15px 0 15px
+

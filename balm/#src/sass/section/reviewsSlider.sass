@@ -1,0 +1,38 @@
+.reviewsSlider
+	&-col
+		@extend .col-6
+
+	&-block
+		padding: 25px 35px 
+		border: 0.5px solid #7C7C7C
+		height: 100%
+		@media ( max-width:$md3+px )
+			padding: 20px
+
+	&-top
+		display: flex
+		margin-bottom: 15px
+
+		&__img
+			width: 65px
+			height: 65px
+			margin-right: 22px
+			img
+				width: 100%
+
+	&-date
+		font-size: 10px
+		color: #9B9B9B
+		margin-bottom: 3px
+
+	&-name
+		font-size: 14px
+		margin-bottom: 3px
+
+	&-rating
+		width: 61px
+
+	&-text
+		@media ( min-width:$md1+px )
+			height: 96px
+			overflow: hidden
