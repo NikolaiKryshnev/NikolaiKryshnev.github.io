@@ -1,5 +1,0 @@
-User-agent: *
-
-User-agent: Yandex
-Clean-param: tracking
-Host: http://новая-кухня.бел/
