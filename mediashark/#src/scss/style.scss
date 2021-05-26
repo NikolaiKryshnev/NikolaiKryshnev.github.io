@@ -51,9 +51,10 @@ body {
 ._container {
 	max-width: $maxWidthContainer + px;
 	margin: 0 auto;
-	@media (min-width: 1440px) {
-		max-width: 81.3vw;
-	}
+	// @media (min-width: 1440px) {
+	// 	max-width: 81.3vw;
+	// }
+	padding: 0 15px;
 	@media (max-width: $md1+px) {
 		max-width: 970px;
 	}
@@ -76,18 +77,127 @@ body {
 
 @import "header";
 @import "footer";
+@import "task/title";
+
+@import "section/ban";
+@import "section/seo-slider";
+@import "section/cms";
+@import "section/aboutChoose";
+@import "section/banForm";
+@import "section/timingSeo";
+
+
 @import "home";
 
 //@import "datepicker";
 //@import "lightgallery";
 //@import "pagging";
 @import "popup";
+@import "task/breadcrumbs";
+
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .main {
 	flex: 1 1 auto;
+	padding: 0 60px;
+
+	@media (min-width: 1440px) {
+		padding: 0 4vw;
+	}
+	@media (max-width: $md3+px) {
+		padding: 0 30px;
+	}
 }
 //===================================================================================================================================
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
+
+//<КОНОПКИ>====================================================================================================
+.btn {
+	position: relative;
+
+	display: block;
+	border: 1px solid #222222;
+	background: #222222;
+
+	line-height: 83px;
+	color: $white;
+	font-size: $fz24;
+	vertical-align: middle;
+	cursor: pointer;
+	text-align: center;
+	@include f700();
+
+	overflow: hidden;
+	transition: 0.5s ease-in-out;
+	&:hover {
+		border-color: #000;
+		background: none;
+		color: $black;
+		.btn-hover {
+			width: 225%;
+			height: 562.5px;
+		}
+	}
+
+	&-hover {
+		position: absolute;
+
+		display: block;
+
+		width: 0;
+		height: 0;
+
+		border-radius: 50%;
+		background-color: #fff;
+		transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+	}
+	&-text {
+		position: relative;
+		z-index: 2;
+	}
+	
+}
+.btn--white{
+	line-height: 60px;
+	color: $white;
+
+	padding-left: 37px;
+	padding-right: 37px;
+
+	border: 1px solid #fff;
+	background: none;
+	font-size: $fz16;
+	@media ( max-width:$md3+px){
+		padding-left: 27px;
+		padding-right: 27px;
+	}
+	.btn-hover{
+		background: #222;
+	}
+	&:hover{
+		color: $white
+	}
+}
+
+//</КОНОПКИ>====================================================================================================
+
+//<ОТСТУПЫ>====================================================================================================
+
+.h-200 {
+	
+	@media (min-width: $md1+px) {
+		height: 200px;
+	}
+	@media (max-width: $md1+px) {
+		height: 120px;
+	}
+
+	@media (max-width: $md3+px) {
+		height: 85px;
+	}
+}
+//</ОТСТУПЫ>====================================================================================================

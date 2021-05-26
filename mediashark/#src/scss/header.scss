@@ -103,9 +103,9 @@
 
 			display: flex;
 			flex-wrap: wrap;
-			margin-top: 1px;
+			// margin-top: 1px;
 
-			// background-color: #000;
+			background-color: #fff;
 
 			min-width: 200px;
 			@media (min-width: 1440px) {
@@ -500,6 +500,7 @@ html._touch {
 			left: 50%;
 			@include translateX(-50%);
 			background: #f9f9f9;
+			border-radius: 0;
 		}
 		.select__option {
 			padding: 10px 15px;

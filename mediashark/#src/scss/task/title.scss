@@ -1,0 +1,28 @@
+.title-mb{
+	margin-bottom: 70px;
+	@media ( max-width:$md3+px){
+		margin-bottom: 35px;
+	}
+}
+
+.section__title {
+	@include f700();
+	font-size: $fz42;
+	line-height: 1.2;
+	@media ( max-width:$md1+px){
+		font-size: $fz36;
+	}
+	@media ( max-width:$md3+px){
+		font-size: $mfz24;
+	}
+}
+
+
+.section-titleSub {
+	margin-top: 15px;
+	line-height: 26px;
+	@media ( max-width:$md3+px){
+		line-height: 22px;
+	}
+
+}

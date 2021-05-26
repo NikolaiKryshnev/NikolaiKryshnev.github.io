@@ -32,6 +32,7 @@ if (sliders) {
 	sliders_bild_callback();
 }
 
+
 function sliders_bild_callback(params) { }
 
 let sliderScrollItems = document.querySelectorAll('._swiper_scroll');
@@ -61,7 +62,16 @@ if (sliderScrollItems.length > 0) {
 
 function sliders_bild_callback(params) { }
 
-let slider_about = new Swiper('.about__slider', {
+
+//num sliders 
+function numberZero(currentClassNum) {
+	let num = currentClassNum.innerHTML;
+	if (num <= 9) {
+		currentClassNum.innerHTML = `0${num}`
+	}
+}
+
+let sliderSlider = new Swiper('._slider', {
 	/*
 	effect: 'fade',
 	autoplay: {
@@ -71,53 +81,251 @@ let slider_about = new Swiper('.about__slider', {
 	*/
 	observer: true,
 	observeParents: true,
-	slidesPerView: 1,
-	spaceBetween: 0,
-	autoHeight: true,
+	slidesPerView: 3,
+	// autoHeight: true,
 	speed: 800,
+	spaceBetween: 30,
 	//touchRatio: 0,
 	//simulateTouch: false,
 	//loop: true,
 	//preloadImages: false,
 	//lazy: true,
 	// Dotts
-	//pagination: {
-	//	el: '.slider-quality__pagging',
-	//	clickable: true,
-	//},
-	// Arrows
-	navigation: {
-		nextEl: '.about__more .more__item_next',
-		prevEl: '.about__more .more__item_prev',
+	pagination: {
+		el: '.swiper-pagination',
+		type: 'progressbar'
+		// clickable: true,
 	},
-	/*
+	// Arrows
+	// navigation: {
+	// 	nextEl: '.about__more .more__item_next',
+	// 	prevEl: '.about__more .more__item_prev',
+	// },
+
 	breakpoints: {
-		320: {
+		0: {
 			slidesPerView: 1,
-			spaceBetween: 0,
+			spaceBetween: 5,
 			autoHeight: true,
+
+		},
+
+		527: {
+			slidesPerView: 1,
+			spaceBetween: 15,
+			autoHeight: true,
+
 		},
 		768: {
+			slidesPerView: 1,
+			spaceBetween: 15,
+			autoHeight: false,
+
+		},
+		840: {
 			slidesPerView: 2,
-			spaceBetween: 20,
+			spaceBetween: 15,
+			autoHeight: false,
+
 		},
-		992: {
+
+		1171: {
 			slidesPerView: 3,
-			spaceBetween: 20,
-		},
-		1268: {
-			slidesPerView: 4,
 			spaceBetween: 30,
 		},
 	},
-	*/
+
+	// Фракция
+
+
 	on: {
 		lazyImageReady: function () {
 			ibg();
 		},
 	}
+
 	// And if we need scrollbar
 	//scrollbar: {
 	//	el: '.swiper-scrollbar',
 	//},
 });
+
+let timingSeo = new Swiper('.timingSeo-slider', {
+	/*
+	effect: 'fade',
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: false,
+	},
+	*/
+	observer: true,
+	observeParents: true,
+	slidesPerView: 2,
+	// autoHeight: true,
+	speed: 800,
+	spaceBetween: 30,
+	slidesPerGroup: 1,
+	//touchRatio: 0,
+	//simulateTouch: false,
+	//loop: true,
+	//preloadImages: false,
+	//lazy: true,
+	// Dotts
+	// pagination: {
+	// 	el: '.swiper-pagination',
+	// 	type: 'progressbar'
+	// 	// clickable: true,
+	// },
+	// Arrows
+	navigation: {
+		nextEl: '.timingSeo__arrows .timingSeo__arrows_next',
+		prevEl: '.timingSeo__arrows  .timingSeo__arrows_prev',
+	},
+	// pagination: {
+	// 	el: '.swiper-pagination--number',
+	// 	// clickable: true,
+	// 	type: 'fraction',
+	// 	// Кастомный вывод фракции
+	// 	renderFraction: function (currentClass, totalClass) {
+
+	// 		return '<span class="' + currentClass + '"> </span>' +
+	// 			'/' +
+	// 			'<span class="' + totalClass + '"> </span>';
+	// 	},
+	// },
+
+	breakpoints: {
+		
+		0: {
+			slidesPerView: 1,
+			spaceBetween: 15,
+		},
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		1171: {
+			slidesPerView: 2,
+			spaceBetween: 30,
+		},
+	},
+
+	on: {
+		lazyImageReady: function () {
+			ibg();
+		},
+		init: function () {
+
+		},
+		slideChange: function () {
+		
+		},
+	},
+
+});
+
+let sliderAboutChoose = new Swiper('.aboutChoose-slider', {
+	/*
+	effect: 'fade',
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: false,
+	},
+	*/
+	observer: true,
+	observeParents: true,
+	slidesPerView: 3,
+	// autoHeight: true,
+	speed: 800,
+	spaceBetween: 30,
+	slidesPerGroup: 3,
+	//touchRatio: 0,
+	//simulateTouch: false,
+	//loop: true,
+	//preloadImages: false,
+	//lazy: true,
+	// Dotts
+	// pagination: {
+	// 	el: '.swiper-pagination',
+	// 	type: 'progressbar'
+	// 	// clickable: true,
+	// },
+	// Arrows
+	navigation: {
+		nextEl: '.about__more .more__item_next',
+		prevEl: '.about__more .more__item_prev',
+	},
+	pagination: {
+		el: '.swiper-pagination--number',
+		// clickable: true,
+		type: 'fraction',
+		// Кастомный вывод фракции
+		renderFraction: function (currentClass, totalClass) {
+
+			return '<span class="' + currentClass + '"> </span>' +
+				'/' +
+				'<span class="' + totalClass + '"> </span>';
+		},
+	},
+
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+			spaceBetween: 5,
+			autoHeight: true,
+		},
+
+		527: {
+			slidesPerView: 1,
+			spaceBetween: 15,
+			autoHeight: true,
+
+		},
+		768: {
+			slidesPerView: 1,
+
+			spaceBetween: 15,
+		},
+		992: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		1171: {
+			slidesPerView: 3,
+			spaceBetween: 30,
+		},
+	},
+
+	on: {
+		lazyImageReady: function () {
+			ibg();
+		},
+		init: function () {
+
+		},
+		slideChange: function () {
+			numberZero(document.querySelector('.swiper-pagination-current'));
+			numberZero(document.querySelector('.swiper-pagination-total'));
+		},
+	},
+
+});
+
+numberZero(document.querySelector('.swiper-pagination-current'));
+numberZero(document.querySelector('.swiper-pagination-total'));
+
+let sliderBlock = document.querySelector('._slider');
+
+sliderBlock.addEventListener("mouseenter", function (e) {
+	sliderSlider.params.autoplay.disableOnInteraction = false;
+	sliderSlider.params.autoplay.delay = 1500;
+	sliderSlider.autoplay.start();
+});
+sliderBlock.addEventListener("mouseleave", function (e) {
+	sliderSlider.autoplay.stop();
+});
+
+
+
+
+

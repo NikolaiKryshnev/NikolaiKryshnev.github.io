@@ -1,0 +1,21 @@
+
+.banForm {
+	padding: 100px 0 120px;
+	@include parallaxBg();
+	@media ( max-width:$md3+px){
+		padding: 65px 0 70px;
+	}
+	&__info {
+		max-width: 570px;
+		color: $white
+	}
+	.section__title {
+	}
+
+	.btn{
+		margin-top: 40px;
+		@media ( max-width:$md3+px){
+			margin-top: 30px;
+		}
+	}
+}

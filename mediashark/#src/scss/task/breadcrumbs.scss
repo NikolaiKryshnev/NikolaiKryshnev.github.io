@@ -1,28 +1,44 @@
 .breadcrumbs{
+	margin-top: 30px;
+	@media ( max-width:$md3+px){
+		margin-top: 15px;
+	}
+
 	&__list{
 		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+
 		padding: 0;
 		list-style-type: none;
 
 		@media ( max-width: 526px ){
-			font-size: 1rem;
-			
-			padding: 16px 0;
+			font-size: $fz14;
 		}
 
 		li{
 			position: relative;
-			padding-left: 15px;
+			padding-left: 35px;
+			@media ( max-width:$md3+px){
+				line-height: 16px;
+			}
 			
 			&::after{
-				content: "-";
-				position: absolute;
+				content: "";
+				
+				background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.5758 4.14848C13.7711 3.95321 13.7711 3.63663 13.5758 3.44137L10.3938 0.259388C10.1985 0.0641258 9.88196 0.0641258 9.6867 0.259388C9.49144 0.45465 9.49144 0.771233 9.6867 0.966495L12.5151 3.79492L9.6867 6.62335C9.49144 6.81861 9.49144 7.13519 9.6867 7.33046C9.88196 7.52572 10.1985 7.52572 10.3938 7.33046L13.5758 4.14848ZM0.0507812 4.29492L13.2222 4.29492V3.29492L0.0507813 3.29492L0.0507812 4.29492Z' fill='white'/%3E%3C/svg%3E%0A");
+				background-repeat: no-repeat;
+				background-position: center;
+
+				width: 14px;
+				height: 8px;
+
 				left: 0;
-				top: 0;
 
-				color: #007bff;
+				@include verticalcenter();
+				color: $white;
+				margin-left: 10px;
 
-				margin-left: 6px;
 			}
 
 			&:first-child{
@@ -35,12 +51,13 @@
 
 			a{
 				text-decoration: none;
-				color: #007bff;
+				color: $white;
 			}
 
 			span{
-				color: #007bff;
+				color: $white;
 			}
+
 		}
 	}
 }

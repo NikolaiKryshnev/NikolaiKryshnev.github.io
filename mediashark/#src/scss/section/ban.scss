@@ -1,0 +1,69 @@
+.ban {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+
+	height: 47vw;
+	max-height: 380px;
+	min-height: 150px;
+	
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	margin-bottom: 90px;
+	@media ( max-width:$md1+px){
+		margin-bottom: 65px;
+	}
+	@media (max-width: $md3+px) {
+		background-position: top;
+		margin-bottom: 45px;
+	}
+	&:after {
+		@include pseudoEl(block, absolute, "");
+		background: rgba(0, 0, 0, 0.23);
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+	._container {
+		position: relative;
+		z-index: 2;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__title {
+		position: relative;
+
+		font-size: $fz50;
+		@include f700();
+		color: $white;
+		text-align: center;
+		@media (max-width: $md1+px) {
+			font-size: $fz36;
+		}
+		@media (min-width: $md3+px) {
+			padding: 0 0 20px 0;
+
+			&::after {
+				@include pseudoEl(block, absolute, "");
+				bottom: 0;
+				left: 50%;
+				@include translateX(-50%);
+
+				background: $white;
+				width: 99px;
+				height: 1px;
+			}
+		}
+		@media (max-width: $md3+px) {
+			font-size: $mfz20;
+		}
+	}
+}
