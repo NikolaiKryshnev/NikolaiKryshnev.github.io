@@ -1,0 +1,50 @@
+//<TABS>---------------------------------------
+	
+.tabs
+	width: 100%
+	max-width: 500px
+
+.tab-header 
+	display: flex
+	align-items: center
+	justify-content: flex-start
+
+	margin: 0
+	padding-left: 0
+
+	list-style: none
+
+	&__item 
+		margin-right: 5px
+		padding: 10px 20px
+
+		border: 1px solid #ddd
+
+		cursor: pointer
+
+		&.active 
+			position: relative
+
+			border-bottom: none
+			background-color: #fff
+
+			color: red
+
+.tab-content 
+	margin: 0
+	padding: 0
+
+	list-style: none
+
+	&__item 
+		display: none
+
+		margin-top: -1px
+		padding: 20px
+
+		border: 1px solid #ddd
+
+		&.active 
+			display: block
+
+//</TABS>---------------------------------------

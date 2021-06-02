@@ -1,7 +1,88 @@
+window.onload = function () {
+
+// animation numbers 
+const time = 2000;
+const step = 1;
+
+function outNum(num, elem) {
+	let e = elem,
+		n = 0;
+	let t = Math.round(time / (num / step));
+	let interval = setInterval(() => {
+		n = n + step;
+		if (n == num) {
+			clearInterval(interval);
+		}
+
+		e.innerHTML = n;
+
+		if (e.closest('._progress-bar').querySelector('.progBar-line--progress') !== null) {
+			e.closest('._progress-bar').querySelector('.progBar-line--progress').style.width = `${n}%`;
+		} else {
+
+			let result = 566 + (566 * n / e.dataset.maxprognumber);
+			e.closest('._progress-bar').querySelector('.circle').querySelector('._circle-progress').style.strokeDashoffset = `${result}`;
+		}
+	},
+		t);
+};
+//--------------
+
+
+function anProgressBar(block) {
+	for (let i = 0; i < block.length; i++) {
+		let el = block[i],
+			numberSum = el.querySelector('._progress-bar__number'),
+			prognumber = +numberSum.dataset.prognumber;
+
+		outNum(prognumber, numberSum)
+	}
+}
+
+anProgressBar(document.querySelectorAll('.progBar-circle'))
+anProgressBar(document.querySelectorAll('.progBar-line'))
+
+// charts
+
+var object = document.getElementById("logoObject");
+
+	function chartsSvg() {
+		let charts = document.querySelectorAll('.charts-block__ico'),
+		chartsLine = document.querySelectorAll('.charts-block__line');
+		for (let i = 0; i < charts.length; i++) {
+			const el = charts[i];
+			let svg = el.contentDocument.querySelector('svg');
+			svg.setAttribute('viewBox', `0 0 ${svg.getAttribute('width')} ${svg.getAttribute('height')}`);
+			svg.style.cssText = `
+				position: absolute;
+				width: max-content;
+				bottom: 0;
+		 	`;
+		}
+
+		for (let j = 0; j < chartsLine.length; j++) {
+			const chartL = chartsLine[j];
+			chartL.style.width = '100%';
+		}
+	}
+	chartsSvg()
+};
+
+
+
+
+
+
 function email_test(input) {
 	return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
 }
 //BildSlider
+
+let windowWidth = window.innerWidth;
+if (windowWidth < 992) {
+	document.querySelector('.mainGoals-slider').classList.add('_swiper');
+}
+
 let sliders = document.querySelectorAll('._swiper');
 if (sliders) {
 	for (let index = 0; index < sliders.length; index++) {
@@ -198,7 +279,7 @@ let timingSeo = new Swiper('.timingSeo-slider', {
 	// },
 
 	breakpoints: {
-		
+
 		0: {
 			slidesPerView: 1,
 			spaceBetween: 15,
@@ -221,48 +302,28 @@ let timingSeo = new Swiper('.timingSeo-slider', {
 
 		},
 		slideChange: function () {
-		
+
 		},
 	},
 
 });
 
 let sliderAboutChoose = new Swiper('.aboutChoose-slider', {
-	/*
-	effect: 'fade',
-	autoplay: {
-		delay: 3000,
-		disableOnInteraction: false,
-	},
-	*/
+
 	observer: true,
 	observeParents: true,
 	slidesPerView: 3,
-	// autoHeight: true,
 	speed: 800,
 	spaceBetween: 30,
 	slidesPerGroup: 3,
-	//touchRatio: 0,
-	//simulateTouch: false,
-	//loop: true,
-	//preloadImages: false,
-	//lazy: true,
-	// Dotts
-	// pagination: {
-	// 	el: '.swiper-pagination',
-	// 	type: 'progressbar'
-	// 	// clickable: true,
-	// },
-	// Arrows
+
 	navigation: {
-		nextEl: '.about__more .more__item_next',
-		prevEl: '.about__more .more__item_prev',
+		nextEl: '.slider-arrows ._aboutChoose__arrow-next',
+		prevEl: '.slider-arrows ._aboutChoose__arrow-prev',
 	},
 	pagination: {
-		el: '.swiper-pagination--number',
-		// clickable: true,
+		el: '._aboutChoose__pagination-number',
 		type: 'fraction',
-		// Кастомный вывод фракции
 		renderFraction: function (currentClass, totalClass) {
 
 			return '<span class="' + currentClass + '"> </span>' +
@@ -276,26 +337,34 @@ let sliderAboutChoose = new Swiper('.aboutChoose-slider', {
 			slidesPerView: 1,
 			spaceBetween: 5,
 			autoHeight: true,
+			slidesPerGroup: 1,
+
 		},
 
 		527: {
 			slidesPerView: 1,
 			spaceBetween: 15,
 			autoHeight: true,
+			slidesPerGroup: 1,
+
 
 		},
 		768: {
 			slidesPerView: 1,
-
+			slidesPerGroup: 1,
 			spaceBetween: 15,
 		},
 		992: {
 			slidesPerView: 2,
 			spaceBetween: 20,
+			slidesPerGroup: 2,
+
 		},
 		1171: {
 			slidesPerView: 3,
 			spaceBetween: 30,
+			slidesPerGroup: 3,
+
 		},
 	},
 
@@ -330,9 +399,148 @@ sliderBlock.addEventListener("mouseleave", function (e) {
 
 
 
+if (windowWidth < 992) {
+	let mainGoalsSlider = new Swiper('.mainGoals-slider', {
+		/*
+		effect: 'fade',
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
+		*/
+		observer: true,
+		observeParents: true,
+		slidesPerView: 1,
+		// autoHeight: true,
+		speed: 800,
+		spaceBetween: 15,
+		slidesPerGroup: 1,
+		//touchRatio: 0,
+		//simulateTouch: false,
+		//loop: true,
+		//preloadImages: false,
+		//lazy: true,
+		// Dotts
+		// pagination: {
+		// 	el: '.swiper-pagination',
+		// 	type: 'progressbar'
+		// 	// clickable: true,
+		// },
+		// Arrows
+		navigation: {
+		nextEl: '.slider-arrows ._mainGoals__arrow-next',
+		prevEl: '.slider-arrows ._mainGoals__arrow-prev',
+		},
+		// pagination: {
+		// 	el: '.swiper-pagination--number',
+		// 	// clickable: true,
+		// 	type: 'fraction',
+		// 	// Кастомный вывод фракции
+		// 	renderFraction: function (currentClass, totalClass) {
+
+		// 		return '<span class="' + currentClass + '"> </span>' +
+		// 			'/' +
+		// 			'<span class="' + totalClass + '"> </span>';
+		// 	},
+		// },
+
+		breakpoints: {
+
+			0: {
+				slidesPerView: 1,
+				spaceBetween: 15,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+
+		},
+
+	});
+}
 
 
 
+let CasesSliders = new Swiper('._cases-sliders', {
+	/*
+	effect: 'fade',
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: false,
+	},
+	*/
+	observer: true,
+	observeParents: true,
+	slidesPerView: 1,
+	// autoHeight: true,
+	speed: 800,
+	// spaceBetween: 30,
+	autoHeight: true,
+
+	//touchRatio: 0,
+	//simulateTouch: false,
+	//loop: true,
+	//preloadImages: false,
+	//lazy: true,
+	// Dotts
+	pagination: {
+		el: '._cases__progress-bar',
+		type: 'progressbar'
+		// clickable: true,
+	},
+	// Arrows
+	navigation: {
+		nextEl: '.slider-arrows ._cases__arrow-next',
+		prevEl: '.slider-arrows ._cases__arrow-prev',
+	},
+
+	// breakpoints: {
+	// 	0: {
+	// 		slidesPerView: 1,
+	// 		spaceBetween: 5,
+
+	// 	},
+
+	// 	527: {
+	// 		slidesPerView: 1,
+	// 		spaceBetween: 15,
+	// 		autoHeight: true,
+
+	// 	},
+	// 	768: {
+	// 		slidesPerView: 1,
+	// 		spaceBetween: 15,
+	// 		autoHeight: false,
+
+	// 	},
+	// 	840: {
+	// 		slidesPerView: 2,
+	// 		spaceBetween: 15,
+	// 		autoHeight: false,
+
+	// 	},
+
+	// 	1171: {
+	// 		slidesPerView: 3,
+	// 		spaceBetween: 30,
+	// 	},
+	// },
+
+	// Фракция
+
+
+	on: {
+		lazyImageReady: function () {
+			ibg();
+		},
+	}
+
+	// And if we need scrollbar
+	//scrollbar: {
+	//	el: '.swiper-scrollbar',
+	//},
+});
 // header top padding
 function main__top() {
 	let header = document.querySelector('.header'),
@@ -1580,5 +1788,6 @@ $(function() {
     });
 //   $('[href=#]').click(function(){return false});
 });
+
 
 

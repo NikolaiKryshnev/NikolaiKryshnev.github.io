@@ -60,41 +60,9 @@
 		}
 	}
 
-	.about__more {
-		font-size: 20px;
-		@include verticalcenter();
-		right: 0;
-
-		display: flex;
-		align-items: center;
-		.more__item_prev,	.more__item_next{
-			display: flex;
-			align-items: center;
-
-			cursor: pointer;
-			&:hover{
-
-			}
-		}
-		.more__item_prev{
-			margin-right: 10px;
-		}
-
-		.more__item_next{
-			margin-left: 10px;
-		}
-
-		.swiper-pagination-current{
-			@include f700();
-		}
-		.swiper-pagination-total{
-			@include f400();
-		}
-	}
-	.swiper-pagination--number{
-		margin-right: 37px;
-		@media ( max-width:$md1+px){
-			display: none;
-		}
-	}
+	
+	
 }
+
+
+

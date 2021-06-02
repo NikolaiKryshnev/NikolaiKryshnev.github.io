@@ -1,0 +1,139 @@
+.stagesWork {
+}
+
+.stagesWork-tabs {
+	&__content {
+	}
+	&__header {
+	}
+}
+
+.tabs-header {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 70px;
+	overflow-x: auto;
+	&::-webkit-scrollbar {
+		width: 0px;
+		background: transparent;
+	}
+}
+.header-item {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 60px;
+
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+
+	background: #f9f9f9;
+	margin-left: 210px;
+	transition: all 0.3s linear;
+	
+	@media ( max-width:$md3+px){
+		margin-left: 130px;
+	}
+	cursor: pointer;
+	&::after {
+		@include pseudoEl(block, absolute, "");
+		left: -210px;
+		top: 50%;
+		transform: translateY(-50%);
+		background: #e1e1e1;
+		width: 210px;
+		height: 1px;
+		@media ( max-width:$md3+px){
+			left: -130px;
+			width: 130px;
+		}
+	}
+
+	&._active {
+		background: #222;
+		color: $white;
+		.header-item__title {
+			@include f700();
+		}
+	}
+
+	&__number {
+		color: $fz20;
+		@include f700();
+	}
+
+	&__title {
+		margin-top: 25px;
+		position: absolute;
+		left: 50%;
+		@include translateX(-50%);
+		top: 100%;
+		width: max-content;
+		color: #222;
+
+		font-size: 20px;
+		max-width: 184px;
+
+		@media ( max-width:$md3+px){
+			font-size: 16px;
+			max-width: 120px;
+		}
+	}
+
+	&:first-child {
+		margin-left: 0;
+		.header-item__title {
+			left: 0;
+			@include translateX(0);
+		}
+		&::after {
+			display: none;
+		}
+	}
+
+	&:last-child {
+		.header-item__title {
+			right: 0;
+			@include translateX(0);
+			left: auto;
+		}
+	}
+}
+
+.tabs-content {
+	padding-top: 55px;
+	&__item {
+		font-size: 14px;
+		p {
+			padding-bottom: 30px;
+			line-height: 21px;
+		}
+		.h6,
+		h6 {
+			margin-bottom: 10px;
+			font-size: 16px;
+		}
+
+		ul,
+		ol {
+			padding-left: 18px;
+
+			li {
+				position: relative;
+				margin: 0 0 8px 0;
+				line-height: 21px;
+				
+				&::after {
+					@include pseudoEl(block, absolute, "");
+					width: 4px;
+					height: 4px;
+					background: #000;
+					left: -18px;
+					top: 5px;
+				}
+			}
+		}
+	}
+}

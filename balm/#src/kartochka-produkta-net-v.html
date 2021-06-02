@@ -149,6 +149,25 @@
 											</div>
 										</div>
 									</div>
+									<div class="product-btns">
+										<!-- <a class="product-browse product-btn" href="#">БЫСТРЫЙ ПРОСМОТР</a> -->
+										<a class="product-vishList product-btn" href="#" >
+											<svg>
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./img/icons/icons.svg#icon-heard"></use>
+											</svg>
+										</a>
+										<a class="product-cart product-btn" href="#">
+											<svg>
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./img/icons/icons.svg#icon-cart"></use>
+											</svg>
+										</a>
+										<a class="product-btn btn-social">
+											<svg>
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./img/icons/icons.svg#icon-social"></use>
+											</svg>
+										</a>
+									</div>
+									<!-- /.product-btns -->
 								</div>
 								<!-- /.cartProduct-slider__big -->
 							</div>
@@ -222,8 +241,8 @@
 									</select>
 								</div>
 
-								<button class="btn-green">В КОРЗИНУ</button>
-								<button class="btn-green">КУПИТЬ В ОДИН КЛИК</button>
+								<button class="btn-green cartProduct-addCart">В КОРЗИНУ</button>
+								<button class="btn-green cartProduct-addCart--oneClick">КУПИТЬ В ОДИН КЛИК</button>
 
 								<button class="btn-icon btn-heard">
 									<svg>
@@ -245,16 +264,16 @@
 
 						<div class="cartProduct-tabs tabs">
 							<ul class="tab-header">
-								<li class="tab-header__item js-tab-trigger active" data-tab="1">ОПИСАНИЕ</li>
-								<li class="tab-header__item js-tab-trigger" data-tab="2">КАК ИСПОЛЬЗОВАТЬ</li>
-								<li class="tab-header__item js-tab-trigger" data-tab="3">СОСТАВ</li>
-								<li class="tab-header__item js-tab-trigger" data-tab="4">ОТЗЫВЫ</li>
-								<li class="tab-header__item js-tab-trigger" data-tab="5">FAQ</li>
+								<li class="tab-header__item js-tab-trigger active" data-tab="1"><span>ОПИСАНИЕ</span></li>
+								<li class="tab-header__item js-tab-trigger" data-tab="2"><span>КАК ИСПОЛЬЗОВАТЬ</span></li>
+								<li class="tab-header__item js-tab-trigger" data-tab="3"><span>СОСТАВ</span></li>
+								<li class="tab-header__item js-tab-trigger" data-tab="4"><span>ОТЗЫВЫ</span></li>
+								<li class="tab-header__item js-tab-trigger" data-tab="5"><span>FAQ</span></li>
 							</ul>
 							<!-- /.tab-header -->
 
-							<ul class="tab-content">
-								<li class="tab-content__item js-tab-content active" data-tab="1">
+							<div class="tab-content">
+								<div class="tab-content__item js-tab-content active" data-tab="1">
 									<p>Уникальный продукт для очищения кожи! Бентонитовая глина используется в качестве мягкого
 										отшелушивающего средства из-за его способности выводить токсины из кожи, поэтому
 										обладателям плотной кожи он очень понравится. А обладатели тонкой оценят его
@@ -273,24 +292,24 @@
 										<li>Натуральная и органическая косметика сертифицирована Ecocert Greenlife.</li>
 									</ul>
 
-								</li>
-								<li class="tab-content__item js-tab-content" data-tab="2">
+								</div>
+								<div class="tab-content__item js-tab-content" data-tab="2">
 									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum rem laboriosam cum
 									repudiandae natus corrupti?
-								</li>
-								<li class="tab-content__item js-tab-content" data-tab="3">
+								</div>
+								<div class="tab-content__item js-tab-content" data-tab="3">
 									Далеко-далеко за словесными горами.
-								</li>
+								</div>
 
-								<li class="tab-content__item js-tab-content " data-tab="4">
+								<div class="tab-content__item js-tab-content " data-tab="4">
 									Далеко-далеко за словесными, горами в стране гласных и согласных живут рыбные тексты.
-								</li>
-								<li class="tab-content__item js-tab-content" data-tab="5">
+								</div>
+								<div class="tab-content__item js-tab-content" data-tab="5">
 									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum rem laboriosam cum
 									repudiandae natus corrupti?
-								</li>
+								</div>
 
-							</ul>
+							</div>
 							<!-- /.tab-content -->
 						</div>
 						<!-- /.tabs -->

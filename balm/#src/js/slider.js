@@ -106,25 +106,21 @@ $('.slider-nav').slick({
 			breakpoint: 1091,
 			settings: {
 				// vertical: false,
+				slidesToShow: 4,
+
+			}
+		},
+		{
+			breakpoint: 768,
+			settings: {
+				vertical: false,
 				slidesToShow: 3,
-
 			}
 		},
-		{
-			breakpoint: 600,
-			settings: {
-
-			}
-		},
-		{
-			breakpoint: 480,
-			settings: {
-
-			}
-		}
+	
 	]
 
-});
+});	
 
 
 

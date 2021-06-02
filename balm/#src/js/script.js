@@ -34,6 +34,7 @@
 			@@include('select.js')
 			@@include('cartProduct.js')
 			@@include('slider.js')
+			@@include('video.js')
 
 		});
 		//</TASK>---------------------------------------

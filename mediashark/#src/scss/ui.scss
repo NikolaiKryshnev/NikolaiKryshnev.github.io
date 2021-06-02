@@ -224,6 +224,63 @@ body.ie {
 .swiper-button-lock {
 	display: none !important;
 }
+
+
+.slider-arrows {
+	font-size: 20px;
+	@include verticalcenter();
+	right: 0;
+
+	display: flex;
+	align-items: center;
+	.slider-arrows__prev,	.slider-arrows__next{
+		display: flex;
+		align-items: center;
+
+		cursor: pointer;
+		&:hover{
+
+		}
+	}
+	.slider-arrows__prev{
+		margin-right: 10px;
+	}
+
+	.slider-arrows__next{
+		margin-left: 10px;
+	}
+
+	.swiper-pagination-current{
+		@include f700();
+	}
+	.swiper-pagination-total{
+		@include f400();
+	}
+}
+
+._progress-yes{
+	position: relative;
+.progress-bar {
+	width: 100%;
+	height: 4px;
+	background: #f9f9f9;
+	margin: 75px 0 0;
+	@media (max-width: $md1+px) {
+		margin: 50px 0 0;
+	}
+	.swiper-pagination-progressbar-fill {
+		background: #000;
+	}
+}
+}
+
+
+.pagination-number{
+	margin-right: 37px;
+	@media ( max-width:$md1+px){
+		display: none;
+	}
+}
 //====================================================================================================
 //=====================================================================================================================
 ._tabs {

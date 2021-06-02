@@ -1,6 +1,6 @@
 function f_acc($this, accBody, accHead) {
-	$(accBody).not($($this).next()).slideUp(1000).removeClass('active');
-	$($this).next().slideToggle(1000).toggleClass('active');
+	$(accBody).not($($this).next()).slideUp(500).removeClass('active');
+	$($this).next().slideToggle(500).toggleClass('active');
 
 	$(accHead).not($($this)).removeClass('active');
 	$($this).toggleClass('active');
