@@ -12,3 +12,4 @@ if ($(window).width() < 767.88) {
 		f_acc($(this), $('.footer-nav.acc-js .acc-body-js'), $('.footer-nav.acc-js .acc-head-js'))
 	});
 }
+

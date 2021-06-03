@@ -1,0 +1,168 @@
+.blog
+	&-content
+		@extend .col-6
+		@media ( max-width:$md2+px )
+			max-width: 100%
+			flex: 1 1 100%
+			margin: 0 0 100px 0 
+
+	&-article
+		margin-bottom: 70px
+		&:first-child
+			margin-bottom: 50px
+			@media ( max-width:$md1+px )
+				margin-bottom: 45px
+
+			@media ( max-width:$md3+px )
+				margin-bottom: 40px
+
+		&__boxImg
+			display: block
+			cursor: pointer
+			@include img_03(27%)
+			margin-bottom: 15px
+
+		&__img
+			@include img_02()
+			img
+				@include img_01()
+
+	.article-info
+		&__date
+			color: #7C7C7C
+			margin-bottom: 7px
+
+		&__name
+			position: relative
+			display: block
+			text-decoration: none
+			padding-bottom: 15px
+			margin-bottom: 10px
+
+			font-size: $fz20
+			color: #4D4D4D
+			cursor: pointer
+
+			&::after
+				@include pseudoEl(block, absolute, '')
+				left: 0
+				bottom: 0
+				width: 170px
+				height: 1px
+				background: #7C7C7C
+
+		&__text
+			color: #7C7C7C
+			margin-bottom: 23px
+			font-size: 14px
+
+		.btn
+			max-width: 170px
+
+	&-sidebar
+		@extend .col-6
+		@media ( max-width:$md2+px )
+			max-width: 100%
+			flex: 1 1 100%
+
+		&__tabs
+			margin-bottom: 40px
+			border: 0.5px solid #D3D3D3
+
+			.sidebar-tab__header
+				display: flex
+				border-bottom: 2px solid $gold
+				text-transform: uppercase
+				.tab-header__item
+					line-height: 60px
+					text-align: center
+
+					padding: 0 5px
+
+					flex: 0 0 50%
+					max-width: 50%
+					// border: 0.5px solid #D3D3D3
+					cursor: pointer
+				
+					&.active
+						border: 1px solid $gold
+						background: $gold
+						color: $white
+						
+			.sidebar-tab__content
+
+				.tab-content__item
+					padding: 30px 25px 15px 25px
+					@media ( max-width:$md3+px )
+						padding: 12px
+
+					display: none
+					&.active
+						display: block
+
+					.tab-article
+						display: flex
+						margin-bottom: 15px
+						&__boxImg
+							display: block
+							max-width: 175px
+							margin-right: 22px
+							cursor: pointer
+
+							@include img_03(10%)
+							@media ( max-width:$md3+px )
+								margin: 0 14px 0 0
+
+						&__img
+							@include img_02()
+
+							img
+								@include img_01()
+
+						&__info
+						
+						&__name
+							color: #4D4D4D
+							line-height: 18px
+							margin-bottom: 5px
+							cursor: pointer
+							text-decoration: none
+							@include transitColor(0.3s)
+							@media ( max-width:$md2+px )
+								font-size: 14px
+							&:hover
+								color: $gold
+								
+
+						&__date
+							font-size: 14px
+							color: #AEAEAE
+							@media ( max-width:$md2+px )
+								font-size: 12.5px
+
+	.tag-claud
+		&__title
+			font-size: 20px
+			line-height: 23px
+			color: #000000
+			margin-bottom: 15px
+
+		&__box
+			span
+				display: inline-flex
+				a
+					padding: 0 15px
+					border: 0.5px solid #7C7C7C
+					text-align: center
+					line-height: 35px
+					margin: 0 4px 7px 0 
+					color: #505050
+					text-decoration: none
+					transition: all 0.3s linear
+
+					&:hover
+						color: $white
+						background: $gold
+						border: 0.5px solid $gold
+
+

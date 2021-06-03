@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Блог"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html')
+		<main class="main">
+			@@include('_breadcrumbs.html',{
+			"text":"Блог"
+			})
+			<section class="section-blog blog  _section">
+				<div class="container">
+					<div class="row">
+						<div class="page-title h2">
+							<span>Блог</span>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="blog-content">
+							<div class="blog-content__article blog-article">
+								<a class="blog-article__boxImg" href="#">
+									<div class="blog-article__img">
+										<img src="./img/section-blog/01.jpg" alt="" loading="lazy">
+									</div>
+								</a>
+								<div class="blog-article__info">
+									<div class="article-info">
+										<div class="article-info__date">
+											12/09/2020
+										</div>
+										<a class="article-info__name" href="#">
+											CODAGE Paris – Mix & Match your Bespoke Skincare
+										</a>
+										<div class="article-info__text">
+											В основе ухода за кожей CODAGE Paris лежат известные Insta сыворотки CODAGE. Возможно,
+											вы видели эти красивые минималистичные флаконы в Instagram Ким Кардашьян Уэст и
+											Виктории Бекхэм, но теперь эти великолепные сыворотки доступны исключительно в GCC на
+											BALMESSENCE.
+										</div>
+										<a class="btn btn-green" href="#">ПОДРОБНЕЕ >></a>
+									</div>
+									<!-- /.article-info -->
+								</div>
+								<!-- /.blog-article__info -->
+							</div>
+							<!-- /.blog-content__article -->
+
+							<div class="blog-content__article blog-article">
+								<a class="blog-article__boxImg" href="#">
+									<div class="blog-article__img">
+										<img src="./img/section-blog/02.jpg" alt="" loading="lazy">
+									</div>
+								</a>
+								<div class="blog-article__info">
+									<div class="article-info">
+										<div class="article-info__date">
+											12/09/2020
+										</div>
+										<a class="article-info__name" href="#">
+											6 шагов к детоксикации кожи с помощью Grown Alchemist
+										</a>
+										<div class="article-info__text">
+											В основе ухода за кожей CODAGE Paris лежат известные Insta сыворотки CODAGE. Возможно,
+											вы видели эти красивые минималистичные флаконы в Instagram Ким Кардашьян Уэст и
+											Виктории Бекхэм, но теперь эти великолепные сыворотки доступны исключительно в GCC на
+											BALMESSENCE.
+										</div>
+										<a class="btn btn-green" href="#">ПОДРОБНЕЕ >></a>
+									</div>
+									<!-- /.article-info -->
+								</div>
+								<!-- /.blog-article__info -->
+							</div>
+							<!-- /.blog-content__article -->
+
+							<div class="blog-content__article blog-article">
+								<a class="blog-article__boxImg" href="#">
+									<div class="blog-article__img">
+										<img src="./img/section-blog/03.jpg" alt="" loading="lazy">
+									</div>
+								</a>
+								<div class="blog-article__info">
+									<div class="article-info">
+										<div class="article-info__date">
+											12/09/2020
+										</div>
+										<a class="article-info__name" href="#">
+											Красивое старение с ладаном
+										</a>
+										<div class="article-info__text">
+											В основе ухода за кожей CODAGE Paris лежат известные Insta сыворотки CODAGE. Возможно,
+											вы видели эти красивые минималистичные флаконы в Instagram Ким Кардашьян Уэст и
+											Виктории Бекхэм, но теперь эти великолепные сыворотки доступны исключительно в GCC на
+											BALMESSENCE.
+										</div>
+										<a class="btn btn-green" href="#">ПОДРОБНЕЕ >></a>
+									</div>
+									<!-- /.article-info -->
+								</div>
+								<!-- /.blog-article__info -->
+							</div>
+							<!-- /.blog-content__article -->
+							@@include('_pagination.html')
+						</div>
+						<!-- /.blog-content -->
+
+						<div class="blog-sidebar">
+							<div class="blog-sidebar__tabs sidebar-tab">
+								<ul class="sidebar-tab__header tab-header">
+									<li class="tab-header__item js-tab-trigger active" data-tab="1">ПОСЛЕДНИЕ</li>
+									<li class="tab-header__item js-tab-trigger" data-tab="2">ПОПУЛЯРНЫЕ</li>
+								</ul>
+								<!-- /sidebar-tab__header -->
+
+								<div class="sidebar-tab__content tab-content">
+									<div class="tab-content__item js-tab-content active" data-tab="1">
+										<div class="tab-article">
+											<div class="tab-article__boxImg">
+												<div class="tab-article__img">
+													<img src="./img/section-blog/01.jpg" alt="" loading="lazy">
+												</div>
+											</div>
+											<div class="tab-article__info">
+												<div class="tab-article__name">
+													6 шагов к детоксикации кожи с помощью Grown Alchemist...
+												</div>
+												<div class="tab-article__date">
+													28/09/2020
+												</div>
+
+
+											</div>
+
+										</div>
+
+										<div class="tab-article">
+											<div class="tab-article__boxImg">
+												<div class="tab-article__img">
+													<img src="./img/section-blog/02.jpg" alt="" loading="lazy">
+												</div>
+											</div>
+											<div class="tab-article__info">
+												<div class="tab-article__name">
+													6 шагов к детоксикации кожи с помощью Grown Alchemist...
+												</div>
+												<div class="tab-article__date">
+													28/09/2020
+												</div>
+
+
+											</div>
+
+										</div>
+
+										<div class="tab-article">
+											<div class="tab-article__boxImg">
+												<div class="tab-article__img">
+													<img src="./img/section-blog/03.jpg" alt="" loading="lazy">
+												</div>
+											</div>
+											<div class="tab-article__info">
+												<div class="tab-article__name">
+													6 шагов к детоксикации кожи с помощью Grown Alchemist...
+												</div>
+												<div class="tab-article__date">
+													28/09/2020
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- /.tab-content__item -->
+
+									
+									<div class="tab-content__item js-tab-content" data-tab="2">
+										<div class="tab-article">
+											<div class="tab-article__boxImg">
+												<div class="tab-article__img">
+													<img src="./img/section-blog/02.jpg" alt="" loading="lazy">
+												</div>
+											</div>
+											<div class="tab-article__info">
+												<div class="tab-article__name">
+													6 шагов к детоксикации кожи с помощью Grown Alchemist...
+												</div>
+												<div class="tab-article__date">
+													28/09/2020
+												</div>
+											</div>
+										</div>
+
+										<div class="tab-article">
+											<div class="tab-article__boxImg">
+												<div class="tab-article__img">
+													<img src="./img/section-blog/01.jpg" alt="" loading="lazy">
+												</div>
+											</div>
+											<div class="tab-article__info">
+												<div class="tab-article__name">
+													6 шагов к детоксикации кожи с помощью Grown Alchemist...
+												</div>
+												<div class="tab-article__date">
+													28/09/2020
+												</div>
+											</div>
+										</div>
+
+										<div class="tab-article">
+											<div class="tab-article__boxImg">
+												<div class="tab-article__img">
+													<img src="./img/section-blog/03.jpg" alt="" loading="lazy">
+												</div>
+											</div>
+											<div class="tab-article__info">
+												<div class="tab-article__name">
+													6 шагов к детоксикации кожи с помощью Grown Alchemist...
+												</div>
+												<div class="tab-article__date">
+													28/09/2020
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- /.tab-content__item -->
+								</div>
+								<!-- /sidebar-tab__content -->
+							</div>
+							<!-- /.tabs -->
+
+							<div class="tag-claud">
+								<div class="tag-claud__title">Теги</div>
+
+								<div class="tag-claud__box">
+									<span>
+										<a href="#">блог</a>
+									</span>
+									<span>
+										<a href="#">масла</a>
+									</span>
+									<span>
+										<a href="#">молодость</a>
+									</span>
+									<span>
+										<a href="#">роза</a>
+									</span>
+									<span>
+										<a href="#">акне</a>
+									</span>
+									<span>
+										<a href="#">пигментация</a>
+									</span>
+									<span>
+										<a href="#">эссенция</a>
+									</span>
+									<span>
+										<a href="#">парфюм</a>
+									</span>
+									<span>
+										<a href="#">здоровье</a>
+									</span>
+									<span>
+										<a href="#">волосы</a>
+									</span>
+									<span>
+										<a href="#">омега 9</a>
+									</span>
+									<span>
+										<a href="#">блог</a>
+									</span>
+									<span>
+										<a href="#">масла</a>
+									</span>
+									<span>
+										<a href="#">молодость</a>
+									</span>
+									<span>
+										<a href="#">роза</a>
+									</span>
+									<span>
+										<a href="#">акне</a>
+									</span>
+									<span>
+										<a href="#">пигментация</a>
+									</span>
+									<span>
+										<a href="#">эссенция</a>
+									</span>
+									<span>
+										<a href="#">парфюм</a>
+									</span>
+									<span>
+										<a href="#">здоровье</a>
+									</span>
+									<span>
+										<a href="#">волосы</a>
+									</span>
+									<span>
+										<a href="#">омега 9</a>
+									</span>
+									<span>
+										<a href="#">блог</a>
+									</span>
+									<span>
+										<a href="#">масла</a>
+									</span>
+									<span>
+										<a href="#">молодость</a>
+									</span>
+									<span>
+										<a href="#">роза</a>
+									</span>
+									<span>
+										<a href="#">акне</a>
+									</span>
+									<span>
+										<a href="#">пигментация</a>
+									</span>
+									<span>
+										<a href="#">эссенция</a>
+									</span>
+									<span>
+										<a href="#">парфюм</a>
+									</span>
+									<span>
+										<a href="#">здоровье</a>
+									</span>
+									<span>
+										<a href="#">волосы</a>
+									</span>
+									<span>
+										<a href="#">омега 9</a>
+									</span>
+									<span>
+										<a href="#">блог</a>
+									</span>
+									<span>
+										<a href="#">масла</a>
+									</span>
+									<span>
+										<a href="#">молодость</a>
+									</span>
+									<span>
+										<a href="#">роза</a>
+									</span>
+									<span>
+										<a href="#">акне</a>
+									</span>
+									<span>
+										<a href="#">пигментация</a>
+									</span>
+									<span>
+										<a href="#">эссенция</a>
+									</span>
+									<span>
+										<a href="#">парфюм</a>
+									</span>
+									<span>
+										<a href="#">здоровье</a>
+									</span>
+									<span>
+										<a href="#">волосы</a>
+									</span>
+									<span>
+										<a href="#">омега 9</a>
+									</span>
+									
+								</div>
+								<!-- /.tag-claud__box -->
+								
+								
+							</div>
+							<!-- /.tag-claud -->
+						</div>
+
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.container -->
+			</section>
+			<!-- /.section-blog -->
+			<div class="h-10"></div>
+
+		</main>
+		<!-- /.main -->
+		@@include('_footer.html')
+	</div>
+	<!-- /.wrapper -->
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

@@ -65,7 +65,6 @@ function subMenuMob() {
 					$(this).removeClass('active');
 					$(this).parents('a').removeClass('active');
 					$(this).parents('a').siblings('.menuSub-js').hide();
-
 				}
 			}
 		});
@@ -148,6 +147,7 @@ function scrollAnimation() {
 	});
 }
 
+// input filter header
 function inputSearch() {
 	$('.input-searchBrand').on('keyup', function () {
 		$('.abs-title').removeAttr("style")
@@ -165,6 +165,42 @@ $(".abc-sorting").sortList();
 wordOne()
 inputSearch()
 appendBloks($('.menu-sub--abc'), $('.mobTab-content--brand'), $('.brand-js'))
+
+
+// filter input page brands
+function inputSearchBradns() {
+	$('.brands-top .input-searchBrand').on('keyup', function () {
+		
+		var value = $(this).val().toLowerCase();
+		$('.brand-abc_content .abc-sorting__name').filter(function () {
+			$(this).parents('.abc-sorting__block').toggle($(this).text().toLowerCase().indexOf(value) > - 1)
+		});
+		$(".abc-all").trigger( "click" );
+	});
+}
+inputSearchBradns()
+
+
+// filter brand page
+function filterBrand() {
+
+	$('.filters-button .filter-btn').each(function () {
+		let $this = $(this)
+		let filterBtnData = $this.attr('data-filter').slice(1)
+		
+		$('.abc-sorting__block').each(function () {
+			if( $('.abc-sorting__block').hasClass(filterBtnData) !== true){
+				$($this).addClass('disabled');
+				return
+			}
+		});
+	});
+
+
+}
+filterBrand()
+
+
 ///---------------------------------------------------------------------------
 
 showBlockHeader()

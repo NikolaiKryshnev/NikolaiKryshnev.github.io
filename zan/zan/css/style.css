@@ -99,7 +99,7 @@
 
 .service_landing .diagnostics-box .diagnostics-head {
   position: relative;
-  padding: 25px 0;
+  padding: 25px 20px 25px 0;
   border-bottom: 1px solid #E3E3E3;
   font-size: 22px;
 }
@@ -243,6 +243,16 @@
 }
 
 @media (max-width: 526px) {
+  .service_landing #lp-hero:after {
+    background: -webkit-gradient(linear, left top, right top, from(#FFFFFF), color-stop(98.46%, rgba(255, 255, 255, 0.21)));
+    background: -o-linear-gradient(left, #FFFFFF 0%, rgba(255, 255, 255, 0.21) 98.46%);
+    background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.21) 98.46%);
+  }
+
+  .service_landing #lp-hero.lp-as.lp-un {
+    background-image: url(../img/02.jpg);
+  }
+
   .service_landing .diagnostics-block {
     padding: 20px 25px;
   }

@@ -21,7 +21,7 @@
 	@@include('../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js')
 
 	//============</FANCYBOX>============
-
+	@@include('sorting.js')
 
 	//</LIBRARIES>---------------------------------------
 
@@ -30,6 +30,8 @@
 		$(document).ready(function () {
 			@@include('header.js')
 			@@include('acc.js')
+			@@include('tabs.js')
+
 			@@include('filter.js')
 			@@include('select.js')
 			@@include('cartProduct.js')

@@ -15,20 +15,20 @@ tabTrigger.click(function () {
 });
 
 
-function sliderDataAttr() {
-	if ($(window).width() <= 726) {
-		for (let i = 0; i < tabTrigger.length; i++) {
-			const el = tabTrigger[i];
-			$(el).append($(`.tab-content__item[data-tab='${i + 1}']`))
-		}
-	}else{
-		for (let i = 0; i < tabTrigger.length; i++) {
-			tabContent.append($(`.tab-content__item[data-tab='${i + 1}']`))
-		}
-	}
-}
+// function sliderDataAttr() {
+// 	if ($(window).width() <= 726) {
+// 		for (let i = 0; i < tabTrigger.length; i++) {
+// 			const el = tabTrigger[i];
+// 			$(el).append($(`.tab-content__item[data-tab='${i + 1}']`))
+// 		}
+// 	}else{
+// 		for (let i = 0; i < tabTrigger.length; i++) {
+// 			tabContent.append($(`.tab-content__item[data-tab='${i + 1}']`))
+// 		}
+// 	}
+// }
 
-sliderDataAttr()
+// sliderDataAttr()
 
 $(window).resize(function() {
 	sliderDataAttr();
