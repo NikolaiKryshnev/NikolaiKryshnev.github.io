@@ -30,6 +30,7 @@
 		$(document).ready(function () {
 			@@include('header.js')
 			@@include('acc.js')
+
 			@@include('tabs.js')
 
 			@@include('filter.js')
@@ -37,6 +38,9 @@
 			@@include('cartProduct.js')
 			@@include('slider.js')
 			@@include('video.js')
+
+			@@include('commentform.js')
+
 
 		});
 		//</TASK>---------------------------------------

@@ -30,9 +30,9 @@ tabTrigger.click(function () {
 
 // sliderDataAttr()
 
-$(window).resize(function() {
-	sliderDataAttr();
-});
+// $(window).resize(function() {
+// 	sliderDataAttr();
+// });
 
 
 //</TABS>---------------------------------------

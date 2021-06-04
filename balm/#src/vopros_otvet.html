@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"title"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html')
+		<main class="main">
+			@@include('_breadcrumbs.html',{
+			"text":"Вопрос-ответ"
+			})
+			<section class="section-faq faq  _section">
+				<div class="container">
+					<div class="row">
+						<div class="page-title h2">
+							<span>ВОПРОС-ОТВЕТ</span>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="faq-bloks faq-js">
+							<div class="faq-box">
+								<div class="faq-head faq-head-js">
+									1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+									ut labore et dolore magna aliqua?
+									<div class="icon-arrow"><svg width="14" height="9" viewBox="0 0 14 9" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.398438 1.35522L6.69844 7.35522L12.9984 1.35522" stroke="#4D4D4D" />
+										</svg>
+									</div>
+								</div>
+								<div class="faq-body faq-body-js">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum saepe ex nesciunt, quidem
+									quis illo cupiditate,
+									quod maxime. Tenetur, ex quos. Magnam quasi iure facere minus velit voluptate faqusamus hic!
+								</div>
+							</div>
+							<!-- /.faq-box -->
+
+							<div class="faq-box">
+								<div class="faq-head faq-head-js">
+									2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+									ut labore et dolore magna aliqua?
+									<div class="icon-arrow"><svg width="14" height="9" viewBox="0 0 14 9" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.398438 1.35522L6.69844 7.35522L12.9984 1.35522" stroke="#4D4D4D" />
+										</svg>
+									</div>
+								</div>
+								<div class="faq-body faq-body-js">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum saepe ex nesciunt, quidem
+									quis illo cupiditate,
+									quod maxime. Tenetur, ex quos. Magnam quasi iure facere minus velit voluptate faqusamus hic!
+								</div>
+							</div>
+							<!-- /.faq-box -->
+
+							<div class="faq-box">
+								<div class="faq-head faq-head-js">
+									3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+									ut labore et dolore magna aliqua?
+									<div class="icon-arrow"><svg width="14" height="9" viewBox="0 0 14 9" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.398438 1.35522L6.69844 7.35522L12.9984 1.35522" stroke="#4D4D4D" />
+										</svg>
+									</div>
+								</div>
+								<div class="faq-body faq-body-js">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum saepe ex nesciunt, quidem
+									quis illo cupiditate,
+									quod maxime. Tenetur, ex quos. Magnam quasi iure facere minus velit voluptate faqusamus hic!
+								</div>
+							</div>
+							<!-- /.faq-box -->
+						</div>
+						<!-- /.faqordion -->
+
+						@@include('_pagination.html')
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.container -->
+			</section>
+			<!-- /.section-faq -->
+			<div class="h-10"></div>
+
+		</main>
+		<!-- /.main -->
+		@@include('_footer.html')
+	</div>
+	<!-- /.wrapper -->
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

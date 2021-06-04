@@ -13,3 +13,8 @@ if ($(window).width() < 767.88) {
 	});
 }
 
+$('.faq-js .faq-head-js').on('click', function (e) {
+	f_acc($(this), $('.faq-js .faq-body-js'), $('.faq-js .faq-head-js'))
+
+});
+
