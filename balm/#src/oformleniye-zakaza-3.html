@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Оформление заказа"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html')
+		<main class="main">
+			@@include('_breadcrumbs.html',{
+			"text":"Оформление заказа"
+			})
+			<section class="section-orders orders _section">
+				<div class="container">
+					<div class="row">
+						<div class="page-title h2">
+							<span>ОформЛЕНИЕ ЗАКАЗА</span>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+
+						<div class="order-img">
+							<img src="./img/section-orders/02.svg" alt="" loading="lazy">
+						</div>
+						<div class="order-column order-column--pay">
+							<div class="order-column__title">способ оплаты</div>
+
+							<div class="radio-box">
+								<label class="radio">
+									<input type="radio" name="pay" value="1" checked="">
+									<div class="delivery-text"><span class="delivery-name">Карта Mastercard / Visa</span> </div>
+								</label>
+
+								<label class="radio">
+									<input type="radio" name="pay" value="1" checked="">
+									<div class="delivery-text"><span class="delivery-name">Оплата курьеру</span> </div>
+								</label>
+
+								<label class="radio">
+									<input type="radio" name="pay" value="1" checked="">
+									<div class="delivery-text"><span class="delivery-name">PayPal</span> </div>
+								</label>
+
+								<label class="radio">
+									<input type="radio" name="pay" value="1" checked="">
+									<div class="delivery-text"><span class="delivery-name">Карта Mastercard / Visa</span> </div>
+								</label>
+
+								<label class="radio">
+									<input type="radio" name="pay" value="1" checked="">
+									<div class="delivery-text"><span class="delivery-name">Оплата курьеру</span> </div>
+								</label>
+
+								<label class="radio">
+									<input type="radio" name="pay" value="1" checked="">
+									<div class="delivery-text"><span class="delivery-name">PayPal</span> </div>
+								</label>
+
+							</div>
+						</div>
+
+						<div class="order-column order-column--product">
+							<div class="order-column__title">Заказ</div>
+							<div class="order-price order-column__text ">
+								Стоимость товаров <b>118 BYN</b>
+							</div>
+							<div class="order-delivery order-column__text">
+								Доставка <b>0 BYN</b>
+							</div>
+
+							<div class="order-dicount order-column__text">
+								Скидка по промокоду <b>6 BYN</b>
+							</div>
+							<div class="order-result order-column__text">
+								ИТОГО <b>112 BYN</b>
+							</div>
+						</div>
+						<!-- /.order-column -->
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.container -->
+			</section>
+			<!-- /.section-PersArea -->
+			<div class="h-10"></div>
+		</main>
+		<!-- /.main -->
+		@@include('_footer.html')
+	</div>
+	<!-- /.wrapper -->
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

@@ -2,27 +2,47 @@
 	.page-title
 		display: flex
 		justify-content: space-between
+		flex-wrap: wrap
+
 		align-items: center
-		margin-bottom: 12px
+		margin-bottom: 0
+		span
+			margin-bottom: 10px
+
+		.btn
+			margin-bottom: 12px
+
 
 	.orders-table
 		padding: 0 15px
 		width: 100%
 
 		.order-tr
-			height: 70px
+			min-height: 70px
 			display: flex
 			justify-content: space-between
 			border-top: 1px solid #D3D3D3
+			@media ( max-width:$md2+px )
+				position: relative
+
+				flex-wrap: wrap
+				padding-bottom: 20px
 
 			.order-td
 				display: flex
 				align-items: center
+				&__product
+					display: flex
+					align-items: center
+					width: 46%
+					@media ( max-width:$md2+px )
+						width: 100%
+						padding-right: 45px
 
 				&__boxImg
 					@include img_03(2rem)
+					max-width: 70px
 					// width: 70px
-					width: 6%
 					max-height: 70px
 
 				&__img
@@ -38,7 +58,9 @@
 					padding: 0 30px
 					// max-width: 500px
 					// width: 100%
-					width: 40%
+					padding: 0 20px
+					@media ( max-width:$md2+px )
+						line-height: 22px
 
 				&__price
 					display: flex
@@ -49,6 +71,11 @@
 					@include f500()
 					color: #4D4D4D
 					font-size: 14px
+					@media ( max-width:$md2+px )
+						width: 100%
+						justify-content: flex-start
+						margin-left: 90px
+						margin-top: 10px
 
 				&__close
 					display: flex
@@ -56,6 +83,13 @@
 					justify-content: center
 
 					width: 13%
+					@media ( max-width:$md2+px )
+						position: absolute
+						top: 13px
+						right: 0
+						width: 20px
+						justify-content: flex-start
+
 					svg:hover
 						path
 							fill: $gold
@@ -69,23 +103,39 @@
 					font-size: $fz18
 					color: #4D4D4D
 					@include f500()
+					@media ( max-width:$md2+px )
+						width: 100%
+						justify-content: flex-start
+						margin-left: 90px
+						margin-top: 15px
+
 
 			.quantity
-
 				width: 13%
 				vertical-align: middle
+				@media ( max-width:$md2+px )
+					width: 100%
+					justify-content: flex-start
+					margin-left: 90px
+					margin-top: 15px
+
 
 			.order-close 
 				a
 					display: block
 
 			&--sum, &--price, &--total
+				position: relative
 				justify-content: flex-end
 				background: #F7F7F7
 				line-height: 70px
 				font-size: $fz18
 				color: #4D4D4D
 				padding-right: 25px
+				@media ( max-width:$md2+px )
+					display: flex
+					justify-content: space-between
+					padding: 0
 
 				.sum, .price-sum, .total-sum
 					min-width: 130px
@@ -95,6 +145,9 @@
 					padding: 0 0 0 20px
 					color: #4D4D4D
 					@include f500()
+					@media ( max-width:$md2+px )
+						min-width: auto
+						padding: 0
 
 			&--price
 				background: #fff
@@ -105,6 +158,25 @@
 				margin-right: 0
 				max-width: 400px
 				border: 0
+				@media ( max-width:$md2+px )
+					max-width: 100%
+					
+			&--sum
+				@media ( max-width:$md2+px )
+					&:after
+						margin-top: -1px
+						border-top: 1px solid #D3D3D3
+
+
+			&--sum, 	&--total
+				@media ( max-width:$md2+px )
+					&::after
+						@include pseudoEl(block, absolute, '')
+						width: 100vw
+						height: 100%
+						left: -15px
+						background: #f7f7f7
+						z-index: -1
 
 	.orders-promoCode
 		width: 100%
@@ -117,10 +189,18 @@
 
 		margin-left: auto
 		margin-right: 0
+		@media ( max-width:$md3+px )
+			flex-wrap: wrap
+			justify-content: flex-start
+
 		.orders-promoCode__block
 			margin-left: 35px
 			display: flex
 			align-items: center
+			@media ( max-width:$md3+px )
+				width: 100%
+				margin-left: 0
+				margin-top: 15px
 
 			input
 				border: 0.5px solid #7C7C7C
@@ -153,10 +233,19 @@
 	&-col
 		@extend .col-3
 		margin-bottom: 35px
+		@media ( max-width:$md2+px )
+			flex: 0 0 50%
+			max-width: 50%
+
+		@media ( max-width:$md3+px )
+			margin-bottom: 20px
 
 	&-box
 		padding: 15px 15px 35px 15px
 		border: 1px solid #D3D3D3
+		@media ( max-width:$md2+px )
+			padding: 8px
+
 		&__boxImg
 			display: block
 			@include img_03(45%)
@@ -185,9 +274,6 @@
 				visibility: visible
 				z-index: 2
 
-
-			
-
 		&__img
 			@include img_02()
 
@@ -203,10 +289,248 @@
 			text-align: center
 			padding:  0 20px
 			line-height: 20px
+			@include transitColor(0.3s)
+			@media ( max-width:$md2+px )
+				padding: 0
+
+			&:hover
+				color: $gold
 
 		.btn
 			margin: 20px auto 0
 			line-height: 35px
 
+	.btn-show
+		margin: 0 auto
+		line-height: 35px
+
+
 
 			
+//-------------------------------------------------------------------------//
+
+.order-img
+	flex: 1 1 100%
+	max-width: 100%
+	margin-bottom: 50px
+	margin-top: 30px
+	@media ( max-width:$md2+px )
+		display: none
+
+.order-column
+	position: relative
+	width: 100%
+   min-height: 1px
+	padding: 0 15px
+	&--address, &--pay
+		flex: 0 0 66.666667%
+		max-width: 66.666667%
+		@media ( max-width:$md1+px )
+			flex: 0 0 50%
+			max-width: 50%
+			margin-bottom: 50px
+
+		@media ( max-width:$md2+px )
+			flex: 1 1 100%
+			max-width: 100%
+
+	&--product
+		flex: 0 0 33.333333%
+		max-width: 33.333333%
+		@media ( max-width:$md1+px )
+			flex: 0 0 50%
+			max-width: 50%
+
+		@media ( max-width:$md2+px )
+			flex: 1 1 100%
+			max-width: 100%
+
+	&--delivery
+		margin-top: 60px
+		flex: 0 0 66.666667%
+		max-width: 66.666667%
+		@media ( max-width:$md1+px )
+			flex: 0 0 50%
+			max-width: 50%
+
+		@media ( max-width:$md2+px )
+			flex: 1 1 100%
+			max-width: 100%
+
+		.btn
+			float: right
+			@media ( max-width:$md3+px )
+				float: left
+	&--pay
+		.radio
+			margin-bottom: 0
+
+			&:last-child
+				border: 0
+
+	&__text
+		
+		height: 68px
+		display: flex
+		align-items: center
+		justify-content: space-between
+		border-bottom: 0.5px solid #D3D3D3
+		color: #7C7C7C
+		padding-right: 5px
+		b
+			color: #4D4D4D
+			padding-left: 20px
+	
+	.order-result 
+		background: #F7F7F7
+		justify-content: flex-end
+		border: 0
+
+	.order-column__title
+		text-transform: uppercase
+		color: #4D4D4D
+		padding-bottom: 15px
+		border-bottom: 0.5px solid #D3D3D3
+
+	.order-address__info
+		margin: 35px 0 20px
+
+		position: relative
+		max-width: 370px
+		width: 100%
+		padding: 22px 40px 22px 32px 
+		border: 0.5px solid #7C7C7C
+		color: #7C7C7C
+		line-height: 22px
+
+		span
+			display: block
+
+		a
+			display: block
+			color: $gold
+			margin-bottom: 6px
+			margin-top: 13px
+
+
+		&::after
+			@include pseudoEl(block, absolute, '')
+			right: 0
+			top: 0
+			background-image: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.2576 0.171596C15.4905 -0.26577 14.6349 0.577721 14.1333 1.07757C12.9826 2.2647 12.009 3.63928 10.9172 4.8889C9.70755 6.26348 8.58636 7.63806 7.34716 8.98145C6.63904 9.73122 5.87192 10.5435 5.39984 11.4807C4.33767 10.3872 3.42302 9.20008 2.24282 8.23168C1.38718 7.54439 -0.0290511 7.04454 0.000453759 8.70028C0.0594635 10.8559 1.85926 13.1677 3.18698 14.636C3.74757 15.2608 4.48519 15.9168 5.34083 15.9481C6.3735 16.0105 7.43568 14.6984 8.05528 13.9799C9.147 12.7303 10.0321 11.3244 11.0353 10.0436C12.3335 8.35664 13.6612 6.70084 14.9299 4.98262C15.7265 3.92045 18.2344 1.2962 16.2576 0.171596ZM1.29862 8.57532C1.26911 8.57532 1.23961 8.57532 1.1806 8.60651C1.06258 8.57532 0.974066 8.54403 0.856046 8.48155C0.944561 8.41907 1.09209 8.45031 1.29862 8.57532Z' fill='white'/%3E%3C/svg%3E")
+			background-color: #4D4D4D
+			background-position: center
+			background-repeat: no-repeat
+			width: 35px
+			height: 35px
+
+	.order-products
+
+	.order-product
+		display: flex
+		padding: 15px 0
+		border-bottom: 0.5px solid #D3D3D3
+
+		&__boxImg
+			display: block
+			@include img_03(8.5%)
+			border: 0.5px solid #D3D3D3
+			max-width: 70px
+			max-height: 65px
+			@media ( max-width:$md2+px )
+				padding: 4.5% 0
+
+		&__img
+			@include img_02()
+
+			img
+				@include img_01()
+
+		&__info
+			position: relative
+			width: 100%
+			margin-left: 8px
+			font-size: 0
+			
+
+		&__name
+			max-width: 200px
+			display: block
+			line-height: 18px
+			text-decoration: none
+			color: #7C7C7C
+			font-size: $fz16
+
+			@include transitColor(0.3s)
+			&:hover
+				color: $gold
+
+
+		&__quantity
+			font-size: $fz16
+			color: #7C7C7C
+			line-height: 29px
+			&::before
+				content: "x"
+
+		&__price
+			font-size: $fz18
+			position: absolute
+			right: 0
+			bottom: 0
+			@include f500()
+		
+
+		&__result
+			margin-top: 10px
+			color: #7C7C7C
+			text-align: right
+
+			.result-price
+				color: #4D4D4D
+				font-size: $fz18
+				margin-left: 15px
+				@include f500()
+
+	.delivery-block
+		margin-top: 25px
+
+		.radio
+			background: #F7F7F7
+			padding: 15px 25px 15px 20px
+
+			margin-bottom: 15px
+			@media ( max-width:$md3+px )
+				padding: 15px 10px
+
+
+	.delivery-price
+		color: #4D4D4D
+		font-size: $fz18
+		@include f500()
+
+	.delivery-name
+		color: #7C7C7C
+		text-transform: uppercase
+
+	.delivery-text
+		display: flex
+		justify-content: space-between
+		align-items: center
+		@media ( max-width:$md3+px )
+			font-size: 12px
+
+			
+
+//-------------------------------------------------------------------------//
+.order-column--pay
+	.radio
+		padding: 20px 0
+		border-bottom: 0.5px solid #D3D3D3
+
+		.delivery-name
+			color: #7C7C7C
+
+		input:checked + .delivery-text .delivery-name
+			color: #000000
+

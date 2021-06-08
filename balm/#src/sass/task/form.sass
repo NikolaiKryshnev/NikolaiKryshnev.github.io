@@ -165,7 +165,7 @@
 	
 	// .quantity__input
 	&__input 
-		flex: 0 0 30px
+		flex: 0 0 20px
 		input 
 			height: 100%
 			color: #4D4D4D
@@ -175,3 +175,67 @@
 			text-align: center
 		
 	
+
+//-------------------------------------------------------------------------//
+.radio 
+	display: block
+
+	margin: 0 0 10px
+
+	font-size: 16px
+	cursor: pointer
+	line-height: 17px
+
+	&:last-child
+		margin: 0 0 10px
+
+	input 
+		display: none
+
+		& + .delivery-text 
+			position: relative
+			display: block
+
+			padding-left: 27px
+
+			height: 27px
+
+			line-height: 27px
+
+			&:not(:empty) 
+				padding-left: 50px
+				@media ( max-width:$md2+px )
+					padding-left: 40px
+
+			&:before, &:after 
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				display: block
+
+				width: 27px
+				height: 27px
+
+				border-radius: 50%
+
+			&:before 
+				border: 0.5px solid rgba(#4D4D4D, 0.24)
+
+			&:after 
+				background: #fff
+				border: 1px solid rgba(#D3D3D3, 0)
+
+				transform: scale(0.9)
+
+		&:checked + .delivery-text:before 
+			background: #fff
+
+		&:checked + .delivery-text:after 
+			border: 0.5px solid $gold
+
+			background: $gold
+
+			transform: scale(0.7)
+//</RADIO>---------------------------------------------
+
