@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Авторизация"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html')
+		<main class="main">
+			@@include('_breadcrumbs.html',{
+			"text":"Мой профиль"
+			})
+			<section class="section-myProfil myProfil _section">
+				<div class="container">
+					<div class="myProfil-thanks">
+						Спасибо за регистрацию!
+					</div>
+					<div class="row">
+
+						<div class="myProfil-sidebar">
+							<div class="myProfil-sidebar__ul">
+								<li><a href="#" rel="nofollow">Мой аккаунт</a></li>
+
+								<li><a href="#" rel="nofollow">Мои заказы</a></li>
+
+								<li><a href="#" rel="nofollow">Мои желания </a></li>
+
+								<li><span class="myProfil-sidebar__border"></span></li>
+
+								<li class=" active"><a href="#" rel="nofollow">Адреса</a></li>
+
+								<li><a href="#" rel="nofollow">Информация об аккаунте</a></li>
+
+								<li><span class="myProfil-sidebar__border"></span></li>
+
+								<li><a href="#" rel="nofollow">Выйти</a></li>
+							</div>
+							<!-- /.myProfil-sidebar__ul -->
+						</div>
+						<!-- /.myProfil-sidebar -->
+
+						<div class="myProfil-content">
+							<div class="myProfil-title h2">
+								<span>Мой профиль</span>
+							</div>
+
+							<div class="myProfil-content__title">
+								Редактировать адрес
+							</div>
+
+							<div class="myProfil-content__row row">
+								<form class="myProfil" action="#">
+									<fieldset class="fieldset">
+										<div class="form__line">
+											<label for="firstName" class="form__label">Имя<sup>*</sup></label>
+											<input id="firstName" type="text" name="name" class="">
+										</div>
+										<div class="form__line">
+											<label for="lastName" class="form__label">Фамилия<sup>*</sup></label>
+											<input id="lastName" type="text" name="name" class="">
+										</div>
+										<div class="form__line">
+											<label for="phone" class="form__label">Номер телефона<sup>*</sup></label>
+											<input id="phone" type="text" name="name" class="">
+										</div>
+									</fieldset>
+
+									<fieldset class="fieldset fieldset-half">
+										<div class="form__line form__line--select">
+											<label for="country" class="form__label">Страна<sup>*</sup></label>
+											<select id="country" name="#">
+												<option value="1" selected="selected">Пункт №1</option>
+												<option value="2">Пункт №2</option>
+												<option value="3">Пункт №3</option>
+												<option value="4">Пункт №4</option>
+											</select>
+										</div>
+
+										<div class="form__line ">
+											<label for="lastName" class="form__label">Область/район<sup>*</sup></label>
+											<input id="lastName" type="text" name="name" class="">
+										</div>
+
+										<div class="form__line">
+											<label for="phone" class="form__label">Город<sup>*</sup></label>
+											<input id="phone" type="text" name="name" class="">
+										</div>
+
+										<div class="form__line">
+											<label for="phone" class="form__label">Улица<sup>*</sup></label>
+											<input id="phone" type="text" name="name" class="">
+										</div>
+
+										<div class="form__line">
+											<label for="phone" class="form__label">Дом<sup>*</sup></label>
+											<input id="phone" type="text" name="name" class="">
+										</div>
+
+										<div class="form__line">
+											<label for="phone" class="form__label">Квартира<sup>*</sup></label>
+											<input id="phone" type="text" name="name" class="">
+										</div>
+
+										<div class="form__line">
+											<label for="phone" class="form__label">Индекс<sup>*</sup></label>
+											<input id="phone" type="text" name="name" class="">
+										</div>
+									</fieldset>
+									<button class="btn btn-green" type="submit">СОХРАНИТЬ</button>
+								</form>
+							</div>
+							<!-- /.myProfil-content__row -->
+
+						</div>
+						<!-- /.myProfil-content -->
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.container -->
+			</section>
+			<!-- /.section-PersArea -->
+			<div class="h-10"></div>
+
+		</main>
+		<!-- /.main -->
+		@@include('_footer.html')
+	</div>
+	<!-- /.wrapper -->
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

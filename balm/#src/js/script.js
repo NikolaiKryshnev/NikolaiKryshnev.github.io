@@ -30,16 +30,21 @@
 		$(document).ready(function () {
 			@@include('header.js')
 			@@include('acc.js')
+			@@include('slider.js')
 
 			@@include('tabs.js')
 
 			@@include('filter.js')
 			@@include('select.js')
-			@@include('cartProduct.js')
-			@@include('slider.js')
 			@@include('video.js')
+			@@include('myProfil-sidebar.js')
 
 			@@include('commentform.js')
+			@@include('numbers.js')
+			@@include('cartProduct.js')
+			@@include('plus.js')
+
+
 
 
 		});

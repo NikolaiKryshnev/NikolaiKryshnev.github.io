@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Авторизация"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html')
+		<main class="main">
+			@@include('_breadcrumbs.html',{
+			"text":"Авторизация"
+			})
+			<section class="section-PersArea persArea  _section">
+				<div class="container">
+					<div class="row">
+						<div class="page-title h2">
+							<span>Авторизация</span>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="persArea-col">
+							<div class="persArea-title">Зарегистрированным пользователям</div>
+							<div class="persArea-text ">Если у вас уже есть аккаунт, введите свой E-mail и пароль.</div>
+
+							<form class="persArea-form" action="#">
+								<div class="form__line">
+									<label for="namePhone" class="form__label">E-mail / Номер телефона<sup>*</sup></label>
+									<input id="namePhone" type="text" name="name" class="">
+								</div>
+								<label class="checkbox">
+									<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+									<span class="checkbox__text">Запомнить меня</span>
+								</label>
+
+								<div class="persArea-form__btns">
+									<button class="btn btn-green" type="submit">ВОЙТИ</button> <a  class="persArea-form__pass" href="#"> Я не помню пароль</a>
+								</div>
+
+								<div class="persArea-entry__social entry-social">
+									<div class="entry-social__title ">
+										Войти через соц. сети
+									</div>
+									<div class="entry-social__icons">
+										<a class="icon-social" href="#" rel="nofollow">
+											<img src="./img/icons/icon-social-google.svg"  alt=""  loading="lazy">
+										</a>
+										<a class="icon-social" href="#" rel="nofollow">
+											<img src="./img/icons/icon-social-facebook.svg"  alt=""  loading="lazy">
+										</a>
+										<a class="icon-social" href="#" rel="nofollow">
+											<img src="./img/icons/icon-social-inst.svg"  alt=""  loading="lazy">
+										</a>
+										<a class="icon-social" href="#" rel="nofollow">
+											<img src="./img/icons/icon-social-vk.svg"  alt=""  loading="lazy">
+										</a>
+									</div>
+								</div>
+							</form>
+							
+						</div>
+						<div class="persArea-col">
+							<div class="persArea-title">Новым пользователям</div>
+							<div class="persArea-text ">Создание учетной записи имеет множество преимуществ: быстрее оформляйте заказ, сохраняйте более одного адреса, отслеживайте заказы и многое другое.</div>
+							<a class="btn btn-green" href="#">ЗАРЕГИСТИРОВАТЬСЯ</a>
+						</div>
+
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.container -->
+			</section>
+			<!-- /.section-PersArea -->
+			<div class="h-10"></div>
+
+		</main>
+		<!-- /.main -->
+		@@include('_footer.html')
+	</div>
+	<!-- /.wrapper -->
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

@@ -10,7 +10,9 @@ $(function () {
 		$('.cartProduct-tabs .js-tab-trigger span').append('<div class="icon-plus"></div>');
 
 		for (let i = 0; i < $('.cartProduct-tabs  .js-tab-trigger').length; i++) {
-			$('.cartProduct-tabs .js-tab-trigger')[i].append($('.cartProduct-tabs .js-tab-content')[i]);
+			let elTrigger = $('.cartProduct-tabs .js-tab-trigger')[i];
+			let elContent =$('.cartProduct-tabs .js-tab-content')[i];
+			$(elTrigger).append($(elContent));
 		}
 	}
 })

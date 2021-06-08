@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Авторизация"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html')
+		<main class="main">
+			@@include('_breadcrumbs.html',{
+			"text":"Мои заказы"
+			})
+			<section class="section-myProfil myProfil _section">
+				<div class="container">
+					<div class="row">
+
+						<div class="myProfil-sidebar">
+							<div class="myProfil-sidebar__ul">
+								<li><a href="#" rel="nofollow">Мой аккаунт</a></li>
+
+								<li class="active"><a href="#" rel="nofollow">Мои заказы</a></li>
+
+								<li><a href="#" rel="nofollow">Мои желания </a></li>
+
+								<li><span class="myProfil-sidebar__border"></span></li>
+
+								<li><a href="#" rel="nofollow">Адреса</a></li>
+
+								<li><a href="#" rel="nofollow">Информация об аккаунте</a></li>
+
+								<li><span class="myProfil-sidebar__border"></span></li>
+
+								<li><a href="#" rel="nofollow">Выйти</a></li>
+							</div>
+							<!-- /.myProfil-sidebar__ul -->
+						</div>
+						<!-- /.myProfil-sidebar -->
+
+						<div class="myProfil-content">
+							<div class="myProfil-title h2">
+								<span>Мой профиль</span>
+							</div>
+
+							<div class="myProfil-content__title">
+								Мои заказы
+							</div>
+
+							<div class="myProfil-content__row row">
+								<form class="myProfil" action="#">
+									<div class="myProfil-order">
+										<div class="myProfil-order__block ">
+											<div class="myProfil-order__boxImg">
+												<div class="myProfil-order__img">
+													<img src="./img/section-sliderProduct/01.png" alt="" loading="lazy">
+												</div>
+											</div>
+											<div class="myProfil-order__info order-info">
+												<div class="order-info__date">23/09/2020</div>
+												<div class="order-info__name">Professional Titanium Ionic Iron UK New</div>
+												<div class="order-info__price"> <span class="order-info__qua"> 59 BYN</span>х1
+												</div>
+
+												<div class="order-info__delivery">
+													<span>Margarita Levina</span>
+													<span>
+														Беларусь, г. Минск,
+													</span>
+													<span>
+														ул. Мележа, 1, офис 1509
+													</span>
+												</div>
+												<div class="order-info__sum">59 BYN</div>
+											</div>
+											<!-- /.myProfil-order__info -->
+										</div>
+										<!-- /.myProfil-order__block -->
+
+
+										<div class="myProfil-order__block ">
+											<div class="myProfil-order__boxImg">
+												<div class="myProfil-order__img">
+													<img src="./img/section-sliderProduct/01.png" alt="" loading="lazy">
+												</div>
+											</div>
+											<div class="myProfil-order__info order-info">
+												<div class="order-info__date">23/09/2020</div>
+												<div class="order-info__name">Professional Titanium Ionic Iron UK New</div>
+												<div class="order-info__price"> <span class="order-info__qua"> 59 BYN</span>х1
+												</div>
+
+												<div class="order-info__delivery">
+													<span>Margarita Levina</span>
+													<span>
+														Беларусь, г. Минск,
+													</span>
+													<span>
+														ул. Мележа, 1, офис 1509
+													</span>
+												</div>
+												<div class="order-info__sum">59 BYN</div>
+											</div>
+											<!-- /.myProfil-order__info -->
+										</div>
+										<!-- /.myProfil-order__block -->
+
+
+										<div class="myProfil-order__block ">
+											<div class="myProfil-order__boxImg">
+												<div class="myProfil-order__img">
+													<img src="./img/section-sliderProduct/01.png" alt="" loading="lazy">
+												</div>
+											</div>
+											<div class="myProfil-order__info order-info">
+												<div class="order-info__date">23/09/2020</div>
+												<div class="order-info__name">Professional Titanium Ionic Iron UK New</div>
+												<div class="order-info__price"> <span class="order-info__qua"> 59 BYN</span>х1
+												</div>
+
+												<div class="order-info__delivery">
+													<span>Margarita Levina</span>
+													<span>
+														Беларусь, г. Минск,
+													</span>
+													<span>
+														ул. Мележа, 1, офис 1509
+													</span>
+												</div>
+												<div class="order-info__sum">59 BYN</div>
+											</div>
+											<!-- /.myProfil-order__info -->
+										</div>
+										<!-- /.myProfil-order__block -->
+
+
+									</div>
+									<!-- /.myProfil-order -->
+								</form>
+							</div>
+							<!-- /.myProfil-content__row -->
+							@@include('_pagination.html')
+						</div>
+						<!-- /.myProfil-content -->
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.container -->
+			</section>
+			<!-- /.section-PersArea -->
+			<div class="h-10"></div>
+
+		</main>
+		<!-- /.main -->
+		@@include('_footer.html')
+	</div>
+	<!-- /.wrapper -->
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>
