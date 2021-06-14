@@ -1,9 +1,11 @@
 function showModla(modal, btn) {
-	btn.click(function () {
+	btn.click(function (e) {
+		e.preventDefault()
 		$('body').addClass('active');
 		$('.wrapper').addClass('active');
 		$('.main').addClass('active');
 		modal.addClass('active');
+		return false
 	});
 
 	$('.close-js').click(function () {
@@ -23,4 +25,5 @@ function showModla(modal, btn) {
 	});
 }
 
-showModla($('.modal-overlay, .modal'), $('.popupBtn-js'));
+showModla($('.modal-overlay, .modal-pay'), $('.product-pay'));
+showModla($('.modal-overlay, .modal-viewing'), $('.btn-viewing'));

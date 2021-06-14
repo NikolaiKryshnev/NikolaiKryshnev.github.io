@@ -1,3 +1,4 @@
+// window.onload = function () {
 //BildSlider
 
 let windowWidth = window.innerWidth;
@@ -350,8 +351,8 @@ if (windowWidth < 992) {
 		// },
 		// Arrows
 		navigation: {
-		nextEl: '.slider-arrows ._mainGoals__arrow-next',
-		prevEl: '.slider-arrows ._mainGoals__arrow-prev',
+			nextEl: '.slider-arrows ._mainGoals__arrow-next',
+			prevEl: '.slider-arrows ._mainGoals__arrow-prev',
 		},
 		// pagination: {
 		// 	el: '.swiper-pagination--number',
@@ -385,33 +386,16 @@ if (windowWidth < 992) {
 
 
 let CasesSliders = new Swiper('._cases-sliders', {
-	/*
-	effect: 'fade',
-	autoplay: {
-		delay: 3000,
-		disableOnInteraction: false,
-	},
-	*/
+
 	observer: true,
 	observeParents: true,
 	slidesPerView: 1,
-	// autoHeight: true,
 	speed: 800,
-	// spaceBetween: 30,
 	autoHeight: true,
-
-	//touchRatio: 0,
-	//simulateTouch: false,
-	//loop: true,
-	//preloadImages: false,
-	//lazy: true,
-	// Dotts
 	pagination: {
 		el: '._cases__progress-bar',
 		type: 'progressbar'
-		// clickable: true,
 	},
-	// Arrows
 	navigation: {
 		nextEl: '.slider-arrows ._cases__arrow-next',
 		prevEl: '.slider-arrows ._cases__arrow-prev',
@@ -456,6 +440,9 @@ let CasesSliders = new Swiper('._cases-sliders', {
 		lazyImageReady: function () {
 			ibg();
 		},
+		slideNextTransitionEnd: function (swiper) {
+			caseSliderShowAnimation()	
+		 }
 	}
 
 	// And if we need scrollbar
@@ -463,3 +450,4 @@ let CasesSliders = new Swiper('._cases-sliders', {
 	//	el: '.swiper-scrollbar',
 	//},
 });
+// };

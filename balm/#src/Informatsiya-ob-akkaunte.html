@@ -28,9 +28,9 @@
 
 								<li><span class="myProfil-sidebar__border"></span></li>
 
-								<li class=" active"><a href="#" rel="nofollow">Адреса</a></li>
+								<li><a href="#" rel="nofollow">Адреса</a></li>
 
-								<li><a href="#" rel="nofollow">Информация об аккаунте</a></li>
+								<li class=" active"><a href="#" rel="nofollow">Информация об аккаунте</a></li>
 
 								<li><span class="myProfil-sidebar__border"></span></li>
 
@@ -50,7 +50,7 @@
 							</div>
 
 							<div class="myProfil-content__row row">
-								<form class="myProfil" action="#">
+								<form class="myProfil myProfil--account" action="#">
 									<fieldset class="fieldset fieldset-half">
 										<div class="form__line">
 											<label for="firstName" class="form__label">Имя<sup>*</sup></label>
@@ -60,46 +60,77 @@
 											<label for="lastName" class="form__label">Фамилия<sup>*</sup></label>
 											<input id="lastName" type="text" name="name" class="">
 										</div>
-										<div class="form__line">
-											<label for="phone" class="form__label">Номер телефона<sup>*</sup></label>
-											<input id="phone" type="text" name="name" class="">
+
+
+										<div class="form__checkbox">
+											<label class="checkbox">
+												<input class="checkbox__input checkbox-email " type="checkbox" value="1" name="">
+												<span class="checkbox__text"><span>Поменять E-mail</span>
+											</label>
+
+											<label class="checkbox">
+												<input class="checkbox__input checkbox-pass" type="checkbox" value="1" name="">
+												<span class="checkbox__text"><span>Поменять пароль</span>
+											</label>
 										</div>
-										<div class="form__line">
-											<label for="password" class="form__label">Пароль<sup>*</sup></label>
-											<input id="password" type="password" name="name" class="">
-										</div>
+
+
+										<button class="btn btn-green" type="submit">СОХРАНИТЬ</button>
 									</fieldset>
-									<div class="form__checkbox">
-										<label class="checkbox">
-											<input class="checkbox__input" type="checkbox" value="1" name="">
-											<span class="checkbox__text"><span>Поменять E-mail</span>
-										</label>
-	
-										<label class="checkbox">
-											<input class="checkbox__input" type="checkbox" value="1" name="">
-											<span class="checkbox__text"><span>Поменять пароль</span>
-										</label>
-									</div>
-								
+									<fieldset class="fieldset fieldset-half">
+										<div class="fieldset-email">
+											<div class="form__line">
+												<label for="mail" class="form__label">E-mail<sup>*</sup></label>
+												<input id="mail" type="email" name="" id="">
+											</div>
 
-									<button class="btn btn-green" type="submit">СОХРАНИТЬ</button>
-								</form>
+											<div class="form__line">
+												<label for="password" class="form__label">Пароль<sup>*</sup></label>
+												<input id="password" type="password" name="name" class="">
+											</div>
+										</div>
+
+										<div class="fieldset-password">
+											<div class="form__line">
+												<label for="current-password" class="form__label">Текущий пароль
+													<sup>*</sup></label>
+												<input id="current-password" type="password" name="name" class="">
+
+											</div>
+											<div class="form__line">
+
+												<label for="new-password" class="form__label">Новый пароль
+													<sup>*</sup></label>
+												<input id="new-password" type="password" name="name" class="">
+											</div>
+
+
+											<div class="form__line">
+												<label for="password_confirmation" class="form__label">Подтвердите новый пароль
+													<sup>*</sup></label>
+												<input id="password_confirmation" type="password" name="name" class="">
+											</div>
+										</div>
+
 							</div>
-							<!-- /.myProfil-content__row -->
-
+							</fieldset>
+							</form>
 						</div>
-						<!-- /.myProfil-content -->
-					</div>
-					<!-- /.row -->
-				</div>
-				<!-- /.container -->
-			</section>
-			<!-- /.section-PersArea -->
-			<div class="h-10"></div>
+						<!-- /.myProfil-content__row -->
 
-		</main>
-		<!-- /.main -->
-		@@include('_footer.html')
+					</div>
+					<!-- /.myProfil-content -->
+				</div>
+				<!-- /.row -->
+	</div>
+	<!-- /.container -->
+	</section>
+	<!-- /.section-PersArea -->
+	<div class="h-10"></div>
+
+	</main>
+	<!-- /.main -->
+	@@include('_footer.html')
 	</div>
 	<!-- /.wrapper -->
 	@@include('_popup.html',{})

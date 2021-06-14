@@ -6,7 +6,7 @@ $(function () {
 		$('.cartProduct-info__bot').append($('.cartProduct-info .cartProduct-add'))
 	}
 
-	if ($(window).width() <= 768) {
+	if ($(window).width() <= 767.98) {
 		$('.cartProduct-tabs .js-tab-trigger span').append('<div class="icon-plus"></div>');
 
 		for (let i = 0; i < $('.cartProduct-tabs  .js-tab-trigger').length; i++) {

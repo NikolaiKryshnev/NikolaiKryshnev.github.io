@@ -2,7 +2,7 @@
 	.section__title {
 		position: relative;
 	}
-	&-sliders{
+	&-sliders {
 		overflow: hidden;
 	}
 	&-slider {
@@ -39,8 +39,7 @@
 		}
 
 		&__box {
-			padding-top: 40px;
-			padding-bottom: 40px;
+			padding: 40px 0;
 
 			flex: 0 0 50%;
 			max-width: 50%;
@@ -59,10 +58,23 @@
 			display: flex;
 			flex-wrap: wrap;
 			height: 100%;
-			margin: 0 -15px;
+			// margin: 0 -15px;
+
+			&--max {
+				.progBar-line {
+					max-width: 100%;
+					flex: 1 1 100%;
+				}
+			}
 		}
 		.cases-table--line {
-			padding-left: 36px;
+			padding-left: 35px;
+			.cases-table__resulte{
+				margin: 0 -15px;
+			}
+		}
+		.cases-table--circle {
+			padding-right: 35px;
 		}
 
 		&__charts {
@@ -78,6 +90,15 @@
 				display: flex;
 				flex-wrap: wrap;
 				margin: 0 -15px;
+				&--max {
+					.charts-block {
+						max-width: 100%;
+						flex: 1 1 100%;
+					}
+					.charts-block__line {
+						padding-left: 50px;
+					}
+				}
 			}
 
 			.charts-block {
@@ -116,7 +137,6 @@
 
 					padding-left: 35px;
 					overflow: hidden;
-
 				}
 			}
 		}
@@ -126,7 +146,13 @@
 //-------------------------------------------------------------------------//
 .progBar {
 	&-circle {
-		padding: 0 15px;
+		// padding: 0 15px;
+		// max-width: 25%;
+		// flex: 0 0 25%;
+
+		& + .progBar-circle {
+			margin-left: 21px;
+		}
 
 		.circle {
 			position: relative;
@@ -140,6 +166,9 @@
 
 			&-svg {
 				@include rotate(270deg);
+				._circle-progress {
+					transition: stroke-dashoffset 0.3s linear;
+				}
 			}
 		}
 		&__number {
@@ -152,10 +181,12 @@
 		}
 
 		&__text {
-			max-width: 120px;
+			max-width: 130px;
 			line-height: 20px;
 			text-align: center;
 			color: #3f3f3f;
+
+			margin: 0 auto;
 		}
 	}
 
@@ -177,7 +208,7 @@
 		}
 		&--progress {
 			background: #222;
-			width: 50%;
+			width: 0%;
 			height: 100%;
 		}
 	}

@@ -1,4 +1,39 @@
-window.onload = function () {
+
+// зона видимости 
+
+var Visible = function (target) {
+	// Все позиции элемента
+	var targetPosition = {
+		top: window.pageYOffset + target.getBoundingClientRect().top,
+		left: window.pageXOffset + target.getBoundingClientRect().left,
+		right: window.pageXOffset + target.getBoundingClientRect().right,
+		bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+	},
+		// Получаем позиции окна
+		windowPosition = {
+			top: window.pageYOffset,
+			left: window.pageXOffset,
+			right: window.pageXOffset + document.documentElement.clientWidth,
+			bottom: window.pageYOffset + document.documentElement.clientHeight
+		};
+
+	if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+		targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+		targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
+		targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+		// Если элемент полностью видно, то запускаем следующий код
+		// console.log('Вы видите элемент :)');
+		target.classList.add('animation-show');
+
+		anProgressBar(target.querySelectorAll('.progBar-circle'));
+		anProgressBar(target.querySelectorAll('.progBar-line'));
+		chartsSvg(target.querySelectorAll('.charts-block__ico'), target.querySelectorAll('.charts-block__line'))
+
+	} else {
+		// Если элемент не видно, то запускаем этот код
+		// console.clear();
+	};
+};
 
 // animation numbers 
 const time = 2000;
@@ -7,7 +42,7 @@ const step = 1;
 function outNum(num, elem) {
 	let e = elem,
 		n = 0;
-	let t = Math.round(time / (num / step));
+	let t = Math.ceil(time / (num / step));
 	let interval = setInterval(() => {
 		n = n + step;
 		if (n == num) {
@@ -19,16 +54,18 @@ function outNum(num, elem) {
 		if (e.closest('._progress-bar').querySelector('.progBar-line--progress') !== null) {
 			e.closest('._progress-bar').querySelector('.progBar-line--progress').style.width = `${n}%`;
 		} else {
-
-			let result = 566 + (566 * n / e.dataset.maxprognumber);
+			
+			let result = (566 + (566 * n / e.dataset.maxprognumber));
+			// console.log(result);
+			
 			e.closest('._progress-bar').querySelector('.circle').querySelector('._circle-progress').style.strokeDashoffset = `${result}`;
 		}
 	},
-		t);
+		t);	
 };
 //--------------
 
-
+// progressBar
 function anProgressBar(block) {
 	for (let i = 0; i < block.length; i++) {
 		let el = block[i],
@@ -36,37 +73,55 @@ function anProgressBar(block) {
 			prognumber = +numberSum.dataset.prognumber;
 
 		outNum(prognumber, numberSum)
+
 	}
 }
 
-anProgressBar(document.querySelectorAll('.progBar-circle'))
-anProgressBar(document.querySelectorAll('.progBar-line'))
-
 // charts
-
 var object = document.getElementById("logoObject");
 
-	function chartsSvg() {
-		let charts = document.querySelectorAll('.charts-block__ico'),
-		chartsLine = document.querySelectorAll('.charts-block__line');
-		for (let i = 0; i < charts.length; i++) {
-			const el = charts[i];
-			let svg = el.contentDocument.querySelector('svg');
-			svg.setAttribute('viewBox', `0 0 ${svg.getAttribute('width')} ${svg.getAttribute('height')}`);
-			svg.style.cssText = `
+function chartsSvg(charts, chartsLine) {
+	for (let i = 0; i < charts.length; i++) {
+		const el = charts[i];
+		let svg = el.contentDocument.querySelector('svg');
+		svg.setAttribute('viewBox', `0 0 ${svg.getAttribute('width')} ${svg.getAttribute('height')}`);
+		svg.style.cssText = `
 				position: absolute;
 				width: max-content;
 				bottom: 0;
 		 	`;
-		}
+	}
 
-		for (let j = 0; j < chartsLine.length; j++) {
-			const chartL = chartsLine[j];
-			chartL.style.width = '100%';
+	for (let j = 0; j < chartsLine.length; j++) {
+		const chartL = chartsLine[j];
+		chartL.style.width = '100%';
+	}
+}
+
+function caseSliderShowAnimation() {
+	let caseBlock = document.querySelectorAll('.cases-slider');
+	for (let i = 0; i < caseBlock.length; i++) {
+		const caseBlockI = caseBlock[i];
+		if (caseBlockI.classList.contains("swiper-slide-active")) {
+			window.addEventListener('scroll', function () {
+				// console.log(caseBlockI.classList.contains("animation-show"));
+				if (caseBlockI.classList.contains("animation-show") == false) {
+					Visible(caseBlockI);
+				}
+			});
+			if (caseBlockI.classList.contains("animation-show") == false) {
+				Visible(caseBlockI);
+			}
 		}
 	}
-	chartsSvg()
+
+}
+
+window.onload = function () {
+	caseSliderShowAnimation()
 };
+
+
 
 
 

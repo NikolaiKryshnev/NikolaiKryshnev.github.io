@@ -143,19 +143,22 @@
 
 			&__social
 				display: flex
+				justify-content: flex-end
 				margin-bottom: 25px
 				@media ( max-width:$md3+px )
 					margin-bottom: 0
 				.social-icon
 					display: block
 					cursor: pointer
-					svg
-						width: 23px
-						height: 23px
+					
+					font-size: 24px
+					@include transitColor(0.3s)
+
 					&:hover
+						color: $gold
 						
 				.social-icon + .social-icon
-					margin-left: 20px
+					margin-left: 10px
 						
 	@media ( max-width:$md2+px )
 		.acc-body-js
@@ -175,10 +178,15 @@
 				background: $white
 				transition: all 0.3s linear
 
+			&:after
+					transform: rotate(90deg) translateY(-50%)
+
+
 		.footer-nav__title.active
 			.icon-plus
 				&::after
-					transform: rotate(90deg) translateY(-50%)
+					@include translateY(-50%)
+
 					
 //-------------------------------------------------------------------------//
 

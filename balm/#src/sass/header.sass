@@ -1,5 +1,7 @@
 .header
-	position: relative
+	position: fixed
+	width: 100%
+	background: #fff
 	z-index: 4
 	@media ( max-width:$md3+px )
 		.container
@@ -9,7 +11,7 @@
 	.logo
 		display: flex
 		align-items: center
-		max-width: 200px
+		max-width: 165px
 		width: 100%
 		height: auto
 		@media ( max-width:$md3+px )
@@ -50,19 +52,30 @@
 		.header-cart__price
 			@include transitColor(0.3s)
 
+		.icon-f:before
+			transition: all 0.3s linear
 
 		// padding: 0 10px
-		&:hover, &.active
+		&.active
 			.header-cart__price
 				color: $gold
 
-			svg
-				path
-					fill: $gold
+			
+			.icon-f:before
+				color: $gold
 
 			.header-top__box::before
 				transform: rotate(180deg) translateY(50%)
-					
+		@media ( min-width:$md1+px )
+			&:hover	
+				.header-cart__price
+					color: $gold	
+				.icon-f:before
+					color: $gold
+
+				.header-top__box::before
+					transform: rotate(180deg) translateY(50%)
+
 		svg
 			width: 100%
 			height: 100%
@@ -173,12 +186,16 @@ ul.header-pesAr__menu
 				left: 50%
 				width: 1px
 				background-color: $black
-				
+				@include transitBgColor(0.3s)
 
 			&:before
 				transform: rotate(45deg)
 			&:after
 				transform: rotate(-45deg)
+
+		&:hover
+			.close-box:before, .close-box::after
+				background: $gold
 
 	.btn
 		width: 100%
@@ -277,10 +294,16 @@ ul.products-form__list
 		margin-left: 8px
 
 	&__name
+		display: block
+		text-decoration: none
+		color: #4D4D4D
+		line-height: 16px
 		text-transform: uppercase
 		font-size: 14px
-		line-height: 1.2
 		margin-bottom: 5px
+		@include transitColor(0.3s)
+		&:hover
+			color: $gold
 
 	&__col
 		color: #7C7C7C
@@ -313,6 +336,12 @@ ul.products-form__list
 	.product-block__edit
 		display: flex
 		align-items: center
+		.icon-basket, .icon-pen
+			color: #000
+			text-decoration: none
+			@include transitColor(0.3s)
+			&:hover
+				color: $gold
 
 		.icon-basket,.icon-pen
 			display: flex
@@ -349,6 +378,7 @@ ul.products-form__list
 			text-transform: uppercase
 
 	.btn-search
+		
 		position: absolute
 		left: 0
 		top: 50%
@@ -361,14 +391,14 @@ ul.products-form__list
 		align-items: center
 		justify-content: center
 
-		&__icon
-			width: 12px
-			height: 12px
-			transition: stroke 0.3s linear 
+		&__icon:before
+			// width: 12px
+			// height: 12px
+			transition: all 0.3s linear 
 
 		&:hover
-			.btn-search__icon
-				stroke: $gold
+			.btn-search__icon:before
+				color: $gold
 
 //-------------------------------------------------------------------------//
 
@@ -390,7 +420,7 @@ ul.products-form__list
 			height: 1px
 			width: 100vw
 
-			background: #7C7C7C
+			background: #ccc
 
 		&::after		
 			top: 0
@@ -426,7 +456,7 @@ ul.products-form__list
 
 			color: #4D4D4D
 
-			font-size: 16px
+			font-size: 14px
 			text-decoration: none
 			@include transitColor(0.3s)
 			@media ( min-width:$md1+px )
@@ -480,11 +510,12 @@ ul.products-form__list
 	top: 100%
 	
 	@media ( min-width:$md1+px )
-		padding: 25px 25px
+		padding: 25px 0 25px 25px
 		position: absolute
 		max-height: 350px
+
 		@include horizcenter()
-		width: 90vw
+		width: 100vw
 		opacity: 0
 		visibility: hidden
 		transition: all 0.3s linear
@@ -576,6 +607,10 @@ ul.products-form__list
 		@media ( min-width:$md1+px )
 			border-bottom: 1px solid  rgba($black, 1)
 
+@media ( min-width:$md1+px )
+	.brand-js .menu-sub
+		padding: 25px 0
+
 //-------------------------------------------------------------------------//
 .burger
 	display: none
@@ -653,6 +688,10 @@ ul.products-form__list
 						background: #f7f7f7
 						z-index: 1
 
+					&[data-tab="2"]
+						&::after
+							background: #fff
+
 		&-content
 			&__item
 				display: none
@@ -712,7 +751,10 @@ ul.products-form__list
 	justify-content: space-between
 	border-bottom: 1px solid #7c7c7c
 	padding-bottom: 15px
-	margin-bottom: 15px
+	// margin-bottom: 15px
+	@media ( min-width:$md1+px )
+		padding: 0 25px 15px
+
 	@media ( max-width:$md1+px )
 		flex-wrap: wrap
 
@@ -767,11 +809,13 @@ ul.products-form__list
 	overflow-y: auto
 	width: 100%
 	height: 100%
+	@media ( min-width:$md1+px )
+		padding: 0 25px
 	@media ( max-width:$md1+px )
 		max-height: 350px
 
 	@media ( max-width:$md3+px )
-		max-height: 100vh
+		max-height: calc(100vh - 280px)
 
 	&::-webkit-scrollbar
 		width: 3px
@@ -822,6 +866,8 @@ ul.products-form__list
 
 			
 .brand-abc_content
+	margin-top: 15px
+
 	pointer-events: initial !important
 	width: 100%
 	position: relative
@@ -837,4 +883,5 @@ ul.products-form__list
 
 .mobTab-content__item
 	background: $white
+
 

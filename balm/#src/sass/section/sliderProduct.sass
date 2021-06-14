@@ -53,6 +53,7 @@
 			text-decoration: none
 			@media ( max-width:$md3+px )
 				font-size: $mfz12
+				height: auto
 			&:hover
 				text-decoration: underline
 
@@ -60,9 +61,12 @@
 		&__price
 			@include f700()
 			margin-top: 15px
-			color: #4D4D4D
+			color: $gold
+			font-size: $fz20
 
 			&--desc
+				color: #4D4D4D
+				font-size: $fz16
 				position: relative
 				margin-top: 0
 				&::after
@@ -107,6 +111,7 @@
 
 			height: 36px
 			font-size: 14px
+			border-radius: 2px
 			@media ( max-width:$md1+px )
 				margin-right: 4px
 				position: relative
@@ -144,6 +149,9 @@
 
 				background: $green
 
+			@media ( max-width:$md3+px )
+				font-size: 10px
+
 
 		.product-cart, .product-vishList, .product-pay
 			@include transitBgColor(0.3s)
@@ -166,7 +174,9 @@
 
 			@media ( max-width:$md1+px )
 				display: none
-
+	.product-btns
+		.icon-f
+			font-size: 20px
 	&:hover
 		.product-btns
 			opacity: 1

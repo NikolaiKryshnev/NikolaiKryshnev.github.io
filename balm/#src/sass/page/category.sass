@@ -66,16 +66,46 @@
 
 	&__item
 		position: relative
-		padding: 0 40px 0 0
-		margin-right: 27px
-		border-right: 0.5px solid #7C7C7C
+		padding: 18px 30px 
+		margin: -18px 0
+		// border-right: 0.5px solid #7C7C7C
+		&:first-child
+			padding-left: 0
+		@media ( min-width:$md1+px )
+			&:before
+				right: 0
+				@include pseudoEl(block, absolute, '')
+				@include verticalcenter()
+				height: 19px
+				width: 1px
+				background: #7C7C7C
+				
+		&:first-child
+			ol.filter-form__content, ol.sort-form__content
+				margin-left: 0
+
+		&:hover
+			.filter-form__title, .sort-form__title
+				color: $gold
+				cursor: pointer
+				&::before
+					transform: translateY(-50%) rotate(180deg)
+			@media ( min-width:$md1+px )
+				.filter-form__content, .sort-form__content
+					display: block
+					opacity: 1
+					visibility: visible
+			
+
 		@media ( max-width:$md3+px )
 			font-size: 12px
 
 		&:last-child
 			margin-right: 0
-			border-right: 0
 			padding-right: 0
+			&:before
+				display: none
+				
 
 	&__title
 		position: relative
@@ -136,6 +166,7 @@
 				padding: 0 0 0px 0 
 				border-bottom: 0
 				margin-bottom: 0
+
 	@media ( max-width:$md3+px )
 		max-width: 320px
 		width: 100%
@@ -143,9 +174,11 @@
 		
 ol.filter-form__content, ol.sort-form__content
 	display: none
-	margin-top: 18px
+	transition: all 0.3s linear
+	// margin-top: 18px
 	padding: 20px 25px
 	min-width: 210px
+	margin-left: -1px
 	
 	position: absolute
 	z-index: 4
@@ -156,6 +189,10 @@ ol.filter-form__content, ol.sort-form__content
 
 	// pointer-events: none
 	background: $white
+	@media ( min-width:$md1+px )
+		opacity: 0
+		visibility: hidden
+		
 	@media ( max-width:$md2+px )
 		top: 0
 		left: 100%
@@ -181,8 +218,6 @@ ol.filter-form__content, ol.sort-form__content
 			border-bottom: 0
 			margin-bottom: 0
 			
-
-
 	&:hover
 		// pointer-events: auto
 
@@ -339,7 +374,7 @@ ol.filter-form__content, ol.sort-form__content
 	margin-top: 10px
 
 	.product-col
-		border-bottom: 0.5px solid #7C7C7C
+		border-bottom: 1px solid #7C7C7C
 		padding-bottom: 35px
 		margin-bottom: 20px
 		@media ( max-width:$md1+px )
@@ -435,3 +470,11 @@ ol.filter-form__content, ol.sort-form__content
 		
 	@media ( min-width:$md2+px )
 		display: none
+
+
+.sidebar__sort
+	.select__value
+		padding-right: 15px
+
+		&::before
+			right: 0

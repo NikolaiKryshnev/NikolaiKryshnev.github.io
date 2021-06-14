@@ -29,6 +29,7 @@
 		//<TASK>---------------------------------------
 		$(document).ready(function () {
 			@@include('header.js')
+
 			@@include('acc.js')
 			@@include('slider.js')
 
@@ -43,10 +44,8 @@
 			@@include('numbers.js')
 			@@include('cartProduct.js')
 			@@include('plus.js')
-
-
-
-
+			@@include('popup.js')
+			@@include('myProfile.js')
 		});
 		//</TASK>---------------------------------------
 	})(jQuery);

@@ -99,7 +99,7 @@
 					justify-content: flex-end
 					align-items: center
 
-					width: 13%
+					width: 8%
 					font-size: $fz18
 					color: #4D4D4D
 					@include f500()
@@ -253,26 +253,43 @@
 			margin-bottom: 10px
 			cursor: pointer
 
-			.btn
-				opacity: 0
-				visibility: hidden
+			.btn.btn-green
+				
 				// z-index: -1
 				position: absolute
-				left: 50%
-				top: 50%
-				transform: translateX(-50%) translateY(-50%)
-				transition: visibility 0.3s linear,  opacity 0.3s linear, z-index 0.3s linear
-				max-width: 185px
-				width: 100%
-				padding: 0 5px
 				font-size: 14px
 				@include f400()
+				margin: 0
+
+				@media ( min-width:$md3+px )
+					opacity: 0
+					visibility: hidden
+					transform: translateX(-50%) translateY(-50%)
+					max-width: 185px
+					width: 100%
+
+					padding: 0 5px
+					left: 50%
+					top: 50%
+					transition: visibility 0.3s linear,  opacity 0.3s linear, z-index 0.3s linear, background 0.3s linear
+
+				@media ( max-width:$md3+px )
+					left: 0
+					bottom: 0
+					z-index: 2
+					width: 35px
+					height: 35px
+					font-size: 0
+					background-position: center
+					background-repeat: no-repeat
+					background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M15.8169 14.9324L11.3028 10.4182C13.3595 7.91589 13.2195 4.20124 10.8824 1.86418C8.39623 -0.622043 4.35088 -0.622043 1.86466 1.86418C-0.621555 4.35039 -0.621555 8.39574 1.86466 10.882C4.2011 13.2184 7.91529 13.3599 10.4187 11.3023L14.9328 15.8164C15.177 16.0606 15.5728 16.0606 15.8169 15.8164C16.061 15.5723 16.061 15.1765 15.8169 14.9324ZM9.99841 9.99789C7.99966 11.9966 4.74748 11.9966 2.74873 9.99789C0.749977 7.99914 0.749977 4.74696 2.74873 2.74821C4.74741 0.749551 7.9996 0.749395 9.99841 2.74821C11.9972 4.74696 11.9972 7.99914 9.99841 9.99789Z' fill='white'/%3E%3Cpath d='M9.43412 5.74874H6.9985V3.31311C6.9985 2.96786 6.71863 2.68799 6.37338 2.68799C6.02813 2.68799 5.74825 2.96786 5.74825 3.31311V5.74874H3.31263C2.96738 5.74874 2.6875 6.02861 2.6875 6.37386C2.6875 6.71911 2.96738 6.99899 3.31263 6.99899H5.74825V9.43461C5.74825 9.77986 6.02813 10.0597 6.37338 10.0597C6.71863 10.0597 6.9985 9.77986 6.9985 9.43461V6.99899H9.43412C9.77938 6.99899 10.0592 6.71911 10.0592 6.37386C10.0592 6.02861 9.77938 5.74874 9.43412 5.74874Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='16' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E")
 
 		&__boxImg:hover
-			.btn
-				opacity: 1
-				visibility: visible
-				z-index: 2
+			.btn.btn-green
+				@media ( min-width:$md3+px )
+					opacity: 1
+					visibility: visible
+					z-index: 2
 
 		&__img
 			@include img_02()
@@ -314,6 +331,7 @@
 	max-width: 100%
 	margin-bottom: 50px
 	margin-top: 30px
+	padding: 0 15px
 	@media ( max-width:$md2+px )
 		display: none
 
@@ -368,8 +386,39 @@
 			&:last-child
 				border: 0
 
+
+	&__address
+		margin-top: 65px
+
+	.column-address__info
+		margin-top: 20px
+		color: #7C7C7C
+		line-height: 22px
+		padding: 22px 32px
+		border: 0.5px solid #7C7C7C
+		span
+			display: block
+
+		a
+			color: $gold
+			display: block
+			padding-top: 15px
+	
+	&__delivery
+		margin-top: 55px
+		.column-delivery__info
+			color: #7C7C7C
+			margin-top: 15px
+		a
+			color: $gold
+			display: block
+			padding-top: 15px
+			display: block
+
+
+
+
 	&__text
-		
 		height: 68px
 		display: flex
 		align-items: center
@@ -534,3 +583,16 @@
 		input:checked + .delivery-text .delivery-name
 			color: #000000
 
+
+//-------------------------------------------------------------------------//
+.orders-info
+	padding: 0 15px
+	width: 100%
+	color: #7C7C7C
+	.orders-number
+		margin-bottom: 20px
+		
+	span
+		color: #000
+
+						
