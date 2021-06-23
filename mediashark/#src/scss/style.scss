@@ -10,7 +10,7 @@
 //</Подключаем шрифты>=======================================================================================
 
 //<Иконочные шрифты>==========================================================================================
-//@import "icons";
+@import "icons";
 //</Иконочные шрифты>==========================================================================================
 
 //</ШРИФТЫ>=======================================================================================================
@@ -66,11 +66,17 @@ body {
 		// padding: 0 10px;
 	}
 }
+._row {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+}
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
 @import "forms";
 @import "ui";
+
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
@@ -88,12 +94,19 @@ body {
 @import "section/stagesWork";
 @import "section/mainGoals";
 @import "section/cases";
-
+@import "section/ways";
+@import "section/clients";
+@import "section/string";
+@import "section/reviews";
+@import "section/faq";
+@import "section/blog";
+@import "section/partners";
+@import "section/advantages";
 
 @import "home";
 
 //@import "datepicker";
-//@import "lightgallery";
+@import "lightgallery";
 //@import "pagging";
 @import "popup";
 @import "task/breadcrumbs";
@@ -119,8 +132,10 @@ body {
 //<КОНОПКИ>====================================================================================================
 .btn {
 	position: relative;
+	display: inline-block;
 
-	display: block;
+	padding: 0 32px;
+
 	border: 1px solid #222222;
 	background: #222222;
 
@@ -132,19 +147,18 @@ body {
 	text-align: center;
 	@include f700();
 
-	overflow: hidden;
-	transition: 0.5s ease-in-out;
 	&:hover {
 		border-color: #000;
 		background: none;
 		color: $black;
-		.btn-hover {
-			width: 225%;
-			height: 562.5px;
-		}
 	}
+}
+.btn-an {
+	position: relative;
+	overflow: hidden;
+	transition: 0.5s ease-in-out;
 
-	&-hover {
+	.btn-hover {
 		position: absolute;
 
 		display: block;
@@ -158,13 +172,18 @@ body {
 		transform: translate(-50%, -50%);
 		z-index: 1;
 	}
-	&-text {
+	.btn-text {
 		position: relative;
 		z-index: 2;
 	}
-	
+	&:hover {
+		.btn-hover {
+			width: 225%;
+			height: 562.5px;
+		}
+	}
 }
-.btn--white{
+.btn--white {
 	line-height: 60px;
 	color: $white;
 
@@ -174,24 +193,48 @@ body {
 	border: 1px solid #fff;
 	background: none;
 	font-size: $fz16;
-	@media ( max-width:$md3+px){
+	@media (max-width: $md3+px) {
 		padding-left: 27px;
 		padding-right: 27px;
 	}
-	.btn-hover{
+	.btn-hover {
 		background: #222;
 	}
-	&:hover{
-		color: $white
+	&:hover {
+		color: $white;
 	}
 }
+.btn-border {
+	display: inline-block;
+	padding: 0 40px;
+	margin-top: 50px;
 
+	color: #000;
+	@include f700();
+	line-height: 65px;
+	text-align: center;
+
+	border: 1px solid #000000;
+	@media ( max-width:$md3+px){
+		padding: 0 15px;
+		line-height: 54px;
+	}
+
+	&.br-black {
+		&:hover{
+			color: $white;
+		}
+
+		.btn-hover {
+			background-color: #000;
+		}
+	}
+}
 //</КОНОПКИ>====================================================================================================
 
 //<ОТСТУПЫ>====================================================================================================
 
 .h-200 {
-	
 	@media (min-width: $md1+px) {
 		height: 200px;
 	}

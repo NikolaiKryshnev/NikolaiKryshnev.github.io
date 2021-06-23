@@ -1,0 +1,51 @@
+.ways {
+	// .ways-row
+	&-row {
+	}
+}
+
+.way {
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+	flex: 0 0 50%;
+	max-width: 50%;
+	@media (max-width: $md1+px) {
+		flex: 1 1 100%;
+		max-width: 100%;
+		margin-bottom: 35px;
+	}
+
+	//.way__title
+	&__title {
+		text-transform: uppercase;
+		padding: 35px 45px;
+
+		font-size: $fz24;
+		border: 1px solid #e1e1e1;
+		@media (max-width: $md3+px) {
+			padding: 15px 20px;
+			font-size: $fz18;
+			line-height: 24px;
+		}
+	}
+
+	//.way__text
+	&__text {
+		line-height: 25px;
+		padding: 25px 45px;
+		border-left: 1px solid #e1e1e1;
+		border-right: 1px solid #e1e1e1;
+
+		@media (max-width: $md3+px) {
+			padding: 15px 20px;
+		}
+	}
+
+	.btn {
+		width: 100%;
+		line-height: 65px;
+	}
+}

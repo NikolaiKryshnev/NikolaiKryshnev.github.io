@@ -1,5 +1,32 @@
-footer{}
-//====================================================================================================
+.footer {
+	display: flex;
+	align-items: center;
+	
+	min-height: 220px;
 
-//====================================================================================================
+	padding: 40px 0 ;
 
+	text-align: center;
+	background: #F9F9F9;
+
+	.logo {
+		display: inline-block;
+		margin: 0 auto 30px;
+
+		font-size: 40px;
+
+	}
+
+	&-info {
+		font-size: 14px;
+		color: #929292;
+		line-height: 22px;
+
+		a {
+			color: inherit;
+			&:hover {
+				color: #000;
+			}
+		}
+	}
+}

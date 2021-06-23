@@ -51,9 +51,7 @@
 	}
 }
 
-
-
-@mixin f700(){
+@mixin f700() {
 	font-family: CenturyGothic-Bold;
 }
 
@@ -61,7 +59,7 @@
 // 	font-family: CynthoNext-Medium;
 // }
 
-@mixin f400(){
+@mixin f400() {
 	font-family: CenturyGothic;
 }
 
@@ -74,78 +72,75 @@
 
 //</FONTS>---------------------------------------
 
-@mixin flexbox(){
+@mixin flexbox() {
 	display: flex;
 	font-size: 0;
 }
 
-@mixin verticalcenter(){
+@mixin verticalcenter() {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
 }
 
-@mixin horizcenter(){
+@mixin horizcenter() {
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
 }
 
-@mixin blackwhite(){
+@mixin blackwhite() {
 	filter: url(filters.svg#grayscale);
 	filter: gray;
 	-webkit-filter: grayscale(1);
 }
-	
-@mixin blurrytext(){
-   color: transparent;
-	text-shadow: 0 0 5px rgba(0,0,0,0.5);
+
+@mixin blurrytext() {
+	color: transparent;
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-
-@mixin white(){
+@mixin white() {
 	filter: brightness(0) invert(1);
 }
-	
 
 //<TRANSITION MIXIN>---------------------------------------
 
-@mixin transitColor($s){
+@mixin transitColor($s) {
 	transition: $s color linear;
 }
 
-@mixin transitBgColor($s){
+@mixin transitBgColor($s) {
 	transition: $s background-color linear;
 }
 
-@mixin transitTextandBgColor($s){
+@mixin transitTextandBgColor($s) {
 	transition: $s background-color linear, $s color linear;
 }
 //</TRANSITION MIXIN>---------------------------------------
 
 //<TRANSFORM MIXIN>---------------------------------------
 
-@mixin rotate($deg){
+@mixin rotate($deg) {
 	transform: rotate($deg);
 }
-
-@mixin translate($px){
+@mixin translate($px) {
 	transform: translate($px);
 }
 
-@mixin translateX($px){
+@mixin translateX($px) {
 	transform: translateX($px);
 }
 
-@mixin translateY($px){
+@mixin translateY($px) {
 	transform: translateY($px);
 }
 
-@mixin translateZ($px){
+@mixin translateZ($px) {
 	transform: translateZ($px);
 }
 
-@mixin btnBot($right,$left ){
+@mixin btnBot($right, $left) {
 	position: fixed;
 	bottom: $right;
 	right: $left;
@@ -153,10 +148,9 @@
 
 //</TRANSFORM MIXIN>---------------------------------------
 
-
 //<IMG>---------------------------------------
 
-@mixin img_01(){
+@mixin img_01() {
 	position: relative;
 	z-index: 2;
 
@@ -168,18 +162,18 @@
 	object-fit: cover;
 }
 
-@mixin img_02(){
+@mixin img_02() {
 	position: absolute;
 	top: 0;
 	left: 0;
 
 	display: block;
-	
+
 	width: 100%;
 	height: 100%;
 }
 
-@mixin img_03($pd){
+@mixin img_03($pd) {
 	position: relative;
 
 	padding: $pd 0;
@@ -193,7 +187,7 @@
 
 //<TRI>---------------------------------------
 
-@mixin triT($height, $width, $color){
+@mixin triT($height, $width, $color) {
 	width: 0;
 	height: 0;
 	border-style: solid;
@@ -201,7 +195,7 @@
 	border-color: transparent transparent $color transparent;
 }
 
-@mixin triTR($width, $color){
+@mixin triTR($width, $color) {
 	width: 0;
 	height: 0;
 	border-style: solid;
@@ -209,8 +203,7 @@
 	border-color: transparent transparent $color transparent;
 }
 
-
-@mixin triT($height, $width, $color){
+@mixin triT($height, $width, $color) {
 	width: 0;
 	height: 0;
 	border-style: solid;
@@ -218,7 +211,7 @@
 	border-color: transparent transparent $color transparent;
 }
 
-@mixin triTL($width, $color){
+@mixin triTL($width, $color) {
 	width: 0;
 	height: 0;
 	border-style: solid;
@@ -226,7 +219,7 @@
 	border-color: transparent transparent $color transparent;
 }
 
-@mixin triBR($width, $color){
+@mixin triBR($width, $color) {
 	width: 0;
 	height: 0;
 	border-style: solid;
@@ -234,8 +227,7 @@
 	border-color: transparent transparent $color transparent;
 }
 
-
-@mixin triB($height, $width, $color){
+@mixin triB($height, $width, $color) {
 	width: 0;
 	height: 0;
 	border-style: solid;
@@ -243,7 +235,7 @@
 	border-color: transparent transparent $color transparent;
 }
 
-@mixin triBL($width, $color){
+@mixin triBL($width, $color) {
 	width: 0;
 	height: 0;
 	border-style: solid;
@@ -251,7 +243,7 @@
 	border-color: transparent transparent $color transparent;
 }
 
-@mixin triL($height, $width, $color){
+@mixin triL($height, $width, $color) {
 	width: 0;
 	height: 0;
 	border-style: solid;
@@ -261,19 +253,17 @@
 
 //</TRI>---------------------------------------
 
-
 //<pseudoEl>---------------------------------------
 
-@mixin pseudoEl($display, $pos, $content){
+@mixin pseudoEl($display, $pos, $content) {
 	content: $content;
 	display: $display;
 	position: $pos;
 }
 
-@mixin bgBlack($op, $index){
-	
-	&::before{
-		@include pseudoEl(block, absolute, '');
+@mixin bgBlack($op, $index) {
+	&::before {
+		@include pseudoEl(block, absolute, "");
 		top: 0;
 		bottom: 0;
 		right: 0;
@@ -287,19 +277,39 @@
 
 		transition: opacity 0.3s linear, visibility 0.3s linear;
 	}
-	&.active::before{
+	&.active::before {
 		visibility: visible;
 		opacity: 1;
 		background: rgba(0, 0, 0, $op);
 	}
-
 }
-@mixin parallaxBg(){
+@mixin parallaxBg() {
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	
 }
 
 //</pseudoEl>---------------------------------------
+
+@mixin grid-width($gridRowStart, $gridRowEnd, $gridColumnStart, $gridColumnEnd, $hoverGridColumnStart) {
+	grid-column-start: $gridColumnStart;
+	grid-row-start: $gridRowStart;
+	&:hover, &._active {
+		grid-column-start: $hoverGridColumnStart;
+		grid-column-end: $gridColumnEnd;
+		grid-row-end: $gridRowEnd;
+		z-index: 2;
+	}
+}
+
+@mixin grid-widthTouch($gridRowStart, $gridRowEnd, $gridColumnStart, $gridColumnEnd, $hoverGridColumnStart) {
+	grid-column-start: $gridColumnStart;
+	grid-row-start: $gridRowStart;
+	&._active {
+		grid-column-start: $hoverGridColumnStart;
+		grid-column-end: $gridColumnEnd;
+		grid-row-end: $gridRowEnd;
+		z-index: 2;
+	}
+}

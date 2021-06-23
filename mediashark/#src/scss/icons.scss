@@ -19,13 +19,53 @@
 
 [class^="_icon-"],
 [class*=" _icon-"] {
+	color: #222222;
+
 	&:before {
 		@extend %ic;
 		display: block;
 	}
 }
-
-._icon-f:before { content: "\EA01"; }
-._icon-feather_edit:before { content: "\EA02"; }
-._icon-Group 18:before { content: "\EA03"; }
-._icon-Group 70:before { content: "\EA04"; }
+._icon-arrow-left:before {
+	content: "\e90b";
+ }
+ ._icon-arrow-right:before {
+	content: "\e90c";
+ }
+ ._icon-arrow-bot:before {
+	content: "\e90d";
+ }
+ ._icon-behance:before {
+	content: "\e900";
+ }
+ ._icon-book:before {
+	content: "\e901";
+ }
+ ._icon-instagram:before {
+	content: "\e902";
+ }
+ ._icon-eye:before {
+	content: "\e903";
+ }
+ ._icon-unlink:before {
+	content: "\e904";
+ }
+ ._icon-zoom-in:before {
+	content: "\e905";
+ }
+ ._icon-pinterest:before {
+	content: "\e906";
+ }
+ ._icon-clock:before {
+	content: "\e907";
+ }
+ ._icon-dribble:before {
+	content: "\e908";
+ }
+ ._icon-tag:before {
+	content: "\e909";
+ }
+ ._icon-phone:before {
+	content: "\e90a";
+ }
+ 

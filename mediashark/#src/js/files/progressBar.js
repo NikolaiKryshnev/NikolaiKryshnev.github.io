@@ -22,7 +22,7 @@ var Visible = function (target) {
 		targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
 		targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
 		// Если элемент полностью видно, то запускаем следующий код
-		// console.log('Вы видите элемент :)');
+		console.log('Вы видите элемент :)');
 		target.classList.add('animation-show');
 
 		anProgressBar(target.querySelectorAll('.progBar-circle'));
@@ -37,7 +37,7 @@ var Visible = function (target) {
 
 // animation numbers 
 const time = 2000;
-const step = 1;
+const step = 0.5;
 
 function outNum(num, elem) {
 	let e = elem,
@@ -49,7 +49,7 @@ function outNum(num, elem) {
 			clearInterval(interval);
 		}
 
-		e.innerHTML = n;
+		e.innerHTML = Math.ceil(n);
 
 		if (e.closest('._progress-bar').querySelector('.progBar-line--progress') !== null) {
 			e.closest('._progress-bar').querySelector('.progBar-line--progress').style.width = `${n}%`;
@@ -83,6 +83,9 @@ var object = document.getElementById("logoObject");
 function chartsSvg(charts, chartsLine) {
 	for (let i = 0; i < charts.length; i++) {
 		const el = charts[i];
+
+		el.style.minWidth = `calc(${el.closest('.charts-block__box').offsetWidth}px - 10%)`;
+		
 		let svg = el.contentDocument.querySelector('svg');
 		svg.setAttribute('viewBox', `0 0 ${svg.getAttribute('width')} ${svg.getAttribute('height')}`);
 		svg.style.cssText = `
@@ -104,7 +107,6 @@ function caseSliderShowAnimation() {
 		const caseBlockI = caseBlock[i];
 		if (caseBlockI.classList.contains("swiper-slide-active")) {
 			window.addEventListener('scroll', function () {
-				// console.log(caseBlockI.classList.contains("animation-show"));
 				if (caseBlockI.classList.contains("animation-show") == false) {
 					Visible(caseBlockI);
 				}

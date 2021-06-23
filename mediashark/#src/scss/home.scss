@@ -37,6 +37,13 @@
 		align-items: center;
 		&-icon {
 			margin-bottom: 30px;
+			._icon-f{
+				font-size: 22px;
+				@include transitColor(0.3s);
+				&:hover {
+					color: #606060;
+				}
+			}
 		}
 	}
 }

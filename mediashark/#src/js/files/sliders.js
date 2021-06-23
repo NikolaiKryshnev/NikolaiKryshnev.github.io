@@ -78,36 +78,19 @@ function numberZero(currentClassNum) {
 	}
 }
 
-let sliderSlider = new Swiper('._slider', {
-	/*
-	effect: 'fade',
-	autoplay: {
-		delay: 3000,
-		disableOnInteraction: false,
-	},
-	*/
+let sliderSwiper = new Swiper('._slider', {
+	
 	observer: true,
 	observeParents: true,
 	slidesPerView: 3,
-	// autoHeight: true,
 	speed: 800,
 	spaceBetween: 30,
-	//touchRatio: 0,
-	//simulateTouch: false,
-	//loop: true,
-	//preloadImages: false,
-	//lazy: true,
-	// Dotts
+	
 	pagination: {
-		el: '.swiper-pagination',
+		el: '._slider__progress',
 		type: 'progressbar'
-		// clickable: true,
 	},
-	// Arrows
-	// navigation: {
-	// 	nextEl: '.about__more .more__item_next',
-	// 	prevEl: '.about__more .more__item_prev',
-	// },
+	
 
 	breakpoints: {
 		0: {
@@ -157,49 +140,18 @@ let sliderSlider = new Swiper('._slider', {
 	//},
 });
 
-let timingSeo = new Swiper('.timingSeo-slider', {
-	/*
-	effect: 'fade',
-	autoplay: {
-		delay: 3000,
-		disableOnInteraction: false,
-	},
-	*/
+let sliderTimingSeo = new Swiper('.timingSeo-slider', {
+
 	observer: true,
 	observeParents: true,
 	slidesPerView: 2,
-	// autoHeight: true,
 	speed: 800,
 	spaceBetween: 30,
-	slidesPerGroup: 1,
-	//touchRatio: 0,
-	//simulateTouch: false,
-	//loop: true,
-	//preloadImages: false,
-	//lazy: true,
-	// Dotts
-	// pagination: {
-	// 	el: '.swiper-pagination',
-	// 	type: 'progressbar'
-	// 	// clickable: true,
-	// },
-	// Arrows
+	
 	navigation: {
 		nextEl: '.timingSeo__arrows .timingSeo__arrows_next',
 		prevEl: '.timingSeo__arrows  .timingSeo__arrows_prev',
 	},
-	// pagination: {
-	// 	el: '.swiper-pagination--number',
-	// 	// clickable: true,
-	// 	type: 'fraction',
-	// 	// Кастомный вывод фракции
-	// 	renderFraction: function (currentClass, totalClass) {
-
-	// 		return '<span class="' + currentClass + '"> </span>' +
-	// 			'/' +
-	// 			'<span class="' + totalClass + '"> </span>';
-	// 	},
-	// },
 
 	breakpoints: {
 
@@ -306,18 +258,15 @@ let sliderAboutChoose = new Swiper('.aboutChoose-slider', {
 
 });
 
-numberZero(document.querySelector('.swiper-pagination-current'));
-numberZero(document.querySelector('.swiper-pagination-total'));
-
 let sliderBlock = document.querySelector('._slider');
 
 sliderBlock.addEventListener("mouseenter", function (e) {
-	sliderSlider.params.autoplay.disableOnInteraction = false;
-	sliderSlider.params.autoplay.delay = 1500;
-	sliderSlider.autoplay.start();
+	sliderSwiper.params.autoplay.disableOnInteraction = false;
+	sliderSwiper.params.autoplay.delay = 1500;
+	sliderSwiper.autoplay.start();
 });
 sliderBlock.addEventListener("mouseleave", function (e) {
-	sliderSlider.autoplay.stop();
+	sliderSwiper.autoplay.stop();
 });
 
 
@@ -384,14 +333,14 @@ if (windowWidth < 992) {
 }
 
 
-
-let CasesSliders = new Swiper('._cases-sliders', {
+let sliderCases = new Swiper('._cases-sliders', {
 
 	observer: true,
 	observeParents: true,
 	slidesPerView: 1,
 	speed: 800,
 	autoHeight: true,
+	noSwipingSelector: '._noSwipingSelector',
 	pagination: {
 		el: '._cases__progress-bar',
 		type: 'progressbar'
@@ -401,37 +350,36 @@ let CasesSliders = new Swiper('._cases-sliders', {
 		prevEl: '.slider-arrows ._cases__arrow-prev',
 	},
 
-	// breakpoints: {
-	// 	0: {
-	// 		slidesPerView: 1,
-	// 		spaceBetween: 5,
+	breakpoints: {
+		// 	0: {
+		// 		slidesPerView: 1,
+		// 		spaceBetween: 5,
 
-	// 	},
+		// 	},
 
-	// 	527: {
-	// 		slidesPerView: 1,
-	// 		spaceBetween: 15,
-	// 		autoHeight: true,
+		// 	527: {
+		// 		slidesPerView: 1,
+		// 		spaceBetween: 15,
+		// 		autoHeight: true,
 
-	// 	},
-	// 	768: {
-	// 		slidesPerView: 1,
-	// 		spaceBetween: 15,
-	// 		autoHeight: false,
+		// 	},
+		768: {
+			onlyExternal: true
 
-	// 	},
-	// 	840: {
-	// 		slidesPerView: 2,
-	// 		spaceBetween: 15,
-	// 		autoHeight: false,
 
-	// 	},
+		},
+		// 	840: {
+		// 		slidesPerView: 2,
+		// 		spaceBetween: 15,
+		// 		autoHeight: false,
 
-	// 	1171: {
-	// 		slidesPerView: 3,
-	// 		spaceBetween: 30,
-	// 	},
-	// },
+		// 	},
+
+		// 	1171: {
+		// 		slidesPerView: 3,
+		// 		spaceBetween: 30,
+		// 	},
+	},
 
 	// Фракция
 
@@ -441,8 +389,8 @@ let CasesSliders = new Swiper('._cases-sliders', {
 			ibg();
 		},
 		slideNextTransitionEnd: function (swiper) {
-			caseSliderShowAnimation()	
-		 }
+			caseSliderShowAnimation()
+		}
 	}
 
 	// And if we need scrollbar
@@ -450,4 +398,140 @@ let CasesSliders = new Swiper('._cases-sliders', {
 	//	el: '.swiper-scrollbar',
 	//},
 });
+
+
+let sliderClients = new Swiper('.clients-slider', {
+
+	observer: true,
+	observeParents: true,
+	slidesPerView: 1,
+	speed: 800,
+	spaceBetween: 15,
+	slidesPerGroup: 1,
+
+	navigation: {
+		nextEl: '.slider-arrows ._clients__arrow-next',
+		prevEl: '.slider-arrows ._clients__arrow-prev',
+	},
+	pagination: {
+		el: '._clients__pagination-number',
+		type: 'fraction',
+		renderFraction: function (currentClass, totalClass) {
+
+			return '<span class="' + currentClass + '"> </span>' +
+				'/' +
+				'<span class="' + totalClass + '"> </span>';
+		},
+	},
+
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+			spaceBetween: 5,
+			autoHeight: true,
+			slidesPerGroup: 1,
+
+		},
+
+		527: {
+			slidesPerView: 1,
+			spaceBetween: 15,
+			autoHeight: true,
+			slidesPerGroup: 1,
+
+
+		},
+		768: {
+			slidesPerView: 1,
+			slidesPerGroup: 1,
+			spaceBetween: 15,
+		},
+		
+	},
+
+	on: {
+		lazyImageReady: function () {
+			ibg();
+		},
+		init: function () {
+
+		},
+		slideChange: function () {
+			numberZero(document.querySelector('.swiper-pagination-current'));
+			numberZero(document.querySelector('.swiper-pagination-total'));
+		},
+		
+	},
+	scrollbar: {
+		draggable: true
+	},
+
+});
+
+let sliderReviews = new Swiper('.reviews-slider', {
+
+	observer: true,
+	observeParents: true,
+	slidesPerView: 1,
+	speed: 800,
+	spaceBetween: 15,
+	slidesPerGroup: 1,
+
+	navigation: {
+		nextEl: '.slider-arrows ._reviews__arrow-next',
+		prevEl: '.slider-arrows ._reviews__arrow-prev',
+	},
+	
+	
+
+	breakpoints: {
+		0: {
+			pagination: {
+				el: '._reviews__progress-bar',
+				type: 'progressbar'
+			},
+
+		},
+
+		991: {
+			pagination: {
+				el: '._reviews__pagination-number',
+				type: 'fraction',
+				renderFraction: function (currentClass, totalClass) {
+		
+					return '<span class="' + currentClass + '"> </span>' +
+						'/' +
+						'<span class="' + totalClass + '"> </span>';
+				},
+			},
+			
+		},
+		
+	},
+
+	on: {
+		lazyImageReady: function () {
+			ibg();
+		},
+		init: function () {
+
+		},
+		slideChange: function () {
+			numberZero(document.querySelector('.swiper-pagination-current'));
+			numberZero(document.querySelector('.swiper-pagination-total'));
+		},
+		
+	},
+	scrollbar: {
+		draggable: true
+	},
+
+});
+
+
+numberZero(document.querySelector('.swiper-pagination-current'));
+numberZero(document.querySelector('.swiper-pagination-total'));
+
 // };
+
+

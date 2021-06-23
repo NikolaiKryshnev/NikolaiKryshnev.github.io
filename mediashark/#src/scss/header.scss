@@ -16,6 +16,8 @@
 	@media (max-width: $md3+px) {
 		padding: 0 30px;
 	}
+
+	//.header__container
 	&__container {
 		display: flex;
 		align-items: center;
@@ -31,12 +33,12 @@
 			min-height: 40px;
 		}
 	}
-	&__logo {
+
+	.logo {
 		position: absolute;
 		left: 65px;
-
 		font-size: $fz24;
-		color: $black;
+
 		@media (min-width: 1440px) {
 			font-size: 1.7vw;
 			left: 4vw;
@@ -45,10 +47,11 @@
 			left: 30px;
 			font-size: $mfz16;
 		}
-
-		span {
-			@include f700();
-		}
+	}
+	._icon-f {
+		margin: 0;
+		cursor: pointer;
+		transition: all 0.3s linear;
 	}
 }
 
@@ -58,11 +61,14 @@
 		margin-right: 8%;
 	}
 
+	//.menu__icon
 	&__icon {
 		display: none;
 	}
 
+	//.menu__list
 	&__list {
+		//.menu__list > li
 		& > li {
 			// position: relative;
 
@@ -80,6 +86,7 @@
 		}
 	}
 
+	//.menu__link
 	&__link {
 		color: $black;
 		text-transform: uppercase;
@@ -88,26 +95,34 @@
 		@media (min-width: 1440px) {
 			font-size: 1vw;
 		}
+
+		//.menu__link:hover
 		&:hover {
 			// @include f700();
 		}
 	}
 
-	// .menu__sub
+	//.menu__sub
 	.menu__sub {
+		//.menu__sub-list
 		&-list {
 			position: absolute;
+			z-index: -1;
 			top: 100%;
 			right: 0;
 			left: 50%;
 
+			min-width: 200px;
+
 			display: flex;
 			flex-wrap: wrap;
-			// margin-top: 1px;
 
 			background-color: #fff;
+			
+			transform: translate(-50%, 0);
 
-			min-width: 200px;
+			opacity: 0;
+			visibility: hidden;
 			@media (min-width: 1440px) {
 				padding: 45px 8vw 65px;
 			}
@@ -130,6 +145,7 @@
 				display: none;
 			}
 
+			//.menu__sub-list > li
 			& > li {
 				margin: 0px 0px 10px 0px;
 
@@ -151,12 +167,14 @@
 					margin-bottom: 0;
 				}
 
+				//.menu__sub-list:last-child
 				&:last-child {
 					margin: 0;
 				}
 			}
 		}
 
+		//.menu__sub-icon
 		&-icon {
 			margin-bottom: 20px;
 			@media (max-width: $md1+px) {
@@ -164,6 +182,7 @@
 			}
 		}
 
+		//.menu__sub-title
 		&-title {
 			cursor: pointer;
 			text-transform: uppercase;
@@ -173,6 +192,7 @@
 			}
 		}
 
+		//.menu__sub-info
 		&-info {
 			position: relative;
 			font-size: 14px;
@@ -184,6 +204,7 @@
 				display: none;
 			}
 
+			//.menu__sub-info::after
 			&::after {
 				@include pseudoEl(block, absolute, "");
 				top: 0;
@@ -196,8 +217,11 @@
 			}
 		}
 
+		//.menu__sub-link
 		&-link {
 			color: #fff;
+
+			//.menu__sub-link:hover
 			&:hover {
 				text-decoration: underline;
 			}
@@ -205,26 +229,6 @@
 	}
 }
 
-.menu__arrow {
-	position: relative;
-
-	display: flex;
-	justify-content: center;
-
-	cursor: pointer;
-	transition: all 0.3s linear;
-	.arrow__line {
-		position: relative;
-		left: 0;
-		margin-top: 1px;
-
-		width: 1px;
-		height: 100%;
-
-		background-color: $black;
-	}
-}
-/* ----------------------- */
 html._pc .menu__list > li:hover {
 	.menu__sub-list {
 		opacity: 1;
@@ -232,32 +236,18 @@ html._pc .menu__list > li:hover {
 		transform: translate(-50%, 0px);
 		pointer-events: all;
 	}
-	.menu__arrow {
+	._icon-f {
 		transform: rotate(-180deg);
 	}
 }
 
 html._touch {
-	// .menu__list > li {
-	// 	display: flex;
-	// 	align-items: center;
-	// }
 	.menu__link {
 		flex: 1 1 auto;
 		@media (max-width: $md3+px) {
 			max-width: max-content;
 		}
 	}
-	// .menu__arrow {
-	// 	display: block;
-	// 	width: 0;
-	// 	height: 0;
-	// 	margin: 0px 0px 0px 5px;
-	// 	transition: transform 0.3s ease 0s;
-	// 	border-left: 5px solid transparent;
-	// 	border-right: 5px solid transparent;
-	// 	border-top: 10px solid #fff;
-	// }
 	.menu__list > li._active {
 		.menu__sub-list {
 			opacity: 1;
@@ -273,13 +263,12 @@ html._touch {
 				display: block;
 			}
 		}
-		.menu__arrow {
+		._icon-f {
 			transform: rotate(-180deg);
 		}
 	}
 }
 
-/* ----------------------- */
 @media (min-width: $md1 + px) {
 	.menu__list {
 		display: flex;
@@ -293,29 +282,36 @@ html._touch {
 		}
 	}
 	.menu__sub-list {
-		display: flex;
+		// display: flex;
 		justify-content: space-around;
+
+		// opacity: 0;
+		// visibility: hidden;
+		// pointer-events: none;
 		transform: translate(0px, 10%);
-		opacity: 0;
-		visibility: hidden;
-		pointer-events: none;
 		transition: all 0.3s ease 0s;
 	}
 }
+
 @media (max-width: $md1 + px) {
 	.menu__list {
 		position: relative;
 	}
 	.menu__icon {
-		z-index: 5;
-		display: block;
 		position: relative;
+		z-index: 5;
+
+		margin-left: 30px;
+
+		display: block;
+
 		width: 30px;
 		height: 18px;
+
 		cursor: pointer;
-		margin-left: 30px;
 		@media (max-width: $md3+px) {
 			margin-left: 15px;
+
 			width: 20px;
 			height: 11px;
 		}
@@ -323,13 +319,15 @@ html._touch {
 		span,
 		&::before,
 		&::after {
-			border-radius: 5px;
-			left: 0;
 			position: absolute;
+			left: 0;
+
 			height: 2px;
 			width: 100%;
-			transition: all 0.3s ease 0s;
+
+			border-radius: 5px;
 			background-color: #000;
+			transition: all 0.3s ease 0s;
 			@media (max-width: $md3+px) {
 				height: 1px;
 			}
@@ -345,6 +343,7 @@ html._touch {
 			bottom: 0;
 			right: 0;
 			left: auto;
+
 			width: 15px;
 			@media (max-width: $md3+px) {
 				bottom: 1px;
@@ -375,13 +374,14 @@ html._touch {
 		position: fixed;
 		top: 60px;
 		left: -100%;
+
+		padding: 0 60px;
+
 		width: 100%;
 		height: 100%;
-		// background-color: rgba(0, 0, 0, 0.9);
-		// padding: 100px 30px 30px 30px;
+
 		transition: left 0.3s ease 0s;
 		overflow: auto;
-		padding: 0 60px;
 	}
 	.menu__body._active {
 		left: 0;
@@ -407,16 +407,17 @@ html._touch {
 	}
 	.menu__sub-list {
 		position: relative;
-		background-color: #fff;
-		flex: 1 1 100%;
-		// margin: 20px 0px 0px 0px;
 		display: none;
+		flex: 1 1 100%;
+
+		background-color: #fff;
 	}
 	.menu__sub-link {
 		font-size: 20px;
 		color: #000;
 	}
 }
+
 @media (max-width: $md3+px) {
 	.menu__body {
 		top: 40px;
@@ -424,8 +425,10 @@ html._touch {
 	}
 
 	.menu__list {
-		padding: 0;
 		flex-direction: column;
+
+		padding: 0;
+
 		border: none;
 		> li {
 			padding: 0;
@@ -452,7 +455,6 @@ html._touch {
 	}
 }
 
-//-------------------------------------------------------------------------//
 .header__opt {
 	position: absolute;
 	right: 65px;
@@ -475,6 +477,21 @@ html._touch {
 				margin-left: 15px;
 			}
 		}
+
+		._icon-eye {
+			font-size: 27px;
+			@include transitColor(0.3s);
+			&:hover {
+				color: #606060;
+			}
+		}
+		._icon-phone {
+			font-size: 18px;
+			@include transitColor(0.3s);
+			&:hover {
+				color: #606060;
+			}
+		}
 	}
 	.opt__lang {
 		.select__title {
@@ -488,8 +505,17 @@ html._touch {
 			}
 
 			&:before {
-				background-image: url("data:image/svg+xml,%3Csvg width='9' height='11' viewBox='0 0 9 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.18746 10.0358C4.38272 10.231 4.69931 10.231 4.89457 10.0358L8.07655 6.85378C8.27181 6.65852 8.27181 6.34193 8.07655 6.14667C7.88129 5.95141 7.56471 5.95141 7.36944 6.14667L4.54102 8.9751L1.71259 6.14667C1.51733 5.95141 1.20074 5.95141 1.00548 6.14667C0.81022 6.34193 0.81022 6.65852 1.00548 6.85378L4.18746 10.0358ZM4.04102 0.317871L4.04102 9.68221L5.04102 9.68221L5.04102 0.317871L4.04102 0.317871Z' fill='black'%3E%3C/path%3E%3C/svg%3E");
+				content: "\e90d";
+				display: block;
 				height: 13px;
+				font-family: icons;
+				font-style: normal;
+				font-weight: 400;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 1;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
 			}
 		}
 
