@@ -1,24 +1,31 @@
 .footer {
 	display: flex;
 	align-items: center;
-	
+
 	min-height: 220px;
 
-	padding: 40px 0 ;
+	padding: 40px 0;
 
 	text-align: center;
-	background: #F9F9F9;
+	background: #f9f9f9;
+	@media (max-width: $md3+px) {
+		padding: 25px 0;
+		min-height: auto;
+	}
 
 	.logo {
 		display: inline-block;
 		margin: 0 auto 30px;
 
 		font-size: 40px;
-
+		@media (max-width: $md3+px) {
+			font-size: 20px;
+			margin: 0 auto 10px;
+		}
 	}
 
 	&-info {
-		font-size: 14px;
+		font-size: $fz14;
 		color: #929292;
 		line-height: 22px;
 

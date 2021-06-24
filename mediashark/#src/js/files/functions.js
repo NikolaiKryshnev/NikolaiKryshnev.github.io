@@ -12,11 +12,13 @@ if (isIE()) {
 if (isMobile.any()) {
 	document.querySelector('html').classList.add('_touch');
 
-	let menuArrows = document.querySelectorAll('.menu__arrow');
+	let menuArrows = document.querySelectorAll('._menu-arrow');
+
 	if (menuArrows.length > 0) {
 		for (let index = 0; index < menuArrows.length; index++) {
 			const menuArrow = menuArrows[index];
 			menuArrow.addEventListener("click", function (e) {
+	
 				menuArrow.parentElement.classList.toggle('_active');
 			});
 		}
@@ -75,14 +77,17 @@ if (location.hash) {
 //=================
 //Menu
 let iconMenu = document.querySelector(".menu__icon");
+
 if (iconMenu != null) {
 	let delay = 500;
 	let menuBody = document.querySelector(".menu__body");
 	iconMenu.addEventListener("click", function (e) {
 		if (unlock) {
+
 			body_lock(delay);
 			iconMenu.classList.toggle("_active");
 			menuBody.classList.toggle("_active");
+			
 		}
 	});
 };

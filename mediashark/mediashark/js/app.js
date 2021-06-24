@@ -12,11 +12,13 @@ if (isIE()) {
 if (isMobile.any()) {
 	document.querySelector('html').classList.add('_touch');
 
-	let menuArrows = document.querySelectorAll('.menu__arrow');
+	let menuArrows = document.querySelectorAll('._menu-arrow');
+
 	if (menuArrows.length > 0) {
 		for (let index = 0; index < menuArrows.length; index++) {
 			const menuArrow = menuArrows[index];
 			menuArrow.addEventListener("click", function (e) {
+	
 				menuArrow.parentElement.classList.toggle('_active');
 			});
 		}
@@ -75,14 +77,17 @@ if (location.hash) {
 //=================
 //Menu
 let iconMenu = document.querySelector(".menu__icon");
+
 if (iconMenu != null) {
 	let delay = 500;
 	let menuBody = document.querySelector(".menu__body");
 	iconMenu.addEventListener("click", function (e) {
 		if (unlock) {
+
 			body_lock(delay);
 			iconMenu.classList.toggle("_active");
 			menuBody.classList.toggle("_active");
+			
 		}
 	});
 };
@@ -631,6 +636,23 @@ animate({
 			Element.prototype.msMatchesSelector;
 	}
 })();
+function appendHeader() {
+	let menuList = document.querySelector('.menu__list'),
+		optLang = document.querySelector('.opt__lang'),
+		optVision = document.querySelector('.opt__vision'),
+		liFirst = document.createElement('li');
+		
+	liFirst.classList.add('header__opt')
+	liFirst.append(optVision, optLang)
+	menuList.prepend(liFirst)
+}
+
+
+if (window.innerWidth <= 526) {
+	appendHeader()
+}
+
+
 // window.onload = function () {
 //BildSlider
 
@@ -719,9 +741,16 @@ let sliderSwiper = new Swiper('._slider', {
 	speed: 800,
 	spaceBetween: 30,
 	
-	pagination: {
+	// pagination: {
+	// 	el: '._slider__progress',
+	// 	type: 'progressbar',
+	// 	draggable: true,
+
+	// },
+
+	scrollbar: {
 		el: '._slider__progress',
-		type: 'progressbar'
+		draggable: true
 	},
 	
 
@@ -736,25 +765,27 @@ let sliderSwiper = new Swiper('._slider', {
 		527: {
 			slidesPerView: 1,
 			spaceBetween: 15,
-			autoHeight: true,
+			// autoHeight: true,
 
 		},
 		768: {
 			slidesPerView: 1,
 			spaceBetween: 15,
-			autoHeight: false,
+			// autoHeight: false,
 
 		},
 		840: {
 			slidesPerView: 2,
 			spaceBetween: 15,
-			autoHeight: false,
+			// autoHeight: false,
 
 		},
 
 		1171: {
 			slidesPerView: 3,
 			spaceBetween: 30,
+			autoHeight: false,
+
 		},
 	},
 
@@ -965,7 +996,6 @@ if (windowWidth < 992) {
 	});
 }
 
-
 let sliderCases = new Swiper('._cases-sliders', {
 
 	observer: true,
@@ -974,9 +1004,10 @@ let sliderCases = new Swiper('._cases-sliders', {
 	speed: 800,
 	autoHeight: true,
 	noSwipingSelector: '._noSwipingSelector',
-	pagination: {
+	
+	scrollbar: {
 		el: '._cases__progress-bar',
-		type: 'progressbar'
+		draggable: true
 	},
 	navigation: {
 		nextEl: '.slider-arrows ._cases__arrow-next',
@@ -984,38 +1015,11 @@ let sliderCases = new Swiper('._cases-sliders', {
 	},
 
 	breakpoints: {
-		// 	0: {
-		// 		slidesPerView: 1,
-		// 		spaceBetween: 5,
-
-		// 	},
-
-		// 	527: {
-		// 		slidesPerView: 1,
-		// 		spaceBetween: 15,
-		// 		autoHeight: true,
-
-		// 	},
+		
 		768: {
 			onlyExternal: true
-
-
 		},
-		// 	840: {
-		// 		slidesPerView: 2,
-		// 		spaceBetween: 15,
-		// 		autoHeight: false,
-
-		// 	},
-
-		// 	1171: {
-		// 		slidesPerView: 3,
-		// 		spaceBetween: 30,
-		// 	},
 	},
-
-	// Фракция
-
 
 	on: {
 		lazyImageReady: function () {
@@ -1023,13 +1027,11 @@ let sliderCases = new Swiper('._cases-sliders', {
 		},
 		slideNextTransitionEnd: function (swiper) {
 			caseSliderShowAnimation()
+		},
+		scrollbarDragEnd: function (swiper) {
+			caseSliderShowAnimation()
 		}
 	}
-
-	// And if we need scrollbar
-	//scrollbar: {
-	//	el: '.swiper-scrollbar',
-	//},
 });
 
 
@@ -1114,14 +1116,12 @@ let sliderReviews = new Swiper('.reviews-slider', {
 		nextEl: '.slider-arrows ._reviews__arrow-next',
 		prevEl: '.slider-arrows ._reviews__arrow-prev',
 	},
-	
-	
 
 	breakpoints: {
 		0: {
-			pagination: {
+			scrollbar: {
 				el: '._reviews__progress-bar',
-				type: 'progressbar'
+				draggable: true
 			},
 
 		},
@@ -1147,12 +1147,18 @@ let sliderReviews = new Swiper('.reviews-slider', {
 			ibg();
 		},
 		init: function () {
-
 		},
 		slideChange: function () {
 			numberZero(document.querySelector('.swiper-pagination-current'));
 			numberZero(document.querySelector('.swiper-pagination-total'));
 		},
+
+		slideChange: function (swiper) {
+			reviewsTextMin()
+		},
+		// scrollbarDrag: function (swiper) {
+		// 	reviewsTextMin()
+		// }
 		
 	},
 	scrollbar: {
@@ -1303,7 +1309,7 @@ window.onload = function () {
 
 (function () {
 	if (window.innerWidth <= 991) {
-		var a = document.querySelector('._fixedTitle'), b = null, P = document.querySelector('header').innerHeight;  // если ноль заменить на число, то блок будет прилипать до того, как верхний край окна браузера дойдёт до верхнего края элемента. Может быть отрицательным числом
+		var a = document.querySelector('._fixedTitle'), b = null, P = document.querySelector('.header').offsetHeight;  // если ноль заменить на число, то блок будет прилипать до того, как верхний край окна браузера дойдёт до верхнего края элемента. Может быть отрицательным числом
 		window.addEventListener('scroll', Ascroll, false);
 		document.body.addEventListener('scroll', Ascroll, false);
 		function Ascroll() {
@@ -1915,41 +1921,49 @@ if (priceSlider) {
 		priceSlider.noUiSlider.set([priceStartValue, priceEndValue]);
 	}
 }
-if (document.querySelector('html').classList.contains('_touch')) {
-	let blockClients = document.querySelectorAll('.client'),
-		close = document.querySelectorAll('._close');
-	for (const client of blockClients) {
+let blockClients = document.querySelectorAll('.client'),
+	close = document.querySelectorAll('._close');
+for (const client of blockClients) {
 
+	if (document.querySelector('html').classList.contains('_touch')) {
 		client.addEventListener("click", (e) => {
-			console.log(e.target);
-
-			if (client.classList.contains('_active') !== true) {
-				clearActiveClasses();
-				client.classList.add('_active');
-				
-			} else if (e.target.classList.contains('_close')) {
-				e.target.closest('.client').classList.remove('_active');
-			}
+			anBlock(client, e)
+		});
+	} else {
+		client.addEventListener("mouseover", (e) => {
+			anBlock(client, e)
 		});
 	}
+}
 
-	function clearActiveClasses() {
-		blockClients.forEach((client) => {
-			client.classList.remove('_active')
-		})
-	}
-
-	function closeClients() {
-		for (let i = 0; i < close.length; i++) {
-			const elClose = close[i];
-			elClose.addEventListener("click", (e) => {
-				e.target.closest('.client').classList.remove('_active');
-			});
-
+function clearActiveClasses() {
+	blockClients.forEach((client) => {
+		if (client.classList.contains('_active') == true) {
+			client.classList.remove('_animation');
+			setTimeout(() => {
+				client.classList.remove('_active');
+			}, 100);
 		}
+	})
+}
+function anBlock(client, e) {
+	if (client.classList.contains('_active') !== true) {
+		clearActiveClasses();
+		setTimeout(() => {
+			client.classList.add('_animation');
+
+		}, 10);
+		client.classList.add('_active');
+
+	} else if (e.target.classList.contains('_close')) {
+		e.target.closest('.client').classList.remove('_animation');
+		setTimeout(() => {
+			e.target.closest('.client').classList.remove('_active');
+		}, 100);
 
 	}
 }
+
 let scr_body = document.querySelector('body');
 let scr_blocks = document.querySelectorAll('._scr-sector');
 let scr_items = document.querySelectorAll('._scr-item');
@@ -2396,27 +2410,36 @@ function scroll_animate(event) {
 }
 
 
-	if (window.innerWidth <= 991) {
-		let reviewsText = document.querySelectorAll('.reviews-slide__text');
-		for (let i = 0; i < reviewsText.length; i++) {
-			const el = reviewsText[i];
-			console.log(el.offsetHeight);
-			
-			if (el.offsetHeight >= 120) {
-				el.setAttribute('style','max-height:120px; display: -webkit-box;-webkit-line-clamp: 3; -webkit-box-orient: vertical;');
-				let readMore = document.createElement('div');
-				readMore.classList.add('readMmore');
-				readMore.innerHTML = 'Читать полностью';
-				el.after(readMore)
+let reviewsText = document.querySelectorAll('.reviews-slide__text');
 
-				readMore.addEventListener("click", function (e) {
-					el.style.display = 'block';
-					el.style.maxHeight = '100%';
-					readMore.style.opacity = '0';
-				});
-			}
+if (window.innerWidth <= 991) {
+	for (let i = 0; i < reviewsText.length; i++) {
+		const el = reviewsText[i];
+
+		if (el.offsetHeight >= 120) {
+			let readMore = document.createElement('div');
+			readMore.classList.add('readMmore');
+			el.setAttribute('style', 'max-height:120px; display: -webkit-box;-webkit-line-clamp: 3; -webkit-box-orient: vertical;');
+			readMore.innerHTML = 'Читать полностью';
+			el.after(readMore)
+			readMore.addEventListener("click", function (e) {
+				el.style.display = 'block';
+				el.style.maxHeight = '100%';
+				readMore.style.opacity = '0';
+			});
 		}
 	}
+}
+
+function reviewsTextMin() {
+	if (window.innerWidth <= 991) {
+		for (let i = 0; i < document.querySelectorAll('.reviews-slide__text').length; i++) {
+			const el = document.querySelectorAll('.reviews-slide__text')[i];
+			el.closest('.reviews-slide__right').querySelector('.readMmore').style.opacity = '1'
+			el.setAttribute('style', 'max-height:120px; display: -webkit-box;-webkit-line-clamp: 3; -webkit-box-orient: vertical;');
+		}
+	}
+}
 
 
 

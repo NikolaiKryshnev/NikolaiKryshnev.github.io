@@ -55,6 +55,7 @@
 		}
 	}
 
+	//.advantages-box
 	&-box {
 		display: flex;
 		flex-direction: column;
@@ -101,6 +102,11 @@
 		&__info {
 			line-height: 23px;
 			color: #000000;
+		}
+	}
+	@media (max-width: $md1+px) {
+		.icon-scroll::after {
+			display: block;
 		}
 	}
 }

@@ -1,6 +1,6 @@
 (function () {
 	if (window.innerWidth <= 991) {
-		var a = document.querySelector('._fixedTitle'), b = null, P = document.querySelector('header').innerHeight;  // если ноль заменить на число, то блок будет прилипать до того, как верхний край окна браузера дойдёт до верхнего края элемента. Может быть отрицательным числом
+		var a = document.querySelector('._fixedTitle'), b = null, P = document.querySelector('.header').offsetHeight;  // если ноль заменить на число, то блок будет прилипать до того, как верхний край окна браузера дойдёт до верхнего края элемента. Может быть отрицательным числом
 		window.addEventListener('scroll', Ascroll, false);
 		document.body.addEventListener('scroll', Ascroll, false);
 		function Ascroll() {

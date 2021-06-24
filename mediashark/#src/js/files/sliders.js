@@ -86,9 +86,16 @@ let sliderSwiper = new Swiper('._slider', {
 	speed: 800,
 	spaceBetween: 30,
 	
-	pagination: {
+	// pagination: {
+	// 	el: '._slider__progress',
+	// 	type: 'progressbar',
+	// 	draggable: true,
+
+	// },
+
+	scrollbar: {
 		el: '._slider__progress',
-		type: 'progressbar'
+		draggable: true
 	},
 	
 
@@ -103,25 +110,27 @@ let sliderSwiper = new Swiper('._slider', {
 		527: {
 			slidesPerView: 1,
 			spaceBetween: 15,
-			autoHeight: true,
+			// autoHeight: true,
 
 		},
 		768: {
 			slidesPerView: 1,
 			spaceBetween: 15,
-			autoHeight: false,
+			// autoHeight: false,
 
 		},
 		840: {
 			slidesPerView: 2,
 			spaceBetween: 15,
-			autoHeight: false,
+			// autoHeight: false,
 
 		},
 
 		1171: {
 			slidesPerView: 3,
 			spaceBetween: 30,
+			autoHeight: false,
+
 		},
 	},
 
@@ -332,7 +341,6 @@ if (windowWidth < 992) {
 	});
 }
 
-
 let sliderCases = new Swiper('._cases-sliders', {
 
 	observer: true,
@@ -341,9 +349,10 @@ let sliderCases = new Swiper('._cases-sliders', {
 	speed: 800,
 	autoHeight: true,
 	noSwipingSelector: '._noSwipingSelector',
-	pagination: {
+	
+	scrollbar: {
 		el: '._cases__progress-bar',
-		type: 'progressbar'
+		draggable: true
 	},
 	navigation: {
 		nextEl: '.slider-arrows ._cases__arrow-next',
@@ -351,38 +360,11 @@ let sliderCases = new Swiper('._cases-sliders', {
 	},
 
 	breakpoints: {
-		// 	0: {
-		// 		slidesPerView: 1,
-		// 		spaceBetween: 5,
-
-		// 	},
-
-		// 	527: {
-		// 		slidesPerView: 1,
-		// 		spaceBetween: 15,
-		// 		autoHeight: true,
-
-		// 	},
+		
 		768: {
 			onlyExternal: true
-
-
 		},
-		// 	840: {
-		// 		slidesPerView: 2,
-		// 		spaceBetween: 15,
-		// 		autoHeight: false,
-
-		// 	},
-
-		// 	1171: {
-		// 		slidesPerView: 3,
-		// 		spaceBetween: 30,
-		// 	},
 	},
-
-	// Фракция
-
 
 	on: {
 		lazyImageReady: function () {
@@ -390,13 +372,11 @@ let sliderCases = new Swiper('._cases-sliders', {
 		},
 		slideNextTransitionEnd: function (swiper) {
 			caseSliderShowAnimation()
+		},
+		scrollbarDragEnd: function (swiper) {
+			caseSliderShowAnimation()
 		}
 	}
-
-	// And if we need scrollbar
-	//scrollbar: {
-	//	el: '.swiper-scrollbar',
-	//},
 });
 
 
@@ -481,14 +461,12 @@ let sliderReviews = new Swiper('.reviews-slider', {
 		nextEl: '.slider-arrows ._reviews__arrow-next',
 		prevEl: '.slider-arrows ._reviews__arrow-prev',
 	},
-	
-	
 
 	breakpoints: {
 		0: {
-			pagination: {
+			scrollbar: {
 				el: '._reviews__progress-bar',
-				type: 'progressbar'
+				draggable: true
 			},
 
 		},
@@ -514,12 +492,18 @@ let sliderReviews = new Swiper('.reviews-slider', {
 			ibg();
 		},
 		init: function () {
-
 		},
 		slideChange: function () {
 			numberZero(document.querySelector('.swiper-pagination-current'));
 			numberZero(document.querySelector('.swiper-pagination-total'));
 		},
+
+		slideChange: function (swiper) {
+			reviewsTextMin()
+		},
+		// scrollbarDrag: function (swiper) {
+		// 	reviewsTextMin()
+		// }
 		
 	},
 	scrollbar: {

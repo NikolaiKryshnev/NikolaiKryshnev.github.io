@@ -4,6 +4,7 @@
 		overflow-x: auto;
 		overflow-y: hidden;
 		@media ( max-width:$md1+px){
+			overflow: hidden;
 			display: grid;
 			grid-template-columns: repeat(3,100%);
 			grid-auto-rows: 1fr;
@@ -35,6 +36,7 @@
 
 		//.blog-block__box
 		&__box {
+			display: block;
 			max-width: 50%;
 			width: 100%;
 			flex: 0 0 50%;
@@ -154,6 +156,12 @@
 		font-size: 16px;
 		@media ( max-width:$md1+px){
 			margin-top: 25px;
+		}
+	}
+
+	@media ( max-width:$md1+px){
+		.icon-scroll::after{
+		display: block;
 		}
 	}
 }

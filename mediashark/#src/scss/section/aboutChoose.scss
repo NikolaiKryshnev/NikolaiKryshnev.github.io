@@ -10,6 +10,7 @@
 		max-width: 585px;
 	}
 
+	//.aboutChoose-slider
 	&-slider {
 		position: relative;
 		display: flex;
@@ -22,6 +23,8 @@
 			overflow: hidden;
 		}
 	}
+
+	//.aboutChoose-box
 	&-box {
 		padding: 45px 45px 20px;
 		border: 1px solid #e1e1e1;
@@ -30,21 +33,28 @@
 		}
 		@media (max-width: $md1+px) {
 			padding: 26px;
+
+			//.aboutChoose-box.swiper-slide
 			&.swiper-slide {
 				width: 400px;
 			}
 		}
+
+		//.aboutChoose-box.swiper-slide
 		&.swiper-slide {
 			height: auto;
 		}
 
+		//.aboutChoose-box__icon
 		&__icon {
 			margin-bottom: 20px;
 		}
 
+		//.aboutChoose-box__info
 		&__info {
 		}
 
+		//.aboutChoose-box__title
 		&__title {
 			font-size: $fz20;
 			@include f700();
@@ -55,13 +65,11 @@
 			}
 		}
 
+		//.aboutChoose-box__text
 		&__text {
 			line-height: 23px;
 		}
 	}
-
-	
-	
 }
 
 

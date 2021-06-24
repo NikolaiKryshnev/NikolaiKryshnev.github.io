@@ -1,4 +1,6 @@
 @@include('files/functions.js', {})
+@@include('files/header.js', {})
+
 @@include('files/sliders.js', {})
 @@include('files/progressBar.js', {})
 @@include('files/titleFixed.js', {})	

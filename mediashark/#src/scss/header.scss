@@ -3,7 +3,7 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 11;
+	z-index: 20;
 
 	padding: 0 60px;
 
@@ -11,7 +11,7 @@
 
 	background-color: $gray;
 	@media (min-width: 1440px) {
-		padding: 0 4vw;
+		padding: 0 3.5vw;
 	}
 	@media (max-width: $md3+px) {
 		padding: 0 30px;
@@ -27,7 +27,7 @@
 		min-height: 60px;
 
 		@media (min-width: 1440px) {
-			min-height: 4vw;
+			min-height: 3.5vw;
 		}
 		@media (max-width: $md3+px) {
 			min-height: 40px;
@@ -40,8 +40,8 @@
 		font-size: $fz24;
 
 		@media (min-width: 1440px) {
-			font-size: 1.7vw;
-			left: 4vw;
+			font-size: 1.5vw;
+			left: 3.5vw;
 		}
 		@media (max-width: $md3+px) {
 			left: 30px;
@@ -68,15 +68,24 @@
 
 	//.menu__list
 	&__list {
-		//.menu__list > li
+		//.menu__list>li
 		& > li {
 			// position: relative;
 
 			display: flex;
+
 			align-items: center;
 			@media (max-width: $md1+px) {
 				padding: 17px 0;
 				// position: relative;
+			}
+			._icon-f {
+				display: inline-block;
+				margin-left: 5px;
+				line-height: 1;
+				@media (min-width: 1440px) {
+					font-size: 0.9vw;
+				}
 			}
 		}
 		@media (max-width: $md1+px) {
@@ -118,8 +127,6 @@
 			flex-wrap: wrap;
 
 			background-color: #fff;
-			
-			transform: translate(-50%, 0);
 
 			opacity: 0;
 			visibility: hidden;
@@ -127,6 +134,7 @@
 				padding: 45px 8vw 65px;
 			}
 			@media (min-width: $md1+px) {
+				transform: translate(-50%, 0);
 				padding: 45px 60px 65px;
 				border-bottom: 1px solid #e1e1e1;
 				width: 100vw;
@@ -140,6 +148,7 @@
 
 			@media (max-width: $md3+px) {
 				position: relative;
+				z-index: 1;
 				left: 0;
 				@include translate(0);
 				display: none;
@@ -239,6 +248,12 @@ html._pc .menu__list > li:hover {
 	._icon-f {
 		transform: rotate(-180deg);
 	}
+	.menu__sub-title {
+		@include transitColor(0.3s);
+		&:hover {
+			color: #606060;
+		}
+	}
 }
 
 html._touch {
@@ -276,7 +291,7 @@ html._touch {
 	}
 
 	.menu__list > li {
-		padding: 23px 0;
+		padding: 12px 0;
 		& + li {
 			margin-left: 60px;
 		}
@@ -296,6 +311,9 @@ html._touch {
 @media (max-width: $md1 + px) {
 	.menu__list {
 		position: relative;
+		li.header__opt{
+			padding: 6px 15px;
+		}
 	}
 	.menu__icon {
 		position: relative;
@@ -435,6 +453,9 @@ html._touch {
 			border-bottom: 1px solid #e1e1e1;
 			> a {
 				padding: 15px;
+				@media (max-width: $md3+px) {
+					padding: 15px 0 15px 15px;
+				}
 			}
 		}
 	}
@@ -462,12 +483,13 @@ html._touch {
 	display: flex;
 	align-items: center;
 	@media (min-width: 1440px) {
-		right: 4vw;
+		right: 3.5vw;
 	}
 	@media (max-width: 1400px) {
 		position: relative;
 		right: auto;
 	}
+	
 	.opt__block {
 		display: block;
 		cursor: pointer;
@@ -478,18 +500,25 @@ html._touch {
 			}
 		}
 
-		._icon-eye {
-			font-size: 27px;
+		._icon-f {
 			@include transitColor(0.3s);
 			&:hover {
 				color: #606060;
 			}
 		}
+		._icon-eye {
+			font-size: 24px;
+			@media (min-width: 1440px) {
+				font-size: 1.9vw;
+			}
+		}
 		._icon-phone {
 			font-size: 18px;
-			@include transitColor(0.3s);
-			&:hover {
-				color: #606060;
+			@media (min-width: 1440px) {
+				font-size: 1.3vw;
+			}
+			@media (max-width: $md3+px) {
+				font-size: 14px;
 			}
 		}
 	}
@@ -505,6 +534,8 @@ html._touch {
 			}
 
 			&:before {
+				margin-left: 5px;
+
 				content: "\e90d";
 				display: block;
 				height: 13px;
@@ -516,6 +547,9 @@ html._touch {
 				line-height: 1;
 				-webkit-font-smoothing: antialiased;
 				-moz-osx-font-smoothing: grayscale;
+				@media (min-width: 1440px) {
+					font-size: 0.9vw;
+				}
 			}
 		}
 
@@ -547,8 +581,8 @@ html._touch {
 	.opt__phone {
 		svg {
 			@media (min-width: 1440px) {
-				width: 1.4vw;
-				height: 1.4vw;
+				width: 1.3.5vw;
+				height: 1.3.5vw;
 			}
 		}
 		@media (max-width: $md3+px) {
@@ -564,7 +598,7 @@ html._touch {
 	@media (max-width: $md3+px) {
 		.opt__vision,
 		.opt__lang {
-			display: none;
+			// display: none;
 		}
 	}
 }
