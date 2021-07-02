@@ -62,7 +62,7 @@ $(document).ready(function () {
 		let filterBtn = filterContentBtn;
 
 		$(filterBtn).each(function (i, val) {
-			val.onclick = function (click) {
+			val.onclick = function (event) {
 				$(filterBtn).removeClass('active')
 				let filterData = event.target.getAttribute('data-filter');
 				$(filterData).each(function (i, val) {
@@ -100,25 +100,33 @@ $(document).ready(function () {
 		});
 	}
 
-$('.icon-search').on('click', function (e) {
-	$('.search-box').toggleClass('active')
+	$('.icon-search').on('click', function (e) {
+		$('.search-box').toggleClass('active')
 
-});
+	});
 
-$('.btn-close').on('click', function (e) {
-	$('.search-box').removeClass('active')
+	$('.btn-close').on('click', function (e) {
+		$('.search-box').removeClass('active')
 
-});
+	});
 
-console.log(window.location.pathname);
 
-$('.js-tab-parent-trigger').each(function (e) {
-	$(this).removeClass('opened');
-	if($(this).attr('data-href') === window.location.pathname) {
-		 // тут типо открыть
-		$(this.a)
-	}
-} );
+	$('.js-tab-parent-trigger').each(function (i, val) {
+		// console.log($(this).attr('data-href'));
+		// console.log(window.location.pathname.indexOf(`${$(this).attr('data-href')}`));
+
+		if (window.location.pathname.indexOf(`${$(this).attr('data-href')}`) != -1) {
+			console.log(window.location.pathname.indexOf(`${$(this).attr('data-href')}`));
+
+			$(this).trigger('click')
+			let item = $($('.js-tab-parent-content')[i]).find('.js-tab-child-trigger')
+
+			item.each(function (i, val) {
+				// console.log($(this).attr('data-href'), window.location.pathname);
+				$(this).trigger('click')
+			});
+		}
+	});
 
 });	
 
