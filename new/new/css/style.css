@@ -20,9 +20,9 @@
 .tabs--filter .tab-content::after {
   content: '';
   position: absolute;
-  left: -40px;
+  left: -100%;
   top: 0;
-  width: calc( 100vw + 40px);
+  width: 200vw;
   height: 100%;
   background: #F8F8F8;
   z-index: -1;
@@ -324,8 +324,14 @@ header .ht-top-line .hd-tl-ul ul li .menu-sub li {
 
 header .ht-top-line .hd-tl-ul ul li .menu-sub li a {
   display: block;
-  padding: 0 29px;
-  line-height: 42px;
+  padding: 10px 30px;
+  line-height: 36px;
+  letter-spacing: .05em;
+  font-weight: 300;
+  text-transform: none;
+}
+
+header .ht-top-line .hd-tl-ul ul li .menu-sub li a li {
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;

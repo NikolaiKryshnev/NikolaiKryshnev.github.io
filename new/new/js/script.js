@@ -53,7 +53,8 @@ $(document).ready(function () {
 
 
 	function filterGrid(filterBodyRow, filterItem, filterContentBtn) {
-
+		console.log(filterBodyRow);
+		
 		let grid = new Isotope(`.${filterBodyRow}`, {
 			itemSelector: `.${filterItem}`,
 			layoutMode: 'fitRows'
@@ -77,7 +78,6 @@ $(document).ready(function () {
 
 			};
 		});
-
 	}
 
 	filterGrid()
@@ -109,7 +109,6 @@ $(document).ready(function () {
 		$('.search-box').removeClass('active')
 
 	});
-
 
 	$('.js-tab-parent-trigger').each(function (i, val) {
 		// console.log($(this).attr('data-href'));
