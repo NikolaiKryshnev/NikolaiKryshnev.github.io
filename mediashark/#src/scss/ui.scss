@@ -390,4 +390,90 @@ body.ie {
 		transform: rotate(-45deg);
 	}
 }
+
+.scroll-btn {
+	position: fixed;
+	z-index: 20;
+	bottom: 20px;
+	right: 90px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 55px;
+	height: 55px;
+	background: #f9f9f9;
+	cursor: pointer;
+
+	opacity: 0;
+	visibility: hidden;
+	transform: scale(0);
+	transition: all 0.3s linear;
+
+	@media (min-width: 1440px) {
+		right: 3.5vw + 2;
+	}
+	@media (max-width: $md3+px) {
+		right: 45px;
+		width: 30px;
+		height: 30px;
+	}
+
+	._icon-arrow-bot {
+		@include transitColor(0.3s);
+		font-size: $fz22;
+		@include rotate(180deg);
+		@media (max-width: $md3+px) {
+			font-size: $mfz14;
+		}
+	}
+
+	&._active {
+		visibility: visible;
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+html._pc {
+	.scroll-btn:hover {
+		background: #000000;
+		._icon-arrow-bot {
+			color: $white;
+		}
+	}
+}
+
+//========================================================================================================================================================
+.scroll-text {
+	position: absolute;
+	// left: calc((-60px + -16px) / 2);
+	left: 50%;
+	top: 50%;
+
+	z-index: 99;
+	letter-spacing: 0.25em;
+	text-transform: uppercase;
+	@include f700();
+	color: #000;
+
+	transform: rotate(-180deg) translateY(-50%);
+	writing-mode: vertical-rl;
+	@media (min-width: 1440px) {
+		// left: calc((-3.5vw + -16px) / 2);
+		font-size: 1vw;
+	}
+	@media (max-width: $md3+px) {
+		// left: calc((-30px + -10px) / 2);
+
+		font-size: $fz12;
+	}
+}
+
+.parallax {
+	perspective: 1px;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+ }
 //</ГОТОВЫЕ КЛАССЫ>====================================================================================================

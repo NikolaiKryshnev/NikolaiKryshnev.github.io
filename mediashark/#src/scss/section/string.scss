@@ -16,14 +16,18 @@
 		}
 	}
 
+	._container{
+		position: relative;
+	}
+
 	//.string-box
 	&-box {
 		position: relative;
-		padding: 14px 0;
+		// padding: 14px 0;
 
 		overflow: hidden;
 		@media ( max-width:$md3+px){
-			padding: 7px 0;
+			// padding: 7px 0;
 		}
 
 		//.string-box__border
@@ -33,14 +37,14 @@
 			left: 50%;
 
 			height: 1px;
-			width: calc(100% - 10%);
+			width: calc(100% - 30px);
 
 			transform: translateX(-50%);
 
 			overflow: hidden;
 
 			//.string-box__border:last-child
-			&:last-child {
+			&--bottom {
 				top: initial;
 				bottom: 0;
 			}
@@ -65,9 +69,13 @@
 
 	//.string-text
 	&-text {
+		margin: 14px 0;
 		padding: 7px 0;
 
 		overflow: hidden;
+		@media ( max-width:$md3+px){
+			margin: 7px 0;
+		}
 
 		//.string-text__box
 		&__box {

@@ -1,7 +1,7 @@
 let blockClients = document.querySelectorAll('.client'),
 	close = document.querySelectorAll('._close');
-for (const client of blockClients) {
 
+for (const client of blockClients) {
 	if (document.querySelector('html').classList.contains('_touch')) {
 		client.addEventListener("click", (e) => {
 			anBlock(client, e)
@@ -10,6 +10,9 @@ for (const client of blockClients) {
 		client.addEventListener("mouseover", (e) => {
 			anBlock(client, e)
 		});
+		client.addEventListener('mouseleave', (e) => {
+			clearActiveClasses();
+		})
 	}
 }
 
@@ -19,10 +22,11 @@ function clearActiveClasses() {
 			client.classList.remove('_animation');
 			setTimeout(() => {
 				client.classList.remove('_active');
-			}, 100);
+			}, 50);
 		}
 	})
 }
+
 function anBlock(client, e) {
 	if (client.classList.contains('_active') !== true) {
 		clearActiveClasses();
@@ -36,7 +40,7 @@ function anBlock(client, e) {
 		e.target.closest('.client').classList.remove('_animation');
 		setTimeout(() => {
 			e.target.closest('.client').classList.remove('_active');
-		}, 100);
+		}, 50);
 
 	}
 }

@@ -4,31 +4,75 @@
 	}
 	&__column {
 	}
+
 	&__line {
+		position: relative;
+
+		input {
+			padding: 17px 0;
+
+			font-size: $fz20;
+			line-height: 25px;
+			color: #c4c4c4;
+			border-bottom: 1px solid #000;
+			transition: all 0.3s linear;
+			@media ( max-width:$md3+px){
+				padding: 13px 0;
+
+				font-size: $mfz14;
+			}
+
+			&:focus {
+				color: #000;
+			}
+		}
+		textarea {
+			padding: 17px 0;
+
+			min-height: 60px;
+			height: 60px;
+
+			max-height: 200px;
+			width: 100%;
+
+			font-size: $fz20;
+			color: #c4c4c4;
+			border-bottom: 1px solid #000;
+			transition: all 0.3s linear;
+			resize: vertical;
+
+			@media ( max-width:$md3+px){
+				padding: 13px 0;
+
+				height: 52px;
+				min-height: 52px;
+
+				font-size: $mfz14;
+			}
+		}
+
+		&._error {
+			input,textarea {
+				border-bottom: 1px solid red;
+				color: red;
+			}
+		}
 	}
-	&__input {
-	}
-	&__button {
+
+	&__btn {
+		margin-top: 40px;
+
+		.btn {
+			font-size: 16px;
+			line-height: 63px;
+		}
 	}
 	&__error {
+		display: none;
 	}
 }
 
 //</FORM>====================================================================================================
-
-//<BUTTONS (a.btn+tab)>====================================================================================================
-.btn {
-	display: inline-flex;
-	padding: 0px 0px;
-	@media (min-width: 992px) {
-		&:hover {
-		}
-	}
-	&._fw {
-		width: 100%;
-	}
-}
-//</BUTTONS>====================================================================================================
 
 //<SELECT (sel+tab)>====================================================================================================
 .select {
@@ -142,8 +186,8 @@ textarea {
 	}
 }
 textarea.input {
-	resize: none;
-	padding: 0px 0px;
+	// resize: none;
+	// padding: 0px 0px;
 }
 //</INPUT>====================================================================================================
 

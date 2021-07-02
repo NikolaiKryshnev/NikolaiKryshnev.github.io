@@ -294,6 +294,10 @@ if (goto_links) {
 		});
 	}
 }
+
+
+
+
 function _goto(target_block, speed, offset = 0) {
 	let header = '';
 	//OffsetHeader
@@ -442,3 +446,21 @@ function scroll_animate(event) {
 	//If native scroll
 	//disableScroll();
 }
+
+function scrollBtn() {
+	let scrollBtn = document.querySelector('.scroll-btn')
+
+	if (window.scrollY > 60) {
+		scrollBtn.classList.add('_active')
+	}else{
+		scrollBtn.classList.remove('_active')
+
+	}
+}
+
+window.addEventListener('scroll', function (e) {
+	scrollBtn()
+});
+
+scrollBtn()
+

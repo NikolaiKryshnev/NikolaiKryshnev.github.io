@@ -22,7 +22,9 @@ var Visible = function (target) {
 		targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
 		targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
 		// Если элемент полностью видно, то запускаем следующий код
-		console.log('Вы видите элемент :)');
+		// console.log('Вы видите элемент :)');
+		// console.log(target);
+		
 		target.classList.add('animation-show');
 
 		anProgressBar(target.querySelectorAll('.progBar-circle'));
@@ -102,10 +104,12 @@ function chartsSvg(charts, chartsLine) {
 }
 
 function caseSliderShowAnimation() {
-	let caseBlock = document.querySelectorAll('.cases-slider');
+	let caseBlock = document.querySelectorAll('._animation-cases');
 	for (let i = 0; i < caseBlock.length; i++) {
 		const caseBlockI = caseBlock[i];
-		if (caseBlockI.classList.contains("swiper-slide-active")) {
+		// console.log(caseBlockI.closest(".cases-slider"));
+		
+		if (caseBlockI.closest(".cases-slider").classList.contains("swiper-slide-active")) {
 			window.addEventListener('scroll', function () {
 				if (caseBlockI.classList.contains("animation-show") == false) {
 					Visible(caseBlockI);

@@ -24,8 +24,10 @@ function reviewsTextMin() {
 	if (window.innerWidth <= 991) {
 		for (let i = 0; i < document.querySelectorAll('.reviews-slide__text').length; i++) {
 			const el = document.querySelectorAll('.reviews-slide__text')[i];
-			el.closest('.reviews-slide__right').querySelector('.readMmore').style.opacity = '1'
-			el.setAttribute('style', 'max-height:120px; display: -webkit-box;-webkit-line-clamp: 3; -webkit-box-orient: vertical;');
+			if (el.closest('.reviews-slide__right').querySelector('.readMmore') !== null) {
+				el.closest('.reviews-slide__right').querySelector('.readMmore').style.opacity = '1'
+				el.setAttribute('style', 'max-height:120px; display: -webkit-box;-webkit-line-clamp: 3; -webkit-box-orient: vertical;');
+			}
 		}
 	}
 }

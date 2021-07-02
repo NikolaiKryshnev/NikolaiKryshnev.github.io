@@ -103,7 +103,12 @@ function form_add_error(input) {
 	}
 	let input_error_text = input.getAttribute('data-error');
 	if (input_error_text && input_error_text != '') {
-		input.parentElement.insertAdjacentHTML('beforeend', '<div class="form__error">' + input_error_text + '</div>');
+		input.value = input_error_text;
+		input.addEventListener('click', function () {
+			input.value = '';
+		})
+
+		// input.parentElement.insertAdjacentHTML('beforeend', '<div class="form__error">' + input_error_text + '</div>');
 	}
 }
 function form_remove_error(input) {

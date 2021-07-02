@@ -58,13 +58,16 @@
 
 		// .reviews-slide__link
 		&__link {
+			
 			position: relative;
 			display: inline-block;
 
 			margin: 10px 0px 0px 30px;
 
 			color: #000;
-
+			&--hide{
+				display: none;
+			}
 			&::after {
 				@include pseudoEl(block, absolute, "");
 				bottom: 0;

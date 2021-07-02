@@ -144,8 +144,10 @@
 	&-btn {
 		display: inline-block;
 		margin-top: 40px;
-		@include transitColor(0.3s);
+		transition:all 0.3s linear;
+		// @include transitColor(0.3s);
 		&:hover {
+			transform: translateX(10px);
 			color: #606060;
 		}
 	}

@@ -28,7 +28,6 @@
 			@@include('_section-stagesWork.html')
 			<div class="h-200"></div>
 
-
 			@@include('_section-mainGoals.html')
 			<div class="h-200"></div>
 
@@ -38,18 +37,16 @@
 			<section class="section__banForm  banForm _section"
 				style="background-image: url(./img/section-banForm/02.jpg);">
 				<div class="_container">
-					<div class=" title-mb">
-						<div class="banForm__info">
-							<div class="section__title h2"> Дарим бесплатный SEO-аудит вашего сайта</div>
-							<div class="section-titleSub">Это возможно с продвижением сайтов от mediashark!
-							</div>
-							<button class="btn btn--white btn-an" type="submit"><span class="btn-text">Получить</span><span
-									class="btn-hover"></span></button>
+					<div class="banForm__info ">
+						<div class="section__title h2"> Дарим бесплатный SEO-аудит вашего сайта</div>
+						<div class="section-titleSub">Это возможно с продвижением сайтов от mediashark!
 						</div>
-
+						<a class="btn btn--white btn-an _popup-link" href="#callback"><span
+								class="btn-text">Получить</span><span class="btn-hover"></span></a>
 					</div>
 				</div>
 				<!-- /.container -->
+				
 			</section>
 			<!-- /.section__banForm -->
 			<div class="h-200"></div>
@@ -78,21 +75,81 @@
 			<section class="section__banForm  banForm _section"
 				style="background-image: url(./img/section-banForm/03.jpg);">
 				<div class="_container">
-					<div class=" title-mb">
-						<div class="banForm__info">
-							<div class="section__title h2">Узнайте стоимость вашего проекта</div>
-							<div class="section-titleSub">Заполните форму, и наш project manager свяжется с вами в течение 5 минут для обсуждения вашего проекта.
-							</div>
-							<button class="btn btn--white btn-an" type="submit"><span class="btn-text">Узнать стоимость</span><span
-									class="btn-hover"></span></button>
+					<div class="banForm__info">
+						<div class="section__title h2">Узнайте стоимость вашего проекта</div>
+						<div class="section-titleSub">Заполните форму, и наш project manager свяжется с вами в течение 5
+							минут для обсуждения вашего проекта.
 						</div>
-
+						<a class="btn btn--white btn-an _popup-link" href="#callback"><span class="btn-text">Узнать
+								стоимость</span><span class="btn-hover"></span></a>
 					</div>
 				</div>
 				<!-- /.container -->
+				
 			</section>
 			<!-- /.section__banForm -->
 
+			<div class="main__scroll">
+				<div class="scroll-text">
+					SCROLL
+				</div>
+<!-- 
+				<div class="scroll-text">
+					PACKAGES
+				</div>
+
+				<div class="scroll-text">
+					CMS
+				</div>
+
+				<div class="scroll-text">
+					ADVANTEGES
+				</div>
+
+				<div class="scroll-text">
+					OFFER
+				</div>
+
+				<div class="scroll-text">
+					TIMING
+				</div>
+
+				<div class="scroll-text">
+					STAGES
+				</div>
+
+				<div class="scroll-text">
+					GOALS
+				</div>
+				<div class="scroll-text">
+					CASES
+				</div>
+				<div class="scroll-text">
+					offer
+				</div>
+				<div class="scroll-text">
+					sale
+				</div>
+				<div class="scroll-text">
+					CLIENTS
+				</div>
+				<div class="scroll-text">
+					REVIEWS
+				</div>
+
+				<div class="scroll-text">
+					faq
+				</div>
+				<div class="scroll-text">
+					ARTICLES
+				</div>
+				<div class="scroll-text">
+					work with us
+				</div>
+				<div class="scroll-text">
+					offer
+				</div>	 -->
+			</div>
 
 			<div class="main__social">
 				<div class="social">
@@ -111,13 +168,17 @@
 				</div>
 
 			</div>
-			<div class="main__scroll">
 
-			</div>
+
+
+			@@include('_popup.html',{})
+
+			<a class="scroll-btn _goto" href="#header">
+				<i class="_icon-f _icon-arrow-bot"></i>
+			</a>
 		</main>
 		@@include('_footer.html',{})
 	</div>
-	@@include('_popup.html',{})
 	@@include('_js.html',{})
 </body>
 

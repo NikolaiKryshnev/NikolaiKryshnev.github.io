@@ -149,7 +149,7 @@ body {
 				margin: 0 30px;
 
 				width: calc(100% - 60px);
-				
+
 				background: rgba(255, 255, 255, 0.76);
 				backdrop-filter: blur(7px);
 			}
@@ -240,10 +240,12 @@ body._lock {
 		padding-right: 27px;
 	}
 	.btn-hover {
-		background: #222;
+		background: $white;
 	}
 	&:hover {
-		color: $white;
+		border: 1px solid #fff;
+
+		color: #222;
 	}
 }
 .btn-border {

@@ -57,8 +57,10 @@
 
 //-------------------------------------------------------------------------//
 .menu {
+	@include adaptiv-value("margin-right",140, 140, 1);
+	// margin-right: 0;
 	@media (min-width: $md1+px) {
-		margin-right: 8%;
+		// margin-right: 8%;
 	}
 
 	//.menu__icon
@@ -311,7 +313,7 @@ html._touch {
 @media (max-width: $md1 + px) {
 	.menu__list {
 		position: relative;
-		li.header__opt{
+		li.header__opt {
 			padding: 6px 15px;
 		}
 	}
@@ -485,11 +487,12 @@ html._touch {
 	@media (min-width: 1440px) {
 		right: 3.5vw;
 	}
-	@media (max-width: 1400px) {
+	@media ( max-width:$md1+px){
 		position: relative;
-		right: auto;
+		right: 0;
+
 	}
-	
+
 	.opt__block {
 		display: block;
 		cursor: pointer;
@@ -599,6 +602,103 @@ html._touch {
 		.opt__vision,
 		.opt__lang {
 			// display: none;
+		}
+	}
+}
+
+._contact {
+	position: relative;
+
+	.phone-box {
+		position: absolute;
+		right: 0;
+		top: 0;
+
+		padding: 15px 0;
+		margin-top: 45px;
+		margin-right: 10px;
+
+		background: #f9f9f9;
+
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.3s ease-in-out;
+		@media (max-width: $md3+px) {
+			background: $white;
+			position: fixed;
+			width: 260px;
+			margin: 40px 30px 0;
+			border: 1px solid #e1e1e1;
+		}
+		&._active {
+			opacity: 1;
+			visibility: hidden;
+		}
+
+		//.phone-box__list
+		&__list {
+		}
+
+		//.phone-box__link
+		&__link {
+			padding: 12px 25px 12px 0;
+			border-bottom: 1px solid #e1e1e1;
+			a {
+				position: relative;
+				display: flex;
+
+				padding: 0 0 0 25px;
+				margin-left: 25px;
+
+				font-size: 14px;
+				color: #000;
+				line-height: 18px;
+				._icon-f {
+					position: absolute;
+					top: 0;
+					left: 0;
+					&::before {
+						line-height: 18px;
+					}
+				}
+
+				._icon-phone-b {
+					font-size: 15px;
+				}
+
+				._icon-mail-b {
+					font-size: 11px;
+				}
+
+				._icon-map-b {
+					font-size: 18px;
+				}
+			}
+
+			&:first-child {
+				padding-top: 0;
+			}
+
+			&:last-child {
+				padding-bottom: 0;
+				border-bottom: none;
+			}
+		}
+	}
+}
+html._touch {
+	._contact._active {
+		.phone-box {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+html._pc {
+	._contact:hover {
+		.phone-box {
+			opacity: 1;
+			visibility: visible;
 		}
 	}
 }
