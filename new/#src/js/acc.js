@@ -1,9 +1,6 @@
 
 $(document).ready(function () {
 	function f_acc() {
-
-
-
 		$('.acc-js .acc-box .acc-body-js').not($(this).next()).slideUp(300);
 		$(this).next().slideToggle(300);
 
@@ -12,7 +9,6 @@ $(document).ready(function () {
 
 		let clickBtn = $(this).parents('.acc-box').find('.filter-content__btn[data-filter=".all"]');
 		$(clickBtn).trigger('click').addClass('active');
-
 	}
 
 	$('.acc-js .acc-box .acc-head-js').on('click', f_acc);
@@ -29,7 +25,6 @@ $(document).ready(function () {
 			$(content).addClass('active');
 			let clickBtn = $(content).find('.filter-content__btn[data-filter=".all"]');
 			$(clickBtn).trigger('click').addClass('active');
-
 		});
 	}
 	tabs($('.js-tab-parent-trigger'), '.js-tab-parent-content')
@@ -93,5 +88,15 @@ $('.btn-close').on('click', function (e) {
 	$('.search-box').removeClass('active')
 
 });
+
+console.log(window.location.pathname);
+
+$('.js-tab-parent-trigger').each(function (e) {
+	$(this).removeClass('opened');
+	if($(this).attr('data-href') === window.location.pathname) {
+		 // тут типо открыть
+		$(this.a)
+	}
+} );
 
 });	
