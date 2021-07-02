@@ -23,11 +23,13 @@ $(document).ready(function () {
 			$(this).siblings('.js-tab-trigger.active').removeClass('active');
 			$(content).siblings('.active').removeClass('active');
 			$(content).addClass('active');
-			let clickBtn = $(content).find('.filter-content__btn[data-filter=".all"]');
+			let clickBtn = $(content).find(`${itembody}[data-filter=".all"]`);
+			
 			$(clickBtn).trigger('click').addClass('active');
+			$(content).find('.filter-content__btn.active').trigger('click')
 		});
 	}
-	tabs($('.js-tab-parent-trigger'), '.js-tab-parent-content')
+	tabs($('.js-tab-parent-trigger'), '.js-tab-parent-content' )
 	tabs($('.js-tab-child-trigger'), '.js-tab-child-content')
 
 

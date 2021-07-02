@@ -8,8 +8,12 @@
   margin-bottom: 55px;
 }
 
-.tabs--filter .tab-header__item {
+.tabs--filter li.tab-header__item {
   font-size: 20px;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
 }
 
 .tabs--filter .tab-content {
@@ -98,9 +102,17 @@
 }
 
 .tabs--filter .filter-content__btn {
-  background: #FFFFFF;
-  padding: 0 30px;
-  line-height: 43px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 14px 30px 9px;
+  line-height: 1;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
@@ -493,7 +505,10 @@ header .ht-top-line .hd-tl-ul ul li:hover .menu-sub li {
   border: 0;
   border-bottom: 1px solid #000000;
   font-size: 21px;
+  font-weight: 300;
   line-height: 44px;
+  font-family: "pfdintextcondpro-light";
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .search-box input:focus {
@@ -518,6 +533,19 @@ header .ht-top-line .hd-tl-ul ul li:hover .menu-sub li {
 
 .search-box .btn-close:hover svg line {
   stroke: #82B378;
+}
+
+.filter-body__datePub,
+.filter-body__datePayment,
+.filter-body__price,
+.filter-body__scha,
+.filter-body__picePay,
+.filter-body__priceScha {
+  padding: 0 5px;
+}
+
+.acc-box:first-child .acc-head {
+  padding-top: 0;
 }
 
 @media (min-width: 526px) {
@@ -627,9 +655,8 @@ header .ht-top-line .hd-tl-ul ul li:hover .menu-sub li {
   }
 
   .tabs--filter .filter-content__btn {
-    padding: 0 8px;
+    padding: 8px 8px 6px;
     font-size: 14px;
-    line-height: 28px;
     display: block;
     max-width: 100%;
     min-width: -webkit-max-content;
@@ -672,6 +699,7 @@ header .ht-top-line .hd-tl-ul ul li:hover .menu-sub li {
   }
 
   .filter-body--acc .filter-body__name {
+    padding: 0 10px;
     font-size: 14px;
     line-height: 22px;
     -webkit-box-ordinal-group: 2;
@@ -686,12 +714,14 @@ header .ht-top-line .hd-tl-ul ul li:hover .menu-sub li {
   }
 
   .filter-body--acc .filter-body__datePub {
+    padding: 0 10px;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
   }
 
   .filter-body--acc .filter-body__accessTime {
+    padding: 0 10px;
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
@@ -699,6 +729,7 @@ header .ht-top-line .hd-tl-ul ul li:hover .menu-sub li {
 
   .filter-body--acc div.filter-body__datePub,
   .filter-body--acc div.filter-body__accessTime {
+    padding: 0 10px;
     font-size: 14px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -737,6 +768,7 @@ header .ht-top-line .hd-tl-ul ul li:hover .menu-sub li {
   }
 
   .filter-body--acc .filter-body__downland {
+    padding: 0 10px;
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
@@ -828,7 +860,7 @@ header .ht-top-line .hd-tl-ul ul li:hover .menu-sub li {
 }
 
 @media screen and (max-width: 526px) {
-  .tabs--filter .tab-header__item {
+  .tabs--filter li.tab-header__item {
     display: block;
     max-width: 100%;
     min-width: -webkit-max-content;
@@ -837,7 +869,7 @@ header .ht-top-line .hd-tl-ul ul li:hover .menu-sub li {
     font-size: 14px;
   }
 
-  .tabs--filter .tab-header__item::after {
+  .tabs--filter li.tab-header__item::after {
     margin: 0 0 0px 0;
   }
 }
