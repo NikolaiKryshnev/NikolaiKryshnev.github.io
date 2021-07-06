@@ -992,6 +992,7 @@ textarea.input {
   outline: 10px solid #fff;
   outline-offset: -9px;
   border: 10px solid #fff;
+  border-radius: 4px;
 }
 
 .grid-item:first-child {
