@@ -90,7 +90,7 @@ let slider_about = new Swiper('._swiper', {
 	slidesPerView: 1,
 	spaceBetween: 0,
 	autoHeight: true,
-	speed: 800,
+	speed: 500,
 	//touchRatio: 0,
 	//simulateTouch: false,
 	//loop: true,
