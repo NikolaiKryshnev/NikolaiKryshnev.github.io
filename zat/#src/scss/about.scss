@@ -132,10 +132,15 @@
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(12, 1fr);
+	outline: 10px solid #fff;
+	outline-offset: -10px;
+	border: 10px solid #fff;
 }
 
 .grid-item {
-	border: 10px solid #ffff;
+	outline: 10px solid #fff;
+	outline-offset: -10px;
+	border: 10px solid #fff;
 
 	&:first-child {
 		grid-column-start: 1;

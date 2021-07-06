@@ -983,10 +983,15 @@ textarea.input {
   grid-template-columns: repeat(12, 1fr);
   -ms-grid-rows: (1fr)[12];
   grid-template-rows: repeat(12, 1fr);
+  outline: 10px solid #fff;
+  outline-offset: -10px;
+  border: 10px solid #fff;
 }
 
 .grid-item {
-  border: 10px solid #ffff;
+  outline: 10px solid #fff;
+  outline-offset: -10px;
+  border: 10px solid #fff;
 }
 
 .grid-item:first-child {
