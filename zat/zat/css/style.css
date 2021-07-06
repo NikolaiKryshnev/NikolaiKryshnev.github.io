@@ -984,7 +984,7 @@ textarea.input {
   -ms-grid-rows: (1fr)[12];
   grid-template-rows: repeat(12, 1fr);
   outline: 10px solid #fff;
-  outline-offset: -9px;
+  outline-offset: -15px;
   border: 10px solid #fff;
 }
 
