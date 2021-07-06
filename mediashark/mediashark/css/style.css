@@ -1327,6 +1327,10 @@ html._pc .scroll-btn:hover ._icon-arrow-bot {
           writing-mode: vertical-rl;
 }
 
+.scroll-text--anim {
+  padding-top: 55px;
+}
+
 .parallax {
   -webkit-perspective: 1px;
           perspective: 1px;

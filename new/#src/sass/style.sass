@@ -148,15 +148,15 @@
 			display: flex
 			align-items: center
 			justify-content: center
-			padding: 14px 30px 9px
-			line-height: 1
+			padding:  0 30px
+			line-height: 43px
 			// max-height: 43px
 			transition: all 0.3s linear
 			cursor: pointer
 			@media ( max-width: 526px )
-				padding: 8px 8px 6px
+				padding: 0 8px 
 				font-size: 14px
-				// line-height: 28px
+				line-height: 28px
 				display: block
 				max-width: 100%
 				min-width: max-content
@@ -225,6 +225,10 @@
 		margin-left: auto
 
 	&--acc
+		.filter-body__name
+			color: #000000
+			display: block
+
 		.filter-body__name, .filter-body__downland a, 	.filter-body__downland a svg path
 			transition: all 0.3s linear
 		
@@ -334,7 +338,7 @@
 		font-size: 18px
 		line-height: 26px;
 		border-bottom: 1px solid rgba(0, 0,0 ,0.1 )
-		border-top: 1px solid rgba(0, 0,0 ,0.1 )
+		// border-top: 1px solid rgba(0, 0,0 ,0.1 )
 
 
 	&:after,
@@ -618,4 +622,5 @@ header .ht-top-line .hd-tl-ul ul li:hover
 
 .acc-box:first-child
 	.acc-head
-		padding-top: 0
+		margin-top: -39px
+			

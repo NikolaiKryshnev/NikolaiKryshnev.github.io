@@ -24,18 +24,20 @@ $(document).ready(function () {
 			$(content).siblings('.active').removeClass('active');
 			$(content).addClass('active');
 			let clickBtn = $(content).find(`${itembody}[data-filter=".all"]`);
-			
+
 			$(clickBtn).trigger('click').addClass('active');
 			$(content).find('.filter-content__btn.active').trigger('click')
+			// $('.acc-box').removeClass('active');
+
 		});
 	}
-	tabs($('.js-tab-parent-trigger'), '.js-tab-parent-content' )
+	tabs($('.js-tab-parent-trigger'), '.js-tab-parent-content')
 	tabs($('.js-tab-child-trigger'), '.js-tab-child-content')
 
 
 	function filterGrid(filterBodyRow, filterItem, filterContentBtn) {
 		console.log(filterBodyRow);
-		
+
 		let grid = new Isotope(`.${filterBodyRow}`, {
 			itemSelector: `.${filterItem}`,
 			layoutMode: 'fitRows'
@@ -95,15 +97,16 @@ $(document).ready(function () {
 		// console.log($(this).attr('data-href'));
 		// console.log(window.location.pathname.indexOf(`${$(this).attr('data-href')}`));
 
-		if (window.location.pathname.indexOf(`${$(this).attr('data-href')}`) != -1) {
-			console.log(window.location.pathname.indexOf(`${$(this).attr('data-href')}`));
+		if (window.location.hash == $(this).attr('data-href')) {
+			console.log(window.location.hash);
 
 			$(this).trigger('click')
 			let item = $($('.js-tab-parent-content')[i]).find('.js-tab-child-trigger')
 
 			item.each(function (i, val) {
-				// console.log($(this).attr('data-href'), window.location.pathname);
-				$(this).trigger('click')
+				if (window.location.hash == $(this).attr('data-href')) {
+					$(this).trigger('click')
+				}
 			});
 		}
 	});

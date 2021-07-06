@@ -1,0 +1,65 @@
+.section-company {
+	@include adaptiv-value("margin-top", 185, 60, 0);
+	@include adaptiv-value("padding-top", 65, 38, 0);
+}
+.company {
+	.section-title {
+		position: relative;
+
+		max-width: 50%;
+		width: 100%;
+		flex: 0 0 50%;
+		@include translateY(50%);
+		opacity: 0;
+		transition: all 0.5s linear;
+		&._active{
+			opacity: 1;
+			@include translateY(0);
+		}
+		&:after {
+			@include pseudoEl(block, absolute, "");
+			@include adaptiv-value("top", -65, -38, 0);
+			@include adaptiv-value("left", -50, 0, 0);
+
+			z-index: -1;
+			background: url("../img/company/01.svg");
+			width: 195px;
+			height: 142px;
+			left: -50px;
+		}
+
+		@media (max-width: 655px) {
+			max-width: 100%;
+			flex: 1 1 100%;
+			margin-bottom: 20px;
+		}
+	}
+
+	//.company-text
+	&-text {
+		max-width: 50%;
+		width: 100%;
+		flex: 0 0 50%;
+		font-size: 20px;
+		line-height: 166%;
+		color: #555555;
+		@include translateY(50%);
+		opacity: 0;
+		transition: all 0.5s linear 0.3s;
+		&._active{
+			opacity: 1;
+			@include translateY(0);
+		}
+		@media (max-width: 655px) {
+			max-width: 100%;
+			font-size: 14px;
+			flex: 1 1 100%;
+		}
+	}
+
+	//.company-content
+	&-content {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
