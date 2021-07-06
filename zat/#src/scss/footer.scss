@@ -26,6 +26,9 @@
 	.icon-mail {
 		padding-left: 24px;
 		position: relative;
+		&:hover{
+			text-decoration: underline;
+		}
 		@media (max-width: $md3+px) {
 			order: 2;
 		}

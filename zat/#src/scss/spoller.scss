@@ -41,7 +41,6 @@
 		transform: translateY(50%);
 		opacity: 0;
 		transition: all 0.3s linear;
-		padding-bottom: 31px;
 		&._active {
 			transform: translateY(0);
 			opacity: 1;
@@ -67,10 +66,7 @@
 			transition-delay: 1s;
 		}
 
-		@media (max-width: $md3+px) {
-			padding-bottom: 20px;
-		}
-
+	
 		&:not(:first-child) {
 			padding-top: 31px;
 			@media (max-width: $md3+px) {
@@ -86,6 +82,8 @@
 
 .faq-item {
 	&__title {
+		margin-bottom: 31px;
+
 		position: relative;
 		cursor: pointer;
 		font-size: 26px;
@@ -93,10 +91,17 @@
 		color: #252525;
 		font-family: "Montserrat-Bold";
 		padding-right: 74px;
-		@include transitColor(0.3s);
+		transition: all 0.3s linear;
+		&_.active{
+			margin-bottom: 20px;
+		}
 		@media (max-width: $md3+px) {
 			font-size: 16px;
+			margin-bottom: 20px;
+
 		}
+
+
 		&:after,
 		&:before {
 			@include pseudoEl(block, absolute, "");
@@ -125,12 +130,14 @@
 
 	&__info {
 		padding-top: 20px;
+		padding-bottom: 30px;
 		display: none;
 		font-size: 16px;
 		line-height: 166%;
 		color: #555555;
 		@media (max-width: $md3+px) {
 			padding-top: 15px;
+			padding-bottom: 20px;
 		}
 	}
 }

@@ -251,7 +251,7 @@ if (link) {
 			}
 			let target_block_class = el.getAttribute('href').replace('#', '');
 			let target_block = document.querySelector('.' + target_block_class);
-			_goto(target_block, 300);
+			_goto(target_block, 1000);
 			e.preventDefault();
 		})
 	}

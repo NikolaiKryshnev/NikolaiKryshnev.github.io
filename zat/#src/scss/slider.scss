@@ -1,6 +1,14 @@
 .section-slider {
 }
 .slider {
+	transition: all 0.5s linear;
+	@include translateY(50%);
+	opacity: 0;
+
+	&._active{
+		@include translateY(0);
+		opacity: 1;
+	}
 	.section-title {
 		margin-bottom: 10px;
 	}
@@ -127,6 +135,14 @@
 			font-size: 14px;
 		}
 	}
+
+	.swiper-slide{
+		opacity: 0;
+		transition:all  0.3s linear;
+		&.swiper-slide-active{
+			opacity: 1;
+		}
+	}
 }
 
 .swiper-arrow {
@@ -139,16 +155,21 @@
 	.swiper-button-next {
 		margin-left: 5px;
 		cursor: pointer;
-		&:hover {
-			transform: translateX(10px);
+		@media ( min-width:$md1+px){
+			&:hover {
+				transform: translateX(10px);
+			}
 		}
 	}
+	
 	.swiper-button-prev {
 		cursor: pointer;
 		margin-right: 5px;
 
-		&:hover {
-			transform: translateX(-10px);
+		@media ( min-width:$md1+px){
+			&:hover {
+				transform: translateX(-10px);
+			}
 		}
 	}
 	.swiper-button-disabled svg path {
