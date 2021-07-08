@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	@@include('files/popup.js', {})
 
 	@@include('files/gallery.js', {})
+	@@include('files/scrollText.js', {})
+
 });
 
 

@@ -244,18 +244,18 @@
 }
 @media (max-width: 991px) {
   .delivery-title {
-	font-weight: 550;
-	line-height: 22px;
-	color: #000000;
-	font-size: 4.8vw;
-	margin: 0;
+    font-weight: 550;
+    /* line-height: 22px; */
+    color: #000000;
+    font-size: 4.8vw;
+    margin-bottom: 0;
   }
 }
 .delivery-subtitle {
   margin-top: 2vw;
   font-weight: normal;
   font-size: 1vw;
-  line-height: 18px;
+  line-height: 1.2;
 
   color: #656565;
 }
@@ -455,7 +455,7 @@
 }
 
 .price-ser__num::after {
-  content: "₽";
+  content: "руб.";
   font-size: 0.9vw;
   margin-left: 0.3vw;
 }
@@ -494,7 +494,7 @@
   padding-left: 1.8vw;
   font-weight: 300;
   font-size: 0.9vw;
-  line-height: 23px;
+  line-height: 1.4;
 
   color: #656565;
   font-style: italic;
@@ -512,11 +512,11 @@
   flex-direction: row;
   align-items: center;
 }
-@media(min-width: 991px){
-	.ser-box--pay .ser-box__col:nth-child(3),
-.ser-box--pay .ser-box__col:nth-child(4) {
-  border-top: 1px solid #eaeaea;
-}
+@media (min-width: 991px) {
+  .ser-box--pay .ser-box__col:nth-child(3),
+  .ser-box--pay .ser-box__col:nth-child(4) {
+    border-top: 1px solid #eaeaea;
+  }
 }
 
 .ser-box--pay .ser-box__icon,
@@ -614,7 +614,7 @@
   flex-wrap: wrap;
 }
 .delivery-modal__box img:not(:last-child) {
-  margin-right: 6vw;
+  margin-right: 3vw;
 }
 .delivery-modal__box img {
   margin-bottom: 3vw;
@@ -781,13 +781,14 @@
     flex: 1 1 100%;
   }
   .ser-box__icon,
-  .ser-box--pay .ser-box__icon,.ser-box--pay .ser-box__img {
+  .ser-box--pay .ser-box__icon,
+  .ser-box--pay .ser-box__img {
     width: 12.5vw;
     height: 12.5vw;
-	 margin-bottom: 10.3vw;
-	 
-	 position: absolute;
-	 top: auto;
+    margin-bottom: 10.3vw;
+
+    position: absolute;
+    top: auto;
     left: 7vw;
   }
   .ser-box__icon img {
@@ -872,7 +873,7 @@
     margin-top: 0;
   }
   .ser-box--pay .ser-box__col {
-	  display: flex;
+    display: flex;
     /* grid-template-columns: 15.5vw 1fr; */
   }
   .ser-box__img {
@@ -884,9 +885,9 @@
     margin-bottom: 0;
   }
   .ser-box--pay .ser-box__info {
-	 /* margin-left: 7vw; */
-	 /* margin-left: 23vw; */
-	 margin-left: 0;
+    /* margin-left: 7vw; */
+    /* margin-left: 23vw; */
+    margin-left: 0;
   }
   .delivery-check {
     font-size: 3.8vw;
@@ -1034,6 +1035,7 @@
   display: block;
   vertical-align: top;
   max-width: 100%;
+  width: 100%;
 }
 .tab-content__info {
   display: flex;
@@ -1045,10 +1047,13 @@
   position: relative;
   font-weight: 550;
   font-size: 1.4vw;
-  line-height: 35px;
+  line-height: 1.4;
 
   margin-bottom: 0.8vw;
   color: #000000;
+}
+.tab-content__title i {
+  font-weight: 300;
 }
 .tab-content__title::before {
   /* position: absolute; */
@@ -1063,6 +1068,7 @@
   .tab-content__title::before {
     width: 3vw;
     height: 4vw;
+    margin-right: 5px;
   }
   .ser-box__list {
     margin-bottom: 12vw;
@@ -1086,7 +1092,7 @@
   display: flex;
   flex-direction: column;
   font-size: 1.1vw;
-  line-height: 18px;
+  line-height: 1.2;
 
   color: #000000;
 }
@@ -1128,7 +1134,7 @@
 .delivery-Blocktitle {
   font-weight: 550;
   font-size: 1.3vw;
-  line-height: 22px;
+  line-height: 1.4;
   color: #000000;
   margin-bottom: 2.7vw;
 }
@@ -1176,8 +1182,8 @@
   font-style: italic;
   font-weight: 300;
   padding-left: 14%;
-  font-size: 16px;
-  line-height: 23px;
+  font-size: 0.9vw;
+  line-height: 1.4;
   color: #656565;
 }
 @media (max-width: 991px) {
@@ -1397,6 +1403,162 @@
     margin-bottom: 7vw;
   }
   .ser-box--pay .ser-box__col {
-	  display: flex;
+    display: flex;
   }
 }
+
+@media (min-width: 1720px) {
+  .delivery-title {
+	 font-size: 43px;
+	 margin: 23px 0 43px;
+  }
+  .tab-content__item:first-child{
+	  padding: 90px 150px 107px 78px;
+  }
+  .tab-content__img{
+		width: 229px;
+		height: 249px;
+  }
+  .tab-content__info {
+    padding-left: 30px;
+  }
+  .tab-content__title{
+	  margin-bottom: 15px;
+  }
+  .tab-content__title, .delivery-subtitle, .ser-box__title {
+    font-size: 28px;
+  }
+  .tab-content__text, .ser-box__info p {
+    font-size: 23px;
+  }
+  .tab-content__time {
+    font-size: 24px;
+  }
+  .tab-content__time span, .ser-box__list .icon-map, .price-ser__title, .price-ser__num::after, .delivery-check{
+	  font-size: 21px;
+  }
+  .delivery-Blocktitle, .price-ser__num{
+	  font-size: 34px;
+  }
+  .ser-box-el__text{
+	  font-size: 21px;
+	  padding-left: 7%;
+
+  }
+  .h-140{
+	  height: 155px;
+  }
+  .accordeon-pay .delivery-title{
+	  margin-bottom: 115px;
+  }
+  .accordeon-pay .ser-box__col{
+	  padding: 46px 57px 57px 201px;
+  }
+  .accordeon-pay .ser-box__icon{
+	  width: 72px;
+	  height: 72px;
+	  top: 50px;
+	  left: 50px;
+  }
+  .ser-box__title{
+	  margin-bottom: 48px;
+  }
+  .ser-box__info p{
+	  margin-bottom: 17px;
+  }
+  .price-ser__title{
+	  margin-bottom: 15px;
+  }
+  .price-ser{
+	  margin-top: 71px;
+  }
+  .ser-box__list li{
+	  padding-left: 42px;
+  }
+  .delivery-Blocktitle{
+	  margin-bottom: 51px;
+  }
+  .ser-box__list .icon-clock::after, .ser-box__list .icon-map::after{
+	  left: -40px;
+	  width: 20px;
+  }
+
+  .delivery-ban .delivery-ban__title{
+	  font-size: 30px;
+	  margin-bottom: 20px;
+  }
+  .delivery-ban .delivery-ban__text{
+	  font-size: 21px;
+  }
+  .delivery-ban__info{
+	  padding-left: 25%;
+  }
+  .delivery-ban{
+	  padding: 60px 0;
+	  margin: 46px 0 115px;
+  }
+  .delivery-ban-left{
+	  width: 224px;
+  }
+  .delivery-ban-right{
+	  width: 374px;
+  }
+  .delivery-ban-ser{
+	  width: 345px;
+	  left: 4%;
+  }
+  .ser-box__col{
+	  padding: 46px 57px 57px;
+  }
+  .ser-box__icon{
+	  width: 72px;
+	  height: 72px;
+	  margin-bottom: 57px;
+  }
+  .ser-box__info p{
+	  margin-bottom: 17px;
+  }
+  .ser-box__list li:not(:last-child){
+	  margin-bottom: 46px;
+  }
+  .price-warning{
+	  margin: 67px 57px 0;
+	  font-size: 27px;
+  }
+  .ser-box--pay .ser-box__col{
+	grid-template-columns: 5vw 1fr;
+  }
+  .ser-box--pay .modal-show{
+	  font-size: 20px;
+	  margin-top: 24px;
+  }
+  .ser-box--pay .ser-box__info{
+	  margin-left: 67px;
+  }
+  .delivery-check__img{
+	  margin-top: 50px;
+  }
+  .delivery-modal{
+	  padding: 130px 160px;
+  }
+  .delivery-modal-title{
+	  font-size: 30px;
+	  margin-bottom: 67px;
+  }
+  .delivery-modal__box img:not(:last-child){
+	  margin-right: 70px;
+	  margin-bottom: 70px;
+  }
+  .delivery-modal .close-modal{
+	  right: 35px;
+	  top: 35px;
+	  width: 72px;
+	  height: 72px;
+  }
+  .delivery-modal .close-modal svg{
+	  width: 15px;
+	  height: 15px;
+  }
+}
+
+

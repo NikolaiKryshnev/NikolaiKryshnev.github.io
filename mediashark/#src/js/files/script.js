@@ -7,17 +7,16 @@ function main__top() {
 main__top()
 
 // banner desctop, mb 
-function banImg() {
-	let banImg = document.querySelector('.ban');
-	if (window.screen.width > 526) {
-		banImg.style.backgroundImage = `url('${banImg.getAttribute("data-desktopBgUrl")}')`;
-	} else {
-		banImg.style.backgroundImage = `url('${banImg.getAttribute("data-mbBgUrl")}')`;
-	}
+// function banImg() {
+// 	let banImg = document.querySelector('.ban');
+// 	if (window.screen.width > 526) {
+// 		banImg.style.backgroundImage = `url('${banImg.getAttribute("data-desktopBgUrl")}')`;
+// 	} else {
+// 		banImg.style.backgroundImage = `url('${banImg.getAttribute("data-mbBgUrl")}')`;
+// 	}
 
-}
+// }
 // banImg();
-
 
 
 // event resize 

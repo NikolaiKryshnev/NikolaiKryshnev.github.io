@@ -1310,10 +1310,10 @@ html._pc .scroll-btn:hover ._icon-arrow-bot {
   color: #fff;
 }
 
-.scroll-text {
+._scroll-text {
   position: absolute;
   left: 50%;
-  top: 50%;
+  bottom: 0;
   z-index: 99;
   letter-spacing: 0.25em;
   text-transform: uppercase;
@@ -1327,7 +1327,7 @@ html._pc .scroll-btn:hover ._icon-arrow-bot {
           writing-mode: vertical-rl;
 }
 
-.scroll-text--anim {
+._scroll-text--anim {
   padding-top: 55px;
 }
 
@@ -5456,7 +5456,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     right: 5.5vw;
   }
 
-  .scroll-text {
+  ._scroll-text {
     font-size: 1vw;
   }
 
@@ -6109,7 +6109,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     font-size: 1rem;
   }
 
-  .scroll-text {
+  ._scroll-text {
     font-size: 0.75rem;
   }
 
