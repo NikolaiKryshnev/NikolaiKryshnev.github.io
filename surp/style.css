@@ -1418,6 +1418,7 @@
   .tab-content__img{
 		width: 229px;
 		height: 249px;
+		flex: 0 0 249px
   }
   .tab-content__info {
     padding-left: 30px;
