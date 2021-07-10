@@ -2,6 +2,7 @@
 // зона видимости 
 
 var Visible = function (target) {
+
 	// Все позиции элемента
 	var targetPosition = {
 		top: window.pageYOffset + target.getBoundingClientRect().top,
@@ -24,14 +25,11 @@ var Visible = function (target) {
 		// Если элемент полностью видно, то запускаем следующий код
 		// console.log('Вы видите элемент :)');
 		// console.log(target);
-		
-		target.classList.add('animation-show');
+		return true
 
-		anProgressBar(target.querySelectorAll('.progBar-circle'));
-		anProgressBar(target.querySelectorAll('.progBar-line'));
-		chartsSvg(target.querySelectorAll('.charts-block__ico'), target.querySelectorAll('.charts-block__line'))
 
 	} else {
+		return false
 		// Если элемент не видно, то запускаем этот код
 		// console.clear();
 	};
@@ -56,14 +54,11 @@ function outNum(num, elem) {
 		if (e.closest('._progress-bar').querySelector('.progBar-line--progress') !== null) {
 			e.closest('._progress-bar').querySelector('.progBar-line--progress').style.width = `${n}%`;
 		} else {
-			
 			let result = (566 + (566 * n / e.dataset.maxprognumber));
-			// console.log(result);
-			
 			e.closest('._progress-bar').querySelector('.circle').querySelector('._circle-progress').style.strokeDashoffset = `${result}`;
 		}
 	},
-		t);	
+		t);
 };
 //--------------
 
@@ -87,7 +82,7 @@ function chartsSvg(charts, chartsLine) {
 		const el = charts[i];
 
 		el.style.minWidth = `calc(${el.closest('.charts-block__box').offsetWidth}px - 10%)`;
-		
+
 		let svg = el.contentDocument.querySelector('svg');
 		svg.setAttribute('viewBox', `0 0 ${svg.getAttribute('width')} ${svg.getAttribute('height')}`);
 		svg.style.cssText = `
@@ -102,30 +97,36 @@ function chartsSvg(charts, chartsLine) {
 		chartL.style.width = '100%';
 	}
 }
+function animBlock(el) {
+	el.classList.add('animation-show');
+	anProgressBar(el.querySelectorAll('.progBar-circle'));
+	anProgressBar(el.querySelectorAll('.progBar-line'));
+	chartsSvg(el.querySelectorAll('.charts-block__ico'), el.querySelectorAll('.charts-block__line'));
+}
 
 function caseSliderShowAnimation() {
 	let caseBlock = document.querySelectorAll('._animation-cases');
 	for (let i = 0; i < caseBlock.length; i++) {
 		const caseBlockI = caseBlock[i];
-		// console.log(caseBlockI.closest(".cases-slider"));
-		
 		if (caseBlockI.closest(".cases-slider").classList.contains("swiper-slide-active")) {
 			window.addEventListener('scroll', function () {
 				if (caseBlockI.classList.contains("animation-show") == false) {
-					Visible(caseBlockI);
+					if (Visible(caseBlockI) === true) {
+						animBlock(caseBlockI)
+					}
 				}
 			});
 			if (caseBlockI.classList.contains("animation-show") == false) {
-				Visible(caseBlockI);
+				if (Visible(caseBlockI) === true) {
+					animBlock(caseBlockI)
+				}
+
 			}
 		}
 	}
-
 }
 
-window.onload = function () {
-	caseSliderShowAnimation()
-};
+caseSliderShowAnimation();
 
 
 

@@ -1187,9 +1187,10 @@
   color: #656565;
 }
 @media (max-width: 991px) {
-  .ser-box-el__text {
+  .ser-box-el__text {	
     flex: 1 1 100%;
-    max-width: 100%;
+	 max-width: 100%;
+	font-size: 3vw;
   }
 }
 
