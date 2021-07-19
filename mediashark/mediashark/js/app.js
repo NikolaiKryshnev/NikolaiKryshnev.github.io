@@ -2009,7 +2009,7 @@ function scroll_scroll() {
 				scr_item.classList.add('_active');
 				scroll_load_item(scr_item);
 			} else {
-				// scr_item.classList.remove('_active');
+				scr_item.classList.remove('_active');
 			}
 			if (((src_value > scr_item_offset - window.innerHeight))) {
 				if (scr_item.querySelectorAll('._lazy').length > 0) {
@@ -2233,10 +2233,6 @@ if (goto_links) {
 		});
 	}
 }
-
-
-
-
 function _goto(target_block, speed, offset = 0) {
 	let header = '';
 	//OffsetHeader
@@ -2386,24 +2382,6 @@ function scroll_animate(event) {
 	//disableScroll();
 }
 
-function scrollBtn() {
-	let scrollBtn = document.querySelector('.scroll-btn')
-
-	if (window.scrollY > 60) {
-		scrollBtn.classList.add('_active')
-	}else{
-		scrollBtn.classList.remove('_active')
-
-	}
-}
-
-window.addEventListener('scroll', function (e) {
-	scrollBtn()
-});
-
-scrollBtn()
-
-
 	
 let reviewsText = document.querySelectorAll('.reviews-slide__text');
 
@@ -2548,12 +2526,23 @@ function gallery_init() {
 }
 	let scrollSection = document.querySelector('._scroll-block[data-scroll="scroll-packages"]'),
 	scrollText = document.querySelector('._scroll-text[data-scroll="scroll-packages"]'),
-	scrollSectionHeght = scrollSection.offsetHeight;
+	sectiontHeight = scrollSection.offsetHeight;
 
 window.addEventListener('scroll', function () {
-	if( Visible(scrollSection) === true){
-		// scrollSection.style.bottom = `${}`
-	}else{
+
+	if (Visible(scrollSection) === true) {
+		elsum = scrollSection.getBoundingClientRect().top + sectiontHeight;
+		// console.log(elsum/100);
+
+
+		// if (elsum < (sectiontHeight)) {
+			// scrollText.style.cssText = `
+			// 		transform: rotate(-180deg) translateY(calc(-50% + ${elsum / 100 * 1.2}rem ) )
+			//   `
+
+		// }
+
+	} else {
 
 	}
 

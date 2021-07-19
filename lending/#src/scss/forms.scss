@@ -1,0 +1,311 @@
+//<FORM ()>====================================================================================================
+.form {
+	color: #fff;
+	&__title {
+		font-family: CormorantSC;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 30px;
+		line-height: 115.87%;
+		color: #ffffff;
+		font-size: 1.9vw;
+		@media (max-width: $md1+px) {
+			font-size: 2.2vw;
+		}
+		@media (max-width: $md2+px) {
+			font-size: 4vw;
+		}
+		@media (max-width: $md3+px) {
+			font-size: 7.5vw;
+		}
+	}
+	&__content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		padding: 2.2vw 3.4vw;
+	}
+
+	&__line {
+		position: relative;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 0.9vw;
+		line-height: 115.87%;
+		margin: 0 0 1.6vw 0;
+		max-width: 100%;
+		flex: 0 0 100%;
+		padding: 0 0.65vw;
+		@media (max-width: $md1+px) {
+			font-size: 14px;
+		}
+		@media (max-width: $md3+px) {
+			margin-bottom: 4.6vw;
+		}
+		.input {
+			margin: 0.5vw 0 0 0;
+			@include adaptiv-value("margin-top", 7, 7, 0);
+			background: #353535;
+			height: 2.9vw;
+			@include adaptiv-value("min-height", 45, 40, 0);
+			padding: 0 1vw;
+			color: #fff;
+		}
+		textarea.input {
+			padding: 0.3vw 1vw;
+			height: 5.35vw;
+			min-height: 85px;
+		}
+	}
+	&__two {
+		.form__line {
+			position: relative;
+			width: 100%;
+			min-height: 1px;
+			flex: 0 0 50%;
+			max-width: 50%;
+			@media (max-width: $md3+px) {
+				flex: 0 0 100%;
+				max-width: 100%;
+			}
+		}
+	}
+	&__input {
+	}
+	&__button {
+	}
+	&__error {
+	}
+	&__fieldset {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		// margin: 0 -0.65vw;
+	}
+}
+
+//</FORM>====================================================================================================
+
+//<BUTTONS (a.btn+tab)>====================================================================================================
+.btn {
+	display: inline-flex;
+	justify-content: flex-end;
+	padding: 0px 0px;
+	@media (min-width: 992px) {
+		&:hover {
+		}
+	}
+	&._fw {
+		width: 100%;
+	}
+}
+//</BUTTONS>====================================================================================================
+
+//<SELECT (sel+tab)>====================================================================================================
+.select {
+	position: relative;
+	// .select__item
+	&__item {
+		position: relative;
+	}
+	// .select__title
+	&__title {
+		color: #000;
+		border: 1px solid #d9d9d9;
+		background-color: #fff;
+		cursor: pointer;
+		border-radius: 4px;
+		@media (max-width: $md2+px) {
+			font-size: 18px;
+		}
+	}
+	// .select__value
+	&__value {
+		display: flex;
+		font-size: 14px;
+		height: 30px;
+		padding: 0px 15px;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: row-reverse;
+		span {
+			height: 1em;
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;
+		}
+		&:before {
+			content: "";
+			display: inline-block;
+			transition: all 0.3s ease 0s;
+			width: 11px;
+			height: 7px;
+			background: url("../img/icons/select.svg") center / 100% no-repeat;
+		}
+	}
+	&__input {
+		width: 100%;
+		background-color: transparent;
+		height: 100%;
+	}
+	// .select__options
+	&__options {
+		color: #000;
+		display: none;
+		position: absolute;
+		top: 29px;
+		border-radius: 0 0 4px 4px;
+		min-width: 100%;
+		left: 0;
+		background-color: #fff;
+		border-top: 0;
+		border: 1px solid #d9d9d9;
+		border-top: 0;
+		font-size: 14px;
+		padding: 10px 0px 5px 0px;
+		@media (max-width: $md2+px) {
+			font-size: 18px;
+		}
+	}
+	// .select__option
+	&__option {
+		cursor: pointer;
+		padding: 5px 15px;
+		margin: 0px 0px 0px 0px;
+		@media (min-width: 992px) {
+			&:hover {
+				background: #d9d9d9;
+			}
+		}
+	}
+	&._active {
+		z-index: 5;
+		.select__value {
+			&:before {
+				transform: rotate(-180deg);
+			}
+		}
+		.select__options {
+			display: block;
+		}
+	}
+}
+//</SELECT>====================================================================================================
+
+//<INPUT (inp+tab)>====================================================================================================
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.input {
+	border-radius: 0 !important;
+	width: 100%;
+	display: block;
+	padding: 0px 20px;
+	&._focus {
+	}
+	&._error {
+	}
+}
+textarea.input {
+	resize: none;
+	padding: 0px 0px;
+}
+//</INPUT>====================================================================================================
+.form__input {
+	position: relative;
+}
+.form__error {
+	position: absolute;
+
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0.65vw;
+	// height: 2.9vw;
+	position: absolute;
+	right: 1vw;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 1.5vw;
+	height: 1.5vw;
+	min-width: 20px;
+	min-height: 20px;
+	background: #d7a781;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	content: "!";
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 1.2vw;
+	cursor: pointer;
+	@media (max-width: $md1+px) {
+		font-size: 14px;
+	}
+
+	&_text {
+		opacity: 0;
+		visibility: hidden;
+		background: #ffffff;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		text-align: center;
+		color: #26242d;
+		width: 10vw;
+		min-width: 200px;
+		padding: 0.8vw;
+		top: 50%;
+		left: 50%;
+		transform: translateY(-150%) translateX(-50%);
+		position: absolute;
+		font-size: 0.9vw;
+		transition: all 0.3s linear;
+		@media (max-width: $md2+px) {
+			display: none;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: -8.5px;
+			left: 50%;
+			transform: translateX(-50%);
+			// margin-left: 4px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 1vw 1vw 0 1vw;
+			border-color: #fff transparent transparent transparent;
+
+			@media (max-width: $md2+px) {
+				border-width: 15px 15px 0 15px;
+			}
+		}
+	}
+
+	@media ( min-width:$md2+px ){
+		&:hover .form__error_text {
+			display: block;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+input:focus, textarea:focus{
+	border: 1px solid #D7A781;
+}
+//</QUANTITY>====================================================================================================
+
+//<RANGE>====================================================================================================
+
+//</RANGE>====================================================================================================

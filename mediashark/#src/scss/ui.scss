@@ -445,20 +445,28 @@ html._pc {
 }
 
 //========================================================================================================================================================
+._scroll-block{
+	position: relative;
+}
 ._scroll-text {
 	position: absolute;
 	// left: calc((-60px + -16px) / 2);
-	left: 50%;
-	// top: 50%;
-	bottom: 0;
-
+	left: -3.5vw;
+	top: 0;
 	z-index: 99;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 3.5vw;
+	height: 100%;
 	letter-spacing: 0.25em;
 	text-transform: uppercase;
 	@include f700();
 	color: #000;
 
-	transform: rotate(-180deg) translateY(-50%);
+	transform: rotate(-180deg);
 	writing-mode: vertical-rl;
 	@media (min-width: 1440px) {
 		// left: calc((-3.5vw + -16px) / 2);
@@ -468,10 +476,12 @@ html._pc {
 		// left: calc((-30px + -10px) / 2);
 
 		font-size: $fz12;
-	}	
-	&--anim{
+	}
+	&--anim {
 		padding-top: 55px;
 	}
+
+	transition: top 0.3s linear;
 }
 
 .parallax {
@@ -479,5 +489,5 @@ html._pc {
 	height: 100vh;
 	overflow-x: hidden;
 	overflow-y: auto;
- }
+}
 //</ГОТОВЫЕ КЛАССЫ>====================================================================================================

@@ -46,6 +46,13 @@
 		@include f700();
 		color: $white;
 		text-align: center;
+		transform: translateY(-1em);
+		opacity: 0;
+		transition: all 0.3s linear;
+		&._active{
+			transform: translateY(0);
+			opacity: 1;
+		}
 		@media (max-width: $md1+px) {
 			font-size: $fz36;
 		}
@@ -59,9 +66,14 @@
 				@include translateX(-50%);
 
 				background: $white;
-				width: 99px;
+				width: 0;
 				height: 1px;
+				transition: width 0.5s linear 0.5s ;
 			}
+			&._active::after{
+				width: 99px;
+			}
+
 		}
 		@media (max-width: $md3+px) {
 			font-size: $mfz20;
