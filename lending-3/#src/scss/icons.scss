@@ -24,23 +24,28 @@
 		display: block;
 	}
 }
-
+._icon-link:before {
+	content: "\e906";
+ }
+._icon-loupe:before {
+	content: "\e907";
+ }
 ._icon-arrow:before {
 	content: "\e902";
  }
- ._icon-drib:before {
+._icon-drib:before {
 	content: "\e900";
  }
- ._icon-be:before {
+._icon-be:before {
 	content: "\e901";
  }
- ._icon-in:before {
+._icon-in:before {
 	content: "\e903";
  }
- ._icon-inst:before {
+._icon-inst:before {
 	content: "\e904";
  }
- ._icon-tg:before {
+._icon-tg:before {
 	content: "\e905";
  }
-
+ 

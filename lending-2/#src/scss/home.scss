@@ -64,7 +64,7 @@
 		@include adaptiv-value("padding-bottom", 34, 16, 0);
 		font-family: Mont;
 		font-style: normal;
-		font-weight: 800;
+		font-weight: 600;
 		@include adaptiv-value("font-size", 26, 20, 0);
 		line-height: 115.87%;
 		color: #ffffff;
@@ -149,8 +149,6 @@
 }
 .btn-file:hover,
 .btn-file:focus {
-	color: #888;
-	border-color: #888;
 }
 .input-file {
 	width: 0.1px;
@@ -166,7 +164,11 @@
 	white-space: nowrap;
 	cursor: pointer;
 }
+.input-file:hover+.js-labelFile .icon{
+	background: #888;
+}
 .input-file + .js-labelFile .icon {
+	transition: all 0.3s linear;
 	position: relative;
 	display: block;
 	margin-left: 0.5vw;

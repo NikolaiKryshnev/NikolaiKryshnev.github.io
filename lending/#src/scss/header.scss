@@ -15,7 +15,7 @@
 		min-height: 8vw;
 	}
 	@media (max-width: $md3+px) {
-		padding: 6.3vw 0;
+		padding: 6.3vw 0 4.5vw;
 	}
 
 	.logo {
@@ -52,6 +52,16 @@
 
 		@media (max-width: $md3+px) {
 			justify-content: space-between;
+			.btn-cricle{
+				width: 10.4vw;
+				height: 10.4vw;
+			}
+			.btn ._icon{
+				font-size: 1em;
+			}
+			.btn-text{
+				margin: 0 0 2vw 0;
+			}
 		}
 
 		//.header-content__left
@@ -70,6 +80,9 @@
 		&__phone {
 			@include flexbox();
 			justify-content: flex-end;
+			@media ( max-width:$md3+px){
+				margin-top: -3.8vw;
+			}
 
 			a {
 				font-family: "Roboto";

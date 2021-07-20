@@ -111,7 +111,6 @@
 		@media (max-width: $md3+px) {
 			margin-right: 0;
 			margin-top: 25vw;
-
 			.btn-box {
 			}
 		}
@@ -175,6 +174,9 @@
 		}
 	}
 	@media (max-width: $md3+px) {
+		.section-title{
+			margin: 0 0 8.4vw 0;
+		}
 		.swiper-slide {
 			padding: 0 0.8vw;
 			flex: 0 0 100%;
@@ -208,6 +210,7 @@
 			margin: 0 0 6.3vw 0;
 			@media (max-width: $md3+px) {
 				max-width: 16vw;
+				margin: 0 0 10vw 0;
 			}
 		}
 
@@ -335,11 +338,12 @@
 		}
 	}
 	.made-tittle__svg {
-		// height: 100%;
+		height:  auto;
+		width: 27%;
 		bottom: 0;
 		left: 0;
 		position: absolute;
-		transform: translateY(45%) translateX(-10%);
+		transform: translateY(45%) translateX(0%);
 		@media (max-width: $md2+px) {
 			transform: translateY(45%) translateX(-10%);
 			width: 60%;
@@ -432,6 +436,8 @@
 	&-svg {
 		@include verticalcenter();
 		left: 0;
+		width: 100%;
+		height: auto;
 		@media (max-width: $md2+px) {
 			display: none;
 		}

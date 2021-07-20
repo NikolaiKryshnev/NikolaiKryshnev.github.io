@@ -216,6 +216,9 @@
 		background-color: #fff;
 		padding: 50px;
 		width: 100%;
+		@media ( max-width:$md3+px){
+			padding:  0;
+		}
 		// max-width: 800px;
 	}
 	// .popup__close
@@ -237,6 +240,8 @@
 			height: 10.2vw;
 			margin-right: 15px;
 			margin-top: 12vw;
+			top: 2vw;
+			margin-top: 0;
 		}
 	}
 }

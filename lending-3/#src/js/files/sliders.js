@@ -60,8 +60,25 @@ if (sliderScrollItems.length > 0) {
 
 
 function sliders_bild_callback(params) { }
+//num sliders 
+function numberZero(currentClassNum) {
+	const el = currentClassNum;
+	let num = el.innerHTML;
+	if (num <= 9) {
+		el.innerHTML = `0${num}`
+	}
+}
 
-let slider_about = new Swiper('.about__slider', {
+function sliderNum(el) {
+	// console.log(el.querySelector('.swiper-pagination-current'));
+
+	if (el.querySelector('.swiper-pagination-current') !== null) {
+		numberZero(el.querySelector('.swiper-pagination-current'));
+		numberZero(el.querySelector('.swiper-pagination-total'));
+	}
+}
+
+let slider_about = new Swiper('.reviews-slider', {
 	/*
 	effect: 'fade',
 	autoplay: {
@@ -75,47 +92,121 @@ let slider_about = new Swiper('.about__slider', {
 	spaceBetween: 0,
 	autoHeight: true,
 	speed: 800,
-	//touchRatio: 0,
-	//simulateTouch: false,
-	//loop: true,
-	//preloadImages: false,
-	//lazy: true,
-	// Dotts
-	//pagination: {
-	//	el: '.slider-quality__pagging',
-	//	clickable: true,
-	//},
-	// Arrows
+
 	navigation: {
-		nextEl: '.about__more .more__item_next',
-		prevEl: '.about__more .more__item_prev',
+		nextEl: '.reviews-button-next',
+		prevEl: '.reviews-button-prev',
 	},
-	/*
+	pagination: {
+		el: '.swiper-pagination',
+		/*
+		// Буллеты
+		type: 'bullets',
+		clickable: true,
+		// Динамические буллеты
+		dynamicBullets: true,
+		// Кастомные буллеты
+		renderBullet: function (index, className) {
+			return '<span class="' + className + '">' + (index + 1) + '</span>';
+		},
+		*/
+
+		// Фракция
+		type: 'fraction',
+		// Кастомный вывод фракции
+		renderFraction: function (currentClass, totalClass) {
+			return ' <span class="' + currentClass + '"></span>' +
+				'  ' +
+				'<span class="' + totalClass + '"></span>';
+		},
+
+		// Прогрессбар
+		//type: 'progressbar'
+	},
+
 	breakpoints: {
-		320: {
-			slidesPerView: 1,
-			spaceBetween: 0,
-			autoHeight: true,
-		},
-		768: {
-			slidesPerView: 2,
-			spaceBetween: 20,
-		},
-		992: {
-			slidesPerView: 3,
-			spaceBetween: 20,
-		},
-		1268: {
-			slidesPerView: 4,
-			spaceBetween: 30,
-		},
+		// 320: {
+		// 	slidesPerView: 1,
+		// 	spaceBetween: 0,
+		// 	autoHeight: true,
+		// },
+		// 768: {
+		// 	slidesPerView: 2,
+		// 	spaceBetween: 20,
+		// },
+		// 992: {
+		// 	slidesPerView: 3,
+		// 	spaceBetween: 20,
+		// },
+		// 1268: {
+		// 	slidesPerView: 4,
+		// 	spaceBetween: 30,
+		// },
 	},
-	*/
+
 	on: {
-		lazyImageReady: function () {
-			ibg();
+
+
+		slideChange: function () {
+			sliderNum(document.querySelector('.reviews'))
+		},
+		afterInit: function () {
+			sliderNum(document.querySelector('.reviews'))
+
 		},
 	}
+	// And if we need scrollbar
+	//scrollbar: {
+	//	el: '.swiper-scrollbar',
+	//},
+});
+
+let sliderWork = new Swiper('.work-row', {
+	/*
+	effect: 'fade',
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: false,
+	},
+	*/
+	observer: true,
+	observeParents: true,
+	slidesPerView: 1,
+	spaceBetween: 0,
+	autoHeight: true,
+	// loop: true,
+	speed: 800,
+	freeMode: true,
+
+	navigation: {
+		nextEl: '.reviews-button-next',
+		prevEl: '.reviews-button-prev',
+	},
+	pagination: {
+		el: '.swiper-pagination',
+		/*
+		// Буллеты
+		type: 'bullets',
+		clickable: true,
+		// Динамические буллеты
+		dynamicBullets: true,
+		// Кастомные буллеты
+		renderBullet: function (index, className) {
+			return '<span class="' + className + '">' + (index + 1) + '</span>';
+		},
+		*/
+
+		// Фракция
+
+
+		// Прогрессбар
+		//type: 'progressbar'
+	},
+
+	mousewheel: {
+		sensitivity: 1,
+	},
+
 	// And if we need scrollbar
 	//scrollbar: {
 	//	el: '.swiper-scrollbar',
