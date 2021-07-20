@@ -2711,6 +2711,7 @@ body.ie ._ibg img {
 
   .grid-info {
     padding: 30% 0;
+    display: none;
   }
 
   .popup_feedback .popup__body_img {
