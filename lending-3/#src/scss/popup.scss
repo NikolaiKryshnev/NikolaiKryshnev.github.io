@@ -53,6 +53,9 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		@media ( max-width:$md2+px ){
+			justify-content: flex-start;
+		}
 	}
 	// .popup__body
 	&__body {
@@ -158,6 +161,9 @@
 	padding: 0;
 	.popup__body{
 		max-width: 100%;
+		@media ( max-width:$md3+px){
+			padding: 0;
+		}
 		img, source{
 			width: 100%;
 		}

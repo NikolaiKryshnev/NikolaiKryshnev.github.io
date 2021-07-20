@@ -19,7 +19,7 @@
 	@include adaptiv-value("width", 130, 125, 0);
 	background: #fff;
 	height: 100%;
-	@media (max-width: $md2+px) {
+	@media (max-width: $md3+px) {
 		justify-content: flex-start;
 		background: none;
 		position: absolute;

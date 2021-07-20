@@ -2599,14 +2599,6 @@ body.ie ._ibg img {
     padding: 29px 0;
   }
 
-  .right-panel {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    background: none;
-    position: absolute;
-  }
-
   .ban-right__title,
   .ban-right__title-two {
     font-weight: 600;
@@ -2665,6 +2657,12 @@ body.ie ._ibg img {
   .form-svg-3 {
     display: none;
   }
+
+  .popup__content {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 @media (max-width: 526.98px) {
@@ -2674,6 +2672,14 @@ body.ie ._ibg img {
 
   .footer .foter-info__text {
     margin-bottom: 18px;
+  }
+
+  .right-panel {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    background: none;
+    position: absolute;
   }
 
   .form__btn {
@@ -2722,5 +2728,9 @@ body.ie ._ibg img {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+  }
+
+  .popup_rev .popup__body {
+    padding: 0;
   }
 }
