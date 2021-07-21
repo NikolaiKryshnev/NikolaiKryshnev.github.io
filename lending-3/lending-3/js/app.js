@@ -199,7 +199,7 @@ let sliderWork = new Swiper('.work-row', {
 	slidesPerView: 1,
 	spaceBetween: 0,
 	autoHeight: true,
-	// loop: true,
+	loop: true,
 	speed: 800,
 	freeMode: true,
 
@@ -210,7 +210,7 @@ let sliderWork = new Swiper('.work-row', {
 	
 
 	mousewheel: {
-		sensitivity: 1,
+		// sensitivity: 1,
 	},
 
 	// And if we need scrollbar

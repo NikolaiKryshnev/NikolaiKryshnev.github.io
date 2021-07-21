@@ -2017,7 +2017,9 @@ body.ie ._ibg img {
   grid-template-columns: repeat(8, 10vw);
   -ms-grid-rows: (3vw)[12];
   grid-template-rows: repeat(12, 3vw);
-  width: auto !important;
+  width: -webkit-max-content !important;
+  width: -moz-max-content !important;
+  width: max-content !important;
   cursor: url(../img/cursor.svg), pointer;
 }
 
@@ -2714,10 +2716,10 @@ body.ie ._ibg img {
   .work-grid {
     grid-gap: 2vw;
     margin-right: 2vw;
-    -ms-grid-columns: (12vw)[8];
-    grid-template-columns: repeat(8, 12vw);
-    -ms-grid-rows: (5vw)[12];
-    grid-template-rows: repeat(12, 5vw);
+    -ms-grid-columns: (20vw)[8];
+    grid-template-columns: repeat(8, 20vw);
+    -ms-grid-rows: (6vw)[12];
+    grid-template-rows: repeat(12, 6vw);
   }
 
   .work-grid__item {

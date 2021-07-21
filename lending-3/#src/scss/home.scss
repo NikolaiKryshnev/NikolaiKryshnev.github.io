@@ -963,15 +963,15 @@
 		margin-right: 1vw;
 		grid-template-columns: repeat(8, 10vw);
 		grid-template-rows: repeat(12, 3vw);
-		width: auto !important;
+		width: max-content !important;
 		cursor: url(../img/cursor.svg), pointer;
 		@media ( max-width:$md3+px){
 			
 		grid-gap: 2vw;
 		margin-right: 2vw;
 		
-		grid-template-columns: repeat(8, 12vw);
-		grid-template-rows: repeat(12, 5vw);
+		grid-template-columns: repeat(8, 20vw);
+		grid-template-rows: repeat(12, 6vw);
 		}
 
 		&__item {
