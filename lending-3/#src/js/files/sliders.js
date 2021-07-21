@@ -182,26 +182,7 @@ let sliderWork = new Swiper('.work-row', {
 		nextEl: '.reviews-button-next',
 		prevEl: '.reviews-button-prev',
 	},
-	pagination: {
-		el: '.swiper-pagination',
-		/*
-		// Буллеты
-		type: 'bullets',
-		clickable: true,
-		// Динамические буллеты
-		dynamicBullets: true,
-		// Кастомные буллеты
-		renderBullet: function (index, className) {
-			return '<span class="' + className + '">' + (index + 1) + '</span>';
-		},
-		*/
-
-		// Фракция
-
-
-		// Прогрессбар
-		//type: 'progressbar'
-	},
+	
 
 	mousewheel: {
 		sensitivity: 1,

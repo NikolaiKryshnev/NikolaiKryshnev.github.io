@@ -465,6 +465,7 @@
 
 	.swiper-pagination {
 	}
+	
 }
 
 .reviews-slider {
@@ -645,6 +646,11 @@
 		@include adaptiv-value("font-size", 20, 16, 0);
 		line-height: 171.37%;
 		color: #000000;
+	}
+	.form .input{
+		background: #353535;
+		border: 1px solid #353535;
+		color: #fff;
 	}
 }
 
@@ -850,11 +856,14 @@
 
 .form-svg-1 {
 	position: absolute;
+	z-index: 20;
 	right: 10%;
 	top: -10%;
 }
 .form-svg-2 {
 	position: absolute;
+	z-index: 20;
+
 	left: -5%;
 	top: 10%;
 }
@@ -950,10 +959,10 @@
 	}
 	&-grid {
 		display: grid;
-		grid-gap: 2vw;
+		grid-gap: 1vw;
 		margin-right: 2vw;
-		grid-template-columns: repeat(8, 15vw);
-		grid-template-rows: repeat(12, 5vw);
+		grid-template-columns: repeat(8, 10vw);
+		grid-template-rows: repeat(12, 3vw);
 		width: auto !important;
 		cursor: url(../img/cursor.svg), pointer;
 
@@ -1093,15 +1102,15 @@
 			position: relative;
 			font-family: TT Firs Neue;
 			font-style: normal;
-			font-weight: bold;
+			font-weight: 700;
 			line-height: 135.61%;
 			text-align: center;
 			color: #ffffff;
 			padding: 0 0 10px 0;
 			margin-bottom: 10px;
-			@include adaptiv-value("font-size", 22, 16, 0);
+			@include adaptiv-value("font-size", 18, 16, 0);
 			// @include translateY(-20%);
-			padding: 0 20%;
+			padding: 0 10%;
 			opacity: 0;
 			transition: all 0.3s linear 0.3s;
 			text-align: center;
@@ -1138,6 +1147,6 @@
 }
 .grid__item--big {
 	.grid-info__title {
-		@include adaptiv-value("font-size", 32, 16, 0);
+		@include adaptiv-value("font-size", 22, 16, 0);
 	}
 }

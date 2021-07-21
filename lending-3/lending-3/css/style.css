@@ -1652,6 +1652,12 @@ body.ie ._ibg img {
   color: #000000;
 }
 
+.feedback .form .input {
+  background: #353535;
+  border: 1px solid #353535;
+  color: #fff;
+}
+
 .input-file {
   width: 0.1px;
   height: 0.1px;
@@ -1874,12 +1880,14 @@ body.ie ._ibg img {
 
 .form-svg-1 {
   position: absolute;
+  z-index: 20;
   right: 10%;
   top: -10%;
 }
 
 .form-svg-2 {
   position: absolute;
+  z-index: 20;
   left: -5%;
   top: 10%;
 }
@@ -2003,12 +2011,12 @@ body.ie ._ibg img {
 .work-grid {
   display: -ms-grid;
   display: grid;
-  grid-gap: 2vw;
+  grid-gap: 1vw;
   margin-right: 2vw;
-  -ms-grid-columns: (15vw)[8];
-  grid-template-columns: repeat(8, 15vw);
-  -ms-grid-rows: (5vw)[12];
-  grid-template-rows: repeat(12, 5vw);
+  -ms-grid-columns: (10vw)[8];
+  grid-template-columns: repeat(8, 10vw);
+  -ms-grid-rows: (3vw)[12];
+  grid-template-rows: repeat(12, 3vw);
   width: auto !important;
   cursor: url(../img/cursor.svg), pointer;
 }
@@ -2191,14 +2199,14 @@ body.ie ._ibg img {
   position: relative;
   font-family: TT Firs Neue;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 135.61%;
   text-align: center;
   color: #ffffff;
   padding: 0 0 10px 0;
   margin-bottom: 10px;
-  font-size: calc(16px + 6 * ((100vw - 320px) / 1600));
-  padding: 0 20%;
+  font-size: calc(16px + 2 * ((100vw - 320px) / 1600));
+  padding: 0 10%;
   opacity: 0;
   -webkit-transition: all 0.3s linear 0.3s;
   -o-transition: all 0.3s linear 0.3s;
@@ -2207,7 +2215,7 @@ body.ie ._ibg img {
 }
 
 .grid__item--big .grid-info__title {
-  font-size: calc(16px + 16 * ((100vw - 320px) / 1600));
+  font-size: calc(16px + 6 * ((100vw - 320px) / 1600));
 }
 
 .popup {
