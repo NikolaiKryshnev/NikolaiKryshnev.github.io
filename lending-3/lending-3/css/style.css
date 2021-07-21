@@ -2012,7 +2012,7 @@ body.ie ._ibg img {
   display: -ms-grid;
   display: grid;
   grid-gap: 1vw;
-  margin-right: 2vw;
+  margin-right: 1vw;
   -ms-grid-columns: (10vw)[8];
   grid-template-columns: repeat(8, 10vw);
   -ms-grid-rows: (3vw)[12];
@@ -2709,6 +2709,15 @@ body.ie ._ibg img {
 
   .panel-box {
     display: none;
+  }
+
+  .work-grid {
+    grid-gap: 2vw;
+    margin-right: 2vw;
+    -ms-grid-columns: (12vw)[8];
+    grid-template-columns: repeat(8, 12vw);
+    -ms-grid-rows: (5vw)[12];
+    grid-template-rows: repeat(12, 5vw);
   }
 
   .work-grid__item {
