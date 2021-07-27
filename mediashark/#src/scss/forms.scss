@@ -5,13 +5,14 @@
 	&__column {
 	}
 
+	//.form__line
 	&__line {
 		position: relative;
 
 		input {
 			padding: 17px 0;
 
-			font-size: $fz20;
+			font-size: $fz18;
 			line-height: 25px;
 			color: #c4c4c4;
 			border-bottom: 1px solid #000;
@@ -27,7 +28,7 @@
 			}
 		}
 		textarea {
-			padding: 17px 0;
+			padding: 20px 0 17px;
 
 			min-height: 60px;
 			height: 60px;
@@ -35,7 +36,7 @@
 			max-height: 200px;
 			width: 100%;
 
-			font-size: $fz20;
+			font-size: $fz18;
 			color: #c4c4c4;
 			border-bottom: 1px solid #000;
 			transition: all 0.3s linear;

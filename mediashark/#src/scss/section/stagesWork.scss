@@ -5,6 +5,15 @@
 	padding-bottom: 70px;
 	overflow-x: auto;
 	overflow-y: hidden;
+	&._scr-item{
+		opacity: 0;
+		transform: translateY(20%);
+		transition: all 0.3s linear;
+		&._active{
+			opacity: 1;
+			@include translateY(0);
+		}
+	}
 
 	&::-webkit-scrollbar {
 		width: 0px;
@@ -21,7 +30,7 @@
 	margin-left: 210px;
 
 	cursor: pointer;
-
+	
 	@media (max-width: $md3+px) {
 		margin-left: 130px;
 	}
@@ -124,6 +133,15 @@
 
 .tabs-content {
 	padding-top: 55px;
+	&._scr-item{
+		opacity: 0;
+		transform: translateY(20%);
+		transition: all 0.3s linear;
+		&._active{
+			opacity: 1;
+			@include translateY(0);
+		}
+	}
 	@media ( max-width:$md3+px){
 		padding-top: 30px;
 	}
@@ -149,15 +167,7 @@
 				position: relative;
 				margin: 0 0 8px 0;
 				line-height: 21px;
-
-				&::after {
-					@include pseudoEl(block, absolute, "");
-					width: 4px;
-					height: 4px;
-					background: #000;
-					left: -18px;
-					top: 5px;
-				}
+				list-style-type: square;
 			}
 		}
 	}

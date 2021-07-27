@@ -808,7 +808,7 @@ let sliderAboutChoose = new Swiper('.aboutChoose-slider', {
 	speed: 800,
 	spaceBetween: 30,
 	slidesPerGroup: 3,
-	loop: true,
+	// loop: true,
 	freeMode: true,
 	watchOverflow: true,
 	initialSlide: 0,
@@ -1379,6 +1379,23 @@ function anBtn() {
 	}
 }
 anBtn()
+
+function footerFixed() {
+	let footer = document.querySelector('.footer'),
+	main = document.querySelector('.main');
+
+	main.style.marginBottom = `${footer.offsetHeight}px`
+}
+footerFixed()
+
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+//   document.querySelector(".panel-progres__proc").style.height = scrolled + "%";
+}
 
 
 

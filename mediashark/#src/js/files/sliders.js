@@ -207,7 +207,7 @@ let sliderAboutChoose = new Swiper('.aboutChoose-slider', {
 	speed: 800,
 	spaceBetween: 30,
 	slidesPerGroup: 3,
-	loop: true,
+	// loop: true,
 	freeMode: true,
 	watchOverflow: true,
 	initialSlide: 0,

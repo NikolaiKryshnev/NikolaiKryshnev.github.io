@@ -1,7 +1,7 @@
 .aboutChoose {
 	.section__title {
 		position: relative;
-		@media ( max-width:$md2+px ){
+		@media (max-width: $md2+px) {
 			padding-right: 76px;
 		}
 	}
@@ -15,6 +15,13 @@
 		position: relative;
 		display: flex;
 		height: 100%;
+		&._scr-item {
+			opacity: 0;
+			transition: 0.3s linear;
+			&._active{
+				opacity: 1;
+			}
+		}
 		@media (min-width: $md3+px) and (max-width: 1170px) {
 			margin: 0px 25% 0px 0px;
 		}
@@ -26,7 +33,7 @@
 
 	//.aboutChoose-box
 	&-box {
-		padding: 45px 45px 20px;
+		padding: 45px;
 		border: 1px solid #e1e1e1;
 		@media (min-width: $md1+px) {
 			max-width: 370px;
@@ -71,6 +78,3 @@
 		}
 	}
 }
-
-
-
