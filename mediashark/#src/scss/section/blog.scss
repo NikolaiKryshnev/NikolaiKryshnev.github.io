@@ -3,10 +3,10 @@
 	&__row {
 		overflow-x: auto;
 		overflow-y: hidden;
-		@media ( max-width:$md1+px){
+		@media (max-width: $md1+px) {
 			overflow: hidden;
 			display: grid;
-			grid-template-columns: repeat(3,100%);
+			grid-template-columns: repeat(3, 100%);
 			grid-auto-rows: 1fr;
 		}
 		&::-webkit-scrollbar {
@@ -30,7 +30,7 @@
 	&-block {
 		display: flex;
 		flex-wrap: wrap;
-		@media ( max-width:$md1+px){
+		@media (max-width: $md1+px) {
 			margin-right: 10px;
 		}
 
@@ -47,6 +47,23 @@
 				&._ibg {
 					padding: 21% 0;
 					min-height: 170px;
+				}
+			}
+			transform: translateX(-20%);
+			opacity: 0;
+			transition: all 0.3s linear ;
+			&._active{
+				transform: translateX(0);
+				opacity: 1;
+			}
+
+			&:not(._ibg){
+				transform: translateX(20%);
+				opacity: 0;
+				transition: all 0.3s linear 0.3s;
+				&._active{
+					transform: translateX(0);
+					opacity: 1;
 				}
 			}
 		}
@@ -72,9 +89,8 @@
 		@media (max-width: $md1+px) {
 			padding: 40px 0 0 0;
 		}
-		@media ( max-width:$md3+px){
+		@media (max-width: $md3+px) {
 			padding: 20px 0 0 0;
-
 		}
 
 		//.blog-info__title
@@ -87,7 +103,7 @@
 			font-size: $fz24;
 			line-height: 29px;
 			@include transitColor(0.3s);
-			@media ( max-width:$md3+px){
+			@media (max-width: $md3+px) {
 				font-size: $mfz16;
 				line-height: 20px;
 				margin-bottom: 15px;
@@ -100,7 +116,7 @@
 		//.blog-info__text
 		&__text {
 			line-height: 23px;
-			@media ( max-width:$md3+px){
+			@media (max-width: $md3+px) {
 				line-height: 20px;
 			}
 		}
@@ -111,7 +127,7 @@
 		padding: 0;
 		margin: 0 0 25px 0;
 		list-style-type: none;
-		@media ( max-width:$md3+px){
+		@media (max-width: $md3+px) {
 			margin: 0 0 15px 0;
 		}
 
@@ -144,7 +160,7 @@
 	&-btn {
 		display: inline-block;
 		margin-top: 40px;
-		transition:all 0.3s linear;
+		transition: all 0.3s linear;
 		// @include transitColor(0.3s);
 		&:hover {
 			transform: translateX(10px);
@@ -156,14 +172,14 @@
 		margin-top: 50px;
 		line-height: 57px;
 		font-size: 16px;
-		@media ( max-width:$md1+px){
+		@media (max-width: $md1+px) {
 			margin-top: 25px;
 		}
 	}
 
-	@media ( max-width:$md1+px){
-		.icon-scroll::after{
-		display: block;
+	@media (max-width: $md1+px) {
+		.icon-scroll::after {
+			display: block;
 		}
 	}
 }

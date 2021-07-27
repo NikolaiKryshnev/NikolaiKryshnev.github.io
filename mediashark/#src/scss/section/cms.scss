@@ -13,13 +13,20 @@
 		grid-auto-rows: 1fr;
 
 		padding-right: 30px;
+		&._scr-item {
+			opacity: 0;
+			transition: all 0.3s linear 0.2s;
+			&._active {
+				opacity: 1;
+			}
+		}
 		@media (min-width: $md1+px) {
 			max-width: 50%;
 			flex: 0 0 50%;
 			grid-template-columns: repeat(4, 1fr);
 			grid-auto-rows: 1fr;
 		}
-		@media ( max-width:$md1+px){
+		@media (max-width: $md1+px) {
 			padding-right: 0;
 		}
 
@@ -30,7 +37,7 @@
 			transition: all 0.3s linear;
 			padding: 0 15px;
 			filter: grayscale(1);
-			@include adaptiv-value("margin-bottom", 40 , 20, 1);
+			@include adaptiv-value("margin-bottom", 40, 20, 1);
 
 			&:hover {
 				filter: grayscale(0);
@@ -45,7 +52,6 @@
 				// flex: 0 0 33.3333333%;
 				// max-width: 33.3333333%;
 				// padding: 0 10px;
-		
 			}
 		}
 	}

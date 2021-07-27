@@ -41,6 +41,19 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			&._scr-item {
+				transform: scale(0);
+				transition: all 0.3s linear;
+				&._active {
+					transform: scale(1);
+					&::after {
+						height: 40px;
+					}
+					&::before {
+						width: 28px;
+					}
+				}
+			}
 			@media (max-width: $md3+px) {
 				width: 50px;
 				height: 50px;
@@ -59,18 +72,21 @@
 			//.timingSeo-block___icon:after
 			&:after {
 				margin-top: -47px;
-				height: 40px;
+				// height: 40px;
 				width: 1px;
+				transition: all 0.3s linear 0.5s;
 			}
 
 			//.timingSeo-block:before
 			&:before {
+				transition: all 0.3s linear 0.8s;
 				margin-top: -47px;
 				margin-left: 26px;
 
 				height: 1px;
-				width: 28px;
-				@media ( max-width:$md3+px){
+				width: 0;
+				float: right;
+				@media (max-width: $md3+px) {
 					margin-left: 27px;
 				}
 			}
@@ -156,7 +172,7 @@
 		margin-right: 15px;
 		right: 0;
 		display: flex;
-		
+
 		//.timingSeo__arrows_prev, .timingSeo__arrows_next
 		&_prev,
 		&_next {
@@ -170,6 +186,15 @@
 
 			background: #f9f9f9;
 			cursor: pointer;
+			transition: all 0.3s linear;
+			&:not(.swiper-button-disabled) {
+				&:hover {
+					background: #222;
+					._icon-f {
+						color: #fff;
+					}
+				}
+			}
 			@media (max-width: $md3+px) {
 				width: 35px;
 				height: 35px;
@@ -188,7 +213,7 @@
 		&_next {
 			margin-left: 7px;
 		}
-		._icon-f:before{
+		._icon-f:before {
 			transition: color 0.3s linear;
 		}
 		.swiper-button-disabled ._icon-f:before {

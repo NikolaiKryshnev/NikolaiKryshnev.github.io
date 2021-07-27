@@ -106,6 +106,9 @@
 	}
 	&-left {
 		@include adaptiv-value("margin-top", 150, 100, 0);
+		@media (max-width: $md1+px) {
+			@include adaptiv-value("margin-top", 150, 40, 0);
+		}
 		@media (max-width: $md2+px) {
 			margin-top: 27px;
 		}
@@ -177,6 +180,9 @@
 	@include adaptiv-value("margin-bottom", 70, 30, 0);
 	&__icon {
 		@include adaptiv-value("max-width", 230, 70, 0);
+		@media (min-width: $md3+px) and( max-width:$md2+px ) {
+			max-width: 30%;
+		}
 		img {
 			width: 100%;
 		}
@@ -189,6 +195,7 @@
 		@include adaptiv-value("font-size", 30, 18, 0);
 		line-height: 115.87%;
 		color: #ffffff;
+		text-align: right;
 		align-self: flex-start;
 		span {
 			color: #44a59c;
@@ -214,8 +221,11 @@
 		font-size: 1rem;
 		line-height: 149.87%;
 		color: #ffffff;
-		@media (min-width: $md2+px) {
+		@media (min-width: $md1+px) {
 			padding: 0 30% 0 0;
+		}
+		@media (max-width: $md2+px) {
+			padding: 0 0 0 0;
 		}
 	}
 }
@@ -227,6 +237,7 @@
 .why {
 	.why-icon {
 		margin-right: 36px;
+		max-width: 45px;
 		@media (min-width: $md1+px) {
 			display: none;
 		}
@@ -252,7 +263,7 @@
 		@media (max-width: $md1+px) {
 			margin-bottom: 32px;
 			display: flex;
-			align-items: flex-start;
+			align-items: center;
 		}
 	}
 
@@ -286,6 +297,12 @@
 	@include adaptiv-value("background-size", 80, 45, 0);
 	@include adaptiv-value("width", 200, 110, 0);
 	@include adaptiv-value("height", 200, 110, 0);
+	// @include blackwhite();
+	transition: all 0.3s linear;
+	&:hover{
+		transform: translateX(10%);
+
+	}
 
 	.icon-svg {
 		@include adaptiv-value("width", 200, 110, 0);
@@ -296,7 +313,6 @@
 		animation: 10s animationTextHeader infinite linear;
 		animation-animation-delay: 2s;
 		transition: margin 1s linear;
-
 		svg {
 			width: 100%;
 			height: 100%;
@@ -304,13 +320,16 @@
 	}
 	&:hover {
 		.icon-svg {
-			animation-play-state: paused;
+			// animation-play-state: paused;
 		}
 	}
 }
 
 .why-list {
 	position: relative;
+}
+.why-svg {
+	max-width: 40px;
 }
 
 .why-svg-1 {
@@ -337,7 +356,7 @@
 }
 .why-svg-5 {
 	position: absolute;
-	left: 25%;
+	left: 7%;
 	bottom: 30%;
 }
 .why-svg-6 {
@@ -465,7 +484,6 @@
 
 	.swiper-pagination {
 	}
-	
 }
 
 .reviews-slider {
@@ -647,7 +665,7 @@
 		line-height: 171.37%;
 		color: #000000;
 	}
-	.form .input{
+	.form .input {
 		background: #353535;
 		border: 1px solid #353535;
 		color: #fff;
@@ -664,14 +682,20 @@
 	position: absolute;
 	z-index: -1;
 }
+.js-labelFile {
+	transition: all 0.3s linear;
+}
 .input-file + .js-labelFile {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	cursor: pointer;
 }
+.input-file:hover + .js-labelFile {
+	color: #198278;
+}
 .input-file:hover + .js-labelFile .icon {
-	background: #888;
+	background: #198278;
 }
 .input-file + .js-labelFile .icon {
 	transition: all 0.3s linear;
@@ -740,6 +764,9 @@
 		@include adaptiv-value("font-size", 30, 20, 0);
 		line-height: 115.87%;
 		color: #ffffff;
+		@media ( max-width:$md2+px ){
+			padding: 30px 0 30px;
+		}
 	}
 
 	&__content {
@@ -811,6 +838,10 @@
 		&._error {
 			border: 1px solid rgba(255, 0, 0, 0.671);
 		}
+	}
+	textarea.input {
+		padding-top: 5px;
+		padding-bottom: 5px;
 	}
 	.btn-file {
 		display: flex;
@@ -965,13 +996,12 @@
 		grid-template-rows: repeat(12, 3vw);
 		width: max-content !important;
 		cursor: url(../img/cursor.svg), pointer;
-		@media ( max-width:$md3+px){
-			
-		grid-gap: 2vw;
-		margin-right: 2vw;
-		
-		grid-template-columns: repeat(8, 20vw);
-		grid-template-rows: repeat(12, 6vw);
+		@media (max-width: $md1+px) {
+			grid-gap: 2vw;
+			margin-right: 2vw;
+
+			grid-template-columns: repeat(8, 20vw);
+			grid-template-rows: repeat(12, 6vw);
 		}
 
 		&__item {
@@ -1007,10 +1037,10 @@
 					}
 				}
 
-				.btn-arrow {
-					transform: translateY(100%) translateX(0%);
-					opacity: 1;
-				}
+				// .btn-arrow {
+				// 	transform: translateY(100%) translateX(0%);
+				// 	opacity: 1;
+				// }
 			}
 		}
 		&__item:nth-child(1) {

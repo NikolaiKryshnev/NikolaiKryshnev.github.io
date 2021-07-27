@@ -53,13 +53,9 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		@media ( max-width:$md2+px ){
-			justify-content: flex-start;
-		}
 	}
 	// .popup__body
 	&__body {
-		
 		transform: scale(0);
 		transition: all 0.3s ease 0s;
 		background-color: #fff;
@@ -80,7 +76,7 @@
 		background: url("../img/icons/close.svg") no-repeat;
 		background-size: cover;
 		transition: all 0.3s linear;
-		&:hover{
+		&:hover {
 			transform: rotate(360deg);
 		}
 	}
@@ -103,7 +99,7 @@
 		flex: 0 0 30%;
 		max-width: 30%;
 		width: 100%;
-		@media ( max-width:$md3+px){
+		@media (max-width: $md3+px) {
 			display: none;
 		}
 	}
@@ -111,11 +107,11 @@
 	.form {
 		background: #ffffff;
 		color: #212121;
-		
-		@media ( min-width:$md3+px){
+
+		@media (min-width: $md3+px) {
 			flex: 0 0 70%;
-		max-width: 70%;
-		width: 100%;
+			max-width: 70%;
+			width: 100%;
 		}
 		&__title {
 			text-align: left;
@@ -145,10 +141,13 @@
 		.input-file + .js-labelFile .icon {
 			background: #1e1e1e;
 		}
+		.input-file:hover + .js-labelFile .icon {
+			background: #44a59c;
+		}
 		.btn,
 		.btn .icon-svg {
-			@include adaptiv-value("width", 100, 70, 0);
-			@include adaptiv-value("height", 100, 70, 0);
+			@include adaptiv-value("width", 100, 90, 0);
+			@include adaptiv-value("height", 100, 90, 0);
 		}
 		.btn {
 			background: url(../img/btn-2.svg) center no-repeat;
@@ -157,15 +156,21 @@
 	}
 }
 
-.popup_rev{
+.popup_rev {
 	padding: 0;
-	.popup__body{
+	.popup__body {
 		max-width: 100%;
-		@media ( max-width:$md3+px){
+		@media (max-width: $md3+px) {
 			padding: 0;
 		}
-		img, source{
+		img,
+		source {
 			width: 100%;
+		}
+	}
+	.popup__content {
+		@media (max-width: $md2+px) {
+			justify-content: flex-start;
 		}
 	}
 }

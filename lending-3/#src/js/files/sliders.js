@@ -86,13 +86,20 @@ let slider_about = new Swiper('.reviews-slider', {
 		disableOnInteraction: false,
 	},
 	*/
+	spaceBetween: 30,
+
 	observer: true,
 	observeParents: true,
 	slidesPerView: 1,
 	spaceBetween: 0,
 	autoHeight: true,
-	speed: 800,
-
+	speed: 300,
+	effect: 'fade',
+	fadeEffect: {
+		// Параллельная
+		// смена прозрачности
+		crossFade: true
+	},
 	navigation: {
 		nextEl: '.reviews-button-next',
 		prevEl: '.reviews-button-prev',
