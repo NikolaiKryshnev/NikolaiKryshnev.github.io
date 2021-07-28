@@ -461,14 +461,14 @@ html._pc {
 	align-items: center;
 
 	width: 3.5vw;
-	height: 100%;
-	letter-spacing: 0.25em;
+	height: max-content;
+	width: max-content;
+	letter-spacing: 0.25em;	
 	text-transform: uppercase;
 	@include f700();
 	color: #000;
-
-	transform: rotate(-180deg);
-	writing-mode: vertical-rl;
+	transform: rotate(-90deg) translateY(-50%);
+	// writing-mode: vertical-rl;
 	@media (min-width: 1440px) {
 		// left: calc((-3.5vw + -16px) / 2);
 		font-size: 1vw;
