@@ -46,43 +46,40 @@
 		@media (max-width: $md3+px) {
 			margin-bottom: 0;
 		}
-
-		&:nth-child(1){
-			.mainGoals-block{
-				transition-delay: 0.3s;
-			}
-		}
-		&:nth-child(2){
-			.mainGoals-block{
-				transition-delay: 0.6s;
-			}
-		}
-
-		&:nth-child(3){
-			.mainGoals-block{
-				transition-delay: 0.9s;
+		&._scr-item {
+			opacity: 0;
+			transform: translateY(20%);
+			transition: all 0.3s linear;
+			&._active {
+				opacity: 1;
+				@include translateY(0);
 			}
 		}
 
-		&:nth-child(4){
-			.mainGoals-block{
-				transition-delay: 0.3s;
-			}
+		&:nth-child(1) {
+			transition-delay: 0.3s;
+		}
+		&:nth-child(2) {
+			transition-delay: 0.6s;
 		}
 
-		&:nth-child(5){
-			.mainGoals-block{
-				transition-delay: 0.6s;
-			}
+		&:nth-child(3) {
+			transition-delay: 0.9s;
 		}
 
-		&:nth-child(6){
-			.mainGoals-block{
-				transition-delay: 0.9s;
-			}
+		&:nth-child(4) {
+			transition-delay: 0.3s;
+		}
+
+		&:nth-child(5) {
+			transition-delay: 0.6s;
+		}
+
+		&:nth-child(6) {
+			transition-delay: 0.9s;
 		}
 	}
-	.box-progress-bar{
+	.box-progress-bar {
 		position: relative;
 	}
 }
@@ -93,15 +90,6 @@
 	border: 1px solid #e1e1e1;
 	height: 100%;
 	transition: all 0.3s linear;
-	&._scr-item{
-		opacity: 0;
-		transform: translateY(20%);
-		transition: all 0.3s linear;
-		&._active{
-			opacity: 1;
-			@include translateY(0);
-		}
-	}
 
 	&:hover {
 		background: #f9f9f9;

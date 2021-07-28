@@ -1388,27 +1388,6 @@ function footerFixed() {
 }
 footerFixed()
 
-function myFunction() {
-	let scrollBlock = document.querySelectorAll('._scroll-block'),
-		height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
-	for (let i = 0; i < scrollBlock.length; i++) {
-		const el = scrollBlock[i];
-		let winScroll = el.scrollTop || document.documentElement.scrollTop,
-			scrolled = (winScroll / height) * 100,
-			topBlock = (el.offsetHeight + el.getBoundingClientRect().top) / 2;
-
-		// if ((el.getBoundingClientRect().top < 0)) {
-			if (Math.abs(el.getBoundingClientRect().top) <= el.offsetHeight)
-				console.log(`${el.offsetHeight}  + ${el.getBoundingClientRect().top} = ${el.offsetHeight + el.getBoundingClientRect().top}`);
-			el.querySelector('._scroll-text').style.top = `${topBlock}px`;
-		// }
-	}
-}
-
-myFunction()
-window.onscroll = function () { myFunction() };
-
 
 
 
@@ -2575,29 +2554,34 @@ function gallery_init() {
 		});
 	}
 }
-	let scrollSection = document.querySelector('._scroll-block[data-scroll="scroll-packages"]'),
-	scrollText = document.querySelector('._scroll-text[data-scroll="scroll-packages"]'),
-	sectiontHeight = scrollSection.offsetHeight;
+	function myFunction() {
+	let scrollBlock = document.querySelectorAll('._scroll-block'),
+		height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
-window.addEventListener('scroll', function () {
+	for (let i = 0; i < scrollBlock.length; i++) {
+		const el = scrollBlock[i];
+		let winScroll = el.scrollTop || document.documentElement.scrollTop,
+			scrolled = (winScroll / height) * 100,
+			topBlock = (el.offsetHeight + el.getBoundingClientRect().top) / 2;
 
-	if (Visible(scrollSection) === true) {
-		elsum = scrollSection.getBoundingClientRect().top + sectiontHeight;
-		// console.log(elsum/100);
+		// if ((el.getBoundingClientRect().top < 0)) {
+		if (Math.abs(el.getBoundingClientRect().top) <= el.offsetHeight)
+			// console.log(`${el.offsetHeight}  + ${el.getBoundingClientRect().top} = ${el.offsetHeight + el.getBoundingClientRect().top}`);
+			// console.log((el.querySelector('._scroll-text').offsetWidth) / 2);
 
+		el.querySelector('._scroll-text').style.cssText = `top: calc(${topBlock}px - ${(el.querySelector('._scroll-text').offsetWidth) / 1.5}px);
+			width: 0;
+	bottom: auto;
 
-		// if (elsum < (sectiontHeight)) {
-			// scrollText.style.cssText = `
-			// 		transform: rotate(-180deg) translateY(calc(-50% + ${elsum / 100 * 1.2}rem ) )
-			//   `
-
+			`;
 		// }
-
-	} else {
-
 	}
+}
 
-});
+myFunction()
+window.onscroll = function () { myFunction() };
+
+
 
 });
 
