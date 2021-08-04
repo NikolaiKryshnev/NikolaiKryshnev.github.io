@@ -50,8 +50,10 @@ body {
 
 //<ОСНОВНАЯ СЕТКА>===========================================================================================================
 ._container {
+	
 	max-width: $maxWidthContainer + px;
 	margin: 0 auto;
+	width: 100%;
 	// @media (min-width: 1440px) {
 	// 	max-width: 81.3.5vw;
 	// }
@@ -87,6 +89,14 @@ body {
 @import "footer";
 @import "task/title";
 
+// Home
+@import "section/mediashark";
+@import "section/services";
+@import "section/work";
+@import "section/team";
+@import "section/partners";
+
+//Seo
 @import "section/ban";
 @import "section/seo-slider";
 @import "section/cms";
@@ -118,6 +128,7 @@ body {
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .main {
 	position: relative;
+	z-index: 1;
 	background: #fff;
 
 	flex: 1 1 auto;
@@ -173,109 +184,6 @@ body._lock {
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
-//<КОНОПКИ>====================================================================================================
-.btn {
-	position: relative;
-	display: inline-block;
-
-	padding: 0 32px;
-
-	border: 1px solid #222222;
-	background: #222222;
-
-	color: $white;
-	font-size: $fz24;
-	vertical-align: middle;
-	cursor: pointer;
-	text-align: center;
-	@include f700();
-
-	&:hover {
-		border-color: #000;
-		background: none;
-		color: $black;
-	}
-}
-.btn-an {
-	position: relative;
-	overflow: hidden;
-	transition: 0.5s ease-in-out;
-
-	.btn-hover {
-		position: absolute;
-
-		display: block;
-
-		width: 0;
-		height: 0;
-
-		border-radius: 50%;
-		background-color: #fff;
-		transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
-		transform: translate(-50%, -50%);
-		z-index: 1;
-	}
-	.btn-text {
-		position: relative;
-		z-index: 2;
-	}
-	&:hover {
-		.btn-hover {
-			width: 225%;
-			height: 562.5px;
-		}
-	}
-}
-.btn--white {
-	line-height: 60px;
-	color: $white;
-
-	padding-left: 37px;
-	padding-right: 37px;
-
-	border: 1px solid #fff;
-	background: none;
-	font-size: $fz16;
-	@media (max-width: $md3+px) {
-		padding-left: 27px;
-		padding-right: 27px;
-	}
-	.btn-hover {
-		background: $white;
-	}
-	&:hover {
-		border: 1px solid #fff;
-
-		color: #222;
-	}
-}
-.btn-border {
-	display: inline-block;
-	padding: 0 40px;
-	margin-top: 50px;
-
-	color: #000;
-	@include f700();
-	line-height: 65px;
-	text-align: center;
-
-	border: 1px solid #000000;
-	@media (max-width: $md3+px) {
-		padding: 0 15px;
-		line-height: 54px;
-	}
-
-	&.br-black {
-		&:hover {
-			color: $white;
-		}
-
-		.btn-hover {
-			background-color: #000;
-		}
-	}
-}
-//</КОНОПКИ>====================================================================================================
 
 //<ОТСТУПЫ>====================================================================================================
 

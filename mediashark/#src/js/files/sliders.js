@@ -1,7 +1,7 @@
 
 
 let windowWidth = window.innerWidth;
-if (windowWidth < 992) {
+if (windowWidth < 992 && document.querySelector('.mainGoals-slider')) {
 	document.querySelector('.mainGoals-slider').classList.add('_swiper');
 }
 
@@ -104,6 +104,71 @@ let sliderSwiper = new Swiper('._slider', {
 
 	scrollbar: {
 		el: '._slider__progress',
+		draggable: true
+	},
+
+
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+			spaceBetween: 5,
+			autoHeight: true,
+
+		},
+
+		527: {
+			slidesPerView: 1,
+			spaceBetween: 15,
+			// autoHeight: true,
+
+		},
+		768: {
+			slidesPerView: 1,
+			spaceBetween: 15,
+			// autoHeight: false,
+
+		},
+		840: {
+			slidesPerView: 2,
+			spaceBetween: 15,
+			// autoHeight: false,
+
+		},
+
+		1171: {
+			slidesPerView: 3,
+			spaceBetween: 30,
+			autoHeight: false,
+
+		},
+	},
+
+	// Фракция
+
+
+	on: {
+		lazyImageReady: function () {
+			ibg();
+		},
+	}
+
+	// And if we need scrollbar
+	//scrollbar: {
+	//	el: '.swiper-scrollbar',
+	//},
+});
+
+let sliderServices = new Swiper('.services-slider', {
+
+	observer: true,
+	observeParents: true,
+	slidesPerView: 3,
+	speed: 800,
+	spaceBetween: 30,
+
+
+	scrollbar: {
+		el: '.services-slider__progress',
 		draggable: true
 	},
 
@@ -282,18 +347,19 @@ let sliderAboutChoose = new Swiper('.aboutChoose-slider', {
 });
 
 let sliderBlock = document.querySelector('._slider');
-
-sliderBlock.addEventListener("mouseenter", function (e) {
-	sliderSwiper.params.autoplay.disableOnInteraction = false;
-	sliderSwiper.params.autoplay.delay = 1500;
-	sliderSwiper.autoplay.start();
-});
-sliderBlock.addEventListener("mouseleave", function (e) {
-	sliderSwiper.autoplay.stop();
-});
-
+if (sliderBlock) {
+	sliderBlock.addEventListener("mouseenter", function (e) {
+		sliderSwiper.params.autoplay.disableOnInteraction = false;
+		sliderSwiper.params.autoplay.delay = 1500;
+		sliderSwiper.autoplay.start();
+	});
+	sliderBlock.addEventListener("mouseleave", function (e) {
+		sliderSwiper.autoplay.stop();
+	});
+}
 
 if (windowWidth < 992) {
+
 	let mainGoalsSlider = new Swiper('.mainGoals-slider', {
 
 		observer: true,
@@ -529,6 +595,280 @@ let sliderReviews = new Swiper('.reviews-slider', {
 
 });
 
+let sliderTeam = new Swiper('.team-slider', {
+
+	observer: true,
+	observeParents: true,
+	slidesPerView: 4,
+	speed: 800,
+	spaceBetween: 15,
+	slidesPerGroup: 1,
+	// loop: true,
+
+	navigation: {
+		nextEl: '.slider-arrows ._team__arrow-next',
+		prevEl: '.slider-arrows ._team__arrow-prev',
+	},
+
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+
+			// scrollbar: {
+			// 	el: '._team__progress-bar',
+			// 	draggable: true
+			// },
+			on: {
+				slideChange: function (swiper) {
+					// reviewsTextMin()
+				},
+			},
+
+		},
+
+		527: {
+			slidesPerView: 2,
+
+		},
+		769: {
+			slidesPerView: 4,
+
+			pagination: {
+				el: '._team__pagination-number',
+				type: 'fraction',
+				renderFraction: function (currentClass, totalClass) {
+
+					return '<span class="' + currentClass + '"> </span>' +
+						'/' +
+						'<span class="' + totalClass + '"> </span>';
+				},
+			},
+
+		},
+
+	},
+
+	on: {
+		lazyImageReady: function () {
+			ibg();
+		},
+
+		slideChange: function () {
+			sliderNum(document.querySelector('.team'))
+			reviewsTextMin()
+		},
+		afterInit: function () {
+			sliderNum(document.querySelector('.team'))
+
+		},
+
+	},
+	scrollbar: {
+		draggable: true
+	},
+
+});
 
 
 
+let sliderPartnersOne = new Swiper('.partners-slider--one', {
+
+	observer: true,
+	observeParents: true,
+	slidesPerView: 2,
+	speed: 800,
+	spaceBetween: 30,
+	slidesPerGroup: 1,
+	freeMode: true,
+	autoplay: {
+		delay: 1000,
+	 },
+
+	// loop: true,
+
+	// navigation: {
+	// 	nextEl: '.slider-arrows ._team__arrow-next',
+	// 	prevEl: '.slider-arrows ._team__arrow-prev',
+	// },
+
+	breakpoints: {
+		0: {
+
+			// scrollbar: {
+			// 	el: '._team__progress-bar',
+			// 	draggable: true
+			// },
+			on: {
+				slideChange: function (swiper) {
+					// reviewsTextMin()
+				},
+			},
+
+		},
+
+
+
+	},
+
+	on: {
+		lazyImageReady: function () {
+		},
+
+		slideChange: function () {
+		},
+		afterInit: function () {
+
+		},
+
+	},
+	scrollbar: {
+		draggable: true
+	},
+
+});
+
+let sliderPartnersTwo = new Swiper('.partners-slider--two', {
+
+	observer: true,
+	observeParents: true,
+	slidesPerView: 2,
+	speed: 800,
+	spaceBetween: 30,
+	slidesPerGroup: 1,
+	freeMode: true,
+	reverseDirection: true,
+
+	// loop: true,
+
+	// navigation: {
+	// 	nextEl: '.slider-arrows ._team__arrow-next',
+	// 	prevEl: '.slider-arrows ._team__arrow-prev',
+	// },
+
+	breakpoints: {
+		0: {
+
+			// scrollbar: {
+			// 	el: '._team__progress-bar',
+			// 	draggable: true
+			// },
+			on: {
+				slideChange: function (swiper) {
+					// reviewsTextMin()
+				},
+			},
+
+		},
+
+
+
+	},
+
+	on: {
+		lazyImageReady: function () {
+		},
+
+		slideChange: function () {
+		},
+		afterInit: function () {
+
+		},
+
+	},
+	scrollbar: {
+		draggable: true
+	},
+
+});
+
+
+function slideNext(sliderOne, sldierTwo) {
+
+	sliderOne.on('slideNextTransitionStart', function () {
+		sldierTwo.slidePrev();
+		sldierTwo.update(true);
+	});
+
+	sliderOne.on('slidePrevTransitionStart', function () {
+		sldierTwo.slideNext();
+		sldierTwo.update(true);
+	})
+}
+
+slideNext(sliderPartnersOne, sliderPartnersTwo)
+slideNext(sliderPartnersTwo, sliderPartnersOne)
+
+// section-work 
+var catalogSlider = null;
+var mediaQuerySize = 1024;
+
+function catalogSliderInit() {
+	if (!catalogSlider) {
+		catalogSlider = new Swiper('.work-row', {
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			autoHeight: true,
+			freeMode: true,
+			slidesPerView: 'auto',
+			// navigation: {
+			// 	nextEl: '.work-button-next',
+			// 	prevEl: '.work-button-prev',
+			// },
+
+
+			// mousewheel: {
+			// 	sensitivity: 1,
+			// },
+			on: {
+				init: function () {
+
+				},
+				reachBeginning: function () {
+					document.body.classList.remove('_lock')
+					checkSlider = true
+
+				},
+				reachEnd: function () {
+					document.body.classList.remove('_lock')
+					checkSlider = true
+				},
+			}
+
+		});
+	}
+}
+
+function catalogSliderDestroy() {
+	if (catalogSlider) {
+		catalogSlider.destroy();
+		catalogSlider = null;
+	}
+}
+catalogSliderInit()
+
+let worktite = document.querySelector('.section-work .section__title');
+var checkSlider = false;
+let workRow = document.querySelector('.work-row');
+// window.addEventListener('scroll', function (e) {
+// 	if (Visible(workRow) != true) {
+// 		checkSlider = false
+// 		// catalogSliderDestroy()
+// 	} else {
+// 		if (checkSlider != true) {
+// 			if ((worktite.getBoundingClientRect().top) <= 0 && (Visible(worktite) === true)) {
+// 				const elementPosition = worktite.getBoundingClientRect().top;
+// 				window.scrollBy({
+// 					top: elementPosition,
+// 				});
+// 				document.body.classList.add('_lock')
+// 				catalogSliderInit()
+// 				catalogSlider.mousewheel.enable()
+// 			}
+// 		} else {
+// 			catalogSlider.mousewheel.disable()
+// 			// catalogSliderDestroy()
+// 		}
+// 	}
+// });

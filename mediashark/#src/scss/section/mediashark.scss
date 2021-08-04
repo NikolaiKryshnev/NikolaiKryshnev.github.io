@@ -1,0 +1,34 @@
+.mediashark {
+	display: flex;
+	align-items: center;
+	height: 100vh;
+	@media (min-width: $md1+px) {
+		min-height: 700px;
+	}
+	@media (max-width: $md1+px) {
+		min-height: 600px;
+	}
+	@media (max-width: $md3+px) {
+		min-height: 320px;
+	}
+
+	// .mediashark__bg
+	&__bg {
+		max-width: 700px;
+		width: 100%;
+	}
+
+	// .mediashark__title
+	&__title {
+		font-family: Century Gothic;
+		font-style: normal;
+		font-weight: 700;
+		@include adaptiv-value("font-size", 60, 26, 0);
+		line-height: 140%;
+		text-transform: uppercase;
+
+		color: #000000;
+
+		@include adaptiv-value("margin-top", -65, -25, 0);
+	}
+}

@@ -96,3 +96,10 @@
 		grid-column-end: 3;
 	}
 }
+
+
+ @keyframes scroll-icon {
+	0% { opacity: 0; }
+	10% { transform: translateY(0); opacity: 1; }
+	100% { transform: translateY(10px); opacity: 0;}
+ }

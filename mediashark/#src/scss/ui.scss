@@ -20,7 +20,7 @@
 .icon-scroll {
 	@media (max-width: $md1+px) {
 		position: relative;
-		padding-right: 65px;
+		padding-right: 40px;
 
 		&::after {
 			display: none;
@@ -446,13 +446,14 @@ html._pc {
 }
 
 //========================================================================================================================================================
-._scroll-block{
+._scroll-block {
 	position: relative;
 }
 ._scroll-text {
 	position: absolute;
-	// left: calc((-60px + -16px) / 2);
-	left: -1.5vw;
+	left: 0;
+	margin-left: 0;
+
 	bottom: 0;
 	z-index: 99;
 
@@ -460,10 +461,11 @@ html._pc {
 	justify-content: center;
 	align-items: center;
 
-	width: 3.5vw;
-	height: max-content;
+	height: 3.5vw;
+
 	width: max-content;
-	letter-spacing: 0.25em;	
+
+	letter-spacing: 0.25em;
 	text-transform: uppercase;
 	@include f700();
 	color: #000;
@@ -478,8 +480,35 @@ html._pc {
 
 		font-size: $fz12;
 	}
+	//.scroll-text--anim
 	&--anim {
-		padding-top: 55px;
+		.icon-mouse {
+			@include rotate(90deg);
+			&__box {
+				position: relative;
+				// top: 100px;
+				padding-top: 100px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				&:before {
+					content: "";
+					// @include pseudoEl(block, absolute, "");
+					// top: -70px;
+					width: 1px;
+					height: 50px;
+					background: #000;
+					margin-bottom: 15px;
+				}
+			}
+		}
+		.icon-mouse__dot {
+			animation-name: scroll-icon;
+			animation-duration: 2.2s;
+			animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+			animation-iteration-count: infinite;
+		}
 	}
 
 	transition: top 0.3s linear;
@@ -491,4 +520,128 @@ html._pc {
 	overflow-x: hidden;
 	overflow-y: auto;
 }
+
 //</ГОТОВЫЕ КЛАССЫ>====================================================================================================
+
+//<КОНОПКИ>====================================================================================================
+.section__btns {
+	@include adaptiv-value("margin-top", 50, 35, 0);
+	display: flex;
+	flex-wrap: wrap;
+
+	.btn {
+		@media (max-width: $md2+px) {
+			width: 100%;
+		}
+		&:not(:first-child) {
+			@media (min-width: $md2+px) {
+				margin-left: 20px;
+			}
+
+			@media (max-width: $md2+px) {
+				margin: 15px 0 0 0;
+			}
+		}
+	}
+}
+.btn {
+	position: relative;
+
+	display: inline-block;
+
+	padding: 0 32px;
+
+	@include adaptiv-value("font-size", 16, 14, 0);
+
+	border: 1px solid #222222;
+
+	color: $black;
+	vertical-align: middle;
+	cursor: pointer;
+	text-align: center;
+	@include f700();
+	line-height: 65px;
+
+	overflow: hidden;
+	transition: 0.5s ease-in-out;
+	@media (max-width: $md2+px) {
+		padding: 0 10px;
+	}
+
+	.btn-hover {
+		background: #222;
+	}
+	&:hover {
+		color: $white;
+
+		.btn-hover {
+			width: 225%;
+			height: 562.5px;
+		}
+	}
+
+	&--black {
+		background: #222;
+		color: $white;
+		&:hover {
+			color: $black;
+		}
+		.btn-hover {
+			background: $white;
+		}
+	}
+
+	&--white {
+		border: 1px solid $white;
+		color: $white;
+		&:hover {
+			color: $black;
+		}
+		.btn-hover {
+			background: $white;
+		}
+	}
+
+	&-text {
+		display: block;
+		position: relative;
+		z-index: 2;
+		margin: 0 auto;
+	}
+
+	&-hover {
+		position: absolute;
+
+		display: block;
+
+		width: 0;
+		height: 0;
+
+		border-radius: 50%;
+		transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+	}
+}
+
+.btn-arrow {
+	display: inline-flex;
+	align-items: center;
+	justify-content: flex-start;
+	align-self: flex-start;
+	@include f700();
+	@include adaptiv-value("font-size", 18, 14, 0);
+	text-align: center;
+
+	color: #000000;
+	._icon-f {
+		padding: 0 0 0 15px;
+		transition: all 0.3s linear;
+	}
+	&:hover {
+		._icon-f {
+			padding: 0 0 0 20px;
+		}
+	}
+}
+//</КОНОПКИ>====================================================================================================

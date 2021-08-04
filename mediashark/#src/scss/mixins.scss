@@ -53,7 +53,8 @@
 }
 
 @mixin f700() {
-	font-family: CenturyGothic-Bold;
+	font-family: Century Gothic;
+	font-weight: 700;
 }
 
 // @mixin f500(){
@@ -61,7 +62,8 @@
 // }
 
 @mixin f400() {
-	font-family: CenturyGothic;
+	font-family: Century Gothic;
+	font-weight: 400;
 }
 
 // @mixin f300(){
