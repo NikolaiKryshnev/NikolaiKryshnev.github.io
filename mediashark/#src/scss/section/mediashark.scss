@@ -28,6 +28,8 @@
 
 	// .mediashark__title
 	&__title {
+		position: relative;
+		z-index: 1;
 		font-family: Century Gothic;
 		font-style: normal;
 		font-weight: 700;
