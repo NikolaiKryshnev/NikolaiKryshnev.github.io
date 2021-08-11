@@ -44,6 +44,8 @@ function footerFixed() {
 		main = document.querySelector('.main');
 
 	main.style.bottom = `${footer.offsetHeight}px`
+	main.style.marginBottom = `${footer.offsetHeight}px`
+
 }
 footerFixed()
 

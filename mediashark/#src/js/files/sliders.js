@@ -671,186 +671,186 @@ let sliderTeam = new Swiper('.team-slider', {
 
 
 
-let sliderPartnersOne = new Swiper('.partners-slider--one', {
+// let sliderPartnersOne = new Swiper('.partners-slider--one', {
 
-	observer: true,
-	observeParents: true,
-	slidesPerView: 2,
-	speed: 800,
-	spaceBetween: 30,
-	slidesPerGroup: 1,
-	freeMode: true,
-	autoplay: {
-		delay: 1000,
-	 },
+// 	observer: true,
+// 	observeParents: true,
+// 	slidesPerView: 2,
+// 	speed: 800,
+// 	spaceBetween: 30,
+// 	slidesPerGroup: 1,
+// 	freeMode: true,
+// 	autoplay: {
+// 		delay: 1000,
+// 	 },
 
-	// loop: true,
+// 	// loop: true,
 
-	// navigation: {
-	// 	nextEl: '.slider-arrows ._team__arrow-next',
-	// 	prevEl: '.slider-arrows ._team__arrow-prev',
-	// },
+// 	// navigation: {
+// 	// 	nextEl: '.slider-arrows ._team__arrow-next',
+// 	// 	prevEl: '.slider-arrows ._team__arrow-prev',
+// 	// },
 
-	breakpoints: {
-		0: {
+// 	breakpoints: {
+// 		0: {
 
-			// scrollbar: {
-			// 	el: '._team__progress-bar',
-			// 	draggable: true
-			// },
-			on: {
-				slideChange: function (swiper) {
-					// reviewsTextMin()
-				},
-			},
+// 			// scrollbar: {
+// 			// 	el: '._team__progress-bar',
+// 			// 	draggable: true
+// 			// },
+// 			on: {
+// 				slideChange: function (swiper) {
+// 					// reviewsTextMin()
+// 				},
+// 			},
 
-		},
-
-
-
-	},
-
-	on: {
-		lazyImageReady: function () {
-		},
-
-		slideChange: function () {
-		},
-		afterInit: function () {
-
-		},
-
-	},
-	scrollbar: {
-		draggable: true
-	},
-
-});
-
-let sliderPartnersTwo = new Swiper('.partners-slider--two', {
-
-	observer: true,
-	observeParents: true,
-	slidesPerView: 2,
-	speed: 800,
-	spaceBetween: 30,
-	slidesPerGroup: 1,
-	freeMode: true,
-	reverseDirection: true,
-
-	// loop: true,
-
-	// navigation: {
-	// 	nextEl: '.slider-arrows ._team__arrow-next',
-	// 	prevEl: '.slider-arrows ._team__arrow-prev',
-	// },
-
-	breakpoints: {
-		0: {
-
-			// scrollbar: {
-			// 	el: '._team__progress-bar',
-			// 	draggable: true
-			// },
-			on: {
-				slideChange: function (swiper) {
-					// reviewsTextMin()
-				},
-			},
-
-		},
+// 		},
 
 
 
-	},
+// 	},
 
-	on: {
-		lazyImageReady: function () {
-		},
+// 	on: {
+// 		lazyImageReady: function () {
+// 		},
 
-		slideChange: function () {
-		},
-		afterInit: function () {
+// 		slideChange: function () {
+// 		},
+// 		afterInit: function () {
 
-		},
+// 		},
 
-	},
-	scrollbar: {
-		draggable: true
-	},
+// 	},
+// 	scrollbar: {
+// 		draggable: true
+// 	},
 
-});
+// });
+
+// let sliderPartnersTwo = new Swiper('.partners-slider--two', {
+
+// 	observer: true,
+// 	observeParents: true,
+// 	slidesPerView: 2,
+// 	speed: 800,
+// 	spaceBetween: 30,
+// 	slidesPerGroup: 1,
+// 	freeMode: true,
+// 	reverseDirection: true,
+
+// 	// loop: true,
+
+// 	// navigation: {
+// 	// 	nextEl: '.slider-arrows ._team__arrow-next',
+// 	// 	prevEl: '.slider-arrows ._team__arrow-prev',
+// 	// },
+
+// 	breakpoints: {
+// 		0: {
+
+// 			// scrollbar: {
+// 			// 	el: '._team__progress-bar',
+// 			// 	draggable: true
+// 			// },
+// 			on: {
+// 				slideChange: function (swiper) {
+// 					// reviewsTextMin()
+// 				},
+// 			},
+
+// 		},
 
 
-function slideNext(sliderOne, sldierTwo) {
 
-	sliderOne.on('slideNextTransitionStart', function () {
-		sldierTwo.slidePrev();
-		sldierTwo.update(true);
-	});
+// 	},
 
-	sliderOne.on('slidePrevTransitionStart', function () {
-		sldierTwo.slideNext();
-		sldierTwo.update(true);
-	})
-}
+// 	on: {
+// 		lazyImageReady: function () {
+// 		},
 
-slideNext(sliderPartnersOne, sliderPartnersTwo)
-slideNext(sliderPartnersTwo, sliderPartnersOne)
+// 		slideChange: function () {
+// 		},
+// 		afterInit: function () {
+
+// 		},
+
+// 	},
+// 	scrollbar: {
+// 		draggable: true
+// 	},
+
+// });
+
+
+// function slideNext(sliderOne, sldierTwo) {
+
+// 	sliderOne.on('slideNextTransitionStart', function () {
+// 		sldierTwo.slidePrev();
+// 		sldierTwo.update(true);
+// 	});
+
+// 	sliderOne.on('slidePrevTransitionStart', function () {
+// 		sldierTwo.slideNext();
+// 		sldierTwo.update(true);
+// 	})
+// }
+
+// slideNext(sliderPartnersOne, sliderPartnersTwo)
+// slideNext(sliderPartnersTwo, sliderPartnersOne)
 
 // section-work 
-var catalogSlider = null;
-var mediaQuerySize = 1024;
+// var catalogSlider = null;
+// var mediaQuerySize = 1024;
 
-function catalogSliderInit() {
-	if (!catalogSlider) {
-		catalogSlider = new Swiper('.work-row', {
-			observer: true,
-			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
-			autoHeight: true,
-			freeMode: true,
-			slidesPerView: 'auto',
-			// navigation: {
-			// 	nextEl: '.work-button-next',
-			// 	prevEl: '.work-button-prev',
-			// },
+// function catalogSliderInit() {
+// 	if (!catalogSlider) {
+// 		catalogSlider = new Swiper('.work-row', {
+// 			observer: true,
+// 			observeParents: true,
+// 			slidesPerView: 1,
+// 			spaceBetween: 0,
+// 			autoHeight: true,
+// 			freeMode: true,
+// 			slidesPerView: 'auto',
+// 			// navigation: {
+// 			// 	nextEl: '.work-button-next',
+// 			// 	prevEl: '.work-button-prev',
+// 			// },
 
 
-			// mousewheel: {
-			// 	sensitivity: 1,
-			// },
-			on: {
-				init: function () {
+// 			// mousewheel: {
+// 			// 	sensitivity: 1,
+// 			// },
+// 			on: {
+// 				init: function () {
 
-				},
-				reachBeginning: function () {
-					document.body.classList.remove('_lock')
-					checkSlider = true
+// 				},
+// 				reachBeginning: function () {
+// 					document.body.classList.remove('_lock')
+// 					checkSlider = true
 
-				},
-				reachEnd: function () {
-					document.body.classList.remove('_lock')
-					checkSlider = true
-				},
-			}
+// 				},
+// 				reachEnd: function () {
+// 					document.body.classList.remove('_lock')
+// 					checkSlider = true
+// 				},
+// 			}
 
-		});
-	}
-}
+// 		});
+// 	}
+// }
 
-function catalogSliderDestroy() {
-	if (catalogSlider) {
-		catalogSlider.destroy();
-		catalogSlider = null;
-	}
-}
-catalogSliderInit()
+// function catalogSliderDestroy() {
+// 	if (catalogSlider) {
+// 		catalogSlider.destroy();
+// 		catalogSlider = null;
+// 	}
+// }
+// // catalogSliderInit()
 
-let worktite = document.querySelector('.section-work .section__title');
-var checkSlider = false;
-let workRow = document.querySelector('.work-row');
+// let worktite = document.querySelector('.section-work .section__title');
+// var checkSlider = false;
+// let workRow = document.querySelector('.work-row');
 // window.addEventListener('scroll', function (e) {
 // 	if (Visible(workRow) != true) {
 // 		checkSlider = false

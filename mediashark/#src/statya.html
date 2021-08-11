@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Блог"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<main class="main main--seo">
+			<section class=" ban _scroll-block _section" style="background-image: url(./img/section-ban/04.jpg);">
+				<div class="_scroll-text _scroll-text--anim ">
+					<div class="icon-mouse">
+						<div class="icon-mouse__box ">
+							<svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M7.02938 0.186523C3.3181 0.186523 0.298828 3.16708 0.298828 6.83079V16.1308C0.298828 19.7945 3.3181 22.775 7.02938 22.775C10.7407 22.775 13.7599 19.7945 13.7599 16.1308V6.83079C13.7599 3.16708 10.7407 0.186523 7.02938 0.186523ZM12.3871 16.1308C12.3871 19.047 9.98353 21.4198 7.02938 21.4198C4.07523 21.4198 1.67168 19.047 1.67168 16.1308V6.83079C1.67168 3.91451 4.07523 1.54178 7.02938 1.54178C9.98353 1.54178 12.3871 3.91451 12.3871 6.83079V16.1308Z"
+									fill="black" />
+								<path class="icon-mouse__dot"
+									d="M7.02822 4.67993C6.64905 4.67993 6.3418 4.98324 6.3418 5.35756V8.47651C6.3418 8.85065 6.64905 9.15413 7.02822 9.15413C7.40723 9.15413 7.71465 8.85065 7.71465 8.47651V5.35756C7.71465 4.98324 7.4074 4.67993 7.02822 4.67993Z"
+									fill="black" />
+							</svg>
+						</div>
+					</div>
+					SCROLL
+				</div>
+				<div class="_container">
+					<div class="ban__title _scr-item">БЛОГ</div>
+					@@include('_breadcrumbs.html')
+				</div>
+				<!-- /.container -->
+			</section>
+			<!-- /.ban -->
+		
+			
+			<div class="main__scroll">
+
+			</div>
+
+			<div class="main__social">
+				<div class="social">
+					<a class="social-icon" href="#" rel="nofollow">
+						<i class="_icon-f _icon-behance"></i>
+					</a>
+					<a class="social-icon" href="#" rel="nofollow">
+						<i class="_icon-f _icon-instagram"></i>
+					</a>
+					<a class="social-icon" href="#" rel="nofollow">
+						<i class="_icon-f _icon-pinterest"></i>
+					</a>
+					<a class="social-icon" href="#" rel="nofollow">
+						<i class="_icon-f _icon-dribble"></i>
+					</a>
+				</div>
+			</div>
+			<div class="loader df aic jcc">
+				<div>
+					<h1>Loading</h1>
+					<h2 class="loader--text">0%</h2>
+				</div>
+			</div>
+			@@include('_popup.html',{})
+
+			<a class="scroll-btn _goto" href="#header">
+				<i class="_icon-f _icon-arrow-bot"></i>
+			</a>
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	@@include('_js.html',{})
+</body>
+
+</html>

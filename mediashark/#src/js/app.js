@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	@@include('files/gallery.js', {})
 	@@include('files/scrollText.js', {})
 	@@include('files/mediashark.js', {})
+	@@include('files/filters.js', {})
 
 
 });

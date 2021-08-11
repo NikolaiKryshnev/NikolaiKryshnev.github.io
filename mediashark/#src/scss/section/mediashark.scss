@@ -15,7 +15,9 @@
 	@media (max-width: $md3+px) {
 		min-height: 320px;
 	}
-
+.letter{
+	opacity: .5;
+}
 	// .mediashark__bg
 	&__bg {
 		max-width: 700px;

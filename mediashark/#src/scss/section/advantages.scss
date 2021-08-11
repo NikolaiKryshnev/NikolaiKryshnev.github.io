@@ -43,6 +43,8 @@
 		max-width: 25%;
 		width: 100%;
 		min-height: 1px;
+		margin-bottom: 30px;
+
 		.advantages-box:nth-child(1) {
 			transition: all 0.3s linear;
 			transition-delay: 0.2s;
@@ -133,6 +135,12 @@
 		&__info {
 			line-height: 23px;
 			color: #000000;
+		}
+		.advantages-info__title {
+			@include f700();
+			font-size: 18px;
+			color: #000000;
+			margin-bottom: 10px;
 		}
 	}
 	@media (max-width: $md1+px) {

@@ -2,7 +2,7 @@
 	// margin-bottom: 80px;
 }
 
-.sliderSeo {
+.packages-slider {
 	position: relative;
 	@media (min-width: $md3+px) and (max-width: 1170px) {
 		margin: 0px 25% 0px 0px;
@@ -22,7 +22,7 @@
 		height: 100%;
 	}
 
-	.seoBlock {
+	.packages-block {
 		width: 100%;
 		height: auto;
 		// padding: 0 15px;
@@ -42,7 +42,7 @@
 
 			@media (min-width: $md3+px) {
 				border: 1px solid #e1e1e1;
-				border-bottom: 0;
+				// border-bottom: 0;
 			}
 			@media (max-width: $md3+px) {
 				margin-top: 55px;
@@ -68,6 +68,8 @@
 			@include f700();
 			font-size: $fz24;
 			margin-bottom: 20px;
+			padding-right: 11%;
+			line-height: 1.2;
 			@media (max-width: $md3+px) {
 				font-size: $mfz20;
 				padding: 0 0 0 100px;
@@ -140,15 +142,26 @@
 		.btn {
 			line-height: 85px;
 			width: 100%;
+			@include adaptiv-value("font-size",24 ,16 ,0 );
 			@media (max-width: $md3+px) {
 				line-height: 50px;
 			}
 		}
+		.btn--black{
+			margin: -1px -1px -1px -1px;
+			width: calc(100% + 2px);
+		}
+		.btn-arrow{
+			@include adaptiv-value("margin-top", 50, 25, 0);
+		}
+		
 	}
-
-	
 
 	._swiper .swiper-wrapper {
 		// margin: 0 -15px;
 	}
+}
+
+.main--kontekst .packages-slider .packages-block__title{
+	padding: 0;
 }

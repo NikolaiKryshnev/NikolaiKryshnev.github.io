@@ -36,14 +36,19 @@
 
 	}
 	&:not(.swiper-bild) {
-		.partners-block {
-			position: relative;
-			width: 100%;
-			min-height: 1px;
+		display: flex;
+		.partners-col{
 			padding-right: 15px;
 			padding-left: 15px;
 			flex: 0 0 50%;
 			max-width: 50%;
+			position: relative;
+			width: 100%;
+			min-height: 1px;
+		}
+		.partners-block {
+		
+			
 		}
 	}
 }

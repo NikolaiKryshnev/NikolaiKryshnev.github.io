@@ -114,6 +114,8 @@ body {
 @import "section/blog";
 @import "section/partners";
 @import "section/advantages";
+@import "section/stages";
+@import "section/configuration";
 
 @import "home";
 
@@ -130,6 +132,7 @@ body {
 	position: relative;
 	z-index: 1;
 	background: #fff;
+	top: 0;
 
 	flex: 1 1 auto;
 	padding: 0 60px;

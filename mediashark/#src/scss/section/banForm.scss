@@ -6,7 +6,7 @@
 		padding: 65px 0 70px;
 	}
 
-	._container{
+	._container {
 		position: relative;
 		z-index: 2;
 	}
@@ -28,7 +28,7 @@
 			margin-top: 30px;
 		}
 	}
-	
+
 	//.banForm:after
 	&::after {
 		@include pseudoEl(block, absolute, "");
@@ -37,5 +37,35 @@
 		top: 0;
 		width: 100%;
 		height: 100%;
+	}
+}
+
+.banForm--form {
+	.banForm__info {
+		margin: 0 auto;
+	}
+
+	.section__title {
+		text-align: center;
+	}
+	.form {
+		margin-top: 35px;
+	}
+	.form__line input,
+	.form__line textarea {
+		background: none;
+		color: #fff;
+		border-bottom: 2px solid #fff;
+	}
+	.form__line:not(:first-child) {
+		margin: 15px 0 0 0;
+	}
+	.form__btn {
+		display: flex;
+		justify-content: center;
+	}
+	.btn {
+		background: none;
+		margin: 0 auto;
 	}
 }

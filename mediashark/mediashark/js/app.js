@@ -1272,186 +1272,186 @@ let sliderTeam = new Swiper('.team-slider', {
 
 
 
-let sliderPartnersOne = new Swiper('.partners-slider--one', {
+// let sliderPartnersOne = new Swiper('.partners-slider--one', {
 
-	observer: true,
-	observeParents: true,
-	slidesPerView: 2,
-	speed: 800,
-	spaceBetween: 30,
-	slidesPerGroup: 1,
-	freeMode: true,
-	autoplay: {
-		delay: 1000,
-	 },
+// 	observer: true,
+// 	observeParents: true,
+// 	slidesPerView: 2,
+// 	speed: 800,
+// 	spaceBetween: 30,
+// 	slidesPerGroup: 1,
+// 	freeMode: true,
+// 	autoplay: {
+// 		delay: 1000,
+// 	 },
 
-	// loop: true,
+// 	// loop: true,
 
-	// navigation: {
-	// 	nextEl: '.slider-arrows ._team__arrow-next',
-	// 	prevEl: '.slider-arrows ._team__arrow-prev',
-	// },
+// 	// navigation: {
+// 	// 	nextEl: '.slider-arrows ._team__arrow-next',
+// 	// 	prevEl: '.slider-arrows ._team__arrow-prev',
+// 	// },
 
-	breakpoints: {
-		0: {
+// 	breakpoints: {
+// 		0: {
 
-			// scrollbar: {
-			// 	el: '._team__progress-bar',
-			// 	draggable: true
-			// },
-			on: {
-				slideChange: function (swiper) {
-					// reviewsTextMin()
-				},
-			},
+// 			// scrollbar: {
+// 			// 	el: '._team__progress-bar',
+// 			// 	draggable: true
+// 			// },
+// 			on: {
+// 				slideChange: function (swiper) {
+// 					// reviewsTextMin()
+// 				},
+// 			},
 
-		},
-
-
-
-	},
-
-	on: {
-		lazyImageReady: function () {
-		},
-
-		slideChange: function () {
-		},
-		afterInit: function () {
-
-		},
-
-	},
-	scrollbar: {
-		draggable: true
-	},
-
-});
-
-let sliderPartnersTwo = new Swiper('.partners-slider--two', {
-
-	observer: true,
-	observeParents: true,
-	slidesPerView: 2,
-	speed: 800,
-	spaceBetween: 30,
-	slidesPerGroup: 1,
-	freeMode: true,
-	reverseDirection: true,
-
-	// loop: true,
-
-	// navigation: {
-	// 	nextEl: '.slider-arrows ._team__arrow-next',
-	// 	prevEl: '.slider-arrows ._team__arrow-prev',
-	// },
-
-	breakpoints: {
-		0: {
-
-			// scrollbar: {
-			// 	el: '._team__progress-bar',
-			// 	draggable: true
-			// },
-			on: {
-				slideChange: function (swiper) {
-					// reviewsTextMin()
-				},
-			},
-
-		},
+// 		},
 
 
 
-	},
+// 	},
 
-	on: {
-		lazyImageReady: function () {
-		},
+// 	on: {
+// 		lazyImageReady: function () {
+// 		},
 
-		slideChange: function () {
-		},
-		afterInit: function () {
+// 		slideChange: function () {
+// 		},
+// 		afterInit: function () {
 
-		},
+// 		},
 
-	},
-	scrollbar: {
-		draggable: true
-	},
+// 	},
+// 	scrollbar: {
+// 		draggable: true
+// 	},
 
-});
+// });
+
+// let sliderPartnersTwo = new Swiper('.partners-slider--two', {
+
+// 	observer: true,
+// 	observeParents: true,
+// 	slidesPerView: 2,
+// 	speed: 800,
+// 	spaceBetween: 30,
+// 	slidesPerGroup: 1,
+// 	freeMode: true,
+// 	reverseDirection: true,
+
+// 	// loop: true,
+
+// 	// navigation: {
+// 	// 	nextEl: '.slider-arrows ._team__arrow-next',
+// 	// 	prevEl: '.slider-arrows ._team__arrow-prev',
+// 	// },
+
+// 	breakpoints: {
+// 		0: {
+
+// 			// scrollbar: {
+// 			// 	el: '._team__progress-bar',
+// 			// 	draggable: true
+// 			// },
+// 			on: {
+// 				slideChange: function (swiper) {
+// 					// reviewsTextMin()
+// 				},
+// 			},
+
+// 		},
 
 
-function slideNext(sliderOne, sldierTwo) {
 
-	sliderOne.on('slideNextTransitionStart', function () {
-		sldierTwo.slidePrev();
-		sldierTwo.update(true);
-	});
+// 	},
 
-	sliderOne.on('slidePrevTransitionStart', function () {
-		sldierTwo.slideNext();
-		sldierTwo.update(true);
-	})
-}
+// 	on: {
+// 		lazyImageReady: function () {
+// 		},
 
-slideNext(sliderPartnersOne, sliderPartnersTwo)
-slideNext(sliderPartnersTwo, sliderPartnersOne)
+// 		slideChange: function () {
+// 		},
+// 		afterInit: function () {
+
+// 		},
+
+// 	},
+// 	scrollbar: {
+// 		draggable: true
+// 	},
+
+// });
+
+
+// function slideNext(sliderOne, sldierTwo) {
+
+// 	sliderOne.on('slideNextTransitionStart', function () {
+// 		sldierTwo.slidePrev();
+// 		sldierTwo.update(true);
+// 	});
+
+// 	sliderOne.on('slidePrevTransitionStart', function () {
+// 		sldierTwo.slideNext();
+// 		sldierTwo.update(true);
+// 	})
+// }
+
+// slideNext(sliderPartnersOne, sliderPartnersTwo)
+// slideNext(sliderPartnersTwo, sliderPartnersOne)
 
 // section-work 
-var catalogSlider = null;
-var mediaQuerySize = 1024;
+// var catalogSlider = null;
+// var mediaQuerySize = 1024;
 
-function catalogSliderInit() {
-	if (!catalogSlider) {
-		catalogSlider = new Swiper('.work-row', {
-			observer: true,
-			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
-			autoHeight: true,
-			freeMode: true,
-			slidesPerView: 'auto',
-			// navigation: {
-			// 	nextEl: '.work-button-next',
-			// 	prevEl: '.work-button-prev',
-			// },
+// function catalogSliderInit() {
+// 	if (!catalogSlider) {
+// 		catalogSlider = new Swiper('.work-row', {
+// 			observer: true,
+// 			observeParents: true,
+// 			slidesPerView: 1,
+// 			spaceBetween: 0,
+// 			autoHeight: true,
+// 			freeMode: true,
+// 			slidesPerView: 'auto',
+// 			// navigation: {
+// 			// 	nextEl: '.work-button-next',
+// 			// 	prevEl: '.work-button-prev',
+// 			// },
 
 
-			// mousewheel: {
-			// 	sensitivity: 1,
-			// },
-			on: {
-				init: function () {
+// 			// mousewheel: {
+// 			// 	sensitivity: 1,
+// 			// },
+// 			on: {
+// 				init: function () {
 
-				},
-				reachBeginning: function () {
-					document.body.classList.remove('_lock')
-					checkSlider = true
+// 				},
+// 				reachBeginning: function () {
+// 					document.body.classList.remove('_lock')
+// 					checkSlider = true
 
-				},
-				reachEnd: function () {
-					document.body.classList.remove('_lock')
-					checkSlider = true
-				},
-			}
+// 				},
+// 				reachEnd: function () {
+// 					document.body.classList.remove('_lock')
+// 					checkSlider = true
+// 				},
+// 			}
 
-		});
-	}
-}
+// 		});
+// 	}
+// }
 
-function catalogSliderDestroy() {
-	if (catalogSlider) {
-		catalogSlider.destroy();
-		catalogSlider = null;
-	}
-}
-catalogSliderInit()
+// function catalogSliderDestroy() {
+// 	if (catalogSlider) {
+// 		catalogSlider.destroy();
+// 		catalogSlider = null;
+// 	}
+// }
+// // catalogSliderInit()
 
-let worktite = document.querySelector('.section-work .section__title');
-var checkSlider = false;
-let workRow = document.querySelector('.work-row');
+// let worktite = document.querySelector('.section-work .section__title');
+// var checkSlider = false;
+// let workRow = document.querySelector('.work-row');
 // window.addEventListener('scroll', function (e) {
 // 	if (Visible(workRow) != true) {
 // 		checkSlider = false
@@ -1705,6 +1705,8 @@ function footerFixed() {
 		main = document.querySelector('.main');
 
 	main.style.bottom = `${footer.offsetHeight}px`
+	main.style.marginBottom = `${footer.offsetHeight}px`
+
 }
 footerFixed()
 
@@ -2926,32 +2928,202 @@ window.onscroll = function () {
 
 	gsap.registerPlugin(ScrollTrigger);
 
-// --- PURPLE/GREEN PANEL ---
-var tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".purple",
-      scrub: true,
-      pin: true,
-      start: "top top",
-      end: "+=100%"
-    }
-  });
+if (document.querySelector('.mediashark')) {
+	let mediashark = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".mediashark",
+			scrub: true,
+			pin: true,
+			start: "top top",
+			end: "+=100%"
+		}
+	});
 
-tl.from(".purple p", {scale: 1.4, rotation:45, autoAlpha: 0, ease: "power2"})
-  .from(".letter-1", {translateX: -500,translateY: -500,rotate: 180, ease: "none"}, 0)
-  .from(".letter-2", {translateX: -300,translateY: -700,rotate: 260, ease: "none"}, 0)
-  .from(".letter-3", {translateX: 100,translateY: -300,rotate: 160, ease: "none"}, 0)
-  .from(".letter-4", {translateX: 500,translateY: -200,rotate: 360, ease: "none"}, 0)
-  .from(".letter-5", {translateX: 1000,translateY: 200,rotate: 260, ease: "none"}, 0)
-  .from(".letter-6", {translateX: 500,translateY: 500,rotate: 260, ease: "none"}, 0)
-  .from(".letter-7", {translateX: 300,translateY: 700,rotate: 260, ease: "none"}, 0)
-  .from(".letter-8", {translateX: 600,translateY: 1000,rotate: 260, ease: "none"}, 0)
-  .from(".letter-9", {translateX: 900,translateY: 500,rotate: 260, ease: "none"}, 0)
-  .from(".letter-10", {translateX: 400,translateY: 300,rotate: 260, ease: "none"}, 0)
-  .from(".letter-11", {translateX: 100,translateY: 300,rotate: 260, ease: "none"}, 0);
+	mediashark.from(".mediashark p", { scale: 1.4, rotation: 45, autoAlpha: 0, ease: "power2" })
+		.from(".letter-1", { translateX: -500, translateY: -500, rotate: 180, ease: "none" }, 0)
+		.from(".letter-2", { translateX: -300, translateY: -700, rotate: 260, ease: "none" }, 0)
+		.from(".letter-3", { translateX: 100, translateY: -300, rotate: 160, ease: "none" }, 0)
+		.from(".letter-4", { translateX: 500, translateY: -200, rotate: 360, ease: "none" }, 0)
+		.from(".letter-5", { translateX: 1000, translateY: 200, rotate: 260, ease: "none" }, 0)
+		.from(".letter-6", { translateX: 300, translateY: 500, rotate: 260, ease: "none" }, 0)
+		.from(".letter-7", { translateX: 300, translateY: 700, rotate: 260, ease: "none" }, 0)
+		.from(".letter-8", { translateX: 600, translateY: 1000, rotate: 260, ease: "none" }, 0)
+		.from(".letter-9", { translateX: 1000, translateY: 500, rotate: 260, ease: "none" }, 0)
+		.from(".letter-10", { translateX: 400, translateY: 300, rotate: 260, ease: "none" }, 0)
+}
+
+// Work
+if (document.querySelector('.work-row')) {
+	let workRowItem = gsap.utils.toArray(".work-row__item");
+
+	gsap.to(workRowItem, {
+		xPercent: -100 * (workRowItem.length - 1),
+		ease: "none",
+		scrollTrigger: {
+			trigger: ".work-row",
+			pin: true,
+			scrub: 1,
+			snap: directionalSnap(1 / (workRowItem.length - 1)),
+			// base vertical scrolling on how wide the container is so it feels more natural.
+			end: "+=3500"
+		}
+	});
+}
+
+// helper function for causing the sections to always snap in the direction of the scroll (next section) rather than whichever section is "closest" when scrolling stops.
+function directionalSnap(increment) {
+	let snapFunc = gsap.utils.snap(increment);
+	return (raw, self) => {
+		let n = snapFunc(raw);
+		return Math.abs(n - raw) < 1e-4 || (n < raw) === self.direction < 0 ? n : self.direction < 0 ? n - increment : n + increment;
+	};
+}
+
+const partners = gsap.utils.toArray('.partners-col');
+const loader = document.querySelector('.loader--text');
+const updateProgress = (instance) =>
+	loader.textContent = `${Math.round(instance.progressedCount * 100 / partners.length)}%`;
+
+const showDemo = () => {
+	document.body.style.overflow = 'auto';
+	document.scrollingElement.scrollTo(0, 0);
+	gsap.to(document.querySelector('.loader'), { autoAlpha: 0 });
+
+	gsap.utils.toArray('.partners-box').forEach((section, index) => {
+		const w = section.querySelector('.partners-slider');
+		const [x, xEnd] = (index % 2) ? ['100%', (w.scrollWidth - section.offsetWidth) * -1] : [w.scrollWidth * -1, 0];
+		gsap.fromTo(w, { x }, {
+			x: xEnd,
+			scrollTrigger: {
+				trigger: section,
+				scrub: 1,
+			}
+		});
+	});
+}
+
+imagesLoaded(partners).on('progress', updateProgress).on('always', showDemo);
+
+	function filtersBtnShow() {
+	let filters = document.querySelector('.filters'),
+		filtersBtn = document.querySelectorAll('.filters__btn');
+
+	if (filters != null) {
+		let dots = document.createElement('div'),
+			block = document.createElement('div'),
+			name = document.createElement('div');
+
+		dots.className = "filters__dots _filter-btn";
+		block.className = "filters__block";
+		name.className = "filters__name";
+
+		dots.innerHTML = `<div class="dot"></div>`
+
+		if ((filtersBtn.length > 4) && window.innerWidth > 991) {
+			filters.append(dots);
+			filters.append(block);
+
+			for (let i = 0; i < filtersBtn.length; i++) {
+				const el = filtersBtn[i];
+				if (i > 3) {
+					block.append(el);
+				}
+
+			}
+		} else {
+			filters.append(name);
+			filters.append(dots);
+			filters.append(block);
+
+			let filterBtnActive = document.querySelector('.filters__btn._active').innerHTML,
+				filterName = document.querySelector('.filters__name');
+
+			filterName.innerHTML = filterBtnActive;
 
 
+			for (let i = 0; i < filtersBtn.length; i++) {
+				const el = filtersBtn[i];
+				block.append(el);
+			}
+		}
+	}
+}
+filtersBtnShow()
 
+function showBlock() {
+	let filterBtn = document.querySelector('._filter-btn'),
+		filterBlock = document.querySelector('.filters__block');
+	if (filterBtn) {
+		window.addEventListener('click', e => {
+			const target = e.target;
+			if (!target.closest('._filter-btn') && !target.closest('._filter-btn')) {
+				filterBlock.classList.remove('_active')
+			} else {
+				filterBlock.classList.toggle('_active')
+			}
+		})
+	}
+}
+
+showBlock()
+
+if (document.querySelector('.grid')) {
+	let grid = new Isotope('.grid', {
+		itemSelector: '.grid-item',
+		layoutMode: 'fitRows'
+	});
+
+	let filterBtn = document.querySelectorAll('.filters .filters__btn'),
+		gridItem = document.querySelectorAll('.grid-item');
+
+
+	for (let i = 0; i < filterBtn.length; i++) {
+		filterBtn[i].onclick = function (click) {
+
+			filterBtn[i].classList.remove('_active')
+
+			// click.preventDefault();
+			let filterData = event.target.getAttribute('data-filter');
+
+			for (let i = 0; i < filterBtn.length; i++) {
+				filterBtn[i].classList.remove('_active');
+			}
+			event.target.classList.add('_active');
+
+			grid.arrange({
+				filter: filterData
+			});
+
+			for (let i = 0; i < gridItem.length; i++) {
+				gridItem[i].classList.remove('row-reverse', 'row');
+
+				if (gridItem[i].classList.contains(`${filterData.replace('.', "")}`)) {
+					gridItem[i].classList.add('_show');
+				} else {
+					gridItem[i].classList.remove('_show');
+				}
+			}
+			let gridItemShow = document.querySelectorAll('.grid-item._show');
+
+			for (let i = 0; i < gridItemShow.length; i++) {
+				if (i % 2 === 1) {
+					gridItemShow[i].classList.add('row-reverse');
+				} else {
+					gridItemShow[i].classList.add('row');
+
+				}
+			}
+			if (window.innerWidth <= 991) {
+				let filterBtnActive = document.querySelector('.filters__btn._active').innerHTML,
+					filterName = document.querySelector('.filters__name');
+
+				filterName.innerHTML = filterBtnActive;
+			}
+
+		};
+	}
+
+}
 
 
 });
