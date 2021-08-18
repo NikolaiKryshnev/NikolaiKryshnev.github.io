@@ -5404,10 +5404,11 @@ html._touch .client._active ._close {
 }
 
 .portfolio-grid__item--height1 {
-  height: 650px;
+  height: 670px;
 }
 
-.portfolio-grid__item--height3 {
+.portfolio-grid__item--height3,
+.portfolio-grid__item--height7 {
   height: 335px;
 }
 
@@ -5421,10 +5422,6 @@ html._touch .client._active ._close {
 
 .portfolio-grid__item--height6 {
   height: 280px;
-}
-
-.portfolio-grid__item--height7 {
-  height: 315px;
 }
 
 .portfolio-grid__item--height2 {
