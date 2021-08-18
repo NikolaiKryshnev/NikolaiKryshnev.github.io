@@ -140,5 +140,53 @@
 	}
 }
 
+.popup_rw {
+	.popup__close {
+		right: 65px;
+		top: 65px;
+		opacity: 0;
+		transition: all 0.3s linear;
+	}
+	@media (min-width: 1440px) {
+		.popup__close {
+			right: 4vw;
+			top: 4vw;
+		}
+	}
+	@media (max-width: $md3+px) {
+		.popup__close {
+			right: 40px;
+			top: 50px
+		}
+	}
+	&._active .popup__close {
+		opacity: 1;
+	}
+
+	.popup__body {
+		display: flex;
+		justify-content: center;
+		max-width: 100%;
+		width: 100%;
+	}
+}
+
+.popup__clients{
+	.client{
+		flex-direction: column;
+		height: auto;
+	}
+	.client-info{
+		position: relative;
+		@include translateY(0);
+		background: $white;
+		padding-left: 0;
+		padding-right: 0;
+
+	}
+	.client-info__name{
+		opacity: 1;
+	}
+}
 //====================================================================================================
 //====================================================================================================

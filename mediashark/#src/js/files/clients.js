@@ -3,9 +3,23 @@ let blockClients = document.querySelectorAll('.client'),
 
 for (const client of blockClients) {
 	if (document.querySelector('html').classList.contains('_touch')) {
-		client.addEventListener("click", (e) => {
-			anBlock(client, e)
-		});
+		if (window.innerWidth <= 526) {
+			let modalClient = document.querySelector('.popup_clients .popup__clients');
+			client.addEventListener("click", (e) => {
+				let dupNode = client.cloneNode(true);
+				dupNode.querySelector('._close').remove();
+				modalClient.innerHTML = '';
+				modalClient.append(dupNode);
+				popup_open('clients', video = '', client);	
+			});
+
+		} else {
+			client.addEventListener("click", (e) => {
+				anBlock(client, e)
+
+			});
+		}
+
 	} else {
 		client.addEventListener("mouseover", (e) => {
 			anBlock(client, e)

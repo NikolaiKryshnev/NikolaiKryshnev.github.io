@@ -24,7 +24,7 @@ function filtersBtnShow() {
 				}
 
 			}
-		} else {
+		} else if (window.innerWidth <= 991) {
 			filters.append(name);
 			filters.append(dots);
 			filters.append(block);
@@ -116,5 +116,46 @@ if (document.querySelector('.grid')) {
 
 		};
 	}
+
+}
+
+if (document.querySelector('.portfolio-grid')) {
+
+	let portfolioGrid = new Isotope('.portfolio-grid', {
+		itemSelector: '.portfolio-grid__item',
+		percentPosition: true,
+		// layoutMode: 'fitRows',
+		masonry: {
+			columnWidth: '.grid-sizer'
+		}
+	});
+
+
+// let portfolioGrid = new Isotope('.portfolio-grid', {
+// 	itemSelector: '.portfolio-grid__item',
+// 	layoutMode: 'fitRows',
+// 	masonry: {
+// 		columnWidth: 100
+// 	}
+// });
+
+let portfolioBtn = document.querySelectorAll('.filters__btn');
+
+for (let i = 0; i < portfolioBtn.length; i++) {
+	portfolioBtn[i].onclick = function (click) {
+		portfolioBtn[i].classList.remove('_active')
+
+		// click.preventDefault();
+		let portfolioFilterData = event.target.getAttribute('data-filter');
+		for (let i = 0; i < portfolioBtn.length; i++) {
+			portfolioBtn[i].classList.remove('_active');
+		}
+		event.target.classList.add('_active');
+
+		portfolioGrid.arrange({
+			filter: portfolioFilterData
+		});
+	};
+}
 
 }

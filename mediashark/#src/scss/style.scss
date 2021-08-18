@@ -95,6 +95,8 @@ body {
 @import "section/work";
 @import "section/team";
 @import "section/partners";
+@import "section/contact";
+
 
 //Seo
 @import "section/ban";
@@ -116,7 +118,12 @@ body {
 @import "section/advantages";
 @import "section/stages";
 @import "section/configuration";
+@import "section/statya";
+@import "section/portfolio";
 
+
+@import "404";
+@import "keysy";
 @import "home";
 
 //@import "datepicker";

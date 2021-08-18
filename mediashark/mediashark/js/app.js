@@ -1,6 +1,85 @@
 
 
 document.addEventListener('DOMContentLoaded', function () {
+	gsap.registerPlugin(ScrollTrigger);
+
+if (document.querySelector('._mediashark-an')) {
+	let mediashark = gsap.timeline({
+		scrollTrigger: {
+			trigger: "._mediashark-an",
+			scrub: true,
+			pin: true,
+			start: "top top",
+			end: "+=100%"
+		}
+	});
+
+	mediashark.from(".letter-1", { translateX: -500, translateY: -500, rotate: 180, ease: "none" }, 0)
+		.from(".letter-2", { translateX: -300, translateY: -700, rotate: 260, ease: "none" }, 0)
+		.from(".letter-3", { translateX: 100, translateY: -300, rotate: 160, ease: "none" }, 0)
+		.from(".letter-4", { translateX: 500, translateY: -200, rotate: 360, ease: "none" }, 0)
+		.from(".letter-5", { translateX: 1000, translateY: 200, rotate: 260, ease: "none" }, 0)
+		.from(".letter-6", { translateX: 300, translateY: 500, rotate: 260, ease: "none" }, 0)
+		.from(".letter-7", { translateX: 300, translateY: 700, rotate: 260, ease: "none" }, 0)
+		.from(".letter-8", { translateX: 600, translateY: 1000, rotate: 260, ease: "none" }, 0)
+		.from(".letter-9", { translateX: 1000, translateY: 500, rotate: 260, ease: "none" }, 0)
+		.from(".letter-10", { translateX: 400, translateY: 300, rotate: 260, ease: "none" }, 0)
+}
+
+// Work
+if (document.querySelector('.work-row')) {
+	let workRowItem = gsap.utils.toArray(".work-row__item");
+
+	gsap.to(workRowItem, {
+		xPercent: -100 * (workRowItem.length - 1),
+		ease: "none",
+		scrollTrigger: {
+			trigger: ".work-row",
+			pin: true,
+			scrub: 1,
+			snap: directionalSnap(1 / (workRowItem.length - 1)),
+			// base vertical scrolling on how wide the container is so it feels more natural.
+			end: "+=3500"
+		}
+	});
+}
+
+// helper function for causing the sections to always snap in the direction of the scroll (next section) rather than whichever section is "closest" when scrolling stops.
+function directionalSnap(increment) {
+	let snapFunc = gsap.utils.snap(increment);
+	return (raw, self) => {
+		let n = snapFunc(raw);
+		return Math.abs(n - raw) < 1e-4 || (n < raw) === self.direction < 0 ? n : self.direction < 0 ? n - increment : n + increment;
+	};
+}
+
+const partners = gsap.utils.toArray('.partners-col');
+const loader = document.querySelector('.loader--text');
+const updateProgress = (instance) =>
+	loader.textContent = `${Math.round(instance.progressedCount * 100 / partners.length)}%`;
+
+const showDemo = () => {
+	document.body.style.overflow = 'auto';
+	document.scrollingElement.scrollTo(0, 0);
+	gsap.to(document.querySelector('.loader'), { autoAlpha: 0 });
+
+	gsap.utils.toArray('.partners-box').forEach((section, index) => {
+		const w = section.querySelector('.partners-slider');
+		const [x, xEnd] = (index % 2) ? ['100%', (w.scrollWidth - section.offsetWidth) * -1] : [w.scrollWidth * -1, 0];
+		gsap.fromTo(w, { x }, {
+			x: xEnd,
+			scrollTrigger: {
+				trigger: section,
+				scrub: 1,
+			}
+		});
+	});
+}
+
+imagesLoaded(partners).on('progress', updateProgress).on('always', showDemo);
+
+
+
 	var ua = window.navigator.userAgent;
 var msie = ua.indexOf("MSIE ");
 var isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
@@ -602,6 +681,16 @@ if (document.querySelector('html').classList.contains('_touch')) {
 	
 
 let windowWidth = window.innerWidth;
+if (windowWidth < 527) {
+	if (document.querySelector('._ad-slider')) {
+		document.querySelector('._ad-slider').classList.add('_swiper');
+	}
+}
+if (windowWidth <= 992) {
+	if (document.querySelector('._blog-slider')) {
+		document.querySelector('._blog-slider').classList.add('_swiper');
+	}
+}
 if (windowWidth < 992 && document.querySelector('.mainGoals-slider')) {
 	document.querySelector('.mainGoals-slider').classList.add('_swiper');
 }
@@ -969,6 +1058,7 @@ if (windowWidth < 992) {
 		speed: 800,
 		spaceBetween: 15,
 		slidesPerGroup: 1,
+		autoHeight: true,
 		navigation: {
 			nextEl: '.slider-arrows ._mainGoals__arrow-next',
 			prevEl: '.slider-arrows ._mainGoals__arrow-prev',
@@ -985,6 +1075,36 @@ if (windowWidth < 992) {
 				spaceBetween: 20,
 			},
 
+		},
+
+	});
+
+	let sliderBlog = new Swiper('._blog-slider', {
+
+		observer: true,
+		observeParents: true,
+		slidesPerView: 4,
+		speed: 800,
+		spaceBetween: 15,
+		slidesPerGroup: 1,
+		// freeMode: true,
+		autoHeight: true,
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+
+				on: {
+					slideChange: function (swiper) {
+					},
+				},
+
+			},
+
+			768: {
+				slidesPerView: 2,
+
+			},
 		},
 
 	});
@@ -1068,7 +1188,7 @@ let sliderClients = new Swiper('.clients-slider', {
 	spaceBetween: 15,
 	slidesPerGroup: 1,
 	loop: true,
-
+	autoHeight: true,
 	navigation: {
 		nextEl: '.slider-arrows ._clients__arrow-next',
 		prevEl: '.slider-arrows ._clients__arrow-prev',
@@ -1269,6 +1389,43 @@ let sliderTeam = new Swiper('.team-slider', {
 	},
 
 });
+
+
+
+if (windowWidth < 526) {
+
+	let sliderAd = new Swiper('._ad-slider', {
+
+		observer: true,
+		observeParents: true,
+		slidesPerView: 4,
+		speed: 800,
+		spaceBetween: 15,
+		slidesPerGroup: 1,
+		// freeMode: true,
+		autoHeight: true,
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+
+				on: {
+					slideChange: function (swiper) {
+					},
+				},
+
+			},
+
+			527: {
+				slidesPerView: 2,
+
+			},
+		},
+
+	});
+}
+
+
 
 
 
@@ -2247,9 +2404,23 @@ if (priceSlider) {
 
 for (const client of blockClients) {
 	if (document.querySelector('html').classList.contains('_touch')) {
-		client.addEventListener("click", (e) => {
-			anBlock(client, e)
-		});
+		if (window.innerWidth <= 526) {
+			let modalClient = document.querySelector('.popup_clients .popup__clients');
+			client.addEventListener("click", (e) => {
+				let dupNode = client.cloneNode(true);
+				dupNode.querySelector('._close').remove();
+				modalClient.innerHTML = '';
+				modalClient.append(dupNode);
+				popup_open('clients', video = '', client);	
+			});
+
+		} else {
+			client.addEventListener("click", (e) => {
+				anBlock(client, e)
+
+			});
+		}
+
 	} else {
 		client.addEventListener("mouseover", (e) => {
 			anBlock(client, e)
@@ -2789,7 +2960,7 @@ for (let index = 0; index < popup_link.length; index++) {
 		if (unlock) {
 			let item = el.getAttribute('href').replace('#', '');
 			let video = el.getAttribute('data-video');
-			popup_open(item, video);
+			popup_open(item, video, el);
 		}
 		e.preventDefault();
 	})
@@ -2802,12 +2973,28 @@ for (let index = 0; index < popups.length; index++) {
 		}
 	});
 }
-function popup_open(item, video = '') {
+function popup_open(item, video = '', elem) {
 	let activePopup = document.querySelectorAll('.popup._active');
+	let curent_popup = document.querySelector('.popup_' + item);
+
 	if (activePopup.length > 0) {
 		popup_close('', false);
+
 	}
-	let curent_popup = document.querySelector('.popup_' + item);
+
+	if (item === 'rw') {
+		if (elem != undefined) {
+
+			let url = elem.dataset.url;
+			document.querySelector('body').classList.add('_lock');
+			curent_popup.querySelector('.popup__boximg').querySelector('img').setAttribute('src', '')
+			curent_popup.querySelector('.popup__boximg').querySelector('source').setAttribute('srcset', '')
+			curent_popup.querySelector('.popup__boximg').querySelector('img').setAttribute('src', `${url}`)
+			curent_popup.querySelector('.popup__boximg').querySelector('source').setAttribute('srcset', `${url}`)
+		}
+
+
+	}
 	if (curent_popup && unlock) {
 		if (video != '' && video != null) {
 			let popup_video = document.querySelector('.popup_video');
@@ -2821,6 +3008,7 @@ function popup_open(item, video = '') {
 	}
 }
 function popup_close(item, bodyUnlock = true) {
+	document.querySelector('body').classList.remove('_lock')
 	if (unlock) {
 		if (!item) {
 			for (let index = 0; index < popups.length; index++) {
@@ -2876,7 +3064,21 @@ function gallery_init() {
 		});
 	}
 }
-	function myFunction() {
+	// calc(-3.5vw - 50px/2 )
+function positionText() {
+	let scrollTextPosition = document.querySelectorAll('._scroll-text'),
+		mainscroll = document.querySelector('.main__scroll').offsetWidth;
+
+	for (let i = 0; i < scrollTextPosition.length; i++) {
+		const el = scrollTextPosition[i];
+		el.style.left = `-${mainscroll}px`;
+		el.style.height = `${mainscroll}px`;
+		el.style.lineHeight = `${mainscroll}px`;
+
+
+	}
+}
+function myFunction() {
 	let scrollBlock = document.querySelectorAll('._scroll-block'),
 		height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
@@ -2909,7 +3111,6 @@ width: 0;
 		}
 	}
 }
-myFunction()
 
 function scrollBtn() {
 	let btn = document.querySelector('.scroll-btn');
@@ -2919,90 +3120,16 @@ function scrollBtn() {
 		btn.classList.add('_active');
 	}
 }
+myFunction()
 scrollBtn()
+positionText()
 
 window.onscroll = function () {
 	myFunction()
 	scrollBtn()
+	positionText()
+
 };
-
-	gsap.registerPlugin(ScrollTrigger);
-
-if (document.querySelector('.mediashark')) {
-	let mediashark = gsap.timeline({
-		scrollTrigger: {
-			trigger: ".mediashark",
-			scrub: true,
-			pin: true,
-			start: "top top",
-			end: "+=100%"
-		}
-	});
-
-	mediashark.from(".mediashark p", { scale: 1.4, rotation: 45, autoAlpha: 0, ease: "power2" })
-		.from(".letter-1", { translateX: -500, translateY: -500, rotate: 180, ease: "none" }, 0)
-		.from(".letter-2", { translateX: -300, translateY: -700, rotate: 260, ease: "none" }, 0)
-		.from(".letter-3", { translateX: 100, translateY: -300, rotate: 160, ease: "none" }, 0)
-		.from(".letter-4", { translateX: 500, translateY: -200, rotate: 360, ease: "none" }, 0)
-		.from(".letter-5", { translateX: 1000, translateY: 200, rotate: 260, ease: "none" }, 0)
-		.from(".letter-6", { translateX: 300, translateY: 500, rotate: 260, ease: "none" }, 0)
-		.from(".letter-7", { translateX: 300, translateY: 700, rotate: 260, ease: "none" }, 0)
-		.from(".letter-8", { translateX: 600, translateY: 1000, rotate: 260, ease: "none" }, 0)
-		.from(".letter-9", { translateX: 1000, translateY: 500, rotate: 260, ease: "none" }, 0)
-		.from(".letter-10", { translateX: 400, translateY: 300, rotate: 260, ease: "none" }, 0)
-}
-
-// Work
-if (document.querySelector('.work-row')) {
-	let workRowItem = gsap.utils.toArray(".work-row__item");
-
-	gsap.to(workRowItem, {
-		xPercent: -100 * (workRowItem.length - 1),
-		ease: "none",
-		scrollTrigger: {
-			trigger: ".work-row",
-			pin: true,
-			scrub: 1,
-			snap: directionalSnap(1 / (workRowItem.length - 1)),
-			// base vertical scrolling on how wide the container is so it feels more natural.
-			end: "+=3500"
-		}
-	});
-}
-
-// helper function for causing the sections to always snap in the direction of the scroll (next section) rather than whichever section is "closest" when scrolling stops.
-function directionalSnap(increment) {
-	let snapFunc = gsap.utils.snap(increment);
-	return (raw, self) => {
-		let n = snapFunc(raw);
-		return Math.abs(n - raw) < 1e-4 || (n < raw) === self.direction < 0 ? n : self.direction < 0 ? n - increment : n + increment;
-	};
-}
-
-const partners = gsap.utils.toArray('.partners-col');
-const loader = document.querySelector('.loader--text');
-const updateProgress = (instance) =>
-	loader.textContent = `${Math.round(instance.progressedCount * 100 / partners.length)}%`;
-
-const showDemo = () => {
-	document.body.style.overflow = 'auto';
-	document.scrollingElement.scrollTo(0, 0);
-	gsap.to(document.querySelector('.loader'), { autoAlpha: 0 });
-
-	gsap.utils.toArray('.partners-box').forEach((section, index) => {
-		const w = section.querySelector('.partners-slider');
-		const [x, xEnd] = (index % 2) ? ['100%', (w.scrollWidth - section.offsetWidth) * -1] : [w.scrollWidth * -1, 0];
-		gsap.fromTo(w, { x }, {
-			x: xEnd,
-			scrollTrigger: {
-				trigger: section,
-				scrub: 1,
-			}
-		});
-	});
-}
-
-imagesLoaded(partners).on('progress', updateProgress).on('always', showDemo);
 
 	function filtersBtnShow() {
 	let filters = document.querySelector('.filters'),
@@ -3030,7 +3157,7 @@ imagesLoaded(partners).on('progress', updateProgress).on('always', showDemo);
 				}
 
 			}
-		} else {
+		} else if (window.innerWidth <= 991) {
 			filters.append(name);
 			filters.append(dots);
 			filters.append(block);
@@ -3122,6 +3249,47 @@ if (document.querySelector('.grid')) {
 
 		};
 	}
+
+}
+
+if (document.querySelector('.portfolio-grid')) {
+
+	let portfolioGrid = new Isotope('.portfolio-grid', {
+		itemSelector: '.portfolio-grid__item',
+		percentPosition: true,
+		// layoutMode: 'fitRows',
+		masonry: {
+			columnWidth: '.grid-sizer'
+		}
+	});
+
+
+// let portfolioGrid = new Isotope('.portfolio-grid', {
+// 	itemSelector: '.portfolio-grid__item',
+// 	layoutMode: 'fitRows',
+// 	masonry: {
+// 		columnWidth: 100
+// 	}
+// });
+
+let portfolioBtn = document.querySelectorAll('.filters__btn');
+
+for (let i = 0; i < portfolioBtn.length; i++) {
+	portfolioBtn[i].onclick = function (click) {
+		portfolioBtn[i].classList.remove('_active')
+
+		// click.preventDefault();
+		let portfolioFilterData = event.target.getAttribute('data-filter');
+		for (let i = 0; i < portfolioBtn.length; i++) {
+			portfolioBtn[i].classList.remove('_active');
+		}
+		event.target.classList.add('_active');
+
+		portfolioGrid.arrange({
+			filter: portfolioFilterData
+		});
+	};
+}
 
 }
 

@@ -130,17 +130,18 @@
 		&__text {
 			line-height: 24px;
 			margin-bottom: 35px;
+			@media ( max-width:$md1+px){
+				overflow: hidden;
+			}
 			@media (max-width: $md3+px) {
 				position: relative;
 				margin-bottom: 10px;
 				// max-height: 120px;
 				transition: max-height 0.5s linear;
-				overflow: hidden;
 				
 				
 			}
 		}
-		@media ( max-width:$md3+px){
 			.readMmore {
 				transition: opacity 0.5s linear;
 				color: #afafaf;
@@ -148,7 +149,6 @@
 				margin-bottom: 10px;
 			}
 		}
-	}
 	@media (min-width: $md1+px) {
 		._reviews__progress-bar {
 			display: none;

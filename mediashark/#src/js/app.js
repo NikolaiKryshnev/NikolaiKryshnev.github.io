@@ -1,6 +1,8 @@
 
 
 document.addEventListener('DOMContentLoaded', function () {
+	@@include('files/mediashark.js', {})
+
 	@@include('files/functions.js', {})
 
 	@@include('files/header.js', {})
@@ -19,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	@@include('files/gallery.js', {})
 	@@include('files/scrollText.js', {})
-	@@include('files/mediashark.js', {})
 	@@include('files/filters.js', {})
 
 

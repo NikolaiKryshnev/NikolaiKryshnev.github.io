@@ -1,9 +1,9 @@
 gsap.registerPlugin(ScrollTrigger);
 
-if (document.querySelector('.mediashark')) {
+if (document.querySelector('._mediashark-an')) {
 	let mediashark = gsap.timeline({
 		scrollTrigger: {
-			trigger: ".mediashark",
+			trigger: "._mediashark-an",
 			scrub: true,
 			pin: true,
 			start: "top top",
@@ -11,8 +11,7 @@ if (document.querySelector('.mediashark')) {
 		}
 	});
 
-	mediashark.from(".mediashark p", { scale: 1.4, rotation: 45, autoAlpha: 0, ease: "power2" })
-		.from(".letter-1", { translateX: -500, translateY: -500, rotate: 180, ease: "none" }, 0)
+	mediashark.from(".letter-1", { translateX: -500, translateY: -500, rotate: 180, ease: "none" }, 0)
 		.from(".letter-2", { translateX: -300, translateY: -700, rotate: 260, ease: "none" }, 0)
 		.from(".letter-3", { translateX: 100, translateY: -300, rotate: 160, ease: "none" }, 0)
 		.from(".letter-4", { translateX: 500, translateY: -200, rotate: 360, ease: "none" }, 0)
@@ -75,3 +74,4 @@ const showDemo = () => {
 }
 
 imagesLoaded(partners).on('progress', updateProgress).on('always', showDemo);
+

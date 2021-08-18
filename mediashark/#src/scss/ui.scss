@@ -223,8 +223,27 @@ body.ie {
 	-o-filter: grayscale(0);
 }
 //====================================================================================================
-#map {
+#map,
+.map {
 	background: url("../img/icons/loading.gif") center / 50px no-repeat;
+
+	.map {
+		position: relative;
+		overflow: hidden;
+		padding-bottom: 25%;
+		vertical-align: middle;
+	}
+	.map-box {
+		// position: absolute;
+		// top: 0;
+		// left: 0;
+		height: 100%;
+		min-height: 200px;
+		// width: 100%;
+		& > ymaps {
+			height: 100% !important;
+		}
+	}
 }
 //====================================================================================================
 ._swiper {
@@ -448,10 +467,14 @@ html._pc {
 //========================================================================================================================================================
 ._scroll-block {
 	position: relative;
+	width: 100%;
+}
+main > .pin-spacer {
+	z-index: 21 !important;
 }
 ._scroll-text {
 	position: absolute;
-	left: 0;
+	left: -3.5vw;
 	margin-left: 0;
 
 	bottom: 0;
@@ -463,14 +486,14 @@ html._pc {
 
 	height: 3.5vw;
 
-	width: max-content;
+	width: max-content !important;
 
 	letter-spacing: 0.25em;
 	text-transform: uppercase;
 	@include f700();
 	color: #000;
-	transform: rotate(-90deg) translateY(-50%);
-	// writing-mode: vertical-rl;
+	transform: rotate(-180deg) translateY(-50%);
+	writing-mode: vertical-rl;
 	@media (min-width: 1440px) {
 		// left: calc((-3.5vw + -16px) / 2);
 		font-size: 1vw;
@@ -483,24 +506,29 @@ html._pc {
 	//.scroll-text--anim
 	&--anim {
 		.icon-mouse {
-			@include rotate(90deg);
+			// @include rotate(90deg);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row-reverse;
+			&:before {
+				content: "";
+				// @include pseudoEl(block, absolute, "");
+				// top: -70px;
+				width: 1px;
+				height: 50px;
+				background: #000;
+				margin-bottom: 15px;
+			}
 			&__box {
 				position: relative;
 				// top: 100px;
-				padding-top: 100px;
+				// padding-top: 100px;
 				display: flex;
 				align-items: center;
 				justify-content: center;
 				flex-direction: column;
-				&:before {
-					content: "";
-					// @include pseudoEl(block, absolute, "");
-					// top: -70px;
-					width: 1px;
-					height: 50px;
-					background: #000;
-					margin-bottom: 15px;
-				}
+				margin-bottom: 20px;
 			}
 		}
 		.icon-mouse__dot {
@@ -564,6 +592,7 @@ html._pc {
 
 	overflow: hidden;
 	transition: 0.5s ease-in-out;
+	background: none;
 	@media (max-width: $md2+px) {
 		padding: 0 10px;
 	}
@@ -657,6 +686,8 @@ html._pc {
 	justify-content: center;
 	z-index: 99999;
 	background: #f9f9f9;
+	opacity: 0 !important;
+	visibility: hidden !important;
 }
 
 .info-block {

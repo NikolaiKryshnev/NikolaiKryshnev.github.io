@@ -1,0 +1,129 @@
+.contact {
+	&-row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -15px;
+	}
+	&-col {
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+		padding-right: 15px;
+		padding-left: 15px;
+		flex: 0 0 50%;
+		max-width: 50%;
+		@media (max-width: $md2+px) {
+			flex: 0 0 100%;
+			max-width: 100%;
+			&:not(:last-child){
+				margin-bottom: 20px;
+			}
+		}
+	
+	}
+	&-box {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		.map {
+			position: relative;
+			flex: 1 1 auto;
+		}
+	}
+	&-form {
+		height: 100%;
+		border: 1px solid #e1e1e1;
+		@include adaptiv-value("padding-left", 65, 20, 0);
+		@include adaptiv-value("padding-right", 65, 20, 0);
+		@include adaptiv-value("padding-top", 45, 20, 0);
+		@include adaptiv-value("padding-bottom", 45, 20, 0);
+		
+		&__title {
+			font-weight: bold;
+			@include adaptiv-value("font-size", 26, 18, 0);
+			color: #000000;
+			margin-bottom: 25px;
+		}
+
+		&__text {
+			font-size: 18px;
+			line-height: 22px;
+			color: #000000;
+			margin-bottom: 55px;
+			@media ( max-width:$md3+px){
+				display: none;
+			}
+		}
+		.form__line {
+			margin: 0 0 30px 0;
+		}
+	}
+
+	&-info {
+		border: 1px solid #e1e1e1;
+		@include adaptiv-value("padding-top", 45, 20, 0);
+		@include adaptiv-value("padding-bottom", 45, 20, 0);
+		@include adaptiv-value("padding-left", 85, 20, 0);
+		@include adaptiv-value("padding-right", 65, 20, 0);
+		margin-bottom: 30px;
+		&__list {
+		}
+
+		&__line {
+			@media (min-width: $md1+px) {
+				display: flex;
+			}
+			&:not(:last-child) {
+				@include adaptiv-value("margin-bottom", 24, 10, 0);
+			}
+		}
+	}
+	&-line {
+		&__title {
+			max-width: 40%;
+			flex: 0 0 40%;
+			position: relative;
+			align-self: flex-start;
+			font-weight: bold;
+			font-size: 16px;
+			color: #000000;
+			line-height: 160.61%;
+			span {
+				position: relative;
+				z-index: 1;
+				background: #fff;
+				padding-right: 12px;
+			}
+
+			@media (min-width: $md1+px) {
+				&::after {
+					@include pseudoEl(block, absolute, "");
+					top: 50%;
+					transform: translateY(-50%);
+					background: #e1e1e1;
+					height: 1px;
+					width: 100%;
+					flex: 0 0 100%;
+					right: 0;
+				}
+			}
+		}
+
+		&__info {
+			padding-left: 12px;
+			display: flex;
+			flex-direction: column;
+			font-size: 14px;
+			line-height: 160.61%;
+			color: #000000;
+			@media (max-width: $md1+px) {
+				padding-left: 0;
+			}
+			a {
+				font-size: 14px;
+				line-height: 160.61%;
+				color: #000000;
+			}
+		}
+	}
+}

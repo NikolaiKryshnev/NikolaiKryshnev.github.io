@@ -1,3 +1,17 @@
+// calc(-3.5vw - 50px/2 )
+function positionText() {
+	let scrollTextPosition = document.querySelectorAll('._scroll-text'),
+		mainscroll = document.querySelector('.main__scroll').offsetWidth;
+
+	for (let i = 0; i < scrollTextPosition.length; i++) {
+		const el = scrollTextPosition[i];
+		el.style.left = `-${mainscroll}px`;
+		el.style.height = `${mainscroll}px`;
+		el.style.lineHeight = `${mainscroll}px`;
+
+
+	}
+}
 function myFunction() {
 	let scrollBlock = document.querySelectorAll('._scroll-block'),
 		height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -31,7 +45,6 @@ width: 0;
 		}
 	}
 }
-myFunction()
 
 function scrollBtn() {
 	let btn = document.querySelector('.scroll-btn');
@@ -41,9 +54,13 @@ function scrollBtn() {
 		btn.classList.add('_active');
 	}
 }
+myFunction()
 scrollBtn()
+positionText()
 
 window.onscroll = function () {
 	myFunction()
 	scrollBtn()
+	positionText()
+
 };

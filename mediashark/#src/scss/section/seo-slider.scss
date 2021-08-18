@@ -45,7 +45,7 @@
 				// border-bottom: 0;
 			}
 			@media (max-width: $md3+px) {
-				margin-top: 55px;
+				margin-top: 60px;
 			}
 		}
 
@@ -60,7 +60,8 @@
 				padding: 0 40px 45px;
 			}
 			@media (max-width: $md3+px) {
-				top: -55px;
+				top: -60px;
+				max-width: 60px;
 			}
 		}
 
