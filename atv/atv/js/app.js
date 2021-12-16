@@ -1539,14 +1539,16 @@ function quantuty() {
 				let value = parseInt(quantityButton.closest('.quantity').querySelector('input').value);
 				if (quantityButton.classList.contains('quantity__button_plus')) {
 					value++;
+					return
 				} else {
 					value = value - 1;
 					if (value < 1) {
 						value = 1
+						return
 					}
 				}
 				quantityButton.closest('.quantity').querySelector('input').value = value;
-				 jQuery('.qty').trigger('change');
+				jQuery('.qty').trigger('change');
 			});
 		}
 	}
