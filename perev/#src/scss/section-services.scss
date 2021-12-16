@@ -1,0 +1,121 @@
+.section-services {
+}
+.services {
+	@include adaptiv-value("margin-bottom", 150, 50, 0);
+	.section-subtitle {
+		padding-right: 20%;
+		@media ( max-width:$md3+px){padding-right: 0;}
+	}
+	@include adaptiv-value("margin-top", 170, 70, 0);
+	// .services-content
+	&-content {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	// .services-title
+	&-title {
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+
+		flex: 0 0 32%;
+		max-width: 32%;
+		@media (max-width: $md1+px) {
+			padding-right: 50%;
+			flex: 1 1 100%;
+			max-width: 100%;
+			margin-bottom: 40px;
+		}
+		@media ( max-width:$md3+px){
+			padding-right: 0;
+		}
+	}
+	// .services-box
+	&-box {
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+		flex: 0 0 68%;
+		max-width: 68%;
+		@media (max-width: $md1+px) {
+			flex: 1 1 100%;
+			max-width: 100%;
+		}
+
+		@include adaptiv-value("padding-left", 137, 55, 0);
+
+		// .services-box__row
+		&__row {
+		}
+	}
+	// .services-img
+	&-img {
+		
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		@include adaptiv-value("padding-top", 540, 240, 0);
+
+		// .services-img__box
+		&__box {
+			@include img_02();
+			img {
+				@include img_01();
+			}
+		}
+	}
+	// .services-row
+	&-row {
+		display: flex;
+		@include adaptiv-value("margin-left", -137, -55, 0);
+		@include adaptiv-value("margin-top", -150, -50, 0);
+
+		z-index: 2;
+		width: 100%;
+		position: absolute;
+		@media ( max-width:$md3+px){
+			flex-wrap: wrap;
+			position: relative;
+			z-index: 2;
+		}
+		// .services-row__item
+		&__item {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: space-between;
+			width: 100%;
+			@include adaptiv-value("padding", 30, 13, 0);
+			@include adaptiv-value("padding-right", 50, 25, 0);
+
+			@include adaptiv-value("min-height", 230, 106, 0);
+			background: #2e3132;
+			font-weight: 700;
+			@include adaptiv-value("font-size", 32, 16, 0);
+			color: $white;
+			margin-right: 25px;
+			@media (max-width: $md1+px) {
+				// max-width: calc(100% - 15px );
+
+				margin-right: 15px;
+			}
+			@media (max-width: $md3+px) {
+				margin-right: 0;
+				margin-bottom: 5px;
+				max-width: 100%;
+				flex: 1 1 100%;
+			}
+			._icon-arrow-line {
+				margin-right: 0;
+				margin-left: auto;
+				transition: all 0.3s linear;
+			}
+			&:hover {
+				._icon-arrow-line {
+					color: $orange;
+				}
+			}
+		}
+	}
+}

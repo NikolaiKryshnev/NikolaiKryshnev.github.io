@@ -1,0 +1,92 @@
+@font-face {
+	font-family: "icon";
+	font-display: swap;
+	src: url("../fonts/icon.woff") format("woff"), url("../fonts/icon.woff2#icons") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+%ic {
+	font-family: "icon";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class^="_icon-"],
+[class*=" _icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+
+._icon-info:before {
+	content: "\e913";
+ }
+ ._icon-car:before {
+	content: "\e911";
+ }
+ ._icon-cart-2:before {
+	content: "\e912";
+ }
+ ._icon-maps:before {
+	content: "\e90e";
+	color: #11b687;
+ }
+ ._icon-print:before {
+	content: "\e90f";
+	color: #11b687;
+ }
+ ._icon-share:before {
+	content: "\e910";
+	color: #11b687;
+ }
+ ._icon-apostrophe:before {
+	content: "\e900";
+ }
+ ._icon-btn-arrow:before {
+	content: "\e901";
+ }
+ ._icon-cart:before {
+	content: "\e902";
+ }
+ ._icon-clock:before {
+	content: "\e903";
+ }
+ ._icon-inst:before {
+	content: "\e904";
+ }
+ ._icon-loup:before {
+	content: "\e905";
+ }
+ ._icon-map:before {
+	content: "\e906";
+ }
+ ._icon-menu-arrow:before {
+	content: "\e907";
+ }
+ ._icon-pen:before {
+	content: "\e908";
+ }
+ ._icon-phone:before {
+	content: "\e909";
+ }
+ ._icon-slider-arrow:before {
+	content: "\e90a";
+ }
+ ._icon-user:before {
+	content: "\e90b";
+ }
+ ._icon-viber:before {
+	content: "\e90c";
+ }
+ ._icon-vk:before {
+	content: "\e90d";
+ }
+ 

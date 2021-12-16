@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"404"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<main class="main">
+			<section class="section-error error  _section">
+				<div class="_container">
+					<div class="error__box">
+						<div class="error__img">
+							<img src="./img/error/01.svg" alt="" loading="lazy">
+						</div>
+						<div class="error__text">
+							<p>Кажется, вы потерялись.</p>
+							<p>Но мы ждем вас на главной!</p>
+						</div>
+						<a class="error__link" href="#">На главную <i class="_icon-arrow-line"></i></a>
+					</div>
+
+				</div>
+				<!-- /._container -->
+			</section>
+			<!-- /.section-error -->
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

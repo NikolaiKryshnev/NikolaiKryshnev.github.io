@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Цены"
+})
+
+<body class="home">
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<main class="main main-error">
+			<img src="./img/404/01.svg" alt="">
+			<div class="error__text">
+				Кажется, вы сбились с пути и забрели в темный лес.
+			</div>
+			<a href="#" class="learn-more btn">
+				<span class="circle" aria-hidden="true">
+					<span class="icon arrow _icon-btn-arrow"></span>
+				</span>
+				<span class="button-text">На главную</span>
+			</a>
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

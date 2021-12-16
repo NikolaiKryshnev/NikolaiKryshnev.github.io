@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Цены"
+})
+
+<body class="home">
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<main class="main ">
+			<div class="_container main__content">
+				<ul class="breadcrumbs">
+					<li><a href="#">Главная</a></li>
+					<li><span>Цены</span></li>
+				</ul>
+
+				<div class="main__sidebar sidebar">
+					<div class="sidebar__box">
+						<div class="section__title title title--link">
+							О нас
+							<div class='title__sub'>
+								<p>Компания «ATV-Prokat» предлагает аренду квадроциклов по приемлемым ценам. Если Вы хотить
+									порадовать друга или близкого человека, специально для Вас мы предоставляем подарочные
+									сертификаты на квадроциклы в Минске.</p>
+							</div>
+						</div>
+						<a href="#callback" class="learn-more btn black _popup-link">
+							<span class="circle" aria-hidden="true">
+								<span class="icon arrow _icon-btn-arrow"></span>
+							</span>
+							<span class="button-text">Записаться</span>
+						</a>
+					</div>
+				</div>
+				<!-- /.main__sidebar -->
+
+				<div class="main__body main-body corporate">
+					<p>Одновременно мы можем прокатить 12 квадроциклов единовременно. Вас будут обслуживать 4 опытных
+						инструктора для того, что бы вся Ваша компания получила удовольствие по своим силам и возможностям.
+					</p>
+					<p>При заказе корпоративного отдыха мангал, стол, лавки и решетки для барбекю предоставляются бесплатно.
+
+					</p>
+					<p>Гибкая система оплаты как наличными так и безналом по договору!</p>
+					<p>При предоплате в 100% действует система скидок.</p>
+
+					<img src="./img/page-about/01.jpg" alt="">
+					<img src="./img/page-corporate/02.jpg" alt="">
+					<img src="./img/page-corporate/03.jpg" alt="">
+				</div>
+				<!-- /.main__body -->
+			</div>
+
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

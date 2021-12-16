@@ -1,0 +1,100 @@
+.gallery {
+	flex: 1 1 100%;
+	max-width: 100%;
+	width: 100%;
+	// .gallery__row
+	.gallery__row {
+		margin: 0 -15px 90px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		@media (max-width: $md3+px) {
+			margin-bottom: 70px;
+		}
+		& > .btn {
+			margin-left: 15px;
+			@media (min-width: $md3+px) {
+				display: none;
+			}
+		}
+		&--video {
+			iframe {
+				max-width: 50%;
+				flex: 0 0 50%;
+				width: 100%;
+				padding: 15px;
+				@media (max-width: $md3+px) {
+					flex: 1 1 100%;
+					max-width: 100%;
+				}
+			}
+			@media (min-width: $md1+px) {
+				margin: 0 -32px;
+				iframe {
+					padding: 0 32px;
+					margin-bottom: 50px;
+				}
+			}
+			margin-bottom: -50px;
+			@media (max-width: $md1+px) {
+				margin-bottom: 15px;
+			}
+			@media (max-width: $md3+px) {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	// .gallery__col
+	&__col {
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+		padding-right: 15px;
+		padding-left: 15px;
+		flex: 0 0 33.333333%;
+		max-width: 33.333333%;
+		margin-bottom: 30px;
+		@media (max-width: $md3+px) {
+			flex: 1 1 100%;
+			max-width: 100%;
+		}
+		&:nth-child(2),
+		&:nth-child(4),
+		&:nth-child(6),
+		&:nth-child(8),
+		&:nth-child(10),
+		&:nth-child(12) {
+			.gallery__box {
+				// margin-top: -50%;
+				padding: 60% 0;
+			}
+		}
+		@media (min-width: $md3+px) {
+			&:nth-child(4),
+			&:nth-child(6),
+			&:nth-child(10),
+			&:nth-child(12) {
+				.gallery__box {
+					margin-top: -50%;
+				}
+			}
+		}
+	}
+
+	// .gallery__box
+	&__box {
+		display: block;
+		@include img_03(35%);
+	}
+	// .gallery-box
+	&-box {
+		// .gallery-box__img
+		&__img {
+			@include img_02();
+			img {
+				@include img_01();
+			}
+		}
+	}
+}

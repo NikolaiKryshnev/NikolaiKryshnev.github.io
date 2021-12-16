@@ -1,0 +1,229 @@
+.section-lang {
+}
+.lang {
+	.section-subtitle {
+		font-size: 18px;
+	}
+}
+
+.lang-title {
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	flex: 0 0 50%;
+	max-width: 50%;
+	@media (max-width: $md2+px) {
+		flex: 0 0 100%;
+		max-width: 100%;
+		margin-bottom: 20px;
+	}
+}
+.section-title {
+}
+
+.lang {
+	.lang-title,
+	.lang-filtres {
+		padding: 0 25px;
+	}
+	.lang__top {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -25px;
+	}
+	&-content {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.lang-top {
+		display: flex;
+		margin-bottom: 40px;
+		@media (max-width: $md2+px) {
+			flex-wrap: wrap;
+		}
+	}
+	.lang-filtres {
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+		flex: 0 0 50%;
+		max-width: 50%;
+
+		@media (max-width: $md2+px) {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+	.lang-search {
+		position: relative;
+		width: 100%;
+		max-width: 100%;
+		margin-bottom: 20px;
+	}
+	.lang-col {
+		@media (max-width: $md2+px) {
+			max-width: 100%;
+			flex: 1 1 100%;
+		}
+	}
+
+	.lang-abc {
+		display: flex;
+		flex-wrap: wrap;
+		@media (max-width: $md2+px) {
+			padding: 0 0 0 0;
+		}
+		@media (max-width: $md3+px) {
+			padding: 0;
+		}
+		&_content {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -7px;
+		}
+
+		.filter-btn {
+			text-transform: uppercase;
+			display: block;
+			padding: 0 15px;
+			border: 0.5px solid #cbcbcb;
+			text-decoration: none;
+			margin-right: 6px;
+			margin-left: 0;
+			margin-bottom: 6px;
+			@include adaptiv-value("line-height", 46, 37, 0);
+			@include adaptiv-value("min-width", 52, 32, 0);
+			text-align: center;
+			cursor: pointer;
+			@include adaptiv-value("font-size", 21, 18, 0);
+			transition: all 0.3s linear;
+			@media (max-width: $md3+px) {
+				padding: 0 12px;
+			}
+
+			&.active,
+			&:hover {
+				color: $orange;
+				border-color: $orange;
+			}
+
+			&.disabled {
+				color: #cbcbcb;
+				border-color: #cbcbcb;
+				pointer-events: none;
+			}
+		}
+	}
+	.abc-all {
+	}
+	.lang-abc_box {
+		margin-top: 45px;
+		overflow: hidden;
+		max-height: 100%;
+		@media ( max-width:$md3+px){margin-top: 25px;}
+	}
+	.abc-sorting {
+		// .abc-sorting__block
+		&__block {
+			position: relative;
+			width: 100%;
+			min-height: 1px;
+			padding-right: 7px;
+			padding-left: 7px;
+			flex: 0 0 33.333333%;
+			max-width: 33.333333%;
+			margin-bottom: 15px;
+		
+
+			@media (max-width: $md2+px) {
+				max-width: 50%;
+				flex: 0 0 50%;
+				margin-bottom: 0;
+			}
+			@media (max-width: $md3+px) {
+				max-width: 100%;
+				flex: 1 1 100%;
+				margin-bottom: 15px;
+			}
+		}
+
+		&__box {
+			display: flex;
+			align-items: center;
+			border: 0.5px solid #d3d3d3;
+			text-decoration: none;
+		}
+
+		// .abc-sorting__img
+		&__img {
+			padding: 0 25px;
+			flex: 0 0 103px;
+			@media (max-width: $md1+px) {
+				padding: 0 5px;
+				flex: 0 0 80px;
+			}
+			img {
+				margin: 0 auto;
+			}
+		}
+
+		// .abc-sorting__name
+		&__name {
+			flex: 1 1 auto;
+			display: flex;
+			align-items: center;
+			border-left: 0.5px solid #d3d3d3;
+			padding: 10px 10px 10px 50px;
+			text-align: left;
+
+			min-height: 67px;
+			font-size: 20px;
+			color: #202223;
+			@include adaptiv-value("font-size", 20, 16, 0);
+			@media ( max-width:$md1+px){
+				padding-left: 15px;
+			}
+			@media ( max-width:$md2+px ){
+				min-height: 50px;
+			}
+		}
+	}
+
+	.lang-search .input-search {
+		width: 100%;
+		height: 46px;
+
+		border: 0.5px solid #e7e7e7;
+		padding: 0 20px 0 43px;
+		color: #c5c5c5;
+		@media (max-width: $md3+px) {
+			height: 39px;
+		}
+	}
+	.lang-search .btn-search {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		height: 35px;
+		width: 43px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		color: #c5c5c5;
+		@include transitColor(0.3s);
+		&:hover {
+			color: $orange;
+		}
+	}
+}

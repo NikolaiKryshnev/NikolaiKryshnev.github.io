@@ -1,0 +1,132 @@
+.contact {
+	._container {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+	}
+	// .contact__title
+	&__title {
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+		flex: 0 0 33.333333%;
+		max-width: 33.333333%;
+		@media (max-width: $md2+px) {
+			flex: 1 1 100%;
+			max-width: 100%;
+		}
+	}
+
+	// .contact__tel
+	&__tel {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		padding-right: 64px;
+		@media (max-width: $md1+px) {
+			padding-right: 15px;
+		}
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+		flex: 0 0 66.666667%;
+		max-width: 66.666667%;
+
+		@media (max-width: $md2+px) {
+			flex: 1 1 100%;
+			max-width: 100%;
+			display: flex;
+			align-items: flex-start;
+			text-align: left;
+			margin-top: 75px;
+		}
+		@media (max-width: $md3+px) {
+			margin-top: 50px;
+			padding-right: 0;
+		}
+	}
+	// .contact-tel
+	&-tel {
+		// .contact-tel__title
+		&__title {
+			flex: 1 1 100%;
+			max-width: 100%;
+			width: 100%;
+			align-items: flex-start;
+			font-weight: 700;
+			line-height: 130%;
+			@include adaptiv-value("font-size", 36, 26, 0);
+			text-align: right;
+			color: #ffffff;
+			margin-bottom: 40px;
+			@media (max-width: $md1+px) {
+				margin-bottom: 30px;
+			}
+			@media (max-width: $md2+px) {
+				text-align: left;
+			}
+			@media (max-width: $md3+px) {
+				margin-bottom: 15px;
+			}
+		}
+		// .contact-tel__num
+		&__num {
+			color: $graytext;
+			@include adaptiv-value("font-size", 64, 27, 0);
+			border-bottom: 1px solid rgba($color: $green, $alpha: 0);
+			transition: all 0.3s linear;
+			line-height: 1;
+			&:hover{
+			border-bottom: 1px solid rgba($color: $green, $alpha: 1);
+				
+			}
+			b {
+				color: $green;
+			}
+		}
+	}
+}
+.main--contact {
+	.main__content {
+		padding-bottom: 0;
+	}
+}
+.main-body__contact {
+	width: 100%;
+	.contact__tel {
+		padding: 0;
+		margin: 0;
+		max-width: 100%;
+		flex: 1 1 100%;
+	}
+	.contact-tel__title {
+		max-width: 45%;
+		@media ( max-width:$md1+px){
+			max-width: 100%;
+		}
+	}
+}
+
+.contact__map {
+	display: flex;
+	margin-left: auto;
+	margin-right: 0;
+	color: $white;
+	margin-top: 140px;
+	@media ( max-width:$md1+px){
+		margin-top: 50px;
+
+	}
+	i {
+		color: $green;
+		margin: 0.5ex 8px 30px 0;
+	}
+	@include transitColor(0.3s);
+	&:hover {
+		color: $green;
+	}
+}
+
+.main--contact .sidebar__box{
+	height: 100%;
+}

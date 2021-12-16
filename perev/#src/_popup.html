@@ -1,0 +1,96 @@
+<div class="popup popup_callback ">
+	<div class="popup__content">
+
+		<div class="popup__body">
+			<div class="popup__close"></div>
+
+			<div class="popup__title">
+				Оставьте заявку, и мы немедленно <span>свяжемся с вами!</span>
+			</div>
+			<form class="form" action="">
+				<div class="form__row">
+					<div class="form__input">
+						<label for="name">Имя<sup>*</sup></label>
+						<input id="name" autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value=""
+							class="input _date">
+					</div>
+					<div class="form__input">
+						<label for="phone">Телефон<sup>*</sup></label>
+						<input id="phone" autocomplete="off" type="tel" name="form[]" data-value="" class="input phone">
+					</div>
+					<div class="form__input form__input--textarea">
+						<label for="mes">Сообщение</label>
+						<textarea id="mes" autocomplete="off" name="form[]" data-value="" data-error="Ошибка"
+							class="input"></textarea>
+					</div>
+				</div>
+				<button type="submit" class="form__btn btn">Оставить
+					заявку</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="popup popup_reviews ">
+	<div class="popup__content">
+
+		<div class="popup__body">
+			<div class="popup__close"></div>
+
+			<div class="popup__title">
+				Оставить отзыв
+			</div>
+			<form class="form" action="">
+				<div class="form__row">
+					<div class="form__input">
+						<label for="name">Имя<sup>*</sup></label>
+						<input id="name" autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value=""
+							class="input">
+					</div>
+					<div class="form__input">
+						<label for="email">E-mail<sup>*</sup></label>
+						<input id="email" autocomplete="off" type="email" name="form[]" data-value="" class="input phone">
+					</div>
+					<div class="form__input">
+						<label for="name">Рейтинг</label>
+						<div class="rating rating_set">
+							<div class="rating__body">
+								<div class="rating__active" style="width: 80%;"></div>
+								<div class="rating__items">
+									<input type="radio" class="rating__item" value="1" name="rating">
+									<input type="radio" class="rating__item" value="2" name="rating">
+									<input type="radio" class="rating__item" value="3" name="rating">
+									<input type="radio" class="rating__item" value="4" name="rating">
+									<input type="radio" class="rating__item" value="5" name="rating">
+								</div>
+							</div>
+							<div class="rating__value">4</div>
+						</div>
+					</div>
+					<div class="form__input form__input--textarea">
+						<label for="mes">Текст отзыва</label>
+						<textarea id="mes" autocomplete="off" name="form[]" data-value="" data-error="Ошибка"
+							class="input"></textarea>
+					</div>
+				</div>
+				<button type="submit" class="form__btn btn">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="popup popup_massagename-message">
+	<div class="popup__content">
+		<div class="popup__body">
+			<div class="popup__close"></div>
+		</div>
+	</div>
+</div>
+<div class="popup popup_video">
+	<div class="popup__content">
+		<div class="popup__body">
+			<div class="popup__close popup__close_video"></div>
+			<div class="popup__video _video"></div>
+		</div>
+	</div>
+</div>

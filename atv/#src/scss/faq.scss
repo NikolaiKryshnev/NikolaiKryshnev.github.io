@@ -1,0 +1,163 @@
+.faq {
+	._container {
+		display: flex;
+		flex-wrap: wrap;
+		@media (max-width: $md3+px) {
+			flex-direction: column;
+		}
+		@media (min-width: $md3+px) {
+			& > .btn,
+			& > .title__sub,
+			& > .title__link {
+				display: none;
+			}
+
+			@media (max-width: $md2+px) {
+				& > .title__sub {
+					display: block;
+				}
+			}
+		}
+		@media (max-width: $md2+px) {
+			& > .btn {
+				display: block;
+				margin-top: 30px;
+			}
+		}
+	}
+	.title {
+		.title__link {
+			@media (min-width: $md2+px) {
+				display: none;
+			}
+			@media (max-width: $md3+px) {
+				display: none;
+			}
+		}
+	}
+	// .faq__title
+	&__title {
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+		flex: 0 0 33.333333%;
+		max-width: 33.333333%;
+
+		@media (max-width: $md2+px) {
+			flex: 1 1 100%;
+			max-width: 100%;
+			@media (min-width: $md2+px) {
+				margin-bottom: 40px;
+			}
+		}
+		@media (max-width: $md2+px) {
+			.btn {
+				display: none;
+			}
+		}
+	}
+	// .faq__content
+	&__content {
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+		flex: 0 0 66.666667%;
+		max-width: 66.666667%;
+		padding-left: 64px;
+		@media (max-width: $md1+px) {
+			padding-left: 15px;
+		}
+		@media (max-width: $md2+px) {
+			flex: 1 1 100%;
+			max-width: 100%;
+			padding-left: 0;
+		}
+		@media (max-width: $md3+px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	// .faq-content
+	&-content {
+		.title__link {
+			display: block;
+			max-width: max-content;
+			margin: 0 0 30px auto;
+
+			@media (min-width: $md3+px) {
+				position: relative;
+			}
+		}
+		.title__link {
+			@media (max-width: $md2+px) {
+				display: none;
+			}
+		}
+	}
+	// .faq-wrapper
+	&-wrapper {
+	}
+	// .faq-item
+	&-item {
+		padding: 25px 0 0 0;
+		border-top: 1px solid $grayline;
+		border-bottom: 1px solid $grayline;
+		@media (max-width: $md3+px) {
+			padding: 17px 0 0 0;
+		}
+		// .faq-item__head
+		&__head {
+			margin-bottom: 25px;
+			position: relative;
+			font-weight: 700;
+			padding-right: 15%;
+			@include adaptiv-value("font-size", 24, 16, 0);
+			line-height: 140.19%;
+			color: $white;
+			cursor: pointer;
+			@include transitColor(0.3s);
+			@media ( max-width:$md3+px){
+				margin-bottom: 17px;
+			}
+			&::after,
+			&::before {
+				content: "";
+				height: 14px;
+				width: 1px;
+				right: 5%;
+				top: 50%;
+				@include verticalcenter();
+				background-color: $green;
+				transition: all 0.3s linear;
+			}
+			&::before {
+				transform: translateY(-50%) rotate(90deg);
+				
+			}
+			&._active{
+				&::after {
+				transform: translateY(-50%) rotate(90deg);
+			}
+			}
+			&:hover {
+				color: $green;
+			}
+			b {
+				color: $green;
+			}
+		}
+
+		// .faq-item__body
+		&__body {
+			display: none;
+			line-height: 150%;
+			color: $graytext;
+			margin-top: 15px;
+			padding-bottom: 25px;
+			@media (max-width: $md3+px) {
+				font-size: 14px;
+				padding-bottom: 17px;
+			}
+		}
+	}
+}

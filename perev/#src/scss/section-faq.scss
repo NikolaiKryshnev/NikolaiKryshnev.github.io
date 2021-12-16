@@ -1,0 +1,156 @@
+.section-faq {
+}
+.faq {
+	@include adaptiv-value("margin-top", 175, 70, 0);
+	._container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	// .faq-title
+	&-title {
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 32%;
+		flex: 0 0 32%;
+		max-width: 32%;
+		@media (max-width: $md1+px) {
+			display: flex;
+			align-items: center;
+			position: relative;
+			padding-top: 60px;
+
+			@include adaptiv-value("padding-right", 198, 100, 0);
+		}
+		&__box {
+			padding-right: 9%;
+		}
+		@media (max-width: $md1+px) {
+			max-width: 100%;
+			flex: 1 1 100%;
+		}
+		.section-title {
+			@media (max-width: $md3+px) {
+				position: absolute;
+				top: 0;
+			}
+		}
+		.section-subtitle {
+			@media (min-width: $md1+px) {
+				padding-right: 9%;
+			}
+			a {
+				color: $orange;
+				text-decoration: underline;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+		.btn {
+			@media (min-width: $md1+px) {
+				margin: 54px 0 0 0;
+			}
+			@media (max-width: $md1+px) {
+				position: absolute;
+				right: 0;
+			}
+		}
+	}
+	// .faq-content
+	&-content {
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 68%;
+		flex: 0 0 68%;
+		max-width: 68%;
+		&__title {
+			@include adaptiv-value("font-size", 28, 22, 0);
+			font-weight: 700;
+			border-bottom: 1px solid #E7E7E7;
+			@include adaptiv-value("padding-bottom", 10, 15, 0);
+		}
+		@media (max-width: $md1+px) {
+			max-width: 100%;
+			flex: 1 1 100%;
+			margin-top: 53px;
+		}
+	}
+
+	// .faq-wrapper
+	&-wrapper {
+	}
+	// .faq-item
+	&-item {
+		cursor: pointer;
+		&:not(:last-child) {
+			border-bottom: 1px solid #e7e7e7;
+		}
+		//  .faq-item__head
+		&__head {
+			position: relative;
+			@include adaptiv-value("font-size", 24, 18, 0);
+			@include adaptiv-value("padding-top", 30, 15, 0);
+			@include adaptiv-value("padding-bottom", 30, 15, 0);
+			line-height: 140.19%;
+			@include transitColor(0.3s);
+			@media ( max-width:$md1+px){
+				padding-right: 5%;
+			}
+			&:hover {
+				color: $orange;
+			}
+			&::after,
+			&::before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 50%;
+				right: 0;
+				width: 8px;
+				height: 1px;
+				background: #000;
+				-webkit-transition: all 0.3s linear;
+				-o-transition: all 0.3s linear;
+				transition: all 0.3s linear;
+			}
+
+			&::before {
+				-webkit-transform: translate(0, -50%) rotate(-45deg);
+				-ms-transform: translate(0, -50%) rotate(-45deg);
+				transform: translate(0, -50%) rotate(-45deg);
+			}
+
+			&::after {
+				-webkit-transform: translate(0, -50%) rotate(45deg);
+				-ms-transform: translate(0, -50%) rotate(45deg);
+				transform: translate(0, -50%) rotate(45deg);
+				right: 5px;
+			}
+
+			&._active::before {
+				-webkit-transform: translate(0, -50%) rotate(45deg);
+				-ms-transform: translate(0, -50%) rotate(45deg);
+				transform: translate(0, -50%) rotate(45deg);
+			}
+
+			&._active::after {
+				-webkit-transform: translate(0, -50%) rotate(-45deg);
+				-ms-transform: translate(0, -50%) rotate(-45deg);
+				transform: translate(0, -50%) rotate(-45deg);
+			}
+		}
+
+		//  .faq-item__body
+		&__body {
+			font-weight: 300;
+			font-size: 16px;
+			display: none;
+			line-height: 150%;
+			@include adaptiv-value("padding-bottom", 30, 15, 0);
+		}
+	}
+}

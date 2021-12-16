@@ -1,0 +1,14 @@
+.content--faq {
+	.content-box {
+		@include adaptiv-value("margin-top", 40, 30, 0);
+		border-top: 0;
+		padding-top: 0;
+	}
+	.content-box__title {
+		border-bottom: 1px solid #e7e7e7;
+		padding-bottom: 15px;
+	}
+	.faq-content:not(:first-child) {
+		@include adaptiv-value("margin-bottom", 50, 40, 0);
+	}
+}
