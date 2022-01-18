@@ -129,10 +129,12 @@
 		}
 	}
 	.woocommerce a.remove {
-		color: $white !important;
+		flex: 0 0 1em;
+		path {
+			fill: red !important;
+		}
 		&:hover {
 			path {
-				fill: $green !important;
 			}
 		}
 	}
@@ -151,12 +153,12 @@
 		width: 100%;
 	}
 	.sidebar {
-		height: 100%;
-		min-height: 100%;
+		// height: 100%;
+		// min-height: 100%;
 		.sidebar__box {
 			position: relative;
-			min-height: 100%;
-			height: 100%;
+			// min-height: 100%;
+			// height: 100%;
 			@media (max-width: $md1+px) {
 				padding-bottom: 20px;
 			}
@@ -266,6 +268,7 @@
 				line-height: 1;
 				display: flex;
 				align-items: center;
+
 				&.logoff {
 					@media (min-width: $md1+px) {
 						display: none;
@@ -286,8 +289,11 @@
 				}
 				margin: 0 0 0 0;
 
+				&:not(:first-child) {
+					margin: 35px 0 0 0;
+				}
+
 				&:not(:last-child) {
-					margin: 0 0 35px 0;
 					@media (max-width: $md1+px) {
 						margin: 0 70px 0 0;
 					}
@@ -295,7 +301,6 @@
 						margin: 0 40px 0 0;
 					}
 				}
-
 				@media (max-width: $md1+px) {
 					&.is-active {
 						a {
@@ -347,10 +352,12 @@
 				margin-left: 15px;
 			}
 			&:first-child {
+				position: relative;
 				padding-left: 0;
 				font-size: 16px;
 			}
 			&:last-child {
+				position: relative;
 				font-size: 16px;
 				font-weight: 400;
 				padding-right: 0;
@@ -372,9 +379,17 @@
 					padding-left: 0;
 					font-weight: 500;
 				}
+				a {
+					transition: all 0.3s linear;
+					&:hover {
+						opacity: 0.6;
+					}
+				}
 				&:last-child {
 					padding-right: 0;
 					a {
+						display: flex;
+						align-items: center;
 						color: $green;
 					}
 					._icon-btn-arrow {
@@ -556,12 +571,11 @@
 				position: absolute;
 				top: 0;
 			}
-			@media ( min-width:$md1+px){
+			@media (min-width: $md1+px) {
 				&:hover {
 					color: #18916e !important;
 				}
 			}
-			
 		}
 		@media (max-width: $md2+px) {
 			.swiper-button-prev {
@@ -764,7 +778,7 @@
 			margin: 20px -40px 0;
 			border-top: 1px solid rgba(255, 255, 255, 0.5);
 			min-height: 78px;
-			@media ( max-width:$md3+px){
+			@media (max-width: $md3+px) {
 				min-height: 70px;
 			}
 			.quantity {
@@ -777,7 +791,7 @@
 				font-weight: 700;
 				font-size: 16px;
 				margin: 0 !important;
-				@media ( max-width:$md3+px){
+				@media (max-width: $md3+px) {
 					width: 70px;
 				}
 				@media (max-width: $md3+px) {
@@ -793,7 +807,7 @@
 						font-size: 14px;
 					}
 				}
-			
+
 				&__button::after,
 				&__button::before {
 					width: 10px;
@@ -825,10 +839,9 @@
 				justify-content: flex-end;
 				flex: 1 1 auto;
 				padding-right: 40px;
-				@media ( max-width:$md3+px){
+				@media (max-width: $md3+px) {
 					padding-right: 0;
-				justify-content: center;
-					
+					justify-content: center;
 				}
 			}
 			.single_add_to_cart_button {
@@ -992,23 +1005,20 @@
 		}
 	}
 	.main__seo {
-		a{
+		a {
 			color: inherit;
 			transition: all 0.3s linear;
-			&:hover{
+			&:hover {
 				color: $green;
 				text-decoration: underline;
 			}
-
 		}
 		@media (min-width: $md1+px) {
 			flex: 0 0 66.666667%;
 			max-width: 66.666667%;
 			margin-left: 33.333333%;
 		}
-		
 	}
-	
 }
 
 .sertifikat__ul {
@@ -1086,7 +1096,6 @@
 				&.quantity__button_plus {
 					&::before {
 						transform: rotate(-90deg);
-						
 					}
 				}
 			}
@@ -1500,4 +1509,73 @@
 #theme-checkout-shipping-package,
 #customer_details {
 	@include adaptiv-value("margin-bottom", 80, 50, 0);
+}
+
+//========================================================================================================================================================
+.myacc_order_status_info {
+	display: inline-block;
+	._icon-info {
+		transition: all 0.3s linear;
+	}
+
+	.orser_status_info {
+		display: inline-block;
+	}
+}
+body:not(._touch) {
+	.myacc_order_status_info {
+		&:hover {
+			.orser_status_info {
+				opacity: 1;
+				visibility: visible;
+				z-index: 1;
+			}
+			._icon-info {
+				color: $green;
+			}
+		}
+		.close {
+			display: none;
+		}
+	}
+}
+body._touch {
+	.myacc_order_status_info {
+		&._active {
+			.orser_status_info {
+				opacity: 1;
+				visibility: visible;
+				z-index: 1;
+			}
+			._icon-info {
+				color: $green;
+			}
+		}
+		.close {
+			width: 21px;
+			height: 21px;
+			position: absolute;
+			top: 15px;
+			right: 20px;
+			cursor: pointer;
+			z-index: 30;
+			background: url(../img/icons/close.svg) 0 0 no-repeat;
+		}
+	}
+}
+
+.orser_status_info {
+	position: absolute;
+	background-color: #2e2f34;
+	border: 1px solid #5a5a5a;
+	left: 0;
+	top: 100%;
+	padding: 15px;
+	z-index: -1;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s linear;
+	li span{
+		color: $green;
+	}
 }

@@ -511,6 +511,27 @@ if (mainContent != null) {
 	});
 }
 
+
+function Blockinfo() {
+	let myacc_order_status_info = document.querySelectorAll('.myacc_order_status_info')
+
+	for (let i = 0; i < myacc_order_status_info.length; i++) {
+		const el = myacc_order_status_info[i];
+		el.addEventListener("click", function (e) {
+			console.log(e.target);
+			console.log(e.target.parentNode);
+
+			if (e.target.classList.contains('_icon-info')) {
+				e.target.parentNode.classList.toggle('_active');
+			} else if (e.target.classList.contains('close')) {
+				e.target.closest('.myacc_order_status_info').classList.remove('_active');
+			}
+		});
+	}
+}
+
+Blockinfo()
+
 var ua = window.navigator.userAgent;
 var msie = ua.indexOf("MSIE ");
 var isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
@@ -1421,9 +1442,10 @@ function selects_update_all() {
 }
 
 //Placeholers
-let inputs = document.querySelectorAll('input[data-value],textarea[data-value]');
-inputs_init(inputs);
-
+document.addEventListener('DOMContentLoaded', function () { 
+	let inputs = document.querySelectorAll('input');
+	inputs_init(inputs);
+});
 function inputs_init(inputs) {
 	if (inputs.length > 0) {
 		for (let index = 0; index < inputs.length; index++) {
@@ -1438,40 +1460,12 @@ function inputs_init(inputs) {
 					input_focus_add(input);
 					input.value = '';
 				}
-				if (input.getAttribute('data-type') === "pass") {
-					input.setAttribute('type', 'password');
-				}
-				if (input.classList.contains('_date')) {
-					/*
-					input.classList.add('_mask');
-					Inputmask("99.99.9999", {
-						//"placeholder": '',
-						clearIncomplete: true,
-						clearMaskOnLostFocus: true,
-						onincomplete: function () {
-							input_clear_mask(input, input_g_value);
-						}
-					}).mask(input);
-					*/
-				}
-				if (input.classList.contains('_phone')) {
-					//'+7(999) 999 9999'
-					//'+38(999) 999 9999'
-					//'+375(99)999-99-99'
+
+				console.log(input.getAttribute("name") == 'billing_phone');
+
+				if (((input.getAttribute("name") == 'your-phone') || (input.getAttribute("name") == 'billing_phone')) == true) {
 					input.classList.add('_mask');
 					Inputmask("+375 (99) 9999999", {
-						//"placeholder": '',
-						clearIncomplete: true,
-						clearMaskOnLostFocus: true,
-						onincomplete: function () {
-							input_clear_mask(input, input_g_value);
-						}
-					}).mask(input);
-				}
-				if (input.classList.contains('_digital')) {
-					input.classList.add('_mask');
-					Inputmask("9{1,}", {
-						"placeholder": '',
 						clearIncomplete: true,
 						clearMaskOnLostFocus: true,
 						onincomplete: function () {
@@ -1481,31 +1475,8 @@ function inputs_init(inputs) {
 				}
 				form_remove_error(input);
 			});
-			input.addEventListener('blur', function (e) {
-				if (input.value == '') {
-					input.value = input_g_value;
-					input_focus_remove(input);
-					if (input.classList.contains('_mask')) {
-						input_clear_mask(input, input_g_value);
-					}
-					if (input.getAttribute('data-type') === "pass") {
-						input.setAttribute('type', 'text');
-					}
-				}
-			});
-			if (input.classList.contains('_date')) {
-				datepicker(input, {
-					customDays: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
-					customMonths: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
-					formatter: (input, date, instance) => {
-						const value = date.toLocaleDateString()
-						input.value = value
-					},
-					onSelect: function (input, instance, date) {
-						input_focus_add(input.el);
-					}
-				});
-			}
+
+
 		}
 	}
 }
@@ -1530,30 +1501,38 @@ function input_clear_mask(input, input_g_value) {
 }
 
 //QUANTITY
-function quantuty() {
-	let quantityButtons = document.querySelectorAll('.quantity__button');
-	if (quantityButtons.length > 0) {
-		for (let index = 0; index < quantityButtons.length; index++) {
-			const quantityButton = quantityButtons[index];
-			quantityButton.addEventListener("click", function (e) {
-				let value = parseInt(quantityButton.closest('.quantity').querySelector('input').value);
-				if (quantityButton.classList.contains('quantity__button_plus')) {
-					value++;
-					return
-				} else {
-					value = value - 1;
-					if (value < 1) {
-						value = 1
-						return
-					}
-				}
-				quantityButton.closest('.quantity').querySelector('input').value = value;
-				jQuery('.qty').trigger('change');
-			});
-		}
-	}
-}
-// quantuty()
+
+// let statusquantity = false;
+// function quantuty() {
+// 	if (statusquantity != true) {
+// 		statusquantity = true;
+// 		let quantityButtons = document.querySelectorAll('.quantity__button');
+// 		if (quantityButtons.length > 0) {
+// 			for (let index = 0; index < quantityButtons.length; index++) {
+// 				const quantityButton = quantityButtons[index];
+// 				let listener = function (e) {
+// 					let value = parseInt(quantityButton.closest('.quantity').querySelector('input').value);
+// 					if (quantityButton.classList.contains('quantity__button_plus')) {
+// 						value++;
+// 					} else {
+// 						value = value - 1;
+// 						if (value < 1) {
+// 							value = 1
+// 						}
+// 					}
+// 					quantityButton.closest('.quantity').querySelector('input').value = value;
+// 					jQuery('.qty').trigger('change');
+// 				}
+// 				quantityButton.removeEventListener('click', listener, false);
+// 				quantityButton.addEventListener("click", listener, false);
+// 			}
+// 		}
+// 	}else{
+// console.log('Функция quantuty() уже запущена');
+
+// 	}
+// }
+// document.addEventListener('DOMContentLoaded', quantuty);
 
 //RANGE
 const priceSlider = document.querySelector('.price__range');
@@ -1940,7 +1919,7 @@ function fix_block(scr_fix_block, scr_value) {
 			// if (scr_value > (block.offsetHeight + offset(block).top) - (item.offsetHeight + (header_height + 15))) {
 			if (scr_value > (block.offsetHeight + offset(block).top) - (item.offsetHeight)) {
 
-				console.log(scr_value, (block.offsetHeight + offset(block).top) - (item.offsetHeight));
+				// console.log(scr_value, (block.offsetHeight + offset(block).top) - (item.offsetHeight));
 
 				block.style.cssText = "position:relative;";
 				item.style.cssText = "position:absolute;bottom:0;top:auto;left:0px;width:100%";

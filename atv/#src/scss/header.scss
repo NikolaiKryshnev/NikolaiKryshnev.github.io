@@ -341,11 +341,11 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				width: 12px;
-				height: 12px;
+				width: 14px;
+				height: 14px;
 				background: $green;
 				font-weight: 500;
-				font-size: 9px;
+				font-size: 10px;
 				color: $white;
 				right: -5px;
 				top: -5px;
@@ -413,6 +413,7 @@
 	}
 	// .menu-body__link
 	&-body__link {
+		font-size: 22px;
 		margin-left: 20px;
 		@media (max-width: 1170px) {
 			font-size: 22px;

@@ -413,6 +413,10 @@ body.active {
           flex: 1 1 auto;
 }
 
+.main:not(.main--home) {
+  padding-top: 50px;
+}
+
 .container {
   max-width: 1200px;
   min-width: 320px;

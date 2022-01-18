@@ -93,3 +93,24 @@ if (mainContent != null) {
 		}
 	});
 }
+
+
+function Blockinfo() {
+	let myacc_order_status_info = document.querySelectorAll('.myacc_order_status_info')
+
+	for (let i = 0; i < myacc_order_status_info.length; i++) {
+		const el = myacc_order_status_info[i];
+		el.addEventListener("click", function (e) {
+			console.log(e.target);
+			console.log(e.target.parentNode);
+
+			if (e.target.classList.contains('_icon-info')) {
+				e.target.parentNode.classList.toggle('_active');
+			} else if (e.target.classList.contains('close')) {
+				e.target.closest('.myacc_order_status_info').classList.remove('_active');
+			}
+		});
+	}
+}
+
+Blockinfo()

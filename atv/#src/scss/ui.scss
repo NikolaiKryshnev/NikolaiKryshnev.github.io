@@ -160,8 +160,30 @@ body.ie {
 	-o-filter: grayscale(0);
 }
 //====================================================================================================
-#map {
-	background: url("../img/icons/loading.gif") center / 50px no-repeat;
+.loading {
+	position: relative !important;
+	&:after {
+		@include pseudoEl(block, absolute, "");
+		background: url("../img/icons/loading.gif") center center no-repeat !important;
+		width: 100% !important;
+		height: 100% !important;
+		background-size: 1em !important;
+		background-color: #2e2f34 !important;
+		opacity: 0.7 !important;
+	}
+}
+.added{
+	position: relative !important;
+	&:after {
+		align-items: center;
+		justify-content: center;
+		@include pseudoEl(flex, absolute, "Добавлено ");
+		width: 100% !important;
+		height: 100% !important;
+		background-color: #2e2f34 !important;
+		opacity: 0.9	 !important;
+		color: $green;
+	}
 }
 //====================================================================================================
 ._swiper {
@@ -211,7 +233,6 @@ body.ie {
 	margin-right: 15px;
 }
 body:not(._touch) {
-	
 	.swiper-button-next:not(.swiper-button-disabled):hover,
 	.swiper-button-prev:not(.swiper-button-disabled):hover {
 		color: $green;
@@ -516,7 +537,6 @@ body:not(._touch) {
 .main {
 	// .main__body
 	&__body {
-		
 		@include adaptiv-value("padding-bottom", 80, 50, 0);
 		// padding-bottom: 60px;
 		p {
@@ -716,7 +736,6 @@ body:not(._touch) {
 		@media (max-width: $md1+px) {
 			margin-bottom: 45px;
 		}
-		
 	}
 	.main__additText {
 		font-weight: 700;
@@ -762,7 +781,9 @@ body:not(._touch) {
 			@media (max-width: $md1+px) {
 				padding-left: 0;
 				margin: 0 -15px;
-				.review-item__date, .review-item__name,.review-item__text{
+				.review-item__date,
+				.review-item__name,
+				.review-item__text {
 					padding: 0 15px;
 				}
 			}
@@ -1086,13 +1107,13 @@ body:not(._touch) {
 			width: auto;
 		}
 	}
-	@media ( min-width:$md1+px){
+	@media (min-width: $md1+px) {
 		.swiper-button-next:not(.swiper-button-disabled):hover,
 		.swiper-button-prev:not(.swiper-button-disabled):hover {
 			color: #18916e !important;
 		}
 	}
-	
+
 	.swiper-button-next,
 	.swiper-button-prev {
 		&.swiper-button-disabled {
