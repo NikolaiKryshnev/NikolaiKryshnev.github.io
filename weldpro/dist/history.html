@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Order history</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230324234141">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__line"></div>
+			<div class="header__container">
+				<a href="home.html" class="header__logo"><img data-src="img/logo.svg" alt="weldpro"></a>
+				<div class="header__menu menu">
+					<div class="menu__content">
+						<div class="menu__catalog menu-catalog">
+							<a href="#" data-popup="#menu_catalog" class="menu-catalog__btn">
+								<div class="menu-catalog__icon catalog-icon">
+									<div class="catalog-icon__block catalog-icon__block--1"></div>
+									<div class="catalog-icon__block catalog-icon__block--2"></div>
+								</div>products
+							</a>
+							<div class="menu-catalog__content _popup _mb-show" id="menu_catalog">
+								<ul class="menu-catalog__list menu-list _popup__content" data-spollers="991">
+									<li class="menu-catalog__item">
+										<a href="catalog.html" class="menu-catalog__link">
+											<div class="menu-catalog__img"><img src="img/catalog/menu/01.png" alt=""></div> Machinery
+										</a>
+										<span class="menu-catalog__link_icon one" data-spoller><i class="_icon-arrow_01"></i></span>
+										<ul class="menu-list__submenu menu-submenu">
+											<li class="menu-submenu__item">
+												<a href="#" class="menu-submenu__link">Electric welding equipment</a>
+												<span class="menu-catalog__link_icon" data-spoller><i class="_icon-arrow_01"></i></span>
+												<div class="menu-submenu__content">
+													<ul class="menu-list__submenu menu-submenu">
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Welding inverters</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Semi-automatic welding</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Burners for semi-automatic machines and
+																spare parts</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Accessories for semiautomatic devices</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Apparatus for argon arc welding</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Argon burners and spare parts</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Tungsten electrodes</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Plasma welding and cutting machines</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Plasma cutting machines</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li class="menu-submenu__item">
+												<a href="#" class="menu-submenu__link">Gas welding equipment and materials</a>
+											</li>
+											<li class="menu-submenu__item">
+												<a href="#" class="menu-submenu__link">Pneumatic equipment</a>
+											</li>
+											<li class="menu-submenu__item">
+												<a href="#" class="menu-submenu__link">Generators</a>
+											</li>
+										</ul>
+									</li>
+									<li class="menu-catalog__item">
+										<a href="catalog.html" class="menu-catalog__link">
+											<div class="menu-catalog__img"><img src="img/catalog/menu/02.png" alt=""></div> Materials
+										</a>
+										<span class="menu-catalog__link_icon one" data-spoller><i class="_icon-arrow_01"></i></span>
+										<ul class="menu-list__submenu menu-submenu">
+											<li class="menu-submenu__item">
+												<a href="#" class="menu-submenu__link">Electric welding equipment</a>
+												<span class="menu-catalog__link_icon" data-spoller><i class="_icon-arrow_01"></i></span>
+												<div class="menu-submenu__content">
+													<ul class="menu-list__submenu menu-submenu">
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Welding inverters</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Semi-automatic welding</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Burners for semi-automatic machines and
+																spare parts</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Accessories for semiautomatic devices</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Apparatus for argon arc welding</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Argon burners and spare parts</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Tungsten electrodes</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Plasma welding and cutting machines</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Plasma cutting machines</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li class="menu-submenu__item">
+												<a href="#" class="menu-submenu__link">Gas welding equipment and materials</a>
+											</li>
+											<li class="menu-submenu__item">
+												<a href="#" class="menu-submenu__link">Pneumatic equipment</a>
+											</li>
+											<li class="menu-submenu__item">
+												<a href="#" class="menu-submenu__link">Generators</a>
+											</li>
+										</ul>
+									</li>
+									<li class="menu-catalog__item">
+										<a href="catalog.html" class="menu-catalog__link">
+											<div class="menu-catalog__img"><img src="img/catalog/menu/03.png" alt=""></div> Tools
+										</a>
+										<span class="menu-catalog__link_icon one" data-spoller><i class="_icon-arrow_01"></i></span>
+										<ul class="menu-list__submenu menu-submenu ">
+											<li class="menu-submenu__item">
+												<a href="#" class="menu-submenu__link">Electric welding equipment</a>
+												<span class="menu-catalog__link_icon" data-spoller><i class="_icon-arrow_01"></i></span>
+												<div class="menu-submenu__content">
+													<ul class="menu-list__submenu menu-submenu">
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Welding inverters</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Semi-automatic welding</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Burners for semi-automatic machines and
+																spare parts</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Accessories for semiautomatic devices</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Apparatus for argon arc welding</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Argon burners and spare parts</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Tungsten electrodes</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Plasma welding and cutting machines</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Plasma cutting machines</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li class="menu-submenu__item">
+												<a href="#" class="menu-submenu__link">Gas welding equipment and materials</a>
+												<span class="menu-catalog__link_icon" data-spoller><i class="_icon-arrow_01"></i></span>
+												<div class="menu-submenu__content">
+													<ul class="menu-list__submenu menu-submenu">
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Welding inverters</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Semi-automatic welding</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Burners for semi-automatic machines and
+																spare parts</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Accessories for semiautomatic devices</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Apparatus for argon arc welding</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Argon burners and spare parts</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Tungsten electrodes</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Plasma welding and cutting machines</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Plasma cutting machines</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li class="menu-submenu__item">
+												<a href="#" class="menu-submenu__link">Pneumatic equipment</a>
+												<span class="menu-catalog__link_icon" data-spoller><i class="_icon-arrow_01"></i></span>
+												<div class="menu-submenu__content">
+													<ul class="menu-list__submenu menu-submenu">
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Welding inverters</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Semi-automatic welding</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Burners for semi-automatic machines and
+																spare parts</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Accessories for semiautomatic devices</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Apparatus for argon arc welding</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Argon burners and spare parts</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Tungsten electrodes</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Plasma welding and cutting machines</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Plasma cutting machines</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li class="menu-submenu__item">
+												<a href="#" class="menu-submenu__link">Generators</a>
+												<span class="menu-catalog__link_icon" data-spoller><i class="_icon-arrow_01"></i></span>
+												<div class="menu-submenu__content">
+													<ul class="menu-list__submenu menu-submenu">
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Welding inverters</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Semi-automatic welding</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Burners for semi-automatic machines and
+																spare parts</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Accessories for semiautomatic devices</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Apparatus for argon arc welding</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Argon burners and spare parts</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Tungsten electrodes</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Plasma welding and cutting machines</a>
+														</li>
+														<li class="menu-submenu__item">
+															<a href="#" class="menu-submenu__link">Plasma cutting machines</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+									</li>
+									<li class="menu-catalog__item">
+										<a href="catalog.html" class="menu-catalog__link">
+											<div class="menu-catalog__img"><img src="img/catalog/menu/04.png" alt=""></div> Equipment
+										</a>
+									</li>
+								</ul>
+								<!-- <button type="button" class="btn btn--red">VIEW CATALOG</button> -->
+								<a href="catalog.html" class="btn btn--red">VIEW CATALOG</a>
+							</div>
+							<!-- /.menu-catalog__content -->
+						</div>
+						<!-- /.menu_catalog -->
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="blog.html" class="menu__link">Blog</a></li>
+								<li class="menu__item"><a href="faq.html" class="menu__link">FAQ</a></li>
+								<li class="menu__item"><a href="about.html" class="menu__link">About Us</a></li>
+								<li class="menu__item"><a href="help.html" class="menu__link">Help</a></li>
+								<li class="menu__item"><a href="contacts.html" class="menu__link">Contacts</a></li>
+								<li class="menu__item"><a href="sales.html" class="menu__link sales">Sales %</a></li>
+							</ul>
+						</nav>
+
+						<div class="menu__lang menu-lang">
+							<div class="menu-lang__text _active">
+								EN
+							</div>
+							<label class="menu-lang__switch">
+								<!-- Если страница es, то добавлять атрибут checked -->
+								<input type="checkbox" class="checkbox-lang" data-en="http://192.168.100.16:8080/home.html#en" data-es="http://192.168.100.16:8080/home.html#es">
+								<span class="menu-lang__slider menu-lang__round"></span>
+							</label>
+							<div class="menu-lang__text">
+								ES
+							</div>
+						</div>
+					</div>
+					<!-- /.menu__content -->
+
+					<div class="menu__info menu-info">
+						<a href="#" class="menu-info__link" data-popup="#menu_search"><i class="_icon-loupe"></i></a>
+						<a href="#" class="menu-info__link"><i class="_icon-person"></i></a>
+						<a href="#" class="menu-info__link"><i class="_icon-basket"></i><span class="basket-num">1</span></a>
+					</div>
+
+					<div class="menu__lang menu-lang">
+						<div class="menu-lang__text _active">
+							EN
+						</div>
+						<label class="menu-lang__switch">
+							<!-- Если страница es, то добавлять атрибут checked -->
+							<input type="checkbox" class="checkbox-lang" data-en="http://192.168.100.16:8080/home.html#en" data-es="http://192.168.100.16:8080/home.html#es">
+							<span class="menu-lang__slider menu-lang__round"></span>
+						</label>
+						<div class="menu-lang__text">
+							ES
+						</div>
+					</div>
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+				</div>
+			</div>
+			<!-- /.header__container -->
+			<div class="haeder__search search _popup" id="menu_search">
+				<div class="search__container _popup__content">
+					<form class="search__form" action="#" method="get">
+						<input type="text" name="" class="search__input input" placeholder="Search...">
+						<button class="search__btn btn btn--red" type="submit">SEARCH</button>
+					</form>
+				</div>
+				<!-- /.haeder-search__container -->
+			</div>
+			<!-- /.haeder__search -->
+		</header>
+		<main class="page">
+			<div class="page__container">
+				<ul class="breadcrumb">
+					<li class="breadcrumb-item">
+						<a href="#" class="breadcrumb-link">
+							<span>Home</span>
+						</a>
+					</li>
+					<li class="breadcrumb-item">
+						<span>Order history</span>
+					</li>
+				</ul>
+				<div class="title black title--small title--border">
+					account
+				</div>
+			</div>
+
+			<section class="section-account account  _section">
+				<div class="account__container">
+					<div class="section__row">
+						<div class="account__aside account-aside">
+							<ul class="account-aside__list">
+								<li class="account-aside__li">
+									<a href="#" class="account-aside__link">my account</a>
+								</li>
+								<li class="account-aside__li">
+									<a href="#" class="account-aside__link  _active">Order history</a>
+								</li>
+								<li class="account-aside__li">
+									<a href="#" class="account-aside__link">account details</a>
+								</li>
+								<li class="account-aside__li">
+									<a href="#" class="account-aside__link">quit</a>
+								</li>
+							</ul>
+						</div>
+						<!-- /.account__aside -->
+
+						<div class="account__content account-content">
+							<div class="account-content__table account-table">
+								<div class="account-table__title">
+									<div class="account-table__order">Order №1563817</div>
+									<div class="account-table__data">02/01/2023</div>
+								</div>
+								<div class="account-table__list">
+									<div class="account-table__line account-line">
+										<div class="account-line__num">01</div>
+										<div class="account-line__info">
+											<div class="account-line__title">TORROS Semi-automatic inverter welding machine MIG200
+												Pulse (M2004), 220В </div>
+											<div class="account-line__bot">
+												<div class="account-line__price">$600</div>
+												<div class="account-line__mount">x1</div>
+											</div>
+											<div class="account-line__sum">$600</div>
+										</div>
+									</div>
+									<!-- /.account-table__list -->
+
+									<div class="account-table__line account-line">
+										<div class="account-line__num">02</div>
+										<div class="account-line__info">
+											<div class="account-line__title">TECHNOMEC Welding inverter PULSER 200 HF</div>
+											<div class="account-line__bot">
+												<div class="account-line__price">$$520</div>
+												<div class="account-line__mount">x1</div>
+											</div>
+											<div class="account-line__sum">$520</div>
+										</div>
+									</div>
+									<!-- /.account-table__list -->
+
+									<div class="account-table__line account-line">
+										<div class="account-line__num">03</div>
+										<div class="account-line__info">
+											<div class="account-line__title">Composite Products 01</div>
+											<div class="account-line__bot">
+												<div class="account-line__price">$300</div>
+												<div class="account-line__mount">x2</div>
+											</div>
+											<div class="account-line__sum">$600</div>
+										</div>
+										<div class="account-line__box account-modif">
+											<div class="account-modif__item">
+												<div class="account-modif__title">TORROS E71T-GS flux cored wire, 0.8mm/1kg,
+													art.304T081001 (for welding without shielding gas), (China)</div>
+												<div class="account-modif__sum">$80</div>
+											</div>
+
+											<div class="account-modif__item">
+												<div class="account-modif__title">TORROS E71T-GS flux cored wire, 0.8mm/1kg,
+													art.304T081001 (for welding without shielding gas), (China)</div>
+												<div class="account-modif__sum">$80</div>
+											</div>
+
+											<div class="account-modif__item">
+												<div class="account-modif__title">TORROS E71T-GS flux cored wire, 0.8mm/1kg,
+													art.304T081001 (for welding without shielding gas), (China)</div>
+												<div class="account-modif__sum">$80</div>
+											</div>
+										</div>
+									</div>
+									<!-- /.account-table__list -->
+									<div class="account-table__total account-total">
+										<div class="account-total__title">Total:</div>
+										<div class="account-total__sum">$1,540</div>
+									</div>
+								</div>
+							</div>
+							<!-- /.account-content__table -->
+
+							<div class="account-content__table account-table">
+								<div class="account-table__title">
+									<div class="account-table__order">Order №1563817</div>
+									<div class="account-table__data">02/01/2023</div>
+								</div>
+								<div class="account-table__list">
+									<div class="account-table__line account-line">
+										<div class="account-line__num">01</div>
+										<div class="account-line__info">
+											<div class="account-line__title">TORROS Semi-automatic inverter welding machine MIG200
+												Pulse (M2004), 220В </div>
+											<div class="account-line__bot">
+												<div class="account-line__price">$600</div>
+												<div class="account-line__mount">x1</div>
+											</div>
+											<div class="account-line__sum">$600</div>
+										</div>
+									</div>
+									<!-- /.account-table__list -->
+
+									<div class="account-table__line account-line">
+										<div class="account-line__num">02</div>
+										<div class="account-line__info">
+											<div class="account-line__title">TECHNOMEC Welding inverter PULSER 200 HF</div>
+											<div class="account-line__bot">
+												<div class="account-line__price">$$520</div>
+												<div class="account-line__mount">x1</div>
+											</div>
+											<div class="account-line__sum">$520</div>
+										</div>
+									</div>
+									<!-- /.account-table__list -->
+
+									<div class="account-table__line account-line">
+										<div class="account-line__num">03</div>
+										<div class="account-line__info">
+											<div class="account-line__title">Composite Products 01</div>
+											<div class="account-line__bot">
+												<div class="account-line__price">$300</div>
+												<div class="account-line__mount">x2</div>
+											</div>
+											<div class="account-line__sum">$600</div>
+										</div>
+										<div class="account-line__box account-modif">
+											<div class="account-modif__item">
+												<div class="account-modif__title">TORROS E71T-GS flux cored wire, 0.8mm/1kg,
+													art.304T081001 (for welding without shielding gas), (China)</div>
+												<div class="account-modif__sum">$80</div>
+											</div>
+
+											<div class="account-modif__item">
+												<div class="account-modif__title">TORROS E71T-GS flux cored wire, 0.8mm/1kg,
+													art.304T081001 (for welding without shielding gas), (China)</div>
+												<div class="account-modif__sum">$80</div>
+											</div>
+
+											<div class="account-modif__item">
+												<div class="account-modif__title">TORROS E71T-GS flux cored wire, 0.8mm/1kg,
+													art.304T081001 (for welding without shielding gas), (China)</div>
+												<div class="account-modif__sum">$80</div>
+											</div>
+										</div>
+									</div>
+									<!-- /.account-table__list -->
+									<div class="account-table__total account-total">
+										<div class="account-total__title">Total:</div>
+										<div class="account-total__sum">$1,540</div>
+									</div>
+								</div>
+							</div>
+							<!-- /.account-content__table -->
+
+							<div class="account-content__table account-table">
+								<div class="account-table__title">
+									<div class="account-table__order">Order №1563817</div>
+									<div class="account-table__data">02/01/2023</div>
+								</div>
+								<div class="account-table__list">
+									<div class="account-table__line account-line">
+										<div class="account-line__num">01</div>
+										<div class="account-line__info">
+											<div class="account-line__title">TORROS Semi-automatic inverter welding machine MIG200
+												Pulse (M2004), 220В </div>
+											<div class="account-line__bot">
+												<div class="account-line__price">$600</div>
+												<div class="account-line__mount">x1</div>
+											</div>
+											<div class="account-line__sum">$600</div>
+										</div>
+									</div>
+									<!-- /.account-table__list -->
+
+									<div class="account-table__line account-line">
+										<div class="account-line__num">02</div>
+										<div class="account-line__info">
+											<div class="account-line__title">TECHNOMEC Welding inverter PULSER 200 HF</div>
+											<div class="account-line__bot">
+												<div class="account-line__price">$$520</div>
+												<div class="account-line__mount">x1</div>
+											</div>
+											<div class="account-line__sum">$520</div>
+										</div>
+									</div>
+									<!-- /.account-table__list -->
+
+									<div class="account-table__line account-line">
+										<div class="account-line__num">03</div>
+										<div class="account-line__info">
+											<div class="account-line__title">Composite Products 01</div>
+											<div class="account-line__bot">
+												<div class="account-line__price">$300</div>
+												<div class="account-line__mount">x2</div>
+											</div>
+											<div class="account-line__sum">$600</div>
+										</div>
+										<div class="account-line__box account-modif">
+											<div class="account-modif__item">
+												<div class="account-modif__title">TORROS E71T-GS flux cored wire, 0.8mm/1kg,
+													art.304T081001 (for welding without shielding gas), (China)</div>
+												<div class="account-modif__sum">$80</div>
+											</div>
+
+											<div class="account-modif__item">
+												<div class="account-modif__title">TORROS E71T-GS flux cored wire, 0.8mm/1kg,
+													art.304T081001 (for welding without shielding gas), (China)</div>
+												<div class="account-modif__sum">$80</div>
+											</div>
+
+											<div class="account-modif__item">
+												<div class="account-modif__title">TORROS E71T-GS flux cored wire, 0.8mm/1kg,
+													art.304T081001 (for welding without shielding gas), (China)</div>
+												<div class="account-modif__sum">$80</div>
+											</div>
+										</div>
+									</div>
+									<!-- /.account-table__list -->
+									<div class="account-table__total account-total">
+										<div class="account-total__title">Total:</div>
+										<div class="account-total__sum">$1,540</div>
+									</div>
+								</div>
+							</div>
+							<!-- /.account-content__table -->
+
+							<div class="pagging">
+								<a href="#" class="pagging__arrow"></a>
+								<ul class="pagging__list">
+									<li>
+										<a href="#" class="pagging__item _active">1</a>
+									</li>
+									<li>
+										<a href="#" c lass="pagging__item">2</a>
+									</li>
+									<li>
+										<a href="#" class="pagging__item">3</a>
+									</li>
+									<li>
+										<a href="#" class="pagging__item">4</a>
+									</li>
+									<li>
+										<a href="#" class="pagging__item">5</a>
+									</li>
+								</ul>
+								<a href="#" class="pagging__arrow"></a>
+							</div>
+						</div>
+						<!-- /.account__content -->
+					</div>
+					<!-- /.section__row -->
+				</div>
+				<!-- /.account__container -->
+			</section>
+			<!-- /.section-account -->
+
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__item-logo">
+					<a href="home.html" class="footer__logo"><img data-src="img/logo.svg" alt=""></a>
+				</div>
+				<div class="footer__menu">
+					<ul class="footer__list">
+						<li class="footer__item"><a href="catalog.html" class="footer__link">Catalog</a></li>
+						<li class="footer__item"><a href="catalog.html" class="footer__link">Blog</a></li>
+						<li class="footer__item"><a href="faq.html" class="footer__link">FAQ</a></li>
+						<li class="footer__item"><a href="about.html" class="footer__link">About Us</a></li>
+						<li class="footer__item"><a href="help.html" class="footer__link">Help</a></li>
+						<li class="footer__item"><a href="contacts.html" class="footer__link">Contacts</a></li>
+					</ul>
+				</div>
+				<div class="footer__text">
+					Limited Liability Company "ALVI-SVARKA" UNP 192657777. Date of registration in the commercial register
+					01/29/2020 No. 472184
+				</div>
+
+				<div class="footer__info footer-info footer__info--info">
+					<div class="footer__title">
+						Information
+					</div>
+					<ul class="footer-info__list">
+						<li class="footer-info__item"><a href="#" class="footer-info__link">Terms of payment</a></li>
+						<li class="footer-info__item"><a href="#" class="footer-info__link">Delivery terms</a></li>
+						<li class="footer-info__item"><a href="#" class="footer-info__link">Product Warranty</a></li>
+						<li class="footer-info__item"><a href="#" class="footer-info__link">Politics</a></li>
+					</ul>
+				</div>
+				<div class="footer__info footer-info footer__info--contact">
+					<div class="footer__title">
+						contacts
+					</div>
+					<ul class="footer-info__list">
+						<li class="footer-info__item"><a href="tel:" class="footer-info__link">+ 22 222 22 22</a></li>
+						<li class="footer-info__item"><a href="mail:" class="footer-info__link">alvi@svarka.by</a></li>
+						<li class="footer-info__item"><a href="#" class="footer-info__link">Minsk, Street 10</a></li>
+						<li class="footer-info__item footer-info__item--time">
+							<span><b>Mon - Thu </b>8:30 - 17:30</span>
+							<span><b>Fr </b>8:30 - 16:30</span>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__social social">
+					<div class="footer__title">
+						Social networks
+					</div>
+					<ul class="social__list">
+						<li class="social__item">
+							<a class="social__icon" href="#"><i class="_icon-inst"></i></a>
+						</li>
+						<li class="social__item">
+							<a class="social__icon" href="#"><i class="_icon-youtube"></i></a>
+						</li>
+						<li class="social__item">
+							<a class="social__icon" href="#"><i class="_icon-tg"></i></a>
+						</li>
+						<li class="social__item">
+							<a class="social__icon" href="#"><i class="_icon-vk"></i></a>
+						</li>
+						<li class="social__item">
+							<a class="social__icon" href="#"><i class="_icon-google"></i></a>
+						</li>
+						<li class="social__item">
+							<a class="social__icon" href="#"><i class="_icon-facebook"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="footer__bottom">
+				© 2023 Weldpro
+			</div>
+		</footer>
+	</div>
+	<div id="reviews" aria-hidden="true" class="popup popup-review _popup">
+		<div class="popup__wrapper ">
+			<div class="popup__content _popup__content">
+				<div class="popup-review__container">
+					<button data-close type="button" class="popup__close"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1 1L11 11M11 1L1 11" stroke="white" stroke-width="2" stroke-linecap="round" />
+						</svg>
+					</button>
+					<div class="popup-review__box">
+						<div class="popup-review__img _ibg">
+							<img src="img/form/bg_01.jpg" alt="">
+						</div>
+						<form class="popup-review__form">
+							<div class="popup-review__top">
+								<div class="popup-review__title">
+									Leave a review
+								</div>
+								<div class="popup-review__subtitle">We hope you enjoyed it!</div>
+							</div>
+							<div class="popup-review__rating popup-rating">
+								<div class="popup-rating__title">rating</div>
+								<div class="rating rating_set">
+									<div class="rating__body">
+										<div class="rating__active"></div>
+										<div class="rating__items">
+											<input type="radio" class="rating__item" value="1" name="rating">
+											<input type="radio" class="rating__item" value="2" name="rating">
+											<input type="radio" class="rating__item" value="3" name="rating">
+											<input type="radio" class="rating__item" value="4" name="rating">
+											<input type="radio" class="rating__item" value="5" name="rating">
+										</div>
+									</div>
+									<div class="rating__value">0</div>
+								</div>
+							</div>
+							<div class="popup-review__box">
+								<div class="form__input">
+									<label class="input__title" for="">NAME</label>
+									<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
+								</div>
+								<div class="form__input">
+									<label class="input__title" for="">E-mail</label>
+									<input autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="" class="input">
+								</div>
+								<div class="form__input textarea">
+									<label class="input__title" for="">review</label>
+									<textarea class="input" name="" id=""></textarea>
+								</div>
+							</div>
+							<button type="submit" class="form__btn btn btn--red">send</button>
+						</form>
+						<!-- <div class="popup-review__form popup-review__form--thanks">
+						<div class="popup-review__top">
+							<div class="popup-review__title">
+								Thank you for a review!
+							</div>
+							<div class="popup-review__subtitle">We hope you enjoyed it!</div>
+						</div>
+						<button data-close type="button" class="form__btn btn btn--red">close</button>
+					</div> -->
+					</div>
+					<!-- /.popup-review__box -->
+				</div>
+				<!-- /.popup-review__container -->
+			</div>
+			<!-- /.popup__content -->
+		</div>
+		<!-- /.popup__wrapper -->
+	</div>
+	<!-- /.popup-review -->
+	<!-- <script
+      src="https://maps.googleapis.com/maps/api/js?key=d4d63b54dffa8e38&callback=initMap&v=weekly"
+      defer
+    ></script> -->
+	<script src="js/app.min.js?_v=20230324234141"></script>
+</body>
+
+</html>
