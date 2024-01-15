@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"505"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="section-error error _section">
+				<div class="error__container">
+					<div class="error__box">
+						<div class="error__img">
+							<img src="../img/error/505.svg" alt="">
+						</div>
+						<div class="error__title">Oops, something went wrong</div>
+						<div class="error__subtitle">We are apologize and fixing the problem.</div>
+						<div class="error__btns">
+							<a href="#" class="btn btn--black">home page</a>
+							<a href="#" class="btn btn--black border">back</a>
+						</div>
+					</div>
+				</div>
+				<!-- /.error__container -->
+			</section>
+			<!-- /.section-error -->
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

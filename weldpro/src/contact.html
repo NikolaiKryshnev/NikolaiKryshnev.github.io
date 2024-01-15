@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"About"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page page--contact">
+			<div class="page__container">
+				<ul class="breadcrumb">
+					<li class="breadcrumb-item">
+						<a href="#" class="breadcrumb-link">
+							<span>Home</span>
+						</a>
+					</li>
+					<li class="breadcrumb-item">
+						<span>Contacts</span>
+					</li>
+				</ul>
+			</div>
+
+			<section class="section-contacts contacts  _section">
+				<div class="contacts__container">
+					<div class="section__row">
+						<div class="title black title--small">
+							Contacts
+						</div>
+						<div class="contacts__col">
+							<div class="contacts__item">
+								<div class="contacts__title">contacts</div>
+								<ul class="contacts__info contacts-info">
+									<div class="contacts-info__li">
+										<a href="tel:" class="contacts__link">+ 22 222 22 22</a>
+									</div>
+									<div class="contacts-info__li">
+										<a href="mailto:" class="contacts__link">alvi@svarka.by</a>
+									</div>
+								</ul>
+							</div>
+
+							<div class="contacts__item">
+								<div class="contacts__title">address</div>
+								<div class="contacts__info">
+									<div class="contacts-info__li">
+										Minsk, Street 10
+									</div>
+									<div class="contacts-info__li">
+										<div class="contacts__time">
+											<span><b>Mon - Thu </b>8:30 - 17:30</span>
+											<span><b>Fr </b>8:30 - 16:30</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="social black">
+								<div class="contacts__title">Social networks</div>
+								<ul class="social__list">
+									<li class="social__item">
+										<a class="social__icon" href="#"><i class="_icon-inst"></i></a>
+									</li>
+									<li class="social__item">
+										<a class="social__icon" href="#"><i class="_icon-youtube"></i></a>
+									</li>
+									<li class="social__item">
+										<a class="social__icon" href="#"><i class="_icon-tg"></i></a>
+									</li>
+									<li class="social__item">
+										<a class="social__icon" href="#"><i class="_icon-vk"></i></a>
+									</li>
+									<li class="social__item">
+										<a class="social__icon" href="#"><i class="_icon-google"></i></a>
+									</li>
+									<li class="social__item">
+										<a class="social__icon" href="#"><i class="_icon-facebook"></i></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- /.contacts__col -->
+
+
+						<div class="contacts__form contacts-form">
+							<form action="#" method="post" class="form">
+								<!-- Добавить класс _hide чтобы скрыть -->
+								<div class="contacts-form__item">
+									<div class="contacts-form__title">get in touch</div>
+									<div class="contacts-form__box">
+										<div class="form__input">
+											<label class="input__title" for="">NAME</label>
+											<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder=""
+												class="input" data-placeholder="">
+										</div>
+										<div class="form__input">
+											<label class="input__title" for="">E-mail</label>
+											<input autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder=""
+												class="input" data-placeholder="">
+										</div>
+										<div class="form__input">
+											<label class="input__title" for="">Phone number</label>
+											<input autocomplete="off" type="tel" name="" data-error="Ошибка" placeholder=""
+												class="input" data-placeholder="">
+										</div>
+										<div class="form__input textarea">
+											<label class="input__title" for="">message</label>
+											<textarea class="input" name="" id=""></textarea>
+										</div>
+									</div>
+									<button type="submit" class="form__btn btn btn--red">send</button>
+								</div>
+
+								<!-- Добавить класс _show чтобы показать -->
+								<div class="contacts-form__thanks contacts-thanks">
+									<div class="contacts-thanks__title">
+										Thank you!
+									</div>
+									<div class="contacts-thanks__text">Your request has been successfully sent.</div>
+									<!--  Сброс формы по кнопки уже реализованно -->
+									<button type="button" class="btn--red btn _show-form">OK</button>
+								</div>
+							</form>
+						</div>
+						<!-- /.contacts__form -->
+					</div>
+					<!-- /.section__row -->
+				</div>
+				<!-- /.contacts__container -->
+				<div id="map">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4429.2080385503805!2d21.02819070670634!3d52.24121181446673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8c19faec8b%3A0xa97ed91070a12c87!2z0JLQsNGA0YjQsNCy0YHQutC40Lkg0JzRg9C30LXQuSDQodC-0LLRgNC10LzQtdC90L3QvtCz0L4g0JjRgdC60YPRgdGB0YLQstCw!5e0!3m2!1sru!2sby!4v1676755306079!5m2!1sru!2sby"
+					 style="border:0;" allowfullscreen="" loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+				<!-- /.map -->
+			</section>
+			<!-- /.section-contacts -->
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

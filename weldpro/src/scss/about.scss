@@ -1,0 +1,44 @@
+.section-about {
+}
+.about {
+	// .about__container
+	&__container {
+	}
+
+	// .about__info
+	&__info {
+	}
+
+	// .about__list
+	&__list {
+	}
+
+	// .about__line
+	&__line {
+		@include adaptiveValue("margin-top", 80, 60);
+	}
+}
+
+.about-line {
+	// about-line__title
+	&__title {
+		display: flex;
+		font-weight: 600;
+		font-size: 28px;
+		text-transform: uppercase;
+		color: $c_2;
+		padding-bottom: 15px;
+		border-bottom: 1px solid #cac2bd;
+	}
+
+	// about-line__icon
+	&__icon {
+		margin-right: 22px;
+		width: 35px;
+	}
+
+	// .about-line__text
+	&__text {
+		@include adaptiveValue("padding-top", 30, 20);
+	}
+}

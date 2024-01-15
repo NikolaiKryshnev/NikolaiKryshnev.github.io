@@ -1,0 +1,73 @@
+<div id="reviews" aria-hidden="true" class="popup popup-review _popup">
+	<div class="popup__wrapper ">
+		<div class="popup__content _popup__content">
+			<div class="popup-review__container">
+				<button data-close type="button" class="popup__close"><svg width="12" height="12" viewBox="0 0 12 12"
+						fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M1 1L11 11M11 1L1 11" stroke="white" stroke-width="2" stroke-linecap="round" />
+					</svg>
+				</button>
+				<div class="popup-review__box">
+					<div class="popup-review__img _ibg">
+						<img src="../img/form/bg_01.jpg" alt="">
+					</div>
+					<form class="popup-review__form">
+						<div class="popup-review__top">
+							<div class="popup-review__title">
+								Leave a review
+							</div>
+							<div class="popup-review__subtitle">We hope you enjoyed it!</div>
+						</div>
+						<div class="popup-review__rating popup-rating">
+							<div class="popup-rating__title">rating</div>
+							<div class="rating rating_set">
+								<div class="rating__body">
+									<div class="rating__active"></div>
+									<div class="rating__items">
+										<input type="radio" class="rating__item" value="1" name="rating">
+										<input type="radio" class="rating__item" value="2" name="rating">
+										<input type="radio" class="rating__item" value="3" name="rating">
+										<input type="radio" class="rating__item" value="4" name="rating">
+										<input type="radio" class="rating__item" value="5" name="rating">
+									</div>
+								</div>
+								<div class="rating__value">0</div>
+							</div>
+						</div>
+						<div class="popup-review__box">
+							<div class="form__input">
+								<label class="input__title" for="">NAME</label>
+								<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder=""
+									class="input">
+							</div>
+							<div class="form__input">
+								<label class="input__title" for="">E-mail</label>
+								<input autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder=""
+									class="input">
+							</div>
+							<div class="form__input textarea">
+								<label class="input__title" for="">review</label>
+								<textarea class="input" name="" id=""></textarea>
+							</div>
+						</div>
+						<button type="submit" class="form__btn btn btn--red">send</button>
+					</form>
+					<!-- <div class="popup-review__form popup-review__form--thanks">
+						<div class="popup-review__top">
+							<div class="popup-review__title">
+								Thank you for a review!
+							</div>
+							<div class="popup-review__subtitle">We hope you enjoyed it!</div>
+						</div>
+						<button data-close type="button" class="form__btn btn btn--red">close</button>
+					</div> -->
+				</div>
+				<!-- /.popup-review__box -->
+			</div>
+			<!-- /.popup-review__container -->
+		</div>
+		<!-- /.popup__content -->
+	</div>
+	<!-- /.popup__wrapper -->
+</div>
+<!-- /.popup-review -->

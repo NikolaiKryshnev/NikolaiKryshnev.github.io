@@ -1,0 +1,38 @@
+[data-showmore] {
+}
+[data-showmore-content] {
+}
+[data-showmore-button] {
+	span {
+		&:last-child {
+			display: none;
+		}
+		._showmore-active & {
+			display: none;
+			&:last-child {
+				display: block;
+			}
+		}
+	}
+}
+.block__more._icon-arrow_01 {
+	position: relative;
+	font-weight: 600;
+	color: $c_1;
+	margin-top: 10px;
+	transition: all 0.3s ease 0s;
+	text-transform: uppercase;
+	span {
+		text-decoration-line: underline;
+	}
+	&:hover {
+		color: $c_2;
+	}
+	&:before {
+		position: absolute;
+		right: -13px;
+		top: 50%;
+		transform: translateY(-50%) rotate(90deg);
+		font-size: 8px;
+	}
+}

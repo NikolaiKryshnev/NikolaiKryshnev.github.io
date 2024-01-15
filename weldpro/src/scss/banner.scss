@@ -1,0 +1,121 @@
+.section-ban {
+	@include adaptiveValue("padding-top", 82, 50);
+	@include adaptiveValue("padding-bottom", 394, 310);
+	background-color: $c_1;
+}
+.ban {
+	// .ban__continer
+	&__container {
+	}
+
+	// .ban__row
+	&__row {
+		display: flex;
+		margin: 0 -15px;
+		@media (max-width: $tablet) {
+			flex-wrap: wrap-reverse;
+		}
+	}
+
+	// .ban__info
+	&__info {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		color: $c_3;
+		@include adaptiveValue("padding-top", 38, 30);
+		@include adaptiveValue("padding-left", 45, 30);
+		@include adaptiveValue("padding-right", 45, 30);
+		@include adaptiveValue("padding-bottom", 45, 30);
+		background: url("../img/ban/bg.svg") 100% 100% no-repeat $c_6;
+		background-size: 82%;
+		@media (min-width: $mobile) {
+			height: 400px;
+		}
+		@media (max-width: $tablet) {
+			margin-top: 20px;
+			background-size: 70%;
+		}
+		@media (max-width: $mobile) {
+			background-size: 70%;
+		}
+		@media (max-width: 380px) {
+			padding: 30px 15px;
+		}
+	}
+
+	// .ban__item
+	&__item {
+		padding-right: 15px;
+		padding-left: 15px;
+		flex: 0 0 50%;
+		max-width: 50%;
+		@media (max-width: $tablet) {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+
+	// .ban__slider
+	&__slider {
+		background-color: $c_6;
+	}
+
+	&__slider,
+	&__info {
+		border-radius: 10px;
+	}
+	// .ban__wrapper
+	&__wrapper {
+	}
+
+	// .ban__slide
+	&__slide {
+		@media (min-width: $tablet) {
+			height: 400px !important;
+		}
+		@media (max-width: $tablet) {
+			padding-top: 50% !important;
+			min-height: 245px;
+		}
+	}
+}
+
+.ban-info {
+	// .ban-info__title
+	&__title {
+		@include adaptiveValue("font-size", 42, 28);
+		@include adaptiveValue("margin-bottom", 20, 15);
+		font-weight: 700;
+		text-transform: uppercase;
+		line-height: 1.2;
+		@include adaptiveValue("padding-right", 100, 65);
+		@media (max-width: $mobileSmall) {
+			padding-right: 20px;
+		}
+	}
+
+	// .ban-info__subtitle
+	&__subtitle {
+	}
+	// .ban-info__btns
+	&__btns {
+		// @include adaptiveValue("padding-top", 120, 60);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 60px;
+		.btn {
+			line-height: 50px;
+			@include adaptiveValue("max-width", 200, 150);
+
+			width: 100%;
+			@media (max-width: $tablet) {
+				font-size: rem(14);
+			}
+			@media (max-width: 380px) {
+				max-width: 135px;
+			}
+		}
+	}
+}

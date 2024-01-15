@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Account Details"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<div class="page__container">
+				<ul class="breadcrumb">
+					<li class="breadcrumb-item">
+						<a href="#" class="breadcrumb-link">
+							<span>Home</span>
+						</a>
+					</li>
+					<li class="breadcrumb-item">
+						<span>Account Details</span>
+					</li>
+				</ul>
+				<div class="title black title--small title--border">
+					account
+				</div>
+			</div>
+
+			<section class="section-account account  _section">
+				<div class="account__container">
+					<div class="section__row">
+						<div class="account__aside account-aside">
+							<ul class="account-aside__list">
+								<li class="account-aside__li">
+									<a href="#" class="account-aside__link">my account</a>
+								</li>
+								<li class="account-aside__li">
+									<a href="#" class="account-aside__link">Order history</a>
+								</li>
+								<li class="account-aside__li">
+									<a href="#" class="account-aside__link _active">account details</a>
+								</li>
+								<li class="account-aside__li">
+									<a href="#" class="account-aside__link">quit</a>
+								</li>
+							</ul>
+						</div>
+						<!-- /.account__aside -->
+
+						<div class="account__content account-content ">
+							<form class="account__item account-item form form--black form--details">
+								<div class="account-item__title">Personal information</div>
+								<div class="account-item__box">
+									<div class="account-item__row">
+										<fieldset class="account-item__col">
+											<div class="form__input">
+												<label class="input__title" for="NAME">NAME<sup>*</sup></label>
+												<input autocomplete="off" type="text" name="NAME" data-error="Ошибка" placeholder=""
+													class="input">
+											</div>
+
+											<div class="form__input">
+												<label class="input__title" for="lastname">last name<sup>*</sup></label>
+												<input autocomplete="off" type="text" name="lastname" data-error="Ошибка"
+													placeholder="" class="input">
+											</div>
+
+											<div class="form__input">
+												<label class="input__title" for="number">PHONE NUMBER<sup>*</sup></label>
+												<input autocomplete="off" type="text" name="number" data-error="Ошибка"
+													placeholder="" class="input" data-inputmask="'mask': '99(999)-99-99'">
+											</div>
+
+											<div class="form__input">
+												<label class="input__title" for="">E-MAIL<sup>*</sup></label>
+												<input autocomplete="off" type="email" name="form[]" data-error="Ошибка"
+													placeholder="" class="input">
+											</div>
+										</fieldset>
+										<div class="account-item__bot">
+											<button type="submit" class="btn btn--black">save</button>
+										</div>
+									</div>
+								</div>
+								<!-- /.account-item__box -->
+							</form>
+
+							<form class="account__item account-item form form--black form--details">
+								<div class="account-item__title">CHANGE PASSWORD</div>
+								<div class="account-item__box">
+									<div class="account-item__row">
+										<fieldset class="account-item__col">
+											<div class="form__input form__line">
+												<label class="input__title" for="">PASSWORD<sup>*</sup></label>
+												<input autocomplete="off" type="password" name="form[]" value="" class="input">
+												<button class="form__viewpass" type="button"><i class="_icon-eye"></i></button>
+											</div>
+											<div class="form__input form__line">
+												<label class="input__title" for="">NEW PASSWORD<sup>*</sup></label>
+												<input autocomplete="off" type="password" name="form[]" value="" class="input">
+												<button class="form__viewpass" type="button"><i class="_icon-eye"></i></button>
+											</div>
+											<div class="form__input form__line">
+												<label class="input__title" for="">Confirm password<sup>*</sup></label>
+												<input autocomplete="off" type="password" name="form[]" value="" class="input">
+												<button class="form__viewpass" type="button"><i class="_icon-eye"></i></button>
+											</div>
+										</fieldset>
+										<div class="account-item__bot">
+											<button type="submit" class="btn btn--black">save</button>
+										</div>
+									</div>
+								</div>
+								<!-- /.account-item__box -->
+							</form>
+						</div>
+						<!-- /.account__content -->
+					</div>
+					<!-- /.section__row -->
+				</div>
+				<!-- /.account__container -->
+			</section>
+			<!-- /.section-account -->
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

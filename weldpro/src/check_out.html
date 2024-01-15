@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Check_out"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<div class="page__container">
+				<ul class="breadcrumb">
+					<li class="breadcrumb-item">
+						<a href="#" class="breadcrumb-link">
+							<span>Home</span>
+						</a>
+					</li>
+					<li class="breadcrumb-item">
+						<span>Product</span>
+					</li>
+				</ul>
+				@@include('html/_title-mod.htm',{
+				"title":"Check out"
+				})
+			</div>
+			<section class="section-chrckOut orderInfo section__form">
+				<div class="orderInfo__container">
+					<form class="orderInfo__form orderInfo-form form form--black">
+						<div class="orderInfo-form__row">
+							<fieldset class="orderInfo-form__item orderInfo-item orderInfo-item--70">
+								<div class="orderInfo-item__box">
+									<div class="orderInfo-item__title">Personal Information</div>
+									<div class="orderInfo-item__row">
+										<div class="orderInfo-item__input form__input">
+											<label class="input__title" for="name">NAME</label>
+											<input autocomplete="off" type="text" name="name" data-error="Ошибка" placeholder=""
+												class="input">
+										</div>
+										<div class="orderInfo-item__input form__input">
+											<label class="input__title" for="name">LAST NAME</label>
+											<input autocomplete="off" type="text" name="name" data-error="Ошибка" placeholder=""
+												class="input">
+										</div>
+										<div class="orderInfo-item__input form__input">
+											<label class="input__title" for="phone">PHONE NUMBER</label>
+											<input autocomplete="off" type="text" name="phone" data-error="Ошибка" placeholder=""
+												class="input">
+										</div>
+										<div class="orderInfo-item__input form__input">
+											<label class="input__title" for="email">E-MAIL</label>
+											<input autocomplete="off" type="text" name="email" data-error="Ошибка" placeholder=""
+												class="input">
+										</div>
+									</div>
+								</div>
+								<!-- /.orderInfo-item__box -->
+							</fieldset>
+
+							<fieldset class="orderInfo-form__item orderInfo-item">
+								<!-- /.orderInfo-item__box -->
+								<div class="orderInfo-item__box">
+									<div class="orderInfo-item__title">Order</div>
+									<div class="orderInfo-item__row">
+										<div class="orderInfo-item__product orderInfo-product">
+											<div class="orderInfo-product__box">
+												<div class="orderInfo-product__num">01</div>
+												<div class="orderInfo-product__info">
+													<div class="orderInfo-product__title">TORROS Semi-automatic inverter welding
+														machine
+														MIG200 Pulse (M2004), 220В </div>
+													<div class="orderInfo-product__price">
+														<div class="orderInfo-price">$600</div>
+														<div class="orderInfo-amount">x1</div>
+													</div>
+													<div class="orderInfo-product__sum">$600</div>
+												</div>
+											</div>
+										</div>
+										<!-- /.orderInfo-item__product -->
+
+										<div class="orderInfo-item__product orderInfo-product">
+											<div class="orderInfo-product__box">
+												<div class="orderInfo-product__num">02</div>
+												<div class="orderInfo-product__info">
+													<div class="orderInfo-product__title">TORROS Semi-automatic inverter welding
+														machine
+														MIG200 Pulse (M2004), 220В </div>
+													<div class="orderInfo-product__price">
+														<div class="orderInfo-price">$600</div>
+														<div class="orderInfo-amount">x1</div>
+													</div>
+													<div class="orderInfo-product__sum">$600</div>
+												</div>
+											</div>
+										</div>
+										<!-- /.orderInfo-item__product -->
+
+										<div class="orderInfo-item__product orderInfo-product">
+											<div class="orderInfo-product__box">
+												<div class="orderInfo-product__num">03</div>
+												<div class="orderInfo-product__info">
+													<div class="orderInfo-product__title">TORROS Semi-automatic inverter welding
+														machine
+														MIG200 Pulse (M2004), 220В </div>
+													<div class="orderInfo-product__price">
+														<div class="orderInfo-price">$300</div>
+														<div class="orderInfo-amount">x2</div>
+													</div>
+													<div class="orderInfo-product__sum">$600</div>
+												</div>
+												<div class="orderInfo-eq__list orderInfo-eq">
+													<div class="orderInfo-eq__item">
+														<div class="orderInfo-eq__title">TORROS E71T-GS flux cored wire, 0.8mm/1kg,
+															art.304T081001 (for welding without shielding gas), (China)</div>
+														<div class="orderInfo-eq__price">$80</div>
+													</div>
+
+													<div class="orderInfo-eq__item">
+														<div class="orderInfo-eq__title">TORROS E71T-GS flux cored wire, 0.8mm/1kg,
+															art.304T081001 (for welding without shielding gas), (China)</div>
+														<div class="orderInfo-eq__price">$80</div>
+													</div>
+
+													<div class="orderInfo-eq__item">
+														<div class="orderInfo-eq__title">TORROS E71T-GS flux cored wire, 0.8mm/1kg,
+															art.304T081001 (for welding without shielding gas), (China)</div>
+														<div class="orderInfo-eq__price">$80</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- /.orderInfo-item__product -->
+									</div>
+									<!-- /.orderInfo-item__row -->
+								</div>
+								<!-- /.orderInfo-item__box -->
+							</fieldset>
+
+							<fieldset class="orderInfo-form__item orderInfo-item orderInfo-item--70">
+								<div class="orderInfo-item__box">
+									<div class="orderInfo-item__title"> Address</div>
+									<div class="orderInfo-item__row">
+										<div class="orderInfo-item__input form__input">
+											<label class="input__title" for="city">CITY</label>
+											<input autocomplete="off" type="text" name="city" data-error="Ошибка" placeholder=""
+												class="input">
+										</div>
+										<div class="orderInfo-item__input form__input col-60">
+											<label class="input__title" for="street">STREET</label>
+											<input autocomplete="off" type="text" name="street" data-error="Ошибка" placeholder=""
+												class="input">
+										</div>
+										<div class="orderInfo-item__input form__input col-40">
+											<label class="input__title" for="building">BUILDING</label>
+											<input autocomplete="off" type="text" name="building" data-error="Ошибка"
+												placeholder="" class="input">
+										</div>
+										<div class="orderInfo-item__input form__input col-40">
+											<label class="input__title" for="flat_office">FLAT/OFFICE</label>
+											<input autocomplete="off" type="text" name="flat_office" data-error="Ошибка"
+												placeholder="" class="input">
+										</div>
+
+										<div class="orderInfo-item__input form__input col-60">
+											<label class="input__title" for="other_information">OTHER INFORMATION</label>
+											<input autocomplete="off" type="text" name="other_information" data-error="Ошибка"
+												placeholder="" class="input">
+										</div>
+									</div>
+								</div>
+								<!-- /.orderInfo-item__box -->
+								<div class="orderInfo-item__box">
+									<div class="orderInfo-item__title"> Other</div>
+									<div class="orderInfo-item__row">
+										<div class="orderInfo-item__input form__input">
+											<label class="input__title" for="comment">YOUR COMMENT</label>
+											<textarea class="input" name="comment" id=""></textarea>
+										</div>
+									</div>
+								</div>
+								<!-- /.orderInfo-item__box -->
+							</fieldset>
+
+							<fieldset class="orderInfo-form__item orderInfo-item">
+								<div class="orderInfo-item__checkbox">
+									<div class="orderInfo-item__title"> Address</div>
+									<div class="orderInfo-item__row">
+										<!-- На всякий случай чебокс -->
+										<!-- <div class="checkbox">
+											<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<label for="c_1" class="checkbox__label"><span
+													class="checkbox__text">Self-delivery</span></label>
+										</div> -->
+										<div class="options">
+											<div class="options__item">
+												<input hidden id="o_1" class="options__input" checked type="radio" value="1"
+													name="option_1">
+												<label for="o_1" class="options__label"><span
+														class="options__text">Self-delivery</span></label>
+											</div>
+											<div class="options__item">
+												<input hidden id="o_2" class="options__input" type="radio" value="2" name="option_1">
+												<label for="o_2" class="options__label"><span class="options__text">Courier
+														delivery</span></label>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="orderInfo-item__checkbox">
+									<div class="orderInfo-item__title"> Payment method</div>
+									<div class="orderInfo-item__row">
+										<!-- На всякий случай чебокс -->
+										<!-- <div class="checkbox">
+											<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+												name="form[]">
+											<label for="c_1" class="checkbox__label"><span
+													class="checkbox__text">Self-delivery</span></label>
+										</div> -->
+										<div class="options">
+											<div class="options__item">
+												<input hidden id="o_4" class="options__input" checked type="radio" value="4"
+													name="option_2">
+												<label for="o_4" class="options__label"><span
+														class="options__text">Cash</span></label>
+											</div>
+											<div class="options__item">
+												<input hidden id="o_5" class="options__input" type="radio" value="5" name="option_2">
+												<label for="o_5" class="options__label"><span class="options__text">
+														Card (online)</span></label>
+											</div>
+											<div class="options__item">
+												<input hidden id="o_6" class="options__input" type="radio" value="6" name="option_2">
+												<label for="o_6" class="options__label"><span class="options__text">
+														Card (to the courier)</span></label>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="orderInfo-item__result">
+									<div class="orderInfo-item__title"> To pay</div>
+									<div class="orderInfo-item__row orderInfo-result">
+										<div class="orderInfo-result__line">
+											<div class="orderInfo-result__title">Your order:</div>
+											<div class="orderInfo-result__sum">$1,275</div>
+										</div>
+										<div class="orderInfo-result__line">
+											<div class="orderInfo-result__title">Coupon: sale</div>
+											<div class="orderInfo-result__sum red">-$15</div>
+										</div>
+									</div>
+
+									<div class="orderInfo-item__total">
+										Total: <b>$1,740</b>
+									</div>
+
+									<button type="submit" class="btn btn--red">Check out</button>
+								</div>
+							</fieldset>
+						</div>
+						<!-- /.orderInfo-form__row -->
+					</form>
+				</div>
+				<!-- /.orderInfo__container -->
+			</section>
+			<!-- /.section-orderInfo -->
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

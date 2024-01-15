@@ -1,0 +1,50 @@
+.section-error {
+}
+.error {
+	// .error__container
+	&__container {
+	}
+	// .error__box
+	&__box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		@include adaptiveValue("margin-top", 85, 50);
+	}
+	// .error__img
+	&__img {
+		max-width: rem(450);
+	}
+	// .error__title
+	&__title {
+		font-weight: 700;
+		@include adaptiveValue("font-size", 32, 18);
+		text-transform: capitalize;
+		color: $c_1;
+		@include adaptiveValue("margin-top", 70, 40);
+	}
+	// .error__subtitle
+	&__subtitle {
+		margin-top: 10px;
+		font-weight: 400;
+		font-size: rem(16);
+		color: $c_1;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	// .error__btns
+	&__btns {
+		display: flex;
+		margin-top: 20px;
+		.btn:not(:last-child) {
+			margin-right: 20px;
+		}
+		.btn:not(.border) {
+			min-width: 162px;
+		}
+		.btn.border {
+			min-width: 110px;
+		}
+	}
+}

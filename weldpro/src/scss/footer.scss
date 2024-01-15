@@ -1,0 +1,235 @@
+//====================================================================================================
+.footer {
+	padding: 40px 0 0;
+	background-color: $c_4;
+	color: $c_3;
+	// .footer__container
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		padding-bottom: 90px;
+		@media (max-width: $tablet) {
+			padding-bottom: 30px;
+		}
+	}
+	.footer__item-logo {
+		display: flex;
+		@media (max-width: $mobile) {
+			order: 1;
+
+			width: 100%;
+			margin-bottom: 40px;
+		}
+	}
+
+	// footer__logo
+	&__logo {
+		max-width: 161px;
+		width: 100%;
+		@media (max-width: $mobile) {
+			margin: 0 auto;
+			display: block;
+		}
+	}
+
+	// .footer__menu
+	&__menu {
+		margin-left: auto;
+		@include adaptiveValue("padding-bottom", 60, 40);
+		flex: 0 0 66.666667%;
+		max-width: 66.666667%;
+		@media (max-width: $mobile) {
+			display: flex;
+			order: 2;
+
+			flex: 0 0 50%;
+			max-width: 50%;
+			margin-left: 0;
+		}
+	}
+
+	// .footer__list
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: flex-end;
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		@media (min-width: $mobile) {
+			height: 24px;
+		}
+	}
+	// .footer____item
+	&__item {
+		font-weight: 700;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		&:not(&:last-child) {
+			margin-right: 30px;
+		}
+	}
+	// .footer__link
+	&__link {
+		position: relative;
+		&:hover::after {
+			width: 100%;
+		}
+
+		&::after {
+			content: "";
+			top: 100%;
+			position: absolute;
+			left: 0;
+			bottom: 9px;
+			width: 0%;
+			height: 1px;
+			background-color: #f7eee7;
+			transition: all 0.3s ease 0s;
+		}
+	}
+	// .footer__text
+	&__text {
+		max-width: 305px;
+		width: 100%;
+		opacity: 0.5;
+		line-height: 1.4;
+		margin-right: auto;
+		font-weight: 700;
+		@media (max-width: $pc) {
+			padding-right: rem(25);
+		}
+		@media (max-width: $tablet) {
+			margin-right: 0;
+			order: 6;
+			display: flex;
+			text-align: center;
+			max-width: 100%;
+			width: 100%;
+			padding-right: 0;
+			margin-top: 50px;
+			justify-content: center;
+		}
+		@media (min-width: $tablet) {
+			// padding-right: rem(100);
+		}
+	}
+	// .footer__info
+	&__info {
+		max-width: 200px;
+		padding-right: rem(45);
+		margin: 0;
+		@media (max-width: $pc) {
+			padding-right: rem(25);
+		}
+		@media (max-width: $mobile) {
+			&--info {
+				order: 3;
+
+				.footer-info__link {
+					text-decoration: underline;
+				}
+			}
+			&--contact {
+				order: 5;
+			}
+			&--info,
+			&--contact {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+				text-align: right;
+				flex: 0 0 50%;
+				max-width: 50%;
+				padding-right: 0;
+			}
+		}
+		@media (min-width: $mobile) {
+			min-width: 175px;
+		}
+	}
+	// .footer__title
+	&__title {
+		font-weight: 800;
+		font-size: 14px;
+		line-height: 142.9%;
+		letter-spacing: 0.125em;
+		text-transform: uppercase;
+		font-feature-settings: "pnum" on, "lnum" on;
+		color: rgba(233, 225, 222, 0.5);
+		padding-bottom: 20px;
+	}
+	// .footer__social
+	&__social {
+		max-width: 245px;
+		margin-left: 0;
+		@media (max-width: $mobile) {
+			order: 4;
+			display: flex;
+			flex-direction: column;
+
+			flex: 0 0 50%;
+			max-width: 50%;
+			@include adaptiveValue("padding-right", 34, 10);
+		}
+	}
+	// .footer__bottom
+	&__bottom {
+		width: 100%;
+		text-align: center;
+		background: $c_2;
+		line-height: 40px;
+		font-weight: 600;
+	}
+}
+.footer-info {
+	// .footer-info__list
+	&__list {
+	}
+	// .footer-info__item
+	&__item {
+		padding-bottom: 10px;
+		// .footer-info__item--time
+		&--time {
+			span {
+				display: flex;
+				@media (min-width: $tablet) {
+					justify-content: space-between;
+				}
+				@media (max-width: $tablet) {
+					justify-content: flex-end;
+				}
+				padding-bottom: 10px;
+				b {
+					padding-right: 10px;
+					@media (max-width:$mobile){
+						 padding-right: 5px; 
+					}
+				}
+			}
+		}
+	}
+	// .footer-info__link
+	&__link {
+		position: relative;
+		&:hover::after {
+			width: 100%;
+		}
+
+		&::after {
+			content: "";
+			top: 100%;
+			position: absolute;
+			left: 0;
+			bottom: 9px;
+			width: 0%;
+			height: 1px;
+			background-color: #f7eee7;
+			transition: all 0.3s ease 0s;
+		}
+	}
+}
+
+//====================================================================================================

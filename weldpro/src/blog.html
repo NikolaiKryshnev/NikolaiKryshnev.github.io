@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Blog"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<div class="page__container">
+				<ul class="breadcrumb">
+					<li class="breadcrumb-item">
+						<a href="#" class="breadcrumb-link">
+							<span>Home</span>
+						</a>
+					</li>
+					<li class="breadcrumb-item">
+						<span>Blog</span>
+					</li>
+				</ul>
+				<div class="title black title--small title--border">
+					Blog
+				</div>
+			</div>
+
+			<section class="section-blog blog  _section">
+				<div class="blog__container">
+					<div class="section__row">
+						<div class="blog__col">
+							<div class="blog__item blog-item">
+								<a href="#" class="blog-item__title">Lorem ipsum dolor sit amet consectetur</a>
+								<div class="blog-item__img _ibg">
+									<img src="../img/blog/01.jpg" alt="">
+								</div>
+								<div class="blog-item__date">
+									JAN 09
+									<span>2023</span>
+								</div>
+							</div>
+						</div>
+						<div class="blog__col">
+							<div class="blog__item blog-item">
+								<a href="#" class="blog-item__title">Vivamus nibh velit, sodales
+									a sapien id, volutpat molestie nunc</a>
+								<div class="blog-item__img _ibg">
+									<img src="../img/blog/02.jpg" alt="">
+								</div>
+								<div class="blog-item__date">
+									JAN 09
+									<span>2023</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="blog__col">
+							<div class="blog__item blog-item">
+								<a href="#" class="blog-item__title">Lorem ipsum dolor sit amet consectetur</a>
+								<div class="blog-item__img _ibg">
+									<img src="../img/blog/03.jpg" alt="">
+								</div>
+								<div class="blog-item__date">
+									JAN 09
+									<span>2023</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="blog__col">
+							<div class="blog__item blog-item">
+								<a href="#" class="blog-item__title">Vivamus nibh velit, sodales
+									a sapien id, volutpat molestie nunc</a>
+								<div class="blog-item__img _ibg">
+									<img src="../img/blog/04.jpg" alt="">
+								</div>
+								<div class="blog-item__date">
+									JAN 09
+									<span>2023</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="blog__col">
+							<div class="blog__item blog-item">
+								<a href="#" class="blog-item__title">Lorem ipsum dolor sit amet consectetur</a>
+								<div class="blog-item__img _ibg">
+									<img src="../img/blog/05.jpg" alt="">
+								</div>
+								<div class="blog-item__date">
+									JAN 09
+									<span>2023</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /.section__row -->
+
+					<div class="pagging">
+						<a href="#" class="pagging__arrow"></a>
+						<ul class="pagging__list">
+							<li>
+								<a href="#" class="pagging__item _active">1</a>
+							</li>
+							<li>
+								<a href="#" c lass="pagging__item">2</a>
+							</li>
+							<li>
+								<a href="#" class="pagging__item">3</a>
+							</li>
+							<li>
+								<a href="#" class="pagging__item">4</a>
+							</li>
+							<li>
+								<a href="#" class="pagging__item">5</a>
+							</li>
+						</ul>
+						<a href="#" class="pagging__arrow"></a>
+					</div>
+				</div>
+				<!-- /.blog__container -->
+			</section>
+			<!-- /.section-blog -->
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
