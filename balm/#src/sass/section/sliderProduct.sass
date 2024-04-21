@@ -1,0 +1,209 @@
+// .sliderProduct-box
+// 	width: 100%
+// 	&:not(.slick-slider)
+// 		display: flex
+		
+//-------------------------------------------------------------------------//
+.product
+	@media ( max-width:$md1+px )
+		position: relative
+		padding-bottom: 54px
+
+	@media ( max-width:$md3+px )
+		padding-bottom: 40px
+
+	&-col
+		@extend .col-3
+
+	&-imgBox
+		display: block
+		@include img_03(52%)
+		// z-index: -1
+
+	&-img
+		@include img_02()
+
+		img
+			@include img_01()
+
+	&-info
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		text-align: center
+		font-size: $fz18
+
+		margin: 10px 0 0 0
+
+		&__name
+			color: $gold
+			max-height: 54px
+			overflow: hidden
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+				
+
+		&__text
+			margin-top: 10px
+			line-height: 1.2
+			height: 42px
+			overflow: hidden
+			text-decoration: none
+			@media ( max-width:$md3+px )
+				font-size: $mfz12
+				height: auto
+			&:hover
+				text-decoration: underline
+
+
+		&__price
+			@include f700()
+			margin-top: 15px
+			color: $gold
+			font-size: $fz20
+
+			&--desc
+				color: #4D4D4D
+				font-size: $fz16
+				position: relative
+				margin-top: 0
+				&::after
+					@include pseudoEl(block, absolute, '')
+					top: 50%
+					left: 50%
+
+					transform: translateY(-50%) translateX(-50%)
+										
+					width: calc( 100% + 10px)
+					height: 1px
+					background: #7C7C7C
+
+	&-btns
+		z-index: 2
+		margin-top: -25px
+		display: flex
+		flex-wrap: wrap
+
+		padding: 0 25px
+		@media ( min-width:$md1+px )
+			position: relative
+
+			justify-content: space-between
+			opacity: 0
+			visibility: hidden
+			transition: opacity 0.3s linear, visibility 0.3s linear
+			
+		@media ( max-width:$md1+px )
+			padding: 0 15px
+
+		a
+			text-decoration: none
+
+			color: $black
+
+	
+		.product-btn
+			background: #000
+			color: $white
+			line-height: 36px
+
+			height: 36px
+			font-size: 14px
+			border-radius: 2px
+			@media ( max-width:$md1+px )
+				margin-right: 4px
+				position: relative
+				z-index: 3
+
+		.product-cart, .product-vishList, .btn-social
+			width: 36px
+
+			display: flex
+			align-items: center
+			justify-content: center
+
+			svg
+				@include white()
+				width: 19px
+				height: 19px
+
+		.product-cart
+			@media ( min-width:$md1+px )
+				display: none
+
+		.product-pay
+			text-align: center
+			max-width: 172px
+			width: 100%
+			@media ( max-width:$md1+px )
+				position: absolute
+				bottom: 0
+				left: 0
+
+				margin: 0
+
+				width: 100%
+				max-width: 100% 
+
+				background: $green
+
+			@media ( max-width:$md3+px )
+				font-size: 10px
+
+
+		.product-cart, .product-vishList, .product-pay
+			@include transitBgColor(0.3s)
+			&:hover
+				background: $gold
+
+		.product-browse
+			width: 100%
+			margin-bottom: 5px
+			padding: 0 0 0 47px
+			@include transitBgColor(0.3s)
+			
+			background-image: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M16.0667 14.9326L11.5525 10.4185C13.6092 7.91614 13.4693 4.20148 11.1322 1.86442C8.64598 -0.621799 4.60063 -0.621799 2.11441 1.86442C-0.371804 4.35064 -0.371804 8.39598 2.11441 10.8822C4.45085 13.2186 8.16504 13.3601 10.6685 11.3025L15.1826 15.8167C15.4267 16.0608 15.8225 16.0608 16.0666 15.8167C16.3108 15.5725 16.3108 15.1767 16.0667 14.9326ZM10.2482 9.99814C8.24941 11.9969 4.99723 11.9969 2.99848 9.99814C0.999727 7.99939 0.999727 4.7472 2.99848 2.74845C4.99716 0.749795 8.24935 0.749639 10.2482 2.74845C12.2469 4.7472 12.2469 7.99939 10.2482 9.99814Z' fill='white'/%3E%3Cpath d='M9.6843 5.74849H7.24867V3.31287C7.24867 2.96762 6.9688 2.68774 6.62355 2.68774C6.2783 2.68774 5.99842 2.96762 5.99842 3.31287V5.74849H3.5628C3.21755 5.74849 2.93767 6.02837 2.93767 6.37362C2.93767 6.71887 3.21755 6.99874 3.5628 6.99874H5.99842V9.43437C5.99842 9.77962 6.2783 10.0595 6.62355 10.0595C6.9688 10.0595 7.24867 9.77962 7.24867 9.43437V6.99874H9.6843C10.0295 6.99874 10.3094 6.71887 10.3094 6.37362C10.3094 6.02837 10.0295 5.74849 9.6843 5.74849Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='16' height='16' fill='white' transform='translate(0.25)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A")
+			background-repeat: no-repeat
+			background-size: 16px
+			background-position: 17px center
+
+			&:hover
+				background-color: #212121
+
+			@media ( max-width:$md1+px )
+				display: none
+	.product-btns
+		.icon-f
+			font-size: 20px
+	&:hover
+		.product-btns
+			opacity: 1
+			visibility: visible
+
+.product-offer
+	position: absolute
+	right: 0
+	top: 0
+	z-index: 3
+	text-align: center
+
+	display: flex
+	flex-direction: column
+
+	@include f600()
+
+	&__block
+		background: $gold
+		min-width: 70px
+		line-height: 35px
+		color: $white
+		padding: 0 5px
+		margin: 0 0 3px 0 
+		@media ( max-width:$md3+px )
+			min-width: 52px
+			line-height: 26px
+			height: 26px
+
+//-------------------------------------------------------------------------//

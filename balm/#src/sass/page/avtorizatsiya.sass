@@ -1,0 +1,78 @@
+.persArea
+	&-col
+		@extend .col-6
+		@media ( max-width:$md2+px )
+			max-width: 100%
+			flex: 0 0 100%
+			&:last-child
+				margin-top: 50px
+
+		.btn
+			max-width: max-content
+			padding: 0 30px
+			line-height: 45px
+
+	&-title
+		font-size: $fz20
+		line-height: 23px
+		color: #4D4D4D
+
+		padding-bottom: 15px
+
+
+	&-text
+		line-height: 24px
+		color: #525252
+		padding-top: 20px
+		border-top: 1px solid #D3D3D3
+
+		margin-bottom: 30px
+
+	.form__line
+		max-width: 370px
+
+	&-form__btns
+		margin-top: 30px
+		max-width: 370px
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&-form__pass
+		color: $gold
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+
+	.persArea-entry__social
+		border-top: 1px solid #D3D3D3
+
+		margin: 35px 0 0 0
+		padding: 15px 0 0 0
+
+	.entry-social
+		&__title
+			color: #4D4D4D
+			margin-bottom: 13px
+
+		&__icons
+			display: flex
+
+			.icon-social
+				max-width: 25px
+				margin-right: 15px
+				transition: opacity 0.3s linear
+				&::before
+					display: none
+				&:hover
+					opacity: 0.7
+
+.persArea--avtorizatsiya
+	.persArea-col
+		max-width: 100%
+		flex: 1 1 100%
+
+	.persArea-form__btns
+		flex-wrap: wrap
+		.btn
+			margin-bottom: 15px

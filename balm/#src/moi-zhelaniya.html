@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Авторизация"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html')
+		<main class="main">
+			@@include('_breadcrumbs.html',{
+			"text":"Мой профиль"
+			})
+			<section class="section-myProfil myProfil _section">
+				<div class="container">
+					<div class="row">
+
+						<div class="myProfil-sidebar">
+							<div class="myProfil-sidebar__ul">
+								<li ><a href="moy-profil.html" rel="nofollow">Мой аккаунт</a></li>
+
+								<li><a href="moi-zakazy.html" rel="nofollow">Мои заказы</a></li>
+
+								<li class=" active"><a href="moi-zhelaniya.html" rel="nofollow">Мои желания </a></li>
+
+								<li><span class="myProfil-sidebar__border"></span></li>
+
+								<li><a href="adresa.html" rel="nofollow">Адреса</a></li>
+
+								<li><a href="Informatsiya-ob-akkaunte.html" rel="nofollow">Информация об аккаунте</a></li>
+
+								<li><span class="myProfil-sidebar__border"></span></li>
+
+								<li><a href="#" rel="nofollow">Выйти</a></li>
+							</div>
+							<!-- /.myProfil-sidebar__ul -->
+						</div>
+						<!-- /.myProfil-sidebar -->
+
+						<div class="myProfil-content">
+							<div class="myProfil-title h2">
+								<span>Мой профиль</span>
+							</div>
+
+							<div class="myProfil-content__title">
+								Мои желания
+							</div>
+
+							<div class="myProfil-content__row row">
+								<form class="myProfil" action="#">
+									<div class="myProfil-wishlist">
+										<div class="myProfil-wishlist__block wishlist-block">
+											<div class="wishlist-block__close"></div>
+											<a class="wishlist-block__boxImg" href="#">
+												<div class="wishlist-block__img">
+													<img src="./img/section-sliderProduct/01.png" alt="" loading="lazy">
+												</div>
+											</a>
+											<div class="wishlist-block__info">
+												<a class="wishlist-block__title" href="#">Professional Titanium Ionic Iron UK New</a>
+												<div class="wishlist-block__price">59 BYN</div>
+												<input name="#" id="#" placeholder="Комментарий"></input>
+												<div class="wishlist-block__tocart">
+													<input class="number" type="text">
+													<button class="btn btn-green" type="submit">ДОБАВИТЬ В КОРЗИНУ</button>
+												</div>
+
+											</div>
+											<!-- /.wishlist-block__info -->
+										</div>
+										<!-- /.myProfil-wishlist__block -->
+										
+										<div class="myProfil-wishlist__block wishlist-block">
+											<div class="wishlist-block__close"></div>
+											<a class="wishlist-block__boxImg" href="#">
+												<div class="wishlist-block__img">
+													<img src="./img/section-sliderProduct/01.png" alt="" loading="lazy">
+												</div>
+											</a>
+											<div class="wishlist-block__info">
+												<a class="wishlist-block__title" href="#">Professional Titanium Ionic Iron UK New</a>
+												<div class="wishlist-block__price">59 BYN</div>
+												<input name="#" id="#" placeholder="Комментарий"></input>
+												<div class="wishlist-block__tocart">
+													<input class="number" type="text">
+													<button class="btn btn-green" type="submit">ДОБАВИТЬ В КОРЗИНУ</button>
+												</div>
+
+											</div>
+											<!-- /.wishlist-block__info -->
+										</div>
+										<!-- /.myProfil-wishlist__block -->
+
+										<div class="myProfil-wishlist__block wishlist-block">
+											<div class="wishlist-block__close"></div>
+											<a class="wishlist-block__boxImg" href="#">
+												<div class="wishlist-block__img">
+													<img src="./img/section-sliderProduct/01.png" alt="" loading="lazy">
+												</div>
+											</a>
+											<div class="wishlist-block__info">
+												<a class="wishlist-block__title" href="#">Professional Titanium Ionic Iron UK New</a>
+												<div class="wishlist-block__price">59 BYN</div>
+												<input name="#" id="#" placeholder="Комментарий"></input>
+												<div class="wishlist-block__tocart">
+													<input class="number" type="text">
+													<button class="btn btn-green" type="submit">ДОБАВИТЬ В КОРЗИНУ</button>
+												</div>
+
+											</div>
+											<!-- /.wishlist-block__info -->
+										</div>
+										<!-- /.myProfil-wishlist__block -->
+									</div>
+									<!-- /.myProfil-wishlist -->
+
+									<button class="btn btn-green" type="submit">ДОБАВИТЬ ВСЕ В КОРЗИНУ</button>
+									<button class="btn btn-green" type="submit">ОЧИСТИТЬ</button>
+
+								</form>
+							</div>
+							<!-- /.myProfil-content__row -->
+							@@include('_pagination.html')
+						</div>
+						<!-- /.myProfil-content -->
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.container -->
+			</section>
+			<!-- /.section-PersArea -->
+			<div class="h-10"></div>
+
+		</main>
+		<!-- /.main -->
+		@@include('_footer.html')
+	</div>
+	<!-- /.wrapper -->
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

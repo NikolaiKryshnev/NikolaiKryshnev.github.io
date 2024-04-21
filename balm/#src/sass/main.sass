@@ -1,0 +1,121 @@
+//<ОБОЛОЧКА>------------------------------------------------------------------------------
+html,
+body
+	font-size: 16px
+	@include f400()
+	@media ( max-width:$md3+px )
+		font-size: 14px
+
+body.active
+	overflow: hidden
+
+.wrapper
+	width: 100%
+	min-height: 100vh
+	overflow: hidden
+	display: flex
+	flex-direction: column
+
+.main 
+	flex: 1 1 auto
+	&:not(.main--home)
+		padding-top: 50px
+		
+	
+		
+	
+.container 
+	max-width: $maxWidthContainer + px
+	min-width: 320px
+	width: 100%
+
+	padding: 0 15px
+	margin: 0 auto
+	@media ( max-width:$md1+px )
+		max-width: 960px
+
+	@media ( max-width:$md2+px )
+		max-width: 720px
+
+	@media ( max-width:$md3+px )
+		max-width: 540px
+		
+
+.container-fluid 
+	min-width: 320px
+	width: 100%
+
+	padding: 0 15px
+	margin: 0 auto
+
+.row
+	display: flex
+	flex-wrap: wrap
+
+	margin: 0 -15px
+//</ОБОЛОЧКА>------------------------------------------------------------------------------
+
+//--------- TITLE ---------//
+
+.h1
+	font-size: 2rem
+	
+
+.h2
+	font-size: 1.8rem
+	
+
+.h3
+	font-size: 1.6rem
+	
+
+.h4
+	font-size: 1.4rem
+	
+
+.h5
+	font-size: 1.2rem
+	
+
+//--------- BTN ---------//
+
+.btn
+	display: block
+	background: $black
+
+	padding: 0 20px
+
+	vertical-align: middle
+	line-height: 36px
+	color: $white
+	text-transform: uppercase
+	@include f500()
+	cursor: pointer
+	text-decoration: none
+	text-align: center
+
+	@include transitBgColor(0.3s)
+	&:hover
+		background: $gold
+
+	&-green
+		display: block
+		background: #00381d
+		color: #fff
+		font-size: 14px
+		line-height: 41px
+		text-transform: uppercase
+		padding: 0 20px
+		transition: .3s background-color linear
+		@include f400()
+
+		&:hover
+			background: #595959
+
+	
+.ban-block__img
+	display: block
+	width: 100%
+
+
+

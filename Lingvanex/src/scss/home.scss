@@ -1,0 +1,47 @@
+.tabs__content {
+	position: relative;
+	z-index: 1;
+	margin: 0 auto;
+}
+
+$itemsCount: 3; 
+@media (min-width: $mobile) {
+	.tabs-body {
+		position: absolute;
+		transition: transform 0.3s, opacity 0.2s;
+		&._active {
+			transform: scale(1) !important;
+		}
+
+		&.hidden {
+			z-index: 100;
+			opacity: 0;
+			transition: color 0.5s, background-color 0.5s, transform 1s, opacity 0.2s 0.4s;
+
+			h1 {
+				color: #fff;
+				transition: color 0.5s;
+			}
+
+			@for $i from 1 through $itemsCount {
+				&:nth-of-type(#{$i}) {
+					transform: 
+					translateY(60 * 5%)
+					scale(2 * 0.1)
+				}
+			}
+		}
+
+		@for $i from 1 through $itemsCount {
+			$zIndexStartValue: $itemsCount + 1;
+			$yValue: ($i - 1) * 30px;
+			$sValue: 1 - (($i - 1) * 0.05);
+			$zIndexValue: $itemsCount - $i;
+
+			&:nth-of-type(#{$i}) {
+				z-index: $zIndexValue;
+				transform: translateY(#{$yValue}) scale($sValue);
+			}
+		}
+	}
+}

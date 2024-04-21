@@ -1,0 +1,241 @@
+.rating 
+	display: flex
+	align-items: center
+	font-size: 13px
+	line-height: 0.75
+	transition: opacity 0.3s ease 0s
+
+.rating.rating_sending 
+	opacity: 0.2
+
+.rating.rating_set .rating__active,
+.rating.rating_set .rating__item 
+	cursor: pointer
+
+
+.rating__body 
+	position: relative
+	width: 65px
+	height: 11px
+
+.rating__body::before 
+	content: ""
+	background-image: url("data:image/svg+xml,%3Csvg width='13' height='12' viewBox='0 0 13 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.4856 4.91752C11.4512 4.81744 11.3595 4.74453 11.2492 4.7294L8.14913 4.30438L6.76272 1.65407C6.71337 1.55972 6.61153 1.5 6.50001 1.5C6.38851 1.5 6.28665 1.55974 6.2373 1.65407L4.85081 4.3044L1.75084 4.7294C1.64049 4.74453 1.54881 4.81746 1.51435 4.91752C1.47988 5.01758 1.50863 5.12742 1.58847 5.20086L3.8316 7.26386L3.30214 10.1769C3.2833 10.2806 3.32849 10.3854 3.41871 10.4472C3.5089 10.509 3.62847 10.5172 3.72724 10.4682L6.49999 9.09291L9.27266 10.4683C9.31553 10.4895 9.36233 10.5 9.40897 10.5C9.46971 10.5 9.53018 10.4822 9.5812 10.4472C9.67141 10.3854 9.71661 10.2806 9.69776 10.1769L9.16815 7.26386L11.4115 5.20087C11.4914 5.12742 11.5201 5.01758 11.4856 4.91752Z' fill='%23EAEAEA'/%3E%3C/svg%3E ")
+	background-position: left center
+	display: block
+	height: 10px
+
+
+
+.rating__active 
+	position: absolute
+	width: 0%
+	height: 10px
+	top: 0
+	left: 0
+	overflow: hidden
+
+.rating__active::before 
+	content: ""
+	background-image: url("data:image/svg+xml,%3Csvg width='13' height='12' viewBox='0 0 13 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.4856 4.91752C11.4512 4.81744 11.3595 4.74453 11.2492 4.7294L8.14913 4.30438L6.76272 1.65407C6.71337 1.55972 6.61153 1.5 6.50001 1.5C6.38851 1.5 6.28665 1.55974 6.2373 1.65407L4.85081 4.3044L1.75084 4.7294C1.64049 4.74453 1.54881 4.81746 1.51435 4.91752C1.47988 5.01758 1.50863 5.12742 1.58847 5.20086L3.8316 7.26386L3.30214 10.1769C3.2833 10.2806 3.32849 10.3854 3.41871 10.4472C3.5089 10.509 3.62847 10.5172 3.72724 10.4682L6.49999 9.09291L9.27266 10.4683C9.31553 10.4895 9.36233 10.5 9.40897 10.5C9.46971 10.5 9.53018 10.4822 9.5812 10.4472C9.67141 10.3854 9.71661 10.2806 9.69776 10.1769L9.16815 7.26386L11.4115 5.20087C11.4914 5.12742 11.5201 5.01758 11.4856 4.91752Z' fill='%23CCA75D'/%3E%3C/svg%3E ")
+
+	background-position: left center
+	position: absolute
+	width: 100%
+	height: 10px
+	top: 50%
+	transform: translateY(-50%)
+	left: 0
+	color: $gold
+
+
+.rating__items 
+	display: flex
+	align-items: center
+
+	position: absolute
+	width: 100%
+	height: 10px
+	top: 0
+	left: 0
+
+.rating__item 
+	width: 13px
+	height: 10px
+	opacity: 0
+	margin: 0
+	padding: 0
+
+.rating__value
+	overflow: hidden
+	font-size: 0
+	line-height: 0
+	height: 0
+	width: 0
+	padding: 0
+
+//-------------------------------------------------------------------------//
+.checkbox
+	position: relative
+	// .checkbox__input
+	&__input
+		position: absolute
+		width: 0
+		height: 0
+		opacity: 0
+		visibility: hidden
+		&:checked + .checkbox__text:before
+			background: #fff url("../img/icons/check.svg") center no-repeat
+
+	// .checkbox__text
+	&__text
+		display: inline-flex
+		align-items: center
+		position: relative
+		font-size: 16px
+		color: #525252
+		letter-spacing: -0.3px
+		line-height: calc(20 / 16)
+		cursor: pointer
+
+		&:before
+			content: ""
+			align-self: flex-start
+			margin: 0px 14px 0px 0px
+			flex: 0 0 20px
+			left: 0
+			top: 0
+			width: 20px
+			height: 20px
+			background: #fff
+			border: 1px solid #7C7C7C
+
+	a
+		color: #525252
+		text-decoration: underline
+		@media (min-width: 992px)
+			&:hover
+				text-decoration: none
+
+
+//-------------------------------------------------------------------------//
+
+.quantity 
+
+	// width: 75px
+	display: flex
+	justify-content: center
+	align-items: center
+	// border: 1px solid rgba(166, 166, 166, 0.45)
+	// .quantity__button
+	&__button 
+		flex: 0 0 22px
+		height: 22px
+		position: relative
+		cursor: pointer
+		&::before,
+		&::after 
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			transition: all 0.3s ease 0s
+			margin: 0px 0px 0px -3.5px
+			background-color: #4D4D4D
+			width: 7px
+			height: 1px
+		
+		@media (min-width: $md2+px) 
+			&:hover 
+				&::before,
+				&::after 
+					background-color: $gold
+				
+			
+		
+		// .quantity__button_plus
+		&_plus 
+			&::before 
+				transform: rotate(-90deg)
+			
+		
+		// .quantity__button_minus
+		&_minus 
+		
+	
+	// .quantity__input
+	&__input 
+		flex: 0 0 20px
+		input 
+			height: 100%
+			color: #4D4D4D
+			font-size: 18px
+			
+			width: 100%
+			text-align: center
+		
+	
+
+//-------------------------------------------------------------------------//
+.radio 
+	display: block
+
+	margin: 0 0 10px
+
+	font-size: 16px
+	cursor: pointer
+	line-height: 17px
+
+	&:last-child
+		margin: 0 0 10px
+
+	input 
+		display: none
+
+		& + .delivery-text 
+			position: relative
+			display: flex
+
+			padding-left: 27px
+
+			height: 27px
+
+			line-height: 27px
+
+			&:not(:empty) 
+				padding-left: 50px
+				@media ( max-width:$md2+px )
+					padding-left: 40px
+
+			&:before, &:after 
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				display: block
+
+				width: 27px
+				height: 27px
+
+				border-radius: 50%
+
+			&:before 
+				border: 0.5px solid rgba(#4D4D4D, 0.24)
+
+			&:after 
+				background: #fff
+				border: 1px solid rgba(#D3D3D3, 0)
+
+				transform: scale(0.9)
+
+		&:checked + .delivery-text:before 
+			background: #fff
+
+		&:checked + .delivery-text:after 
+			border: 0.5px solid $gold
+
+			background: $gold
+
+			transform: scale(0.7)
+//</RADIO>---------------------------------------------
+

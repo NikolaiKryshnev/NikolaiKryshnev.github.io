@@ -1,0 +1,124 @@
+.section-info {
+}
+
+.info {
+	// .info__row
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -32px;
+	}
+	// .info-box
+	&-box {
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+		flex: 0 0 33.333333%;
+		max-width: 33.333333%;
+		padding: 0 32px;
+		@media (max-width: $md1+px) {
+			display: none;
+		}
+		// .info-box__border
+		&__border {
+			border: 1px solid $grayline;
+		}
+		// .info-box__imgBox
+		&__imgBox {
+			@include img_03(50%);
+			transform: matrix(1, 0.09, -0.09, 1, 0, 0);
+		}
+
+		// .info-box__img
+		&__img {
+			@include img_02();
+			img {
+				@include img_01();
+			}
+		}
+		.btn {
+			margin-top: 15px;
+		}
+	}
+
+	// .info-info
+	&-info {
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+		flex: 0 0 66.666667%;
+		max-width: 66.666667%;
+		padding: 0 32px;
+
+		display: flex;
+		// flex-wrap: wrap;
+		flex-direction: column;
+		@media (max-width: $md1+px) {
+			flex: 1 1 100%;
+			max-width: 100%;
+		}
+
+		// .info-info__text
+		&__text {
+		}
+	}
+	.info-text {
+		display: flex;
+		flex-wrap: wrap;
+		color: $white;
+		p {
+			margin-bottom: 20px;
+		}
+		@media (max-width: $md3+px) {
+			font-size: 14px;
+		}
+	}
+}
+
+.main-ul {
+	// .main-ul__title
+	&__title {
+		display: block;
+		font-weight: 700;
+		@include adaptiv-value("font-size", 32, 24, 0);
+		line-height: 130%;
+		color: $green;
+		@include adaptiv-value("margin-bottom", 25, 15, 0);
+		margin-left: -20px;
+	}
+
+	// .main-ul__list
+	&__list {
+		padding-left: 20px;
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+		flex: 0 0 50%;
+		max-width: 50%;
+		list-style-type: square;
+		padding-right: 10%;
+		&.main-ul__list-item_5 {
+			flex: 1 1 100%;
+			max-width: 100%;
+		}
+		@media (max-width: $md3+px) {
+			padding-right: 0;
+			flex: 1 1 100%;
+			max-width: 100%;
+			&:not(:last-child) {
+				margin-bottom: 25px;
+			}
+		}
+		li {
+			color: $green;
+			list-style-type: square;
+			&:not(:last-child) {
+				margin: 0 0 10px 0;
+			}
+
+			span {
+				color: $white;
+			}
+		}
+	}
+}

@@ -1,0 +1,459 @@
+.myProfil
+	&-thanks 
+		font-size: $fz20
+		background: #F8F8F8
+		width: 100%
+		line-height: 58px
+		text-align: center
+		margin-bottom: 20px
+
+	&-row
+		width: 100%
+
+	&-sidebar
+		@extend .col-3
+		@media ( max-width:$md1+px )
+			flex: 0 0 33.333333%
+			max-width: 33.333333%
+
+		@media ( max-width:$md2+px )
+			flex: 1 1 100%
+			max-width: 100%
+
+		&__ul
+			list-style-type: none
+			background: #F8F8F8
+			padding: 7px 0
+			@media ( max-width:$md2+px )
+				display: none
+
+			li
+
+				a
+					position: relative
+					padding: 13px 32px
+
+					display: block
+					text-decoration: none
+
+					color: #7C7C7C
+					font-size: $fz16
+					@include transitColor(0.3s)
+					&:hover
+						color: #000000
+
+						
+
+				&.active
+					@media ( max-width:$md2+px )
+						display: none
+
+					a
+						color: #000000
+						
+						&::after
+							@include pseudoEl(block, absolute, '')
+							height: 43px
+							top: 50%
+							@include translateY(-50%)
+							left: 0
+							width: 3px
+							background: $gold
+
+				.myProfil-sidebar__border
+					display: block
+					margin: 13px 32px
+					border-top: 1px solid #D3D3D3
+
+		@media ( max-width:$md2+px )
+			&__title 
+				display: flex
+				align-items: center
+				justify-content: center
+
+				font-size: $fz18
+				background: #F8F8F8
+				width: 100%
+				line-height: 58px
+				text-align: center
+				margin-bottom: 20px
+
+				.arrow
+					display: flex
+					align-items: center
+					justify-content: center
+					margin-left: 12px
+
+					width: 18px
+					height: 18px
+					transition: all 0.3s linear
+
+
+				&.active .arrow
+					@include rotate(180deg)
+
+	&-title
+		color: #4D4D4D
+		font-size: $fz24
+		text-transform: uppercase
+		margin-bottom: 25px
+
+	&-content	
+		@extend .col-9		
+		@media ( max-width:$md1+px )
+			flex: 0 0 66.666667%
+			max-width: 66.666667%
+
+		@media ( max-width:$md2+px )
+			flex: 1 1 100%
+			max-width: 100%
+			margin-top: 20px
+
+
+		&__title
+			padding-bottom: 15px
+			margin-bottom: 25px
+
+			color: #4D4D4D
+			font-size: $fz20
+			border-bottom: 0.5px solid #D3D3D3
+
+		&__row
+			display: flex
+			flex-wrap: wrap
+			// margin: 0 -10px
+			margin-bottom: 45px
+			@media ( max-width:$md1+px )
+				margin-bottom: 30px
+
+			@media ( max-width:$md3+px )
+				margin-bottom: 25px
+
+			.myProfil-col
+				max-width: 50%
+				flex: 0 0 50%
+				padding: 0 15px
+				@media ( max-width:$md3+px )
+					flex: 1 1 100%
+					max-width: 100%
+					margin-bottom: 10px
+
+			.myProfil-info
+				height: 100%
+				padding: 29px 33px
+				border: 0.5px solid #D3D3D3
+				@media ( max-width:$md1+px )
+					padding: 15px 20px
+
+				&__title
+					font-size: $fz18
+					margin-bottom: 10px
+					line-height: 20px
+
+				&__text
+					display: flex
+					flex-direction: column
+
+					span
+						line-height: 22px
+						color: #7C7C7C
+
+				&__edit
+					display: flex	
+					flex-wrap: wrap
+					margin-top: 15px
+
+					a
+						font-size: 14px
+						color: $gold
+
+						margin-right: 25px
+						margin-bottom: 5px
+
+.myProfil
+	width: 100%
+
+	.btn
+		@include f400()
+
+	.fieldset
+		padding: 0
+		display: flex
+		flex-wrap: wrap
+
+		width: 100%
+		border: 0
+
+		.form__line
+			padding: 0 15px
+			max-width: 100%
+			flex: 1 1 100%
+
+		&-half
+			.form__line
+				max-width: 50%
+				flex: 0 0 50%
+				@media ( max-width:$md3+px )
+					max-width: 100%
+					flex: 1 1 100%
+
+				&--select
+					max-width: 100%
+					flex: 1 1 100%
+
+	.btn
+		margin-left: 15px
+		margin-top: 15px
+		float: left
+
+	.form__checkbox
+		width: 100%
+		padding: 0 15px
+
+		display: flex
+		flex-direction: column
+
+		.checkbox
+			margin-bottom: 10px
+
+
+.myProfil-wishlist
+	padding: 0 15px
+
+.wishlist-block
+	position: relative
+	display: flex
+	padding: 25px
+	margin-bottom: 20px
+	border: 0.5px solid #D3D3D3
+	@media ( max-width:$md3+px )
+		padding: 10px 25px 20px 10px
+	&:last-child
+		margin-bottom: 0
+
+	&__boxImg
+		max-width: 145px
+		display: block
+		@include img_03(10.5%)
+		height: 0
+		@media ( max-width:$md1+px )
+			max-width: 80px
+			padding: 8.5% 0
+
+		@media ( max-width:$md3+px )
+			max-width: 60px
+			padding: 15.5% 0
+
+
+	&__img
+		@include img_02()
+
+		img
+			@include img_01()
+
+	&__info
+		width: 100%
+		margin-left: 30px
+		@media ( max-width:$md1+px )
+			margin-left: 15px
+
+		@media ( max-width:$md3+px )
+			margin-left: 10px
+		
+
+	&__title
+		display: block
+		max-width: 570px
+		width: 100%
+
+		font-size: $fz22
+		line-height: 25px
+		padding-bottom: 10px
+		color: #4D4D4D
+		text-decoration: none
+
+	&__price
+		font-size: $fz18
+		color: #4D4D4D
+		margin-bottom: 15px
+		@include f500()
+
+	input 
+		max-width: 570px
+		width: 100%
+		border: 0.5px solid #7C7C7C
+		padding: 0 17px
+		resize: none
+		height: 40px
+		line-height: 40px
+		font-size: 14px
+		@media ( max-width:$md3+px )
+			max-width: 170px
+
+		&:placeholder
+			color: #D3D3D3
+
+
+	&__tocart
+		margin-top: 15px
+		display: flex
+		@media ( max-width:$md3+px )
+			flex-wrap: wrap
+
+		input
+			max-width: 70px
+			text-align: center
+			line-height: 40px
+			height: 40px	
+			padding: 0 11px
+			font-size: 14px
+			color: #4D4D4D
+			width: 100%
+			border: 0.5px solid #7C7C7C
+			@include f400()
+			margin-left: 0
+			margin-right: 15px
+			margin-bottom: 15px
+			@media ( max-width:$md3+px )
+				max-width: 70px
+
+		.btn
+			margin-top: 0
+			margin-left: 0
+			height: 40px
+			@media ( max-width:$md3+px )
+				font-size: 14px
+				padding: 0 15px
+
+	&__close
+		right: 15px
+		top: 15px
+		position: absolute
+		width: 10px
+		height: 10px
+		cursor: pointer
+		&:hover
+			&:after, &::before
+				background: #000
+
+		&::after, &::before
+			@include pseudoEl(block, absolute, '')
+			width: 2px
+			height: 12px
+			background: $gold
+			left: 50%
+			@include transitBgColor(0.3s)
+
+		&::after
+			transform: translateX(-50%) rotate(45deg)
+
+
+		&::before
+			transform: translateX(-50%) rotate(-45deg)
+
+.myProfil-order
+	padding: 0 15px
+	&__block
+		display: flex
+		padding: 25px 100px 25px 25px
+		border: 0.5px solid #D3D3D3
+		margin-bottom: 20px
+		@media ( max-width:$md1+px )
+			padding: 15px 45px 15px 15px
+		@media ( max-width:$md3+px )
+			padding: 15px 15px 15px 10px
+			
+	&__boxImg
+		@include img_03(10%)
+		max-width: 145px
+		max-height: 180px
+		@media ( max-width:$md1+px )
+			max-width: 80px
+			max-height: 95px
+
+		@media ( max-width:$md3+px )
+			max-width: 60px
+			max-height: 70px
+
+	&__img
+		@include img_02()
+
+		img
+			@include img_01()
+
+	.order-info
+		margin-left: 30px
+		width: 100%
+		@media ( max-width:$md2+px )
+			margin-left: 10px
+		
+
+		&__date
+			font-size: 14px
+			color: #7C7C7C
+			// margin-bottom: 5px
+
+		&__name
+			color: #4D4D4D
+			font-size: $fz22
+			margin-bottom: 10px
+			line-height: 22px
+			@media ( max-width:$md1+px )
+				margin-bottom: 5px
+
+		&__price
+			font-size: 14px
+			color: #4D4D4D
+			margin-bottom: 15px
+			@include f500()
+
+		&__qua
+			font-size: $fz18
+			margin: 0 10px 0 0
+
+		&__delivery
+			display: flex
+			flex-direction: column
+
+			padding-top: 15px
+			border-top: 0.5px solid #D3D3D3
+			color: #7C7C7C
+			margin-bottom: 20px
+
+			span
+				display: block
+				// max-width: 200px
+
+		&__sum
+			border-top: 0.5px solid #D3D3D3
+			padding-top: 10px
+			font-size: $fz24
+			@include f500()
+
+
+
+
+.myProfil--account
+	// display: flex
+	// flex-wrap: wrap
+	.fieldset
+		margin: 0
+		float: left
+	
+		flex: 0 0 50%
+		max-width: 50%
+		@media ( max-width:$md2+px )
+			flex: 1 1 100%
+			max-width: 100%
+
+			margin: 0 0 20px 0 
+
+		.form__line
+			max-width: 100%
+			flex: 1 1 100%	
+
+	.fieldset-email, .fieldset-password
+		width: 100%
+	
+.fieldset-email, .fieldset-password
+	display: none

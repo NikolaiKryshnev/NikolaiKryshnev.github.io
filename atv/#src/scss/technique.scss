@@ -1,0 +1,131 @@
+.section-technique {
+}
+.technique {
+	width: 100%;
+	// .technique__row
+	&__row {
+	}
+
+	// .technique-slide
+	&-slide {
+		&:not(._swiper) {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -32px;
+			.technique__col {
+				padding: 0 32px;
+				margin-bottom: 64px;
+				position: relative;
+				width: 100%;
+				min-height: 1px;
+				flex: 0 0 50%;
+				max-width: 50%;
+				@media (max-width: $md3+px) {
+					flex: 1 1 100%;
+					max-width: 100%;
+					margin-bottom: 30px;
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		// .technique-slide__item
+		&__item {
+		}
+	}
+	// .technique-item
+	&-item {
+		// .technique-item__boxImg
+		&__boxImg {
+			@include img_03(35%);
+			._gallery-item {
+				position: absolute;
+				right: 5px;
+				top: 5px;
+				width: 2em;
+				height: 2em;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: rgba($color: $green, $alpha: 0.84);
+				font-size: 1.5em;
+				z-index: 10;
+				color: $white;
+				border-radius: 50%;
+				opacity: 0;
+				transition: all 0.3s linear;
+				@media ( max-width:$md1+px){
+					opacity: 1;
+				}
+			}
+			&:hover {
+				._gallery-item {
+					opacity: 1;
+				}
+			}
+		}
+		// .technique-item__img
+		&__img {
+			@include img_02();
+			img {
+				@include img_01();
+			}
+			
+		}
+		// .technique-item__title
+		&__title {
+			display: block;
+			@include adaptiv-value("margin-top", 35, 10, 0);
+			font-weight: 700;
+			line-height: 130%;
+			@include adaptiv-value("font-size", 28, 24, 0);
+			color: $white;
+			@include transitColor(0.3s);
+			&:hover {
+				color: $green;
+			}
+		}
+		// .technique-item__text
+		&__text {
+			margin-top: 15px;
+			line-height: 150%;
+			color: $graytext;
+			@media (max-width: $md1+px) {
+				margin-top: 10px;
+			}
+			@media (max-width: $md3+px) {
+				font-size: 14px;
+			}
+			@include adaptiv-value("margin-bottom", 30, 15, 0);
+		}
+	}
+}
+.gallery__row._gallery, .phote-slide._gallery {
+	._gallery-item._icon-loup::before {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: rgba($color: $green, $alpha: 0.84);
+		font-size: 46px;
+		color: $white;
+		opacity: 0;
+		transition: all 0.3s linear;
+		visibility: hidden;
+		z-index: 0;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+	._gallery-item._icon-loup:hover {
+		&:before {
+			opacity: 1;
+			z-index: 20;
+			visibility: visible;
+		}
+	}
+}

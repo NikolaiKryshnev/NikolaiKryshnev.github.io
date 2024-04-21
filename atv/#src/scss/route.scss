@@ -1,0 +1,244 @@
+.section-route {
+}
+.route,
+.blog {
+	// .route__row
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -32px;
+		@media (max-width: $md1+px) {
+			margin: 0 -15px;
+		}
+	}
+	// .route__col
+	&__col {
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+		padding-right: 32px;
+		padding-left: 32px;
+		flex: 0 0 33.333333%;
+		max-width: 33.333333%;
+		margin-bottom: 75px;
+
+		@media (max-width: $md1+px) {
+			margin-bottom: 40px;
+			padding-right: 15px;
+			padding-left: 15px;
+			@media (min-width: $md2+px) {
+				flex: 0 0 50%;
+				max-width: 50%;
+			}
+		}
+		@media (max-width: $md2+px) {
+			flex: 1 1 100%;
+			max-width: 100%;
+			&--info {
+				display: none;
+			}
+		}
+	}
+
+	// .route-box
+	&-box {
+		@media (max-width: $md2+px) {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		&__date {
+			font-size: 16px;
+			line-height: 150%;
+			color: $grayline;
+			margin-bottom: 5px;
+		}
+		// .route-box__imgBox
+		&__imgBox,
+		&__info {
+			@media (max-width: $md2+px) {
+				@media (min-width: $md3+px) {
+					position: relative;
+					width: 100%;
+					min-height: 1px;
+					flex: 0 0 50%;
+					max-width: 50%;
+				}
+			}
+			@media (max-width: $md3+px) {
+				flex: 1 1 100%;
+				max-width: 100%;
+			}
+		}
+
+		&__imgBox img {
+			width: 100%;
+		}
+		// .route-box__info
+		&__info {
+			@media (max-width: $md2+px) {
+				@media (min-width: $md3+px) {
+					padding-left: 15px;
+				}
+			}
+		}
+
+		// .route-box__title
+		&__title {
+			display: block;
+			font-weight: 700;
+			@include adaptiv-value("font-size", 32, 24, 0);
+			line-height: 130%;
+			color: $white;
+			margin-top: 18px;
+			@include transitColor(0.3s);
+			&:hover {
+				color: $green;
+			}
+			@media (max-width: $md2+px) {
+				@media (min-width: $md3+px) {
+					margin-top: 0;
+				}
+			}
+		}
+		// .route-box__time
+		&__time {
+			display: flex;
+			font-weight: 600;
+			margin-top: 15px;
+			@include adaptiv-value("font-size", 18, 14, 0);
+			line-height: 1;
+			color: $white;
+			[class^="_icon-"],
+			[class*=" _icon-"] {
+				color: $green;
+				margin-right: 15px;
+				@media (max-width: $md1+px) {
+					margin-right: 10px;
+				}
+			}
+			@media (max-width: $md1+px) {
+				margin-top: 10px;
+			}
+		}
+		// .route-box__text
+		&__text {
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 150%;
+			color: $graytext;
+			margin-top: 15px;
+			@media (max-width: $md2+px) {
+				@media (min-width: $md3+px) {
+					max-height: 70px;
+					overflow: hidden;
+				}
+			}
+			@media (max-width: $md3+px) {
+				font-size: 14px;
+			}
+		}
+
+		// .route-box__link
+		&__link {
+			display: block;
+			@media (min-width: $md1+px) {
+				display: none;
+			}
+			margin-top: 38px;
+			color: $green;
+			text-decoration: underline;
+			@media (max-width: $md3+px) {
+				margin-top: 15px;
+				font-size: 14px;
+			}
+		}
+	}
+	._container > .btn {
+		@media (min-width: $md2+px) {
+			display: none;
+		}
+	}
+
+	// .route-info
+	&-info {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+
+		padding: 45px 50px;
+		height: 100%;
+
+		background: url("../img/section-routes/01-bg.png") 100% 100% no-repeat $green;
+		// .route-info__text
+		&__text {
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 150%;
+			color: $white;
+		}
+		.btn {
+			margin-top: 20px;
+		}
+	}
+}
+.routes,
+.blog {
+	// .routes__row
+	@media (min-width: $md1+px) {
+		.route__col,
+		.blog__col {
+			flex: 1 1 100%;
+			max-width: 100%;
+			margin-bottom: 0;
+			&:last-child {
+				.route-box,
+				.blog-box {
+					// border-bottom: 1px solid $grayline;
+				}
+			}
+		}
+		.route-box,
+		.blog__box {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 24px 0;
+			border-top: 1px solid $grayline;
+		}
+		.route-box__imgBox,
+		.route-box__info,
+		.blog-box__imgBox,
+		.blog-box__info {
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+		.route-box__info,
+		.blog-box__info {
+			padding-left: 64px;
+		}
+		.route-box__title,
+		.blog-box__title {
+			margin-top: 0;
+		}
+	}
+}
+
+.blog {
+	.btn {
+		margin-top: 38px;
+	}
+	&-box__imgBox {
+		@include img_03(14%);
+		max-height: 255px;
+		@media ( max-width:$md1+px){
+			padding: 25% 0;
+		}
+	}
+	&-box__img {
+		@include img_02();
+		img {
+			@include img_01();
+
+		}
+	}
+}

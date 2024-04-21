@@ -1,0 +1,30 @@
+.phote {
+	width: 100%;
+	margin-top: 85px;
+	margin-bottom: 85px;
+	@media ( max-width:$md3+px){
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+	// .phote-slide
+	&__slide {
+	}
+}
+.phote-slide {
+	// .phote-slide__col
+	&__col {
+	}
+
+	// .phote-slide__boximg
+	&__boximg {
+		@include img_03(30%);
+	}
+
+	// .phote-slide__img
+	&__img {
+		@include img_02();
+		img {
+			@include img_01();
+		}
+	}
+}

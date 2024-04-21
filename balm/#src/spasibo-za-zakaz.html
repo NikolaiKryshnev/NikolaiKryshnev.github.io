@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Оформление заказа"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html')
+		<main class="main">
+			@@include('_breadcrumbs.html',{
+			"text":"Оформление заказа"
+			})
+			<section class="section-orders orders _section">
+				<div class="container">
+					<div class="row">
+						<div class="page-title h2">
+							<span>Спасибо за заказ!</span>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">	
+						
+						<div class="orders-info">
+							<div class="orders-number">Номер заказа: <span>1200435</span></div>
+							На ваш E-mail была выслана информация о заказе, а также track-номер для отслеживания посылки.</div>
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.container -->
+			</section>
+			<!-- /.section-PersArea -->
+			<div class="h-10"></div>
+		</main>
+		<!-- /.main -->
+		@@include('_footer.html')
+	</div>
+	<!-- /.wrapper -->
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

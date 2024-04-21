@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Авторизация"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html')
+		<main class="main">
+			@@include('_breadcrumbs.html',{
+			"text":"РЕГИСТРАЦИЯ"
+			})
+			<section class="section-PersArea persArea persArea--avtorizatsiya _section">
+				<div class="container">
+					<div class="row">
+						<div class="page-title h2">
+							<span>РЕГИСТРАЦИЯ</span>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="persArea-col">
+							<div class="persArea-text ">Введите номер вашего мобильного телефона или E-mail, и вам придет смс-код для входа.</div>
+
+							<form class="persArea-form" action="#">
+								<div class="form__line">
+									<label for="namePhone" class="form__label">E-mail / Номер телефона<sup>*</sup></label>
+									<input id="namePhone" type="text" name="name" class="">
+								</div>
+								<div class="form__line">
+									<label for="password" class="form__label">Пароль<sup>*</sup></label>
+									<input id="password" type="password" name="name" class="">
+								</div>
+								<div class="persArea-form__btns">
+									<button class="btn btn-green" type="submit">ЗАРЕГИСТИРОВАТЬСЯ</button> 
+									<a class="btn btn-green" type="submit" href="#">войти по паролю</a> 
+
+								</div>
+
+								<div class="persArea-entry__social entry-social">
+									<div class="entry-social__title ">
+										Войти через соц. сети
+									</div>
+									<div class="entry-social__icons">
+										<a class="icon-social" href="#" rel="nofollow">
+											<img src="./img/icons/icon-social-google.svg"  alt=""  loading="lazy">
+										</a>
+										<a class="icon-social" href="#" rel="nofollow">
+											<img src="./img/icons/icon-social-facebook.svg"  alt=""  loading="lazy">
+										</a>
+										<a class="icon-social" href="#" rel="nofollow">
+											<img src="./img/icons/icon-social-inst.svg"  alt=""  loading="lazy">
+										</a>
+										<a class="icon-social" href="#" rel="nofollow">
+											<img src="./img/icons/icon-social-vk.svg"  alt=""  loading="lazy">
+										</a>
+									</div>
+								</div>
+							</form>
+							
+						</div>
+						
+
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.container -->
+			</section>
+			<!-- /.section-PersArea -->
+			<div class="h-10"></div>
+
+		</main>
+		<!-- /.main -->
+		@@include('_footer.html')
+	</div>
+	<!-- /.wrapper -->
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

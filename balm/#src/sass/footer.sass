@@ -1,0 +1,211 @@
+.footer
+	background: #000
+	a
+		color: #848484
+		text-decoration: none
+		@include transitColor(0.3s)
+		&:hover
+			color: $gold
+	//-------------------------------------------------------------------------//
+	&-subscription
+		display: flex
+		flex-wrap: wrap
+		width: 100%
+		padding: 50px 0
+		background: $gold
+		@media ( max-width:$md1+px )
+			padding: 40px 0
+
+		@media ( max-width:$md2+px )
+			padding: 20px 0
+
+		&__text
+			@extend .col-6
+			color: $white
+			font-size: $fz22
+			text-transform: uppercase
+			line-height: 1.2
+			@media ( max-width:$md2+px )
+				max-width: 100%
+				flex: 0 0 100%
+
+				margin-bottom: 15px
+
+	.subscription
+		&-form
+			display: flex
+			align-items: center
+			@extend .col-6
+
+			@media ( max-width:$md2+px )
+				max-width: 100%
+				flex: 0 0 100%
+
+			input
+				padding: 0 30px
+
+				width: 100%
+				height: 50px
+
+				background: $white
+
+				line-height: 50px
+				color: #BABABA
+				@media ( max-width:$md1+px )
+					padding: 0 15px
+
+					
+		&-btn
+			display: block
+
+
+			max-width: 170px
+			width: 100%
+			height: 50px
+
+			line-height: 50px
+			color: $white
+			text-transform: uppercase
+
+			background: #000
+			padding: 0 15px
+
+			transition: background 0.3s linear
+			@media ( max-width:$md3+px )
+				max-width: 130px
+
+			&:hover
+				background: #212121
+
+
+	//-------------------------------------------------------------------------//
+			
+
+	&-top
+
+		color: #848484
+		font-size: $fz18
+
+		&__nav
+			display: flex
+			width: 100%
+			justify-content: space-between
+			flex-wrap: wrap
+			padding: 35px 15px 30px
+			&:last-child
+				@media ( max-width:$md3+px )
+					.footer-nav__list 
+						padding-bottom: 0
+
+		.footer-nav
+			@media ( max-width:$md2+px )
+				display: flex
+				flex-wrap: wrap
+				padding: 8px 0
+				width: 100%
+
+			&--social
+				display: flex
+				@media ( min-width:$md2+px )
+					flex-direction: column
+					align-items: flex-end
+					
+				.footer-nav__title
+					margin-bottom: 15px
+
+			&__title
+				text-transform: uppercase
+				font-size: $fz22
+				margin-bottom: 25px
+				color: $white
+				@media ( max-width:$md2+px )
+					display: flex
+					align-items: center
+					justify-content: space-between
+					width: 100%
+					margin-bottom: 0
+
+			&__list
+				@media ( max-width:$md2+px )
+					padding-top: 15px
+					padding-bottom: 25px
+
+				li + li
+					margin-top: 15px
+
+				._icon
+					background-position: 0 5px
+
+					&--phone
+						display: flex
+						flex-direction: column
+
+
+			&__social
+				display: flex
+				justify-content: flex-end
+				margin-bottom: 25px
+				@media ( max-width:$md3+px )
+					margin-bottom: 0
+				.social-icon
+					display: block
+					cursor: pointer
+					
+					font-size: 24px
+					@include transitColor(0.3s)
+
+					&:hover
+						color: $gold
+						
+				.social-icon + .social-icon
+					margin-left: 10px
+						
+	@media ( max-width:$md2+px )
+		.acc-body-js
+			display: none
+			
+		.icon-plus
+			position: relative
+			width: 15px
+			height: 15px
+			&::after, &::before
+				@include pseudoEl(block, absolute, '')
+				width: 15px
+				height: 	1px
+
+				top: 50%
+				@include translateY(-50%)
+				background: $white
+				transition: all 0.3s linear
+
+			&:after
+					transform: rotate(90deg) translateY(-50%)
+
+
+		.footer-nav__title.active
+			.icon-plus
+				&::after
+					@include translateY(-50%)
+
+					
+//-------------------------------------------------------------------------//
+
+.footer-bot
+	border-top: 0.5px solid #939393
+	padding-top: 25px
+	
+	&__info
+		@extend .col-12
+		display: flex
+		justify-content: space-between
+		align-items: center
+		flex-wrap: wrap
+		font-size: $fz16
+		color: #848484
+
+	.footer-info__img
+		@media ( max-width:$md2+px )
+			margin-top: 15px
+
+	.dev
+		margin: 15px auto

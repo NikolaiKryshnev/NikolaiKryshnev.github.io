@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<main class="main">
+			@@include('_breadcrumbs.html',{})
+			<section class="section-reviews reviews  _section">
+				<div class="_container">
+					<div class="section-title  _scr-item">
+						Отзывы <span>(255)</span>
+					</div>
+					<div class="reviews__top reviews-top">
+						<a class="reviews-modal  _popup-link " href="#reviews"><span>Оставить отзыв</span> <i class="_icon-arrow-line"></i></a>
+
+						<div class="reviews-top__sorting">
+							Сортировать по:
+							<select name="form[]" class="form">
+								<option value="1" selected="selected">Дате</option>
+								<option value="2" >Дате2</option>
+								<option value="3" >Дат	е2</option>
+								<option value="4" >Дате2</option>
+								<option value="5">Рейтингу</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="reviews__row reviews-row ">
+						<div class="reviews-row__item reviews-item  _scr-item _icon-apostrophe">
+							<div class="reviews-item__name">Иван Иванов</div>
+							<div class="reviews-item__date">01.10.2020</div>
+							<div class="reviews-item__stars reviews-stars">
+								<div class="reviews-star"></div>
+							</div>
+							<div class="reviews-item__text">Существенных финансовых и административных условий. Значимость этих
+								проблем настолько очевидна, что рамки и место обучения кадров в значительной.Существенных
+								финансовых и административных условий. Значимость этих проблем настолько очевидна, что рамки и
+								место обучения кадров в значительной.</div>
+						</div>
+
+						<div class="reviews-row__item reviews-item  _scr-item _icon-apostrophe">
+							<div class="reviews-item__name">Иван Иванов</div>
+							<div class="reviews-item__date">01.10.2020</div>
+							<div class="reviews-item__stars reviews-stars">
+								<div class="reviews-star"></div>
+							</div>
+							<div class="reviews-item__text">Существенных финансовых и административных условий. Значимость этих
+								проблем настолько очевидна, что рамки и место обучения кадров в значительной.Существенных
+								финансовых и административных условий. Значимость этих проблем настолько очевидна, что рамки и
+								место обучения кадров в значительной.</div>
+						</div>
+
+
+						<div class="reviews-row__item reviews-item  _scr-item _icon-apostrophe">
+							<div class="reviews-item__name">Иван Иванов</div>
+							<div class="reviews-item__date">01.10.2020</div>
+							<div class="reviews-item__stars reviews-stars">
+								<div class="reviews-star"></div>
+							</div>
+							<div class="reviews-item__text">Существенных финансовых и административных условий. Значимость этих
+								проблем настолько очевидна, что рамки и место обучения кадров в значительной.Существенных
+								финансовых и административных условий. Значимость этих проблем настолько очевидна, что рамки и
+								место обучения кадров в значительной.</div>
+						</div>
+
+						<div class="reviews-row__item reviews-item  _scr-item _icon-apostrophe">
+							<div class="reviews-item__name">Иван Иванов</div>
+							<div class="reviews-item__date">01.10.2020</div>
+							<div class="reviews-item__stars reviews-stars">
+								<div class="reviews-star"></div>
+							</div>
+							<div class="reviews-item__text">Существенных финансовых и административных условий. Значимость этих
+								проблем настолько очевидна, что рамки и место обучения кадров в значительной.Существенных
+								финансовых и административных условий. Значимость этих проблем настолько очевидна, что рамки и
+								место обучения кадров в значительной.</div>
+						</div>
+
+						<div class="reviews-row__item reviews-item  _scr-item _icon-apostrophe">
+							<div class="reviews-item__name">Иван Иванов</div>
+							<div class="reviews-item__date">01.10.2020</div>
+							<div class="reviews-item__stars reviews-stars">
+								<div class="reviews-star"></div>
+							</div>
+							<div class="reviews-item__text">Существенных финансовых и административных условий. Значимость этих
+								проблем настолько очевидна, что рамки и место обучения кадров в значительной.Существенных
+								финансовых и административных условий. Значимость этих проблем настолько очевидна, что рамки и
+								место обучения кадров в значительной.</div>
+						</div>
+					</div>
+					<!-- /.reviews__row -->
+					<div class="pagination">
+						<ul class="pagination__list">
+							<li> <a href="#"><i class="_icon-arrow-line-r"></i></a></li>
+							<li class="active"><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<span>...</span>
+							<li><a href="#">10</a></li>
+							<li> <a href="#"><i class="_icon-arrow-line-r"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- /._container -->
+			</section>
+			<!-- /.section-reviews -->
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

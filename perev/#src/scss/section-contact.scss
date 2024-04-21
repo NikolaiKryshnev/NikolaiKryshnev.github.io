@@ -1,0 +1,120 @@
+.section-contact {
+	display: flex;
+	flex-wrap: wrap;
+	@include adaptiv-value("margin-top", 170, 70, 0);
+}
+.contact {
+	._container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+.contact-info {
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	flex: 0 0 35%;
+	max-width: 35%;
+	display: flex;
+	border: 1px solid #e7e7e7;
+	@media (max-width: 1300px) {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+	@media ( max-width:$md3+px){
+		flex: 1 1 100%;
+		max-width: 100%;
+	}
+	// .contact-info__list
+	&__list {
+	}
+}
+.contact-list {
+	
+	@media (max-width: 1300px) {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	// .contact-list__line
+	&__line {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: space-between;
+		padding: 40px 35px;
+		@media ( max-width:$md1+px){
+			padding: 25px 15px
+		}
+		&:not(:last-child) {
+			border-bottom: 1px solid #e7e7e7;
+		}
+	}
+}
+.contact-line {
+	// .contact-line__title
+	&__title {
+		font-family: Manrope;
+		font-style: normal;
+		font-weight: 600;
+		color: #0e0e0e;
+		@include adaptiv-value("font-size", 24, 16, 0);
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+		flex: 0 0 41.666667%;
+		max-width: 41.666667%;
+		line-height: 140.69%;
+
+		@media ( max-width:$md2+px ){
+			flex: 0 0 100%;
+			max-width: 100%;
+			margin-bottom: 10px;
+		}
+
+	}
+
+	// .contact-line__box
+	&__box {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+		flex: 0 0 58.333333%;
+		max-width: 58.333333%;
+		@media ( max-width:$md2+px ){
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+		a {
+			@include adaptiv-value("font-size", 20, 14, 0);
+			color: #0e0e0e;
+			line-height: 140.69%;
+			transition: all 0.3s linear;
+			&:hover {
+				color: $orange;
+			}
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+.contact-map {
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	flex: 0 0 65%;
+	max-width: 65%;
+
+	@media (max-width: 1300px) {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+
+	@media ( max-width:$md3+px){
+		flex: 1 1 100%;
+		max-width: 100%;
+		min-height: 360px;
+	}
+}

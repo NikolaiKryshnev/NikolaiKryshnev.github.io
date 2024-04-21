@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Цены"
+})
+
+<body class="home">
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<main class="main main--lk lk">
+			<div class="_container main__content">
+				<ul class="breadcrumbs">
+					<li><a href="#">Главная</a></li>
+					<li><span>Цены</span></li>
+				</ul>
+
+				<div class="main__sidebar sidebar sidebar__lk  ">
+					<div class="sidebar__box">
+						<div class="section__title title title--link">
+							Личный кабинет
+							<ul class="lk__menu">
+								<li>
+									<i class="_icon-menu-arrow"></i>
+									<a class="lk__line _active" href="#"> Мой профиль</a></li>
+								<li><a class="lk__line" href="#">Заказы</a></li>
+								<li><a class="lk__line" href="#">Изменить пароль</a></li>
+								<li class="logoff"><a class="lk__line" href="#">Выйти</a></li>
+							</ul>
+						</div>
+						<button type="submit" class="learn-more btn black btn--logoff"> <span class="circle"
+								aria-hidden="true">
+								<span class="icon arrow _icon-btn-arrow"></span> </span> <span class="button-text">Выйти</span>
+						</button>
+
+						<div class="sidebar__faq sidebar-faq">
+							Уже уходите? :(
+
+							<div class="sidebar-faq__link">
+								<a class="sidebar-faq__yes" href="#">Да</a> <button class="sidebar-faq__no"
+									type="button">Нет</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /.main__sidebar -->
+
+				<div class="main__body  ">
+					<div class="lk__body">
+						<div class="lk__title">Изменить пароль</div>
+						<form class="form" action="#">
+							<div class="form__line">
+								<label for="old_password">Старый пароль<sup>*</sup></label>
+								<div class="form__input">
+									<input id="old_password" autocomplete="off" type="password" name="" data-error=""
+										data-value="" class="input _req">
+								</div>
+							</div>
+							<fieldset>
+								<div class="form__line">
+									<label for="new_password">Новый пароль<sup>*</sup></label>
+									<div class="form__input">
+										<input id="new_password" autocomplete="off" type="password" name="" data-error=""
+											data-value="" class="input _req">
+									</div>
+								</div>
+								<div class="form__line">
+									<label for="repeat_password">Повторите пароль*<sup>*</sup></label>
+									<div class="form__input">
+										<input id="repeat_password" autocomplete="off" type="password" name="" data-error=""
+											data-value="" class="input _req">
+									</div>
+								</div>
+							</fieldset>
+
+
+							<button type="button" class="learn-more btn  "> <span class="circle" aria-hidden="true">
+									<span class="icon arrow _icon-btn-arrow"></span> </span> <span
+									class="button-text">Сохранить</span>
+							</button>
+						</form>
+					</div>
+				</div>
+				<!-- /.main__body -->
+
+
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

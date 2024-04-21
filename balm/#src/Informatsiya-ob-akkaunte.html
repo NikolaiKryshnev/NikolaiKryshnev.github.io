@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Авторизация"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html')
+		<main class="main">
+			@@include('_breadcrumbs.html',{
+			"text":"Мой профиль"
+			})
+			<section class="section-myProfil myProfil _section">
+				<div class="container">
+					<div class="myProfil-thanks">
+						Спасибо за регистрацию!
+					</div>
+					<div class="row">
+
+						<div class="myProfil-sidebar">
+							<div class="myProfil-sidebar__ul">
+								<li ><a href="moy-profil.html" rel="nofollow">Мой аккаунт</a></li>
+
+								<li><a href="moi-zakazy.html" rel="nofollow">Мои заказы</a></li>
+
+								<li ><a href="moi-zhelaniya.html" rel="nofollow">Мои желания </a></li>
+
+								<li><span class="myProfil-sidebar__border"></span></li>
+
+								<li ><a href="adresa.html" rel="nofollow">Адреса</a></li>
+
+								<li class=" active"><a href="Informatsiya-ob-akkaunte.html" rel="nofollow">Информация об аккаунте</a></li>
+
+								<li><span class="myProfil-sidebar__border"></span></li>
+
+								<li><a href="#" rel="nofollow">Выйти</a></li>
+							</div>
+							<!-- /.myProfil-sidebar__ul -->
+						</div>
+						<!-- /.myProfil-sidebar -->
+
+						<div class="myProfil-content">
+							<div class="myProfil-title h2">
+								<span>Мой профиль</span>
+							</div>
+
+							<div class="myProfil-content__title">
+								Редактировать информацию об аккаунте
+							</div>
+
+							<div class="myProfil-content__row row">
+								<form class="myProfil myProfil--account" action="#">
+									<fieldset class="fieldset fieldset-half">
+										<div class="form__line">
+											<label for="firstName" class="form__label">Имя<sup>*</sup></label>
+											<input id="firstName" type="text" name="name" class="">
+										</div>
+										<div class="form__line">
+											<label for="lastName" class="form__label">Фамилия<sup>*</sup></label>
+											<input id="lastName" type="text" name="name" class="">
+										</div>
+
+
+										<div class="form__checkbox">
+											<label class="checkbox">
+												<input class="checkbox__input checkbox-email " type="checkbox" value="1" name="">
+												<span class="checkbox__text"><span>Поменять E-mail</span>
+											</label>
+
+											<label class="checkbox">
+												<input class="checkbox__input checkbox-pass" type="checkbox" value="1" name="">
+												<span class="checkbox__text"><span>Поменять пароль</span>
+											</label>
+										</div>
+
+
+										<button class="btn btn-green" type="submit">СОХРАНИТЬ</button>
+									</fieldset>
+									<fieldset class="fieldset fieldset-half">
+										<div class="fieldset-email">
+											<div class="form__line">
+												<label for="mail" class="form__label">E-mail<sup>*</sup></label>
+												<input id="mail" type="email" name="" id="">
+											</div>
+
+											<div class="form__line">
+												<label for="password" class="form__label">Пароль<sup>*</sup></label>
+												<input id="password" type="password" name="name" class="">
+											</div>
+										</div>
+
+										<div class="fieldset-password">
+											<div class="form__line">
+												<label for="current-password" class="form__label">Текущий пароль
+													<sup>*</sup></label>
+												<input id="current-password" type="password" name="name" class="">
+
+											</div>
+											<div class="form__line">
+
+												<label for="new-password" class="form__label">Новый пароль
+													<sup>*</sup></label>
+												<input id="new-password" type="password" name="name" class="">
+											</div>
+
+
+											<div class="form__line">
+												<label for="password_confirmation" class="form__label">Подтвердите новый пароль
+													<sup>*</sup></label>
+												<input id="password_confirmation" type="password" name="name" class="">
+											</div>
+										</div>
+
+							</div>
+							</fieldset>
+							</form>
+						</div>
+						<!-- /.myProfil-content__row -->
+
+					</div>
+					<!-- /.myProfil-content -->
+				</div>
+				<!-- /.row -->
+	</div>
+	<!-- /.container -->
+	</section>
+	<!-- /.section-PersArea -->
+	<div class="h-10"></div>
+
+	</main>
+	<!-- /.main -->
+	@@include('_footer.html')
+	</div>
+	<!-- /.wrapper -->
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

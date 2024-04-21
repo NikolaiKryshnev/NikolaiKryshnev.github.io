@@ -1,0 +1,78 @@
+._slider
+	min-width: 0
+	@media ( max-width:$md1+px )
+		margin-top: 20px
+
+	.slider-item
+		min-width: 0
+
+	.slick-slide
+		// opacity: 0
+		// transition: opacity 0.3s linear
+
+		// &>div
+		// 	transition: box-shadow 0.3s linear  
+			// box-shadow: 0px 0px 20px rgba(169, 166, 158, 0)
+
+	// .slick-active
+	// 	opacity: 1
+
+	// 	&>div
+			// box-shadow: 0px 0px 20px rgba(169, 166, 158, 0.5)
+
+
+	&:not(.slick-slider)
+		display: flex
+		width: 100%
+
+		
+
+.box-arrows
+	position: absolute
+	bottom: -44px
+
+	display: flex
+	align-items: center
+	justify-content: center
+
+	@include horizcenter()
+
+	.slick-arrow
+		width: 30px
+		height: 30px
+
+		position: relative
+		left: 0
+		top: 0
+		right: 0
+		@include translateY(0)
+		&__left
+			margin-right: 7px
+
+		&__right
+			margin-left: 7px
+
+		svg
+			width: 15px
+
+
+.slick-arrow
+	transition: all 0.3s linear
+	&__left
+		left: -6%
+
+	&__right
+		right: -6%
+
+	svg
+		path
+			transition: fill 0.3s linear
+
+	@media ( min-width:$md1+px )
+		&:hover
+			transform: scale(1.05) translateY(-50%)
+			border: .5px solid $gold
+
+			svg
+				path
+					fill: $gold

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Цены"
+})
+
+<body class="home">
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<main class="main ">
+			<div class="_container main__content">
+				<ul class="breadcrumbs">
+					<li><a href="#">Главная</a></li>
+					<li><span>Цены</span></li>
+				</ul>
+
+				<div class="main__sidebar sidebar">
+					<div class="sidebar__box">
+						<div class="sidebar__review">
+							<div class="section__title title title--link">
+								Отзывы
+								<div class='title__sub'>
+									<p>Компания «ATV-Prokat» предлагает аренду квадроциклов по приемлемым ценам. Если Вы хотить
+										порадовать друга или близкого человека, специально для Вас мы предоставляем <a
+											href="#">подарочные
+											сертификаты</a> на квадроциклы в Минске.</p>
+								</div>
+							</div>
+							<button class="learn-more btn black btn-review">
+								<span class="circle" aria-hidden="true">
+									<span class="icon arrow _icon-btn-arrow"></span>
+								</span>
+								<span class="button-text">Оставить отзыв</span>
+							</button>
+						</div>
+
+
+						<!-- <div class="thanks__box">
+							<div class="thanks__title">
+								Спасибо, что обратились именно к нам!
+							</div>
+							Мы очень ценим своих клиентов!
+						</div> -->
+						<form class="form" action="#">
+							<div class="popup__close"></div>
+
+							<div class="form__title">
+								Оставить отзыв
+							</div>
+							<div class="form__line">
+								<label for="name">Имя<sup>*</sup></label>
+								<div class="form__input">
+									<input id="name" autocomplete="off" type="text" name="name" data-error="" data-value=""
+										class="input _req">
+								</div>
+							</div>
+							<div class="form__line">
+								<label for="name">Выберите маршрут<sup>*</sup></label>
+								<div class="form__input">
+									<select name="form[]" class="form">
+										<option value="1" selected="selected">Базовый маршрут</option>
+										<option value="2">Лесные тропы</option>
+										<option value="3">Любимые грибы</option>
+										<option value="4">Лесное приключение с Людой</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="form__line">
+								<label for="name">E-mail*<sup>*</sup></label>
+								<div class="form__input">
+									<input autocomplete="off" type="mail" name="form[]" data-value="" class="input mail">
+								</div>
+							</div>
+
+							<div class="form__line">
+								<label for="name">Текст отзыва</label>
+								<div class="form__input">
+									<textarea autocomplete="off" name="form[]" data-value="" data-error="Ошибка"
+										class="input"></textarea>
+								</div>
+							</div>
+
+							<button type="submit" class="learn-more btn  black _popup-link"> <span class="circle"
+									aria-hidden="true">
+									<span class="icon arrow _icon-btn-arrow"></span> </span> <span
+									class="button-text">Отправить</span>
+							</button>
+						</form>
+
+					</div>
+				</div>
+				<!-- /.main__sidebar -->
+
+				<div class="main__body main-body">
+					<div class="main-body__review">
+						<div class="review-slider__item review-item _icon-apostrophe">
+							<div class="review-item__date">
+								02/02/2021
+							</div>
+							<div class="review-item__name">
+								Николай Александров
+							</div>
+							<div class="review-item__text">
+								07.01.2020 ездили по лесным тропам, все очень понравилось. Море адреналина и эмоций. Инструктор
+								очень
+								вежливый, все объяснил и показал. В скором времени опять к Вам на VIP трассу.
+							</div>
+						</div>
+						<div class="review-slider__item review-item _icon-apostrophe">
+							<div class="review-item__date">
+								02/02/2021
+							</div>
+							<div class="review-item__name">
+								Николай Александров
+							</div>
+							<div class="review-item__text">
+								07.01.2020 ездили по лесным тропам, все очень понравилось. Море адреналина и эмоций. Инструктор
+								очень
+								вежливый, все объяснил и показал. В скором времени опять к Вам на VIP трассу.
+							</div>
+						</div>
+						<div class="review-slider__item review-item _icon-apostrophe">
+							<div class="review-item__date">
+								02/02/2021
+							</div>
+							<div class="review-item__name">
+								Николай Александров
+							</div>
+							<div class="review-item__text">
+								07.01.2020 ездили по лесным тропам, все очень понравилось. Море адреналина и эмоций. Инструктор
+								очень
+								вежливый, все объяснил и показал. В скором времени опять к Вам на VIP трассу.
+							</div>
+						</div>
+
+						<ul class="pagination">
+							<li class="active"><span>1</span></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<span>...</span>
+							<li><a href="#">10</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- /.main-body__review -->
+
+			</div>
+			<!-- /.main__body -->
+	</div>
+
+	</main>
+	@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

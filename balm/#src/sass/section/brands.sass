@@ -1,0 +1,95 @@
+.brands
+	&-content
+		display: flex
+		flex-direction: column
+		width: 100%
+
+	.brands-top
+		display: flex
+		margin-bottom: 40px
+		@media ( max-width:$md2+px )
+			flex-wrap: wrap
+
+	.brand-search
+		width: 100%
+		max-width: 100%
+		@media ( max-width:$md2+px )
+			margin-bottom: 30px
+
+	.brands-col
+		@extend .col-6
+		@media ( max-width:$md2+px )
+			max-width: 100%
+			flex: 1 1 100%
+
+	.brands-abc 
+		display: flex
+		flex-wrap: wrap
+		@media ( max-width:$md2+px )
+			padding: 0 15% 0 0
+		@media ( max-width:$md3+px )
+			padding: 0
+
+		.filter-btn
+			text-transform: uppercase
+			display: block
+			padding: 0 8px
+			line-height: 35px
+			border: 0.5px solid #7C7C7C
+			text-decoration: none
+			margin-right: 6px
+			margin-left: 0
+			margin-bottom: 6px
+			min-width: 40px
+			text-align: center
+			cursor: pointer
+			&.active
+				color: $gold
+				border-color: $gold
+
+			&.disabled
+				color: #CBCBCB
+				border-color: #CBCBCB
+				pointer-events: none
+
+	.abc-all
+	.brand-abc_box
+		overflow: hidden
+		max-height: 100%
+	.abc-sorting
+		&__block
+			@extend .col-2
+			margin-bottom: 30px
+			@media ( max-width:$md1+px )
+				max-width: 25%
+				flex: 0 0 25%
+
+			@media ( max-width:$md2+px )
+				max-width: 33.33333%
+				flex: 0 0 33.33333%
+			@media ( max-width:$md3+px )
+				max-width: 50%
+				flex: 0 0 50%
+
+		&__box
+			display: block
+			border: 0.5px solid #D3D3D3
+			text-decoration: none
+
+		&__img
+			padding: 10px 15px
+			img
+				margin: 0 auto
+
+		&__name
+			display: flex
+			align-items: center
+			justify-content: center
+			border-top: 0.5px solid #D3D3D3
+			padding: 10px
+
+			text-align: center
+			
+			min-height: 93px
+
+

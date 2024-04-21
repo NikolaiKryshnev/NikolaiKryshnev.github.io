@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Цены"
+})
+
+<body class="home">
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<main class="main main--lk lk">
+			<div class="_container main__content">
+				<ul class="breadcrumbs">
+					<li><a href="#">Главная</a></li>
+					<li><span>Цены</span></li>
+				</ul>
+
+				<div class="main__sidebar sidebar sidebar__lk  ">
+					<div class="sidebar__box">
+						<div class="section__title title title--link">
+							Личный кабинет
+							<div class='title__sub'>
+								<p>Личный кабинет станет доступным после совершения заказа.</p>
+								<p>Если вы уже совершили заказ,
+									то введите данные из письма,
+									которое пришло вам на e-mail.</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- /.main__sidebar -->
+
+				<div class="main__body  ">
+					<div class="lk__body">
+						<div class="lk__title">Вход</div>
+						<form class="form" action="#">
+							<div class="form__line">
+								<label for="email">E-mail<sup>*</sup></label>
+								<div class="form__input">
+									<input id="email" autocomplete="off" type="mail" name="mail" data-error="" data-value=""
+										class="input _req">
+								</div>
+							</div>
+							<div class="form__line">
+								<label for="password">Пароль<sup>*</sup></label>
+								<div class="form__input">
+									<input id="password" autocomplete="off" type="password" name="password" data-error=""
+										data-value="" class="input _req">
+								</div>
+							</div>
+							<button type="submit" class="learn-more btn  "> <span class="circle" aria-hidden="true">
+									<span class="icon arrow _icon-btn-arrow"></span> </span> <span
+									class="button-text">Войти</span>
+							</button>
+						</form>
+					</div>
+				</div>
+				<!-- /.main__body -->
+
+
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

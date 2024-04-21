@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Оформление заказа"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html')
+		<main class="main">
+			@@include('_breadcrumbs.html',{
+			"text":"Оформление заказа"
+			})
+			<section class="section-error error _section">
+				<div class="container">
+					<div class="row">
+						<div class="error-col">
+							<div class="error-title h2">
+								404
+							</div>
+							<div class="error-info">
+								Похоже, страницы, которую вы ищете, <span>не существует</span>.
+								<br>
+								Обращайтесь к нам по адресу <a href="mailto:info@balmessence.com">info@balmessence.com</a>, чтобы задать вопросы одному из наших экспертов
+								по
+								красоте.
+								Или вернитесь на главную страницу.
+							</div>
+							<a class="btn" href="#">НА ГЛАВНУЮ</a>
+						</div>
+
+					</div>
+				</div>
+
+			</section>
+			<!-- /.section-PersArea -->
+			<div class="h-10"></div>
+		</main>
+		<!-- /.main -->
+		@@include('_footer.html')
+	</div>
+	<!-- /.wrapper -->
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

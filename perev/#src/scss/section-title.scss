@@ -1,0 +1,26 @@
+
+.title {
+	@include adaptiv-value("margin-top", 60, 25, 0);
+	// .title-box
+	&-box {
+		@include adaptiv-value("font-size", 130, 31, 0);
+		font-weight: 700;
+		color: $orange;
+		line-height: 95.02%;
+		@media ( max-width:$md3+px){
+			line-height: 119.02%
+		}
+		span {
+			display: block;
+			@include adaptiv-value("font-size", 90, 26, 0);
+			color: $black;
+		}
+		
+	}
+	//  .title-sub
+	&-sub {
+		@include adaptiv-value("margin-top", 20, 15, 0);
+		@include adaptiv-value("font-size", 24, 18, 0);
+		line-height: 128.92%;
+	}
+}

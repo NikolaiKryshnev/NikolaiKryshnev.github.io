@@ -1,0 +1,179 @@
+.contancts
+
+	&-col
+		display: flex
+		flex-wrap: wrap
+		@extend .col-6
+		@media ( max-width:$md2+px )
+			flex: 0 0 100%
+			max-width: 100%
+
+		.page-title
+			padding: 0
+			margin-bottom: 20px
+			line-height: 34px
+
+		.contact-form
+			width: 100%
+			@media ( max-width:$md2+px )
+				margin-bottom: 50px
+
+		.contact-info
+			color: #525252
+			line-height: 24px
+			max-width: 350px
+			margin-bottom: 20px
+
+		
+		.btn
+			margin-top: 30px
+.form__line
+	display: flex
+	flex-direction: column
+	margin-bottom: 20px
+	
+
+	input, .select__item
+		line-height: 45px
+		border: 0.5px solid #7C7C7C
+		padding: 0 10px
+
+		.select__value
+			text-align: left
+			&::before
+				width: 10px
+
+
+		.select__options
+			padding: 10px 
+			font-size: 14px
+		.select__option
+			margin-bottom: 5px
+			padding-bottom: 5px
+
+	textarea 
+		border: 0.5px solid #7C7C7C
+		padding: 10px
+		resize: none
+		height: 110px
+
+
+	.form__label
+		color: #000000
+		margin-bottom: 5px
+		sup
+			color: $gold
+
+	
+.contact-address
+	width: 100%
+	border: 20px solid #F0F0F0
+	padding: 60px 30px 30px 30px 
+
+	text-align: center
+	// height: 100%
+	@media ( max-width:$md3+px )
+		border-width: 10px
+		padding: 10px
+
+
+	&__title
+		color: #000000
+		font-size: $fz40
+		line-height: 46px
+		margin-bottom: 20px
+		@media ( max-width:$md1+px )
+			font-size: 30px
+			line-height: 34px
+
+		@media ( max-width:$md3+px )
+			font-size: 26px
+			line-height: 30px
+
+	&__block
+		max-width: 360px
+		margin: 0 auto
+		font-size: 14px
+		line-height: 21px
+		margin-bottom: 30px
+		color: #525252
+
+		a
+			text-decoration: none
+			color: #525252
+			display: block
+			line-height: 21px
+			transition: 0.3s color linear
+			&:hover
+				color: $gold
+
+	.address-block__title
+		color: #000
+		font-size: 16px
+		text-transform: uppercase
+		line-height: 24px
+		margin-bottom: 5px
+
+
+.contacts-shop
+	display: flex
+	flex-wrap: wrap
+	margin-top: 90px
+
+	width: 100%
+	@media ( max-width:$md2+px )
+		margin-top: 60px
+	&__title
+		@extend .col-12
+		margin-bottom: 30px
+		font-size: $fz24
+		line-height: 27px
+		color: #4D4D4D
+
+	&__col
+		@extend .col-4
+		margin-bottom: 30px
+		@media ( max-width:$md2+px )
+			max-width: 50%
+			flex: 0 0 50%
+
+		@media ( max-width:$md3+px )
+			max-width: 100%
+			flex: 0 0 100%
+
+	&__box
+		display: flex
+		flex-direction: column
+		height: 100%
+
+		border: 0.5px solid #7C7C7C
+		padding: 25px
+
+
+		._icon
+			display: block
+			padding-bottom: 15px
+			font-size: 14px
+			color: #000000
+			background-position: left top
+			@media ( max-width:$md1+px )
+				padding-left: 35px
+
+			&--clock
+				display: flex
+				flex-direction: column
+
+			&--map
+				background-size: 17px
+
+			&--phone, &--clock
+				background-size: 20px
+
+		a
+			color: #000000
+			text-decoration: none 
+			@include transitColor(0.3s)
+
+			&:hover
+				color: $gold
+		

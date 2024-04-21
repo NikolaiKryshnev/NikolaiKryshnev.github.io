@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html')
+		<main class="main main--home">
+			@@include('_section-banSlider.html')
+			
+			@@include('_section-advan.html')
+			<div class="h-10"></div>
+
+			@@include('_section-sliderProduct.html')
+			<div class="h-10"></div>
+
+			@@include('_section-popularCateg.html')
+			<div class="h-10"></div>
+
+			@@include('_section-productNews.html')
+			<div class="h-10"></div>
+
+			<div class="ban-block">
+				<div class="container">
+					<a class="ban-block__img" href="#"><img src="./img/section-banner/01.jpg"  alt=""  loading="lazy"></a>
+				</div>
+			</div>
+			<div class="h-10"></div>
+
+			@@include('_section-pressMedia.html')
+			<div class="h-10"></div>
+
+			@@include('_section-reviewsSlider.html')
+			<div class="h-10"></div>
+
+			@@include('_section-inst.html')
+			<div class="h-10"></div>
+		</main>
+		<!-- /.main -->
+		@@include('_footer.html')
+
+	</div>
+	<!-- /.wrapper -->
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+
+</body>
+
+</html>

@@ -1,0 +1,887 @@
+.header
+	position: fixed
+	width: 100%
+	background: #fff
+	z-index: 4
+	@media ( max-width:$md3+px )
+		.container
+			position: relative
+	//---- .logo ----//
+
+	.logo
+		display: flex
+		align-items: center
+		max-width: 165px
+		width: 100%
+		height: auto
+		@media ( max-width:$md3+px )
+			max-width: 100px
+
+		img
+			width: 100%
+
+//-------------------------------------------------------------------------//
+
+.header-top
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+	padding: 12px 15px
+
+	width: 100%
+	@media ( max-width:$md1+px )
+		flex-direction: row-reverse
+
+	&__left
+		display: flex
+
+	.header-pesAr, .header-cart
+		
+		display: flex
+		align-items: center
+		justify-content: center
+
+
+		border: 0.5px solid #7C7C7C
+		
+		height: 35px
+		@media ( min-width:$md3+px )
+			position: relative
+
+		.header-cart__price
+			@include transitColor(0.3s)
+
+		.icon-f:before
+			transition: all 0.3s linear
+
+		// padding: 0 10px
+		&.active
+			.header-cart__price
+				color: $gold
+
+			
+			.icon-f:before
+				color: $gold
+
+			.header-top__box::before
+				transform: rotate(180deg) translateY(50%)
+		@media ( min-width:$md1+px )
+			&:hover	
+				.header-cart__price
+					color: $gold	
+				.icon-f:before
+					color: $gold
+
+				.header-top__box::before
+					transform: rotate(180deg) translateY(50%)
+
+		svg
+			width: 100%
+			height: 100%
+			path
+				transition: all 0.3s linear
+
+	.header-pesAr
+		width: 60px
+		@media ( max-width:$md3+px )
+			width: 45px
+
+	.header-cart
+		padding: 0 10px
+
+		margin-left: 7px
+
+		&__price
+			font-size: 14px
+			color: #4D4D4D
+			padding-left: 10px
+			@media ( max-width:$md3+px )
+				padding-left: 5px
+
+	.icon-pers, .icon-cart
+		display: flex
+		align-items: center
+		justify-content: center
+
+	.icon-pers
+		width: 12px
+		height: 15px
+	
+	.header-top__box
+		position: relative
+
+		display: flex
+		align-items: center
+
+		padding-right: 12px
+		cursor: pointer
+		
+		&::before
+			@include pseudoEl(block, absolute, '')
+			right: 0
+			top: 50%
+			@include translateY(-50%)
+
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center
+			background-image: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.13867 1L4.80237 4.66357L8.46594 1' stroke='%234C4C4C'/%3E%3C/svg%3E")
+
+			width: 7px
+			height: 4px
+
+			transition: transform 0.3s linear
+
+	.icon-cart
+		width: 15px
+		height: 14px
+//-------------------------------------------------------------------------//
+ul.header-pesAr__menu
+	display: none
+	
+	width: 200px
+
+	li
+		a
+			text-decoration: none
+			color: #4D4D4D
+			
+			display: block
+			padding: 10px 0
+			@include transitColor(0.3s)
+			border-bottom: 0.5px solid #7C7C7C
+			&:hover
+				color: $gold
+
+		&:last-child
+			a
+				border: none
+				padding-bottom: 0
+
+		&:first-child
+			a
+				padding-top: 0
+
+.cart-products
+	width: 300px
+	display: none
+	
+	.close
+		cursor: pointer
+
+		position: absolute
+		right: 15px
+		top: 15px
+
+		width: 10px
+		height: 10px
+		&-box
+			position: relative
+			width: 100%
+			height: 100%
+			&:before, &:after
+				@include pseudoEl(block, absolute, '')
+				height: 10px
+				left: 50%
+				width: 1px
+				background-color: $black
+				@include transitBgColor(0.3s)
+
+			&:before
+				transform: rotate(45deg)
+			&:after
+				transform: rotate(-45deg)
+
+		&:hover
+			.close-box:before, .close-box::after
+				background: $gold
+
+	.btn
+		width: 100%
+		margin-top: 10px
+//-------------------------------------------------------------------------//
+
+.header-top .header-border
+	padding: 25px
+	position: absolute
+	top: 100%
+	background: $white
+	z-index: 2
+	border: 0.5px solid #7C7C7C
+
+	@media ( min-width:$md3+px )
+		margin-top: 24px
+
+		&::after, &::before
+			@include pseudoEl(block, absolute, '')
+			top: 0
+			left: -1px
+
+			width: 15px
+			height: 15px
+
+	@media ( max-width:$md1+px )
+		right: 15px
+		left: auto
+		// border-top: 0
+		
+		&::after, &::before
+			left: auto
+			right: 0
+
+		&:after
+			margin-left: 0
+			margin-right: -8px
+			border-top: 0
+			border-left: .5px solid #7c7c7c
+
+	@media ( max-width:$md3+px )
+		right: 0
+		margin-top: -1px
+
+	@media ( min-width:$md3+px )
+		left: 0
+		right: auto
+		
+		&:after
+			@include rotate(45deg)
+			margin-top: -8px
+			margin-left: -7px
+
+			border-top: 0.5px solid #7c7c7c
+			background: $white
+
+			z-index: 1
+
+		&::before
+			z-index: 2
+			margin-top: -10px
+
+			width: 0.5px
+			height: 20px
+
+			background: #7c7c7c
+
+			left: -1px
+			top: 0
+			
+//-------------------------------------------------------------------------//
+ul.products-form__list
+	margin-top: 23px
+
+.product-block
+	padding: 10px 0
+	border-top: 0.5px solid #7C7C7C
+
+	display: flex
+	align-items: flex-start
+
+
+	&__img
+		max-width: 50px
+		border: 0.5px solid #D3D3D3
+		@include img_03(1.4rem)
+
+	&__imgBox
+		@include img_02()
+
+		img
+			@include img_01()
+
+
+	&__info
+		margin-left: 8px
+
+	&__name
+		display: block
+		text-decoration: none
+		color: #4D4D4D
+		line-height: 16px
+		text-transform: uppercase
+		font-size: 14px
+		margin-bottom: 5px
+		@include transitColor(0.3s)
+		&:hover
+			color: $gold
+
+	&__col
+		color: #7C7C7C
+
+		input
+			width: 35px
+			border: 0.5px solid #D3D3D3
+			text-align: center
+			font-size: 14px
+			line-height: 22px
+			margin-left: 10px
+			padding: 0 3px
+			&:placeholder
+				font-size: 14px
+				color: #C7C7C7
+
+//-------------------------------------------------------------------------//
+.product-block__bot
+	display: flex
+	width: 100%
+	justify-content: space-between
+	align-items: center
+	margin-top: 10px
+
+	.product-block__price
+		
+		font-size: 14px
+		@include f500()
+
+	.product-block__edit
+		display: flex
+		align-items: center
+		.icon-basket, .icon-pen
+			color: #000
+			text-decoration: none
+			@include transitColor(0.3s)
+			&:hover
+				color: $gold
+
+		.icon-basket,.icon-pen
+			display: flex
+			align-items: center
+			justify-content: center
+
+			svg	
+				width: 100%
+				height: 100%
+
+		.icon-basket
+			width: 10px
+			height: 14px
+
+		.icon-pen
+			width: 15px
+			height: 15px
+			margin-left: 12px
+	
+//-------------------------------------------------------------------------//
+.form-search, .brand-search
+	position: relative
+	max-width: 220px
+	width: 100%
+	@media ( max-width:$md3+px )
+		max-width: 155px
+		
+	.input-search
+		width: 100%
+		height: 35px
+		border: 0.5px solid #7C7C7C
+		padding: 0 20px 0 43px
+		&:placeholder
+			text-transform: uppercase
+
+	.btn-search
+		
+		position: absolute
+		left: 0
+		top: 50%
+		@include translateY(-50%)
+
+		height: 35px
+		width: 43px
+
+		display: flex
+		align-items: center
+		justify-content: center
+
+		&__icon:before
+			// width: 12px
+			// height: 12px
+			transition: all 0.3s linear 
+
+		&:hover
+			.btn-search__icon:before
+				color: $gold
+
+//-------------------------------------------------------------------------//
+
+.header
+	.header-bot
+		@extend .col-12
+		@media ( max-width:$md1+px )
+			padding-top: 15px
+			padding-bottom: 15px
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+		&::after, &::before
+			@include pseudoEl(block, absolute, '')
+			right: 0
+			@include horizcenter()
+			
+			height: 1px
+			width: 100vw
+
+			background: #ccc
+
+		&::after		
+			top: 0
+
+		&::before
+			bottom: 0
+
+	&-menu
+		position: relative
+
+		display: flex
+		justify-content: space-between
+
+		// border-top: 0.5px solid #7C7C7C
+		// border-bottom: 0.5px solid #7C7C7C
+
+		width: 100%
+		@media ( max-width:$md1+px )
+			display: block
+
+			&>li
+				background: #F7F7F7
+				border: 1px solid #D3D3D3
+				border-top: 0
+				a
+					padding: 15px
+
+		&>li > a
+			position: relative
+			display: block
+
+			padding: 15px 0
+
+			color: #4D4D4D
+
+			font-size: 14px
+			text-decoration: none
+			@include transitColor(0.3s)
+			@media ( min-width:$md1+px )
+				text-transform: uppercase
+				&::after
+					@include pseudoEl(block, absolute, '')
+					bottom: 0
+					@include horizcenter()
+					width: 0
+					height: 2px
+					background: $gold
+					transition: width 0.3s linear
+
+				&:hover
+					color: $gold
+
+					&:after
+						width: 42px
+
+		li.current-menu-item a
+			color: $gold
+
+		&>li:hover
+			.menu-sub
+				opacity: 1
+				visibility: visible
+				// pointer-events: auto
+
+//-------------------------------------------------------------------------//
+
+@media ( max-width:$md1+px )
+	.header-nav
+		background: $white
+		position: absolute
+		top: 100%
+		left: 0
+
+		max-width: 526px
+		width: 100%
+		padding: 0 15px
+		z-index: 99
+		display: none
+
+//-------------------------------------------------------------------------//
+
+.menu-sub
+	// pointer-events: none
+	// max-width: $maxWidthContainer+px
+	display: flex
+	background: $white
+	top: 100%
+	
+	@media ( min-width:$md1+px )
+		padding: 25px 0 25px 25px
+		position: absolute
+		max-height: 350px
+
+		@include horizcenter()
+		width: 100vw
+		opacity: 0
+		visibility: hidden
+		transition: all 0.3s linear
+		border: 0.5px solid #7C7C7C
+		border-top: 0
+
+	@media ( max-width:$md1+px )
+		display: none
+		flex-direction: column
+
+	a
+		text-decoration: none
+
+	&__block
+		@media ( min-width:$md1+px )
+			flex: 0 0 16.666667%
+			max-width: 16.666667%
+
+		@media ( max-width:$md1+px )
+			background: #ECECEC
+			a
+				border-bottom: 1px solid #D3D3D3
+
+			&:last-child a
+				border-bottom: 0
+
+				
+
+	@media ( min-width:$md1+px )
+		&__block + &__block
+			border-left: 1px solid #D3D3D3
+			padding-left: 43px
+
+	.menu-sub__list
+		li a 
+			color: #7C7C7C
+
+		@media ( min-width:$md1+px )
+			overflow-y: auto
+			max-height: 240px
+			margin-top: 25px
+
+			&::-webkit-scrollbar
+				width: 3px
+				height: 3px
+
+			&::-webkit-scrollbar 
+				width: 6px
+				background-color: none
+
+
+			&::-webkit-scrollbar-thumb 
+				background-color: $gold
+
+
+			&::-webkit-scrollbar-track 
+				-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0)
+				background-color: none
+
+			li
+				margin: 0 0 10px 0 
+
+				a
+					@include transitColor(0.3s)
+					&:hover
+						color: $gold
+
+		@media ( max-width:$md1+px )
+			display: none
+			background: $white
+			li a
+				display: block
+				padding: 7px 0
+				text-align: center
+				border: 0
+
+		
+
+
+	a.menu-sub__title
+		color: $black
+		border-bottom: 1px solid  rgba($black, 0)
+		transition: border 0.3s linear
+		@media ( max-width:$md1+px )
+			display: block
+			position: relative
+
+	a.menu-sub__title:hover
+		@media ( min-width:$md1+px )
+			border-bottom: 1px solid  rgba($black, 1)
+
+@media ( min-width:$md1+px )
+	.brand-js .menu-sub
+		padding: 25px 0
+
+//-------------------------------------------------------------------------//
+.burger
+	display: none
+
+@media ( max-width:$md1+px )	
+	.burger
+		position: relative
+
+		display: block
+
+		height: 24px
+		width: 39px
+
+
+	
+		&::after, &::before, &-line
+			@include pseudoEl(block, absolute, '')
+			width: 100%
+			height: 1px
+			left: 0
+
+			background: #000
+
+		&::before
+			@include verticalcenter()
+
+		&-line
+			bottom: 0
+			width: 29px
+			left: 0
+			
+			
+//-------------------------------------------------------------------------//
+
+.mobTab
+	display: none
+	@media ( max-width:$md1+px )
+		display: block
+
+		&-header
+			position: relative
+			display: flex
+
+			border: 1px solid #D3D3D3
+			&::after
+				@include pseudoEl(block, absolute, '')
+				@include horizcenter()
+				height: 100%
+				width: 1px
+				background: #d3d3d3
+		
+			&__item
+				background: $white
+				flex: 0 0 50%
+				max-width: 50%
+
+				line-height: 50px
+				text-align: center
+				color: #7C7C7C
+				font-size: 16px
+
+				&.active
+					position: relative
+					color: $black
+					&::after
+						@include pseudoEl(block, absolute, '')
+						bottom: -13px
+						left: 50%
+						width: 15px
+						height: 15px
+						transform: rotate( 45deg) translateX(-50%)
+						border-top: 1px solid #d3d3d3
+						border-left: 1px solid #d3d3d3
+
+						background: #f7f7f7
+						z-index: 1
+
+					&[data-tab="2"]
+						&::after
+							background: #fff
+
+		&-content
+			&__item
+				display: none
+				&.active
+					display: block
+//-------------------------------------------------------------------------//
+.header-menu>.parentSub-js
+	@media ( max-width:$md1+px )
+		position: relative
+	&>a.active
+		position: relative
+		z-index: 2
+		background: #DFDFDF
+		&::after
+			@include pseudoEl(block, absolute, '')
+			bottom: -1px
+			left: 0
+			right: 0
+			width: 100%
+			height: 2px
+			
+			background: $gold
+
+.arrow-menu
+	content: ""
+	position: absolute
+	right: 15px
+	top: 50%
+
+	width: 7px
+	height: 7px
+
+	border-bottom: 1px solid #4C4C4C
+	border-left: 1px solid #4C4C4C
+
+	background-color: none
+	transform: translateY(-50%) rotate(-45deg)
+	transition: all 0.3s linear
+
+.arrow-menu.active
+	transform: translateY(-50%) rotate(135deg)
+
+.brand-js
+	@media ( max-width:$md1+px )
+		display: none
+
+//-------------------------------------------------------------------------//
+.menu-sub--abc
+	display: flex
+	flex-direction: column
+	@media ( max-width:$md1+px )
+		display: flex
+	
+.brand-top
+	width: 100%
+	display: flex
+	justify-content: space-between
+	border-bottom: 1px solid #7c7c7c
+	padding-bottom: 15px
+	// margin-bottom: 15px
+	@media ( min-width:$md1+px )
+		padding: 0 25px 15px
+
+	@media ( max-width:$md1+px )
+		flex-wrap: wrap
+
+	&__abc
+		width: 100%
+		@media ( max-width:$md1+px )
+			overflow-x: auto
+			padding: 10px 0
+
+			&::-webkit-scrollbar
+				width: 3px
+				height: 3px
+
+			&::-webkit-scrollbar 
+				width: 6px
+				background-color: none
+
+
+			&::-webkit-scrollbar-thumb 
+				background-color: $gold
+
+
+			&::-webkit-scrollbar-track 
+				-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0)
+				background-color: none
+
+.brand-abc
+	width: 100%
+	@media ( max-width:$md1+px )
+		width: 250%
+		// margin: 0 10px
+
+	&>a
+		color: $black
+		font-size: $fz18
+
+		&:hover
+			text-decoration: revert
+
+	&>a.disabled
+		cursor: default
+		color: $grayDark
+		&:hover
+			text-decoration: none
+		
+
+	&>a + a
+		margin-left: 10px
+
+.brand-abc_box
+	position: relative
+	overflow-y: auto
+	width: 100%
+	height: 100%
+	@media ( min-width:$md1+px )
+		padding: 0 25px
+	@media ( max-width:$md1+px )
+		max-height: 350px
+
+	@media ( max-width:$md3+px )
+		max-height: calc(100vh - 280px)
+
+	&::-webkit-scrollbar
+		width: 3px
+		height: 3px
+
+	&::-webkit-scrollbar 
+		width: 6px
+		background-color: none
+
+
+	&::-webkit-scrollbar-thumb 
+		background-color: $gold
+
+
+	&::-webkit-scrollbar-track 
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0)
+		background-color: none
+
+	.brand-box
+		position: static
+
+		display: flex
+		flex-direction: column
+		float: left
+		width: 25%
+		text-align: left
+		padding-right: 3%
+		box-sizing: border-box
+		margin-bottom: 15px
+		@media ( max-width:$md1+px )
+			width: 50%
+		@media ( max-width:$md3+px )
+			width: 100%
+		&.hide
+			display: none
+
+	a
+		color: $black
+		@include transitColor(0.3s)
+		&:hover
+			color: $gold
+
+
+	.abs-title
+		font-size: $fz18
+		color: $black
+		@include f500()
+
+			
+.brand-abc_content
+	margin-top: 15px
+
+	pointer-events: initial !important
+	width: 100%
+	position: relative
+
+.brand-search
+	@media ( max-width:$md1+px )
+		max-width: 100%
+		margin: 10px 0 0
+
+	@media ( max-width:$md3+px )
+		max-width: 100%
+		margin: 10px 0 0
+
+.mobTab-content__item
+	background: $white
+
+

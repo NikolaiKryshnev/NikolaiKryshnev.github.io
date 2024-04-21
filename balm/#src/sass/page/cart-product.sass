@@ -1,0 +1,545 @@
+.cartProduct
+	&-slider
+		@extend .col-5
+		display: flex
+		@media ( max-width: 1100px )
+			flex: 0 0 50%
+			max-width: 50%
+			
+		@media ( max-width:$md2+px )
+			flex: 0 0 100%
+			max-width: 100%
+			flex-direction: column-reverse
+
+.slider-big
+	min-width: 0
+	max-width: calc( 100% - 100px)
+	// float: left
+	flex: 1 1 calc( 100% - 100px)
+	margin: 9px 0 0
+	@media ( max-width:$md1+px )
+		max-width: calc( 100% - 70px)
+		flex: 1 1 calc( 100% - 70px)
+	@media ( max-width:$md2+px )
+		position: relative
+		max-width: 100%
+		flex: 1 1 100%
+
+	&>div
+		border: 0.5px solid #D3D3D3
+
+	.product-btns
+		display: none
+		@media ( max-width:$md2+px )
+			display: flex
+			padding: 0
+			position: absolute
+			bottom: 0
+			left: 0
+
+			.icon-social, .icon-heart, .icon-cart
+				font-size: 20px
+
+	&__item
+		min-width: 100%
+		@include img_03(12.6rem)
+		@media ( max-width:$md1+px )
+			padding: 50% 0
+
+	&__itemImg
+		@include img_02()
+
+		img
+			@include img_01()
+
+.slider-small
+	// float: left
+	flex: 1 1 85px
+	min-width: 0
+	max-width: 85px
+	margin-right: 15px
+	@media ( max-width:$md1+px )
+		max-width: 65px
+		flex: 1 1 65px
+		margin-right: 10px
+	@media ( max-width:$md2+px )
+		max-width: 100%
+		flex: 1 1 100%
+		margin-right: 0
+		margin-top: 15px
+		.slick-slide
+			border-left: 7px solid transparent
+			border-right: 7px solid transparent
+
+	
+	.slider-small__item
+		margin: 7.5px 0
+		border: 0.5px solid #D3D3D3
+		@include img_03(52%)
+		width: 100%
+		cursor: pointer
+		@media ( max-width:$md2+px )
+			margin: 0
+
+
+	.slider-small__itemImg
+		@include img_02()
+
+		img
+			@include img_01()
+
+	.slick-vertical.slick-slide
+		max-width: 80px
+
+//-------------------------------------------------------------------------//
+.cartProduct-info
+	@extend .col-7
+	@media ( max-width: 1100px )
+		flex: 0 0 50%
+		max-width: 50%
+
+	@media ( max-width:$md2+px )
+		max-width: 100%
+		flex: 0 0 100%
+		margin-top: 20px
+
+	&__title
+		color: #505050
+		font-size: $fz24
+		margin-bottom: 5px
+
+	&__bradn
+		color: #7C7C7C
+		font-size: $fz18
+		margin-bottom: 5px
+		text-transform: uppercase
+
+	&__state
+		color: #4D4D4D
+		margin-bottom: 15px
+		text-transform: uppercase
+
+	&__text
+		color: #4D4D4D
+		line-height: 26px
+		margin-bottom: 25px
+
+	&__price
+		color: #4D4D4D
+		font-size: $fz18
+		@include f600()
+		@media ( min-width:$md2+px )
+			margin-top: 30px
+
+	ul,ol
+		list-style-type: none
+		padding: 0
+		margin: 0
+
+		li
+			// margin-bottom: 5px
+			padding-left: 20px
+			position: relative
+			&::before
+				@include pseudoEl(block, absolute, '')
+				left: 0
+				width: 6px
+				height: 6px
+				background: $gold
+				top: 11px
+
+	.country-done
+		margin: 5px 0
+
+	.aroma-notes
+		display: flex
+		flex-direction: column
+		li
+			padding: 0 9px
+
+			margin-bottom: 5px
+			&:before
+				display: none
+			
+		li:nth-child(1)
+			max-width: 195px
+			width: 100%
+			background: #EACDBF
+
+		li:nth-child(2)
+			max-width: 145px
+			width: 100%
+			background: #F3D6C8
+
+		li:nth-child(3)
+			max-width: max-content
+			background: #F8E0DB
+
+		li+li+li
+			max-width: max-content
+
+			background: #F8E0DB
+
+		
+
+.cartProduct-property
+	display: flex
+	flex-wrap: wrap
+	// justify-content: space-between
+
+	width: 100%
+	@media screen and ( max-width: 1124px )
+		flex-wrap: wrap
+
+	.property-block
+		// float: left
+		// margin-right: 7%
+		display: flex
+		flex-direction: column
+		justify-content: center
+   	align-items: center
+		margin-right: 40px
+		max-width: 80px
+		// flex: 0 0 16.6666666%
+		// max-width: 16.6666666%
+		margin-bottom: 10px
+		@media  ( min-width: 1124px ) and ( max-width: 1200px )
+			// flex: 0 0 33.33333%
+			// max-width: 33.33333%
+
+		@media ( max-width:$md1+px )
+			flex: 0 0 33.33333%
+			max-width: 33.33333%
+			margin-bottom: 20px
+			margin-right: 0
+
+		@media ( max-width:$md3+px )
+			flex: 0 0 50%
+			max-width: 50%
+
+
+		&:last-child
+			margin-right: 0
+
+		text-align: center
+		&__icon
+			max-width: 44px
+			display: flex
+			justify-content: center
+			align-items: center
+			margin: 0 auto
+
+		&__text
+			margin-top: 7px
+			font-size: 10px
+			line-height: 15px
+
+.cartProduct-add
+	margin-top: 10px
+
+	display: flex
+	align-items: center
+	@media ( max-width:$md2+px )
+		flex-wrap: wrap
+
+	&__amount
+		display: flex
+		align-items: center
+		.select
+			margin-left: 10px
+
+		.select__item
+			display: flex
+			align-items: center
+			justify-content: center
+
+			border: 0.5px solid #7C7C7C
+			color: #4D4D4D
+			width: 55px
+			height: 35px
+
+			.select__options
+				margin-top: 10px
+				min-width: auto
+				padding: 0
+				width: 100%
+
+				.select__option
+					margin: 0
+					padding: 0
+					border: 0
+					text-align: center
+					&:hover
+   					background: #e5e3df
+	
+	.cartProduct-addCart--oneClick
+		@media ( max-width:$md2+px )
+			background: $green
+			color: $white
+
+	.btn-green
+		margin-left: 15px
+		border: 2px solid $green
+		transition: all 0.3s linear
+		&:hover
+			border-color: #595959
+
+		@media ( max-width:$md2+px )
+			margin-left: 0
+			margin-top: 20px
+			max-width: 100%
+			width: 100%
+
+
+	.cartProduct-addCart
+		@media ( max-width:$md2+px )
+			display: none
+
+	.btn-icon
+		display: flex
+		align-items: center
+		justify-content: center
+
+		height: 41px
+		width: 41px
+		// background: $green
+
+		margin-left: 15px
+		transition: background 0.3s linear
+
+		&:hover
+			background: #595959
+
+		svg
+			@include white()
+
+	.btn-border
+		display: flex
+		align-items: center
+		justify-content: center
+		border: 2px solid $green
+		background: none
+		color: #4d4d4d
+		transition: all 0.3s linear
+		&:hover
+			background: $green
+			color: $white
+
+
+		.icon-heart, .icon-social
+			font-size: 19px
+
+	.btn-heart
+		@media ( max-width:$md2+px )
+			display: none
+
+		svg
+			width: 19px
+			height: 15px
+
+	.btn-social
+		@media ( max-width:$md2+px )
+			display: none
+			background: $black
+
+			svg
+				width: 100%
+				height: 100%
+			
+		svg
+			width: 20px
+			height: 23px
+
+.cartProduct-info__bot
+	margin-top: 45px
+
+	width: 100%
+	padding: 0 15px
+	@media ( max-width:$md2+px )
+		margin-top: 0
+
+	.cartProduct-property
+//-------------------------------------------------------------------------//
+.cartProduct-tabs
+	flex: 1 1 100%
+	max-width: 100%
+	padding: 0 15px
+
+	margin-top: 45px
+
+	.tab-header
+		width: 100%
+		border: 1px solid #D3D3D3
+		height: 70px
+		@media ( max-width:$md2+px )
+			border-bottom: 0
+	
+
+		display: flex
+		@media ( max-width:$md2+px )
+			height: auto
+			flex-wrap: wrap
+
+		&__item
+			position: relative
+			max-width: 20%
+			flex: 0 0 20%
+			@media ( max-width:$md2+px )
+				flex: 0 0 100%
+				max-width: 100%
+				&:last-child
+					span
+						// border-bottom: 0
+
+				.icon-plus
+					@include verticalcenter()
+					right: 22px
+					width: 18px
+					height: 18px
+
+					
+					&:after,&:before
+						@include pseudoEl(block, absolute, '')
+						top: 50%
+						
+						background: #4D4D4D
+						width: 18px
+						height: 2px
+						@include translateY(-50%)
+
+			@media ( min-width:$md2+px )
+				& + .tab-header__item
+					&::after
+						@include pseudoEl(block, absolute, '')
+						left: 0
+						top: 50%
+						// margin-top: -1px
+						transform: translateY(-50%)
+						width: 1px
+						height: 31px
+						background: #7C7C7C
+
+			span
+				display: flex
+				justify-content: center
+
+				position: relative
+
+				text-transform: uppercase
+				font-size: 14px
+				line-height: 70px
+				text-align: center
+				
+				// padding: 0 7% 
+				@include f400()
+				color: #4D4D4D
+				cursor: pointer
+				@media ( max-width:$md2+px )
+					border-bottom: 1px solid #d3d3d3
+					text-align: left
+					justify-content: flex-start
+					padding: 0 22px
+
+				&:last-child .tab-content__item
+					// border-bottom: 0
+				
+			&.active
+				position: relative
+				color: #000
+				span
+					@media ( min-width:$md2+px )
+						&::before
+							content: ""
+							display: block
+							position: absolute
+							bottom: -9px
+							left: 50%
+							width: 20px
+							height: 20px
+							transform: rotate(45deg)
+							border-right: 1px solid #d3d3d3
+							border-bottom: 1px solid #d3d3d3
+							background: $white
+							z-index: 1
+
+					@media ( max-width:$md2+px )
+						.icon-plus::before
+							transform: rotate(90deg)
+							margin-top: -1px
+							
+						
+	.tab-content
+		border: 1px solid #D3D3D3
+		border-top: 0
+		padding: 30px 40px
+		@media ( max-width:$md2+px )
+			display: none
+
+		&__item
+			display: none
+			@media ( max-width:$md2+px )
+				padding: 35px 22px
+				border-bottom: 1px solid #D3D3D3
+
+			&.active
+				display: block
+
+			ol, ul
+				list-style: none
+				padding: 0
+				margin: 0
+
+				li
+					padding-bottom: 15px
+			
+			p
+				padding-bottom: 15px
+			
+
+
+// video
+.video-Iframe	
+	border: 1px solid #D3D3D3
+	position: relative
+	float: right
+	width: 50%
+	height: 0
+	overflow: hidden
+	padding-bottom: 30%
+	margin: 0 15px 40px
+	@media ( max-width:$md2+px )
+		width: 100%
+		padding-bottom: 50%
+		margin: 0 0 20px 0 
+		min-height: 140px
+
+	iframe
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-width: 0
+		outline-width: 0
+		object-fit: cover
+
+
+.videoPoster
+	&::after
+		content: ""
+		display: block
+		position: absolute
+		// background: rgba(0,0,0,.5)
+		left: 0
+		right: 0
+		bottom: 0
+		top: 0
+		width: 100%
+		height: 100%
+
+	svg
+		margin-right: 10px
+		margin-top: 10px
+		z-index: 99
+		position: relative
+		transition: all .5s linear

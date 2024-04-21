@@ -1,0 +1,116 @@
+.ban {
+	position: relative;
+	@include adaptiv-value("padding-top", 120, 20, 0);
+	@include adaptiv-value("padding-bottom", 180, 80, 0);
+	// margin-bottom: 90px;
+
+	// .ban__info
+	&__info {
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+
+		max-width: 495px;
+	}
+	// .ban__title
+	&__title {
+		font-weight: 700;
+		@include adaptiv-value("font-size", 72, 36, 0);
+		line-height: 145%;
+
+		color: $white;
+		@media (max-width: $md3+px) {
+			line-height: 122.5%;
+			padding-right: 25%;
+		}
+		span {
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			background-color: $green;
+			border-radius: 50%;
+			@media (max-width: $md3+px) {
+				width: 5px;
+				height: 5px;
+				// background-color: $white;
+			}
+		}
+	}
+	// .ban__subtitle
+	&__subtitle {
+		font-weight: 700;
+		@include adaptiv-value("font-size", 24, 14, 0);
+		line-height: 122.5%;
+		color: $white;
+		padding-left: 72px;
+		max-width: 380px;
+		@include adaptiv-value("margin-top", 32, 15, 0);
+		@media (max-width: $md1+px) {
+			padding-left: 0;
+			
+		}
+		@media ( max-width:$md2+px ){
+			padding-right: 30%;
+		}
+	}
+	.btn {
+		margin-left: 72px;
+		@include adaptiv-value("margin-top", 30, 23, 0);
+		@media (max-width: $md1+px) {
+			margin-left: 0;
+		}
+	}
+
+	// .ban__box
+	&__box {
+		// overflow: hidden;
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		@include adaptiv-value("max-width", 880, 0, 0);
+		width: 100%;
+		@media (max-width: $md2+px) {
+			@include adaptiv-value("max-width", 650, 0, 0);
+		}
+		
+		@media ( max-width: 650px ){
+			width: 0;
+		}
+	}
+	// .ban__boxImg
+	&__boxImg {
+		@include img_03(40%);
+		height: 100%;
+		@media ( max-width: 650px ){
+			display: none;
+		}
+	}
+	// .ban__img
+	&__img {
+		@include img_02();
+		img {
+			@include img_01();
+		}
+	}
+
+	// .ban__imgCar
+	&__imgCar {
+		position: absolute;
+		bottom: -90px;
+		z-index: 3;
+		left: -25%;
+		// @include adaptiv-value("right", 120, -500, 0);
+		@media ( max-width:$md1+px){
+			bottom: -40px;
+			min-width: 320px;
+		}
+		@media ( max-width:650px){
+			left: 0;
+			right: 0;
+			transform: translateX(-60%);
+			min-width: calc(80vw - 50%);
+		}
+		
+	}
+}

@@ -1,0 +1,231 @@
+.section-about {
+	@include adaptiv-value("margin-top", 174, 70, 0);
+	._container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+.about {
+}
+
+.about-title {
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 32%;
+	flex: 0 0 32%;
+	max-width: 32%;
+	padding-right: 32px;
+	@media ( max-width:$md1+px){
+		flex: 0 0 100%;
+		max-width: 100%;
+		margin-bottom: 60px;
+	}
+	.section-subtitle {
+		p:not(:last-child){
+			margin-bottom: 15px;
+		}
+	}
+}
+.section-title {
+}
+
+.about-box {
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 68%;
+	flex: 0 0 68%;
+	max-width: 68%;
+	padding: 582px 0 0 0;
+	@media ( max-width:$md1+px){
+		display: none;
+	}
+}
+
+.about {
+	&__slider {
+	}
+
+	&__review {
+	}
+}
+.about-slider {
+	display: flex;
+	// justify-content: space-between;
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	flex: 0 0 66.666667%;
+	max-width: 66.666667%;
+	@media ( max-width:$md1+px){
+		max-width: 100%;
+		flex: 1 1 100%;
+	}
+	@media ( max-width:$md2+px ){
+		flex-wrap: wrap;
+	}
+	@media (min-width: $md1+px) {
+		margin-top: -135px;
+	}
+	// .about-slider__btn
+	&__btn {
+		margin-top: 49px;
+		max-width: 175px;
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+		flex: 0 0 33.333333%;
+		max-width: 33.333333%;
+		padding-right: 10%;
+
+		@media ( max-width:$md1+px){
+			margin-top: 0;
+			padding-right: 15%;
+		}
+		@media ( max-width:$md2+px ){
+			display: flex;
+			justify-content: space-between;
+			flex: 1 1 100%;
+			max-width: 100%;
+			padding: 0;
+			margin-bottom: -30px;
+		}
+		.btn {
+			@include adaptiv-value("width", 130, 91, 0);
+			@include adaptiv-value("height", 130, 91, 0);
+			font-size: 1rem;
+		}
+	}
+
+	// .about-slider__title
+	&__title {
+		font-weight: 700;
+		@include adaptiv-value("font-size", 24, 20, 0);
+		line-height: 33px;
+		color: #2e3132;
+		margin-bottom: 24px;
+		@media ( max-width:$md1+px){
+			margin-bottom: 0;
+		}
+		@media ( max-width:$md3+px){
+			line-height: 27px;
+			margin-top: -20px;
+		}
+	}
+
+	// .about-slider__swiper
+	&__swiper {
+	}
+}
+
+.about-swiper {
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	flex: 0 0 66.666667%;
+	max-width: 66.666667%;
+	@media ( max-width:$md2+px ){
+		flex: 1 1 100%;
+		max-width: 100%;
+	}
+	// .about-swiper__top
+	&__top {
+		display: flex;
+		align-items: center;
+		margin-bottom: 16px;
+		.swiper-button-prev {
+			._icon-arrow-line::before {
+				@include rotate(180deg);
+			}
+		}
+		.swiper-button-prev,
+		.swiper-button-next {
+			transition: all 0.3s linear;
+			cursor: pointer;
+			&.swiper-button-disabled {
+				color: #5c5c5c;
+			}
+		}
+		.swiper-button-prev:not(.swiper-button-disabled):hover,
+		.swiper-button-next:not(.swiper-button-disabled):hover {
+			color: $orange;
+		}
+	}
+	// about-swiper__link
+	&__link{
+		color: $black;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		@include adaptiv-value("margin-top", 20, 15, 0);
+		font-weight: 600;
+		&:hover{
+			transition: all 0.3s linear;
+			color: $orange;
+		}
+		._icon-arrow-line{
+			margin-left: 10px;
+		}
+	}
+}
+.about-slider__pagination {
+	padding: 0 14px;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 140.19%;
+	color: #9e9e9e;
+	
+	.swiper-pagination-current {
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 140.19%;
+		padding-right: 7px;
+		color: #2e3132;
+	}
+}
+.about-review {
+	position: relative;
+	background: #2e3132;
+	color: #ffff;
+	min-height: 210px;
+	
+	&:before {
+		position: absolute;
+		right: 30px;
+		top: 30px;
+		@include adaptiv-value("font-size", 54, 30, 0);
+		color: #505050;
+	}
+	// .about-review__box
+	&__box{
+	padding: 30px 173px 30px 43px;
+
+		@media ( max-width:$md3+px){
+			padding: 25px 25px 37px 25px;
+		}
+	}
+	// .about-review__name
+	&__name {
+		margin-bottom: 7px;
+		font-weight: 600;
+		@include adaptiv-value("font-size", 20, 16, 0);
+	}
+
+	// .about-review__date
+	&__date {
+		font-weight: 500;
+		font-size: 14px;
+		color: #8d8d8d;
+		@include adaptiv-value("margin-bottom", 12, 21, 0);
+	}
+
+	// .about-review__text
+	&__text {
+		line-height: 155.69%;
+		font-size: 1rem;
+		font-weight: 300;
+	}
+}

@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Mediashark, mediashark.by">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<meta property="og:title" content="">
+	<meta property="og:type" content="">
+	<meta property="og:image" content="">
+	<meta property="og:url" content="">
+	<meta property="og:locale" content="ru_RU">
+	<meta property="og:description" content="">
+	<meta property="og:site_name" content="">
+
+	<link rel="shortcut icon" sizes="32x32" href="./icon.ico" type="image/x-icon"/>
+
+	<!-- <meta name="description" content=""> -->
+	<link rel="stylesheet" href="css/style.min.css" />
+	<title>Оформление заказа</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+	<div class="container">
+		<div class="row">
+			<div class="header-top">
+				<div class="header-top__left ">
+					<div class="header-top__persAr header-pesAr parent-js">
+						<div class="header-top__box clickShow-js">
+							<div class="icon-f icon-person">
+								<!-- <svg width="12" height="16" viewBox="0 0 12 16" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M0.130281 14.4086C0.244844 14.4711 2.97109 15.9391 6 15.9391C9.2815 15.9391 11.7741 14.4662 11.8786 14.4035C11.9156 14.3813 11.9463 14.3499 11.9676 14.3123C11.9888 14.2747 12 14.2323 12 14.1891C12 12.1706 11.381 10.3235 10.2572 8.9878C9.47097 8.05342 8.48453 7.41655 7.39656 7.12336C8.06255 6.80643 8.60092 6.27239 8.92324 5.60899C9.24555 4.9456 9.33264 4.1923 9.17018 3.47286C9.00772 2.75342 8.60539 2.11064 8.02928 1.65011C7.45317 1.18959 6.73755 0.938721 6 0.938721C5.26245 0.938721 4.54683 1.18959 3.97072 1.65011C3.39461 2.11064 2.99228 2.75342 2.82982 3.47286C2.66736 4.1923 2.75445 4.9456 3.07676 5.60899C3.39908 6.27239 3.93745 6.80643 4.60344 7.12336C3.51547 7.41655 2.52903 8.05352 1.74284 8.9878C0.618969 10.3235 0 12.1706 0 14.1891C3.63707e-07 14.234 0.012099 14.2781 0.0350242 14.3167C0.0579494 14.3553 0.0908545 14.3871 0.130281 14.4086ZM3.25 4.18911C3.25 3.64521 3.41128 3.11353 3.71346 2.66129C4.01563 2.20906 4.44512 1.85658 4.94762 1.64844C5.45012 1.4403 6.00305 1.38584 6.5365 1.49195C7.06995 1.59806 7.55995 1.85997 7.94454 2.24457C8.32914 2.62916 8.59105 3.11917 8.69716 3.65261C8.80327 4.18606 8.74881 4.73899 8.54067 5.24149C8.33253 5.74399 7.98005 6.17348 7.52782 6.47565C7.07558 6.77783 6.5439 6.93911 6 6.93911C5.27091 6.93828 4.57192 6.64829 4.05637 6.13274C3.54082 5.6172 3.25083 4.9182 3.25 4.18911ZM2.12541 9.30971C3.14062 8.10342 4.5165 7.43911 6 7.43911C7.4835 7.43911 8.85938 8.10342 9.87459 9.30971C10.8959 10.5234 11.4701 12.1997 11.4989 14.0433C10.9639 14.3329 8.74088 15.4391 6 15.4391C3.46531 15.4391 1.07812 14.3263 0.50125 14.0374C0.53125 12.1961 1.10522 10.5221 2.12541 9.30971Z"
+										fill="#4D4D4D" />
+								</svg> -->
+							</div>
+						</div>
+						<ul class="header-pesAr__menu header-border child-js">
+							<li> <a href="moy-profil.html">Мой аккаунт</a></li>
+							<li> <a href="moi-zhelaniya.html">Мои желания</a></li>
+							<li> <a href="">Вход</a></li>
+							<li> <a href="registratsiya.html">Регистрация</a></li>
+						</ul>
+					</div>
+
+					<div class="header-top__cart header-cart parent-js">
+						<div class="header-top__box clickShow-js">
+							<div class="icon-f icon-cart">
+								<!-- <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0)">
+										<path
+											d="M12.065 11.0911C11.1663 11.0911 10.4346 11.774 10.4346 12.6128C10.4346 13.4516 11.1663 14.1346 12.065 14.1346C12.9637 14.1346 13.6954 13.4516 13.6954 12.6128C13.6954 11.774 12.9637 11.0911 12.065 11.0911ZM12.065 13.5258C11.5256 13.5258 11.0867 13.1162 11.0867 12.6128C11.0867 12.1094 11.5256 11.6998 12.065 11.6998C12.6044 11.6998 13.0433 12.1094 13.0433 12.6128C13.0433 13.1162 12.6043 13.5258 12.065 13.5258Z"
+											fill="#4D4D4D" />
+										<path
+											d="M5.54351 11.0911C4.64483 11.0911 3.91309 11.774 3.91309 12.6128C3.91309 13.4516 4.64483 14.1346 5.54351 14.1346C6.4422 14.1346 7.17394 13.4516 7.17394 12.6128C7.17394 11.7741 6.44223 11.0911 5.54351 11.0911ZM5.54351 13.5258C5.00415 13.5258 4.56525 13.1162 4.56525 12.6128C4.56525 12.1094 5.00415 11.6998 5.54351 11.6998C6.08287 11.6998 6.52177 12.1094 6.52177 12.6128C6.52177 13.1162 6.08287 13.5258 5.54351 13.5258Z"
+											fill="#4D4D4D" />
+										<path
+											d="M13.3696 9.87385H5.84282C5.06868 9.87385 4.39631 9.3595 4.24434 8.65037L2.60218 0.988104C2.57152 0.845669 2.43783 0.743408 2.28262 0.743408H0.326098C0.146097 0.743408 0 0.879766 0 1.04777C0 1.21577 0.146097 1.35212 0.326098 1.35212H2.01522L3.60456 8.7703C3.81718 9.76246 4.75891 10.4826 5.84282 10.4826H13.3696C13.5496 10.4826 13.6957 10.3462 13.6957 10.1782C13.6957 10.0102 13.5496 9.87385 13.3696 9.87385Z"
+											fill="#4D4D4D" />
+										<path
+											d="M14.9187 2.6722C14.8567 2.60706 14.768 2.56934 14.6741 2.56934H2.93498C2.75498 2.56934 2.60889 2.70569 2.60889 2.87369C2.60889 3.04169 2.75498 3.17802 2.93498 3.17802H14.305L13.8413 6.63906C13.78 7.09498 13.3626 7.43889 12.8702 7.43889H3.91325C3.73325 7.43889 3.58715 7.57525 3.58715 7.74325C3.58715 7.91125 3.73325 8.0476 3.91325 8.0476H12.8702C13.6906 8.0476 14.3865 7.47481 14.4883 6.71456L14.9976 2.91141C15.0093 2.82496 14.9807 2.73731 14.9187 2.6722Z"
+											fill="#4D4D4D" />
+									</g>
+									<defs>
+										<clipPath id="clip0">
+											<rect width="15" height="14" fill="white" transform="translate(0 0.438965)" />
+										</clipPath>
+									</defs>
+								</svg> -->
+							</div>
+							<div class="header-cart__price">
+								<span>45</span> USD
+							</div>
+						</div>
+						<div class="header-cart__product header-border cart-products child-js">
+							<form class="cart-products__form products-form">
+								<div class="products-form__num"><span>2 товара</span> в корзине</div>
+								<div class="products-form__price">Стоимость: <b>59 BYN</b></div>
+								<button class="btn" type="submit">ОФОРМИТЬ ЗАКАЗ</button>
+								<ul class="products-form__list">
+									<li class="products-form__block product-block">
+										<div class="product-block__img">
+											<div class="product-block__imgBox">
+												<img src="./img/section-sliderProduct/01.png" alt="" loading="lazy">
+											</div>
+										</div>
+										<div class="product-block__info">
+											<a  href="#" class="product-block__name">
+												SAMPLE - ESSE - GEL CLEANSER 5ML
+											</a>
+											<div class="product-block__col">
+												Кол-во <input class="num-js" type="text">
+											</div>
+
+											<div class="product-block__bot">
+												<div class="product-block__price">
+													59 BYN
+												</div>
+												<div class="product-block__edit">
+													<a class="icon-basket" href="#">
+														
+													</a>
+													<a class="icon-pen" href="#">
+														<svg>
+															<use xmlns:xlink="http://www.w3.org/1999/xlink"
+																xlink:href="./img/icons/icons.svg#icon-pen"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="products-form__block product-block">
+										<div class="product-block__img">
+											<div class="product-block__imgBox">
+												<img src="./img/section-sliderProduct/01.png" alt="" loading="lazy">
+											</div>
+										</div>
+										<div class="product-block__info">
+											<a href="#" class="product-block__name">
+												SAMPLE - ESSE - GEL CLEANSER 5ML
+											</a>
+											<div class="product-block__col">
+												Кол-во <input class="num-js" type="text">
+											</div>
+
+											<div class="product-block__bot">
+												<div class="product-block__price">
+													59 BYN
+												</div>
+												<div class="product-block__edit">
+													<a class="icon-basket" href="#">
+														
+													</a>
+													<a class="icon-pen" href="#">
+														<svg>
+															<use xmlns:xlink="http://www.w3.org/1999/xlink"
+																xlink:href="./img/icons/icons.svg#icon-pen"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="products-form__block product-block">
+										<div class="product-block__img">
+											<div class="product-block__imgBox">
+												<img src="./img/section-sliderProduct/01.png" alt="" loading="lazy">
+											</div>
+										</div>
+										<div class="product-block__info">
+											<a herf="#" class="product-block__name">
+												SAMPLE - ESSE - GEL CLEANSER 5ML
+											</a>
+											<div class="product-block__col">
+												Кол-во <input class="num-js" type="text">
+											</div>
+
+											<div class="product-block__bot">
+												<div class="product-block__price">
+													59 BYN
+												</div>
+												<div class="product-block__edit">
+													<a class="icon-basket" href="#">
+														
+													</a>
+													<a class="icon-pen" href="#">
+														<svg>
+															<use xmlns:xlink="http://www.w3.org/1999/xlink"
+																xlink:href="./img/icons/icons.svg#icon-pen"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="products-form__block product-block">
+										<div class="product-block__img">
+											<div class="product-block__imgBox">
+												<img src="./img/section-sliderProduct/01.png" alt="" loading="lazy">
+											</div>
+										</div>
+										<div class="product-block__info">
+											<a href="#" class="product-block__name">
+												SAMPLE - ESSE - GEL CLEANSER 5ML
+											</a>
+											<div class="product-block__col">
+												Кол-во <input class="num-js" type="text">
+											</div>
+
+											<div class="product-block__bot">
+												<div class="product-block__price">
+													59 BYN
+												</div>
+												<div class="product-block__edit">
+													<a class="icon-basket" href="#">
+														
+													</a>
+													<a class="icon-pen" href="#">
+														<svg>
+															<use xmlns:xlink="http://www.w3.org/1999/xlink"
+																xlink:href="./img/icons/icons.svg#icon-pen"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="products-form__block product-block">
+										<div class="product-block__img">
+											<div class="product-block__imgBox">
+												<img src="./img/section-sliderProduct/01.png" alt="" loading="lazy">
+											</div>
+										</div>
+										<div class="product-block__info">
+											<a  href="#" class="product-block__name">
+												SAMPLE - ESSE - GEL CLEANSER 5ML
+											</a>
+											<div class="product-block__col">
+												Кол-во <input class="num-js" type="text">
+											</div>
+
+											<div class="product-block__bot">
+												<div class="product-block__price">
+													59 BYN
+												</div>
+												<div class="product-block__edit">
+													<a class="icon-basket" href="#">
+														
+													</a>
+													<a class="icon-pen" href="#">
+														<svg>
+															<use xmlns:xlink="http://www.w3.org/1999/xlink"
+																xlink:href="./img/icons/icons.svg#icon-pen"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="products-form__block product-block">
+										<div class="product-block__img">
+											<div class="product-block__imgBox">
+												<img src="./img/section-sliderProduct/01.png" alt="" loading="lazy">
+											</div>
+										</div>
+										<div class="product-block__info">
+											<a href="#" class="product-block__name">
+												SAMPLE - ESSE - GEL CLEANSER 5ML
+											</a>
+											<div class="product-block__col">
+												Кол-во <input class="num-js" type="text">
+											</div>
+
+											<div class="product-block__bot">
+												<div class="product-block__price">
+													59 BYN
+												</div>
+												<div class="product-block__edit">
+													<a class="icon-basket" href="#">
+														
+													</a>
+													<a class="icon-pen" href="#">
+														<svg>
+															<use xmlns:xlink="http://www.w3.org/1999/xlink"
+																xlink:href="./img/icons/icons.svg#icon-pen"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="products-form__block product-block">
+										<div class="product-block__img">
+											<div class="product-block__imgBox">
+												<img src="./img/section-sliderProduct/01.png" alt="" loading="lazy">
+											</div>
+										</div>
+										<div class="product-block__info">
+											<a  href="#" class="product-block__name">
+												SAMPLE - ESSE - GEL CLEANSER 5ML
+											</a>
+											<div class="product-block__col">
+												Кол-во <input class="num-js" type="text">
+											</div>
+
+											<div class="product-block__bot">
+												<div class="product-block__price">
+													59 BYN
+												</div>
+												<div class="product-block__edit">
+													<a class="icon-basket" href="#">
+														
+													</a>
+													<a class="icon-pen" href="#">
+														<svg>
+															<use xmlns:xlink="http://www.w3.org/1999/xlink"
+																xlink:href="./img/icons/icons.svg#icon-pen"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="products-form__block product-block">
+										<div class="product-block__img">
+											<div class="product-block__imgBox">
+												<img src="./img/section-sliderProduct/01.png" alt="" loading="lazy">
+											</div>
+										</div>
+										<div class="product-block__info">
+											<a  href="#" class="product-block__name">
+												SAMPLE - ESSE - GEL CLEANSER 5ML
+											</a>
+											<div class="product-block__col">
+												Кол-во <input class="num-js" type="text">
+											</div>
+
+											<div class="product-block__bot">
+												<div class="product-block__price">
+													59 BYN
+												</div>
+												<div class="product-block__edit">
+													<a class="icon-basket" href="#">
+														
+													</a>
+													<a class="icon-pen" href="#">
+														<svg>
+															<use xmlns:xlink="http://www.w3.org/1999/xlink"
+																xlink:href="./img/icons/icons.svg#icon-pen"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="products-form__block product-block">
+										<div class="product-block__img">
+											<div class="product-block__imgBox">
+												<img src="./img/section-sliderProduct/01.png" alt="" loading="lazy">
+											</div>
+										</div>
+										<div class="product-block__info">
+											<a  href="#" class="product-block__name">
+												SAMPLE - ESSE - GEL CLEANSER 5ML
+											</a>
+											<div class="product-block__col">
+												Кол-во <input class="num-js" type="text">
+											</div>
+
+											<div class="product-block__bot">
+												<div class="product-block__price">
+													59 BYN
+												</div>
+												<div class="product-block__edit">
+													<a class="icon-basket" href="#">
+														
+													</a>
+													<a class="icon-pen" href="#">
+														<svg>
+															<use xmlns:xlink="http://www.w3.org/1999/xlink"
+																xlink:href="./img/icons/icons.svg#icon-pen"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</form>
+							<div class="close">
+								<div class="close-box"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /.header-top__left -->
+
+				<a href="index.html" class="logo">
+					<img src="./img/logo.png" alt="balmessence" >
+				</a>
+
+				<form class="form-search">
+					<input class="input-search" type="text" placeholder="ПОИСК">
+					<button class="btn-search" type="submit">
+						<!-- <svg class="btn-search__icon">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./img/icons/icons.svg#icon-search">
+							</use>
+						</svg> -->
+						<i class="icon-search btn-search__icon"></i>
+					</button>
+				</form>
+				<!-- /.header-bot -->
+
+			</div>
+			<!-- /.header-top -->
+
+			<div class="header-bot">
+				<div class="burger">
+					<div class="burger-line"></div>
+				</div>
+
+				<nav class="header-nav">
+					<div class="mobTab">
+						<ul class="mobTab-header">
+							<li class="mobTab-header__item js-tab-trigger active" data-tab="1">Категории</li>
+							<li class="mobTab-header__item js-tab-trigger" data-tab="2">бренды</li>
+						</ul>
+
+						<ul class="mobTab-content">
+							<li class="mobTab-content__item js-tab-content active mobTab-content--categ" data-tab="1">
+							</li>
+							<li class="mobTab-content__item js-tab-content mobTab-content--brand" data-tab="2">
+							</li>
+						</ul>
+						<!-- /.tab-content -->
+					</div>
+					<ul class="header-menu">
+						<li class="parentSub-js"><a href="kategoriya_i_tovary.html">Кожа</a>
+							<div class="header-menu__sub menu-sub menuSub-js">
+								<div class="menu-sub__block parentSub-js">
+									<a class="menu-sub__title" href="kategoriya_i_tovary.html">Глаза</a>
+									<ul class="menu-sub__list menuSub-js">
+										<li><a href="kategoriya_i_tovary.html">Тушь</a></li>
+										<li><a href="kategoriya_i_tovary.html">Тени</a></li>
+										<li><a href="kategoriya_i_tovary.html">Подводка</a></li>
+										<li><a href="kategoriya_i_tovary.html">Снятие макияжа</a></li>
+									</ul>
+								</div>
+								<!-- /.menu-sub__block parentSub-js -->
+
+								<div class="menu-sub__block parentSub-js">
+									<a class="menu-sub__title" href="#">Волосы</a>
+									<ul class="menu-sub__list menuSub-js">
+										<li><a href="#">Тушь</a></li>
+										<li><a href="#">Тени</a></li>
+										<li><a href="#">Подводка</a></li>
+										<li><a href="#">Снятие макияжа</a></li>
+										<li><a href="#">Тушь</a></li>
+										<li><a href="#">Тени</a></li>
+										<li><a href="#">Подводка</a></li>
+										<li><a href="#">Снятие макияжа</a></li>
+									</ul>
+								</div>
+								<!-- /.menu-sub__block parentSub-js -->
+
+								<div class="menu-sub__block parentSub-js">
+									<a class="menu-sub__title" href="#">Ногти</a>
+									<ul class="menu-sub__list menuSub-js">
+										<li><a href="#">Тушь</a></li>
+										<li><a href="#">Тени</a></li>
+										<li><a href="#">Подводка</a></li>
+										<li><a href="#">Снятие макияжа</a></li>
+										<li><a href="#">Тушь</a></li>
+										<li><a href="#">Тени</a></li>
+										<li><a href="#">Подводка</a></li>
+										<li><a href="#">Снятие макияжа</a></li>
+										<li><a href="#">Тушь</a></li>
+										<li><a href="#">Тени</a></li>
+										<li><a href="#">Подводка</a></li>
+										<li><a href="#">Снятие макияжа</a></li>
+										<li><a href="#">Тушь</a></li>
+										<li><a href="#">Тени</a></li>
+										<li><a href="#">Подводка</a></li>
+										<li><a href="#">Снятие макияжа</a></li>
+										<li><a href="#">Тушь</a></li>
+										<li><a href="#">Тени</a></li>
+										<li><a href="#">Подводка</a></li>
+										<li><a href="#">Снятие макияжа</a></li>
+									</ul>
+								</div>
+								<!-- /.menu-sub__block parentSub-js -->
+
+								<div class="menu-sub__block parentSub-js">
+									<a class="menu-sub__title" href="#">Губы</a>
+									<ul class="menu-sub__list menuSub-js">
+										<li><a href="#">Тушь</a></li>
+										<li><a href="#">Тени</a></li>
+									</ul>
+								</div>
+								<!-- /.menu-sub__block parentSub-js -->
+
+								<div class="menu-sub__block parentSub-js">
+									<a class="menu-sub__title" href="#">Кисти</a>
+									<ul class="menu-sub__list menuSub-js">
+										<li><a href="#">Тушь</a></li>
+									</ul>
+								</div>
+								<!-- /.menu-sub__block parentSub-js -->
+
+								<div class="menu-sub__block parentSub-js">
+									<a class="menu-sub__title" href="#">Кисти</a>
+									<ul class="menu-sub__list menuSub-js ">
+										<li><a href="#">Тушь</a></li>
+										<li><a href="#">Тени</a></li>
+										<li><a href="#">Подводка</a></li>
+										<li><a href="#">Снятие макияжа</a></li>
+										<li><a href="#">Тушь</a></li>
+										<li><a href="#">Тени</a></li>
+										<li><a href="#">Подводка</a></li>
+										<li><a href="#">Снятие макияжа</a></li>
+									</ul>
+								</div>
+								<!-- /.menu-sub__block parentSub-js -->
+							</div>
+							<!-- /.header-menu__sub -->
+						</li>
+						<li><a href="contacty.html">Контакты</a></li>
+						<li><a href="blog.html">Блог</a></li>
+						<li><a href="kartochka-tovara-dlya-porfyuma.html">Товар</a></li>
+						<li><a href="vopros_otvet.html">FAQ</a></li>
+						<li class="brand-js"><a href="brendy.html">Бренд</a>
+							<div class="header-menu__sub menu-sub menu-sub--abc ">
+								<div class="brand-top">
+									<div class="brand-top__abc">
+										<div class="brand-abc">
+											<a href="#abc-a" rel="nofollow">A</a>
+											<a href="#abc-b" rel="nofollow">B</a>
+											<a href="#abc-c" rel="nofollow">C</a>
+											<a href="#abc-d" rel="nofollow">D</a>
+											<a href="#abc-e" rel="nofollow">E</a>
+											<a href="#abc-f" rel="nofollow">F</a>
+											<a href="#abc-g" rel="nofollow">G</a>
+											<a href="#abc-h" rel="nofollow">H</a>
+											<a href="#abc-i" rel="nofollow">I</a>
+											<a href="#abc-j" rel="nofollow">J</a>
+											<a href="#abc-k" rel="nofollow">K</a>
+											<a href="#abc-l" rel="nofollow">L</a>
+											<a href="#abc-m" rel="nofollow">M</a>
+											<a href="#abc-n" rel="nofollow">N</a>
+											<a href="#abc-o" rel="nofollow">O</a>
+											<a href="#abc-p" rel="nofollow">P</a>
+											<a href="#abc-q" rel="nofollow">Q</a>
+											<a href="#abc-r" rel="nofollow">R</a>
+											<a href="#abc-s" rel="nofollow">S</a>
+											<a href="#abc-t" rel="nofollow">T</a>
+											<a href="#abc-u" rel="nofollow">U</a>
+											<a href="#abc-v" rel="nofollow">V</a>
+											<a href="#abc-w" rel="nofollow">W</a>
+											<a href="#abc-x" rel="nofollow">X</a>
+											<a href="#abc-y" rel="nofollow">Y</a>
+											<a href="#abc-z" rel="nofollow">Z</a>
+										</div>
+										<!-- /.brand-abc -->
+									</div>
+									<!-- /.brand-top__abc -->
+
+									<div class="brand-search">
+										<input class="input-search input-searchBrand" type="text" placeholder="ПОИСК">
+										<button class="btn-search" type="submit"> 
+
+						<i class="icon-search btn-search__icon"></i>
+											<!-- <svg class="btn-search__icon">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink"
+													xlink:href="./img/icons/icons.svg#icon-search"> </use>
+											</svg> -->
+										</button>
+									</div>
+								</div>
+								<div class="brand-abc_box">
+									<div class="brand-abc_content abc-sorting">
+										<a href="#">Buddy Scrub</a>
+										<a href="#">Bean Body</a>
+										<a href="#">BALMESSENCE Jade Rollers</a>
+
+										<a href="#">Acca Kappa</a>
+										<a href="#">Aaoma Tierra</a>
+										<a href="#">Arte Profumi</a>
+										<a href="#">Attar Collection</a>
+										<a href="#">Antiqua Firenze</a>
+
+
+
+										<a href="#">Carmen</a>
+										<a href="#">Codage Paris</a>
+										<a href="#">Charme d'Orient</a>
+
+										<a href="#">Detaille 1905</a>
+
+										<a href="#">Esse Probiotic Skincare</a>
+										<a href="#">Evolut</a>
+										<a href="#">ELLA K Parfums</a>
+
+
+										<a href="#">FarmHouse Fresh</a>
+										<a href="#">Fedua</a>
+
+										<a href="#">Gentlemen`s Tonic</a>
+										<a href="#">Grown Alchemist</a>
+
+
+										<a href="#">Hormone</a>
+										<a href="#">Hydropeptide</a>
+										<a href="#">Hammamii</a>
+										<a href="#">Histoires de Parfums</a>
+
+										<a href="#">IOKO</a>
+										<a href="#">Ikonic</a>
+
+										<a href="#">Jacques Zolty</a>
+										<a href="#">Jaber & Kindi</a>
+
+										<a href="#">La Perla</a>
+										<a href="#">Lengling Munich</a>
+										<a href="#">Living Nature</a>
+
+										<a href="#">M. Micallef</a>
+										<a href="#">Mews Collective</a>
+										<a href="#">My Brow Care</a>
+										<a href="#">Maison Berger</a>
+
+										<a href="#">Naked Tan</a>
+										<a href="#">Nayassia</a>
+										<a href="#">Neal's Yard Remedies</a>
+
+										<a href="#">Onyrico</a>
+
+										<a href="#">Perris Skin Fitness</a>
+										<a href="#">Plume</a>
+										<a href="#">Pestle & Mortar</a>
+
+
+										<a href="#">Rahua</a>
+										<a href="#">Real Techniques</a>
+										<a href="#">Rock & Ruddle</a>
+									</div>
+									<!-- /.brand-abc_content -->
+								</div>
+								<!-- /.brand-abc_box -->
+							</div>
+							<!-- /.header-menu__sub -->
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<!-- /.header-bot -->
+
+		</div>
+		<!-- /.row -->
+	</div>
+	<!-- /.container -->
+</header>
+		<main class="main">
+			
+			<section class="section-orders orders _section">
+				<div class="container">
+					<div class="row">
+						<div class="page-title h2">
+							<span>Спасибо за заказ!</span>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">	
+						
+						<div class="orders-info">
+							<div class="orders-number">Номер заказа: <span>1200435</span></div>
+							На ваш E-mail была выслана информация о заказе, а также track-номер для отслеживания посылки.</div>
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.container -->
+			</section>
+			<!-- /.section-PersArea -->
+			<div class="h-10"></div>
+		</main>
+		<!-- /.main -->
+		<footer class="footer">
+	<div class="footer-subscription">
+		<div class="container">
+			<div class="row">
+				<div class="footer-subscription__text">
+					ПОСЛЕДНИЕ ПОСТУПЛЕНИЯ, СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ И МНОГОЕ ДРУГОЕ!
+				</div>
+				<form class="footer-subscription__form subscription-form" action="#">
+					<input type="text" placeholder="Введите свой E-mail">
+					<button class="subscription-btn" type="submit">ПОДПИСАТЬСЯ</button>
+				</form>
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.footer-subscription -->
+
+	<div class="footer-top">
+		<div class="container">
+			<div class="row">
+				<div class="footer-top__nav">
+					<div class="footer-nav acc-js">
+						<div class="footer-nav__title acc-head-js">BALMESSENCE</div>
+						<ul class="footer-nav__list acc-body-js">
+							<li><a href="#">О нас</a></li>
+							<li><a href="#">Блог</a></li>
+						</ul>
+					</div>
+					<!-- /.footer-nav -->
+
+					<div class="footer-nav acc-js">
+						<div class="footer-nav__title acc-head-js">ПОДДЕРЖКА</div>
+						<ul class="footer-nav__list acc-body-js">
+							<li><a href="#">Контакты</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">Возврат и отмена</a></li>
+							<li><a href="#">Доставка</a></li>
+							<li><a href="#">Партнерам</a></li>
+						</ul>
+					</div>
+					<!-- /.footer-nav -->
+
+					<div class="footer-nav footer-nav--social acc-js">
+						<div class="footer-nav__title acc-head-js">ПОДПИСЫВАЙСЯ НА НАС</div>
+						<div class="footer-nab__box acc-body-js">
+							<div class="footer-nav__social">
+
+								<a class="social-icon icon-facebook" href="#" rel="nofollow">
+									
+								</a>
+								<a class="social-icon icon-instagram" href="#" rel="nofollow">
+									
+								</a>
+								<a class="social-icon icon-telegram" href="https://telegram.me/jack_malbon" rel="nofollow">
+									
+								</a>
+								<a class="social-icon icon-vk" href="#" rel="nofollow">
+								
+								</a>
+								<a class="social-icon icon-youtube" href="#" rel="nofollow">
+								
+								</a>
+
+							</div>
+							<ul class="footer-nav__list ">
+								<li class="_icon _icon--phone">
+									<a href="tel:+375333333333" rel="nofollow">+ 375 (33) 333-33-33</a>
+									<a href="tel:+375333333333" rel="nofollow">+ 375 (33) 333-33-33</a>
+								</li>
+								<li class="_icon _icon--clock">
+									ПН-ПТ: 09:00 - 22:00
+									<br>
+									СБ-ВС: 11:00 - 22:00
+								</li>
+							</ul>
+						</div>
+						<!-- /.footer-nab__box -->
+					</div>
+					<!-- /.footer-nav -->
+				</div>
+				<!-- /.footer-top__nav -->
+
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.footer-top -->
+
+
+	<div class="footer-bot">
+		<div class="container">
+			<div class="row">
+				<div class="footer-bot__info">
+					Copyright 2020 BALMESSENCE. All Right Reserved. Privacy Policy
+					<div class="footer-info__img">
+						<img src="./img/footer/01.png" alt="" loading="lazy">
+					</div>
+				</div>
+				<a class="dev" href="https://mediashark.by/">Разработка сайта: <strong>mediashark.by</strong></a>
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.footer-bot -->
+
+</footer>
+	</div>
+	<!-- /.wrapper -->
+	<div class="modal-overlay  ">
+	<div class="modal modal-pay ">
+		<a class="close-modal close-js">
+			<svg viewBox="0 0 20 20">
+				<path fill="#000000"
+					d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z">
+				</path>
+			</svg>
+		</a><!-- close modal -->
+
+		<div class="modal-content">
+
+			<div class="modal-content__boxImg">
+				<div class="modal-content__img">
+					<img src="./img/section-sliderProduct/01.png" alt="" loading="lazy">
+				</div>
+			</div>
+
+			<div class="modal-content__info ">
+				<div class="modal-content__name">SAMPLE - ESSE - GEL CLEANSER 5ML</div>
+				<div class="modal-content__description">Это пенящееся, покалывающее моющее средство глубоко очищает, не
+					высушивая кожу.</div>
+				<div class="modal-content__price">122 BYN</div>
+				<div class="modal-content__quantity">Количество
+					<select name="#" id="#">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+					</select>
+				</div>
+				<button class="btn btn-green" type="submit">ДОБАВИТЬ</button>
+			</div>
+		</div><!-- content -->
+
+	</div><!-- modal -->
+
+	<div class="modal modal-code ">
+		<a class="close-modal close-js">
+			<svg viewBox="0 0 20 20">
+				<path fill="#000000"
+					d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z">
+				</path>
+			</svg>
+		</a><!-- close modal -->
+
+		<div class="modal-content">
+			<div class="modal-code__title">
+				код подтверждения БЫЛ ВЫСЛАН
+			</div>
+			<div class="modal-code__text">
+				В течение нескольких секунд вам придёт SMS с одноразовым кодом для входа. Если ничего не пришло — <a
+					href="#" class="modal-code__repeat">отправьте код ещё раз</a>.
+			</div>
+			<div class="form__line">
+				<label for="code" class="form__label">Код<sup>*</sup></label>
+				<input id="code" type="text" name="name" class="">
+			</div>
+			<a href="#" class="modal-code__change">Изменить номер</a>
+			<button class="btn btn-green" type="submit">ВОЙТИ</button>
+		</div><!-- content -->
+
+	</div><!-- modal -->
+
+	<div class="modal modal-viewing ">
+		<a class="close-modal close-js">
+			<svg viewBox="0 0 20 20">
+				<path fill="#000000"
+					d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z">
+				</path>
+			</svg>
+		</a><!-- close modal -->
+
+		<div class="modal-content">
+
+			<div class="modal-content__boxImg">
+				<div class="modal-content__img">
+					<img src="./img/section-sliderProduct/01.png" alt="" loading="lazy">
+				</div>
+			</div>
+
+			<div class="modal-content__info ">
+				<div class="modal-content__name">SAMPLE - ESSE - GEL CLEANSER 5ML</div>
+				<div class="modal-content__description">Это пенящееся, покалывающее моющее средство глубоко очищает, не
+					высушивая кожу.</div>
+
+				<button class="btn btn-green" type="submit">ДОБАВИТЬ</button>
+			</div>
+		</div><!-- content -->
+
+	</div><!-- modal -->
+</div><!-- overlay -->
+	<script src="./js/script.js"></script>
+</body>
+
+</html>

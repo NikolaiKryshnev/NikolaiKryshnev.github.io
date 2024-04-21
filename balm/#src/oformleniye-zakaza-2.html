@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Оформление заказа"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html')
+		<main class="main">
+			@@include('_breadcrumbs.html',{
+			"text":"Оформление заказа"
+			})
+			<section class="section-orders orders _section">
+				<div class="container">
+					<div class="row">
+						<div class="page-title h2">
+							<span>ОформЛЕНИЕ ЗАКАЗА</span>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+
+						<div class="order-img">
+							<img src="./img/section-orders/01.svg" alt="" loading="lazy">
+						</div>
+						<div class="order-column order-column--address">
+							<div class="order-column__title">адрес доставки</div>
+							<div class="order-column__address order-address">
+								<div class="order-address__info">
+									<span>
+										<span>Margarita Levina</span>
+										<span>Беларусь, г. Минск,</span>
+										<span>ул. Мележа, 1, офис 1509</span>
+									</span>
+									<a href="#">Редактировать</a>
+								</div>
+							</div>
+
+							<button class="btn btn-green">+ НОВЫЙ АДРЕС</button>
+						</div>
+
+						<div class="order-column order-column--product">
+							<div class="order-column__title">Заказ</div>
+
+							<div class="order-products">
+								<div class="order-product">
+									<a class="order-product__boxImg" href="#">
+										<div class="order-product__img ">
+											<img src="./img/section-sliderProduct/01.png" alt="" loading="lazy">
+										</div>
+									</a>
+									<div class="order-product__info">
+										<a class="order-product__name" href="#">SAMPLE - ESSE - GEL CLEANSER 5ML</a>
+										<div class="order-product__quantity">1</div>
+										<div class="order-product__price">59 BYN</div>
+									</div>
+								</div>
+								<div class="order-product">
+									<a class="order-product__boxImg" href="#">
+										<div class="order-product__img ">
+											<img src="./img/section-sliderProduct/01.png" alt="" loading="lazy">
+										</div>
+									</a>
+									<div class="order-product__info">
+										<a class="order-product__name" href="#">SAMPLE - ESSE - GEL CLEANSER 5ML</a>
+										<div class="order-product__quantity">1</div>
+										<div class="order-product__price">59 BYN</div>
+									</div>
+								</div>
+
+								<div class="order-product__result"> ИТОГ <span class="result-price">118 BYN</span></div>
+
+							</div>
+							<!-- /.order-products -->
+
+						</div>
+						<!-- /.order-column -->
+
+						<div class="order-column order-column--delivery">
+							<div class="order-column__title">СПОСОБЫ ДОСТАВКИ</div>
+							<div class="delivery-block">
+								<div class="radio-box">
+									<label class="radio">
+										<input type="radio" name="pay" value="1" checked="">
+										<div class="delivery-text"><span class="delivery-price">10 BYN</span> <span
+												class="delivery-name">БЫСТРАЯ ДОСТАВКА</span></div>
+
+									</label>
+
+									<label class="radio">
+										<input type="radio" name="pay" value="2" checked="">
+										<div class="delivery-text"><span class="delivery-price">0 BYN</span><span
+												class="delivery-name">БЕСПЛАТНАЯ ДОСТАВКА</span></div>
+									</label>
+								</div>
+							</div>
+							<button class="btn btn-green">ДАЛЕЕ</button>
+						</div>
+						<!-- /.order-column -->
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.container -->
+			</section>
+			<!-- /.section-PersArea -->
+			<div class="h-10"></div>
+		</main>
+		<!-- /.main -->
+		@@include('_footer.html')
+	</div>
+	<!-- /.wrapper -->
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>
